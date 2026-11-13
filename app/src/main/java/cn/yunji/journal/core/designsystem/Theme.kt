@@ -6,6 +6,9 @@ import androidx.compose.material3.Typography
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.Immutable
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
@@ -18,11 +21,24 @@ val Background = Color(0xFFF7F8F3)
 val Ink = Color(0xFF223C32)
 val Muted = Color(0xFF5F7166)
 val Outline = Color(0xFFDDE4DA)
-/** Warm apricot accent from the design foundations; used by timeline note cards. */
+/**
+ * Warm apricot accent from the design foundations; used by timeline note cards.
+ *
+ * 这两个值是**浅色模式**的基准色。不要再在 Composable 里直接引用它们——深色模式下仍是近白的
+ * #FAEAD8，会在 #141D17 背景上形成 14.6:1 的刺眼亮斑。请用 [LocalNoteCardColors]，它会随主题切换。
+ */
 val Apricot = Color(0xFFFAEAD8)
 val Amber = Color(0xFF80582C)
 val Danger = Color(0xFFA44238)
 val DangerSoft = Color(0xFFFCECE7)
+
+/** 杏色日常备注卡的一对配色（容器 + 其上文字），随深浅色主题切换。 */
+@Immutable data class NoteCardColors(val container: Color, val content: Color)
+
+private val LightNoteCardColors = NoteCardColors(container = Apricot, content = Amber)
+private val DarkNoteCardColors = NoteCardColors(container = Color(0xFF3A2E1F), content = Color(0xFFF0D5B4))
+
+val LocalNoteCardColors = staticCompositionLocalOf { LightNoteCardColors }
 
 private val light = lightColorScheme(primary = Primary, onPrimary = Color.White, primaryContainer = Soft,
     secondary = Primary, onSecondary = Color.White, secondaryContainer = Soft, onSecondaryContainer = Primary,
@@ -57,14 +73,26 @@ private val dark = darkColorScheme(primary = Color(0xFFA5D0B3), onPrimary = Colo
     surfaceContainer = Color(0xFF1B2A20), surfaceContainerHigh = Color(0xFF213228),
     surfaceContainerHighest = Color(0xFF294C39),
     inverseSurface = Color(0xFFE3EADF), inverseOnSurface = Color(0xFF173D2A), inversePrimary = Primary)
+/**
+ * 8 级字阶 + 两个小节标题档位。
+ *
+ * `titleMedium`/`titleSmall` 原先未定义，会回落到 Material3 默认值（16sp/24、14sp/20，且
+ * fontFamily 是 FontFamily.Default 而非本项目的 SansSerif）。业务代码里有 34 处 `titleMedium`
+ * 与 1 处 `titleSmall`，导致同一页面内小节标题字号在 20sp 与 16sp 间跳变、字族也不一致。
+ * 这里补齐：titleMedium 作为 `titleLarge` 与 `bodyMedium` 之间的过渡档，titleSmall 对齐 labelMedium 行高。
+ */
 private fun type(size: Int, height: Int, weight: FontWeight = FontWeight.Normal) =
     TextStyle(fontFamily = FontFamily.SansSerif, fontSize = size.sp, lineHeight = height.sp, fontWeight = weight)
 private val typography = Typography(displaySmall = type(40, 60, FontWeight.Bold),
     headlineMedium = type(28, 42, FontWeight.Bold), titleLarge = type(20, 30, FontWeight.Medium),
+    titleMedium = type(16, 24, FontWeight.Medium), titleSmall = type(14, 21, FontWeight.Medium),
     bodyLarge = type(16, 24), bodyMedium = type(14, 21), labelLarge = type(16, 24, FontWeight.Medium),
     labelMedium = type(14, 21, FontWeight.Medium), bodySmall = type(12, 18), labelSmall = type(12, 18))
 
 @Composable
 fun PregnancyTheme(content: @Composable () -> Unit) {
-    MaterialTheme(colorScheme = if (isSystemInDarkTheme()) dark else light, typography = typography, content = content)
+    val isDark = isSystemInDarkTheme()
+    CompositionLocalProvider(LocalNoteCardColors provides if (isDark) DarkNoteCardColors else LightNoteCardColors) {
+        MaterialTheme(colorScheme = if (isDark) dark else light, typography = typography, content = content)
+    }
 }

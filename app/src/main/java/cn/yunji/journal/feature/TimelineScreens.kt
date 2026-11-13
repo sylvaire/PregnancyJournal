@@ -175,7 +175,10 @@ internal fun TimelineRecordRow(title: String,subtitle: String,icon: String,onCli
     }
 }
 
-/** 设计杏色日常备注卡（JOURNAL only）：背景 Apricot #FAEAD8、文字 Amber #80582C。 */
+/**
+ * 设计杏色日常备注卡（JOURNAL only）：浅色 Apricot #FAEAD8 / Amber #80582C，
+ * 深色改走 [LocalNoteCardColors] 的暗色对（#3A2E1F / #F0D5B4），避免深色主题下出现近白亮斑。
+ */
 @Composable
 private fun JournalNoteCard(event: TimelineEvent,entry: JournalEntryEntity?,open: ()->Unit) {
     val lines=entry?.text.orEmpty().trim().lines().map {it.trim()}.filter {it.isNotBlank()}
@@ -186,11 +189,12 @@ private fun JournalNoteCard(event: TimelineEvent,entry: JournalEntryEntity?,open
         !entry?.mood.isNullOrBlank() -> entry!!.mood
         else -> ""
     }
-    Surface(onClick=open,modifier=Modifier.fillMaxWidth().testTag("source-${event.key}"),shape=RoundedCornerShape(16.dp),color=Apricot) {
+    val note = LocalNoteCardColors.current
+    Surface(onClick=open,modifier=Modifier.fillMaxWidth().testTag("source-${event.key}"),shape=RoundedCornerShape(16.dp),color=note.container) {
         Column(Modifier.padding(16.dp),verticalArrangement=Arrangement.spacedBy(8.dp)) {
-            Text(title,style=MaterialTheme.typography.titleMedium,color=Amber,maxLines=3,overflow=TextOverflow.Ellipsis)
-            if(body.isNotBlank()) Text(body,style=MaterialTheme.typography.bodyMedium,color=Amber,maxLines=3,overflow=TextOverflow.Ellipsis)
-            Text("日常备注 · ${event.time ?: "只有日期，没有具体时间"}",style=MaterialTheme.typography.bodySmall,color=Amber)
+            Text(title,style=MaterialTheme.typography.titleMedium,color=note.content,maxLines=3,overflow=TextOverflow.Ellipsis)
+            if(body.isNotBlank()) Text(body,style=MaterialTheme.typography.bodyMedium,color=note.content,maxLines=3,overflow=TextOverflow.Ellipsis)
+            Text("日常备注 · ${event.time ?: "只有日期，没有具体时间"}",style=MaterialTheme.typography.bodySmall,color=note.content)
         }
     }
 }
