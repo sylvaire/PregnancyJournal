@@ -39,12 +39,12 @@
 | P0-1 | `titleMedium`/`titleSmall` 未在 Theme 中定义，落到 M3 默认 | **高** | 34 + 1 处，14 个文件 | ✅ 已修 |
 | P0-3 | 暖色卡片 `Apricot`/`Amber` 硬编码，深色模式刺眼 | **高** | 1 处（4 行代码） | ✅ 已修 |
 | P0-4 | 底部导航等旧图标描边 1.7、颜色非 `#356B53` | **高（每次可见）** | 10 + 4 个文件 | ✅ 已修 |
-| P0-2 | 卡片列表 vs 裸 `Column` 两种页面范式并存 | **高** | 6 个页面无卡片容器 | ⬜ 待排期 |
+| P0-2 | 卡片列表 vs 裸 `Column` 两种页面范式并存（深色实机同屏可见） | **高** | 6 个页面无卡片容器 | ⬜ 待排期 |
 | P1-1 | `OutlinedTextField` 48 处无组件包装（设计稿有 `孕迹/Field`） | 中 | 15 个文件 | ⬜ 待排期 |
 | P1-2 | `TextButton` 167 处无统一规格（4 种语义混用） | 中 | 16 个文件 | ⬜ 待排期 |
 | P1-3 | 两处全屏 Dialog 自建顶栏，且两者彼此不一致 | 中 | 2 处 | ⬜ 待排期 |
 | P2-1 | 按钮高度 40/52/56/72 四种 | 低 | 10 处 | ⬜ |
-| P2-2 | `Card`/`OutlinedCard`/`Checkbox`/`HorizontalDivider` 未包装 | 低 | 4 个文件 | ⬜ |
+| P2-2 | `Card`/`OutlinedCard`/`Checkbox`/`HorizontalDivider` 未包装（实机可见：`Checkbox` 2dp 直角 vs 全站圆角） | 低 | 4 个文件 | ⬜ |
 | P2-3 | 加载态 22 处裸 `CircularProgressIndicator`，无统一组件 | 低 | 8 个文件 | ⬜ |
 | P2-4 | 错误提示 29 处裸 `Text(color=error)`，无统一组件 | 低 | 多文件 | ⬜ |
 | P2-5 | 3 处可点行缺 `onClickLabel`；1 处可点文本高度 18dp | 低（无障碍） | 4 处 | ⬜ |
@@ -306,21 +306,56 @@ Ardot `7:2461`「孕迹 · 基础组件」定义 3 个组件：
 | 7 | `TimelineRecordRow` 合并到 `RecordRow` | 消除重复实现与无障碍不同步 | 低 |
 | 8 | 修 `JournalApp:120` 触摸目标 | 18dp → 48dp | 低 |
 
-## 9. 未覆盖范围（如实记录）
+## 9. 深色模式实机验证（2026-11-13 补做）
 
-- **未做真机/模拟器视觉复核**：本轮为静态代码审计 + 对比度实算，未截新图。
-  - 尝试设备：小米 11 Ultra 无线调试在审计开始时已断开（`device not found`）。
-  - 尝试模拟器：新建 AVD `PJ_DARK_CHECK` 后启动失败——
-    `FATAL | Not enough space to create userdata partition. Available: 9198.50 MB, need 12288.00 MB`。
-    AVD 已删除，未留残留。
-  - 因此 **P0-3（深色模式刺眼）是计算结论，非截图验证**。
-    计算依据：`Apricot=#FAEAD8` 对深色背景 `#141D17` 对比度 **14.64:1**；
-    且代码层面已确认这两个常量**未出现在任何 `lightColorScheme`/`darkColorScheme` 参数中**，
-    也无 `isSystemInDarkTheme()` 分支，故深色下必然保持浅色值。
-- **P0-1 已代码级确认**：`Typography()` 显式定义 9 个角色，
-  `displayLarge/displayMedium/headlineLarge/headlineSmall/titleMedium/titleSmall` 6 个未定义并回落 M3 默认；
-  其中 `titleMedium`/`titleSmall` 确有业务引用（34 / 1 处）。
+审计初稿时设备断开、模拟器因磁盘不足无法启动，深色结论只能靠对比度实算。设备恢复后已补做实机验证。
+
+**验证条件**：小米 11 Ultra（1440×3200 / 560dpi），`cmd uimode night yes`（`ui_night_mode=2`），
+`-PvisualVerification=true` 构建（绕过 `FLAG_SECURE`），5 个页面截图。
+
+### 9.1 P0-3 杏色卡：像素级确认修复生效
+
+在 `dark-03-timeline-notecard.png` 上定位备注卡区域（x 84..1354，y 2292..2560），统计像素：
+
+| 项 | 预期 | 实测 |
+|---|---|---|
+| 卡片底色 | `#3A2E1F` | **`#3A2E1F`**（20651 px） |
+| 卡内文字色 | `#F0D5B4` | **`#F0D5B4`**（6493 px） |
+| 卡内文字对比度 | 9.36:1 | **9.36:1** |
+| 卡片对页面背景 | 1.31:1 | **1.31:1** |
+| 旧浅杏 `#FAEAD8` | 应为 0 | **0 px（已消失）** |
+
+对照修复前的理论值：旧卡 `#FAEAD8` 对背景 `#141D17` 为 **14.64:1**。
+
+### 9.2 逐页深色扫描
+
+| 页面 | 截图 | 主导色 | 旧浅杏残留 |
+|---|---|---|---|
+| 首页 | `dark-01-home.png` | `#141D17` / `#1D2921` / `#294C39` | 0 px |
+| 记录枢纽 | `dark-02-records.png` | 同上 | 0 px |
+| 时间线 | `dark-03-timeline-notecard.png` | + `#3A2E1F`（新备注卡） | 0 px |
+| 我的 | `dark-04-profile.png` | 同上 | 0 px |
+| 导出资料 | `dark-05-export.png` | 同上 | 0 px |
+
+深色下 M3 1.2+ 的 `surfaceContainer*` 角色全部映射到品牌深绿，**无默认淡紫灰残留**。
+底部导航 4 个图标（含本次归一的 `acf3f`/`da483`/`cdc29`/`d9f3c`）在深色下渲染正常。
+
+### 9.3 实机新发现（补充进待修清单）
+
+在 `dark-05-export.png` 上确认 **P2-2 的具体表现**：`ExportScreen` 的 `Checkbox` 使用 Material3 默认样式，
+未选中时是 **2dp 近直角方块**，与全站 12/16/20/26dp 圆角体系明显冲突（同页 `JournalSwitch` 是胶囊形）。
+这印证了 P2-2「`Checkbox` 未包装」不只是代码整洁问题，而是**肉眼可见的视觉断裂**。
+
+### 9.4 仍存在的范式分裂（实机可见）
+
+`dark-05-export.png` 直观呈现 P0-2：页面顶部两个 `OutlinedTextField` 是**贴边扁平框**（左右贴 24dp 页边），
+紧接着的 `JournalCard` 却是**圆角卡片内缩**，两种容器语言在同一屏并存。这是本轮未修但优先级最高的遗留项。
+
+## 10. 未覆盖范围（如实记录）
+
+- **未做**：TalkBack 读屏实测、字体缩放 200% 与横屏组合矩阵、API 26 深色表现。
 - **未审计**：`PdfDocumentView` 的 PDF 渲染区（第三方渲染，样式不在 Compose 控制内）、
   `DocumentPreview` 的缩放手势交互细节。
-- **Unicode/字体回退**：`FontFamily.Default` 与 `SansSerif` 在 MIUI 上的实际字形差异未实测。
+- **字体回退**：`FontFamily.Default` 与 `SansSerif` 在 MIUI 上的实际字形差异仍未逐字比对
+  （P0-1 已通过补定义消除该路径，故风险已降为 0）。
 - 首轮记录的两项遗留仍在：底部导航 indicator 视觉权重（主观）、无障碍动作标签未全覆盖。
