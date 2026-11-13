@@ -79,13 +79,20 @@ internal fun MedicationEditorScreen(form: MedicationForm, model: JournalViewMode
                 }) }
             }
         }
-        OutlinedTextField(form.name, { update(form.copy(name = it.take(100))) }, readOnly = form.medicationId != null, label = { Text("药品名称") }, singleLine = true, modifier = Modifier.fillMaxWidth().testTag("medication-name"))
-        OutlinedTextField(form.specification, { update(form.copy(specification = it.take(120))) }, readOnly = form.medicationId != null, label = { Text("规格（选填）") }, singleLine = true, modifier = Modifier.fillMaxWidth())
-        OutlinedTextField(form.dosageForm, { update(form.copy(dosageForm = it.take(40))) }, readOnly = form.medicationId != null, label = { Text("剂型（选填）") }, singleLine = true, modifier = Modifier.fillMaxWidth())
+        JournalCard {
+            JournalField(form.name, { update(form.copy(name = it.take(100))) }, "药品名称",
+                readOnly = form.medicationId != null, modifier = Modifier.testTag("medication-name"))
+            JournalField(form.specification, { update(form.copy(specification = it.take(120))) }, "规格（选填）",
+                readOnly = form.medicationId != null)
+            JournalField(form.dosageForm, { update(form.copy(dosageForm = it.take(40))) }, "剂型（选填）",
+                readOnly = form.medicationId != null)
+        }
         if (form.medicationId != null) Text("本次方案保留当前药品信息，旧方案与服药依据不会被改写。基础信息可在管理药品中编辑。", style = MaterialTheme.typography.bodySmall)
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            OutlinedTextField(form.dose, { update(form.copy(dose = it.take(20))) }, label = { Text("每次剂量（选填）") }, singleLine = true, modifier = Modifier.weight(1f).testTag("medication-dose"))
-            OutlinedTextField(form.unit, { update(form.copy(unit = it.take(20))) }, label = { Text("单位（选填）") }, singleLine = true, modifier = Modifier.weight(1f).testTag("medication-unit"))
+            JournalField(form.dose, { update(form.copy(dose = it.take(20))) }, "每次剂量（选填）",
+                modifier = Modifier.weight(1f).testTag("medication-dose"))
+            JournalField(form.unit, { update(form.copy(unit = it.take(20))) }, "单位（选填）",
+                modifier = Modifier.weight(1f).testTag("medication-unit"))
         }
         Text("剂量和单位需同时填写，也可同时留空。", style = MaterialTheme.typography.bodySmall)
         Box {

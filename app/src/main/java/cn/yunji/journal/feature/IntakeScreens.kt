@@ -273,7 +273,8 @@ internal fun IntakeEditorScreen(form: IntakeForm, model: JournalViewModel, busy:
         }
         if (form.status == "TAKEN") {
             DateField("实际服药日期", form.actualDate, { update(form.copy(actualDate = it)) }, required = true, maxDate = LocalDate.now())
-            OutlinedTextField(form.actualTime, { update(form.copy(actualTime = it.take(8))) }, label = { Text("实际时间（24小时制）") }, singleLine = true, modifier = Modifier.fillMaxWidth().testTag("intake-actual-time"))
+            JournalField(form.actualTime, { update(form.copy(actualTime = it.take(8))) }, "实际时间（24小时制）",
+                modifier = Modifier.testTag("intake-actual-time"))
             if (manual) {
                 if (form.recordId == null) Box {
                     JournalSecondaryButton("药品：$medicineName · 第${plan?.version ?: "?"}版") { expanded = true }
@@ -292,10 +293,12 @@ internal fun IntakeEditorScreen(form: IntakeForm, model: JournalViewModel, busy:
                 } }
             }
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                OutlinedTextField(form.dose, { update(form.copy(dose = it.take(20))) }, label = { Text("实际剂量（选填）") }, singleLine = true, modifier = Modifier.weight(1f).testTag("intake-dose"))
-                OutlinedTextField(form.unit, { update(form.copy(unit = it.take(20))) }, label = { Text("单位（选填）") }, singleLine = true, modifier = Modifier.weight(1f).testTag("intake-unit"))
+                JournalField(form.dose, { update(form.copy(dose = it.take(20))) }, "实际剂量（选填）",
+                    modifier = Modifier.weight(1f).testTag("intake-dose"))
+                JournalField(form.unit, { update(form.copy(unit = it.take(20))) }, "单位（选填）",
+                    modifier = Modifier.weight(1f).testTag("intake-unit"))
             }
-            if (manual) OutlinedTextField("已服用", {}, label = { Text("状态") }, readOnly = true, singleLine = true, modifier = Modifier.fillMaxWidth())
+            if (manual) JournalField("已服用", {}, "状态", readOnly = true)
             Text(if (form.recordId == null) "用量按所选方案预填，可按实际情况修改；剂量与单位也可同时留空。" else "这里保留的是原实际记录，请按实际情况修改；剂量与单位也可同时留空。", style = MaterialTheme.typography.bodySmall)
         } else Text("仅记录此计划已跳过，不会自动推断实际服药时间或用量。")
         Text(if (form.occurrenceId == null) "补记说明" else "记录说明", style = MaterialTheme.typography.titleLarge)

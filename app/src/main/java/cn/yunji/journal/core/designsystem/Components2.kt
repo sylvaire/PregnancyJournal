@@ -79,7 +79,7 @@ import androidx.compose.ui.unit.dp
 @Composable fun JournalField(value: String, onValueChange: (String) -> Unit, label: String,
     modifier: Modifier = Modifier, enabled: Boolean = true, isError: Boolean = false,
     singleLine: Boolean = true, minLines: Int = 1, maxLines: Int = if (singleLine) 1 else Int.MAX_VALUE,
-    placeholder: String? = null, supportingText: String? = null,
+    placeholder: String? = null, supportingText: String? = null, readOnly: Boolean = false,
     trailingIcon: (@Composable () -> Unit)? = null,
     keyboardOptions: androidx.compose.foundation.text.KeyboardOptions = androidx.compose.foundation.text.KeyboardOptions(),
     visualTransformation: VisualTransformation = VisualTransformation.None) {
@@ -88,7 +88,7 @@ import androidx.compose.ui.unit.dp
         placeholder = placeholder?.let { { Text(it) } },
         supportingText = supportingText?.let { { Text(it) } },
         trailingIcon = trailingIcon,
-        isError = isError, singleLine = singleLine, minLines = minLines, maxLines = maxLines,
+        isError = isError, singleLine = singleLine, minLines = minLines, maxLines = maxLines, readOnly = readOnly,
         shape = RoundedCornerShape(16.dp), keyboardOptions = keyboardOptions,
         visualTransformation = visualTransformation)
 }

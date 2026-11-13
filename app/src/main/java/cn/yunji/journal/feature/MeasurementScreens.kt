@@ -144,8 +144,8 @@ private fun DefinitionDialog(pregnancyId: String, previous: MetricDefinitionEnti
     var error by remember {mutableStateOf<String?>(null)}
     val scope=rememberCoroutineScope()
     AlertDialog(onDismissRequest={if(!saving)close()},title={Text(if(previous==null) "自定义指标" else "更新指标定义")},text={Column(verticalArrangement=Arrangement.spacedBy(8.dp)) {
-        OutlinedTextField(name,{name=it},label={Text("指标名称")},singleLine=true)
-        OutlinedTextField(unit,{unit=it},label={Text("单位")},singleLine=true)
+        JournalField(name,{name=it}, "指标名称")
+        JournalField(unit,{unit=it}, "单位")
         Text("自定义指标使用一个数值字段。修改会保留旧版本及历史单位。",style=MaterialTheme.typography.bodySmall)
         error?.let {JournalError(it)}
     }},confirmButton={TextButton({saving=true; scope.launch {try {model.measurements.saveDefinition(pregnancyId,name,unit,previous?.id);close()}catch(e:CancellationException){throw e}catch(e:IllegalArgumentException){error=e.message ?: "请核对指标"}catch(_:Exception){error="保存失败，原指标已保留"}finally{saving=false}}},enabled=!saving){Text("保存指标")}},dismissButton={TextButton(close,enabled=!saving){Text("取消")}})
@@ -162,22 +162,32 @@ internal fun MeasurementEditorScreen(form: MeasurementForm, model: JournalViewMo
             OutlinedButton({expanded=true},enabled=!busy,modifier=Modifier.fillMaxWidth().heightIn(min=56.dp),
                 shape=RoundedCornerShape(16.dp)){Text("指标：${def?.name ?: "选择指标"} · ${def?.unit.orEmpty()}")}
             DropdownMenu(expanded,{expanded=false}) { available.forEach { item -> DropdownMenuItem({Text("${item.name} · ${item.unit}")},{expanded=false;model.updateMeasurement(form.copy(definitionId=item.id,values=emptyMap()))}) } }
-        } else Text("${def?.name.orEmpty()} · ${def?.unit.orEmpty()} · 原指标第${def?.version ?: 1}版")
-        def?.valueKeys?.split(",")?.forEach {key ->
-            OutlinedTextField(form.values[key].orEmpty(),{model.updateMeasurement(form.copy(values=form.values+(key to it)))},label={Text("${measurementKeyLabel(key)}（${if(key=="pulse") "次/分" else def.unit}）")},modifier=Modifier.fillMaxWidth().testTag("measurement-$key"),singleLine=true,enabled=!busy)
+        } else JournalCard {
+            Text("${def?.name.orEmpty()} · ${def?.unit.orEmpty()} · 原指标第${def?.version ?: 1}版",
+                style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
-        if(def?.kind=="GLUCOSE") {
-            Row(Modifier.horizontalScroll(rememberScrollState()),horizontalArrangement=Arrangement.spacedBy(8.dp)) { listOf("FASTING" to "空腹","POST_MEAL" to "餐后","OTHER" to "其他").forEach {(value,label)->JournalTag(form.scenario==value,{model.updateMeasurement(form.copy(scenario=value))},{Text(label)},enabled=!busy)} }
-            if(form.scenario=="POST_MEAL") OutlinedTextField(form.minutes,{model.updateMeasurement(form.copy(minutes=it))},label={Text("餐后分钟数")},singleLine=true,enabled=!busy)
+        JournalCard {
+            def?.valueKeys?.split(",")?.forEach {key ->
+                JournalField(form.values[key].orEmpty(),{model.updateMeasurement(form.copy(values=form.values+(key to it)))},
+                    "${measurementKeyLabel(key)}（${if(key=="pulse") "次/分" else def.unit}）",
+                    modifier=Modifier.testTag("measurement-$key"), enabled=!busy)
+            }
+            if(def?.kind=="GLUCOSE") {
+                Row(Modifier.horizontalScroll(rememberScrollState()),horizontalArrangement=Arrangement.spacedBy(8.dp)) { listOf("FASTING" to "空腹","POST_MEAL" to "餐后","OTHER" to "其他").forEach {(value,label)->JournalTag(form.scenario==value,{model.updateMeasurement(form.copy(scenario=value))},{Text(label)},enabled=!busy)} }
+                if(form.scenario=="POST_MEAL") JournalField(form.minutes,{model.updateMeasurement(form.copy(minutes=it))}, "餐后分钟数", enabled=!busy)
+            }
+            DateField("测量日期",form.date,{model.updateMeasurement(form.copy(date=it))},required=true,maxDate=LocalDate.now())
+            JournalField(form.time,{model.updateMeasurement(form.copy(time=it))}, "测量时间（时:分:秒）", enabled=!busy)
+            Text("测量时区：${if(form.zoneId==ZoneId.systemDefault().id)"本机当前时区" else form.zoneId}",style=MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant)
+            val offsets=runCatching {ZoneId.of(form.zoneId).rules.getValidOffsets(LocalDate.parse(form.date).atTime(LocalTime.parse(form.time)))}.getOrDefault(emptyList())
+            if(offsets.size>1) Column {Text("该时刻重复出现，请选择："); offsets.forEachIndexed { index,offset -> JournalTag(offset.totalSeconds==(form.offsetSeconds?.takeIf {seconds->offsets.any {it.totalSeconds==seconds}} ?: offsets.first().totalSeconds),{model.updateMeasurement(form.copy(offsetSeconds=offset.totalSeconds))},{Text("第${index+1}次（UTC$offset）")})} }
+            JournalField(form.source,{model.updateMeasurement(form.copy(source=it))}, "来源（可选）", enabled=!busy)
         }
-        DateField("测量日期",form.date,{model.updateMeasurement(form.copy(date=it))},required=true,maxDate=LocalDate.now())
-        OutlinedTextField(form.time,{model.updateMeasurement(form.copy(time=it))},label={Text("测量时间（时:分:秒）")},modifier=Modifier.fillMaxWidth(),singleLine=true,enabled=!busy)
-        Text("测量时区：${if(form.zoneId==ZoneId.systemDefault().id)"本机当前时区" else form.zoneId}",style=MaterialTheme.typography.bodySmall)
-        val offsets=runCatching {ZoneId.of(form.zoneId).rules.getValidOffsets(LocalDate.parse(form.date).atTime(LocalTime.parse(form.time)))}.getOrDefault(emptyList())
-        if(offsets.size>1) Column {Text("该时刻重复出现，请选择："); offsets.forEachIndexed { index,offset -> JournalTag(offset.totalSeconds==(form.offsetSeconds?.takeIf {seconds->offsets.any {it.totalSeconds==seconds}} ?: offsets.first().totalSeconds),{model.updateMeasurement(form.copy(offsetSeconds=offset.totalSeconds))},{Text("第${index+1}次（UTC$offset）")})} }
-        OutlinedTextField(form.source,{model.updateMeasurement(form.copy(source=it))},label={Text("来源（可选）")},modifier=Modifier.fillMaxWidth(),enabled=!busy)
-        Text("补充说明",style=MaterialTheme.typography.titleMedium)
-        OutlinedTextField(form.note,{model.updateMeasurement(form.copy(note=it))},label={Text("备注（可选）")},modifier=Modifier.fillMaxWidth(),minLines=3,enabled=!busy)
+        JournalSectionTitle("补充说明")
+        JournalCard {
+            JournalField(form.note,{model.updateMeasurement(form.copy(note=it))}, "备注（可选）", singleLine=false, minLines=3, enabled=!busy)
+        }
         JournalButton("保存测量",enabled=!busy && def!=null,onClick=model::saveMeasurement)
         Text("保留原始读数，记录仅供自行整理。",style=MaterialTheme.typography.bodySmall)
         Spacer(Modifier.height(32.dp))

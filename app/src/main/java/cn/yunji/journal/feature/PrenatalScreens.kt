@@ -133,9 +133,8 @@ internal fun VisitTimeField(value: String, update: (String) -> Unit) {
 internal fun ActualVisitEditor(form: VisitForm, busy: Boolean, update: (VisitForm) -> Unit, save: () -> Unit) {
     LazyColumn(contentPadding = PaddingValues(bottom = 24.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         item { Inset { DateField("实际就诊日期", form.actualDate, { update(form.copy(actualDate = it)) }, required = true, maxDate = LocalDate.now()) } }
-        item { Inset { OutlinedTextField(form.actualTime, { update(form.copy(actualTime = it.take(5))) },
-            label = { Text("就诊时间（选填）") }, placeholder = { Text("例如 09:30") }, singleLine = true,
-            modifier = Modifier.fillMaxWidth().testTag("actual-visit-time")) } }
+        item { Inset { JournalField(form.actualTime, { update(form.copy(actualTime = it.take(5))) }, "就诊时间（选填）",
+            placeholder = "例如 09:30", modifier = Modifier.testTag("actual-visit-time")) } }
         item { Inset { FormField("就诊医院（选填）", form.actualHospital, { update(form.copy(actualHospital = it)) }, 120,
             modifier = Modifier.fillMaxWidth().testTag("actual-visit-hospital")) } }
         item { Inset { FormField("检查结果（选填）", form.actualResult, { update(form.copy(actualResult = it)) }, 10_000, false,

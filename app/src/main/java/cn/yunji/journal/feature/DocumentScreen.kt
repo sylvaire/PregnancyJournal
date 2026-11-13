@@ -398,14 +398,17 @@ internal fun DocumentMetadataDialog(attachment: AttachmentEntity, close: () -> U
     val valid = name.trim().isNotEmpty() && name.length <= 160 && !name.any { it.isISOControl() || it == '/' || it == '\\' }
     AlertDialog(onDismissRequest = {if(!saving)close()}, title = { Text(if(medication)"编辑包装照片" else "编辑资料") }, text = {
         Column(Modifier.verticalScroll(rememberScrollState()),verticalArrangement = Arrangement.spacedBy(12.dp)) {
-            OutlinedTextField(name, { name = it }, label = { Text(if(medication)"照片名称" else "资料名称") }, singleLine = true, isError = !valid,
-                supportingText = { Text(if (valid) "${name.length}/160" else "请填写名称，不能包含斜杠或控制字符") }, modifier = Modifier.testTag("document-name"),enabled=!saving)
+            JournalField(name, { name = it }, if(medication)"照片名称" else "资料名称", isError = !valid,
+                supportingText = if (valid) "${name.length}/160" else "请填写名称，不能包含斜杠或控制字符",
+                modifier = Modifier.testTag("document-name"), enabled = !saving)
             if(!medication) {
                 DocumentChoice(DOCUMENT_CATEGORIES[category] ?: "其他", DOCUMENT_CATEGORIES.toList(),enabled=!saving) { category = it }
                 DateField("报告日期（选填）",date,{date=it},enabled=!saving)
-                OutlinedTextField(hospital,{hospital=it},label={Text("医院（选填）")},isError=hospital.length>120,enabled=!saving,modifier=Modifier.testTag("document-hospital"))
+                JournalField(hospital,{hospital=it}, "医院（选填）", isError=hospital.length>120, enabled=!saving,
+                    modifier=Modifier.testTag("document-hospital"))
             }
-            OutlinedTextField(note,{note=it},label={Text(if(medication)"备注（选填，例如药盒信息）" else "备注（选填）")},minLines=2,isError=note.length>10_000,enabled=!saving,modifier=Modifier.testTag("document-note"))
+            JournalField(note,{note=it}, if(medication)"备注（选填，例如药盒信息）" else "备注（选填）", singleLine=false, minLines=2,
+                isError=note.length>10_000, enabled=!saving, modifier=Modifier.testTag("document-note"))
             error?.let {JournalError(it)}
         }
     }, confirmButton = { TextButton({saving=true;scope.launch {

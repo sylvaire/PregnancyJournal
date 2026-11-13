@@ -205,7 +205,7 @@ internal fun WelcomeScreen(onCreate: () -> Unit) {
             runCatching { bring.bringIntoView() }
         }
     }
-    OutlinedTextField(value, onValueChange = { if (it.length <= max) change(it) }, label = { Text(label) },
+    JournalField(value, { if (it.length <= max) change(it) }, label,
         modifier = modifier.bringIntoViewRequester(bring).onFocusChanged { focused = it.isFocused },
         singleLine = single, maxLines = if (single) 1 else 5)
 }
@@ -301,7 +301,7 @@ internal fun WelcomeScreen(onCreate: () -> Unit) {
             text = { Column(Modifier.verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 Text("预约：${visit.scheduledDate} ${visit.scheduledTime ?: "时间待定"}")
                 DateField("提醒日期", date, { date = it }, required = true)
-                OutlinedTextField(time, { time = it }, label = { Text("提醒时间（24小时制）") }, singleLine = true, isError = !valid,
+                JournalField(time, { time = it }, "提醒时间（24小时制）", isError = !valid,
                     modifier = Modifier.testTag("visit-reminder-time"))
                 Text("无具体预约时间时，请自行选择提醒时刻；不会假设午夜提醒。", style = MaterialTheme.typography.bodySmall)
             } },
