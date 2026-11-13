@@ -38,6 +38,38 @@
     "visualCheck": "用户授权后已截图并检查 N01-N22；N02/N11/N12 修订后重截确认；N20 最终月历修订仅通过 capture_layout，无最终截图",
     "visualEvidence": "../verification/2026-10-25-ardot-visual/README.md"
   },
+  "layoutOptimization": {
+    "doneAt": "2026-11-13",
+    "pageId": "0:1",
+    "problemFound": "补图后图标帧 26 个排成单行，宽 1024、x 1400..2424，压住 N03(2108)/N04(3488) 画板 316px；且三个设计系统区块纵向间距为 253/166/346 无规律",
+    "changes": [
+      "图标帧 22:575 由单行改为 WRAP 网格：9 列 × 3 行（9+9+8），label 见 gridRows",
+      "图标帧补白底卡片样式：fills=[primitive/surface #FFFFFF]、padding=32、宽 408（9*24+8*16+2*32）、高 168",
+      "设计系统纵向节奏统一 120：7:41(100..397) → 7:2461 & 22:575(517) → 01组(921)",
+      "五个画板分组统一堆叠：y = 921 / 2134 / 3347 / 4560 / 5773（各自高 1093，间距 120）",
+      "20 个原屏画板随分组同步下移：组顶 + 146",
+      "N 系列行距由 1000/1000/1000/1015 统一为 1000（末行 y 4115 → 4100）",
+      "18 ImportProgress 的 y 由 6040 修正为 6046，与同排三个画板对齐"
+    ],
+    "gridRows": [
+      "y=585: check plus file clock calendar shield prohibit image-legacy restore",
+      "y=625: chevron trash bell bell-plus lock cloud calendar-check activity notebook",
+      "y=665: backup history refresh edit info user pill image"
+    ],
+    "finalGeometry": {
+      "7:41": "x100 y100 1840x297",
+      "7:2461": "x100 y517 1188x284",
+      "22:575": "x1400 y517 408x168",
+      "12:22": "x100 y921 1888x1093",
+      "12:279": "x100 y2134 1888x1093",
+      "14:251": "x100 y3347 1888x1093",
+      "14:560": "x100 y4560 1888x1093",
+      "16:468": "x100 y5773 1888x1093",
+      "Nscreens": "列 x 2108/2568/3028/3488/3948/4408（列距恒 460）；行 y 100/1100/2100/3100/4100（行距恒 1000）"
+    },
+    "validation": "程序化校验通过：图标帧与 26 个画板零重叠；20 个原屏全部落在各自分组框内；N 系列行距/列距各自恒定；设计系统纵向间距恒 120",
+    "structuralNote": "分组框内的 Screens 子帧为空（children=0），20 个画板 parent 均为页面 0:1，属页面级绝对定位；因此移动分组框不会带动画板，必须分别平移。截图分组框不会渲染画板内容，属正常现象，非缺陷。"
+  },
   "mcpAccess": {
     "checkedAt": "2026-11-13",
     "endpoint": "https://ardot.tencent.com/mcp",

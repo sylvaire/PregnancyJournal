@@ -9,6 +9,8 @@ Usage:
 import json
 import pathlib
 import sys
+import time
+import urllib.error
 import urllib.request
 
 URL = "https://ardot.tencent.com/mcp"
@@ -38,12 +40,24 @@ class Client:
         }
         if self.session:
             headers["Mcp-Session-Id"] = self.session
-        req = urllib.request.Request(URL, data=json.dumps(payload).encode(), headers=headers, method="POST")
-        with urllib.request.urlopen(req, timeout=120) as resp:
-            if not self.session:
-                self.session = resp.headers.get("Mcp-Session-Id")
-            raw = resp.read().decode()
-        return self._parse(raw)
+        body = json.dumps(payload).encode()
+        # Ardot throttles bursts (HTTP 429). Back off and retry instead of failing the whole run.
+        delay = 3.0
+        for attempt in range(6):
+            req = urllib.request.Request(URL, data=body, headers=headers, method="POST")
+            try:
+                with urllib.request.urlopen(req, timeout=120) as resp:
+                    if not self.session:
+                        self.session = resp.headers.get("Mcp-Session-Id")
+                    raw = resp.read().decode()
+                time.sleep(0.4)
+                return self._parse(raw)
+            except urllib.error.HTTPError as e:
+                if e.code != 429 or attempt == 5:
+                    raise
+                time.sleep(delay)
+                delay = min(delay * 2, 60)
+        raise RuntimeError("unreachable")
 
     @staticmethod
     def _parse(raw: str):
