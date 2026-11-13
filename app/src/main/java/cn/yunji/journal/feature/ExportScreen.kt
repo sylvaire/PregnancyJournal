@@ -44,7 +44,7 @@ internal fun ExportContent(state: ExportUiState, updateRange: (String, String) -
             style = MaterialTheme.typography.bodySmall)
         Text("导出范围", style = MaterialTheme.typography.titleMedium)
         RecordRow("已选择 ${state.sections.size} 类资料", if (state.sections.isEmpty()) "请选择要导出的记录" else state.sections.take(3).joinToString("、", transform = ::sectionLabel),
-            "122c6.svg", { scopeExpanded = !scopeExpanded }, Modifier.testTag("export-scope-toggle"))
+            "ic-file-text.svg", { scopeExpanded = !scopeExpanded }, Modifier.testTag("export-scope-toggle"))
         if (scopeExpanded) JournalCard {
             Text("选择记录类型", style = MaterialTheme.typography.titleMedium)
             cn.yunji.journal.core.export.ExportScope.ALL_SECTIONS.forEach { section ->

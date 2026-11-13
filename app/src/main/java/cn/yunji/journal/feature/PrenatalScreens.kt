@@ -98,7 +98,7 @@ internal fun VisitsScreen(state: JournalState, onAdd: () -> Unit, onSelect: (Str
             )
         } }
         items(shown, key = { it.id }, contentType = { "visit" }) { v -> Inset {
-            RecordRow("${displayDate(v.scheduledDate)} · ${v.items.ifBlank { "产检预约" }}", "${v.scheduledTime ?: "时间待定"} · ${visitStatus(v)}", "122c6.svg") { onSelect(v.id) }
+            RecordRow("${displayDate(v.scheduledDate)} · ${v.items.ifBlank { "产检预约" }}", "${v.scheduledTime ?: "时间待定"} · ${visitStatus(v)}", "ic-calendar-check.svg") { onSelect(v.id) }
         } }
     }
     if (calendar) Box(Modifier.align(Alignment.BottomCenter).fillMaxWidth().background(MaterialTheme.colorScheme.background)
@@ -143,7 +143,7 @@ internal fun ActualVisitEditor(form: VisitForm, busy: Boolean, update: (VisitFor
         item { Inset { FormField("就诊备注（选填）", form.advice, { update(form.copy(advice = it)) }, 10_000, false) } }
         item { Inset { Text("关联预约", style = MaterialTheme.typography.titleMedium) } }
         item { Inset { RecordRow(form.items.ifBlank { "本次产检预约" },
-            "原预约 ${displayDate(form.date)}${form.hospital.takeIf { it.isNotBlank() }?.let { " · $it" }.orEmpty()}", "42641.svg") } }
+            "原预约 ${displayDate(form.date)}${form.hospital.takeIf { it.isNotBlank() }?.let { " · $it" }.orEmpty()}", "ic-calendar-check.svg") } }
         item { Inset { JournalButton(if (busy) "正在保存…" else "保存就诊记录", enabled = !busy && form.actualDate.isNotBlank(), onClick = save) } }
         item { Inset { Text("以医院正式检查结果为准；原预约信息保持不变，返回会保留草稿。", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant) } }
     }

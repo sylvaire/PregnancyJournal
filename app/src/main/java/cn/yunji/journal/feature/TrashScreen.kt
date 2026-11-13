@@ -126,7 +126,7 @@ internal fun TrashScreen(model: JournalViewModel) {
                     RecordRow(
                         batch.title,
                         "${when (batch.kind) { "PREGNANCY" -> "孕期"; "MEDICATION" -> "药品"; "JOURNAL" -> "日常记录"; "MEASUREMENT" -> "测量记录"; "INTAKE" -> "服药记录"; else -> "产检记录" }} · 删除于 ${deletionDate(batch.deletedAt)}",
-                        "73f08.svg",
+                        "ic-file-text.svg",
                         { focus.clearFocus(); keyboard?.hide(); expandedBatchId = if (expandedBatchId == batch.id) null else batch.id },
                         Modifier.testTag("trash-batch-${batch.id}"),
                     )

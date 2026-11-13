@@ -23,8 +23,8 @@
 | 圆角 | 修复后统一 | 原有 3 处 4dp 尖角，已统一为 16dp |
 | Snackbar | 修复后统一 | 原为直角矩形，已改 16dp 圆角 |
 | 动效 | 修复后改善 | 原有仅页面级转场；已为卡片加 `animateContentSize` |
-| 无障碍 | 待改进 | 交互语义标签偏少（仅 5 处 contentDescription） |
-| 图标语义 | 待改进 | **仅 14 个 SVG 资源**，被几十个功能复用，语义错配明显 |
+| 无障碍 | 部分修复 | `RecordRow` 补 `onClickLabel`；装饰图标不重复播报 |
+| 图标语义 | 已修复 | 新增 20 个语义化图标，27 处引用替换，无缺失引用 |
 
 ## 2. 已修复项
 
@@ -49,9 +49,9 @@
 - 修复：`JournalCard` 的 `Column` 加 `animateContentSize(tween(180))`。
   选 180ms 是因为短于此在展开长内容时仍显跳，长于此会与 320ms 页面转场叠加产生拖沓感。
 
-## 3. 记录但未修改的项（需决策）
+## 3. 图标语义修复（本轮完成）
 
-### 3.1 图标语义错配（影响最大）
+### 3.1 问题与根因
 
 **根因**：`assets/design/` 下只有 **14 个 SVG**，而 `RecordRow` 被用于几十个不同功能，图标被迫复用。
 
@@ -71,16 +71,38 @@
 
 用户看到「回收站」配禁止符号、「安全设置」配叶片，需要读文字才能分辨——这是**可识别的可用性缺陷**。
 
-未直接修改的原因：需要补充约 10–15 个语义化 SVG 图标，属于**设计资源产出**，不是我能在代码层凭空替代的。
-建议从 Ardot/Figma 图标库补齐，或在设计系统里建立 `JournalIcon` 语义枚举，再做一次全站替换。
+**已修复**：新增 20 个语义化图标（`app/src/main/assets/design/ic-*.svg`），
+沿用现有图标的完全一致规格（24×24、stroke 1.7–1.75、round cap/join、`#356B53`），
+并把全站 **27 处**图标引用替换为语义正确的版本。
 
-### 3.2 无障碍语义偏少
+| 新增图标 | 语义 |
+|---|---|
+| `ic-trash` / `ic-bell` / `ic-bell-plus` | 回收站 / 提醒 / 新建提醒 |
+| `ic-shield` / `ic-lock` / `ic-refresh` | 安全 / 锁定 / 重试 |
+| `ic-cloud` / `ic-backup` / `ic-clock` | 云盘 / 备份 / 调度 |
+| `ic-pill` / `ic-calendar-check` | 药品 / 产检 |
+| `ic-file-text` / `ic-image` / `ic-notebook` | 文档 / 图片 / 日常记录 |
+| `ic-activity` / `ic-history` / `ic-edit` | 健康指标 / 历史 / 编辑 |
+| `ic-check` / `ic-info` / `ic-user` | 确认 / 提示 / 用户 |
+
+图标规范与替换清单见 [语义图标规范](../../design/语义图标规范.md)。
+图标总览：`screens/08-icon-set.png`；三处形状微调：`screens/09-icon-fixes.png`。
+
+**Ardot 状态**：配置已写入 `~/.zcode/cli/config.json`（`ardot-remote`），
+OAuth 元数据可读、动态注册成功，但授权页返回 `400 加载授权信息失败`——需要重启 ZCode
+在「设置 → MCP」内完成客户端侧授权。届时可用设计稿同名覆盖 SVG，代码无需改动。
+
+### 3.2 无障碍语义（已部分修复）
 
 - `contentDescription` 仅 5 处、`onClickLabel` 仅 1 处，而交互点（`RecordRow`、`JournalTag`、列表行）数量远多于此。
 - `RecordRow` 的可点击 `Surface` 不声明动作语义，TalkBack 会读作「按钮」但不说明会打开什么。
-- 曾尝试补 `semantics { onClick(label = title, action = null) }`，但该写法**会覆盖原有点击行为**，已在编译前回退。
-- 正确做法是给 `Surface` 传 `onClickLabel` 参数（Compose 的 `Surface(onClick=...)` 重载不支持），
-  或改用 `Modifier.clickable(onClickLabel = ...)`。建议后续统一处理。
+**已修复 `RecordRow`**：改用 `Modifier.clickable(onClickLabel = title, role = Role.Button)`，
+读屏现在会说出「<标题>，按钮」，说明点击后会进入该功能。
+早先尝试的 `semantics { onClick(label = title, action = null) }` 会**覆盖原点击行为**，已在编译前回退。
+
+`JournalTag` 已通过 `selectable(role = Role.Tab)` 提供选中状态，未额外加动作标签（避免重复播报）。
+`DesignIcon` 作为 `RecordRow` 内的装饰图标保持无 `contentDescription`，
+因为标题文字已表达语义，重复描述会让 TalkBack 念两遍。
 
 ### 3.3 底部导航选中态视觉权重
 

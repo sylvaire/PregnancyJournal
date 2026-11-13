@@ -86,11 +86,11 @@ internal fun ReminderSettingsScreen(model: JournalViewModel) {
             Text(if (notifications && exact) "可以查看未来安排与自定义提醒" else "仍可查看应用内待办",
                 style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
         } }
-        Inset { RecordRow("通知权限", if (notifications) "已允许 · 查看通知和系统设置" else "打开系统设置以接收通知", "86969.svg", { scope.launch { permissionTarget.bringIntoView() } }) }
-        Inset { RecordRow("产检提醒", if (visits) "按预约日期安排 · 已开启" else "按预约日期安排 · 已关闭", "d9f3c.svg", { scope.launch { visitTarget.bringIntoView() } }) }
-        Inset { RecordRow("用药提醒", if (medications) "按方案和服药时间安排 · 已开启" else "按方案和服药时间安排 · 已关闭", "42641.svg", { scope.launch { medicationTarget.bringIntoView() } }) }
-        Inset { RecordRow("自定义提醒", "一次、每天或每周", "7b4fe.svg", { scope.launch { customTarget.bringIntoView() } }) }
-        Inset { RecordRow("调度检查", "查看未来 7 天的安排", "73f08.svg", { scope.launch { scheduleTarget.bringIntoView() } }) }
+        Inset { RecordRow("通知权限", if (notifications) "已允许 · 查看通知和系统设置" else "打开系统设置以接收通知", "ic-bell.svg", { scope.launch { permissionTarget.bringIntoView() } }) }
+        Inset { RecordRow("产检提醒", if (visits) "按预约日期安排 · 已开启" else "按预约日期安排 · 已关闭", "ic-calendar-check.svg", { scope.launch { visitTarget.bringIntoView() } }) }
+        Inset { RecordRow("用药提醒", if (medications) "按方案和服药时间安排 · 已开启" else "按方案和服药时间安排 · 已关闭", "ic-pill.svg", { scope.launch { medicationTarget.bringIntoView() } }) }
+        Inset { RecordRow("自定义提醒", "一次、每天或每周", "ic-bell-plus.svg", { scope.launch { customTarget.bringIntoView() } }) }
+        Inset { RecordRow("调度检查", "查看未来 7 天的安排", "ic-clock.svg", { scope.launch { scheduleTarget.bringIntoView() } }) }
         Inset { Text("提醒状态以手机系统授权为准。", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant) }
         Inset { Text("详细设置", style = MaterialTheme.typography.titleLarge) }
         Box(Modifier.bringIntoViewRequester(permissionTarget)) {
@@ -289,7 +289,7 @@ private fun CustomReminderEditor(row: CustomReminderEntity?, onDismiss: () -> Un
                     }
                     Text("提醒预览", style = MaterialTheme.typography.titleMedium)
                     RecordRow("${when (repeat) { "DAILY" -> "每天"; "WEEKLY" -> "每周"; else -> displayDate(date) }} $time",
-                        "通知默认隐藏私人信息", "42641.svg")
+                        "通知默认隐藏私人信息", "ic-bell.svg")
                     error?.let { Text(it, color = MaterialTheme.colorScheme.error) }
                     Text("可选择一次、每天或每周重复。", style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant)

@@ -35,8 +35,8 @@ import java.time.temporal.ChronoUnit
 private val TIMELINE_FILTERS = linkedMapOf("" to "全部", "VISIT" to "产检", "JOURNAL" to "日常")
 private val TIMELINE_TYPE_LABELS = mapOf("VISIT" to "产检", "JOURNAL" to "日常", "DOCUMENT" to "资料",
     "PLAN" to "方案变更", "INTAKE" to "服药", "MEASUREMENT" to "健康记录")
-private val TIMELINE_ROW_ICONS = mapOf("VISIT" to "122c6.svg", "DOCUMENT" to "86969.svg",
-    "MEASUREMENT" to "42641.svg", "PLAN" to "86969.svg", "INTAKE" to "86969.svg")
+private val TIMELINE_ROW_ICONS = mapOf("VISIT" to "ic-calendar-check.svg", "DOCUMENT" to "ic-file-text.svg",
+    "MEASUREMENT" to "ic-activity.svg", "PLAN" to "ic-pill.svg", "INTAKE" to "ic-notebook.svg")
 internal const val TIMELINE_TAGLINE = "把一次次记录，连成自己的故事"
 private data class TimelineLoad(val loading: Boolean=true,val snapshot: TimelineSnapshot?=null,val events: List<TimelineEvent> = emptyList(),val failed: Boolean=false)
 
@@ -61,8 +61,8 @@ internal fun RecordsHub(title: String?,canCreate: Boolean,timeline: ()->Unit,jou
         Triple("用药方案", "药品、方案与历史版本", "用药") to medications,
         Triple("服药记录", "按日计划、确认与补记", "用药") to intakes,
     )
-    val icons = mapOf("孕期时间线" to "5fbe7.svg", "日常记录" to "86969.svg", "全部资料" to "cdc29.svg",
-        "用药方案" to "42641.svg", "服药记录" to "7b4fe.svg", "健康指标" to "122c6.svg")
+    val icons = mapOf("孕期时间线" to "5fbe7.svg", "日常记录" to "ic-notebook.svg", "全部资料" to "ic-file-text.svg",
+        "用药方案" to "ic-pill.svg", "服药记录" to "ic-notebook.svg", "健康指标" to "ic-activity.svg")
     val visible = destinations.filter { (entry, _) ->
         (category == "全部" || entry.third == category) &&
             (query.isBlank() || entry.first.contains(query.trim(), ignoreCase = true) || entry.second.contains(query.trim(), ignoreCase = true))
@@ -153,7 +153,7 @@ private fun TimelineEntry(event: TimelineEvent,journalEntry: JournalEntryEntity?
     Column(Modifier.fillMaxWidth().testTag("timeline-${event.key}")) {
         if(event.type=="JOURNAL") JournalNoteCard(event,journalEntry,open)
         else TimelineRecordRow(title=timelineTitle(event),subtitle=timelineSubtitle(event),
-            icon=TIMELINE_ROW_ICONS[event.type]?:"86969.svg",onClick=open,modifier=Modifier.testTag("source-${event.key}"))
+            icon=TIMELINE_ROW_ICONS[event.type]?:"ic-info.svg",onClick=open,modifier=Modifier.testTag("source-${event.key}"))
     }
 }
 
@@ -231,7 +231,7 @@ internal fun AllDocumentsScreen(pregnancyId: String?,model: JournalViewModel,ope
         else documents.groupBy {it.date}.forEach {(date,rows)->
             item(key="day-$date",contentType="day") {DateGroupHeader(date,null)}
             items(rows,key={it.key},contentType={it.type}) {event ->
-                TimelineRecordRow(title=event.title,subtitle=timelineSubtitle(event),icon="86969.svg",
+                TimelineRecordRow(title=event.title,subtitle=timelineSubtitle(event),icon="ic-info.svg",
                     onClick={open(event.id)},modifier=Modifier.testTag("source-${event.key}"))
             }
         }
@@ -287,14 +287,14 @@ internal fun TimelineSourceScreen(pregnancyId: String,type: String,id: String,mo
                     if(journal!=null && (journal.symptom.isNotBlank() || journal.mood.isNotBlank())) {
                         Text("症状与心情",style=MaterialTheme.typography.titleMedium)
                         RecordRow(listOf(journal.symptom,journal.mood).filter {it.isNotBlank()}.joinToString(" · "),
-                            "按发生日期归档", "7b4fe.svg")
+                            "按发生日期归档", "ic-clock.svg")
                     }
                     journal?.text?.takeIf {it.isNotBlank()}?.let { note ->
                         Text("日常备注",style=MaterialTheme.typography.titleMedium)
                         Text(note,style=MaterialTheme.typography.bodyMedium)
                     }
                     Text("记录操作",style=MaterialTheme.typography.titleMedium)
-                    RecordRow("查看完整原始内容", "包含记录时间与来源", "cdc29.svg") {
+                    RecordRow("查看完整原始内容", "包含记录时间与来源", "ic-file-text.svg") {
                         originalExpanded = !originalExpanded
                     }
                     if(originalExpanded && journal!=null) JournalCard {

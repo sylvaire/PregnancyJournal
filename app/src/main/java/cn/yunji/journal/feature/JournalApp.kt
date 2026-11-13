@@ -59,8 +59,8 @@ internal fun WelcomeScreen(onCreate: () -> Unit) {
                 Spacer(Modifier.height(4.dp))
             }
         } }
-        item { Inset { RecordRow("孕期档案，离线也可查看", "日期依据留存 · 本机加密保存", "7b4fe.svg") } }
-        item { Inset { RecordRow("每次产检，都有记录可循", "预约与已完成产检，清楚分开", "7b4fe.svg") } }
+        item { Inset { RecordRow("孕期档案，离线也可查看", "日期依据留存 · 本机加密保存", "ic-user.svg") } }
+        item { Inset { RecordRow("每次产检，都有记录可循", "预约与已完成产检，清楚分开", "ic-calendar-check.svg") } }
         item { Inset { JournalButton("创建我的孕期档案", onClick = onCreate) } }
         item { Inset { Text("无需注册账号 · 数据保存在本机", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant) } }
     }
@@ -106,21 +106,21 @@ internal fun WelcomeScreen(onCreate: () -> Unit) {
             TextButton(onVisits) {Text("查看全部")}
         } } }
         if(model!=null) item {Inset {HomePendingIntakeRow(pregnancy.id,today,model,onIntakes)}}
-        item { Inset { if (next == null) RecordRow("还没有产检预约", "添加下一次预约，留住后续安排", "122c6.svg", onNewVisit)
+        item { Inset { if (next == null) RecordRow("还没有产检预约", "添加下一次预约，留住后续安排", "ic-calendar-check.svg", onNewVisit)
             else RecordRow("下一次产检 · ${displayDate(next.scheduledDate)}", "${next.scheduledTime ?: "时间待定"} · ${next.hospital.ifBlank { "医院待补充" }}", "122c6.svg") { onVisit(next.id) } } }
         item { Inset { Text("随手记一笔",style=MaterialTheme.typography.titleLarge) } }
         item { Inset { Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.spacedBy(8.dp)) {
             HomeQuickAction("检查资料","cdc29.svg",Modifier.weight(1f),onDocuments)
             HomeQuickAction("健康指标","dcd03.svg",Modifier.weight(1f),onMeasurements)
-            HomeQuickAction("日常备注","86969.svg",Modifier.weight(1f),onJournal)
+            HomeQuickAction("日常备注","ic-notebook.svg",Modifier.weight(1f),onJournal)
         } } }
-        item { Inset { if(recentDocument==null) RecordRow("最近资料 · 暂无", "保存的检查资料会显示在这里", "7b4fe.svg",onDocuments)
-            else RecordRow("最近资料 · ${recentDocument.title}", "${displayDate(recentDocument.date)} · 已保存到本机", "7b4fe.svg") {onDocument(recentDocument.id)} } }
+        item { Inset { if(recentDocument==null) RecordRow("最近资料 · 暂无", "保存的检查资料会显示在这里", "ic-file-text.svg",onDocuments)
+            else RecordRow("最近资料 · ${recentDocument.title}", "${displayDate(recentDocument.date)} · 已保存到本机", "ic-file-text.svg") {onDocument(recentDocument.id)} } }
         item { Inset { Text(if(backup.hasSuccess) "最近云端完整备份：${displayInstant(backup.lastSuccessAt,ZoneId.systemDefault().id)}" else "尚无云端完整备份 · 查看备份状态",
             Modifier.clickable(onClick=onBackup),style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.primary) } }
         item { Spacer(Modifier.height(32.dp)) }
         item { Inset { JournalButton("新建产检预约", onClick = onNewVisit) } }
-        item { Inset { RecordRow("管理我的孕期", "修改日期与切换档案", "86969.svg", onProfile) } }
+        item { Inset { RecordRow("管理我的孕期", "修改日期与切换档案", "ic-user.svg", onProfile) } }
         if (model != null) item { Inset { HomeIntakeSummary(pregnancy.id, today, model, onIntakes) } }
     }
 }
@@ -145,19 +145,19 @@ internal fun WelcomeScreen(onCreate: () -> Unit) {
         } } } }
         item { Inset { Text("孕期档案", style = MaterialTheme.typography.titleMedium) } }
         items(state.pregnancies, key = { it.id }, contentType = { "pregnancy" }) { p -> Inset {
-            RecordRow(p.title, if (p.id == state.active?.id) "当前档案" else "切换到此档案", "86969.svg") {
+            RecordRow(p.title, if (p.id == state.active?.id) "当前档案" else "切换到此档案", "ic-user.svg") {
                 if (!busy) { if (p.id == state.active?.id) onEdit(p.id) else onSelect(p.id) }
             }
         } }
         state.active?.let { active ->
-            item { Inset { RecordRow("查看日期依据历史", "可核对原始日期与修订", "cdc29.svg") { onHistory(active.id) } } }
-            item { Inset { RecordRow("编辑", "名称、医院和备注", "42641.svg") { if (!busy) onEdit(active.id) } } }
+            item { Inset { RecordRow("查看日期依据历史", "可核对原始日期与修订", "ic-history.svg") { onHistory(active.id) } } }
+            item { Inset { RecordRow("编辑", "名称、医院和备注", "ic-edit.svg") { if (!busy) onEdit(active.id) } } }
             item { Inset { RecordRow(if (active.status == "ONGOING") "结束本次孕期" else if (active.status == "ARCHIVED") "移出归档" else "归档",
-                "资料保留，可随时查看", "86969.svg") {
+                "资料保留，可随时查看", "ic-shield.svg") {
                 if (!busy) { if (active.status == "ONGOING") ending = active
                     else onStatus(active.id, if (active.status == "ARCHIVED") "ENDED" else "ARCHIVED") }
             } } }
-            item { Inset { RecordRow("删除孕期", "进入回收站，需再次确认", "86969.svg") { if (!busy) onDelete(active.id) } } }
+            item { Inset { RecordRow("删除孕期", "进入回收站，需再次确认", "ic-trash.svg") { if (!busy) onDelete(active.id) } } }
         }
         item { Inset { JournalButton("创建新的孕期档案", onClick = onAdd) } }
         item { Inset { Text("孕迹 ${BuildConfig.VERSION_NAME}", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant) } }

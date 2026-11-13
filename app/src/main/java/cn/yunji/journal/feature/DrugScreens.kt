@@ -39,11 +39,11 @@ internal fun DrugCatalogScreen(pregnancyId: String?,model: JournalViewModel,edit
         }}
         selected?.let { drug ->
             item { Inset { Text("${drug.name} · 资料管理", style=MaterialTheme.typography.titleMedium) } }
-            item { Inset { RecordRow("药品信息", "名称、规格和剂型可编辑", "cdc29.svg",
+            item { Inset { RecordRow("药品信息", "名称、规格和剂型可编辑", "ic-pill.svg",
                 {if(!busy)edit(drug.id)}, Modifier.testTag("edit-drug-${drug.id}")) } }
-            item { Inset { RecordRow("包装照片", "加密保存，便于核对", "cdc29.svg",
+            item { Inset { RecordRow("包装照片", "加密保存，便于核对", "ic-image.svg",
                 {photos(drug.id)}, Modifier.testTag("drug-photos-${drug.id}")) } }
-            item { Inset { RecordRow("删除药品", "删除前检查关联方案", "cdc29.svg",
+            item { Inset { RecordRow("删除药品", "删除前检查关联方案", "ic-trash.svg",
                 {if(!busy)deleting=drug.id}, Modifier.testTag("delete-drug-${drug.id}")) } }
         }
         item {Inset {JournalButton("新增药品",enabled=!busy,onClick={edit(null)})}}
@@ -61,9 +61,9 @@ internal fun DrugEditorScreen(form: DrugForm,model: JournalViewModel,busy: Boole
         OutlinedTextField(form.specification,{model.updateDrug(form.copy(specification=it))},label={Text("规格（选填）")},modifier=Modifier.fillMaxWidth().testTag("drug-specification"),enabled=!busy,isError=form.specification.length>120)
         OutlinedTextField(form.dosageForm,{model.updateDrug(form.copy(dosageForm=it))},label={Text("剂型（选填）")},modifier=Modifier.fillMaxWidth().testTag("drug-form"),enabled=!busy,isError=form.dosageForm.length>40)
         Text("包装照片", style = MaterialTheme.typography.titleMedium)
-        RecordRow("保存后添加包装照片", "在药品目录中添加或查看加密照片", "122c6.svg")
+        RecordRow("保存后添加包装照片", "在药品目录中添加或查看加密照片", "ic-image.svg")
         Text("关联方案", style = MaterialTheme.typography.titleMedium)
-        RecordRow("添加到用药方案", "先保存药品，再设置剂量与时间", "73f08.svg")
+        RecordRow("添加到用药方案", "先保存药品，再设置剂量与时间", "ic-pill.svg")
         if (attempted && error != null) Text(error, color = MaterialTheme.colorScheme.error, modifier = Modifier.testTag("drug-validation"))
         JournalButton(if (busy) "正在保存…" else "保存药品",enabled=!busy,onClick={attempted=true;if(error==null)model.saveDrug()},modifier=Modifier.testTag("save-drug"))
         Text("基础信息可单独保存；返回会保留草稿。修改后，已保存方案仍保留原名称、规格与剂型。",style=MaterialTheme.typography.bodySmall)

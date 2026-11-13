@@ -135,9 +135,17 @@ import coil.decode.SvgDecoder
             if (onClick != null) DesignIcon("cfd63.svg", size = 20.dp)
         }
     }
-    if (onClick != null) Surface(onClick = onClick, modifier = modifier, shape = RoundedCornerShape(20.dp),
-        color = MaterialTheme.colorScheme.surface, content = content)
-    else Surface(modifier = modifier, shape = RoundedCornerShape(20.dp), color = MaterialTheme.colorScheme.surface, content = content)
+    if (onClick != null) {
+        // Surface(onClick=...) 没有 onClickLabel 参数；改用 clickable 才能给读屏一个动作描述，
+        // 否则 TalkBack 只念出标题、不说明点击后会进入何处。
+        Surface(
+            modifier = modifier.clickable(onClickLabel = title, role = Role.Button, onClick = onClick),
+            shape = RoundedCornerShape(20.dp), color = MaterialTheme.colorScheme.surface, content = content,
+        )
+    } else {
+        Surface(modifier = modifier, shape = RoundedCornerShape(20.dp),
+            color = MaterialTheme.colorScheme.surface, content = content)
+    }
 }
 
 @Composable fun PageHeader(title: String, subtitle: String, onSubtitleClick: (() -> Unit)? = null) {

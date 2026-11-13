@@ -191,15 +191,15 @@ fun JournalApp(model: JournalViewModel,externalStack: NavBackStack<NavKey>?=null
                             Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).testTag("profiles-root-list"), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                                 PageHeader("我的", "孕期档案与本机资料")
                                 Inset { RecordRow("管理孕期", "切换、编辑与归档", "d9f3c.svg") { push(PregnancyManagerRoute) } }
-                                Inset { RecordRow("全局回收站", "恢复删除项目 · 查看保留的资料", "73f08.svg") { push(TrashRoute) } }
-                                Inset { RecordRow("提醒设置", "通知权限、精确提醒与未来7天重建", "86969.svg") { push(ReminderSettingsRoute) } }
-                                if(onSecurity!=null)Inset {RecordRow("安全设置","应用锁、严格模式与立即锁定","86969.svg",onSecurity)}
-                                  Inset {RecordRow("云盘连接","配置WebDAV与检查备份目录","62b4c.svg") {push(CloudConnectionRoute)}}
-                                  Inset {RecordRow("本地备份","导出加密备份与保存恢复密钥","d34da.svg") {push(RecoveryRoute)}}
-                                  Inset {RecordRow("导出资料","结构化数据包与就诊摘要 PDF","cdc29.svg") {push(ExportRoute)}}
-                                Inset { RecordRow("用药方案", "药品、方案与历史版本", "42641.svg") { push(MedicationsRoute) } }
-                                Inset { RecordRow("服药记录", "按日计划、确认与补记", "7b4fe.svg") { push(IntakesRoute) } }
-                                Inset { RecordRow("健康指标", "测量记录与分组趋势", "122c6.svg") { push(MeasurementsRoute) } }
+                                Inset { RecordRow("全局回收站", "恢复删除项目 · 查看保留的资料", "ic-trash.svg") { push(TrashRoute) } }
+                                Inset { RecordRow("提醒设置", "通知权限、精确提醒与未来7天重建", "ic-bell.svg") { push(ReminderSettingsRoute) } }
+                                if(onSecurity!=null)Inset {RecordRow("安全设置","应用锁、严格模式与立即锁定","ic-shield.svg",onSecurity)}
+                                  Inset {RecordRow("云盘连接","配置WebDAV与检查备份目录","ic-cloud.svg") {push(CloudConnectionRoute)}}
+                                  Inset {RecordRow("本地备份","导出加密备份与保存恢复密钥","ic-backup.svg") {push(RecoveryRoute)}}
+                                  Inset {RecordRow("导出资料","结构化数据包与就诊摘要 PDF","ic-file-text.svg") {push(ExportRoute)}}
+                                Inset { RecordRow("用药方案", "药品、方案与历史版本", "ic-pill.svg") { push(MedicationsRoute) } }
+                                Inset { RecordRow("服药记录", "按日计划、确认与补记", "ic-notebook.svg") { push(IntakesRoute) } }
+                                Inset { RecordRow("健康指标", "测量记录与分组趋势", "ic-activity.svg") { push(MeasurementsRoute) } }
                                 Inset { Text("孕迹 ${BuildConfig.VERSION_NAME}", style = MaterialTheme.typography.bodySmall) }
                             }
                         }

@@ -30,11 +30,11 @@ fun SecuritySettingsScreen(state: SecurityUi,action: (String)->Unit) {
         Row(horizontalArrangement=Arrangement.spacedBy(8.dp)) {
             listOf(0 to "立即",1 to "1分钟",5 to "5分钟").forEach {(minutes,label)->JournalTag(state.timeout==minutes,{action("TIMEOUT_$minutes")},{Text(label)},enabled=!state.strict)}
         }
-        RecordRow("验证方式", "使用系统生物识别或设备凭据解锁", "86969.svg")
-        RecordRow("严格模式", if(state.strict) "已开启 · 每次锁定后重新认证" else "当前关闭 · 可提高后台保护强度", "86969.svg")
+        RecordRow("验证方式", "使用系统生物识别或设备凭据解锁", "ic-lock.svg")
+        RecordRow("严格模式", if(state.strict) "已开启 · 每次锁定后重新认证" else "当前关闭 · 可提高后台保护强度", "ic-shield.svg")
         JournalButton(if(state.strict)"关闭严格模式" else "开启严格模式",secondary=true){action("TOGGLE_STRICT")}
         JournalButton("立即锁定",enabled=state.enabled || state.strict){action("LOCK_NOW")}
-        RecordRow("通知默认隐藏敏感内容", "锁定会关闭原件预览并清理私有预览缓存", "86969.svg")
+        RecordRow("通知默认隐藏敏感内容", "锁定会关闭原件预览并清理私有预览缓存", "ic-bell.svg")
         Text(if(state.strict)"严格模式每次锁定后清除密钥会话，后台导入、提醒重建和备份可能延期。" else "普通模式允许设备首次解锁后的后台工作；严格模式改用每次需要系统认证的密钥封装。",style=MaterialTheme.typography.bodySmall)
         Text("严格模式始终在离开应用后锁定。设备密钥失效时保留加密原件；恢复信息尚未交付前，请勿清除应用数据。",style=MaterialTheme.typography.bodySmall)
         Text("通知动作需认证并确认后才写入。锁定方式依赖手机系统凭据。", style=MaterialTheme.typography.bodySmall)
@@ -48,13 +48,13 @@ fun UnlockScreen(busy: Boolean,error: String?,unlock: ()->Unit) {
         Text("孕迹",style=MaterialTheme.typography.headlineMedium)
         Text("应用已锁定", style = MaterialTheme.typography.bodySmall)
         JournalCard(soft = true) {
-            DesignIcon("86969.svg", size = 40.dp)
+            DesignIcon("ic-shield.svg", size = 40.dp)
             Text("资料已锁定", style = MaterialTheme.typography.headlineMedium)
             Text("请先验证身份", style = MaterialTheme.typography.headlineMedium)
             Text("用手机屏幕锁或生物识别解锁，继续查看本机孕期记录。")
         }
-        RecordRow("保护本机资料", "离开应用后按设置自动锁定", "86969.svg")
-        RecordRow("验证失败可重试", "不会删除或修改记录", "86969.svg")
+        RecordRow("保护本机资料", "离开应用后按设置自动锁定", "ic-shield.svg")
+        RecordRow("验证失败可重试", "不会删除或修改记录", "ic-refresh.svg")
         error?.let { Text(it,color=MaterialTheme.colorScheme.error) }
         if(busy)CircularProgressIndicator() else JournalButton("解锁资料",onClick=unlock)
         Text("请勿向他人透露手机解锁信息。", style=MaterialTheme.typography.bodySmall)

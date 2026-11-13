@@ -71,9 +71,9 @@ internal fun HomePendingIntakeRow(pregnancyId:String,date:LocalDate,model:Journa
         .minByOrNull {it.scheduledAt}
     val active=points.any {it.deletedAt==null && it.state=="ACTIVE"}
     when {
-        pending!=null -> RecordRow("${pending.localTime.take(5)} · 用药待确认","按已保存的方案记录服药情况","73f08.svg",open)
-        active -> RecordRow("今天的用药已记录","查看今日服药记录","73f08.svg",open)
-        else -> RecordRow("今天没有固定服药计划","查看服药记录或按需补记","73f08.svg",open)
+        pending!=null -> RecordRow("${pending.localTime.take(5)} · 用药待确认","按已保存的方案记录服药情况","ic-pill.svg",open)
+        active -> RecordRow("今天的用药已记录","查看今日服药记录","ic-pill.svg",open)
+        else -> RecordRow("今天没有固定服药计划","查看服药记录或按需补记","ic-pill.svg",open)
     }
 }
 
@@ -198,9 +198,9 @@ internal fun IntakeScreen(pregnancyId: String?, model: JournalViewModel, openPla
                     }
                 }
             }
-            item { Inset { RecordRow("补记或跳过", "补记实际用药；跳过请点开对应计划", "cdc29.svg",
+            item { Inset { RecordRow("补记或跳过", "补记实际用药；跳过请点开对应计划", "ic-edit.svg",
                 if (versions.isNotEmpty()) ({ open(null, null, "TAKEN", date) }) else null) } }
-            item { Inset { RecordRow("方案历史", "查看药品方案及修改前的版本", "cdc29.svg", openPlans) } }
+            item { Inset { RecordRow("方案历史", "查看药品方案及修改前的版本", "ic-history.svg", openPlans) } }
             item { Inset { JournalButton("补记服药", enabled = versions.isNotEmpty(), onClick = { open(null, null, "TAKEN", date) }) } }
             item { Inset { Text("未记录不等于漏服；请按实际情况记录，不提供补服或剂量建议。计划提醒按方案时刻与通知设置发送。", style = MaterialTheme.typography.bodySmall) } }
         } else {
@@ -302,7 +302,7 @@ internal fun IntakeEditorScreen(form: IntakeForm, model: JournalViewModel, busy:
         } else Text("仅记录此计划已跳过，不会自动推断实际服药时间或用量。")
         Text(if (form.occurrenceId == null) "补记说明" else "记录说明", style = MaterialTheme.typography.titleLarge)
         FormField("备注（选填）", form.note, { update(form.copy(note = it)) }, 10_000, false)
-        if (form.occurrenceId == null) RecordRow("按实际情况保存", "补记已服用；跳过请选对应计划", "42641.svg")
+        if (form.occurrenceId == null) RecordRow("按实际情况保存", "补记已服用；跳过请选对应计划", "ic-check.svg")
         JournalButton(if (busy) "正在保存…" else "保存服药记录", enabled = !busy, onClick = model::saveIntake)
         Text("实际记录时区：${form.zoneId} · 返回保留加密草稿。这里只记录实际情况，不提供用药建议。", style = MaterialTheme.typography.bodySmall)
         Spacer(Modifier.height(32.dp))
