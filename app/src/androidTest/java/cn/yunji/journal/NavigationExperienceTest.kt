@@ -274,7 +274,8 @@ class NavigationExperienceTest {
         ui.waitUntil(5000){runBlocking {db.journalDao().attachment(documentId)?.note=="重新打开后保存合成备注"}}
         ui.onNodeWithText("查看原件").performScrollTo().performClick();settle()
         ui.waitUntil(10000){ui.onAllNodesWithTag("document-image").fetchSemanticsNodes().isNotEmpty()}
-        ui.onNodeWithText("返回",substring=false).performClick();settle()
+        // 同上：全屏 Dialog 用 fullscreen-navigate-up 精确定位。
+        ui.onNodeWithTag("fullscreen-navigate-up").performClick();settle()
         ui.onNodeWithTag("原始记录").assertExists()
         ui.onNodeWithContentDescription("返回上一级").performClick();settle()
         ui.onNodeWithTag("全部资料").assertExists()
@@ -574,7 +575,9 @@ class NavigationExperienceTest {
         ui.onNodeWithTag("trash-retained-$documentId").performClick(); settle()
         ui.onNodeWithText("查看资料").performClick(); settle()
         ui.waitUntil(10_000) { ui.onAllNodesWithTag("document-image").fetchSemanticsNodes().isNotEmpty() }
-        ui.onNodeWithText("返回", substring = false).performClick(); settle()
+        // 原件预览顶栏已统一为 JournalFullScreenHeader；全屏 Dialog 叠在页面顶栏之上，
+        // 用 fullscreen-navigate-up 精确定位 Dialog 内那一个。
+        ui.onNodeWithTag("fullscreen-navigate-up").performClick(); settle()
         ui.onNodeWithText("删除的项目（1）").performClick(); settle()
         val visitBatchId = runBlocking { db.journalDao().trashBatches().first().single { it.kind == "VISIT" }.id }
         ui.onNodeWithTag("trash-batch-$visitBatchId").performClick(); settle()

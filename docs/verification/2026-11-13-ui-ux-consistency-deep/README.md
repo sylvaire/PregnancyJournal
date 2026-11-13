@@ -430,53 +430,75 @@ Ardot `7:2461`「孕迹 · 基础组件」定义 3 个组件：
 `dark-05-export.png` 直观呈现 P0-2：页面顶部两个 `OutlinedTextField` 是**贴边扁平框**（左右贴 24dp 页边），
 紧接着的 `JournalCard` 却是**圆角卡片内缩**，两种容器语言在同一屏并存。这是本轮未修但优先级最高的遗留项。
 
-## 10. 验证限制（如实记录）
+## 10. 验证证据
 
-### 10.1 仪器测试：部分执行（2026-11-14 更新）
+### 10.1 仪器测试：全量矩阵已通过（2026-11-14）
 
-测试 APK 通过 **Magisk root** 绕过 MIUI 安装限制成功安装（`su -c 'pm install -r -t ...'`）：
-普通 `adb install -t` 与 `cmd package install` 均返回 `INSTALL_FAILED_USER_RESTRICTED`，
-但设备有 `u:r:magisk:s0` root，root 安装成功且 instrumentation 正常注册。
+**环境**：AVD `PJ_API36_16K`（Android 36 / `PAGE_SIZE=16384` / 16 KiB 页）。
+该 AVD 实际位于项目内 `.local/avd/`（此前误判为「不存在」是因为只查了 `~/.android/avd`）；
+用 `ANDROID_AVD_HOME=.local/avd` 可正常列出并启动，无需重建、无需额外磁盘。
 
-**已执行（真机，非 UI 类）**：
+**结果**：`am instrument -w -e notAnnotation androidx.test.filters.LargeTest`
 
-| 批 | 覆盖类 | 结果 |
-|---|---|---|
-| 1 | `AccessState` `BackupExporter` `CloudCleanupStore` `CloudConnectionStore` `CloudSchedulerStore` `EncryptedDatabase` | 43 / 0 失败 |
-| 2 | `DavProtocol` `DocumentImport` `ExportController` `ExportSafWriter` `FileHandoff` | 56 / 0 失败 |
-| 3 | `IntakeRepository` `JournalEntryRepository` `LocalRestoreAccess` `MeasurementRepository` `MedicationRepository` `OriginalShareDevice` `ProcessRecovery` | 44 / **1 失败** |
-| 4 | `SafetyCopyExporter` `SafetyCopyStoreDevice` `SummaryPdf` `VaultSecurity` `ReminderScheduler` | 27 / 0 失败 |
-| 5 | `LargeBackupArchive` `SessionCacheCleanup` `RestoreDeviceSettings` `BackupProcessBoundary` `ExportServiceDevice` | 22 / 0 失败 |
-| 6 | `MainRestoreCommit` `IsolatedRestore` `LocalRestoreCloud` | 6 / 0 失败 |
-| **合计** | | **198 项 / 197 通过 / 1 失败** |
-
-**唯一失败项（非产品缺陷）**：`OriginalShareDeviceTest#shareIntentCarriesExactlyOneReadOnlyStream`
 ```
+Time: 703.484
+OK (362 tests)
+```
+
+- **362 项 / 0 失败 / 0 错误**，覆盖 **78 个测试类**
+- 完整日志：`full-matrix-362-tests.log`
+- 与源码一致性：`git status` 干净（`bda463b`），两个 APK 均由该提交构建并安装
+
+### 10.2 全量矩阵揪出的两处真实回归（已修）
+
+首次全量运行 362 项 / 2 失败，均为 `NavigationExperienceTest`：
+
+```
+Failed to inject touch input.
+Reason: could not find any node that satisfies: Text contains '返回'
+```
+
+**根因**：`DocumentPreview`（原件预览）全屏 Dialog 的顶栏在 P1-3 中由 `TextButton("返回")`
+统一为 `JournalFullScreenHeader` 的图标返回键，测试仍按「返回」文字查找——**测试断言过期**，产品行为正确。
+
+**修复**：
+1. 给 `JournalFullScreenHeader` 的返回键改用独立 `testTag("fullscreen-navigate-up")`。
+   原因：全屏 Dialog 叠在 `JournalPage` 之上，两者若都用 `navigate-up`，语义树会出现**两个同名返回键**
+   （实测 `Expected exactly '1' node but found '2' nodes`）。改完后页面顶栏仍是 `navigate-up`，Dialog 内是 `fullscreen-navigate-up`，互不干扰。
+2. 测试改为按 `testTag` 精确定位（比按文字更稳定）；**未放宽任何产品断言**。
+
+修复后 `NavigationExperienceTest` 整类 **OK (26 tests)**，全量复跑 **OK (362 tests)**。
+
+### 10.3 一处时序 flake（非产品缺陷）
+
+第二轮全量出现 1 项失败：`CustomReminderUiTest#createEditAndDeleteFromReminderSettings`
+（`expected DAILY but was NONE`——`JournalTag` 点击在 IME 动画期间落空）。
+
+验证：同用例单独运行 **OK (1 test)**、整类运行 **OK (3 tests)**，第三轮全量再次 **OK (362 tests)**。
+判定为全量负载下的时序 flake，与项目历史记录的同类 IME flake 一致，未修改产品代码。
+
+### 10.4 真机 vs 模拟器的差异（已澄清）
+
+同一批 API 36 代码：
+- **模拟器**：`CloudCleanupUiTest` + `CloudConnectionUiTest` → `OK (11 tests)` / 15.5s
+- **小米 11 Ultra 真机**：同样两个类渲染 `CloudConnectionContent` 后挂起，日志无 crash 栈
+
+用两版回退（`536556e~1`、`b51e173~1`）重装后真机仍挂起，证明**不是本次改动引起**，
+而是真机的 Compose 测试环境问题。历史全量矩阵也一直只在模拟器上跑。
+
+### 10.5 真机补充验证（198 项非 UI）
+
+真机另跑了非 UI 类，共 **198 项 / 197 通过 / 1 失败**。唯一失败：
+
+```
+OriginalShareDeviceTest#shareIntentCarriesExactlyOneReadOnlyStream
 expected:<android.intent.action.CHOOSER> but was:<miui.intent.action.MIUI_CHOOSER>
 ```
-MIUI 把系统 chooser 的 action 改写成了自家常量。依据：①`git diff 536556e~1..HEAD` 未触及
-`FileHandoff`/分享相关文件；②产品代码内不含 `ACTION_CHOOSER` 字面量（由系统 chooser 注入）；
-③断言对象是系统注入的 chooser Intent。**未修改该断言**——它是真机 ROM 差异的如实记录，
-改成兼容 MIUI 会掩盖跨 ROM 行为差异。
 
-**仍未执行：Compose UI 测试（约 180 项）**。真机上 `createAndroidComposeRule` 渲染
-`CloudConnectionContent` 后挂起，已用三种方式确认**不是本次改动引起**：
+MIUI 改写系统 chooser 的 action。依据：①`git diff 536556e~1..HEAD` 未触及 `FileHandoff`/分享文件；
+②产品代码不含 `ACTION_CHOOSER` 字面量（由系统 chooser 注入）。**未修改断言**，避免掩盖跨 ROM 差异。
 
-1. `git checkout 536556e~1 -- CloudConnectionScreen.kt`（改这页之前）重新构建安装 → 仍挂起
-2. `git checkout b51e173~1`（更早版本）→ 仍挂起
-3. `CloudCleanupUiTest` 单方法、`CloudConnectionUiTest` 整类均挂起；日志无 crash 栈
-
-项目历史记录显示**全部历史全量矩阵都在模拟器上跑**（`emulator-5556` / `AVD PJ_API36_16K`），
-真机从未跑通过 Compose UI 测试。这是既有环境限制。
-
-**模拟器不可用**：磁盘仅剩 9.2 GB，`avdmanager` 创建 AVD 后启动报
-`Not enough space to create userdata partition. Available: 9337 MB, need 12288 MB`；
-`disk.dataPartition.size=2048M` 与 `-partition-size 2048` 均未降低该要求。AVD 已清理，无残留。
-
-**要补齐这 180 项，需要二选一**：①释放 ≥4 GB 磁盘后重建 `PJ_API36_16K` 模拟器；
-②在纯 AOSP 设备或模拟器上跑（真机 Compose 测试挂起是设备侧问题）。
-
-### 10.2 其他未覆盖
+### 10.6 其他未覆盖
 
 - **未做**：TalkBack 读屏实测、字体缩放 200% 与横屏组合矩阵、API 26 深色表现。
 - **未审计**：`PdfDocumentView` 的 PDF 渲染区（第三方渲染，样式不在 Compose 控制内）、

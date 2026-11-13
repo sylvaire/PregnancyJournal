@@ -174,7 +174,9 @@ import androidx.compose.ui.unit.dp
     Row(Modifier.fillMaxWidth().windowInsetsPadding(WindowInsets.statusBars)
         .padding(horizontal = 12.dp, vertical = 8.dp),
         horizontalArrangement = Arrangement.spacedBy(4.dp), verticalAlignment = Alignment.CenterVertically) {
-        if (onBack != null) IconButton(onBack, Modifier.testTag("navigate-up")) {
+        // 全屏 Dialog 会叠在 JournalPage 之上，两者顶栏若都用 navigate-up 会让语义树出现两个
+        // 同名返回键；这里用 fullscreen-navigate-up 区分，页面顶栏仍是 navigate-up。
+        if (onBack != null) IconButton(onBack, Modifier.testTag("fullscreen-navigate-up")) {
             Box(Modifier.rotate(if (LocalLayoutDirection.current == LayoutDirection.Ltr) 180f else 0f)) {
                 DesignIcon("cfd63.svg", description = "返回上一级")
             }
