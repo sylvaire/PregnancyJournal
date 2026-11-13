@@ -71,7 +71,7 @@ internal fun MedicationEditorScreen(form: MedicationForm, model: JournalViewMode
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(horizontal = 24.dp, vertical = 12.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Text("按医嘱记录，不提供药品或剂量建议。返回会保留草稿。", style = MaterialTheme.typography.bodySmall)
         if (form.id == null && drugs.isNotEmpty()) Box {
-            OutlinedButton({ chooseDrug = true }) { Text(if (form.medicationId == null) "选择已有药品" else "更换药品") }
+            JournalSecondaryButton(if (form.medicationId == null) "选择已有药品" else "更换药品", onClick = { chooseDrug = true })
             DropdownMenu(chooseDrug, { chooseDrug = false }) {
                 DropdownMenuItem(text = { Text("录入新药品") }, onClick = { chooseDrug = false; update(form.copy(medicationId = null, name = "", specification = "", dosageForm = "",expectedMedicationRevision=null)) })
                 drugs.forEach { drug -> DropdownMenuItem(text = { Text(listOf(drug.name, drug.specification).filter { it.isNotBlank() }.joinToString(" · ")) }, onClick = {
@@ -89,7 +89,7 @@ internal fun MedicationEditorScreen(form: MedicationForm, model: JournalViewMode
         }
         Text("剂量和单位需同时填写，也可同时留空。", style = MaterialTheme.typography.bodySmall)
         Box {
-            OutlinedButton({ chooseFrequency = true }) { Text(MEDICATION_FREQUENCIES.getValue(form.frequency)) }
+            JournalSecondaryButton(MEDICATION_FREQUENCIES.getValue(form.frequency), onClick = { chooseFrequency = true })
             DropdownMenu(chooseFrequency, { chooseFrequency = false }) { MEDICATION_FREQUENCIES.forEach { (key, label) -> DropdownMenuItem(text = { Text(label) }, onClick = { chooseFrequency = false; update(form.copy(frequency = key)) }) } }
         }
         if (form.frequency in setOf("DAILY_TIMES", "WEEKLY_TIMES", "ONCE")) FormField("固定时刻，例如08:00,20:00", form.times, { update(form.copy(times = it)) }, 100)
@@ -108,7 +108,7 @@ internal fun MedicationEditorScreen(form: MedicationForm, model: JournalViewMode
         FormField("医嘱来源（选填）", form.source, { update(form.copy(source = it)) }, 240)
         FormField("医嘱原文与备注", form.instructions, { update(form.copy(instructions = it)) }, 10_000, false)
         Text("录入时区：${form.zoneId} · 用药提醒按本机时区计算", style = MaterialTheme.typography.bodySmall)
-        if (attempted && error != null) Text(error, color = MaterialTheme.colorScheme.error, modifier = Modifier.testTag("medication-validation"))
+        if (attempted && error != null) JournalError(error, Modifier.testTag("medication-validation"))
         JournalButton(if (busy) "正在保存…" else "保存用药方案", enabled = !busy, onClick = { attempted = true; if (error == null) model.saveMedication() })
         Spacer(Modifier.height(24.dp))
     }

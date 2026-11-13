@@ -144,7 +144,7 @@ fun JournalApp(model: JournalViewModel,externalStack: NavBackStack<NavKey>?=null
     Box(Modifier.fillMaxSize().clipToBounds()) {
         if (state.loading || state.error != null) Surface(Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
             Box(Modifier.fillMaxSize().safeDrawingPadding(), contentAlignment = Alignment.Center) {
-                if (state.error != null) Text(state.error!!, Modifier.padding(24.dp)) else CircularProgressIndicator()
+                if (state.error != null) Box(Modifier.padding(24.dp)) { JournalError(state.error!!) } else JournalLoading()
             }
         } else NavDisplay(
             backStack = stack, modifier = Modifier.fillMaxSize(), onBack = { pop() }, sizeTransform = null,
@@ -257,7 +257,7 @@ fun JournalApp(model: JournalViewModel,externalStack: NavBackStack<NavKey>?=null
                     val form by model.journalEntryForm.collectAsStateWithLifecycle()
                     val ready by model.formReady.collectAsStateWithLifecycle()
                     JournalPage(title=if(route.id==null)"写日常记录" else "修改日常记录",back={pop()}) {
-                        if(ready) JournalEntryEditorScreen(form,model,busy) else CircularProgressIndicator(Modifier.padding(24.dp))
+                        if(ready) JournalEntryEditorScreen(form,model,busy) else JournalLoading(text = "正在准备…")
                     }
                 }
                 entry<PregnancyManagerRoute> {
@@ -274,7 +274,7 @@ fun JournalApp(model: JournalViewModel,externalStack: NavBackStack<NavKey>?=null
                     val form by model.pregnancyForm.collectAsStateWithLifecycle()
                     val ready by model.formReady.collectAsStateWithLifecycle()
                     JournalPage(title = if (key.id == null) "创建孕期档案" else "编辑孕期档案", back = { pop() }) {
-                        if (ready) PregnancyEditor(form, busy, model::updatePregnancy, model::savePregnancy) else CircularProgressIndicator(Modifier.padding(24.dp))
+                        if (ready) PregnancyEditor(form, busy, model::updatePregnancy, model::savePregnancy) else JournalLoading(text = "正在准备…")
                     }
                 }
                 entry<VisitEditorRoute> { key ->
@@ -282,7 +282,7 @@ fun JournalApp(model: JournalViewModel,externalStack: NavBackStack<NavKey>?=null
                     val form by model.visitForm.collectAsStateWithLifecycle()
                     val ready by model.formReady.collectAsStateWithLifecycle()
                     JournalPage(title = if (key.id == null) "新建产检预约" else "修改产检预约", back = { pop() }) {
-                        if (ready) VisitEditor(form, busy, model::updateVisit, model::saveVisit) else CircularProgressIndicator(Modifier.padding(24.dp))
+                        if (ready) VisitEditor(form, busy, model::updateVisit, model::saveVisit) else JournalLoading(text = "正在准备…")
                     }
                 }
                 entry<VisitRecordRoute> { key ->
@@ -290,7 +290,7 @@ fun JournalApp(model: JournalViewModel,externalStack: NavBackStack<NavKey>?=null
                     val form by model.visitForm.collectAsStateWithLifecycle()
                     val ready by model.formReady.collectAsStateWithLifecycle()
                     JournalPage(title = "实际就诊记录", back = { pop() }) {
-                        if (ready) ActualVisitEditor(form, busy, model::updateVisit, model::saveActualVisit) else CircularProgressIndicator(Modifier.padding(24.dp))
+                        if (ready) ActualVisitEditor(form, busy, model::updateVisit, model::saveActualVisit) else JournalLoading(text = "正在准备…")
                     }
                 }
                 entry<VisitDetailRoute> { key ->
@@ -325,7 +325,7 @@ fun JournalApp(model: JournalViewModel,externalStack: NavBackStack<NavKey>?=null
                 entry<DrugEditorRoute> {route ->
                     LaunchedEffect(route){if(!model.hasDrugEditor(route.pregnancyId,route.id))model.editDrug(route.pregnancyId,route.id)}
                     val form by model.drugForm.collectAsStateWithLifecycle();val ready by model.formReady.collectAsStateWithLifecycle()
-                    JournalPage(title=if(route.id==null)"新增药品" else "编辑药品",back={pop()}){if(ready)DrugEditorScreen(form,model,busy) else CircularProgressIndicator(Modifier.padding(24.dp))}
+                    JournalPage(title=if(route.id==null)"新增药品" else "编辑药品",back={pop()}){if(ready)DrugEditorScreen(form,model,busy) else JournalLoading(text = "正在准备…")}
                 }
                 entry<DrugPhotosRoute> {route ->JournalPage(title="药品包装照片",back={pop()}){DocumentScreen(route.id,model,medication=true)}}
                 entry<MedicationsRoute> {
@@ -339,7 +339,7 @@ fun JournalApp(model: JournalViewModel,externalStack: NavBackStack<NavKey>?=null
                     val form by model.medicationForm.collectAsStateWithLifecycle()
                     val ready by model.formReady.collectAsStateWithLifecycle()
                     JournalPage(title = if (key.id == null) "新增用药方案" else "修改用药方案", back = { pop() }) {
-                        if (ready) MedicationEditorScreen(form, model, busy) else CircularProgressIndicator(Modifier.padding(24.dp))
+                        if (ready) MedicationEditorScreen(form, model, busy) else JournalLoading(text = "正在准备…")
                     }
                 }
                 entry<MedicationHistoryRoute> { key -> JournalPage(title = "用药历史版本", back = { pop() }) { MedicationHistoryScreen(key.id, model,key.versionId) } }
@@ -358,7 +358,7 @@ fun JournalApp(model: JournalViewModel,externalStack: NavBackStack<NavKey>?=null
                     val form by model.measurementForm.collectAsStateWithLifecycle()
                     val ready by model.formReady.collectAsStateWithLifecycle()
                     JournalPage(title = if (key.id == null) "记录测量" else "修改测量", back = { pop() }) {
-                        if (ready) MeasurementEditorScreen(form, model, busy) else CircularProgressIndicator(Modifier.padding(24.dp))
+                        if (ready) MeasurementEditorScreen(form, model, busy) else JournalLoading(text = "正在准备…")
                     }
                 }
                 entry<IntakeEditorRoute> { key ->
@@ -366,7 +366,7 @@ fun JournalApp(model: JournalViewModel,externalStack: NavBackStack<NavKey>?=null
                     val form by model.intakeForm.collectAsStateWithLifecycle()
                     val ready by model.formReady.collectAsStateWithLifecycle()
                     JournalPage(title = if (key.recordId != null) "修改服药记录" else if (key.occurrenceId == null) "补记服药" else "记录服药", back = { pop() }) {
-                        if (ready) IntakeEditorScreen(form, model, busy) else CircularProgressIndicator(Modifier.padding(24.dp))
+                        if (ready) IntakeEditorScreen(form, model, busy) else JournalLoading(text = "正在准备…")
                     }
                 }
             })

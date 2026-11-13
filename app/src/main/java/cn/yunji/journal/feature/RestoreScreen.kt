@@ -14,6 +14,9 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import cn.yunji.journal.core.designsystem.JournalButton
+import cn.yunji.journal.core.designsystem.JournalError
+import cn.yunji.journal.core.designsystem.JournalCard
+import cn.yunji.journal.core.designsystem.JournalCheckboxRow
 import java.time.Instant
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
@@ -79,20 +82,17 @@ val LocalRestoreLaunch=androidx.compose.runtime.staticCompositionLocalOf<(() -> 
                 Text("核对要恢复的资料",style=MaterialTheme.typography.titleLarge)
                 val date=displayInstant(preview.createdAt, ZoneId.systemDefault().id)
                 Text("备份时间：$date")
-                OutlinedCard(Modifier.fillMaxWidth()) {Column(Modifier.padding(16.dp),verticalArrangement=Arrangement.spacedBy(10.dp)) {
+                JournalCard {
                     listOf("孕期档案" to preview.pregnancies,"产检记录" to preview.visits,"资料原件" to preview.documents,
                         "用药方案" to preview.medicationPlans,"服药记录" to preview.intakes,"健康记录" to preview.measurements,
                         "日常备注" to preview.journalEntries,"自定义提醒" to preview.customReminders).forEach {(label,count)->
                         Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.SpaceBetween){Text(label);Text(count.toString())}
                     }
-                }}
+                }
                 Text("数量包含备份中的回收站记录。当前未提交的草稿不会进入安全副本。")
                 Text("如当前资料尚未设置恢复密钥，安全副本将使用本次输入的密钥；已有恢复密钥保持不变。")
-                Row(Modifier.fillMaxWidth().testTag("restore-acknowledge").toggleable(state.acknowledged,role=Role.Checkbox,onValueChange=acknowledge).padding(vertical=8.dp)) {
-                    Checkbox(state.acknowledged,onCheckedChange=null)
-                    Spacer(Modifier.width(8.dp))
-                    Text("我理解当前记录会被整体替换，并保留本机安全副本。")
-                }
+                JournalCheckboxRow(state.acknowledged, acknowledge, "我理解当前记录会被整体替换，并保留本机安全副本。",
+                    modifier = Modifier.testTag("restore-acknowledge"))
                 JournalButton("确认恢复",Modifier.testTag("restore-confirm"),enabled=state.acknowledged,onClick=confirm)
                 TextButton(cancel,Modifier.fillMaxWidth()){Text("取消")}
             }
@@ -112,7 +112,7 @@ val LocalRestoreLaunch=androidx.compose.runtime.staticCompositionLocalOf<(() -> 
                 TextButton(reopen){Text("打开资料库核对")}
             }
         }
-        state.message?.let {Text(it,color=MaterialTheme.colorScheme.error)}
+        state.message?.let {JournalError(it)}
     }
 }
 

@@ -40,14 +40,14 @@
 | P0-3 | 暖色卡片 `Apricot`/`Amber` 硬编码，深色模式刺眼 | **高** | 1 处（4 行代码） | ✅ 已修 |
 | P0-4 | 底部导航等旧图标描边 1.7、颜色非 `#356B53` | **高（每次可见）** | 10 + 4 个文件 | ✅ 已修 |
 | P0-2 | 卡片列表 vs 裸 `Column` 两种页面范式并存（深色实机同屏可见） | **高** | 6 个页面无卡片容器 | ⬜ 待排期 |
-| P1-1 | `OutlinedTextField` 48 处无组件包装（设计稿有 `孕迹/Field`） | 中 | 15 个文件 | ⬜ 待排期 |
+| P1-1 | `OutlinedTextField` 48 处无组件包装（设计稿有 `孕迹/Field`） | 中 | 15 个文件 | ◐ 组件已建，已替换 4 处 |
 | P1-2 | `TextButton` 167 处无统一规格（4 种语义混用） | 中 | 16 个文件 | ⬜ 待排期 |
-| P1-3 | 两处全屏 Dialog 自建顶栏，且两者彼此不一致 | 中 | 2 处 | ⬜ 待排期 |
-| P2-1 | 按钮高度 40/52/56/72 四种 | 低 | 10 处 | ⬜ |
-| P2-2 | `Card`/`OutlinedCard`/`Checkbox`/`HorizontalDivider` 未包装（实机可见：`Checkbox` 2dp 直角 vs 全站圆角） | 低 | 4 个文件 | ⬜ |
-| P2-3 | 加载态 22 处裸 `CircularProgressIndicator`，无统一组件 | 低 | 8 个文件 | ⬜ |
-| P2-4 | 错误提示 29 处裸 `Text(color=error)`，无统一组件 | 低 | 多文件 | ⬜ |
-| P2-5 | 3 处可点行缺 `onClickLabel`；1 处可点文本高度 18dp | 低（无障碍） | 4 处 | ⬜ |
+| P1-3 | 两处全屏 Dialog 自建顶栏，且两者彼此不一致 | 中 | 2 处 | ✅ 已修 |
+| P2-1 | 按钮高度 40/52/56/72 四种 | 低 | 10 处 | ✅ 已修（单行动作 6 处；字段选择器保留 56dp） |
+| P2-2 | `Card`/`OutlinedCard`/`Checkbox`/`HorizontalDivider` 未包装 | 低 | 4 个文件 | ✅ 已修 |
+| P2-3 | 加载态 22 处裸 `CircularProgressIndicator`，无统一组件 | 低 | 8 个文件 | ◐ 已替换 13 处整页加载 |
+| P2-4 | 错误提示 29 处裸 `Text(color=error)`，无统一组件 | 低 | 多文件 | ◐ 已替换 15 处 |
+| P2-5 | 3 处可点行缺 `onClickLabel`；1 处可点文本高度 18dp | 低（无障碍） | 4 处 | ✅ 已修 |
 
 ## 3. P0 级问题
 
@@ -271,27 +271,56 @@ Ardot `7:2461`「孕迹 · 基础组件」定义 3 个组件：
 | `containerColor` 非主题来源 | **0 处** |
 | 超出 4pt 网格的间距 | 仅 4 处（`3.dp`×2 进度条圆角、`6.dp`、`10.dp`、`14.dp`） |
 
-## 7. 修复进展（本轮已落地）
+## 7. 修复进展
+
+### 7.1 第一轮（commit `67752e5`）
 
 | # | 项 | 状态 | 证据 |
 |---|---|---|---|
-| P0-1 | 补 `titleMedium = type(16,24,Medium)`、`titleSmall = type(14,21,Medium)` | ✅ **已修** | `Theme.kt:62-74`，34+1 处引用现在走项目字族与行高 |
-| P0-3 | 杏色卡改走 `LocalNoteCardColors`，深色用 `#3A2E1F`/`#F0D5B4` | ✅ **已修** | `Theme.kt` 新增 `NoteCardColors` + `CompositionLocalProvider`；`TimelineScreens.kt:178-198` |
-| P0-4 | 9 个旧哈希图标描边归一 1.75、颜色归一 `#356B53` | ✅ **已修** | `acf3f da483 cdc29 d9f3c 42641 86969 dcd03 d34da 62b4c` |
-| — | 回归 | ✅ | 编译通过（0 新增警告）、JVM **365 项 / 0 失败 / 0 错误 / 0 跳过** |
+| P0-1 | 补 `titleMedium`/`titleSmall` 定义 | ✅ | `Theme.kt` 新增两个角色，34+1 处引用走项目字族 |
+| P0-3 | 杏色卡改 `LocalNoteCardColors` | ✅ | 深色实机像素验证（见 §9） |
+| P0-4 | 9 个旧哈希图标归一 1.75 / `#356B53` | ✅ | 全量扫描后仅 `5fbe7`（64×64 插图）保持例外 |
 
-**P0-4 的例外说明**：`5fbe7.svg` 是 64×64 欢迎页插图（非 24dp 语义图标），
-1.7 描边在 64dp 下视觉更细，保持原样；全量复核后仅此一个文件非 1.75。
+### 7.2 第二轮（本轮）
 
-### 未修复（需后续排期）
+新增 8 个设计系统组件（`core/designsystem/Components2.kt`，245 行），并逐项替换调用点：
+
+| 新组件 | 解决的缺陷 | 替换量 |
+|---|---|---|
+| `JournalSecondaryButton` | P2-1 按钮高度 40/52/56 三档 | 6 处单行下拉动作统一 52dp/26dp |
+| `JournalTextAction` | P1-2 `TextButton` 无统一规格 | 全部危险动作改用 `danger=true` |
+| `JournalSectionTitle` | P1 小节标题散落 | ExportScreen 等 |
+| `JournalField` | P1-1 对齐设计稿 `孕迹/Field`(56dp) | ExportScreen 2 处、ReminderSettings 2 处 |
+| `JournalCheckboxRow` / `JournalCheckbox` | P2-2 2dp 直角断裂 | ExportScreen 3 处、RestoreScreen 1 处 |
+| `JournalLoading` | P2-3 22 处裸 spinner | 13 处整页加载 |
+| `JournalError` | P2-4 29 处裸错误文本 | 15 处 |
+| `JournalFullScreenHeader` | P1-3 两处自建顶栏互不一致 | DocumentPreview、ReminderSettingsDialog |
+| `JournalDivider` | P2-2 分隔线颜色不一致 | SafetyCopies、Recovery |
+
+**同步修复的 P2-5 无障碍**：
+- `TimelineRecordRow` / `JournalNoteCard`：`Surface(onClick)` → `clickable(onClickLabel=...)`，与 `RecordRow` 同一写法
+- `HomeQuickAction`：补 `heightIn(min=88.dp)` + `onClickLabel`
+- `JournalApp` 备份状态文字链：18dp → 48dp 触摸目标（保留 `bodySmall` 视觉密度）
+
+**SafetyCopiesScreen 全面重写**：原为 M3 默认 `Card`(12dp) + `OutlinedButton`(40dp) + 裸 `TextButton` + 裸 `HorizontalDivider`，
+现为 `JournalDivider` + `JournalSectionTitle` + `JournalCard`(20dp) + `JournalTextAction`。
+
+### 7.3 本轮发现并修掉的回归
+
+替换过程中引入 2 个问题，均已在实机上发现并修复：
+
+| 回归 | 现象 | 修复 |
+|---|---|---|
+| 备份状态文字链改用 `JournalTextAction` | `labelLarge` + 长文案撑破布局，首页出现大号重叠文字 | 回退为 `Text(bodySmall)` + `clickable` + `heightIn(48.dp)` |
+| `JournalFullScreenHeader` 的 chevron | 用了 `rotate(90f)`，箭头朝下（应为左） | 改为 `rotate(if (Ltr) 180f else 0f)`，与 `JournalPageHeader` 一致 |
+
+### 7.4 剩余未修
 
 | # | 项 | 原因 |
 |---|---|---|
-| P0-2 | 两种页面布局范式（卡片列表 vs 裸 Column） | 涉及 6 个页面的结构重写，改动面大，需单独排期 |
-| P1-1 | `JournalField` 包装 48 处 `OutlinedTextField` | 需对齐设计稿 `孕迹/Field`（56dp 高），逐页替换 |
-| P1-2 | 167 处 `TextButton` 语义收敛 | 需先定义 4 种语义规格，分批替换 |
-| P1-3 | 两处全屏 Dialog 顶栏统一 | 需先抽出 `JournalFullScreenHeader` 组件 |
-| P2-1~5 | 按钮高度、基础组件包装、Loading/Error 组件、无障碍标签 | 低优先级，建议随 P1 一起做 |
+| P0-2 | 两种页面布局范式（卡片列表 vs 裸 `Column`） | 涉及 6 个页面结构重写，需单独排期；本轮已在 `ExportScreen` 局部收敛（字段改圆角卡片） |
+| P1-2 余量 | 部分 `TextButton` 未替换（`TrashScreen`/`DocumentScreen` 行内危险态） | 已在 `JournalTextAction` 就位后具备替换条件，但 167 处需分批 |
+| — | `RecordRow` 的 `ModifierParameter` lint 警告 | 原有代码，改动会波及全部调用点 |
 
 ## 8. 建议修复顺序
 
@@ -351,7 +380,35 @@ Ardot `7:2461`「孕迹 · 基础组件」定义 3 个组件：
 `dark-05-export.png` 直观呈现 P0-2：页面顶部两个 `OutlinedTextField` 是**贴边扁平框**（左右贴 24dp 页边），
 紧接着的 `JournalCard` 却是**圆角卡片内缩**，两种容器语言在同一屏并存。这是本轮未修但优先级最高的遗留项。
 
-## 10. 未覆盖范围（如实记录）
+## 10. 验证限制（如实记录）
+
+### 10.1 仪器测试本轮无法执行
+
+设备恢复后尝试跑全量仪器矩阵（`am instrument -w -e notAnnotation LargeTest`），失败：
+
+```
+adb: failed to install app-debug-androidTest.apk:
+  Failure [INSTALL_FAILED_USER_RESTRICTED: Install canceled by user]
+```
+
+- MIUI 拦截了测试 APK 安装（主 APK 可正常安装）；`settings put global verifier_verify_adb_installs 0` 无效
+- `adb root` 不可用：`adbd cannot run as root in production builds`
+- 手机上无安装确认弹窗出现，属 MIUI 的 USB 安装授权限制
+
+**替代验证**：本轮全部改动都在实机（小米 11 Ultra 1440×3200/560dpi）上逐页手动走查并截图核对，
+覆盖首页、导出、提醒设置、自定义提醒全屏 Dialog、本地加密备份（含安全副本）、云盘连接 6 个页面。
+JVM 单测 365 项全通过、lint 0 错误。
+
+**未获证据**：UI 自动化断言（`testTag` 点击路径）本轮未在设备上执行。新增组件的 `testTag` 已保留原值，
+理论上不影响既有用例，但**未经仪器测试证实**。下次设备允许安装测试包时应补跑全量矩阵。
+
+### 10.2 其他未覆盖
+
+- **未做**：TalkBack 读屏实测、字体缩放 200% 与横屏组合矩阵、API 26 深色表现。
+- **未审计**：`PdfDocumentView` 的 PDF 渲染区（第三方渲染，样式不在 Compose 控制内）、
+  `DocumentPreview` 的缩放手势交互细节。
+- 首轮记录的两项遗留仍在：底部导航 indicator 视觉权重（主观）、无障碍动作标签未全覆盖。
+
 
 - **未做**：TalkBack 读屏实测、字体缩放 200% 与横屏组合矩阵、API 26 深色表现。
 - **未审计**：`PdfDocumentView` 的 PDF 渲染区（第三方渲染，样式不在 Compose 控制内）、

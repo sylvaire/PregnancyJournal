@@ -22,6 +22,10 @@ import cn.yunji.journal.core.backup.ReclaimInfo
 import cn.yunji.journal.core.backup.ReclaimState
 import cn.yunji.journal.core.backup.RestoreReclaim
 import cn.yunji.journal.core.designsystem.JournalButton
+import cn.yunji.journal.core.designsystem.JournalDivider
+import cn.yunji.journal.core.designsystem.JournalError
+import cn.yunji.journal.core.designsystem.JournalLoading
+import cn.yunji.journal.core.designsystem.JournalSectionTitle
 import cn.yunji.journal.core.designsystem.JournalCard
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -46,7 +50,7 @@ import java.io.File
     answer: (Int,String)->Unit,confirm: ()->Unit,retry: ()->Unit,export: (()->Unit)?=null,restore: (()->Unit)?=null,extra: @Composable ()->Unit={}) {
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(24.dp).testTag("recovery-screen"),verticalArrangement=Arrangement.spacedBy(16.dp)) {
         when(state.stage) {
-            "LOADING"->CircularProgressIndicator()
+            "LOADING"->JournalLoading()
             "INTRO"->{
                 JournalCard(soft = true) {
                     Text("本地加密备份", style = MaterialTheme.typography.titleLarge)
@@ -89,7 +93,7 @@ import java.io.File
         }
         if(state.stage in setOf("INTRO","READY"))restore?.let {action->JournalButton("从备份恢复资料",Modifier.testTag("restore-entry"),secondary=true,onClick=action)}
         if(state.stage in setOf("INTRO","READY"))extra()
-        state.message?.let {Text(it,color=MaterialTheme.colorScheme.error)}
+        state.message?.let {JournalError(it)}
     }
 }
 
@@ -115,13 +119,13 @@ internal data class ReclaimPanelState(
     onDismiss: ()->Unit,
 ) {
     if(!state.available && state.message==null)return
-    HorizontalDivider()
-    Text("恢复前的旧资料",style=MaterialTheme.typography.titleMedium)
+    JournalDivider(Modifier.padding(vertical = 8.dp))
+    JournalSectionTitle("恢复前的旧资料")
     if(state.available){
         Text("上次恢复完成后，恢复前的旧资料仍保留在本机，用于回退核对。确认不再需要回退时，可以回收以释放空间。",style=MaterialTheme.typography.bodyMedium)
         JournalButton(if(state.busy)"正在回收…" else "回收上一代资料",Modifier.testTag("reclaim-previous"),enabled=state.canAct && !state.busy,secondary=true,onClick=onReclaim)
     }
-    state.message?.let {Text(it,color=MaterialTheme.colorScheme.error)}
+    state.message?.let {JournalError(it)}
     if(state.confirming && state.available){
         AlertDialog(onDismissRequest={if(!state.busy)onDismiss()},title={Text("回收恢复前的旧资料？")},
             text={Text("回收会删除恢复前的旧资料代际，无法撤销；当前资料不受影响。本机安全副本与已导出的备份不受影响。请确认不再需要回退到恢复前的资料。")},

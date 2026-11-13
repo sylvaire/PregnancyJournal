@@ -21,6 +21,7 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import cn.yunji.journal.core.designsystem.JournalButton
+import cn.yunji.journal.core.designsystem.JournalTextAction
 import cn.yunji.journal.core.designsystem.JournalCard
 import cn.yunji.journal.core.designsystem.JournalSwitch
 
@@ -180,7 +181,7 @@ internal fun CloudConnectionContent(state: CloudUiState,update: (String,String)-
                 }
             }
         }
-        TextButton({removing=true},enabled=enabled){Text(if(state.saved)"清除本机连接" else "重置连接设置",color=MaterialTheme.colorScheme.error)}
+        JournalTextAction(if(state.saved)"清除本机连接" else "重置连接设置", enabled = enabled, danger = true, onClick = { removing = true })
         Text("服务证书必须有效；应用不会忽略证书错误。云盘端仍能看到加密文件大小、数量和访问时间。",style=MaterialTheme.typography.bodySmall)
     }
     if(removing)AlertDialog(onDismissRequest={removing=false},title={Text("清除本机连接？")},text={Text("本机凭据会移除，云盘文件和本机孕期记录保持不变。")},confirmButton={TextButton({removing=false;disconnect()}){Text("清除")}},dismissButton={TextButton({removing=false}){Text("取消")}})

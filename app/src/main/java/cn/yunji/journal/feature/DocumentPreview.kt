@@ -38,6 +38,9 @@ import androidx.compose.ui.window.DialogWindowProvider
 import androidx.compose.ui.platform.LocalView
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
+import cn.yunji.journal.core.designsystem.DesignIcon
+import cn.yunji.journal.core.designsystem.JournalFullScreenHeader
+import cn.yunji.journal.core.designsystem.JournalTextAction
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import cn.yunji.journal.BuildConfig
@@ -133,12 +136,22 @@ internal fun DocumentPreviewDialog(attachment: AttachmentEntity, model: JournalV
         }
         Surface(Modifier.fillMaxSize().testTag("document-preview"), color = MaterialTheme.colorScheme.background) {
             Column(Modifier.fillMaxSize().safeDrawingPadding()) {
-                Row(Modifier.fillMaxWidth().padding(horizontal = 8.dp), verticalAlignment = Alignment.CenterVertically) {
-                    TextButton(close) { Text("返回") }
-                    Text(if (attachment.mime == "application/pdf") "PDF预览" else "图片预览", Modifier.weight(1f), style = MaterialTheme.typography.titleLarge)
-                    TextButton({val row=latest ?: attachment;if(fileLaunch!=null)fileLaunch(FileRequest("EXPORT",medication=row.medicationId!=null,targetId=row.id,revision=row.revision),exportName(row)) else runCatching { exporter.launch(exportName(row)) } }) { Text("导出") }
-                    TextButton({val row=latest ?: attachment;if(fileLaunch!=null)fileLaunch(FileRequest("REPLACE",medication=row.medicationId!=null,targetId=row.id,revision=row.revision),null) else runCatching { replacer.launch(if (row.medicationId != null) arrayOf("image/*") else arrayOf("image/*", "application/pdf")) } }) { Text("替换") }
-                    TextButton(remove, Modifier.testTag("preview-delete")) { Text("删除", color = MaterialTheme.colorScheme.error) }
+                JournalFullScreenHeader(
+                    title = if (attachment.mime == "application/pdf") "PDF预览" else "图片预览",
+                    subtitle = attachment.name,
+                    onBack = close,
+                ) {
+                    JournalTextAction("导出", onClick = {
+                        val row = latest ?: attachment
+                        if (fileLaunch != null) fileLaunch(FileRequest("EXPORT", medication = row.medicationId != null, targetId = row.id, revision = row.revision), exportName(row))
+                        else runCatching { exporter.launch(exportName(row)) }
+                    })
+                    JournalTextAction("替换", onClick = {
+                        val row = latest ?: attachment
+                        if (fileLaunch != null) fileLaunch(FileRequest("REPLACE", medication = row.medicationId != null, targetId = row.id, revision = row.revision), null)
+                        else runCatching { replacer.launch(if (row.medicationId != null) arrayOf("image/*") else arrayOf("image/*", "application/pdf")) }
+                    })
+                    JournalTextAction("删除", Modifier.testTag("preview-delete"), danger = true, onClick = remove)
                 }
                 if (attachment.mime == "application/pdf") PdfDocumentView(attachment.id, model, Modifier.weight(1f).fillMaxWidth())
                 else ZoomableDocument(attachment.id, model, Modifier.weight(1f).fillMaxWidth())

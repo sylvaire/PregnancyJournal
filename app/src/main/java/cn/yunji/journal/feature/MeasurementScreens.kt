@@ -66,8 +66,8 @@ internal fun MeasurementScreen(pregnancy: PregnancyEntity?, model: JournalViewMo
         }
             TextButton({newDefinition=true}) { Text("自定义指标") }
         } } }
-        if (loading) item { Inset { CircularProgressIndicator() } }
-        failure?.let { message -> item { Inset { Text(message, color=MaterialTheme.colorScheme.error) } } }
+        if (loading) item { Inset { JournalLoading() } }
+        failure?.let { message -> item { Inset { JournalError(message) } } }
         if (!trends) {
             if (records.isEmpty() && !loading) item { Inset { JournalCard(soft=true) { Text("还没有测量记录"); Text("体重、血压、血糖及自定义指标均可记录。") } } }
             items(records,key={it.id},contentType={"measurement"}) { row ->
@@ -147,7 +147,7 @@ private fun DefinitionDialog(pregnancyId: String, previous: MetricDefinitionEnti
         OutlinedTextField(name,{name=it},label={Text("指标名称")},singleLine=true)
         OutlinedTextField(unit,{unit=it},label={Text("单位")},singleLine=true)
         Text("自定义指标使用一个数值字段。修改会保留旧版本及历史单位。",style=MaterialTheme.typography.bodySmall)
-        error?.let {Text(it,color=MaterialTheme.colorScheme.error)}
+        error?.let {JournalError(it)}
     }},confirmButton={TextButton({saving=true; scope.launch {try {model.measurements.saveDefinition(pregnancyId,name,unit,previous?.id);close()}catch(e:CancellationException){throw e}catch(e:IllegalArgumentException){error=e.message ?: "请核对指标"}catch(_:Exception){error="保存失败，原指标已保留"}finally{saving=false}}},enabled=!saving){Text("保存指标")}},dismissButton={TextButton(close,enabled=!saving){Text("取消")}})
 }
 

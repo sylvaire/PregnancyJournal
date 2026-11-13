@@ -3,6 +3,7 @@ package cn.yunji.journal.feature
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
@@ -13,7 +14,13 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import cn.yunji.journal.core.backup.*
+import cn.yunji.journal.core.designsystem.JournalCard
+import cn.yunji.journal.core.designsystem.JournalDivider
 import cn.yunji.journal.core.designsystem.JournalEmptyState
+import cn.yunji.journal.core.designsystem.JournalError
+import cn.yunji.journal.core.designsystem.JournalLoading
+import cn.yunji.journal.core.designsystem.JournalSectionTitle
+import cn.yunji.journal.core.designsystem.JournalTextAction
 import cn.yunji.journal.core.security.*
 import kotlinx.coroutines.*
 import java.io.File
@@ -77,22 +84,24 @@ internal val LocalSafetyActionsAllowed=staticCompositionLocalOf {true}
 
 @Composable internal fun SafetyCopiesContent(copies: List<SafetyCopy>,loading: Boolean,busy: Boolean,message: String?,refresh: ()->Unit,
     export: (SafetyCopy)->Unit,delete: (SafetyCopy)->Unit,canExport: Boolean=true) {
-    HorizontalDivider()
-    Text("恢复前的安全副本",style=MaterialTheme.typography.titleMedium)
-    Text("恢复前自动保留在本机，卸载应用会一并移除。每份副本需要当时对应的恢复密钥，可能与当前密钥不同。",style=MaterialTheme.typography.bodySmall)
-    if(loading)Text("正在读取安全副本…")
+    JournalDivider(Modifier.padding(vertical = 8.dp))
+    JournalSectionTitle("恢复前的安全副本")
+    Text("恢复前自动保留在本机，卸载应用会一并移除。每份副本需要当时对应的恢复密钥，可能与当前密钥不同。",style=MaterialTheme.typography.bodySmall,
+        color = MaterialTheme.colorScheme.onSurfaceVariant)
+    if(loading)JournalLoading(text = "正在读取安全副本…")
     else if(copies.isEmpty() && message==null)JournalEmptyState("还没有安全副本")
     copies.forEach {copy->
-        Card(Modifier.fillMaxWidth().testTag("safety-${copy.id}")) {Column(Modifier.padding(16.dp),verticalArrangement=Arrangement.spacedBy(8.dp)) {
+        JournalCard {
             val date=DateTimeFormatter.ofPattern("yyyy年M月d日 HH:mm",Locale.CHINA).withZone(ZoneId.systemDefault()).format(Instant.ofEpochMilli(copy.modifiedAt))
-            Text(date,style=MaterialTheme.typography.titleSmall)
-            Text("${android.text.format.Formatter.formatFileSize(LocalContext.current,copy.size)} · ${copy.id.take(8)}",style=MaterialTheme.typography.bodySmall)
-            Row(horizontalArrangement=Arrangement.spacedBy(8.dp)) {
-                OutlinedButton(onClick={export(copy)},enabled=!busy && canExport,modifier=Modifier.testTag("safety-export-${copy.id}")){Text("导出副本")}
-                TextButton(onClick={delete(copy)},enabled=!busy,modifier=Modifier.testTag("safety-delete-${copy.id}")){Text("删除")}
+            Text(date,style=MaterialTheme.typography.titleSmall,modifier=Modifier.testTag("safety-${copy.id}"))
+            Text("${android.text.format.Formatter.formatFileSize(LocalContext.current,copy.size)} · ${copy.id.take(8)}",style=MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant)
+            Row(horizontalArrangement=Arrangement.spacedBy(8.dp),verticalAlignment=Alignment.CenterVertically) {
+                JournalTextAction("导出副本", Modifier.testTag("safety-export-${copy.id}"), enabled = !busy && canExport, onClick = { export(copy) })
+                JournalTextAction("删除", Modifier.testTag("safety-delete-${copy.id}"), enabled = !busy, danger = true, onClick = { delete(copy) })
             }
-        }}
+        }
     }
-    message?.let {Text(it,color=MaterialTheme.colorScheme.error)}
-    TextButton(refresh,enabled=!loading && !busy){Text("刷新安全副本")}
+    message?.let {JournalError(it)}
+    JournalTextAction("刷新安全副本", enabled = !loading && !busy, onClick = refresh)
 }

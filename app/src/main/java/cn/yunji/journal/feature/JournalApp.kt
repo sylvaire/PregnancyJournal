@@ -21,6 +21,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -116,8 +117,13 @@ internal fun WelcomeScreen(onCreate: () -> Unit) {
         } } }
         item { Inset { if(recentDocument==null) RecordRow("最近资料 · 暂无", "保存的检查资料会显示在这里", "ic-file-text.svg",onDocuments)
             else RecordRow("最近资料 · ${recentDocument.title}", "${displayDate(recentDocument.date)} · 已保存到本机", "ic-file-text.svg") {onDocument(recentDocument.id)} } }
-        item { Inset { Text(if(backup.hasSuccess) "最近云端完整备份：${displayInstant(backup.lastSuccessAt,ZoneId.systemDefault().id)}" else "尚无云端完整备份 · 查看备份状态",
-            Modifier.clickable(onClick=onBackup),style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.primary) } }
+        item { Inset { Text(
+            if(backup.hasSuccess) "最近云端完整备份：${displayInstant(backup.lastSuccessAt,ZoneId.systemDefault().id)}" else "尚无云端完整备份 · 查看备份状态",
+            // 保持 bodySmall 视觉密度，但用 clickable(minimumInteractiveComponentSize 补足触摸目标)
+            Modifier.fillMaxWidth().heightIn(min = 48.dp)
+                .clickable(onClickLabel = "查看备份状态", role = Role.Button, onClick = onBackup)
+                .padding(vertical = 14.dp),
+            style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.primary) } }
         item { Spacer(Modifier.height(32.dp)) }
         item { Inset { JournalButton("新建产检预约", onClick = onNewVisit) } }
         item { Inset { RecordRow("管理我的孕期", "修改日期与切换档案", "ic-user.svg", onProfile) } }
@@ -126,8 +132,10 @@ internal fun WelcomeScreen(onCreate: () -> Unit) {
 }
 
 @Composable private fun HomeQuickAction(label:String,icon:String,modifier:Modifier=Modifier,onClick:()->Unit) {
-    Surface(onClick=onClick,modifier=modifier,shape=RoundedCornerShape(20.dp),color=MaterialTheme.colorScheme.surface) {
-        Column(Modifier.padding(12.dp),verticalArrangement=Arrangement.spacedBy(8.dp)) {
+    // 原来只有 padding(12.dp) 撑高度、无最小尺寸、无 onClickLabel；补齐 88dp 触摸目标与读屏动作描述。
+    Surface(modifier=modifier.heightIn(min=88.dp).clickable(onClickLabel=label,role=Role.Button,onClick=onClick),
+        shape=RoundedCornerShape(20.dp),color=MaterialTheme.colorScheme.surface) {
+        Column(Modifier.fillMaxWidth().padding(12.dp),verticalArrangement=Arrangement.spacedBy(8.dp)) {
             DesignIcon(icon)
             Text(label,style=MaterialTheme.typography.labelMedium,maxLines=1)
         }
@@ -275,9 +283,9 @@ internal fun WelcomeScreen(onCreate: () -> Unit) {
                 item { Inset { JournalButton("修改预约", enabled = !busy, secondary = true, onClick = onEdit) } }
                 item { Inset { JournalButton(if (visit.status == "COMPLETED") "修改就诊记录" else "记录实际就诊", enabled = !busy, onClick = onComplete) } }
             }
-            if (visit.status == "SCHEDULED") item { Inset { TextButton({ confirmingCancel = true }, enabled = !busy) { Text("取消这次预约", color = MaterialTheme.colorScheme.error) } } }
+            if (visit.status == "SCHEDULED") item { Inset { JournalTextAction("取消这次预约", enabled = !busy, danger = true, onClick = { confirmingCancel = true }) } }
             if (visit.status == "CANCELLED") item { Inset { JournalButton("恢复预约", enabled = !busy, onClick = { onCancel(false) }) } }
-            item { Inset { TextButton(onDelete, enabled = !busy) { Text("删除产检记录", color = MaterialTheme.colorScheme.error) } } }
+            item { Inset { JournalTextAction("删除产检记录", enabled = !busy, danger = true, onClick = onDelete) } }
         }
     }
     if (confirmingCancel) AlertDialog(onDismissRequest = { confirmingCancel = false }, title = { Text("取消这次预约？") }, text = { Text("预约资料会保留，之后仍可恢复。") },

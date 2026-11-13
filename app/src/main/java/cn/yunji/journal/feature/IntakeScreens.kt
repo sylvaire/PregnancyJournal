@@ -152,7 +152,7 @@ internal fun IntakeScreen(pregnancyId: String?, model: JournalViewModel, openPla
                     TextButton({ date = LocalDate.parse(date).plusDays(1).toString() }) { Text("后一天") }
                 } } }
             }
-            if (error != null) item { Inset { Column { Text(error!!, color = MaterialTheme.colorScheme.error); TextButton({ attempt++ }) { Text("重试") } } } }
+            if (error != null) item { Inset { JournalError(error!!, retry = { attempt++ }) } }
             if (active.isEmpty() && error == null) item { Inset { Text(if (versions.isEmpty()) "请先在用药方案中录入方案。" else "这一天没有固定服药计划；按需或原文方案可使用补记。") } }
             if (active.isNotEmpty() && visibleToday.isEmpty() && dayQuery.isNotBlank()) item { Inset { Text("没有匹配的服药计划") } }
             items(visibleToday, key = { it.id }, contentType = { "intake-point" }) { point ->
@@ -276,9 +276,7 @@ internal fun IntakeEditorScreen(form: IntakeForm, model: JournalViewModel, busy:
             OutlinedTextField(form.actualTime, { update(form.copy(actualTime = it.take(8))) }, label = { Text("实际时间（24小时制）") }, singleLine = true, modifier = Modifier.fillMaxWidth().testTag("intake-actual-time"))
             if (manual) {
                 if (form.recordId == null) Box {
-                    OutlinedButton({ expanded = true }, modifier = Modifier.fillMaxWidth()) {
-                        Text("药品：$medicineName · 第${plan?.version ?: "?"}版", maxLines = 1, overflow = TextOverflow.Ellipsis)
-                    }
+                    JournalSecondaryButton("药品：$medicineName · 第${plan?.version ?: "?"}版") { expanded = true }
                     DropdownMenu(expanded, { expanded = false }) { versions.sortedByDescending { it.effectiveAt }.forEach { version ->
                         DropdownMenuItem(text = { Text("${version.medicationName.ifBlank { drugs.firstOrNull { it.id == version.medicationId }?.name ?: "药品" }} · 第${version.version}版 · ${version.dose.orEmpty()} ${version.unit.orEmpty()}") }, onClick = {
                             expanded = false; update(form.copy(planVersionId = version.id, dose = version.dose.orEmpty(), unit = version.unit.orEmpty()))

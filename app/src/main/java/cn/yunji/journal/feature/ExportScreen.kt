@@ -12,6 +12,11 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import cn.yunji.journal.core.designsystem.JournalButton
+import cn.yunji.journal.core.designsystem.JournalCheckbox
+import cn.yunji.journal.core.designsystem.JournalCheckboxRow
+import cn.yunji.journal.core.designsystem.JournalField
+import cn.yunji.journal.core.designsystem.JournalSectionTitle
+import cn.yunji.journal.core.designsystem.JournalTextAction
 import cn.yunji.journal.core.designsystem.JournalCard
 import cn.yunji.journal.core.designsystem.JournalSwitch
 import cn.yunji.journal.core.designsystem.RecordRow
@@ -34,23 +39,21 @@ internal fun ExportContent(state: ExportUiState, updateRange: (String, String) -
         var scopeExpanded by rememberSaveable { mutableStateOf(false) }
         Text("导出的文件为明文，请自行妥善保管。", style = MaterialTheme.typography.bodySmall)
 
-        OutlinedTextField(state.from, { updateRange(it, state.to) }, label = { Text("开始日期（选填）") },
-            placeholder = { Text("不限") }, singleLine = true, enabled = !state.busy,
-            modifier = Modifier.fillMaxWidth().testTag("export-from"))
-        OutlinedTextField(state.to, { updateRange(state.from, it) }, label = { Text("结束日期（选填）") },
-            placeholder = { Text("不限") }, singleLine = true, enabled = !state.busy,
-            modifier = Modifier.fillMaxWidth().testTag("export-to"))
+        JournalField(state.from, { updateRange(it, state.to) }, "开始日期（选填）",
+            placeholder = "不限", enabled = !state.busy, modifier = Modifier.testTag("export-from"))
+        JournalField(state.to, { updateRange(state.from, it) }, "结束日期（选填）",
+            placeholder = "不限", enabled = !state.busy, modifier = Modifier.testTag("export-to"))
         if (!state.rangeValid) Text("日期范围无效，请检查起止日期。", color = MaterialTheme.colorScheme.error,
             style = MaterialTheme.typography.bodySmall)
-        Text("导出范围", style = MaterialTheme.typography.titleMedium)
+        JournalSectionTitle("导出范围")
         RecordRow("已选择 ${state.sections.size} 类资料", if (state.sections.isEmpty()) "请选择要导出的记录" else state.sections.take(3).joinToString("、", transform = ::sectionLabel),
             "ic-file-text.svg", { scopeExpanded = !scopeExpanded }, Modifier.testTag("export-scope-toggle"))
         if (scopeExpanded) JournalCard {
-            Text("选择记录类型", style = MaterialTheme.typography.titleMedium)
+            JournalSectionTitle("选择记录类型")
             cn.yunji.journal.core.export.ExportScope.ALL_SECTIONS.forEach { section ->
                 Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
                     Text(sectionLabel(section))
-                    Checkbox(section in state.sections, { toggleSection(section) }, enabled = !state.busy,
+                    JournalCheckbox(section in state.sections, { toggleSection(section) }, enabled = !state.busy,
                         modifier = Modifier.testTag("export-section-$section"))
                 }
             }
@@ -67,11 +70,8 @@ internal fun ExportContent(state: ExportUiState, updateRange: (String, String) -
         }
 
         JournalCard(soft = true) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Checkbox(state.plaintextAcknowledged, acknowledge, enabled = !state.busy,
-                modifier = Modifier.testTag("export-ack"))
-            Text("我了解导出内容为明文，将自行妥善保管")
-        }
+        JournalCheckboxRow(state.plaintextAcknowledged, acknowledge, "我了解导出内容为明文，将自行妥善保管",
+            enabled = !state.busy, modifier = Modifier.testTag("export-ack"))
         }
         state.message?.let { Text(it, color = if (state.lastResult != null) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.error,
             modifier = Modifier.testTag("export-message")) }
@@ -81,12 +81,11 @@ internal fun ExportContent(state: ExportUiState, updateRange: (String, String) -
             LinearProgressIndicator(Modifier.fillMaxWidth())
             JournalButton("取消导出", secondary = true, onClick = cancel)
         }
-        Text("导出方式", style = MaterialTheme.typography.titleMedium)
+        JournalSectionTitle("导出方式")
         JournalButton("导出结构化数据包", Modifier.testTag("export-data"), enabled = state.canStart, onClick = exportData)
         JournalButton("生成就诊摘要 PDF", Modifier.testTag("export-summary"), enabled = state.canStart, secondary = true, onClick = exportSummary)
-        TextButton(preview, enabled = !state.loading && !state.busy, modifier = Modifier.testTag("export-preview")) {
-            Text(if (state.loading) "正在统计…" else "统计当前范围")
-        }
+        JournalTextAction(if (state.loading) "正在统计…" else "统计当前范围",
+            Modifier.testTag("export-preview"), enabled = !state.loading && !state.busy, onClick = preview)
         if (state.preview.isNotEmpty()) {
             val total = state.preview.values.sum()
             Text("当前范围共 $total 条记录", Modifier.testTag("export-preview-total"))

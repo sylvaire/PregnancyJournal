@@ -247,13 +247,16 @@ private fun CustomReminderEditor(row: CustomReminderEntity?, onDismiss: () -> Un
         }
         Surface(Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
             Column(Modifier.fillMaxSize().safeDrawingPadding()) {
-                Column(Modifier.weight(1f).verticalScroll(rememberScrollState()).padding(horizontal = 24.dp, vertical = 20.dp),
+                JournalFullScreenHeader(
+                    title = if (row == null) "新建自定义提醒" else "编辑自定义提醒",
+                    subtitle = "返回提醒设置 · 内容仅保存在本机",
+                    onBack = onDismiss,
+                )
+                Column(Modifier.weight(1f).verticalScroll(rememberScrollState()).padding(horizontal = 24.dp, vertical = 12.dp),
                     verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                    Text(if (row == null) "新建自定义提醒" else "编辑自定义提醒", style = MaterialTheme.typography.headlineMedium)
-                    Text("返回提醒设置 · 内容仅保存在本机", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
-                    OutlinedTextField(title, { title = it.take(100) }, label = { Text("提醒标题") }, singleLine = true,
-                        modifier = Modifier.fillMaxWidth().testTag("custom-reminder-title"))
-                    OutlinedTextField(note, { note = it.take(1000) }, label = { Text("备注（选填）") }, minLines = 2,
+                    JournalField(title, { title = it.take(100) }, "提醒标题",
+                        modifier = Modifier.testTag("custom-reminder-title"))
+                    JournalField(note, { note = it.take(1000) }, "备注（选填）", singleLine = false, minLines = 2,
                         maxLines = 3, modifier = Modifier.fillMaxWidth())
                     OutlinedButton(onClick = { focusManager.clearFocus(); pickDate(date) { date = it } },
                         modifier = Modifier.fillMaxWidth().heightIn(min = 56.dp)) {
@@ -290,7 +293,7 @@ private fun CustomReminderEditor(row: CustomReminderEntity?, onDismiss: () -> Un
                     Text("提醒预览", style = MaterialTheme.typography.titleMedium)
                     RecordRow("${when (repeat) { "DAILY" -> "每天"; "WEEKLY" -> "每周"; else -> displayDate(date) }} $time",
                         "通知默认隐藏私人信息", "ic-bell.svg")
-                    error?.let { Text(it, color = MaterialTheme.colorScheme.error) }
+                    error?.let { JournalError(it) }
                     Text("可选择一次、每天或每周重复。", style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }

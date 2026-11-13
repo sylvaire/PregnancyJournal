@@ -64,7 +64,7 @@ internal fun DrugEditorScreen(form: DrugForm,model: JournalViewModel,busy: Boole
         RecordRow("保存后添加包装照片", "在药品目录中添加或查看加密照片", "ic-image.svg")
         Text("关联方案", style = MaterialTheme.typography.titleMedium)
         RecordRow("添加到用药方案", "先保存药品，再设置剂量与时间", "ic-pill.svg")
-        if (attempted && error != null) Text(error, color = MaterialTheme.colorScheme.error, modifier = Modifier.testTag("drug-validation"))
+        if (attempted && error != null) JournalError(error, Modifier.testTag("drug-validation"))
         JournalButton(if (busy) "正在保存…" else "保存药品",enabled=!busy,onClick={attempted=true;if(error==null)model.saveDrug()},modifier=Modifier.testTag("save-drug"))
         Text("基础信息可单独保存；返回会保留草稿。修改后，已保存方案仍保留原名称、规格与剂型。",style=MaterialTheme.typography.bodySmall)
         Spacer(Modifier.height(24.dp))

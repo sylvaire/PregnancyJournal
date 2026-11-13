@@ -140,8 +140,8 @@ internal fun DocumentScreen(visitId: String, model: JournalViewModel,medication:
         } } }
         if (!showTrash) {
             item { Inset { Text(if(medication)"包装照片仅支持图片 · 单份最多100 MiB · 一次最多20项" else "图片或PDF · 单份最多100 MiB · 一次最多20项", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant) } }
-            if (pickerError != null) item { Inset { Text(pickerError!!, color = MaterialTheme.colorScheme.error) } }
-            if (shareError != null) item { Inset { Text(shareError!!, color = MaterialTheme.colorScheme.error) } }
+            if (pickerError != null) item { Inset { JournalError(pickerError!!) } }
+            if (shareError != null) item { Inset { JournalError(shareError!!) } }
             item { Inset { Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 OutlinedTextField(query, { query = it }, label = { Text(if(medication)"搜索名称或备注" else "搜索名称、备注或医院") }, singleLine = true,
                     modifier = Modifier.fillMaxWidth().testTag("document-search"),
@@ -368,7 +368,7 @@ internal fun exportName(attachment: AttachmentEntity): String {
 private fun DocumentChoice(label: String, options: List<Pair<String, String>>,enabled: Boolean=true, select: (String) -> Unit) {
     var expanded by remember { mutableStateOf(false) }
     Box {
-        OutlinedButton({ expanded = true },enabled=enabled) { Text(label) }
+        JournalSecondaryButton(label, enabled = enabled, onClick = { expanded = true })
         DropdownMenu(expanded, { expanded = false }) {
             options.forEach { (key, title) -> DropdownMenuItem(text = { Text(title) }, onClick = { expanded = false; select(key) }) }
         }
@@ -397,7 +397,7 @@ internal fun DocumentMetadataDialog(attachment: AttachmentEntity, close: () -> U
                 OutlinedTextField(hospital,{hospital=it},label={Text("医院（选填）")},isError=hospital.length>120,enabled=!saving,modifier=Modifier.testTag("document-hospital"))
             }
             OutlinedTextField(note,{note=it},label={Text(if(medication)"备注（选填，例如药盒信息）" else "备注（选填）")},minLines=2,isError=note.length>10_000,enabled=!saving,modifier=Modifier.testTag("document-note"))
-            error?.let {Text(it,color=MaterialTheme.colorScheme.error)}
+            error?.let {JournalError(it)}
         }
     }, confirmButton = { TextButton({saving=true;scope.launch {
         try {save(name.trim(),category,date,hospital,note,editingRevision);close()}

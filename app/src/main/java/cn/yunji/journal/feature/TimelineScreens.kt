@@ -3,6 +3,7 @@ package cn.yunji.journal.feature
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -15,6 +16,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import cn.yunji.journal.core.database.*
@@ -107,7 +109,7 @@ internal fun TimelineScreen(pregnancy: PregnancyEntity?,initialType: String,mode
             item(key="filters") {Row(Modifier.fillMaxWidth().testTag("timeline-filters"),horizontalArrangement=Arrangement.spacedBy(8.dp)) {
                 TIMELINE_FILTERS.forEach {(key,label)->JournalTag(selected=type==key,onClick={type=key},label={Text(label)},modifier=Modifier.testTag("timeline-filter-$key"))}
             }}
-            if(state.loading) item {CircularProgressIndicator()}
+            if(state.loading) item {JournalLoading()}
             else if(state.failed) item {Text("时间线暂时无法读取，请返回后重试。原记录未改变。",color=MaterialTheme.colorScheme.error)}
             else if(state.snapshot==null) item {Text("所属孕期已删除或不可用。")}
             else if(events.isEmpty()) item {JournalEmptyState("还没有这类记录","可写一条日常记录，或从产检、用药和健康指标录入。")}
@@ -160,7 +162,10 @@ private fun TimelineEntry(event: TimelineEvent,journalEntry: JournalEntryEntity?
 /** 设计记录行：白卡、圆角 20、min 72 dp、44 dp soft 图标容器、16 sp 标题 + 12 sp muted 副标题 + chevron。 */
 @Composable
 internal fun TimelineRecordRow(title: String,subtitle: String,icon: String,onClick: ()->Unit,modifier: Modifier=Modifier) {
-    Surface(onClick=onClick,modifier=modifier.fillMaxWidth(),shape=RoundedCornerShape(20.dp),color=MaterialTheme.colorScheme.surface) {
+    // 与 RecordRow 同款：Surface 不带 onClick，改由 clickable 提供动作 + onClickLabel，
+    // 否则 TalkBack 只念标题、不说明会到哪里。（semantics{onClick(action=null)} 会覆盖原点击，勿用。）
+    Surface(modifier=modifier.fillMaxWidth().clickable(onClickLabel=title,role=Role.Button,onClick=onClick),
+        shape=RoundedCornerShape(20.dp),color=MaterialTheme.colorScheme.surface) {
         Row(Modifier.fillMaxWidth().heightIn(min=72.dp).padding(horizontal=16.dp,vertical=12.dp),
             horizontalArrangement=Arrangement.spacedBy(12.dp),verticalAlignment=Alignment.CenterVertically) {
             Surface(shape=RoundedCornerShape(12.dp),color=MaterialTheme.colorScheme.primaryContainer) {
@@ -190,7 +195,9 @@ private fun JournalNoteCard(event: TimelineEvent,entry: JournalEntryEntity?,open
         else -> ""
     }
     val note = LocalNoteCardColors.current
-    Surface(onClick=open,modifier=Modifier.fillMaxWidth().testTag("source-${event.key}"),shape=RoundedCornerShape(16.dp),color=note.container) {
+    Surface(modifier=Modifier.fillMaxWidth().testTag("source-${event.key}")
+            .clickable(onClickLabel="打开日常备注",role=Role.Button,onClick=open),
+        shape=RoundedCornerShape(16.dp),color=note.container) {
         Column(Modifier.padding(16.dp),verticalArrangement=Arrangement.spacedBy(8.dp)) {
             Text(title,style=MaterialTheme.typography.titleMedium,color=note.content,maxLines=3,overflow=TextOverflow.Ellipsis)
             if(body.isNotBlank()) Text(body,style=MaterialTheme.typography.bodyMedium,color=note.content,maxLines=3,overflow=TextOverflow.Ellipsis)
@@ -229,7 +236,7 @@ internal fun AllDocumentsScreen(pregnancyId: String?,model: JournalViewModel,ope
     val documents=remember(state.events){state.events.filter {it.type=="DOCUMENT"}}
     LazyColumn(Modifier.fillMaxSize().testTag("all-documents-list"),
         contentPadding=PaddingValues(horizontal=24.dp,vertical=8.dp),verticalArrangement=Arrangement.spacedBy(12.dp)) {
-        if(state.loading) item {CircularProgressIndicator()}
+        if(state.loading) item {JournalLoading()}
         else if(state.failed) item {Text("资料列表暂时无法读取，请返回后重试。",color=MaterialTheme.colorScheme.error)}
         else if(documents.isEmpty()) item {JournalEmptyState("还没有产检资料","把这次产检的报告放在一起，之后更容易找到。")}
         else documents.groupBy {it.date}.forEach {(date,rows)->
@@ -275,7 +282,7 @@ internal fun TimelineSourceScreen(pregnancyId: String,type: String,id: String,mo
     val document=(source?.visits?.flatMap {it.documents}.orEmpty()+source?.medicationFiles?.flatMap {it.documents}.orEmpty()).firstOrNull {it.id==id && it.deletedAt==null}
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(horizontal=24.dp).testTag("source-detail"),verticalArrangement=Arrangement.spacedBy(12.dp)) {
         when {
-            state.loading -> CircularProgressIndicator()
+            state.loading -> JournalLoading()
             state.failed -> Text("无法读取原记录，请返回后重试。",color=MaterialTheme.colorScheme.error)
             event==null || source==null -> Text("记录已删除或不可用，可返回时间线或在回收站核对。")
             else -> {

@@ -9,6 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 import cn.yunji.journal.core.designsystem.JournalButton
+import cn.yunji.journal.core.designsystem.JournalError
 import cn.yunji.journal.core.designsystem.JournalTag
 import cn.yunji.journal.core.designsystem.JournalCard
 import cn.yunji.journal.core.designsystem.RecordRow
@@ -55,7 +56,7 @@ fun UnlockScreen(busy: Boolean,error: String?,unlock: ()->Unit) {
         }
         RecordRow("保护本机资料", "离开应用后按设置自动锁定", "ic-shield.svg")
         RecordRow("验证失败可重试", "不会删除或修改记录", "ic-refresh.svg")
-        error?.let { Text(it,color=MaterialTheme.colorScheme.error) }
+        error?.let { JournalError(it) }
         if(busy)CircularProgressIndicator() else JournalButton("解锁资料",onClick=unlock)
         Text("请勿向他人透露手机解锁信息。", style=MaterialTheme.typography.bodySmall)
     }
