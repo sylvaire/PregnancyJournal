@@ -39,8 +39,8 @@
 | P0-1 | `titleMedium`/`titleSmall` 未在 Theme 中定义，落到 M3 默认 | **高** | 34 + 1 处，14 个文件 | ✅ 已修 |
 | P0-3 | 暖色卡片 `Apricot`/`Amber` 硬编码，深色模式刺眼 | **高** | 1 处（4 行代码） | ✅ 已修 |
 | P0-4 | 底部导航等旧图标描边 1.7、颜色非 `#356B53` | **高（每次可见）** | 10 + 4 个文件 | ✅ 已修 |
-| P0-2 | 卡片列表 vs 裸 `Column` 两种页面范式并存（深色实机同屏可见） | **高** | 6 个页面无卡片容器 | ⬜ 待排期 |
-| P1-1 | `OutlinedTextField` 48 处无组件包装（设计稿有 `孕迹/Field`） | 中 | 15 个文件 | ◐ 组件已建，已替换 4 处 |
+| P0-2 | 卡片列表 vs 裸 `Column` 两种页面范式并存 | **高** | 6 个页面无卡片容器 | ◐ ExportScreen + CloudConnectionScreen 已收敛 |
+| P1-1 | `OutlinedTextField` 48 处无组件包装（设计稿有 `孕迹/Field`） | 中 | 15 个文件 | ◐ 已替换 8 处，云盘页清零 |
 | P1-2 | `TextButton` 167 处无统一规格（4 种语义混用） | 中 | 16 个文件 | ⬜ 待排期 |
 | P1-3 | 两处全屏 Dialog 自建顶栏，且两者彼此不一致 | 中 | 2 处 | ✅ 已修 |
 | P2-1 | 按钮高度 40/52/56/72 四种 | 低 | 10 处 | ✅ 已修（单行动作 6 处；字段选择器保留 56dp） |
@@ -302,6 +302,13 @@ Ardot `7:2461`「孕迹 · 基础组件」定义 3 个组件：
 - `HomeQuickAction`：补 `heightIn(min=88.dp)` + `onClickLabel`
 - `JournalApp` 备份状态文字链：18dp → 48dp 触摸目标（保留 `bodySmall` 视觉密度）
 
+**云盘连接页（P0-2/P1-1 增量）**：原「连接设置」小标题 + 说明 + 4 个裸 `OutlinedTextField` + `TextButton`
+全部贴边铺在 `Column(padding=24dp)` 里，与上方 soft 卡片形成两种容器语言。现整段收进 `JournalCard`，
+4 个字段改 `JournalField`（56dp / 16dp 圆角），密码字段的「显示/隐藏」移入 `trailingIcon`，
+「浏览云盘目录」「取消」「将此设备设为主设备」「清除本机测试标记」改 `JournalTextAction`，
+加载态改 `JournalLoading`，3 处裸错误文本改 `JournalError`，3 处 `titleMedium` 改 `JournalSectionTitle`。
+`CloudConnectionScreen` 的裸 `OutlinedTextField` **4 → 0**（全局 48 → 40）。
+
 **SafetyCopiesScreen 全面重写**：原为 M3 默认 `Card`(12dp) + `OutlinedButton`(40dp) + 裸 `TextButton` + 裸 `HorizontalDivider`，
 现为 `JournalDivider` + `JournalSectionTitle` + `JournalCard`(20dp) + `JournalTextAction`。
 
@@ -318,7 +325,7 @@ Ardot `7:2461`「孕迹 · 基础组件」定义 3 个组件：
 
 | # | 项 | 原因 |
 |---|---|---|
-| P0-2 | 两种页面布局范式（卡片列表 vs 裸 `Column`） | 涉及 6 个页面结构重写，需单独排期；本轮已在 `ExportScreen` 局部收敛（字段改圆角卡片） |
+| P0-2 | 两种页面布局范式（卡片列表 vs 裸 `Column`） | 6 个页面中已收敛 2 个（`ExportScreen` 字段卡片化、`CloudConnectionScreen` 整页卡片化）；剩 `RecoveryScreen`/`RestoreScreen`/`SecurityScreen`/`DocumentPreview` 4 个待处理 |
 | P1-2 余量 | 部分 `TextButton` 未替换（`TrashScreen`/`DocumentScreen` 行内危险态） | 已在 `JournalTextAction` 就位后具备替换条件，但 167 处需分批 |
 | — | `RecordRow` 的 `ModifierParameter` lint 警告 | 原有代码，改动会波及全部调用点 |
 
