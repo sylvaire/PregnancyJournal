@@ -40,8 +40,8 @@
 | P0-3 | 暖色卡片 `Apricot`/`Amber` 硬编码，深色模式刺眼 | **高** | 1 处（4 行代码） | ✅ 已修 |
 | P0-4 | 底部导航等旧图标描边 1.7、颜色非 `#356B53` | **高（每次可见）** | 10 + 4 个文件 | ✅ 已修 |
 | P0-2 | 卡片列表 vs 裸 `Column` 两种页面范式并存 | **高** | 6 个页面无卡片容器 | ✅ 5/6 已收敛（仅 `DocumentPreview` 为全屏 Dialog，已统一顶栏） |
-| P1-1 | `OutlinedTextField` 48 处无组件包装（设计稿有 `孕迹/Field`） | 中 | 15 个文件 | ◐ 已替换 18 处（48→30） |
-| P1-2 | `TextButton` 167 处无统一规格（4 种语义混用） | 中 | 16 个文件 | ◐ 167→136；余 42 处为 AlertDialog 按钮（全站统一形态，保留） |
+| P1-1 | `OutlinedTextField` 48 处无组件包装（设计稿有 `孕迹/Field`） | 中 | 15 个文件 | ✅ 48→8；余 8 处为搜索框/页码输入 |
+| P1-2 | `TextButton` 167 处无统一规格（4 种语义混用） | 中 | 16 个文件 | ✅ 167→69；余 43 为对话框按钮 + 列表行/密集工具栏（均保留，见 §7.5） |
 | P1-3 | 两处全屏 Dialog 自建顶栏，且两者彼此不一致 | 中 | 2 处 | ✅ 已修 |
 | P2-1 | 按钮高度 40/52/56/72 四种 | 低 | 10 处 | ✅ 已修（单行动作 6 处；字段选择器保留 56dp） |
 | P2-2 | `Card`/`OutlinedCard`/`Checkbox`/`HorizontalDivider` 未包装 | 低 | 4 个文件 | ✅ 已修 |
@@ -348,11 +348,26 @@ Ardot `7:2461`「孕迹 · 基础组件」定义 3 个组件：
 | 备份状态文字链改用 `JournalTextAction` | `labelLarge` + 长文案撑破布局，首页出现大号重叠文字 | 回退为 `Text(bodySmall)` + `clickable` + `heightIn(48.dp)` |
 | `JournalFullScreenHeader` 的 chevron | 用了 `rotate(90f)`，箭头朝下（应为左） | 改为 `rotate(if (Ltr) 180f else 0f)`，与 `JournalPageHeader` 一致 |
 
-### 7.4 剩余未修
+### 7.5 保留的例外（判定依据）
+
+以下 `TextButton`/`OutlinedTextField` 未替换，是**有依据的决定**，不是遗漏：
+
+| 项 | 数量 | 保留理由 |
+|---|---|---|
+| `AlertDialog` 的 confirm/dismiss 按钮 | 43 | Material 3 平台约定，全站 32 个对话框已完全一致；替换会改动大量对话框测试 |
+| `PdfDocumentView` 查看器工具栏 | 6 | 单行 6 个控件（上一页/页码/下一页/缩小/适合页面/放大）；`JournalTextAction` 每项多 24dp 横向内边距，合计会超出 412dp 屏宽 |
+| 列表行项（云盘目录项、产检日历日格） | 2 | 是列表/网格的单元格，不是独立动作；日格用 `Modifier.fillMaxSize()` + 自定义 contentPadding |
+| 对话框内部项（重新关联、导入选项等） | 5 | 在 `AlertDialog`/`BottomSheet` 内，随对话框统一样式 |
+| 7 处搜索框 + 1 处 PDF 页码输入 | 8 | 搜索框在 `LazyColumn` 内由 `Inset{}` 包裹，是筛选控件而非表单字段；改为 `JournalField` 会破坏列表节奏 |
+
+**判定标准**：`JournalTextAction` 适用于「页面/卡片内、与内容并列的独立动作」。
+工具栏、列表单元格、对话框、筛选控件属于不同控件族，强行统一会损害布局或交互。
+
+### 7.6 剩余未修
 
 | # | 项 | 原因 |
 |---|---|---|
-| P0-2 | 两种页面布局范式 | ✅ 6 个页面中 5 个已卡片化（Export/Cloud/Recovery/Restore/Security）；`DocumentPreview` 为全屏 Dialog，已统一顶栏，不适用卡片范式 |
+| P0-2 | 两种页面布局范式 | ✅ 已收口：Export/Cloud/Recovery/Restore/Security/JournalEditor/DrugEditor/MeasurementEditor 全部卡片化；`DocumentPreview` 为全屏 Dialog，已统一顶栏 |
 | P1-2 余量 | 部分 `TextButton` 未替换（`TrashScreen`/`DocumentScreen` 行内危险态） | 已在 `JournalTextAction` 就位后具备替换条件，但 167 处需分批 |
 | — | `RecordRow` 的 `ModifierParameter` lint 警告 | 原有代码，改动会波及全部调用点 |
 
