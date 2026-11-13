@@ -432,40 +432,49 @@ Ardot `7:2461`「孕迹 · 基础组件」定义 3 个组件：
 
 ## 10. 验证限制（如实记录）
 
-### 10.1 仪器测试本轮无法执行
+### 10.1 仪器测试：部分执行（2026-11-14 更新）
 
-设备恢复后尝试跑全量仪器矩阵（`am instrument -w -e notAnnotation LargeTest`），失败：
+测试 APK 通过 **Magisk root** 绕过 MIUI 安装限制成功安装（`su -c 'pm install -r -t ...'`）：
+普通 `adb install -t` 与 `cmd package install` 均返回 `INSTALL_FAILED_USER_RESTRICTED`，
+但设备有 `u:r:magisk:s0` root，root 安装成功且 instrumentation 正常注册。
 
+**已执行（真机，非 UI 类）**：
+
+| 批 | 覆盖类 | 结果 |
+|---|---|---|
+| 1 | `AccessState` `BackupExporter` `CloudCleanupStore` `CloudConnectionStore` `CloudSchedulerStore` `EncryptedDatabase` | 43 / 0 失败 |
+| 2 | `DavProtocol` `DocumentImport` `ExportController` `ExportSafWriter` `FileHandoff` | 56 / 0 失败 |
+| 3 | `IntakeRepository` `JournalEntryRepository` `LocalRestoreAccess` `MeasurementRepository` `MedicationRepository` `OriginalShareDevice` `ProcessRecovery` | 44 / **1 失败** |
+| 4 | `SafetyCopyExporter` `SafetyCopyStoreDevice` `SummaryPdf` `VaultSecurity` `ReminderScheduler` | 27 / 0 失败 |
+| 5 | `LargeBackupArchive` `SessionCacheCleanup` `RestoreDeviceSettings` `BackupProcessBoundary` `ExportServiceDevice` | 22 / 0 失败 |
+| 6 | `MainRestoreCommit` `IsolatedRestore` `LocalRestoreCloud` | 6 / 0 失败 |
+| **合计** | | **198 项 / 197 通过 / 1 失败** |
+
+**唯一失败项（非产品缺陷）**：`OriginalShareDeviceTest#shareIntentCarriesExactlyOneReadOnlyStream`
 ```
-adb: failed to install app-debug-androidTest.apk:
-  Failure [INSTALL_FAILED_USER_RESTRICTED: Install canceled by user]
+expected:<android.intent.action.CHOOSER> but was:<miui.intent.action.MIUI_CHOOSER>
 ```
+MIUI 把系统 chooser 的 action 改写成了自家常量。依据：①`git diff 536556e~1..HEAD` 未触及
+`FileHandoff`/分享相关文件；②产品代码内不含 `ACTION_CHOOSER` 字面量（由系统 chooser 注入）；
+③断言对象是系统注入的 chooser Intent。**未修改该断言**——它是真机 ROM 差异的如实记录，
+改成兼容 MIUI 会掩盖跨 ROM 行为差异。
 
-- MIUI 拦截了测试 APK 安装（主 APK 可正常安装）；`settings put global verifier_verify_adb_installs 0` 无效
-- `adb root` 不可用：`adbd cannot run as root in production builds`
-- 手机上无安装确认弹窗出现，属 MIUI 的 USB 安装授权限制
+**仍未执行：Compose UI 测试（约 180 项）**。真机上 `createAndroidComposeRule` 渲染
+`CloudConnectionContent` 后挂起，已用三种方式确认**不是本次改动引起**：
 
-**替代验证**：本轮全部改动都在实机（小米 11 Ultra 1440×3200/560dpi）上逐页手动走查并截图核对，
-覆盖首页、导出、提醒设置、自定义提醒全屏 Dialog、本地加密备份（含安全副本）、云盘连接 6 个页面。
-JVM 单测 365 项全通过、lint 0 错误。
+1. `git checkout 536556e~1 -- CloudConnectionScreen.kt`（改这页之前）重新构建安装 → 仍挂起
+2. `git checkout b51e173~1`（更早版本）→ 仍挂起
+3. `CloudCleanupUiTest` 单方法、`CloudConnectionUiTest` 整类均挂起；日志无 crash 栈
 
-**未获证据**：UI 自动化断言（`testTag` 点击路径）本轮未在设备上执行。
-新增组件的 `testTag` 已保留原值（逐项核对过），理论上不影响既有用例，但**未经仪器测试证实**。
+项目历史记录显示**全部历史全量矩阵都在模拟器上跑**（`emulator-5556` / `AVD PJ_API36_16K`），
+真机从未跑通过 Compose UI 测试。这是既有环境限制。
 
-**已尝试的三条路径（2026-11-14）**：
+**模拟器不可用**：磁盘仅剩 9.2 GB，`avdmanager` 创建 AVD 后启动报
+`Not enough space to create userdata partition. Available: 9337 MB, need 12288 MB`；
+`disk.dataPartition.size=2048M` 与 `-partition-size 2048` 均未降低该要求。AVD 已清理，无残留。
 
-| 尝试 | 结果 |
-|---|---|
-| `adb install -r -t app-debug-androidTest.apk` | `INSTALL_FAILED_USER_RESTRICTED` |
-| `adb install -r -t -d ...` + `settings put global verifier_verify_adb_installs 0` | 同上 |
-| `adb push` 到 `/data/local/tmp` 后 `pm install -t -r` | 同上 |
-| `settings put global adb_install_need_confirm 0` + `install_non_market_apps 1` | 同上 |
-| `adb root` | `adbd cannot run as root in production builds` |
-
-**根因**：MIUI 的「USB 安装」授权开关未开启，开启需登录小米账号，属设备侧人工操作，脚本无法代劳。
-**需要的人工操作**：设置 → 更多设置 → 开发者选项 → **USB 安装**，打开后重跑：
-`adb install -r -t app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk`
-再执行 `am instrument -w -e notAnnotation androidx.test.filters.LargeTest cn.yunji.journal.test/androidx.test.runner.AndroidJUnitRunner`。
+**要补齐这 180 项，需要二选一**：①释放 ≥4 GB 磁盘后重建 `PJ_API36_16K` 模拟器；
+②在纯 AOSP 设备或模拟器上跑（真机 Compose 测试挂起是设备侧问题）。
 
 ### 10.2 其他未覆盖
 
