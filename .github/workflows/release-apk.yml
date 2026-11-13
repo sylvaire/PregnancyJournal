@@ -45,6 +45,46 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
 
+      # 版本一致性校验：tag 与 gradle 里的 versionName 必须对应，否则产出的 APK
+      # 版本号与实际发布标签不符，后续升级路径会错乱。
+      - name: Verify tag matches versionName
+        id: version
+        env:
+          TAG: ${{ github.event.release.tag_name || inputs.tag || '' }}
+        run: |
+          set -euo pipefail
+          VERSION_NAME=$(grep -oP 'versionName\s*=\s*"\K[^"]+' app/build.gradle.kts | head -n 1)
+          VERSION_CODE=$(grep -oP 'versionCode\s*=\s*\K[0-9]+' app/build.gradle.kts | head -n 1)
+          if [ -z "$VERSION_NAME" ] || [ -z "$VERSION_CODE" ]; then
+            echo "::error::无法从 app/build.gradle.kts 读取 versionName/versionCode"
+            exit 1
+          fi
+          echo "gradle: versionName=$VERSION_NAME versionCode=$VERSION_CODE"
+          echo "tag:    ${TAG:-<无>}"
+
+          if [ -z "${TAG:-}" ]; then
+            # 手动触发且未提供 tag 时不阻断，仅提示。
+            echo "::notice::未提供 tag，跳过一致性校验（手动预演构建）"
+            echo "name=$VERSION_NAME" >> "$GITHUB_OUTPUT"
+            echo "code=$VERSION_CODE" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # 允许 tag 带 v 前缀。开发版本（以 -dev 结尾）可与 tag 的「三段主版本号」对应，
+          # 例如 tag v0.26.0 ↔ versionName 0.26.0-dev。必须按点分段完整匹配，
+          # 避免 v0 / v0.2 这类过短 tag 被误判为一致。
+          EXPECTED="${TAG#v}"
+          BASE="${VERSION_NAME%%-*}"          # 0.26.0-dev → 0.26.0
+          if [ "$EXPECTED" = "$VERSION_NAME" ] || [ "$EXPECTED" = "$BASE" ]; then
+            echo "::notice::版本一致：$TAG ↔ $VERSION_NAME"
+          else
+            echo "::error::版本不一致：tag '$TAG' 期望 versionName '$EXPECTED'，实际为 '$VERSION_NAME'"
+            echo "::error::请更新 app/build.gradle.kts 的 versionName/versionCode 后重新发布，或推送正确的 tag。"
+            exit 1
+          fi
+          echo "name=$VERSION_NAME" >> "$GITHUB_OUTPUT"
+          echo "code=$VERSION_CODE" >> "$GITHUB_OUTPUT"
+
       # 有签名密钥则产出已签名 APK；没有则产出未签名 APK（仅用于内部验证）。
       # 注意：secrets 不能在 if 条件中直接引用，因此在步骤内部判断是否为空。
       - name: Decode signing keystore
