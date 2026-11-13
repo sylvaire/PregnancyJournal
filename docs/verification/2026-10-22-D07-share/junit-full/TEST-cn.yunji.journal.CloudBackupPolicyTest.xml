@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.CloudBackupPolicyTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-22T07:08:21.290Z" hostname="SUN-KDQ5E4QJN34" time="0.002">
+  <properties/>
+  <testcase name="foreignWriterAndDuplicateTriggersAreDetected" classname="cn.yunji.journal.CloudBackupPolicyTest" time="0.001"/>
+  <testcase name="pendingChangesCompareAgainstLastBackedUpSequence" classname="cn.yunji.journal.CloudBackupPolicyTest" time="0.0"/>
+  <testcase name="repeatedOwnBackupsAndAcknowledgedForeignHistoryDoNotMaskNewCommits" classname="cn.yunji.journal.CloudBackupPolicyTest" time="0.001"/>
+  <testcase name="retentionCleanupIsDailyAndPausesForOtherDevices" classname="cn.yunji.journal.CloudBackupPolicyTest" time="0.0"/>
+  <testcase name="automaticUploadRequiresPrimaryAutoPendingAndNoBlock" classname="cn.yunji.journal.CloudBackupPolicyTest" time="0.0"/>
+  <testcase name="eachRefusalHasAnExplicitReason" classname="cn.yunji.journal.CloudBackupPolicyTest" time="0.0"/>
+  <testcase name="retryBackoffGrowsAndIsCapped" classname="cn.yunji.journal.CloudBackupPolicyTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

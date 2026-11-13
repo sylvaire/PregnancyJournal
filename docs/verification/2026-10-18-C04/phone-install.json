@@ -1,0 +1,7 @@
+{
+  "versionNameVerified": true,
+  "versionCodeVerified": true,
+  "activityStartOk": true,
+  "dataPreserved": true,
+  "note": "保留数据覆盖安装；测试仅用隔离合成数据库。启动成功不等于真机UI验收。"
+}

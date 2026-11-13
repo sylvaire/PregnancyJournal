@@ -1,0 +1,24 @@
+== surface-alert-dialog.png
+  expected container=#FFFFFF  largest component: {'x0': np.int64(120), 'y0': np.int64(924), 'x1': np.int64(959), 'y1': np.int64(1543), 'px': 469504, 'x0_dp': np.float64(45.71), 'y0_dp': np.float64(352.0), 'w_dp': np.float64(320.0), 'h_dp': np.float64(236.19), 'centre_colour': '#FFFFFF', 'centre_is_container': True}
+  component area=469504 px (18.1% of screen)  bbox dp: x0=45.71 y0=352.00 w=320.00 h=236.19
+  centre sampled colour=#FFFFFF
+  design palette hits: {'#FFFFFF': 475140, '#223C32': 6870, '#356B53': 3156, '#5F7166': 9778}
+  M3 baseline (lavender family) hits: {}  total=0
+== surface-date-picker.png
+  expected container=#FFFFFF  largest component: {'x0': np.int64(68), 'y0': np.int64(804), 'x1': np.int64(1011), 'y1': np.int64(1979), 'px': 1071696, 'x0_dp': np.float64(25.9), 'y0_dp': np.float64(306.29), 'w_dp': np.float64(359.62), 'h_dp': np.float64(448.0), 'centre_colour': '#FFFFFF', 'centre_is_container': True}
+  component area=1071696 px (41.3% of screen)  bbox dp: x0=25.90 y0=306.29 w=359.62 h=448.00
+  centre sampled colour=#FFFFFF
+  design palette hits: {'#FFFFFF': 1357284, '#DDE4DA': 1890, '#223C32': 8480, '#356B53': 9972, '#5F7166': 11819}
+  M3 baseline (lavender family) hits: {}  total=0
+== surface-snackbar.png
+  expected container=#223C32  largest component: {'x0': np.int64(64), 'y0': np.int64(1940), 'x1': np.int64(1015), 'y1': np.int64(2063), 'px': 111024, 'x0_dp': np.float64(24.38), 'y0_dp': np.float64(739.05), 'w_dp': np.float64(362.67), 'h_dp': np.float64(47.24), 'centre_colour': '#223C32', 'centre_is_container': True}
+  component area=111024 px (4.3% of screen)  bbox dp: x0=24.38 y0=739.05 w=362.67 h=47.24
+  centre sampled colour=#223C32
+  design palette hits: {'#FFFFFF': 585027, '#F7F8F3': 1599492, '#E7F0E6': 10637, '#DDE4DA': 6348, '#223C32': 122107, '#356B53': 160242, '#5F7166': 15595}
+  M3 baseline (lavender family) hits: {}  total=0
+== surface-dropdown-menu.png
+  expected container=#FFFFFF  largest component: {'x0': np.int64(64), 'y0': np.int64(1100), 'x1': np.int64(1019), 'y1': np.int64(2339), 'px': 1013008, 'x0_dp': np.float64(24.38), 'y0_dp': np.float64(419.05), 'w_dp': np.float64(364.19), 'h_dp': np.float64(472.38), 'centre_colour': '#FFFFFF', 'centre_is_container': True}
+  component area=1013008 px (39.1% of screen)  bbox dp: x0=24.38 y0=419.05 w=364.19 h=472.38
+  centre sampled colour=#FFFFFF
+  design palette hits: {'#FFFFFF': 1343264, '#F7F8F3': 1089776, '#DDE4DA': 11953, '#223C32': 23987, '#356B53': 22128, '#5F7166': 11561, '#A44238': 909}
+  M3 baseline (lavender family) hits: {}  total=0

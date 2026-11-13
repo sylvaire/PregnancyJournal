@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.SafetyCopyStoreTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-22T07:08:31.411Z" hostname="SUN-KDQ5E4QJN34" time="0.087">
+  <properties/>
+  <testcase name="explicitSelectionDeletesOnlySelectedCopy" classname="cn.yunji.journal.SafetyCopyStoreTest" time="0.023"/>
+  <testcase name="anyPendingRestoreBlocksListingCopyAndDeletion" classname="cn.yunji.journal.SafetyCopyStoreTest" time="0.009"/>
+  <testcase name="cancelledCopyKeepsSourceAndOtherFiles" classname="cn.yunji.journal.SafetyCopyStoreTest" time="0.019"/>
+  <testcase name="discoversOnlyCompletedRegularArchivesAndCopiesExactBytes" classname="cn.yunji.journal.SafetyCopyStoreTest" time="0.019"/>
+  <testcase name="staleSelectionCannotDeleteOrExportChangedFile" classname="cn.yunji.journal.SafetyCopyStoreTest" time="0.017"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

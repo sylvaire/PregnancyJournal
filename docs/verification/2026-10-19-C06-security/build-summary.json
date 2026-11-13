@@ -1,0 +1,14 @@
+{
+  "versionName": "0.14.0-dev",
+  "versionCode": 15,
+  "schemaVersion": 12,
+  "apkSha256": "7212974ccbb64314ece47ceadcd8250467ac5e4f364e738db5bec8ed7fc2b60e",
+  "artifact": "PregnancyJournal-0.14.0-dev-7212974c.apk",
+  "emulatorFullTests": 97,
+  "jvmTests": 30,
+  "lintErrors": 0,
+  "lintWarnings": 20,
+  "phoneInstalled": true,
+  "pending": "Final system/OEM matrices remain; D01 development continues",
+  "phoneIsolatedTests": 7
+}

@@ -1,0 +1,7 @@
+Filtered check over logcat captured after upgrade + launch (23:06-23:07):
+- FATAL EXCEPTION / process crash lines for cn.yunji.journal: 
+0
+- 'Room cannot verify the data integrity' lines: 
+0
+- app process alive after launch: yes (pidof cn.yunji.journal non-empty)
+- MainActivity resumed with home content rendered (UI hierarchy captured; personal content not copied into docs)

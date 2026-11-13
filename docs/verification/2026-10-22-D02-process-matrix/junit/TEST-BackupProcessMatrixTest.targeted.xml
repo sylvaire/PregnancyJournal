@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.BackupProcessMatrixTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-22T08:17:39.884Z" hostname="SUN-KDQ5E4QJN34" time="0.57">
+  <properties/>
+  <testcase name="cancelledVerificationLeavesTheSourceObjectsIntactAndReusable" classname="cn.yunji.journal.BackupProcessMatrixTest" time="0.237"/>
+  <testcase name="cancelledVerificationAtEveryCheckpointLeavesNoStagingDirectory" classname="cn.yunji.journal.BackupProcessMatrixTest" time="0.171"/>
+  <testcase name="retryAfterCancellationPublishesTheSameSnapshotExactlyOnce" classname="cn.yunji.journal.BackupProcessMatrixTest" time="0.023"/>
+  <testcase name="cancelledPublicationAtEveryCheckpointNeverPublishesOrLeavesPartial" classname="cn.yunji.journal.BackupProcessMatrixTest" time="0.053"/>
+  <testcase name="everyTruncationOfThePublishedArchiveIsRejected" classname="cn.yunji.journal.BackupProcessMatrixTest" time="0.054"/>
+  <testcase name="staleStagingDirectoryFromAPreviousProcessIsNeitherReusedNorTrusted" classname="cn.yunji.journal.BackupProcessMatrixTest" time="0.021"/>
+  <testcase name="preExistingDestinationContentIsNeverOverwritten" classname="cn.yunji.journal.BackupProcessMatrixTest" time="0.009"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

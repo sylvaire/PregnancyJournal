@@ -1,0 +1,6 @@
+
+Algorithm : SHA256
+Hash      : C32C5CF9FA07C6311C8AB0C4A491CC2BF6FE229EC4DC1E911B7D655EA95B7C6E
+Path      : D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\build\outputs\apk\release\app-release-unsigned.apk
+
+

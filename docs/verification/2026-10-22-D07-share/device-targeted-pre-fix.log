@@ -1,0 +1,34 @@
+# 修复前设备命令1 证据摘录（完整 device-targeted.log 已被修复后重跑覆盖）
+说明：以下内容为 2026-10-22 15:00 运行的 Gradle 控制台输出逐字摘录 + 当时 JUnit XML 解析结果，
+      不是原始文件拷贝。修复后重跑输出见同目录 device-targeted.log（7/7 通过）。
+
+== Gradle 控制台（逐字摘录）==
+> Task :app:connectedDebugAndroidTest
+Starting 7 tests on PJ_API36_16K(AVD) - 16
+
+cn.yunji.journal.OriginalShareDeviceTest > shareIntentCarriesExactlyOneReadOnlyStream[PJ_API36_16K(AVD) - 16] FAILED
+	java.lang.AssertionError: expected:<1> but was:<0>
+	at org.junit.Assert.fail(Assert.java:89)
+Tests on PJ_API36_16K(AVD) - 16 failed: There was 1 failure(s).
+
+Finished 7 tests on PJ_API36_16K(AVD) - 16
+
+> Task :app:connectedDebugAndroidTest FAILED
+BUILD FAILED in 13s
+EXITCODE=1
+START=15:00:01 END=15:00:14 DURATION_SEC=13.5
+
+== 当时 JUnit XML 解析（TEST-PJ_API36_16K(AVD) - 16-_app-.xml）==
+tests=7 failures=1 errors=0 skipped=0 time=0.897
+PASS 0.012s providerIsRegisteredNonExportedWithGrantOnly
+PASS 0.004s shareNamesNeverEscapeTheShareDirectory
+FAIL 0.043s shareIntentCarriesExactlyOneReadOnlyStream
+PASS 0.004s residualPlaintextIsClearedWhenTheScreenStarts
+PASS 0.004s returningRevokesThenDeletesTheTemporaryCopy
+PASS 0.003s onlyTheShareDirectoryIsReachableThroughTheProvider
+PASS 0.005s launchPassesExactlyThePublishedInvocation
+
+== 根因与修复 ==
+ShareInvocation.toIntent(): Intent(action).apply { ...; addFlags(flags) } 中 flags 被内层 Intent 接收者遮蔽为 Intent.flags(0)，
+导致 EXTRA_STREAM 的 inner intent 缺 FLAG_GRANT_READ_URI_PERMISSION（chooser 外层有 flag，接收方拿不到读权限）。
+修复：addFlags(this@toIntent.flags)（OriginalSharer.kt），chooser 的 also 块显式 this.flags。修复后重跑 7/7 通过。

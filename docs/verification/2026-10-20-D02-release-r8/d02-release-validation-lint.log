@@ -1,0 +1,39 @@
+> Task :release-validation:copySmokeTest UP-TO-DATE
+> Task :release-validation:preBuild UP-TO-DATE
+> Task :release-validation:preDebugBuild UP-TO-DATE
+> Task :release-validation:javaPreCompileDebug UP-TO-DATE
+> Task :release-validation:checkDebugAarMetadata UP-TO-DATE
+> Task :release-validation:processDebugNavigationResources UP-TO-DATE
+> Task :release-validation:compileDebugNavigationResources UP-TO-DATE
+> Task :release-validation:generateDebugResValues UP-TO-DATE
+> Task :release-validation:mapDebugSourceSetPaths UP-TO-DATE
+> Task :release-validation:generateDebugResources UP-TO-DATE
+> Task :release-validation:mergeDebugResources UP-TO-DATE
+> Task :release-validation:packageDebugResources UP-TO-DATE
+> Task :release-validation:parseDebugLocalResources UP-TO-DATE
+> Task :release-validation:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :release-validation:extractDeepLinksDebug UP-TO-DATE
+> Task :release-validation:processDebugMainManifest UP-TO-DATE
+> Task :release-validation:processDebugManifest UP-TO-DATE
+> Task :release-validation:processDebugManifestForPackage UP-TO-DATE
+> Task :release-validation:processDebugResources UP-TO-DATE
+> Task :release-validation:compileDebugJavaWithJavac UP-TO-DATE
+> Task :release-validation:preDebugAndroidTestBuild SKIPPED
+> Task :release-validation:generateDebugAndroidTestResValues
+> Task :release-validation:bundleDebugClassesToCompileJar
+> Task :release-validation:extractProguardFiles
+> Task :release-validation:generateDebugAndroidTestLintModel
+> Task :release-validation:generateDebugLintReportModel
+> Task :release-validation:preDebugUnitTestBuild UP-TO-DATE
+> Task :release-validation:generateDebugUnitTestLintModel
+> Task :release-validation:lintAnalyzeDebugAndroidTest
+> Task :release-validation:lintAnalyzeDebugUnitTest
+> Task :release-validation:lintAnalyzeDebug
+
+> Task :release-validation:lintReportDebug
+Wrote HTML report to file:///D:/Devtools/Code/CodexWorkspace/PregnancyJournal/validation/release/build/reports/lint-results-debug.html
+
+> Task :release-validation:lintDebug
+
+BUILD SUCCESSFUL in 7s
+29 actionable tasks: 11 executed, 18 up-to-date

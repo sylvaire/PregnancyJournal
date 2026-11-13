@@ -1,0 +1,6 @@
+{
+  "cleanInstall": "uninstall后全新安装成功：新建device-key.json与journal.db(4KiB)+WAL(276KiB)、objects/目录，MainActivity为topResumedActivity，无FATAL",
+  "upgradeInstall": "install -r覆盖安装：device-key.json(168字节)字节完全一致，journal.db与objects保留",
+  "restore": "见D05真实SQLCipher代际恢复测试",
+  "signedPackage": "未生成（签名密钥需仓库外管理，未获授权）"
+}

@@ -1,0 +1,19 @@
+# Lock screen observation (user 11, HyperOS)
+
+Preconditions read back before the test:
+- settings secure lock_screen_show_notifications = 1
+- settings secure lock_screen_allow_private_notifications = 1
+- global zen_mode = 0 (DND off)
+- per-app 允许通知 = on, 锁屏通知 = on (see miui-app-notification-settings.txt)
+- active app notification: importance 4, visibility PRIVATE (see notification-record.txt)
+
+Procedure: screen off (input keyevent 223) -> wake (input keyevent 224) -> screenshot; repeated with the app in the background (KEYCODE_HOME before locking).
+
+Result:
+- The lock screen showed ONLY the system-wide notification pkg=android user=UserHandle{-1} (已连接到无线调试).
+- The app notification was NOT rendered on the lock screen in either attempt.
+- The same app notification WAS visible in the notification shade after unlock (notification-shade.png).
+
+Conclusion / boundary: lock-screen rendering of the app notification was NOT verified on this HyperOS build in an isolated secondary user. The cause is NOT attributed; possible factors include MIUI's secondary-user lock-screen policy and the channel lockscreenVisibility read-back (-1000). The owner (primary) user was not used for locking because it has a device credential and contains personal data. C05 锁屏视觉 therefore remains unverified on Xiaomi.
+
+Screenshots: lockscreen-1.png, lockscreen-2.png (both attempts).

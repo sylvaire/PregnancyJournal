@@ -1,0 +1,40 @@
+== after/coverage/timeline.png
+  colours: {'#FFFFFF': 506213, '#E7F0E6': 34119, '#356B53': 146295, '#223C32': 26519, '#5F7166': 8165, '#DDE4DA': 2796, '#FAEAD8': 252291, '#80582C': 9453}
+  record rows: 3 [(np.float64(72.38), np.float64(363.43), np.float64(252.19)), (np.float64(71.62), np.float64(363.43), np.float64(385.52)), (np.float64(72.38), np.float64(363.43), np.float64(639.24))]
+  icon containers (44dp): 3 [(np.float64(44.19), np.float64(44.19)), (np.float64(44.19), np.float64(44.19)), (np.float64(44.19), np.float64(44.19))]
+  apricot cards: [(np.float64(363.43), np.float64(108.95), np.float64(24.38), np.float64(469.33))]
+  selected filter chips: 1 [(np.float64(64.0), np.float64(48.0), np.float64(24.38), np.float64(143.24))]
+  unselected filter chips: 2 [(np.float64(61.71), np.float64(46.48), np.float64(97.52), np.float64(144.0)), (np.float64(61.71), np.float64(46.48), np.float64(169.14), np.float64(144.0))]
+  bottom CTA: [(np.float64(363.43), np.float64(52.57), np.float64(24.38), np.float64(825.9), np.float64(878.48))]
+  top CTA (old design): []
+  date header: left ink=[{'y0_dp': np.float64(218.29), 'y1_dp': np.float64(235.43), 'x0_dp': np.float64(25.9), 'x1_dp': np.float64(94.48)}] right label=[{'y0_dp': np.float64(220.57), 'y1_dp': np.float64(233.14), 'x0_dp': np.float64(309.33), 'x1_dp': np.float64(387.05), 'primary_px': 1117, 'muted_px': 0}]
+== after/navigation/c04-timeline.png
+  colours: {'#FFFFFF': 37983, '#E7F0E6': 0, '#356B53': 140257, '#223C32': 12796, '#5F7166': 3450, '#DDE4DA': 2796, '#FAEAD8': 259147, '#80582C': 4994}
+  record rows: 0 []
+  icon containers (44dp): 0 []
+  apricot cards: [(np.float64(363.43), np.float64(108.95), np.float64(24.38), np.float64(252.19))]
+  selected filter chips: 1 [(np.float64(64.0), np.float64(48.0), np.float64(168.38), np.float64(143.24))]
+  unselected filter chips: 2 [(np.float64(61.71), np.float64(46.48), np.float64(97.52), np.float64(144.0)), (np.float64(61.71), np.float64(46.48), np.float64(25.14), np.float64(144.0))]
+  bottom CTA: [(np.float64(363.43), np.float64(51.81), np.float64(24.38), np.float64(825.9), np.float64(877.71))]
+  top CTA (old design): []
+  date header: left ink=[{'y0_dp': np.float64(218.29), 'y1_dp': np.float64(235.05), 'x0_dp': np.float64(26.29), 'x1_dp': np.float64(105.9)}] right label=[{'y0_dp': np.float64(220.57), 'y1_dp': np.float64(233.14), 'x0_dp': np.float64(309.33), 'x1_dp': np.float64(387.05), 'primary_px': 939, 'muted_px': 0}]
+== before/2026-10-24-ui-p1-polish/timeline.png
+  colours: {'#FFFFFF': 1114017, '#E7F0E6': 0, '#356B53': 145284, '#223C32': 37560, '#5F7166': 6944, '#DDE4DA': 12055, '#FAEAD8': 0, '#80582C': 0}
+  record rows: 0 []
+  icon containers (44dp): 0 []
+  apricot cards: []
+  selected filter chips: 1 [(np.float64(64.0), np.float64(48.76), np.float64(24.38), np.float64(195.05))]
+  unselected filter chips: 3 [(np.float64(93.71), np.float64(45.71), np.float64(241.52), np.float64(196.57)), (np.float64(61.71), np.float64(45.71), np.float64(97.52), np.float64(196.57)), (np.float64(61.71), np.float64(45.71), np.float64(169.14), np.float64(196.57))]
+  bottom CTA: []
+  top CTA (old design): [(np.float64(363.43), np.float64(52.57), np.float64(134.86))]
+  date header: left ink=[] right label=[{'y0_dp': np.float64(195.05), 'y1_dp': np.float64(243.05), 'x0_dp': np.float64(249.9), 'x1_dp': np.float64(387.05), 'primary_px': 0, 'muted_px': 2576}]
+== design/12-Timeline.png (2x)
+  colours: {'#FFFFFF': 436535, '#E7F0E6': 27563, '#356B53': 84247, '#223C32': 21626, '#5F7166': 4876, '#DDE4DA': 1344, '#FAEAD8': 201680, '#80582C': 1164}
+  record rows: 4 [(np.float64(94.0), np.float64(412.0), np.float64(801.0)), (np.float64(72.0), np.float64(364.0), np.float64(232.0)), (np.float64(72.0), np.float64(364.0), np.float64(522.0)), (np.float64(72.0), np.float64(364.0), np.float64(606.0))]
+  icon containers (44dp): 3 [(np.float64(44.0), np.float64(44.0)), (np.float64(44.0), np.float64(44.0)), (np.float64(44.0), np.float64(44.0))]
+  apricot cards: [(np.float64(364.0), np.float64(152.0), np.float64(24.0), np.float64(316.0))]
+  selected filter chips: 1 [(np.float64(64.0), np.float64(48.0), np.float64(24.0), np.float64(130.0))]
+  unselected filter chips: 2 [(np.float64(62.0), np.float64(46.0), np.float64(97.0), np.float64(131.0)), (np.float64(62.0), np.float64(46.0), np.float64(169.0), np.float64(131.0))]
+  bottom CTA: [(np.float64(364.0), np.float64(52.0), np.float64(24.0), np.float64(690.0), np.float64(742.0))]
+  top CTA (old design): []
+  date header: left ink=[{'y0_dp': np.float64(197.5), 'y1_dp': np.float64(214.0), 'x0_dp': np.float64(26.0), 'x1_dp': np.float64(105.5)}] right label=[{'y0_dp': np.float64(199.0), 'y1_dp': np.float64(249.5), 'x0_dp': np.float64(307.5), 'x1_dp': np.float64(387.5), 'primary_px': 767, 'muted_px': 0}]

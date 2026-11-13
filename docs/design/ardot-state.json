@@ -1,0 +1,42 @@
+{
+  "updatedAt": "2026-10-25",
+  "fileUrl": "https://ardot.tencent.com/file/737849992357132?node_id=0%3A1",
+  "fileId": "737849992357132",
+  "pageId": "0:1",
+  "sourceDesign": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy",
+  "scope": "N01-N22 主屏及补充状态；现有 20 张原屏未修改",
+  "screens": [
+    {"id":"63:26","name":"N01 记录枢纽"},
+    {"id":"63:81","name":"N02 管理孕期"},
+    {"id":"63:1","name":"N03 日常记录编辑"},
+    {"id":"63:127","name":"N04 原始记录详情"},
+    {"id":"63:160","name":"N05 日期依据历史"},
+    {"id":"63:215","name":"N06 提醒设置"},
+    {"id":"63:261","name":"N07 自定义提醒编辑"},
+    {"id":"63:286","name":"N08 安全设置"},
+    {"id":"63:332","name":"N09 云盘备份与清理"},
+    {"id":"63:359","name":"N10 本地备份与恢复"},
+    {"id":"63:389","name":"N11 导出资料"},
+    {"id":"63:414","name":"N12 全局回收站"},
+    {"id":"63:469","name":"N13 药品目录"},
+    {"id":"63:524","name":"N14 健康指标编辑"},
+    {"id":"63:549","name":"N15 服药记录与历史"},
+    {"id":"63:604","name":"N16 实际就诊记录"},
+    {"id":"63:629","name":"N17 应用锁定"},
+    {"id":"63:654","name":"N18 药品编辑"},
+    {"id":"63:679","name":"N19 服药补记"},
+    {"id":"63:704","name":"N20 产检日历"},
+    {"id":"63:759","name":"N21 资料原件预览"},
+    {"id":"63:797","name":"N22 产检资料"}
+  ],
+  "checks": {
+    "nodeCount": 22,
+    "frameSize": "412x915",
+    "editableLayers": true,
+    "sharedComponents": ["孕迹/Button", "孕迹/Field", "孕迹/RecordRow"],
+    "layoutCheck": "22/22 可读取；均有 LARGE_EMPTY_AREA、OUTSIDE_PARENT 提示，主要来自原模板留白及组件子层，未作为视觉验收通过证据",
+    "visualCheck": "用户授权后已截图并检查 N01-N22；N02/N11/N12 修订后重截确认；N20 最终月历修订仅通过 capture_layout，无最终截图",
+    "visualEvidence": "../verification/2026-10-25-ardot-visual/README.md"
+  },
+  "remaining": ["N20 最终月历视觉复核", "深色与大字状态", "云盘和恢复错误/完成等分支", "原型交互连线"]
+}

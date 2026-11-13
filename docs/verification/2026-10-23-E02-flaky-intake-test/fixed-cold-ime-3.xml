@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generated from raw `am instrument -w -r` output: fixed-cold-ime-3.log -->
+<testsuite name="cn.yunji.journal.test" tests="7" failures="0" errors="0" skipped="0">
+  <testcase classname="cn.yunji.journal.LockEntryMatrixTest" name="t1ColdStartShowsLockScreenAndNoJournalContent"/>
+  <testcase classname="cn.yunji.journal.LockEntryMatrixTest" name="t2ActivityRecreationKeepsLockScreen"/>
+  <testcase classname="cn.yunji.journal.LockEntryMatrixTest" name="t3RotationKeepsLockScreen"/>
+  <testcase classname="cn.yunji.journal.LockEntryMatrixTest" name="t4BackPressCannotRevealJournalContent"/>
+  <testcase classname="cn.yunji.journal.LockEntryMatrixTest" name="t5FailedUnlockAttemptKeepsLockScreen"/>
+  <testcase classname="cn.yunji.journal.LockEntryMatrixTest" name="t6LockingClearsPrivateDocumentPreviewCache"/>
+  <testcase classname="cn.yunji.journal.NavigationExperienceTest" name="scheduledIntakeEditDeleteUndoAndManualHistoryKeepOriginalPlan"/>
+</testsuite>

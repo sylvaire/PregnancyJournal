@@ -1,0 +1,95 @@
+== WCAG contrast (theme tokens)
+  onSurface / background                     fg=#E3EADF bg=#141D17 ratio=14.04
+  onSurface / surface                        fg=#E3EADF bg=#1D2921 ratio=12.29
+  onSurfaceVariant / surface                 fg=#B9C8BB bg=#1D2921 ratio=8.65
+  primary / surface                          fg=#A5D0B3 bg=#1D2921 ratio=8.82
+  onPrimaryContainer / primaryContainer      fg=#D5EBD8 bg=#294C39 ratio=7.64
+  outline / background                       fg=#8A9D8D bg=#141D17 ratio=5.98
+  onSurface / primaryContainer               fg=#E3EADF bg=#294C39 ratio=7.82
+
+== dark screenshots: dominant colour / dark token hits / light residue
+coverage/cloud-connection-backup.png           dominant=#141D17 (2200603 px, 84.9%) dark_token=True  dark_bg_hits=2200603  surface_hits=0  onSurface_hits=52974  light_residue_total=267 meaningful={}
+    light residue detail: {'outline': 267}
+coverage/cloud-connection-cleanup.png          dominant=#141D17 (2176635 px, 84.0%) dark_token=True  dark_bg_hits=2176635  surface_hits=0  onSurface_hits=53314  light_residue_total=297 meaningful={}
+    light residue detail: {'outline': 297}
+coverage/cloud-connection.png                  dominant=#141D17 (2306957 px, 89.0%) dark_token=True  dark_bg_hits=2306957  surface_hits=0  onSurface_hits=46506  light_residue_total=216 meaningful={}
+    light residue detail: {'outline': 216}
+coverage/custom-reminder-editor.png            dominant=#213228 (1055102 px, 40.7%) dark_token=True  dark_bg_hits=0  surface_hits=0  onSurface_hits=4255  light_residue_total=1863 meaningful={'surface': 1863}
+    light residue detail: {'surface': 1863}
+coverage/drug-catalog.png                      dominant=#141D17 (1952876 px, 75.3%) dark_token=True  dark_bg_hits=1952876  surface_hits=450403  onSurface_hits=24641  light_residue_total=60 meaningful={}
+    largest surface component: 364.2 x 193.5 dp @ (24.4, 246.9) dp
+    light residue detail: {'outline': 60}
+coverage/drug-editor.png                       dominant=#141D17 (2389165 px, 92.2%) dark_token=True  dark_bg_hits=2389165  surface_hits=0  onSurface_hits=17631  light_residue_total=79 meaningful={}
+    light residue detail: {'outline': 79}
+coverage/export-screen-disabled.png            dominant=#141D17 (2376641 px, 91.7%) dark_token=True  dark_bg_hits=2376641  surface_hits=1  onSurface_hits=24066  light_residue_total=89 meaningful={}
+    light residue detail: {'outline': 89}
+coverage/export-screen.png                     dominant=#141D17 (2454092 px, 94.7%) dark_token=True  dark_bg_hits=2454092  surface_hits=0  onSurface_hits=34418  light_residue_total=145 meaningful={}
+    light residue detail: {'outline': 145}
+coverage/journal-entry-editor.png              dominant=#141D17 (2363272 px, 91.2%) dark_token=True  dark_bg_hits=2363272  surface_hits=8  onSurface_hits=21303  light_residue_total=83 meaningful={}
+    light residue detail: {'outline': 83}
+coverage/local-backup.png                      dominant=#141D17 (2216580 px, 85.5%) dark_token=True  dark_bg_hits=2216580  surface_hits=0  onSurface_hits=51758  light_residue_total=193 meaningful={}
+    light residue detail: {'outline': 193}
+coverage/measurement-editor.png                dominant=#141D17 (2376626 px, 91.7%) dark_token=True  dark_bg_hits=2376626  surface_hits=16  onSurface_hits=13900  light_residue_total=48 meaningful={}
+    light residue detail: {'outline': 48}
+coverage/pregnancy-editor.png                  dominant=#141D17 (1988962 px, 76.7%) dark_token=True  dark_bg_hits=1988962  surface_hits=16  onSurface_hits=22240  light_residue_total=58 meaningful={}
+    light residue detail: {'outline': 58}
+coverage/reminder-settings-custom.png          dominant=#1D2921 (1563629 px, 60.3%) dark_token=True  dark_bg_hits=783374  surface_hits=1563629  onSurface_hits=29336  light_residue_total=44 meaningful={}
+    largest surface component: 364.2 x 246.9 dp @ (24.4, 320.0) dp
+    light residue detail: {'outline': 44}
+coverage/reminder-settings.png                 dominant=#1D2921 (1562780 px, 60.3%) dark_token=True  dark_bg_hits=879811  surface_hits=1562780  onSurface_hits=40944  light_residue_total=120 meaningful={}
+    largest surface component: 364.2 x 289.5 dp @ (24.4, 568.4) dp
+    light residue detail: {'outline': 120}
+coverage/restore-wizard-key.png                dominant=#141D17 (2406564 px, 92.8%) dark_token=True  dark_bg_hits=2406564  surface_hits=1  onSurface_hits=20612  light_residue_total=70 meaningful={}
+    light residue detail: {'outline': 70}
+coverage/restore-wizard.png                    dominant=#141D17 (2266091 px, 87.4%) dark_token=True  dark_bg_hits=2266091  surface_hits=0  onSurface_hits=32967  light_residue_total=142 meaningful={}
+    light residue detail: {'outline': 142}
+coverage/security-settings.png                 dominant=#141D17 (2028172 px, 78.2%) dark_token=True  dark_bg_hits=2028172  surface_hits=37127  onSurface_hits=46965  light_residue_total=221 meaningful={}
+    largest surface component: 70.1 x 45.7 dp @ (25.9, 417.5) dp
+    light residue detail: {'outline': 221}
+coverage/timeline-source-detail.png            dominant=#141D17 (2388738 px, 92.2%) dark_token=True  dark_bg_hits=2388738  surface_hits=0  onSurface_hits=34218  light_residue_total=145 meaningful={}
+    light residue detail: {'outline': 145}
+coverage/timeline.png                          dominant=#141D17 (1216629 px, 46.9%) dark_token=True  dark_bg_hits=1216629  surface_hits=1110634  onSurface_hits=38434  light_residue_total=98 meaningful={}
+    largest surface component: 364.2 x 251.4 dp @ (24.4, 408.4) dp
+    light residue detail: {'outline': 98}
+coverage/trash-empty.png                       dominant=#141D17 (2444504 px, 94.3%) dark_token=True  dark_bg_hits=2444504  surface_hits=41787  onSurface_hits=22003  light_residue_total=79 meaningful={}
+    largest surface component: 150.9 x 45.7 dp @ (187.4, 137.1) dp
+    light residue detail: {'outline': 79}
+coverage/visit-detail.png                      dominant=#141D17 (1232025 px, 47.5%) dark_token=True  dark_bg_hits=1232025  surface_hits=480136  onSurface_hits=17971  light_residue_total=42 meaningful={}
+    largest surface component: 364.2 x 204.2 dp @ (24.4, 321.5) dp
+    light residue detail: {'outline': 42}
+coverage/visit-editor.png                      dominant=#141D17 (2375707 px, 91.7%) dark_token=True  dark_bg_hits=2375707  surface_hits=16  onSurface_hits=13944  light_residue_total=31 meaningful={}
+    light residue detail: {'outline': 31}
+supplementary/01-today.png                     dominant=#141D17 (1023013 px, 39.5%) dark_token=True  dark_bg_hits=1023013  surface_hits=586712  onSurface_hits=17292  light_residue_total=25 meaningful={}
+    largest surface component: 411.4 x 103.6 dp @ (0.0, 810.7) dp
+    light residue detail: {'outline': 25}
+supplementary/02-visits.png                    dominant=#141D17 (1840321 px, 71.0%) dark_token=True  dark_bg_hits=1840321  surface_hits=513617  onSurface_hits=5596  light_residue_total=6 meaningful={}
+    largest surface component: 411.4 x 103.6 dp @ (0.0, 810.7) dp
+    light residue detail: {'outline': 6}
+supplementary/03-records-hub.png               dominant=#1D2921 (1220167 px, 47.1%) dark_token=True  dark_bg_hits=1219081  surface_hits=1220167  onSurface_hits=11970  light_residue_total=34 meaningful={}
+    largest surface component: 411.4 x 103.6 dp @ (0.0, 810.7) dp
+    light residue detail: {'outline': 34}
+supplementary/04-profiles.png                  dominant=#1D2921 (1511732 px, 58.3%) dark_token=True  dark_bg_hits=875962  surface_hits=1511732  onSurface_hits=15159  light_residue_total=22 meaningful={}
+    largest surface component: 411.4 x 169.1 dp @ (0.0, 745.1) dp
+    light residue detail: {'outline': 22}
+supplementary/05-medications.png               dominant=#141D17 (1232414 px, 47.5%) dark_token=True  dark_bg_hits=1232414  surface_hits=1007285  onSurface_hits=35579  light_residue_total=114 meaningful={}
+    largest surface component: 364.2 x 426.7 dp @ (24.4, 312.4) dp
+    light residue detail: {'outline': 114}
+supplementary/06-intakes.png                   dominant=#141D17 (2334357 px, 90.1%) dark_token=True  dark_bg_hits=2334357  surface_hits=25729  onSurface_hits=21446  light_residue_total=97 meaningful={}
+    largest surface component: 94.5 x 45.7 dp @ (129.5, 137.1) dp
+    light residue detail: {'outline': 97}
+supplementary/07-measurements.png              dominant=#141D17 (2154875 px, 83.1%) dark_token=True  dark_bg_hits=2154875  surface_hits=25424  onSurface_hits=9064  light_residue_total=6 meaningful={}
+    largest surface component: 94.5 x 45.7 dp @ (129.5, 201.1) dp
+    light residue detail: {'outline': 6}
+supplementary/08-visit-documents.png           dominant=#141D17 (1279781 px, 49.4%) dark_token=True  dark_bg_hits=1279781  surface_hits=1023747  onSurface_hits=15719  light_residue_total=147939 meaningful={'surface': 147906}
+    largest surface component: 364.2 x 472.4 dp @ (24.4, 419.1) dp
+    light residue detail: {'surface': 147906, 'outline': 33}
+supplementary/09-recovery.png                  dominant=#141D17 (2339429 px, 90.3%) dark_token=True  dark_bg_hits=2339429  surface_hits=1  onSurface_hits=52812  light_residue_total=207 meaningful={}
+    light residue detail: {'outline': 207}
+
+== named screen dark/light comparison
+coverage/timeline.png                          light_dominant=#F7F8F3  dark_dominant=#141D17  dark_bg_px=1216629  dark_surface_px=1110634  onSurface_px=38434  light_residue=98 (meaningful={})
+coverage/reminder-settings.png                 light_dominant=#FFFFFF  dark_dominant=#1D2921  dark_bg_px=879811  dark_surface_px=1562780  onSurface_px=40944  light_residue=120 (meaningful={})
+coverage/security-settings.png                 light_dominant=#F7F8F3  dark_dominant=#141D17  dark_bg_px=2028172  dark_surface_px=37127  onSurface_px=46965  light_residue=221 (meaningful={})
+coverage/local-backup.png                      light_dominant=#F7F8F3  dark_dominant=#141D17  dark_bg_px=2216580  dark_surface_px=0  onSurface_px=51758  light_residue=193 (meaningful={})
+supplementary/01-today.png                     light_dominant=#F7F8F3  dark_dominant=#141D17  dark_bg_px=1023013  dark_surface_px=586712  onSurface_px=17292  light_residue=25 (meaningful={})
+supplementary/02-visits.png                    light_dominant=#F7F8F3  dark_dominant=#141D17  dark_bg_px=1840321  dark_surface_px=513617  onSurface_px=5596  light_residue=6 (meaningful={})

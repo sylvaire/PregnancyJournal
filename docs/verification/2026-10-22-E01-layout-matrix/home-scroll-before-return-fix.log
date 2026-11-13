@@ -1,0 +1,28 @@
+
+cn.yunji.journal.NavigationExperienceTest:
+Error in manageAndEditorReturnToTheirActualParent(cn.yunji.journal.NavigationExperienceTest):
+java.lang.AssertionError: Assert failed: The component with Text + InputText + EditableText contains '今天，慢慢来' (ignoreCase: false) is not displayed!
+	at androidx.compose.ui.test.AssertionsKt.assertIsDisplayed(Assertions.kt:34)
+	at cn.yunji.journal.NavigationExperienceTest.manageAndEditorReturnToTheirActualParent(NavigationExperienceTest.kt:768)
+
+Error in openingAndReturningWithoutChangesDoesNotCreateDraft(cn.yunji.journal.NavigationExperienceTest):
+java.lang.AssertionError: Assert failed: The component with Text + InputText + EditableText contains '今天，慢慢来' (ignoreCase: false) is not displayed!
+	at androidx.compose.ui.test.AssertionsKt.assertIsDisplayed(Assertions.kt:34)
+	at cn.yunji.journal.NavigationExperienceTest.openingAndReturningWithoutChangesDoesNotCreateDraft(NavigationExperienceTest.kt:789)
+
+
+Time: 12.407
+There were 2 failures:
+1) manageAndEditorReturnToTheirActualParent(cn.yunji.journal.NavigationExperienceTest)
+java.lang.AssertionError: Assert failed: The component with Text + InputText + EditableText contains '今天，慢慢来' (ignoreCase: false) is not displayed!
+	at androidx.compose.ui.test.AssertionsKt.assertIsDisplayed(Assertions.kt:34)
+	at cn.yunji.journal.NavigationExperienceTest.manageAndEditorReturnToTheirActualParent(NavigationExperienceTest.kt:768)
+2) openingAndReturningWithoutChangesDoesNotCreateDraft(cn.yunji.journal.NavigationExperienceTest)
+java.lang.AssertionError: Assert failed: The component with Text + InputText + EditableText contains '今天，慢慢来' (ignoreCase: false) is not displayed!
+	at androidx.compose.ui.test.AssertionsKt.assertIsDisplayed(Assertions.kt:34)
+	at cn.yunji.journal.NavigationExperienceTest.openingAndReturningWithoutChangesDoesNotCreateDraft(NavigationExperienceTest.kt:789)
+
+FAILURES!!!
+Tests run: 2,  Failures: 2
+
+

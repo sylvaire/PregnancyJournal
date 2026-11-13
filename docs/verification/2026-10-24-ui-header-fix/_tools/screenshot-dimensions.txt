@@ -1,0 +1,55 @@
+## after (22 files)
+cloud-connection-backup.png 1080x2400
+cloud-connection-cleanup.png 1080x2400
+cloud-connection.png 1080x2400
+custom-reminder-editor.png 1080x2400
+drug-catalog.png 1080x2400
+drug-editor.png 1080x2400
+export-screen-disabled.png 1080x2400
+export-screen.png 1080x2400
+journal-entry-editor.png 1080x2400
+local-backup.png 1080x2400
+measurement-editor.png 1080x2400
+pregnancy-editor.png 1080x2400
+reminder-settings-custom.png 1080x2400
+reminder-settings.png 1080x2400
+restore-wizard-key.png 1080x2400
+restore-wizard.png 1080x2400
+security-settings.png 1080x2400
+timeline-source-detail.png 1080x2400
+timeline.png 1080x2400
+trash-empty.png 1080x2400
+visit-detail.png 1080x2400
+visit-editor.png 1080x2400
+
+## after-supplementary (9 files)
+01-today.png 1080x2400
+02-visits.png 1080x2400
+03-records-hub.png 1080x2400
+04-profiles.png 1080x2400
+05-medications.png 1080x2400
+06-intakes.png 1080x2400
+07-measurements.png 1080x2400
+08-visit-documents.png 1080x2400
+09-recovery.png 1080x2400
+
+## navigation (19 files)
+b04-empty.png 1080x2400
+b05-cover.png 1080x2400
+b05-retained-relink.png 840x698
+b05-zoom.png 1080x1957
+b06-delete-scope.png 840x817
+b06-global-trash.png 1080x2400
+c01-history.png 1080x2400
+c01left-delete-scope.png 840x817
+c01left-history.png 1080x2400
+c01left-photos.png 1080x2400
+c01left-trash.png 1080x2400
+c02-history.png 1080x2400
+c02-home.png 1080x2400
+c03-measurement.png 1080x2400
+c04-journal.png 1080x2400
+c04-timeline.png 1080x2400
+c05-reminder-settings.png 1080x2400
+c05-visit-reminder.png 1080x2400
+d01-cloud-connection.png 1080x2400

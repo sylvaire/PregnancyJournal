@@ -1,0 +1,11 @@
+# D05 云端停机与取消传播
+
+2026-10-21：新增5项JVM（CloudUploadGate4项、归档中取消1项），完整166项JVM/0失败，lint0错误/20警告通过。本轮未运行设备/WorkManager集成或真实服务商，不发布/安装新包。
+
+CloudBackupRunner在读取资源/连接前就占用上传槽，覆盖此前仅检查coordinator.isRunning导致的准备期重复请求窗口。CloudUploadGate暂停后拒绝新请求，取消当前协调器并等待其finally完成；准备阶段尚无客户端的请求在后续bind时被拒绝并取消。恢复中止只能在清理完成后解封。
+
+Runner.pauseForRestore取消唯一WorkManager上传，并关闭准入门等待当前任务；resumeAfterRestoreAbort恢复原调度。CloudBackupController显式取消真正协调器，防止只取消外层协程而runBlocking上传继续。协调器使用取消标记及原子客户端引用，取消时关闭在途WebDavClient，网络错误在取消态重新归为CancellationException，不误报成功。流水线在构建/认证/文件复制/哈希/上传前后传检查点，WebDAV远端与上传器同样检查。
+
+4项Gate验证：准备期唯一准入，暂停触发取消但仍等待清理、暂停后客户端晚绑定拒绝、客户端创建前用户取消不丢失。新增带合成对象的流水线测试在ARCHIVE_BUILDING触发取消，证明未进入上传、工作目录清理、源密文保留。既有TLS关闭在途响应测试及上传/回读测试随全量JVM通过。
+
+这是生产云端停止适配及其原语/流水线验证，尚未由正式恢复入口调用；WorkManager与真实慢网在途协调器停机尚无设备集成证据。提醒停机、恢复后非主设备/凭据/提醒重建、页面覆盖与旧ViewModel清理、恢复UI仍未完成。不得把本次单元测试当作全部后台任务已完成停机验收。

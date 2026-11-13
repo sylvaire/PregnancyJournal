@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generated from raw `am instrument -w -r` output: baseline-cold-ime-3.log -->
+<testsuite name="cn.yunji.journal.test" tests="7" failures="1" errors="0" skipped="0">
+  <testcase classname="cn.yunji.journal.LockEntryMatrixTest" name="t1ColdStartShowsLockScreenAndNoJournalContent"/>
+  <testcase classname="cn.yunji.journal.LockEntryMatrixTest" name="t2ActivityRecreationKeepsLockScreen"/>
+  <testcase classname="cn.yunji.journal.LockEntryMatrixTest" name="t3RotationKeepsLockScreen"/>
+  <testcase classname="cn.yunji.journal.LockEntryMatrixTest" name="t4BackPressCannotRevealJournalContent"/>
+  <testcase classname="cn.yunji.journal.LockEntryMatrixTest" name="t5FailedUnlockAttemptKeepsLockScreen"/>
+  <testcase classname="cn.yunji.journal.LockEntryMatrixTest" name="t6LockingClearsPrivateDocumentPreviewCache"/>
+  <testcase classname="cn.yunji.journal.NavigationExperienceTest" name="scheduledIntakeEditDeleteUndoAndManualHistoryKeepOriginalPlan"><failure message="java.lang.AssertionError: 服药保存未完成：记录数=0；ready=true；busy=false；计划状态=ACTIVE；界面=Printing with useUnmergedTree = &apos;false&apos;">java.lang.AssertionError: 服药保存未完成：记录数=0；ready=true；busy=false；计划状态=ACTIVE；界面=Printing with useUnmergedTree = &apos;false&apos;
+Node #222 at (l=0.0, t=0.0, r=1080.0, b=2400.0)px
+ |-Node #223 at (l=0.0, t=0.0, r=1080.0, b=2400.0)px
+   Shape = &apos;RectangleShape&apos;
+    |-Node #567 at (l=0.0, t=0.0, r=1080.0, b=2400.0)px
+       |-Node #568 at (l=0.0, t=0.0, r=1080.0, b=2400.0)px, Tag: &apos;记录服药&apos;
+         IsContainer = &apos;true&apos;
+         Shape = &apos;RectangleShape&apos;
+          |-Node #591 at (l=0.0, t=296.0, r=1080.0, b=634.0)px
+          | IsTraversalGroup = &apos;true&apos;
+          | Shape = &apos;androidx.compose.foundation.VerticalScrollableClipShape@7dc3377&apos;
+          | VerticalScrollAxisRange = &apos;ScrollAxisRange(value=809.0, maxValue=1406.0, reverseScrolling=false)&apos;
+          | Actions = [ScrollBy, ScrollByOffset]
+          |  |-Node #592 at (l=63.0, t=-481.0, r=479.0, b=-406.0)px
+          |  | Text = &apos;[合成服药测试药品]&apos;
+          |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |-Node #593 at (l=63.0, t=-374.0, r=886.0, b=-329.0)px
+          |  | Text = &apos;[依据：第1版方案。这里只记录实际情况，不提供用药建议。]&apos;
+          |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |-Node #594 at (l=63.0, t=-297.0, r=653.0, b=-234.0)px
+          |  | Text = &apos;[原计划 2026-10-23 08:00 · GMT]&apos;
+          |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |-Node #596 at (l=63.0, t=-181.0, r=273.0, b=-97.0)px
+          |  | Focused = &apos;false&apos;
+          |  | Role = &apos;Checkbox&apos;
+          |  | Selected = &apos;true&apos;
+          |  | Shape = &apos;RoundedCornerShape(topStart = CornerSize(size = 8.0.dp), topEnd = CornerSize(size = 8.0.dp), bottomEnd = CornerSize(size = 8.0.dp), bottomStart = CornerSize(size = 8.0.dp))&apos;
+          |  | Text = &apos;[已服用]&apos;
+          |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+          |  | MergeDescendants = &apos;true&apos;
+          |  |-Node #600 at (l=294.0, t=-181.0, r=462.0, b=-97.0)px
+          |  | Focused = &apos;false&apos;
+          |  | Role = &apos;Checkbox&apos;
+          |  | Selected = &apos;false&apos;
+          |  | Shape = &apos;RoundedCornerShape(topStart = CornerSize(size = 8.0.dp), topEnd = CornerSize(size = 8.0.dp), bottomEnd = CornerSize(size = 8.0.dp), bottomStart = CornerSize(size = 8.0.dp))&apos;
+          |  | Text = &apos;[跳过]&apos;
+          |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+          |  | MergeDescendants = &apos;true&apos;
+          |  |-Node #605 at (l=63.0, t=-44.0, r=1017.0, b=103.0)px
+          |  | Focused = &apos;false&apos;
+          |  | Role = &apos;Button&apos;
+          |  | Shape = &apos;RoundedCornerShape(topStart = CornerSize(size = 4.0.dp), topEnd = CornerSize(size = 4.0.dp), bottomEnd = CornerSize(size = 4.0.dp), bottomStart = CornerSize(size = 4.0.dp))&apos;
+          |  | Text = &apos;[实际服药日期, 2026-10-23]&apos;
+          |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+          |  | MergeDescendants = &apos;true&apos;
+          |  |-Node #611 at (l=63.0, t=135.0, r=1017.0, b=306.0)px, Tag: &apos;intake-actual-time&apos;
+          |  | ContentDataType = &apos;AndroidContentDataType(androidAutofillType=1)&apos;
+          |  | EditableText = &apos;15:21:30&apos;
+          |  | FillableData = &apos;androidx.compose.ui.autofill.AndroidFillableData@a627dd1&apos;
+          |  | Focused = &apos;false&apos;
+          |  | ImeAction = &apos;Default&apos;
+          |  | InputText = &apos;15:21:30&apos;
+          |  | IsEditable = &apos;true&apos;
+          |  | Text = &apos;[实际时间（24小时制）]&apos;
+          |  | TextSelectionRange = &apos;TextRange(0, 0)&apos;
+          |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, InsertTextAtCursor, OnClick, OnFillData, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText, SetTextSubstitution, ShowTextSubstitution]
+          |  | MergeDescendants = &apos;true&apos;
+          |  |-Node #621 at (l=63.0, t=338.0, r=1017.0, b=431.0)px
+          |  | Text = &apos;[用量按所选方案预填，可按实际情况修改；剂量与单位也可同时留空。]&apos;
+          |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |-Node #623 at (l=63.0, t=463.0, r=529.0, b=634.0)px, Tag: &apos;intake-dose&apos;
+          |  | ContentDataType = &apos;AndroidContentDataType(androidAutofillType=1)&apos;
+          |  | EditableText = &apos;0.25&apos;
+          |  | FillableData = &apos;androidx.compose.ui.autofill.AndroidFillableData@eeb7036&apos;
+          |  | Focused = &apos;true&apos;
+          |  | ImeAction = &apos;Default&apos;
+          |  | InputText = &apos;0.25&apos;
+          |  | IsEditable = &apos;true&apos;
+          |  | Text = &apos;[实际剂量（选填）]&apos;
+          |  | TextSelectionRange = &apos;TextRange(4, 4)&apos;
+          |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, InsertTextAtCursor, MagnifierPositionInRoot, OnClick, OnFillData, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText, SetTextSubstitution, ShowTextSubstitution]
+          |  | MergeDescendants = &apos;true&apos;
+          |  |-Node #633 at (l=550.0, t=463.0, r=1017.0, b=634.0)px, Tag: &apos;intake-unit&apos;
+          |  | ContentDataType = &apos;AndroidContentDataType(androidAutofillType=1)&apos;
+          |  | EditableText = &apos;片&apos;
+          |  | FillableData = &apos;androidx.compose.ui.autofill.AndroidFillableData@6336b37&apos;
+          |  | Focused = &apos;false&apos;
+          |  | ImeAction = &apos;Default&apos;
+          |  | InputText = &apos;片&apos;
+          |  | IsEditable = &apos;true&apos;
+          |  | Text = &apos;[单位（选填）]&apos;
+          |  | TextSelectionRange = &apos;TextRange(0, 0)&apos;
+          |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, InsertTextAtCursor, OnClick, OnFillData, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText, SetTextSubstitution, ShowTextSubstitution]
+          |  | MergeDescendants = &apos;true&apos;
+          |  |-Node #643 at (l=63.0, t=666.0, r=1017.0, b=837.0)px
+          |  | ContentDataType = &apos;AndroidContentDataType(androidAutofillType=1)&apos;
+          |  | EditableText = &apos;&apos;
+          |  | FillableData = &apos;androidx.compose.ui.autofill.AndroidFillableData@21998a4&apos;
+          |  | Focused = &apos;false&apos;
+          |  | ImeAction = &apos;Default&apos;
+          |  | InputText = &apos;&apos;
+          |  | IsEditable = &apos;true&apos;
+          |  | Text = &apos;[备注（选填）]&apos;
+          |  | TextSelectionRange = &apos;TextRange(0, 0)&apos;
+          |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, InsertTextAtCursor, OnClick, OnFillData, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText, SetTextSubstitution, ShowTextSubstitution]
+          |  | MergeDescendants = &apos;true&apos;
+          |  |-Node #653 at (l=63.0, t=869.0, r=619.0, b=914.0)px
+          |  | Text = &apos;[实际记录时区：GMT · 返回保留加密草稿]&apos;
+          |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |-Node #654 at (l=63.0, t=946.0, r=1017.0, b=1083.0)px
+          |    Focused = &apos;false&apos;
+          |    Role = &apos;Button&apos;
+          |    Shape = &apos;RoundedCornerShape(topStart = CornerSize(size = 26.0.dp), topEnd = CornerSize(size = 26.0.dp), bottomEnd = CornerSize(size = 26.0.dp), bottomStart = CornerSize(size = 26.0.dp))&apos;
+          |    Text = &apos;[保存服药记录]&apos;
+          |    Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+          |    MergeDescendants = &apos;true&apos;
+          |-Node #572 at (l=0.0, t=0.0, r=1080.0, b=296.0)px
+            IsTraversalGroup = &apos;true&apos;
+             |-Node #573 at (l=0.0, t=128.0, r=1080.0, b=296.0)px
+               Shape = &apos;RectangleShape&apos;
+                |-Node #575 at (l=22.0, t=160.0, r=127.0, b=265.0)px, Tag: &apos;navigate-up&apos;
+                | ContentDescription = &apos;[返回上一级]&apos;
+                | Focused = &apos;false&apos;
+                | Role = &apos;Button&apos;
+                | Shape = &apos;RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))&apos;
+                | Actions = [OnClick, RequestFocus]
+                | MergeDescendants = &apos;true&apos;
+                |-Node #578 at (l=148.0, t=172.0, r=356.0, b=251.0)px
+                   |-Node #579 at (l=148.0, t=172.0, r=356.0, b=251.0)px
+                     Text = &apos;[记录服药]&apos;
+                     Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+	at cn.yunji.journal.NavigationExperienceTest.scheduledIntakeEditDeleteUndoAndManualHistoryKeepOriginalPlan(NavigationExperienceTest.kt:289)
+	... 66 trimmed
+Caused by: androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 10000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at cn.yunji.journal.NavigationExperienceTest.scheduledIntakeEditDeleteUndoAndManualHistoryKeepOriginalPlan(NavigationExperienceTest.kt:283)
+	... 67 more
+</failure></testcase>
+</testsuite>

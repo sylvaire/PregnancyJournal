@@ -1,0 +1,14 @@
+# MIUI/HyperOS blocks activity launches from the instrumentation process
+
+Captured from db logcat -v threadtime filtered to MIUI ActivityStarterImpl and ActivityTaskManager START lines.
+
+## ComponentActivity (first UI class in full-suite run)
+10-23 23:14:19.381  2408  6212 I ActivityTaskManager: START u10 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 xflg=0x4 cmp=cn.yunji.journal/androidx.activity.ComponentActivity} with LAUNCH_MULTIPLE from uid 1010554 from pid 26098 callingPackage cn.yunji.journal (BAL_ALLOW_PERMISSION) result code=102
+
+## MainActivity (single-test probe, app process restarted by instrumentation)
+10-23 23:38:xx  D/ActivityStarterImpl( 2408): MIUILOG- Permission Denied Activity : Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 xflg=0x4 cmp=cn.yunji.journal/.MainActivity } pkg : cn.yunji.journal uid : 1010554 tuid : 1010138
+10-23 23:38:xx  I/ActivityTaskManager( 2408): START u10 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 xflg=0x4 cmp=cn.yunji.journal/.MainActivity} with LAUNCH_MULTIPLE from uid 1010554 from pid 12803 callingPackage cn.yunji.journal (BAL_ALLOW_PERMISSION) result code=102
+
+esult code=102 is a cancelled start; no window is created, so ActivityScenario/Compose rules wait forever and the class never finishes.
+Pre-starting MainActivity from shell (uid 2000, allowed) does not help: m instrument restarts the app process, so the activity launch happens from a background app again and is denied.
+

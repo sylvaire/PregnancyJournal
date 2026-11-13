@@ -1,0 +1,9 @@
+=== readback after (baseline) 2026-10-22 16:00:23 ===
+font_scale=1.0
+night=Night mode: no
+accelerometer_rotation=1
+user_rotation=0
+init=1080x2400 420dpi mMinSizeOfResizeableTaskDp=220 cur=1080x2400 app=1080x2400 rng=1080x1080-2400x2400
+mCurrentRotation=ROTATION_0
+mUserRotationMode=USER_ROTATION_FREE mUserRotation=ROTATION_0 mCameraRotationMode=0 mAllowAllRotations=false
+app_pid=

@@ -1,0 +1,265 @@
+{
+  "runId": "pregnancy-ui-20261017",
+  "updatedAt": "2026-10-22",
+  "fileKey": "qwUxmzTnSJtzppU5eZwHcy",
+  "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy",
+  "pageId": "0:1",
+  "status": "首轮 UI 已精修；已新增 06 · 当前实现同步板（9 屏可编辑复刻，待用户评审）",
+  "screens": [
+    {
+      "id": "12:26",
+      "name": "01 Welcome",
+      "x": 132,
+      "y": 1246,
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=12-26"
+    },
+    {
+      "id": "12:68",
+      "name": "02 CreatePregnancy",
+      "x": 592,
+      "y": 1246,
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=12-68"
+    },
+    {
+      "id": "12:138",
+      "name": "03 Today",
+      "x": 1052,
+      "y": 1246,
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=12-138"
+    },
+    {
+      "id": "12:217",
+      "name": "04 Visits",
+      "x": 1512,
+      "y": 1246,
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=12-217"
+    },
+    {
+      "id": "12:283",
+      "name": "05 VisitDetail",
+      "x": 132,
+      "y": 2446,
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=12-283"
+    },
+    {
+      "id": "12:333",
+      "name": "06 VisitEditor",
+      "x": 592,
+      "y": 2446,
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=12-333"
+    },
+    {
+      "id": "12:409",
+      "name": "07 Documents",
+      "x": 1052,
+      "y": 2446,
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=12-409"
+    },
+    {
+      "id": "12:497",
+      "name": "08 DocumentDetail",
+      "x": 1512,
+      "y": 2446,
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=12-497"
+    },
+    {
+      "id": "14:255",
+      "name": "09 Medication",
+      "x": 132,
+      "y": 3646,
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=14-255"
+    },
+    {
+      "id": "14:329",
+      "name": "10 MedicationEditor",
+      "x": 592,
+      "y": 3646,
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=14-329"
+    },
+    {
+      "id": "14:408",
+      "name": "11 Health",
+      "x": 1052,
+      "y": 3646,
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=14-408"
+    },
+    {
+      "id": "14:485",
+      "name": "12 Timeline",
+      "x": 1512,
+      "y": 3646,
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=14-485"
+    },
+    {
+      "id": "14:564",
+      "name": "13 Settings",
+      "x": 132,
+      "y": 4846,
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=14-564"
+    },
+    {
+      "id": "14:635",
+      "name": "14 Backup",
+      "x": 592,
+      "y": 4846,
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=14-635"
+    },
+    {
+      "id": "14:694",
+      "name": "15 RestorePreview",
+      "x": 1052,
+      "y": 4846,
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=14-694"
+    },
+    {
+      "id": "14:738",
+      "name": "16 BackupError",
+      "x": 1512,
+      "y": 4846,
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=14-738"
+    },
+    {
+      "id": "16:472",
+      "name": "17 EmptyDocuments",
+      "x": 132,
+      "y": 6046,
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=16-472"
+    },
+    {
+      "id": "16:521",
+      "name": "18 ImportProgress",
+      "x": 592,
+      "y": 6046,
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=16-521"
+    },
+    {
+      "id": "16:576",
+      "name": "19 CloudConnect",
+      "x": 1052,
+      "y": 6046,
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=16-576"
+    },
+    {
+      "id": "16:644",
+      "name": "20 RecoveryKey",
+      "x": 1512,
+      "y": 6046,
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=16-644"
+    }
+  ],
+  "components": {
+    "buttonSet": "7:2484",
+    "buttons": [
+      {
+        "id": "7:2462",
+        "name": "Style=Primary"
+      },
+      {
+        "id": "7:2470",
+        "name": "Style=Secondary"
+      },
+      {
+        "id": "7:2477",
+        "name": "Style=Disabled"
+      }
+    ],
+    "field": "7:2485",
+    "row": "7:2496"
+  },
+  "flowStartingPoints": [
+    {
+      "nodeId": "12:26",
+      "name": "首次使用"
+    },
+    {
+      "nodeId": "12:138",
+      "name": "日常记录"
+    },
+    {
+      "nodeId": "14:635",
+      "name": "备份与恢复"
+    }
+  ],
+  "explicitPrototypeLinks": 63,
+  "implementationSync": {
+    "date": "2026-10-22",
+    "checkedAt": "2026-10-24",
+    "boardMissing": true,
+    "boardCheckNote": "2026-10-24 Figma MCP get_metadata 未找到节点 50:581（06 · 当前实现同步板）；页面顶层节点清单中也没有该板。可能已被删除或移动，需用户确认；本轮 UI 对齐改用 20 屏设计稿 + 模拟器实现截图。",
+    "boardNodeId": "50:581",
+    "boardName": "06 · 当前实现（2026-10-22 同步）",
+    "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=50-581",
+    "source": "API36 模拟器实机截图（UiSnapshotTest，9 项），见 verification/2026-10-22-figma-sync/",
+    "manifest": "../verification/2026-10-22-figma-sync/manifest.json",
+    "screens": [
+      { "name": "A1 · 今天（实现）", "id": "50:585" },
+      { "name": "A2 · 产检（实现）", "id": "50:653" },
+      { "name": "A3 · 记录枢纽（实现）", "id": "50:712" },
+      { "name": "A4 · 我的（实现）", "id": "50:812" },
+      { "name": "A5 · 用药方案（实现）", "id": "51:751" },
+      { "name": "A6 · 服药记录（实现）", "id": "51:783" },
+      { "name": "A7 · 健康指标（实现）", "id": "51:822" },
+      { "name": "A8 · 产检资料（实现）", "id": "51:847" },
+      { "name": "A9 · 本地加密备份（实现）", "id": "51:893" }
+    ],
+    "notCaptured": [
+      "云盘连接（含云端清理小节）",
+      "安全设置/锁定页",
+      "导出向导/恢复预览/错误分支",
+      "深色模式、平板、极端字体与横屏独立画板"
+    ],
+    "editableOnly": true
+  },
+  "completed": [
+    "discovery",
+    "foundations",
+    "20-editable-screens",
+    "63-prototype-links",
+    "visual-review",
+    "detail-polish-20261018",
+    "implementation-sync-20261022"
+  ],
+  "pending": [
+    "user-review",
+    "secondary-screens-and-dark-mode",
+    "P0"
+  ],
+  "notes": [
+    "Screens are top-level frames; background boards only label canvas groups.",
+    "Historical scripts are not safe to replay; inspect current canvas and state before editing.",
+    "Button masters now use brand native text properties; imported inner Material button was replaced to fix width constraints. Read detail audit before editing."
+  ],
+  "detailAudit": {
+    "startedAt": "2026-10-17",
+    "completedAt": "2026-10-18",
+    "report": "UI细节检查-2026-10-17.md",
+    "screens": 20,
+    "buttons": 29,
+    "rows": 35,
+    "iconComponents": {
+      "check": "22:576",
+      "plus": "22:579",
+      "file": "22:582",
+      "clock": "22:585",
+      "calendar": "22:588",
+      "shield": "22:591",
+      "pill": "22:594",
+      "scale": "22:597",
+      "restore": "22:600",
+      "chevron": "22:603"
+    },
+    "rowProperties": {
+      "icon": "Leading icon#22:0",
+      "chevron": "Show chevron#22:1"
+    },
+    "buttonLabelProperty": "Label#23:0",
+    "explicitPrototypeLinksVerified": 63,
+    "contrast": {
+      "bodyOnBackground": "11.18",
+      "secondaryOnBackground": "4.87",
+      "button": "6.21",
+      "selectedLabel": "6.21",
+      "secondaryOnWhite": "5.20"
+    }
+  }
+}

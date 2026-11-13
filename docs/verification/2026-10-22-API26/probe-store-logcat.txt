@@ -1,0 +1,7 @@
+--------- beginning of main
+--------- beginning of system
+10-22 08:51:34.227 10499 10517 I Api26PdfProbe: provider-read len=810 identical=true
+10-22 08:51:34.259 10499 10517 I Api26PdfProbe: provider-roundtrip plainSize=810 preview=810
+10-22 08:51:34.283 10499 10517 I Api26PdfProbe: provider-roundtrip pages=1
+10-22 08:51:34.313 10499 10517 I Api26PdfProbe: store-roundtrip source=810 plainSize=810 preview=810
+10-22 08:51:34.318 10499 10517 I Api26PdfProbe: store-roundtrip pages=1

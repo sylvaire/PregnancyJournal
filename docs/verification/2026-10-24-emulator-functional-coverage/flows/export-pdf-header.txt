@@ -1,0 +1,4 @@
+pdf=visit-summary-2026-10-24.pdf
+size=160730 bytes
+header=b'%PDF-1.4'
+has_EOF=True

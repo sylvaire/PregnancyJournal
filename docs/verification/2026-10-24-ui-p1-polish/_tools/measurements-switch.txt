@@ -1,0 +1,32 @@
+== WCAG contrast (Switch states)
+  before: checked thumb(onPrimary white) / track(primary)                fg=#FFFFFF bg=#356B53 ratio=6.21
+  before: unchecked thumb(outline) / track(surfaceContainerHighest=outline) fg=#DDE4DA bg=#DDE4DA ratio=1.00
+  before: unchecked track(outline) / page background                     fg=#DDE4DA bg=#F7F8F3 ratio=1.22
+  after:  checked thumb(white) / track(primary)                          fg=#FFFFFF bg=#356B53 ratio=6.21
+  after:  unchecked thumb(muted) / track(soft)                           fg=#5F7166 bg=#E7F0E6 ratio=4.46
+  after:  unchecked thumb(muted) / border(outline)                       fg=#5F7166 bg=#DDE4DA ratio=4.01
+  after:  unchecked track(soft) / page background                        fg=#E7F0E6 bg=#F7F8F3 ratio=1.09
+  after:  checked track(primary) / page background                       fg=#356B53 bg=#F7F8F3 ratio=5.82
+  after:  border(outline) / page background                              fg=#DDE4DA bg=#F7F8F3 ratio=1.22
+
+== before / export-screen.png : 2 switch track(s)
+  track=#356B53  51.43 x 32.00 dp @ (335.62, 354.67)  track_px=6579  inner={'white': 2981, 'muted': 0, 'soft': 0, 'outline': 0, 'primary': 6579}
+  track=#DDE4DA  52.19 x 32.00 dp @ (335.24, 416.76)  track_px=9896  inner={'white': 0, 'muted': 0, 'soft': 0, 'outline': 9896, 'primary': 0}
+
+== after / export-screen.png : 2 switch track(s)
+  track=#356B53  52.19 x 32.00 dp @ (335.24, 354.67)  track_px=6630  inner={'white': 2981, 'muted': 0, 'soft': 0, 'outline': 0, 'primary': 6630}
+  track=#E7F0E6  47.62 x 27.43 dp @ (337.52, 419.05)  track_px=6335  inner={'white': 0, 'muted': 1300, 'soft': 6335, 'outline': 644, 'primary': 0}
+
+== before / cloud-connection-backup.png : 1 switch track(s)
+  track=#356B53  51.43 x 31.62 dp @ (335.62, 858.29)  track_px=6541  inner={'white': 2982, 'muted': 0, 'soft': 0, 'outline': 0, 'primary': 6541}
+
+== after / cloud-connection-backup.png : 1 switch track(s)
+  track=#356B53  52.19 x 31.62 dp @ (335.24, 858.29)  track_px=6586  inner={'white': 2982, 'muted': 0, 'soft': 0, 'outline': 0, 'primary': 6586}
+
+== before / reminder-settings-custom.png : 2 switch track(s)
+  track=#356B53  51.43 x 32.00 dp @ (315.43, 383.62)  track_px=6582  inner={'white': 4226, 'muted': 0, 'soft': 0, 'outline': 0, 'primary': 6582}
+  track=#356B53  51.43 x 32.00 dp @ (315.43, 443.81)  track_px=6579  inner={'white': 4223, 'muted': 0, 'soft': 0, 'outline': 0, 'primary': 6579}
+
+== after / reminder-settings-custom.png : 2 switch track(s)
+  track=#356B53  51.81 x 32.00 dp @ (315.43, 383.62)  track_px=6633  inner={'white': 4280, 'muted': 0, 'soft': 0, 'outline': 0, 'primary': 6633}
+  track=#356B53  51.81 x 32.00 dp @ (315.43, 443.81)  track_px=6630  inner={'white': 4277, 'muted': 0, 'soft': 0, 'outline': 0, 'primary': 6630}

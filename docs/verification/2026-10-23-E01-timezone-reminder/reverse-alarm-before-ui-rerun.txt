@@ -1,0 +1,22 @@
+      RTC_WAKEUP #31: Alarm{ff4366e type 0 origWhen 1792929600000 whenElapsed 212409253 cn.yunji.journal}
+>       tag=*walarm*:cn.yunji.journal.REMINDER_ALARM
+        type=RTC_WAKEUP origWhen=2026-10-25 12:00:00.000 window=+1h0m0s0ms repeatInterval=0 count=0 flags=0x20
+        policyWhenElapsed: requester=+2d1h50m52s296ms app_standby=-5s396ms device_idle=-- battery_saver=-5s396ms
+        whenElapsed=+2d1h50m52s296ms maxWhenElapsed=+2d2h50m52s296ms
+          Snapshot:
+>           type=RTC_WAKEUP tag=*walarm*:cn.yunji.journal.REMINDER_ALARM 
+            policyWhenElapsed: requester=+1d17h50m52s296ms app_standby=-27s330ms device_idle=-- battery_saver=-6s841ms
+        #2: Reason=alarm_cancelled elapsed=-27s455ms rtc=2026-10-23 10:08:40.249
+          Snapshot:
+>           type=RTC_WAKEUP tag=*walarm*:cn.yunji.journal.REMINDER_ALARM 
+            policyWhenElapsed: requester=+1d17h50m52s296ms app_standby=-27s811ms device_idle=-- battery_saver=-27s811ms
+        #3: Reason=alarm_cancelled elapsed=-9h2m19s527ms rtc=2026-10-23 01:06:48.177
+          Snapshot:
+>           type=RTC_WAKEUP tag=*walarm*:cn.yunji.journal.REMINDER_ALARM 
+            policyWhenElapsed: requester=+2d1h50m52s296ms app_standby=-9h2m29s554ms device_idle=-- battery_saver=-9h2m22s311ms
+        #4: Reason=alarm_cancelled elapsed=-9h2m29s576ms rtc=2026-10-23 01:06:38.128
+          Snapshot:
+>           type=RTC_WAKEUP tag=*walarm*:cn.yunji.journal.REMINDER_ALARM 
+            policyWhenElapsed: requester=+1d17h50m52s296ms app_standby=-9h2m46s128ms device_idle=-- battery_saver=-9h2m30s880ms
+        #5: Reason=alarm_cancelled elapsed=-9h2m46s163ms rtc=2026-10-23 01:06:21.541
+          Snapshot:

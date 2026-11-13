@@ -1,0 +1,8 @@
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\build\outputs\apk\debug\app-debug.apk
+  size=29874168 B
+  mtime=2026-10-24 05:20:59
+  sha256=71D33B655B83CC683101FB4C7B74BA426AB312B9A336CF4BE5198660344E65D9
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\build\outputs\apk\androidTest\debug\app-debug-androidTest.apk
+  size=2932482 B
+  mtime=2026-10-24 04:51:31
+  sha256=673ECA88164BA4D77DECFB06C20C4A59511265739A8CE65BD7E5579B5FA929D8

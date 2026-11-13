@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.LogicalSnapshotTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-19T15:07:09.487Z" hostname="SUN-KDQ5E4QJN34" time="0.078">
+  <properties/>
+  <testcase name="pressureAllowsMissingPulseButRejectsMissingDiastolicAndUnknownKeys" classname="cn.yunji.journal.LogicalSnapshotTest" time="0.017"/>
+  <testcase name="duplicateRecordsAndCrossPregnancyReferencesAreRejected" classname="cn.yunji.journal.LogicalSnapshotTest" time="0.0"/>
+  <testcase name="hostileExponentAndPartialObjectMetadataAreRejected" classname="cn.yunji.journal.LogicalSnapshotTest" time="0.002"/>
+  <testcase name="restoredBatchHistoryIsPreservedButPurgingIsNotACompleteSnapshot" classname="cn.yunji.journal.LogicalSnapshotTest" time="0.001"/>
+  <testcase name="sharedCipherObjectRequiresIdenticalMetadataIncludingThumbnailReferences" classname="cn.yunji.journal.LogicalSnapshotTest" time="0.001"/>
+  <testcase name="purgedMeasurementTombstoneDoesNotRequireErasedValues" classname="cn.yunji.journal.LogicalSnapshotTest" time="0.0"/>
+  <testcase name="dictionaryContainsAllThirteenBusinessListsAndNoDeviceOrDraftState" classname="cn.yunji.journal.LogicalSnapshotTest" time="0.051"/>
+  <testcase name="historicalDrugSnapshotDeletedEntryAndExactDecimalSurviveRoundTrip" classname="cn.yunji.journal.LogicalSnapshotTest" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

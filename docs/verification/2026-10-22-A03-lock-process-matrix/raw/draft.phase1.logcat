@@ -1,0 +1,358 @@
+--------- beginning of main
+10-22 07:43:18.812 11688 11688 W libprocessgroup: A JoinCgroup action in the SystemMemoryProcess profile is used for controller memory in the cgroup v2 hierarchy and will be ignored
+10-22 07:43:18.812 11688 11688 W libprocessgroup: SetCgroup::ExecuteForTask: failed to open /dev/cpuctl/top-app/tasks: Permission denied
+10-22 07:43:18.812 11688 11688 W libprocessgroup: SetCgroup::ExecuteForTask: failed to open /dev/blkio/tasks: Permission denied
+10-22 07:43:18.812 11688 11688 E libprocessgroup: set_timerslack_ns write failed: Operation not permitted
+10-22 07:43:18.853 11687 11687 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-22 07:43:18.855 11687 11687 I AndroidRuntime: Using default boot image
+10-22 07:43:18.855 11687 11687 I AndroidRuntime: Leaving lock profiling enabled
+10-22 07:43:18.857 11687 11687 I app_process: Using CollectorTypeCC GC.
+10-22 07:43:18.895 11687 11687 D nativeloader: InitDefaultPublicLibraries for_preload=1: libandroid.so:libaaudio.so:libamidi.so:libbinder_ndk.so:libc.so:libcamera2ndk.so:libdl.so:libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libicu.so:libicui18n.so:libicuuc.so:libjnigraphics.so:liblog.so:libmediandk.so:libm.so:libnativehelper.so:libnativewindow.so:libOpenMAXAL.so:libOpenSLES.so:libRS.so:libstdc++.so:libsync.so:libvulkan.so:libwebviewchromium_plat_support.so:libz.so
+10-22 07:43:18.901 11687 11687 D nativeloader: Load libicu_jni.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+10-22 07:43:18.901 11687 11687 D app_process: u_setTimeZoneFilesDirectory("/apex/com.android.tzdata/etc/tz/versioned/9/icu") succeeded. 
+10-22 07:43:18.901 11687 11687 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt76l.dat
+10-22 07:43:18.902 11687 11687 D nativeloader: Load libjavacore.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+10-22 07:43:18.903 11687 11687 D nativeloader: Load libopenjdk.so using APEX ns com_android_art for caller /apex/com.android.art/javalib/core-oj.jar: ok
+10-22 07:43:18.904 11687 11687 W app_process: Unexpected CPU variant for x86: x86_64.
+10-22 07:43:18.904 11687 11687 W app_process: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, alderlake, default
+10-22 07:43:18.919 11687 11687 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+10-22 07:43:18.920 11687 11687 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-22 07:43:18.922 11687 11687 I AconfigPackage: android.media.swcodec.flags is mapped to com.android.media.swcodec
+10-22 07:43:18.923 11687 11687 I AconfigPackage: com.google.android.settings.simplemode.flags is mapped to system_ext
+10-22 07:43:18.923 11687 11687 I AconfigPackage: com.google.android.systemui is mapped to system_ext
+10-22 07:43:18.923 11687 11687 I AconfigPackage: com.google.android.apps.nexuslauncher is mapped to system_ext
+10-22 07:43:18.923 11687 11687 I AconfigPackage: com.android.settings.accessibility is mapped to system_ext
+10-22 07:43:18.923 11687 11687 I AconfigPackage: com.android.settings.flags is mapped to system_ext
+10-22 07:43:18.923 11687 11687 I AconfigPackage: com.google.android.apps.miphone.aiai.matchmaker.overview.ui is mapped to system_ext
+10-22 07:43:18.923 11687 11687 I AconfigPackage: com.google.android.settings.flags is mapped to system_ext
+10-22 07:43:18.923 11687 11687 I AconfigPackage: com.android.launcher3 is mapped to system_ext
+10-22 07:43:18.923 11687 11687 I AconfigPackage: com.android.wallpaper is mapped to system_ext
+10-22 07:43:18.923 11687 11687 I AconfigPackage: com.android.settings.media_drm is mapped to system_ext
+10-22 07:43:18.923 11687 11687 I AconfigPackage: com.android.systemui.accessibility.accessibilitymenu is mapped to system_ext
+10-22 07:43:18.923 11687 11687 I AconfigPackage: com.android.settings.keyboard is mapped to system_ext
+10-22 07:43:18.923 11687 11687 I AconfigPackage: com.android.server.policy.feature.flags is mapped to system_ext
+10-22 07:43:18.923 11687 11687 I AconfigPackage: com.android.settings.factory_reset is mapped to system_ext
+10-22 07:43:18.923 11687 11687 I AconfigPackage: com.google.android.haptics.flags is mapped to system_ext
+10-22 07:43:18.923 11687 11687 I AconfigPackage: com.android.permission.flags is mapped to com.android.permission
+10-22 07:43:18.924 11687 11687 I AconfigPackage: com.android.icu is mapped to com.android.i18n
+10-22 07:43:18.924 11687 11687 I AconfigPackage: com.android.appsearch.flags is mapped to com.android.appsearch
+10-22 07:43:18.924 11687 11687 I AconfigPackage: android.uprobestats.mainline.flags is mapped to com.android.uprobestats
+10-22 07:43:18.924 11687 11687 I AconfigPackage: android.provider.flags is mapped to com.android.configinfrastructure
+10-22 07:43:18.924 11687 11687 I AconfigPackage: com.android.server.deviceconfig is mapped to com.android.configinfrastructure
+10-22 07:43:18.924 11687 11687 I AconfigPackage: com.android.nfc.flags is mapped to system
+10-22 07:43:18.925 11687 11687 I AconfigPackage: android.app.admin.flags is mapped to system
+10-22 07:43:18.925 11687 11687 I AconfigPackage: android.database.sqlite is mapped to system
+10-22 07:43:18.925 11687 11687 I AconfigPackage: com.android.providers.calendar is mapped to system
+10-22 07:43:18.925 11687 11687 I AconfigPackage: com.android.server.power.feature.flags is mapped to system
+10-22 07:43:18.925 11687 11687 I AconfigPackage: com.android.media.performance.flags is mapped to system
+10-22 07:43:18.925 11687 11687 I AconfigPackage: android.app.contextualsearch.flags is mapped to system
+10-22 07:43:18.925 11687 11687 I AconfigPackage: android.app.ondeviceintelligence.flags is mapped to system
+10-22 07:43:18.925 11687 11687 I AconfigPackage: com.android.media.projection.flags is mapped to system
+10-22 07:43:18.925 11687 11687 I AconfigPackage: android.companion is mapped to system
+10-22 07:43:18.925 11687 11687 I AconfigPackage: android.service.controls.flags is mapped to system
+10-22 07:43:18.925 11687 11687 I AconfigPackage: com.android.text.flags is mapped to system
+10-22 07:43:18.925 11687 11687 I AconfigPackage: com.android.providers.contactkeys.flags is mapped to system
+10-22 07:43:18.925 11687 11687 I AconfigPackage: com.android.intentresolver is mapped to system
+10-22 07:43:18.925 11687 11687 I AconfigPackage: android.companion.virtualdevice.flags is mapped to system
+10-22 07:43:18.925 11687 11687 I AconfigPackage: android.uprobestats.flags is mapped to system
+10-22 07:43:18.925 11687 11687 I AconfigPackage: com.android.net.thread.platform.flags is mapped to system
+10-22 07:43:18.926 11687 11687 I AconfigPackage: android.view.contentprotection.flags is mapped to system
+10-22 07:43:18.926 11687 11687 I AconfigPackage: com.android.server.dreams is mapped to system
+10-22 07:43:18.926 11687 11687 I AconfigPackage: com.android.graphics.surfaceflinger.flags is mapped to system
+10-22 07:43:18.926 11687 11687 I AconfigPackage: com.android.hardware.input is mapped to system
+10-22 07:43:18.926 11687 11687 I AconfigPackage: android.sdk is mapped to system
+10-22 07:43:18.926 11687 11687 I AconfigPackage: com.android.input.flags is mapped to system
+10-22 07:43:18.926 11687 11687 I AconfigPackage: android.tracing is mapped to system
+10-22 07:43:18.926 11687 11687 I AconfigPackage: com.android.server.biometrics is mapped to system
+10-22 07:43:18.926 11687 11687 I AconfigPackage: android.view.contentcapture.flags is mapped to system
+10-22 07:43:18.926 11687 11687 I AconfigPackage: android.app.job is mapped to system
+10-22 07:43:18.926 11687 11687 I AconfigPackage: android.content.res is mapped to system
+10-22 07:43:18.926 11687 11687 I AconfigPackage: android.net.platform.flags is mapped to system
+10-22 07:43:18.927 11687 11687 I AconfigPackage: com.android.aconfig.flags is mapped to system
+10-22 07:43:18.927 11687 11687 I AconfigPackage: com.android.graphics.flags is mapped to system
+10-22 07:43:18.927 11687 11687 I AconfigPackage: android.server.app is mapped to system
+10-22 07:43:18.927 11687 11687 I AconfigPackage: android.speech.flags is mapped to system
+10-22 07:43:18.927 11687 11687 I AconfigPackage: com.android.server.stats is mapped to system
+10-22 07:43:18.927 11687 11687 I AconfigPackage: android.hardware.biometrics is mapped to system
+10-22 07:43:18.928 11687 11687 I AconfigPackage: android.car.feature is mapped to system
+10-22 07:43:18.928 11687 11687 I AconfigPackage: android.adpf is mapped to system
+10-22 07:43:18.928 11687 11687 I AconfigPackage: android.location.flags is mapped to system
+10-22 07:43:18.928 11687 11687 I AconfigPackage: com.android.settingslib.flags is mapped to system
+10-22 07:43:18.928 11687 11687 I AconfigPackage: com.android.managedprovisioning.flags is mapped to system
+10-22 07:43:18.928 11687 11687 I AconfigPackage: android.app.assist.flags is mapped to system
+10-22 07:43:18.928 11687 11687 I AconfigPackage: com.android.server.net is mapped to system
+10-22 07:43:18.928 11687 11687 I AconfigPackage: com.android.settingslib.widget.flags is mapped to system
+10-22 07:43:18.928 11687 11687 I AconfigPackage: com.android.internal.camera.flags is mapped to system
+10-22 07:43:18.928 11687 11687 I AconfigPackage: com.android.hardware.libsensor.flags is mapped to system
+10-22 07:43:18.928 11687 11687 I AconfigPackage: com.android.internal.jank is mapped to system
+10-22 07:43:18.928 11687 11687 I AconfigPackage: com.android.providers.settings is mapped to system
+10-22 07:43:18.928 11687 11687 I AconfigPackage: android.multiuser is mapped to system
+10-22 07:43:18.928 11687 11687 I AconfigPackage: com.android.server.power.optimization is mapped to system
+10-22 07:43:18.928 11687 11687 I AconfigPackage: com.android.calllogbackup is mapped to system
+10-22 07:43:18.928 11687 11687 I AconfigPackage: com.android.media.flags is mapped to system
+10-22 07:43:18.928 11687 11687 I AconfigPackage: com.android.server.flags is mapped to system
+10-22 07:43:18.928 11687 11687 I AconfigPackage: com.android.graphics.libvulkan.flags is mapped to system
+10-22 07:43:18.928 11687 11687 I AconfigPackage: android.app.appfunctions.flags is mapped to system
+10-22 07:43:18.928 11687 11687 I AconfigPackage: android.app.smartspace.flags is mapped to system
+10-22 07:43:18.928 11687 11687 I AconfigPackage: com.android.providers.contacts.flags is mapped to system
+10-22 07:43:18.928 11687 11687 I AconfigPackage: com.android.shell.flags is mapped to system
+10-22 07:43:18.928 11687 11687 I AconfigPackage: com.android.media.aaudio is mapped to system
+10-22 07:43:18.928 11687 11687 I AconfigPackage: android.hardware.radio is mapped to system
+10-22 07:43:18.928 11687 11687 I AconfigPackage: com.google.wear.services.infra.flags is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: suspend_service.flags is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: android.media.midi is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: com.android.libcore.readonly is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: com.android.settingslib.widget.selectorwithwidgetpreference.flags is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: android.service.notification is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: com.android.systemui.shared is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: android.app.jank is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: android.app.wearable is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: com.android.media.audio is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: android.service.chooser is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: com.android.server.compat is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: com.android.server.alarm is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: com.android.apex.flags is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: android.service.quickaccesswallet is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: android.app.usage is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: com.android.server.accessibility is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: android.app.supervision.flags is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: com.android.server.utils is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: android.chre.flags is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: android.content.flags is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: android.media.codec is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: com.android.internal.os is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: com.android.nfc.nci.flags is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: android.app is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: android.security.keystore2 is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: android.crashrecovery.flags is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: com.android.tradeinmode.flags is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: android.hardware.flags is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: com.android.server.telecom.flags is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: com.android.settingslib.media.flags is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: com.android.server.policy is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: android.media.audiopolicy is mapped to system
+10-22 07:43:18.929 11687 11687 I AconfigPackage: com.android.egg.flags is mapped to system
+10-22 07:43:18.930 11687 11687 I AconfigPackage: com.android.internal.compat.flags is mapped to system
+10-22 07:43:18.930 11687 11687 I AconfigPackage: android.security is mapped to system
+10-22 07:43:18.930 11687 11687 I AconfigPackage: android.service.autofill is mapped to system
+10-22 07:43:18.930 11687 11687 I AconfigPackage: com.example.android.aconfig.demo.flags is mapped to system
+10-22 07:43:18.930 11687 11687 I AconfigPackage: android.view.flags is mapped to system
+10-22 07:43:18.930 11687 11687 I AconfigPackage: android.companion.virtual.flags is mapped to system
+10-22 07:43:18.930 11687 11687 I AconfigPackage: com.android.aconfig_new_storage is mapped to system
+10-22 07:43:18.930 11687 11687 I AconfigPackage: com.android.server.feature.flags is mapped to system
+10-22 07:43:18.930 11687 11687 I AconfigPackage: com.android.systemui is mapped to system
+10-22 07:43:18.930 11687 11687 I AconfigPackage: com.android.server.power.batterysaver is mapped to system
+10-22 07:43:18.930 11687 11687 I AconfigPackage: android.widget.flags is mapped to system
+10-22 07:43:18.930 11687 11687 I AconfigPackage: com.android.media.editing.flags is mapped to system
+10-22 07:43:18.930 11687 11687 I AconfigPackage: com.android.media.codec.flags is mapped to system
+10-22 07:43:18.930 11687 11687 I AconfigPackage: com.android.server.powerstats is mapped to system
+10-22 07:43:18.931 11687 11687 I AconfigPackage: com.android.graphics.egl.flags is mapped to system
+10-22 07:43:18.931 11687 11687 I AconfigPackage: com.android.media.audioserver is mapped to system
+10-22 07:43:18.931 11687 11687 I AconfigPackage: com.android.server.deviceidle is mapped to system
+10-22 07:43:18.931 11687 11687 I AconfigPackage: android.nfc is mapped to system
+10-22 07:43:18.931 11687 11687 I AconfigPackage: android.permission.flags is mapped to system
+10-22 07:43:18.931 11687 11687 I AconfigPackage: android.service.voice.flags is mapped to system
+10-22 07:43:18.931 11687 11687 I AconfigPackage: android.content.pm is mapped to system
+10-22 07:43:18.931 11687 11687 I AconfigPackage: com.android.server.power.hint is mapped to system
+10-22 07:43:18.931 11687 11687 I AconfigPackage: android.os is mapped to system
+10-22 07:43:18.931 11687 11687 I AconfigPackage: android.service.dreams is mapped to system
+10-22 07:43:18.931 11687 11687 I AconfigPackage: com.android.graphics.libgui.flags is mapped to system
+10-22 07:43:18.931 11687 11687 I AconfigPackage: android.hardware.usb.flags is mapped to system
+10-22 07:43:18.931 11687 11687 I AconfigPackage: android.provider is mapped to system
+10-22 07:43:18.931 11687 11687 I AconfigPackage: com.android.server.job is mapped to system
+10-22 07:43:18.931 11687 11687 I AconfigPackage: com.android.internal.foldables.flags is mapped to system
+10-22 07:43:18.932 11687 11687 I AconfigPackage: com.android.internal.telephony.flags is mapped to system
+10-22 07:43:18.932 11687 11687 I AconfigPackage: android.webkit is mapped to system
+10-22 07:43:18.932 11687 11687 I AconfigPackage: android.credentials.flags is mapped to system
+10-22 07:43:18.932 11687 11687 I AconfigPackage: com.android.server.display.feature.flags is mapped to system
+10-22 07:43:18.932 11687 11687 I AconfigPackage: com.android.server.notification is mapped to system
+10-22 07:43:18.932 11687 11687 I AconfigPackage: android.appwidget.flags is mapped to system
+10-22 07:43:18.932 11687 11687 I AconfigPackage: com.android.frameworks.sensorservice.flags is mapped to system
+10-22 07:43:18.932 11687 11687 I AconfigPackage: com.android.printspooler.flags is mapped to system
+10-22 07:43:18.932 11687 11687 I AconfigPackage: com.android.window.flags is mapped to system
+10-22 07:43:18.932 11687 11687 I AconfigPackage: android.adaptiveauth is mapped to system
+10-22 07:43:18.932 11687 11687 I AconfigPackage: android.net.wifi.flags is mapped to system
+10-22 07:43:18.932 11687 11687 I AconfigPackage: android.media.tv.flags is mapped to system
+10-22 07:43:18.932 11687 11687 I AconfigPackage: com.android.server.usb.flags is mapped to system
+10-22 07:43:18.933 11687 11687 I AconfigPackage: android.os.vibrator is mapped to system
+10-22 07:43:18.933 11687 11687 I AconfigPackage: android.hardware.devicestate.feature.flags is mapped to system
+10-22 07:43:18.933 11687 11687 I AconfigPackage: com.android.server.usage is mapped to system
+10-22 07:43:18.933 11687 11687 I AconfigPackage: android.server is mapped to system
+10-22 07:43:18.933 11687 11687 I AconfigPackage: com.android.wm.shell is mapped to system
+10-22 07:43:18.933 11687 11687 I AconfigPackage: android.view.inputmethod is mapped to system
+10-22 07:43:18.933 11687 11687 I AconfigPackage: com.android.graphics.hwui.flags is mapped to system
+10-22 07:43:18.933 11687 11687 I AconfigPackage: com.android.server.backup is mapped to system
+10-22 07:43:18.933 11687 11687 I AconfigPackage: com.android.internal.pm.pkg.component.flags is mapped to system
+10-22 07:43:18.933 11687 11687 I AconfigPackage: android.view.accessibility is mapped to system
+10-22 07:43:18.933 11687 11687 I AconfigPackage: com.google.wear.sdk is mapped to system
+10-22 07:43:18.933 11687 11687 I AconfigPackage: android.media.audio is mapped to system
+10-22 07:43:18.933 11687 11687 I AconfigPackage: com.android.server.am is mapped to system
+10-22 07:43:18.933 11687 11687 I AconfigPackage: com.android.media.playback.flags is mapped to system
+10-22 07:43:18.933 11687 11687 I AconfigPackage: com.android.art.flags is mapped to com.android.art
+10-22 07:43:18.933 11687 11687 I AconfigPackage: com.android.libcore is mapped to com.android.art
+10-22 07:43:18.933 11687 11687 I AconfigPackage: com.android.media.extractor.flags is mapped to com.android.media
+10-22 07:43:18.933 11687 11687 I AconfigPackage: com.android.media.mainline.flags is mapped to com.android.media
+10-22 07:43:18.934 11687 11687 I AconfigPackage: com.android.wifi.flags is mapped to com.android.wifi
+10-22 07:43:18.934 11687 11687 I AconfigPackage: com.android.org.conscrypt.flags is mapped to com.android.conscrypt
+10-22 07:43:18.934 11687 11687 I AconfigPackage: com.android.healthfitness.flags is mapped to com.android.healthfitness
+10-22 07:43:18.934 11687 11687 I AconfigPackage: com.google.android.input.twoshay.flags is mapped to vendor
+10-22 07:43:18.934 11687 11687 I AconfigPackage: libgooglecamerahal.flags is mapped to vendor
+10-22 07:43:18.934 11687 11687 I AconfigPackage: com.android.ipsec.flags is mapped to com.android.ipsec
+10-22 07:43:18.934 11687 11687 I AconfigPackage: com.android.nfc.module.flags is mapped to com.android.nfcservices
+10-22 07:43:18.935 11687 11687 I AconfigPackage: com.android.adservices.ondevicepersonalization.flags is mapped to com.android.ondevicepersonalization
+10-22 07:43:18.935 11687 11687 I AconfigPackage: com.android.bluetooth.flags is mapped to com.android.bt
+10-22 07:43:18.935 11687 11687 I AconfigPackage: com.android.devicelock.flags is mapped to com.android.devicelock
+10-22 07:43:18.935 11687 11687 I AconfigPackage: android.os.profiling is mapped to com.android.profiling
+10-22 07:43:18.935 11687 11687 I AconfigPackage: com.android.os.statsd.flags is mapped to com.android.os.statsd
+10-22 07:43:18.935 11687 11687 I AconfigPackage: com.android.cellbroadcastreceiver.flags is mapped to com.android.cellbroadcast
+10-22 07:43:18.936 11687 11687 I AconfigPackage: com.android.adservices.flags is mapped to com.android.adservices
+10-22 07:43:18.936 11687 11687 I AconfigPackage: com.android.sdksandbox.flags is mapped to com.android.adservices
+10-22 07:43:18.936 11687 11687 I AconfigPackage: com.android.uwb.flags is mapped to com.android.uwb
+10-22 07:43:18.936 11687 11687 I AconfigPackage: com.android.ranging.flags is mapped to com.android.uwb
+10-22 07:43:18.936 11687 11687 I AconfigPackage: android.graphics.pdf.flags is mapped to com.android.mediaprovider
+10-22 07:43:18.936 11687 11687 I AconfigPackage: com.android.providers.media.flags is mapped to com.android.mediaprovider
+10-22 07:43:18.936 11687 11687 I AconfigPackage: android.graphics.pdf.flags.readonly is mapped to com.android.mediaprovider
+10-22 07:43:18.936 11687 11687 I AconfigPackage: com.android.net.ct.flags is mapped to com.android.tethering
+10-22 07:43:18.936 11687 11687 I AconfigPackage: com.android.net.flags is mapped to com.android.tethering
+10-22 07:43:18.936 11687 11687 I AconfigPackage: android.net.vcn is mapped to com.android.tethering
+10-22 07:43:18.936 11687 11687 I AconfigPackage: com.android.nearby.flags is mapped to com.android.tethering
+10-22 07:43:18.936 11687 11687 I AconfigPackage: android.net.http is mapped to com.android.tethering
+10-22 07:43:18.936 11687 11687 I AconfigPackage: com.android.net.thread.flags is mapped to com.android.tethering
+10-22 07:43:18.936 11687 11687 I AconfigPackage: com.android.system.virtualmachine.flags is mapped to com.android.virt
+10-22 07:43:18.936 11687 11687 E FeatureFlagsImplExport: android.os.flagging.AconfigStorageReadException: ERROR_PACKAGE_NOT_FOUND: package android.xr cannot be found on the device
+10-22 07:43:18.942 11687 11687 D UiAutomationConnection: Created on user UserHandle{0}
+--------- beginning of system
+10-22 07:43:18.943   678  1051 I ActivityManager: Force stopping cn.yunji.journal appid=10227 user=0: start instr
+10-22 07:43:18.948   678   880 D BackgroundInstallControlService: Package event received: 0
+10-22 07:43:18.948   678  1051 V GrammaticalInflectionUtils: AttributionSource: android.content.AttributionSource@b2705f9e does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+10-22 07:43:18.952   678   880 D BackgroundInstallControlService: Package event received: 0
+10-22 07:43:18.960   471   471 D Zygote  : Forked child process 11698
+10-22 07:43:18.967   678   715 I ActivityManager: Start proc 11698:cn.yunji.journal/u0a227 for added application cn.yunji.journal
+10-22 07:43:18.967   678   715 I ActivityManager: ProcessObserver broadcast disabled
+10-22 07:43:18.988 11698 11698 I n.yunji.journal: Late-enabling -Xcheck:jni
+10-22 07:43:18.998 11698 11698 I n.yunji.journal: Using CollectorTypeCC GC.
+10-22 07:43:18.999 11698 11698 W n.yunji.journal: Unexpected CPU variant for x86: x86_64.
+10-22 07:43:18.999 11698 11698 W n.yunji.journal: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, alderlake, default
+10-22 07:43:19.003   552   573 I adbd    : jdwp connection from 11698
+10-22 07:43:19.031 11698 11698 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+10-22 07:43:19.114 11698 11698 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[cn.yunji.journal]: x86_64, null instrumentation[cn.yunji.journal.test]: null, null
+10-22 07:43:19.117 11698 11698 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+10-22 07:43:19.117 11698 11698 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+10-22 07:43:19.283   678   778 D ActivityManager: freezing 4975 com.android.vending:background
+10-22 07:43:19.416   678   778 D ActivityManager: freezing 4884 com.android.vending
+10-22 07:43:19.423   678   829 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+10-22 07:43:19.424   678   829 D InetDiagMessage: Destroyed 2 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+10-22 07:43:19.424   678   829 D InetDiagMessage: Destroyed live tcp sockets for uids={10145} in 3ms
+10-22 07:43:19.466 11698 11698 D nativeloader: Configuring clns-9 for other apk /system/framework/android.test.runner.jar:/system/framework/android.test.mock.jar:/system/framework/android.test.base.jar:/data/app/~~HNdHKhKObpLY_5Wk90Z2eg==/cn.yunji.journal.test-Ttx2K88nJ6HrZCnxKqzHhg==/base.apk:/data/app/~~I6gkoIWEYcPQSpM-Qhx7YA==/cn.yunji.journal-ltpNGmKyTUEbS_W2xR19yw==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~HNdHKhKObpLY_5Wk90Z2eg==/cn.yunji.journal.test-Ttx2K88nJ6HrZCnxKqzHhg==/lib/x86_64:/data/app/~~I6gkoIWEYcPQSpM-Qhx7YA==/cn.yunji.journal-ltpNGmKyTUEbS_W2xR19yw==/lib/x86_64:/data/app/~~HNdHKhKObpLY_5Wk90Z2eg==/cn.yunji.journal.test-Ttx2K88nJ6HrZCnxKqzHhg==/base.apk!/lib/x86_64:/data/app/~~I6gkoIWEYcPQSpM-Qhx7YA==/cn.yunji.journal-ltpNGmKyTUEbS_W2xR19yw==/base.apk!/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/cn.yunji.journal
+10-22 07:43:19.497 11698 11698 I n.yunji.journal: AssetManager2(0x71b533112a98) locale list changing from [] to [en-US]
+10-22 07:43:19.520 11698 11698 V GraphicsEnvironment: Currently set values for:
+10-22 07:43:19.520 11698 11698 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+10-22 07:43:19.520 11698 11698 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+10-22 07:43:19.520 11698 11698 V GraphicsEnvironment: cn.yunji.journal is not listed in per-application setting
+10-22 07:43:19.520 11698 11698 V GraphicsEnvironment: ANGLE allowlist from config: com.dreamgames.royalmatch com.dts.freefiremax com.dxx.firenow com.gramgames.mergedragons com.ludo.king com.mojang.minecraftpe com.my.defense com.nintendo.zaka com.os.airforce com.playrix.fishdomdd.gplay io.teslatech.callbreak jp.konami.prospia net.peakgames.toonblast
+10-22 07:43:19.520 11698 11698 V GraphicsEnvironment: cn.yunji.journal is not listed in ANGLE allowlist or settings, returning default
+10-22 07:43:19.520 11698 11698 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+10-22 07:43:19.531 11698 11698 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+10-22 07:43:19.540 11698 11698 D nativeloader: Configuring clns-10 for other apk /system/framework/android.test.mock.jar. target_sdk_version=36, uses_libraries=ALL, library_path=/data/app/~~HNdHKhKObpLY_5Wk90Z2eg==/cn.yunji.journal.test-Ttx2K88nJ6HrZCnxKqzHhg==/lib/x86_64:/data/app/~~I6gkoIWEYcPQSpM-Qhx7YA==/cn.yunji.journal-ltpNGmKyTUEbS_W2xR19yw==/lib/x86_64, permitted_path=/data:/mnt/expand
+10-22 07:43:19.550 11698 11698 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+10-22 07:43:19.564 11698 11698 D nativeloader: Configuring clns-11 for other apk /system/framework/android.test.runner.jar. target_sdk_version=36, uses_libraries=ALL, library_path=/data/app/~~HNdHKhKObpLY_5Wk90Z2eg==/cn.yunji.journal.test-Ttx2K88nJ6HrZCnxKqzHhg==/lib/x86_64:/data/app/~~I6gkoIWEYcPQSpM-Qhx7YA==/cn.yunji.journal-ltpNGmKyTUEbS_W2xR19yw==/lib/x86_64, permitted_path=/data:/mnt/expand
+10-22 07:43:19.746   678   778 D ActivityManager: freezing 9581 com.google.android.googlequicksearchbox:search
+10-22 07:43:19.906 11698 11698 I n.yunji.journal: AssetManager2(0x71b53310c058) locale list changing from [] to [en-US]
+10-22 07:43:19.939 11698 11698 I AndroidJUnitRunner: newApplication cn.yunji.journal.PregnancyApplication
+10-22 07:43:20.009 11698 11698 D WM-WrkMgrInitializer: Initializing WorkManager with default configuration.
+10-22 07:43:20.413 11698 11698 D WM-PackageManagerHelper: Skipping component enablement for androidx.work.impl.background.systemjob.SystemJobService
+10-22 07:43:20.413 11698 11698 D WM-Schedulers: Created SystemJobScheduler and enabled SystemJobService
+10-22 07:43:20.537 11698 11712 D WM-ForceStopRunnable: The default process name was not specified.
+10-22 07:43:20.540 11698 11712 D WM-ForceStopRunnable: Performing cleanup operations.
+10-22 07:43:20.615 11698 11712 E ashmem  : Pinning is deprecated since Android Q. Please use trim or other methods.
+10-22 07:43:20.669 11698 11698 I AndroidJUnitRunner: onCreate Bundle[mParcelledData.dataSize=184]
+10-22 07:43:20.673 11698 11698 D AndroidJUnitRunner: Use the raw file system for managing file I/O.
+10-22 07:43:20.676 11698 11712 D WM-SystemJobScheduler: Reconciling jobs
+10-22 07:43:20.711 11698 11712 D WM-ForceStopRunnable: Application was force-stopped, rescheduling.
+10-22 07:43:20.720 11698 11698 V TestEventClient: No service name argument was given (testDiscoveryService, testRunEventService or orchestratorService)
+10-22 07:43:20.721 11698 11713 D AndroidJUnitRunner: onStart is called.
+10-22 07:43:20.767 11698 11712 D WM-SystemJobScheduler: Scheduling work ID 28a9ecaa-498a-44b4-afee-e9f460813c51Job ID 4
+10-22 07:43:20.779 11698 11712 D WM-SystemJobScheduler: Scheduling work ID 0965f353-758e-495f-8dd7-7ebc694738a8Job ID 20
+10-22 07:43:20.846 11698 11698 I Choreographer: Skipped 49 frames!  The application may be doing too much work on its main thread.
+10-22 07:43:20.851 11698 11698 D WM-RescheduleReceiver: Received intent Intent { act=android.intent.action.BOOT_COMPLETED flg=0x9000030 pkg=cn.yunji.journal cmp=cn.yunji.journal/androidx.work.impl.background.systemalarm.RescheduleReceiver (has extras) }
+10-22 07:43:20.853   678  1672 I BroadcastQueue: BOOT_COMPLETED_BROADCAST_COMPLETION_LATENCY_REPORTED action:android.intent.action.BOOT_COMPLETED dispatchLatency:1 completeLatency:1785 dispatchRealLatency:1 completeRealLatency:1785 receiversSize:2 userId:0 userType:android.os.usertype.full.SYSTEM
+10-22 07:43:20.870 11698 11713 I InstrConnection: Could not send broadcast or register receiver (isolatedProcess?)
+10-22 07:43:20.907 11698 11716 W JobInfo : Requested important-while-foreground flag for job21 is ignored and takes no effect
+10-22 07:43:20.908 11698 11716 D WM-SystemJobScheduler: Scheduling work ID f61cfdd8-e772-4a87-80e6-74d97182a75fJob ID 21
+10-22 07:43:20.920 11698 11716 D WM-GreedyScheduler: Starting work for f61cfdd8-e772-4a87-80e6-74d97182a75f
+10-22 07:43:20.934 11698 11698 D WM-SystemJobService: onStartJob for WorkGenerationalId(workSpecId=f61cfdd8-e772-4a87-80e6-74d97182a75f, generation=0)
+10-22 07:43:20.969 11698 11716 W JobInfo : Requested important-while-foreground flag for job22 is ignored and takes no effect
+10-22 07:43:20.969 11698 11716 D WM-SystemJobScheduler: Scheduling work ID ecb4a891-186b-4675-bb62-4b0f17034b71Job ID 22
+10-22 07:43:20.979 11698 11698 D WM-SystemJobService: onStartJob for WorkGenerationalId(workSpecId=ecb4a891-186b-4675-bb62-4b0f17034b71, generation=0)
+10-22 07:43:20.980 11698 11716 D WM-GreedyScheduler: Starting work for ecb4a891-186b-4675-bb62-4b0f17034b71
+10-22 07:43:20.995 11698 11716 W JobInfo : Requested important-while-foreground flag for job23 is ignored and takes no effect
+10-22 07:43:20.995 11698 11716 D WM-SystemJobScheduler: Scheduling work ID 888d2dab-0a85-439d-8284-d3b270412e88Job ID 23
+10-22 07:43:21.008 11698 11698 D WM-SystemJobService: onStartJob for WorkGenerationalId(workSpecId=888d2dab-0a85-439d-8284-d3b270412e88, generation=0)
+10-22 07:43:21.009 11698 11716 D WM-GreedyScheduler: Starting work for 888d2dab-0a85-439d-8284-d3b270412e88
+10-22 07:43:21.019 11698 11713 I TestRunner: run started: 1 tests
+10-22 07:43:21.021 11698 11716 D WM-Processor: Processor cancelling 888d2dab-0a85-439d-8284-d3b270412e88
+10-22 07:43:21.021 11698 11716 D WM-Processor: WorkerWrapper could not be found for 888d2dab-0a85-439d-8284-d3b270412e88
+10-22 07:43:21.026 11698 11713 I TestRunner: started: phase1DraftSurvivesLockedGracefulRestart(cn.yunji.journal.ProcessRecoveryTest)
+10-22 07:43:21.026 11698 11698 D WM-SystemJobService: onStopJob for WorkGenerationalId(workSpecId=888d2dab-0a85-439d-8284-d3b270412e88, generation=0)
+10-22 07:43:21.028 11698 11716 D WM-GreedyScheduler: Cancelling work ID 888d2dab-0a85-439d-8284-d3b270412e88
+10-22 07:43:21.030   678  1672 W JobScheduler: Job didn't exist in JobStore: 6d58587 {androidx.work.systemjobscheduler} #u0a227/23 @androidx.work.systemjobscheduler@cn.yunji.journal/androidx.work.impl.background.systemjob.SystemJobService
+10-22 07:43:21.041 11698 11716 W JobInfo : Requested important-while-foreground flag for job24 is ignored and takes no effect
+10-22 07:43:21.041 11698 11716 D WM-SystemJobScheduler: Scheduling work ID 1c79c73b-0c66-4504-98cf-b407328cad77Job ID 24
+10-22 07:43:21.056 11698 11698 D WM-SystemJobService: onStartJob for WorkGenerationalId(workSpecId=1c79c73b-0c66-4504-98cf-b407328cad77, generation=0)
+10-22 07:43:21.059 11698 11716 D WM-GreedyScheduler: Starting work for 1c79c73b-0c66-4504-98cf-b407328cad77
+10-22 07:43:21.079 11698 11716 D WM-Processor: Processor: processing WorkGenerationalId(workSpecId=f61cfdd8-e772-4a87-80e6-74d97182a75f, generation=0)
+10-22 07:43:21.083 11698 11716 D WM-Processor: Work WorkGenerationalId(workSpecId=f61cfdd8-e772-4a87-80e6-74d97182a75f, generation=0) is already enqueued for processing
+10-22 07:43:21.087 11698 11716 D WM-Processor: Processor: processing WorkGenerationalId(workSpecId=ecb4a891-186b-4675-bb62-4b0f17034b71, generation=0)
+10-22 07:43:21.089 11698 11716 D WM-Processor: Work WorkGenerationalId(workSpecId=ecb4a891-186b-4675-bb62-4b0f17034b71, generation=0) is already enqueued for processing
+10-22 07:43:21.094 11698 11716 W WM-Processor: Didn't find WorkSpec for id WorkGenerationalId(workSpecId=888d2dab-0a85-439d-8284-d3b270412e88, generation=0)
+10-22 07:43:21.097 11698 11716 W WM-Processor: Didn't find WorkSpec for id WorkGenerationalId(workSpecId=888d2dab-0a85-439d-8284-d3b270412e88, generation=0)
+10-22 07:43:21.098 11698 11698 D WM-SystemJobService: 888d2dab-0a85-439d-8284-d3b270412e88 executed on JobScheduler
+10-22 07:43:21.098 11698 11698 D WM-SystemJobService: 888d2dab-0a85-439d-8284-d3b270412e88 executed on JobScheduler
+10-22 07:43:21.134 11698 11716 D WM-StopWorkRunnable: StopWorkRunnable for 888d2dab-0a85-439d-8284-d3b270412e88; Processor.stopWork = false
+10-22 07:43:21.135 11698 11716 D WM-StopWorkRunnable: StopWorkRunnable for 888d2dab-0a85-439d-8284-d3b270412e88; Processor.stopWork = false
+10-22 07:43:21.137 11698 11716 D WM-Processor: Processor: processing WorkGenerationalId(workSpecId=1c79c73b-0c66-4504-98cf-b407328cad77, generation=0)
+10-22 07:43:21.140 11698 11716 D WM-Processor: Work WorkGenerationalId(workSpecId=1c79c73b-0c66-4504-98cf-b407328cad77, generation=0) is already enqueued for processing
+10-22 07:43:21.163 11698 11698 D WM-WorkerWrapper: Starting work for cn.yunji.journal.data.ImportWorker
+10-22 07:43:21.167 11698 11716 D WM-GreedyScheduler: Cancelling work ID 888d2dab-0a85-439d-8284-d3b270412e88
+10-22 07:43:21.175 11698 11716 D WM-GreedyScheduler: Cancelling work ID 888d2dab-0a85-439d-8284-d3b270412e88
+10-22 07:43:21.178 11698 11698 D WM-WorkerWrapper: Starting work for cn.yunji.journal.data.TrashWorker
+10-22 07:43:21.195 11698 11698 D WM-WorkerWrapper: Starting work for cn.yunji.journal.data.ReminderWorker
+10-22 07:43:21.200 11698 11716 D WM-PackageManagerHelper: Skipping component enablement for androidx.work.impl.background.systemalarm.RescheduleReceiver
+10-22 07:43:21.347 11698 11722 D nativeloader: Load /data/app/~~I6gkoIWEYcPQSpM-Qhx7YA==/cn.yunji.journal-ltpNGmKyTUEbS_W2xR19yw==/base.apk!/lib/x86_64/libsqlcipher.so using class loader ns clns-9 (caller=/data/app/~~I6gkoIWEYcPQSpM-Qhx7YA==/cn.yunji.journal-ltpNGmKyTUEbS_W2xR19yw==/base.apk!classes10.dex): ok
+10-22 07:43:21.712 11698 11724 I SQLiteConnection: Database keying operation returned:0
+10-22 07:43:21.712 11698 11722 I SQLiteConnection: Database keying operation returned:0
+10-22 07:43:22.156 11698 11722 I SQLiteConnection: Database keying operation returned:0
+10-22 07:43:22.166 11698 11724 I SQLiteConnection: Database keying operation returned:0
+10-22 07:43:22.457 11698 11721 I SQLiteConnection: Database keying operation returned:0
+10-22 07:43:22.759 11698 11716 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=1c79c73b-0c66-4504-98cf-b407328cad77, tags={ cn.yunji.journal.data.ReminderWorker } ]
+10-22 07:43:22.761 11698 11698 D WM-Processor: Processor 1c79c73b-0c66-4504-98cf-b407328cad77 executed; reschedule = false
+10-22 07:43:22.761 11698 11698 D WM-SystemJobService: 1c79c73b-0c66-4504-98cf-b407328cad77 executed on JobScheduler
+10-22 07:43:22.767 11698 11716 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=ecb4a891-186b-4675-bb62-4b0f17034b71, tags={ cn.yunji.journal.data.TrashWorker } ]
+10-22 07:43:22.768 11698 11698 D WM-Processor: Processor ecb4a891-186b-4675-bb62-4b0f17034b71 executed; reschedule = false
+10-22 07:43:22.768 11698 11698 D WM-SystemJobService: ecb4a891-186b-4675-bb62-4b0f17034b71 executed on JobScheduler
+10-22 07:43:22.773 11698 11716 D WM-GreedyScheduler: Cancelling work ID 1c79c73b-0c66-4504-98cf-b407328cad77
+10-22 07:43:22.778 11698 11716 D WM-GreedyScheduler: Cancelling work ID ecb4a891-186b-4675-bb62-4b0f17034b71
+10-22 07:43:22.782 11698 11716 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=f61cfdd8-e772-4a87-80e6-74d97182a75f, tags={ cn.yunji.journal.data.ImportWorker } ]
+10-22 07:43:22.784 11698 11698 D WM-Processor: Processor f61cfdd8-e772-4a87-80e6-74d97182a75f executed; reschedule = false
+10-22 07:43:22.784 11698 11698 D WM-SystemJobService: f61cfdd8-e772-4a87-80e6-74d97182a75f executed on JobScheduler
+10-22 07:43:22.791 11698 11716 D WM-GreedyScheduler: Cancelling work ID f61cfdd8-e772-4a87-80e6-74d97182a75f
+10-22 07:43:24.042 11698 11713 I TestRunner: finished: phase1DraftSurvivesLockedGracefulRestart(cn.yunji.journal.ProcessRecoveryTest)
+10-22 07:43:24.047 11698 11713 I TestRunner: run finished: 1 tests, 0 failed, 0 ignored
+10-22 07:43:24.055   678  1672 I ActivityManager: Force stopping cn.yunji.journal appid=10227 user=0: finished inst
+10-22 07:43:24.057 11687 11687 I app_process: System.exit called, status: 0
+10-22 07:43:24.057 11687 11687 I AndroidRuntime: VM exiting with result code 0.
+10-22 07:43:24.065   678  1672 E ActivityManager: Unable to freeze binder for 11698: -11
+10-22 07:43:24.071   678  1672 I ActivityManager: Killing 11698:cn.yunji.journal/u0a227 (adj 0): stop cn.yunji.journal due to finished inst
+10-22 07:43:24.080   678  1672 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:24.080   678  1672 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:24.080   678  1672 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:24.081   678   829 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+10-22 07:43:24.081   678   829 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+10-22 07:43:24.081   678   829 D InetDiagMessage: Destroyed live tcp sockets for uids={10227} in 4ms
+10-22 07:43:24.082   678   829 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+10-22 07:43:24.082   678   829 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+10-22 07:43:24.082   678   829 D InetDiagMessage: Destroyed live tcp sockets for uids={20227} in 0ms
+10-22 07:43:24.090   552   552 I adbd    : Remote process closed the socket (on MSG_PEEK)
+10-22 07:43:24.091   471   471 I Zygote  : Process 11698 exited due to signal 9 (Killed)
+10-22 07:43:24.093   678   716 I libprocessgroup: Removed cgroup /sys/fs/cgroup/apps/uid_10227/pid_11698
+10-22 07:43:24.096   678  1676 V ActivityManager: Got obituary of 11698:cn.yunji.journal

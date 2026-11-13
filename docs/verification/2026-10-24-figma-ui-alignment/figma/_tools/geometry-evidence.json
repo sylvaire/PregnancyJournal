@@ -1,0 +1,39 @@
+{
+  "welcomePrimaryButton": {
+    "topInsetDp": 16.0,
+    "fullWidthPx": 722,
+    "fullWidthDp": 361.0,
+    "row0WidthPx": 628,
+    "radiusDpIfCircleApprox": 16.0,
+    "rows": 104,
+    "heightDp": 52.0
+  },
+  "welcomeSecondaryButton": {
+    "topInsetDp": 16.0,
+    "fullWidthPx": 722,
+    "fullWidthDp": 361.0,
+    "row0WidthPx": 628,
+    "radiusDpIfCircleApprox": 16.0,
+    "rows": 104,
+    "heightDp": 52.0
+  },
+  "welcomeRecordRow": {
+    "whiteRunsAtX400": []
+  },
+  "todaySurfaceRunsAtX20Dp_plus40px": [],
+  "todaySoftRunsAtX400": [
+    {
+      "yDp": 130.0,
+      "hDp": 88.5
+    }
+  ],
+  "healthSelectedTab": {
+    "topInsetDp": 8.5,
+    "fullWidthPx": 128,
+    "fullWidthDp": 64.0,
+    "row0WidthPx": 83,
+    "radiusDpIfCircleApprox": 8.5,
+    "rows": 96,
+    "heightDp": 48.0
+  }
+}

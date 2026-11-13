@@ -1,0 +1,1542 @@
+{
+  "01-Welcome.png": {
+    "size": [
+      824,
+      1830
+    ],
+    "pixels": 1507920,
+    "distinctColors": 885,
+    "exactTokenPixelCounts": {
+      "color/bg": 673924,
+      "color/surface": 179125,
+      "color/ink": 12197,
+      "color/muted": 3666,
+      "color/primary": 90857,
+      "color/soft": 513509
+    },
+    "nearTokenColors": {
+      "color/line": [
+        {
+          "rgb": "#DCE8DD",
+          "px": 256,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#DCE8DC",
+          "px": 75,
+          "dist": 4.58
+        }
+      ],
+      "color/bg": [
+        {
+          "rgb": "#F5F6F5",
+          "px": 177,
+          "dist": 3.46
+        }
+      ],
+      "color/soft": [
+        {
+          "rgb": "#E6ECE9",
+          "px": 169,
+          "dist": 5.1
+        }
+      ],
+      "color/surface": [
+        {
+          "rgb": "#FEFEFE",
+          "px": 114,
+          "dist": 1.73
+        }
+      ]
+    }
+  },
+  "02-CreatePregnancy.png": {
+    "size": [
+      824,
+      1830
+    ],
+    "pixels": 1507920,
+    "distinctColors": 881,
+    "exactTokenPixelCounts": {
+      "color/bg": 1071766,
+      "color/surface": 1606,
+      "color/ink": 20809,
+      "color/muted": 4984,
+      "color/primary": 73556,
+      "color/soft": 269607
+    },
+    "nearTokenColors": {
+      "color/line": [
+        {
+          "rgb": "#DCE1DB",
+          "px": 629,
+          "dist": 3.32
+        },
+        {
+          "rgb": "#DCE1DA",
+          "px": 318,
+          "dist": 3.16
+        },
+        {
+          "rgb": "#DDE0DB",
+          "px": 266,
+          "dist": 4.12
+        },
+        {
+          "rgb": "#DDE1DA",
+          "px": 151,
+          "dist": 3.0
+        },
+        {
+          "rgb": "#DDE1DB",
+          "px": 86,
+          "dist": 3.16
+        },
+        {
+          "rgb": "#DCE0DB",
+          "px": 78,
+          "dist": 4.24
+        }
+      ],
+      "color/soft": [
+        {
+          "rgb": "#EAECE7",
+          "px": 328,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#E6ECE9",
+          "px": 170,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#EAEDE6",
+          "px": 79,
+          "dist": 4.24
+        }
+      ]
+    }
+  },
+  "03-Today.png": {
+    "size": [
+      824,
+      1830
+    ],
+    "pixels": 1507920,
+    "distinctColors": 925,
+    "exactTokenPixelCounts": {
+      "color/bg": 644918,
+      "color/surface": 509768,
+      "color/ink": 17963,
+      "color/muted": 5741,
+      "color/primary": 16148,
+      "color/soft": 271326,
+      "color/line": 4176
+    },
+    "nearTokenColors": {
+      "color/surface": [
+        {
+          "rgb": "#FEFEFE",
+          "px": 337,
+          "dist": 1.73
+        },
+        {
+          "rgb": "#FDFDFD",
+          "px": 134,
+          "dist": 3.46
+        },
+        {
+          "rgb": "#FEFEFD",
+          "px": 68,
+          "dist": 2.45
+        }
+      ],
+      "color/bg": [
+        {
+          "rgb": "#F5F6F5",
+          "px": 305,
+          "dist": 3.46
+        },
+        {
+          "rgb": "#F7F9F4",
+          "px": 108,
+          "dist": 1.41
+        },
+        {
+          "rgb": "#F9FAF6",
+          "px": 84,
+          "dist": 4.12
+        },
+        {
+          "rgb": "#F7FAF5",
+          "px": 84,
+          "dist": 2.83
+        },
+        {
+          "rgb": "#F8F9F5",
+          "px": 84,
+          "dist": 2.45
+        }
+      ],
+      "color/line": [
+        {
+          "rgb": "#DCE1DB",
+          "px": 223,
+          "dist": 3.32
+        },
+        {
+          "rgb": "#DCE1DA",
+          "px": 120,
+          "dist": 3.16
+        },
+        {
+          "rgb": "#DDE0DB",
+          "px": 117,
+          "dist": 4.12
+        },
+        {
+          "rgb": "#DEE7DF",
+          "px": 101,
+          "dist": 5.92
+        },
+        {
+          "rgb": "#DDE1DA",
+          "px": 77,
+          "dist": 3.0
+        },
+        {
+          "rgb": "#DDE1DB",
+          "px": 69,
+          "dist": 3.16
+        },
+        {
+          "rgb": "#DCE8DD",
+          "px": 65,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#DCE0DB",
+          "px": 63,
+          "dist": 4.24
+        }
+      ],
+      "color/soft": [
+        {
+          "rgb": "#EAECE7",
+          "px": 139,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#EBEFE9",
+          "px": 89,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#E6ECE9",
+          "px": 85,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#EAEDE6",
+          "px": 65,
+          "dist": 4.24
+        },
+        {
+          "rgb": "#E5EDEA",
+          "px": 64,
+          "dist": 5.39
+        },
+        {
+          "rgb": "#E6EDEA",
+          "px": 63,
+          "dist": 5.1
+        }
+      ]
+    }
+  },
+  "04-Visits.png": {
+    "size": [
+      824,
+      1830
+    ],
+    "pixels": 1507920,
+    "distinctColors": 842,
+    "exactTokenPixelCounts": {
+      "color/bg": 720784,
+      "color/surface": 617335,
+      "color/ink": 16371,
+      "color/muted": 8709,
+      "color/primary": 92593,
+      "color/soft": 16352,
+      "color/line": 2128
+    },
+    "nearTokenColors": {
+      "color/bg": [
+        {
+          "rgb": "#F5F6F5",
+          "px": 414,
+          "dist": 3.46
+        },
+        {
+          "rgb": "#F2F6F5",
+          "px": 82,
+          "dist": 5.74
+        }
+      ],
+      "color/soft": [
+        {
+          "rgb": "#E6ECE9",
+          "px": 392,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#E5EDEA",
+          "px": 80,
+          "dist": 5.39
+        },
+        {
+          "rgb": "#EAECE7",
+          "px": 69,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#E6EDEA",
+          "px": 62,
+          "dist": 5.1
+        }
+      ],
+      "color/surface": [
+        {
+          "rgb": "#FEFEFE",
+          "px": 127,
+          "dist": 1.73
+        }
+      ],
+      "color/line": [
+        {
+          "rgb": "#DDE0DB",
+          "px": 95,
+          "dist": 4.12
+        },
+        {
+          "rgb": "#DCE1DB",
+          "px": 80,
+          "dist": 3.32
+        },
+        {
+          "rgb": "#DCE1DA",
+          "px": 67,
+          "dist": 3.16
+        }
+      ]
+    }
+  },
+  "05-VisitDetail.png": {
+    "size": [
+      824,
+      1830
+    ],
+    "pixels": 1507920,
+    "distinctColors": 960,
+    "exactTokenPixelCounts": {
+      "color/bg": 851860,
+      "color/surface": 179768,
+      "color/ink": 20702,
+      "color/muted": 6936,
+      "color/primary": 72433,
+      "color/soft": 341746
+    },
+    "nearTokenColors": {
+      "color/line": [
+        {
+          "rgb": "#DDE0DB",
+          "px": 172,
+          "dist": 4.12
+        },
+        {
+          "rgb": "#DCE1DB",
+          "px": 166,
+          "dist": 3.32
+        },
+        {
+          "rgb": "#DCE1DA",
+          "px": 150,
+          "dist": 3.16
+        },
+        {
+          "rgb": "#DDE1DA",
+          "px": 97,
+          "dist": 3.0
+        },
+        {
+          "rgb": "#DDE1DB",
+          "px": 71,
+          "dist": 3.16
+        },
+        {
+          "rgb": "#DCE8DD",
+          "px": 65,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#DADFD9",
+          "px": 63,
+          "dist": 5.92
+        },
+        {
+          "rgb": "#DCE0DB",
+          "px": 62,
+          "dist": 4.24
+        }
+      ],
+      "color/bg": [
+        {
+          "rgb": "#F5F6F5",
+          "px": 164,
+          "dist": 3.46
+        }
+      ],
+      "color/soft": [
+        {
+          "rgb": "#EAECE7",
+          "px": 161,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#E6ECE9",
+          "px": 108,
+          "dist": 5.1
+        }
+      ],
+      "color/surface": [
+        {
+          "rgb": "#FEFEFE",
+          "px": 114,
+          "dist": 1.73
+        }
+      ]
+    }
+  },
+  "06-VisitEditor.png": {
+    "size": [
+      824,
+      1830
+    ],
+    "pixels": 1507920,
+    "distinctColors": 803,
+    "exactTokenPixelCounts": {
+      "color/bg": 1254944,
+      "color/surface": 91823,
+      "color/ink": 18820,
+      "color/muted": 3435,
+      "color/primary": 71674,
+      "color/soft": 6488
+    },
+    "nearTokenColors": {
+      "color/line": [
+        {
+          "rgb": "#DCE1DB",
+          "px": 546,
+          "dist": 3.32
+        },
+        {
+          "rgb": "#DCE1DA",
+          "px": 365,
+          "dist": 3.16
+        },
+        {
+          "rgb": "#DDE0DB",
+          "px": 358,
+          "dist": 4.12
+        },
+        {
+          "rgb": "#DDE1DA",
+          "px": 182,
+          "dist": 3.0
+        },
+        {
+          "rgb": "#DCE0DB",
+          "px": 93,
+          "dist": 4.24
+        },
+        {
+          "rgb": "#DDE1DB",
+          "px": 87,
+          "dist": 3.16
+        }
+      ],
+      "color/soft": [
+        {
+          "rgb": "#EAECE7",
+          "px": 373,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#EAEDE6",
+          "px": 105,
+          "dist": 4.24
+        },
+        {
+          "rgb": "#E6ECE9",
+          "px": 103,
+          "dist": 5.1
+        }
+      ],
+      "color/bg": [
+        {
+          "rgb": "#F5F6F5",
+          "px": 106,
+          "dist": 3.46
+        }
+      ]
+    }
+  },
+  "07-Documents.png": {
+    "size": [
+      824,
+      1830
+    ],
+    "pixels": 1507920,
+    "distinctColors": 937,
+    "exactTokenPixelCounts": {
+      "color/bg": 783229,
+      "color/surface": 545600,
+      "color/ink": 13873,
+      "color/muted": 5561,
+      "color/primary": 85244,
+      "color/soft": 30347,
+      "color/line": 2064
+    },
+    "nearTokenColors": {
+      "color/bg": [
+        {
+          "rgb": "#F5F6F5",
+          "px": 370,
+          "dist": 3.46
+        },
+        {
+          "rgb": "#F7F9F4",
+          "px": 72,
+          "dist": 1.41
+        }
+      ],
+      "color/soft": [
+        {
+          "rgb": "#E6ECE9",
+          "px": 262,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#EAECE7",
+          "px": 174,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#EBEFE9",
+          "px": 118,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#E5EDEA",
+          "px": 96,
+          "dist": 5.39
+        },
+        {
+          "rgb": "#E5ECE9",
+          "px": 92,
+          "dist": 5.39
+        },
+        {
+          "rgb": "#E6EDEA",
+          "px": 90,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#EAEDE6",
+          "px": 67,
+          "dist": 4.24
+        }
+      ],
+      "color/surface": [
+        {
+          "rgb": "#FEFEFE",
+          "px": 241,
+          "dist": 1.73
+        },
+        {
+          "rgb": "#FDFDFD",
+          "px": 120,
+          "dist": 3.46
+        }
+      ],
+      "color/line": [
+        {
+          "rgb": "#DDE0DB",
+          "px": 192,
+          "dist": 4.12
+        },
+        {
+          "rgb": "#DCE1DB",
+          "px": 166,
+          "dist": 3.32
+        },
+        {
+          "rgb": "#DFE6DF",
+          "px": 155,
+          "dist": 5.74
+        },
+        {
+          "rgb": "#DEE7DF",
+          "px": 136,
+          "dist": 5.92
+        },
+        {
+          "rgb": "#DCE1DA",
+          "px": 126,
+          "dist": 3.16
+        },
+        {
+          "rgb": "#DDE1DA",
+          "px": 75,
+          "dist": 3.0
+        },
+        {
+          "rgb": "#DCE0DB",
+          "px": 73,
+          "dist": 4.24
+        },
+        {
+          "rgb": "#DDE1DB",
+          "px": 65,
+          "dist": 3.16
+        }
+      ]
+    }
+  },
+  "08-DocumentDetail.png": {
+    "size": [
+      824,
+      1830
+    ],
+    "pixels": 1507920,
+    "distinctColors": 846,
+    "exactTokenPixelCounts": {
+      "color/bg": 746486,
+      "color/surface": 530259,
+      "color/ink": 15011,
+      "color/muted": 10367,
+      "color/primary": 74398,
+      "color/soft": 93710,
+      "color/line": 1296
+    },
+    "nearTokenColors": {
+      "color/bg": [
+        {
+          "rgb": "#F5F6F5",
+          "px": 515,
+          "dist": 3.46
+        }
+      ],
+      "color/line": [
+        {
+          "rgb": "#DDE0DB",
+          "px": 141,
+          "dist": 4.12
+        },
+        {
+          "rgb": "#DCE1DA",
+          "px": 99,
+          "dist": 3.16
+        },
+        {
+          "rgb": "#DFE6DF",
+          "px": 92,
+          "dist": 5.74
+        },
+        {
+          "rgb": "#DCE1DB",
+          "px": 89,
+          "dist": 3.32
+        },
+        {
+          "rgb": "#DCE8DD",
+          "px": 86,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#DDE1DA",
+          "px": 65,
+          "dist": 3.0
+        },
+        {
+          "rgb": "#DEE7DF",
+          "px": 60,
+          "dist": 5.92
+        }
+      ],
+      "color/soft": [
+        {
+          "rgb": "#E6ECE9",
+          "px": 130,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#EAECE7",
+          "px": 124,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#EBEFE9",
+          "px": 73,
+          "dist": 5.1
+        }
+      ],
+      "color/surface": [
+        {
+          "rgb": "#FEFEFE",
+          "px": 114,
+          "dist": 1.73
+        }
+      ]
+    }
+  },
+  "09-Medication.png": {
+    "size": [
+      824,
+      1830
+    ],
+    "pixels": 1507920,
+    "distinctColors": 919,
+    "exactTokenPixelCounts": {
+      "color/bg": 603957,
+      "color/surface": 651727,
+      "color/ink": 16066,
+      "color/muted": 9646,
+      "color/primary": 87254,
+      "color/soft": 98424,
+      "color/line": 2128
+    },
+    "nearTokenColors": {
+      "color/bg": [
+        {
+          "rgb": "#F5F6F5",
+          "px": 560,
+          "dist": 3.46
+        }
+      ],
+      "color/soft": [
+        {
+          "rgb": "#E6ECE9",
+          "px": 298,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#EAECE7",
+          "px": 99,
+          "dist": 5.1
+        }
+      ],
+      "color/surface": [
+        {
+          "rgb": "#FEFEFE",
+          "px": 184,
+          "dist": 1.73
+        },
+        {
+          "rgb": "#FDFDFD",
+          "px": 78,
+          "dist": 3.46
+        }
+      ],
+      "color/line": [
+        {
+          "rgb": "#DDE0DB",
+          "px": 83,
+          "dist": 4.12
+        },
+        {
+          "rgb": "#DCE1DA",
+          "px": 64,
+          "dist": 3.16
+        }
+      ]
+    }
+  },
+  "10-MedicationEditor.png": {
+    "size": [
+      824,
+      1830
+    ],
+    "pixels": 1507920,
+    "distinctColors": 764,
+    "exactTokenPixelCounts": {
+      "color/bg": 1192916,
+      "color/surface": 1485,
+      "color/ink": 19843,
+      "color/muted": 4320,
+      "color/primary": 70256,
+      "color/soft": 150005
+    },
+    "nearTokenColors": {
+      "color/line": [
+        {
+          "rgb": "#DCE1DB",
+          "px": 612,
+          "dist": 3.32
+        },
+        {
+          "rgb": "#DCE1DA",
+          "px": 441,
+          "dist": 3.16
+        },
+        {
+          "rgb": "#DDE0DB",
+          "px": 293,
+          "dist": 4.12
+        },
+        {
+          "rgb": "#DDE1DA",
+          "px": 153,
+          "dist": 3.0
+        },
+        {
+          "rgb": "#DDE1DB",
+          "px": 114,
+          "dist": 3.16
+        },
+        {
+          "rgb": "#DCE0DB",
+          "px": 101,
+          "dist": 4.24
+        }
+      ],
+      "color/soft": [
+        {
+          "rgb": "#EAECE7",
+          "px": 344,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#EAEDE6",
+          "px": 107,
+          "dist": 4.24
+        },
+        {
+          "rgb": "#E6ECE9",
+          "px": 106,
+          "dist": 5.1
+        }
+      ]
+    }
+  },
+  "11-Health.png": {
+    "size": [
+      824,
+      1830
+    ],
+    "pixels": 1507920,
+    "distinctColors": 807,
+    "exactTokenPixelCounts": {
+      "color/bg": 535588,
+      "color/surface": 802432,
+      "color/ink": 16386,
+      "color/muted": 8059,
+      "color/primary": 85007,
+      "color/soft": 21017,
+      "color/line": 4626
+    },
+    "nearTokenColors": {
+      "color/bg": [
+        {
+          "rgb": "#F5F6F5",
+          "px": 554,
+          "dist": 3.46
+        },
+        {
+          "rgb": "#F3F4F1",
+          "px": 537,
+          "dist": 6.0
+        },
+        {
+          "rgb": "#F2F6F5",
+          "px": 128,
+          "dist": 5.74
+        },
+        {
+          "rgb": "#F2F5F4",
+          "px": 97,
+          "dist": 5.92
+        }
+      ],
+      "color/soft": [
+        {
+          "rgb": "#EAEEE8",
+          "px": 539,
+          "dist": 4.12
+        },
+        {
+          "rgb": "#EAEFE7",
+          "px": 537,
+          "dist": 3.32
+        },
+        {
+          "rgb": "#E6ECE9",
+          "px": 289,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#EAECE7",
+          "px": 105,
+          "dist": 5.1
+        }
+      ],
+      "color/surface": [
+        {
+          "rgb": "#FEFEFE",
+          "px": 178,
+          "dist": 1.73
+        },
+        {
+          "rgb": "#FDFDFD",
+          "px": 88,
+          "dist": 3.46
+        }
+      ],
+      "color/line": [
+        {
+          "rgb": "#DCE1DA",
+          "px": 105,
+          "dist": 3.16
+        },
+        {
+          "rgb": "#DDE0DB",
+          "px": 94,
+          "dist": 4.12
+        },
+        {
+          "rgb": "#DCE1DB",
+          "px": 82,
+          "dist": 3.32
+        },
+        {
+          "rgb": "#DEE7DF",
+          "px": 69,
+          "dist": 5.92
+        }
+      ]
+    }
+  },
+  "12-Timeline.png": {
+    "size": [
+      824,
+      1830
+    ],
+    "pixels": 1507920,
+    "distinctColors": 1038,
+    "exactTokenPixelCounts": {
+      "color/bg": 688660,
+      "color/surface": 436535,
+      "color/ink": 21626,
+      "color/muted": 4876,
+      "color/primary": 84247,
+      "color/soft": 27563,
+      "color/line": 1344,
+      "color/apricot": 201680,
+      "color/amber": 1164
+    },
+    "nearTokenColors": {
+      "color/bg": [
+        {
+          "rgb": "#F5F6F5",
+          "px": 344,
+          "dist": 3.46
+        }
+      ],
+      "color/line": [
+        {
+          "rgb": "#DCE1DB",
+          "px": 291,
+          "dist": 3.32
+        },
+        {
+          "rgb": "#DDE0DB",
+          "px": 112,
+          "dist": 4.12
+        },
+        {
+          "rgb": "#DEE7DF",
+          "px": 84,
+          "dist": 5.92
+        },
+        {
+          "rgb": "#DFE6DF",
+          "px": 81,
+          "dist": 5.74
+        },
+        {
+          "rgb": "#DCE1DA",
+          "px": 80,
+          "dist": 3.16
+        }
+      ],
+      "color/soft": [
+        {
+          "rgb": "#E6ECE9",
+          "px": 240,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#EAECE7",
+          "px": 88,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#E5ECE9",
+          "px": 71,
+          "dist": 5.39
+        },
+        {
+          "rgb": "#E6EDEA",
+          "px": 64,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#EBEFE9",
+          "px": 61,
+          "dist": 5.1
+        }
+      ],
+      "color/surface": [
+        {
+          "rgb": "#FEFEFE",
+          "px": 184,
+          "dist": 1.73
+        },
+        {
+          "rgb": "#FDFDFD",
+          "px": 88,
+          "dist": 3.46
+        }
+      ]
+    }
+  },
+  "13-Settings.png": {
+    "size": [
+      824,
+      1830
+    ],
+    "pixels": 1507920,
+    "distinctColors": 825,
+    "exactTokenPixelCounts": {
+      "color/bg": 613044,
+      "color/surface": 596657,
+      "color/ink": 13979,
+      "color/muted": 7075,
+      "color/primary": 5072,
+      "color/soft": 234963
+    },
+    "nearTokenColors": {
+      "color/bg": [
+        {
+          "rgb": "#F5F6F5",
+          "px": 464,
+          "dist": 3.46
+        },
+        {
+          "rgb": "#F7F9F4",
+          "px": 90,
+          "dist": 1.41
+        },
+        {
+          "rgb": "#F9FAF6",
+          "px": 70,
+          "dist": 4.12
+        },
+        {
+          "rgb": "#F7FAF5",
+          "px": 70,
+          "dist": 2.83
+        },
+        {
+          "rgb": "#F8F9F5",
+          "px": 70,
+          "dist": 2.45
+        }
+      ],
+      "color/surface": [
+        {
+          "rgb": "#FEFEFE",
+          "px": 298,
+          "dist": 1.73
+        },
+        {
+          "rgb": "#FDFDFD",
+          "px": 112,
+          "dist": 3.46
+        },
+        {
+          "rgb": "#FEFEFD",
+          "px": 65,
+          "dist": 2.45
+        },
+        {
+          "rgb": "#FCFDFC",
+          "px": 64,
+          "dist": 4.69
+        }
+      ],
+      "color/line": [
+        {
+          "rgb": "#DCE8DD",
+          "px": 135,
+          "dist": 5.1
+        }
+      ],
+      "color/soft": [
+        {
+          "rgb": "#E6ECE9",
+          "px": 90,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#E6EDEA",
+          "px": 78,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#E5ECE9",
+          "px": 76,
+          "dist": 5.39
+        },
+        {
+          "rgb": "#E5EDEA",
+          "px": 75,
+          "dist": 5.39
+        },
+        {
+          "rgb": "#E9F1E8",
+          "px": 72,
+          "dist": 3.0
+        }
+      ]
+    }
+  },
+  "14-Backup.png": {
+    "size": [
+      824,
+      1830
+    ],
+    "pixels": 1507920,
+    "distinctColors": 958,
+    "exactTokenPixelCounts": {
+      "color/bg": 581643,
+      "color/surface": 365995,
+      "color/ink": 19523,
+      "color/muted": 5645,
+      "color/primary": 76400,
+      "color/soft": 422614
+    },
+    "nearTokenColors": {
+      "color/bg": [
+        {
+          "rgb": "#F5F6F5",
+          "px": 295,
+          "dist": 3.46
+        },
+        {
+          "rgb": "#F7F9F4",
+          "px": 72,
+          "dist": 1.41
+        }
+      ],
+      "color/surface": [
+        {
+          "rgb": "#FEFEFE",
+          "px": 228,
+          "dist": 1.73
+        },
+        {
+          "rgb": "#FDFDFD",
+          "px": 88,
+          "dist": 3.46
+        }
+      ],
+      "color/line": [
+        {
+          "rgb": "#DCE8DD",
+          "px": 218,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#DCE1DB",
+          "px": 81,
+          "dist": 3.32
+        },
+        {
+          "rgb": "#DCE8DC",
+          "px": 63,
+          "dist": 4.58
+        }
+      ],
+      "color/soft": [
+        {
+          "rgb": "#E6ECE9",
+          "px": 123,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#EAECE7",
+          "px": 93,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#E5EDEA",
+          "px": 73,
+          "dist": 5.39
+        },
+        {
+          "rgb": "#E9F1E9",
+          "px": 65,
+          "dist": 3.74
+        },
+        {
+          "rgb": "#E6EDEA",
+          "px": 65,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#E5ECE9",
+          "px": 60,
+          "dist": 5.39
+        }
+      ]
+    }
+  },
+  "15-RestorePreview.png": {
+    "size": [
+      824,
+      1830
+    ],
+    "pixels": 1507920,
+    "distinctColors": 1001,
+    "exactTokenPixelCounts": {
+      "color/bg": 882662,
+      "color/surface": 252364,
+      "color/ink": 30209,
+      "color/muted": 4074,
+      "color/primary": 72723,
+      "color/soft": 83843,
+      "color/apricot": 144349,
+      "color/amber": 1973
+    },
+    "nearTokenColors": {
+      "color/line": [
+        {
+          "rgb": "#DDE0DB",
+          "px": 217,
+          "dist": 4.12
+        },
+        {
+          "rgb": "#DCE1DB",
+          "px": 199,
+          "dist": 3.32
+        },
+        {
+          "rgb": "#DCE1DA",
+          "px": 158,
+          "dist": 3.16
+        },
+        {
+          "rgb": "#DDE1DA",
+          "px": 107,
+          "dist": 3.0
+        },
+        {
+          "rgb": "#DDE1DB",
+          "px": 79,
+          "dist": 3.16
+        },
+        {
+          "rgb": "#DCE8DD",
+          "px": 78,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#DCE0DB",
+          "px": 70,
+          "dist": 4.24
+        }
+      ],
+      "color/soft": [
+        {
+          "rgb": "#EAECE7",
+          "px": 213,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#E6ECE9",
+          "px": 150,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#EAEDE6",
+          "px": 79,
+          "dist": 4.24
+        }
+      ],
+      "color/bg": [
+        {
+          "rgb": "#F5F6F5",
+          "px": 212,
+          "dist": 3.46
+        }
+      ]
+    }
+  },
+  "16-BackupError.png": {
+    "size": [
+      824,
+      1830
+    ],
+    "pixels": 1507920,
+    "distinctColors": 1050,
+    "exactTokenPixelCounts": {
+      "color/bg": 800804,
+      "color/surface": 184800,
+      "color/ink": 23992,
+      "color/muted": 2940,
+      "color/primary": 72639,
+      "color/soft": 82945,
+      "color/apricot": 300050,
+      "color/amber": 5084
+    },
+    "nearTokenColors": {
+      "color/soft": [
+        {
+          "rgb": "#E6ECE9",
+          "px": 142,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#EAECE7",
+          "px": 88,
+          "dist": 5.1
+        }
+      ],
+      "color/line": [
+        {
+          "rgb": "#DCE1DB",
+          "px": 127,
+          "dist": 3.32
+        },
+        {
+          "rgb": "#DDE0DB",
+          "px": 84,
+          "dist": 4.12
+        }
+      ],
+      "color/bg": [
+        {
+          "rgb": "#F5F6F5",
+          "px": 124,
+          "dist": 3.46
+        }
+      ],
+      "color/surface": [
+        {
+          "rgb": "#FEFEFE",
+          "px": 114,
+          "dist": 1.73
+        }
+      ]
+    }
+  },
+  "17-EmptyDocuments.png": {
+    "size": [
+      824,
+      1830
+    ],
+    "pixels": 1507920,
+    "distinctColors": 829,
+    "exactTokenPixelCounts": {
+      "color/bg": 785134,
+      "color/surface": 143312,
+      "color/ink": 17576,
+      "color/muted": 7000,
+      "color/primary": 74082,
+      "color/soft": 454393
+    },
+    "nearTokenColors": {
+      "color/soft": [
+        {
+          "rgb": "#E6ECE9",
+          "px": 140,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#EAECE7",
+          "px": 74,
+          "dist": 5.1
+        }
+      ],
+      "color/line": [
+        {
+          "rgb": "#DDE0DB",
+          "px": 98,
+          "dist": 4.12
+        }
+      ],
+      "color/bg": [
+        {
+          "rgb": "#F5F6F5",
+          "px": 76,
+          "dist": 3.46
+        }
+      ]
+    }
+  },
+  "18-ImportProgress.png": {
+    "size": [
+      824,
+      1830
+    ],
+    "pixels": 1507920,
+    "distinctColors": 875,
+    "exactTokenPixelCounts": {
+      "color/bg": 823249,
+      "color/surface": 277209,
+      "color/ink": 21591,
+      "color/muted": 5662,
+      "color/primary": 10533,
+      "color/soft": 329635,
+      "color/line": 3456
+    },
+    "nearTokenColors": {
+      "color/line": [
+        {
+          "rgb": "#DDE0DB",
+          "px": 193,
+          "dist": 4.12
+        },
+        {
+          "rgb": "#DCE1DB",
+          "px": 174,
+          "dist": 3.32
+        },
+        {
+          "rgb": "#DCE1DA",
+          "px": 160,
+          "dist": 3.16
+        },
+        {
+          "rgb": "#DCE8DD",
+          "px": 103,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#DDE1DA",
+          "px": 91,
+          "dist": 3.0
+        }
+      ],
+      "color/surface": [
+        {
+          "rgb": "#FEFEFE",
+          "px": 171,
+          "dist": 1.73
+        },
+        {
+          "rgb": "#FDFDFD",
+          "px": 66,
+          "dist": 3.46
+        }
+      ],
+      "color/soft": [
+        {
+          "rgb": "#EAECE7",
+          "px": 148,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#E9F1E9",
+          "px": 60,
+          "dist": 3.74
+        }
+      ],
+      "color/bg": [
+        {
+          "rgb": "#F5F6F5",
+          "px": 109,
+          "dist": 3.46
+        }
+      ]
+    }
+  },
+  "19-CloudConnect.png": {
+    "size": [
+      824,
+      1830
+    ],
+    "pixels": 1507920,
+    "distinctColors": 860,
+    "exactTokenPixelCounts": {
+      "color/bg": 1072839,
+      "color/surface": 925,
+      "color/ink": 17410,
+      "color/muted": 6454,
+      "color/primary": 72835,
+      "color/soft": 281474
+    },
+    "nearTokenColors": {
+      "color/line": [
+        {
+          "rgb": "#DCE1DB",
+          "px": 477,
+          "dist": 3.32
+        },
+        {
+          "rgb": "#DCE1DA",
+          "px": 305,
+          "dist": 3.16
+        },
+        {
+          "rgb": "#DDE0DB",
+          "px": 205,
+          "dist": 4.12
+        },
+        {
+          "rgb": "#DDE1DA",
+          "px": 80,
+          "dist": 3.0
+        },
+        {
+          "rgb": "#DDE1DB",
+          "px": 72,
+          "dist": 3.16
+        },
+        {
+          "rgb": "#DCE0DB",
+          "px": 67,
+          "dist": 4.24
+        }
+      ],
+      "color/soft": [
+        {
+          "rgb": "#EAECE7",
+          "px": 221,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#E6ECE9",
+          "px": 149,
+          "dist": 5.1
+        },
+        {
+          "rgb": "#EAEDE6",
+          "px": 84,
+          "dist": 4.24
+        }
+      ]
+    }
+  }
+}

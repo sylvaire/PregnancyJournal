@@ -1,0 +1,26 @@
+== FilterChip occurrences in app/src/main (recursive, expect 0) ==
+none
+
+== JournalTag call sites per file (definition excluded) ==
+DocumentScreen.kt: 2
+IntakeScreens.kt: 5
+MeasurementScreens.kt: 7
+MedicationScreens.kt: 1
+PrenatalScreens.kt: 3
+SecurityScreen.kt: 1
+TimelineScreens.kt: 2
+TrashScreen.kt: 2
+
+== native Button/OutlinedButton left in Recovery/Restore/Export (expect 0) ==
+none
+
+== JournalButton call sites in those three files ==
+RecoveryScreen.kt : 7
+RestoreScreen.kt : 9
+ExportScreen.kt : 3
+
+== fallback: leftover 20dp paddings (only JournalCard inner content padding expected) ==
+app\src\main\java\cn\yunji\journal\core\designsystem\Components.kt:65: Column(Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 16.dp), verticalArrangement = Arrangement.spacedBy(12.dp), content = content)
+
+== ReminderSettings outer padding removed (expect no padding(horizontal = 4.dp)) ==
+removed

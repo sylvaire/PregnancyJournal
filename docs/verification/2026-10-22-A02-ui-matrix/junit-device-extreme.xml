@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="cn.yunji.journal.ExtremeLayoutMatrixTest" tests="8" failures="0" errors="0" skipped="0" time="57.314" timestamp="2026-10-22T06:58:57" hostname="localhost">
+  <properties>
+    <property name="device" value="PJ_API36_16K(AVD) - 16" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="t8SemanticsForTalkBack" classname="cn.yunji.journal.ExtremeLayoutMatrixTest" time="9.11" />
+  <testcase name="t6DocumentsListPreviewAndMetadataForm" classname="cn.yunji.journal.ExtremeLayoutMatrixTest" time="9.684" />
+  <testcase name="t4CreatePregnancyLongFormSaves" classname="cn.yunji.journal.ExtremeLayoutMatrixTest" time="6.507" />
+  <testcase name="t5CreateVisitLongFormSaves" classname="cn.yunji.journal.ExtremeLayoutMatrixTest" time="5.271" />
+  <testcase name="t7JournalEditorLongFormSaves" classname="cn.yunji.journal.ExtremeLayoutMatrixTest" time="7.046" />
+  <testcase name="t2HomeLongListActionsReachable" classname="cn.yunji.journal.ExtremeLayoutMatrixTest" time="5.439" />
+  <testcase name="t1FourRootEntrancesAndBottomBarReachable" classname="cn.yunji.journal.ExtremeLayoutMatrixTest" time="7.37" />
+  <testcase name="t3PregnancyEditorLongFormReachable" classname="cn.yunji.journal.ExtremeLayoutMatrixTest" time="5.566" />
+</testsuite>

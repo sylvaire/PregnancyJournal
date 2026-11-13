@@ -1,0 +1,9 @@
+# Method and install (Xiaomi 11 Ultra)
+
+- User instruction on 2026-10-24 01:02 (Asia/Shanghai): "改用小米11 ultra无线调试" (switch to Xiaomi 11 Ultra wireless debugging).
+- The Xiaomi 14 Pro (shennong) was restored first: am switch-user 0, pm remove-user 12 (isolated test user deleted), owner vault/objects/backup unchanged; it then disappeared from adb (wireless debugging turned off on that device) as expected.
+- Xiaomi 11 Ultra was discovered via mDNS (<adb设备标识>), paired with the code the user provided (`adb pair <局域网地址> <配对码>`), and connected.
+- MIUI 14 initially blocked two operations: `adb install` -> INSTALL_FAILED_USER_RESTRICTED, and `adb shell input` -> SecurityException INJECT_EVENTS. The user enabled 开发者选项 ->「USB安装」and「USB调试（安全设置）」; both operations then worked.
+- App: cn.yunji.journal versionCode 27 / 0.26.0-dev / schema14, fresh install (no prior data) at 01:13:33; first launch COLD 894 ms, no crash.
+- Permissions: `pm grant cn.yunji.journal android.permission.POST_NOTIFICATIONS` (Android 13 runtime permission; granted=true), `appops set ... SCHEDULE_EXACT_ALARM allow`.
+- Input injection, uiautomator dump and screencap (system UI) worked after the two developer options were enabled.

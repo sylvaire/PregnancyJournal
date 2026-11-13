@@ -1,0 +1,13 @@
+
+cn.yunji.journal.MainRestorePickerTest:..
+cn.yunji.journal.FileHandoffTest:.........
+cn.yunji.journal.RestoreUiTest:...
+cn.yunji.journal.RecoveryUiTest:..
+cn.yunji.journal.BackupSystemJourneyTest:..
+cn.yunji.journal.LocalRestoreAccessTest:.......
+
+Time: 50.092
+
+OK (25 tests)
+
+

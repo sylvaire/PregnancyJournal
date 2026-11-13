@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.CloudConnectionControllerTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-22T07:08:29.447Z" hostname="SUN-KDQ5E4QJN34" time="0.079">
+  <properties/>
+  <testcase name="directoryBrowsingCommitsOnlyAfterUseAndNeverRunsWriteProbe" classname="cn.yunji.journal.CloudConnectionControllerTest" time="0.07"/>
+  <testcase name="changingEndpointCannotSendSavedPasswordToProbe" classname="cn.yunji.journal.CloudConnectionControllerTest" time="0.003"/>
+  <testcase name="savingRequiresUnchangedSuccessfulTestAndThenClearsTypedPassword" classname="cn.yunji.journal.CloudConnectionControllerTest" time="0.003"/>
+  <testcase name="leavingCancelsProbeAndClearsUnsavedPasswordWithoutSaving" classname="cn.yunji.journal.CloudConnectionControllerTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

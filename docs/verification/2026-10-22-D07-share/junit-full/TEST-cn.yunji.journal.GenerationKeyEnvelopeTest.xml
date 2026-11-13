@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.GenerationKeyEnvelopeTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-22T07:08:30.399Z" hostname="SUN-KDQ5E4QJN34" time="0.002">
+  <properties/>
+  <testcase name="differentVaultCanBeUnwrappedWithoutChangingDeviceKey" classname="cn.yunji.journal.GenerationKeyEnvelopeTest" time="0.002"/>
+  <testcase name="wrongDeviceGenerationAndTamperingAreRejected" classname="cn.yunji.journal.GenerationKeyEnvelopeTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,41 @@
+      tag=*walarm*:cn.yunji.journal.REMINDER_ALARM
+      type=RTC_WAKEUP origWhen=2026-10-24 03:14:00.000 window=0 exactAllowReason=permission repeatInterval=0 count=0 flags=0x5
+      policyWhenElapsed: requester=+48m59s517ms app_standby=-15s607ms device_idle=-- battery_saver=-15s607ms
+      whenElapsed=+48m59s517ms maxWhenElapsed=+48m59s517ms
+      operation=PendingIntent{d8574a1: PendingIntentRecord{e1e6c6 cn.yunji.journal broadcastIntent}}
+      idle-options=Bundle[{android.pendingIntent.backgroundActivityAllowed=2, android:broadcast.temporaryAppAllowlistReasonCode=302, android:broadcast.temporaryAppAllowlistDuration=10000, android:broadcast.temporaryAppAllowlistReason=, android:broadcast.temporaryAppAllowlistType=0, android:broadcast.flags=8}]
+--
+      tag=*walarm*:cn.yunji.journal.REMINDER_ALARM
+      type=RTC_WAKEUP origWhen=2026-10-24 03:24:00.000 window=0 exactAllowReason=permission repeatInterval=0 count=0 flags=0x5
+      policyWhenElapsed: requester=+58m59s517ms app_standby=-15s602ms device_idle=-- battery_saver=-15s602ms
+      whenElapsed=+58m59s517ms maxWhenElapsed=+58m59s517ms
+      operation=PendingIntent{aa2d9b4: PendingIntentRecord{ae3b9dd cn.yunji.journal broadcastIntent}}
+      idle-options=Bundle[{android.pendingIntent.backgroundActivityAllowed=2, android:broadcast.temporaryAppAllowlistReasonCode=302, android:broadcast.temporaryAppAllowlistDuration=10000, android:broadcast.temporaryAppAllowlistReason=, android:broadcast.temporaryAppAllowlistType=0, android:broadcast.flags=8}]
+--
+      tag=*walarm*:cn.yunji.journal.REMINDER_ALARM
+      type=RTC_WAKEUP origWhen=2026-10-25 03:14:00.000 window=0 exactAllowReason=permission repeatInterval=0 count=0 flags=0x5
+      policyWhenElapsed: requester=+1d0h48m59s517ms app_standby=-15s601ms device_idle=-- battery_saver=-15s601ms
+      whenElapsed=+1d0h48m59s517ms maxWhenElapsed=+1d0h48m59s517ms
+      operation=PendingIntent{ec4423: PendingIntentRecord{76ddd20 cn.yunji.journal broadcastIntent}}
+      idle-options=Bundle[{android.pendingIntent.backgroundActivityAllowed=2, android:broadcast.temporaryAppAllowlistReasonCode=302, android:broadcast.temporaryAppAllowlistDuration=10000, android:broadcast.temporaryAppAllowlistReason=, android:broadcast.temporaryAppAllowlistType=0, android:broadcast.flags=8}]
+--
+      tag=*walarm*:cn.yunji.journal.REMINDER_ALARM
+      type=RTC_WAKEUP origWhen=2026-10-26 03:14:00.000 window=0 exactAllowReason=permission repeatInterval=0 count=0 flags=0x5
+      policyWhenElapsed: requester=+2d0h48m59s517ms app_standby=-15s596ms device_idle=-- battery_saver=-15s596ms
+      whenElapsed=+2d0h48m59s517ms maxWhenElapsed=+2d0h48m59s517ms
+      operation=PendingIntent{531089e: PendingIntentRecord{eb4ff7f cn.yunji.journal broadcastIntent}}
+      idle-options=Bundle[{android.pendingIntent.backgroundActivityAllowed=2, android:broadcast.temporaryAppAllowlistReasonCode=302, android:broadcast.temporaryAppAllowlistDuration=10000, android:broadcast.temporaryAppAllowlistReason=, android:broadcast.temporaryAppAllowlistType=0, android:broadcast.flags=8}]
+--
+      tag=*walarm*:cn.yunji.journal.REMINDER_ALARM
+      type=RTC_WAKEUP origWhen=2026-10-27 03:14:00.000 window=0 exactAllowReason=permission repeatInterval=0 count=0 flags=0x5
+      policyWhenElapsed: requester=+3d0h48m59s517ms app_standby=-15s595ms device_idle=-- battery_saver=-15s595ms
+      whenElapsed=+3d0h48m59s517ms maxWhenElapsed=+3d0h48m59s517ms
+      operation=PendingIntent{a294795: PendingIntentRecord{9a110aa cn.yunji.journal broadcastIntent}}
+      idle-options=Bundle[{android.pendingIntent.backgroundActivityAllowed=2, android:broadcast.temporaryAppAllowlistReasonCode=302, android:broadcast.temporaryAppAllowlistDuration=10000, android:broadcast.temporaryAppAllowlistReason=, android:broadcast.temporaryAppAllowlistType=0, android:broadcast.flags=8}]
+--
+      tag=*walarm*:cn.yunji.journal.REMINDER_ALARM
+      type=RTC_WAKEUP origWhen=2026-10-28 03:14:00.000 window=0 exactAllowReason=permission repeatInterval=0 count=0 flags=0x5
+      policyWhenElapsed: requester=+4d0h48m59s517ms app_standby=-15s594ms device_idle=-- battery_saver=-15s594ms
+      whenElapsed=+4d0h48m59s517ms maxWhenElapsed=+4d0h48m59s517ms
+      operation=PendingIntent{a863038: PendingIntentRecord{123c811 cn.yunji.journal broadcastIntent}}
+Failed to write while dumping service alarm: Broken pipe

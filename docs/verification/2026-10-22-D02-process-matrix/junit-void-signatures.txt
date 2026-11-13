@@ -1,0 +1,38 @@
+Compiled from "D02ProcessMatrixTest.kt"
+public final class cn.yunji.journal.D02ProcessMatrixTest {
+  private final android.content.Context base;
+  private final java.io.File markers;
+  private final java.time.Clock clock;
+  public static final int $stable;
+  public cn.yunji.journal.D02ProcessMatrixTest();
+  public final void dropLockBaseline();
+  private final java.io.File marker(java.lang.String);
+  private final java.lang.String phaseArg();
+  private final java.util.List<java.lang.String> markerText(java.lang.String);
+  private final java.util.List<java.lang.String> hostDrivenLines(java.lang.String);
+  private final java.lang.String field(java.util.List<java.lang.String>, java.lang.String);
+  private final void guard();
+  private final java.lang.String digest(java.io.File);
+  private final cn.yunji.journal.D02ProcessMatrixTest$realBackupRootContext$1 realBackupRootContext();
+  private final cn.yunji.journal.data.BackupExporter configuredExporter(cn.yunji.journal.IsolatedVault, cn.yunji.journal.core.security.VaultMaterial);
+  public final void phase1ExportSelfCheckBlocked();
+  public final void phase2ExportSelfCheckRecovered();
+  public final void phase1ExportDestinationWriteBlocked();
+  public final void phase2TruncatedDestinationIsRejectedAndRetryWorks();
+  public final void phase1VerifyBlocked();
+  public final void phase2VerifyKilledProcessKeepsArchiveAndRetryVerifies();
+  public final void phase1PurgeStarted();
+  public final void phase2PurgingIsNotCompleteAndResumeFinishesIt();
+  public final void phase1OrphanArtifactsCreated();
+  public final void phase2ColdStartCleansBackupRestoreOrphansAndDocumentsExportWorkGap();
+  public static final android.content.Context access$getBase$p(cn.yunji.journal.D02ProcessMatrixTest);
+  public static final void access$guard(cn.yunji.journal.D02ProcessMatrixTest);
+  public static final java.lang.String access$phaseArg(cn.yunji.journal.D02ProcessMatrixTest);
+  public static final cn.yunji.journal.D02ProcessMatrixTest$realBackupRootContext$1 access$realBackupRootContext(cn.yunji.journal.D02ProcessMatrixTest);
+  public static final java.time.Clock access$getClock$p(cn.yunji.journal.D02ProcessMatrixTest);
+  public static final java.io.File access$marker(cn.yunji.journal.D02ProcessMatrixTest, java.lang.String);
+  public static final java.util.List access$hostDrivenLines(cn.yunji.journal.D02ProcessMatrixTest, java.lang.String);
+  public static final java.lang.String access$field(cn.yunji.journal.D02ProcessMatrixTest, java.util.List, java.lang.String);
+  public static final java.lang.String access$digest(cn.yunji.journal.D02ProcessMatrixTest, java.io.File);
+  static {};
+}

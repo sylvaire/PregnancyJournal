@@ -1,0 +1,303 @@
+package cn.yunji.journal
+
+import android.graphics.Bitmap
+import android.graphics.Color
+import android.graphics.pdf.PdfDocument
+import android.graphics.pdf.PdfRenderer
+import android.os.ParcelFileDescriptor
+import android.util.Log
+import androidx.test.core.app.ApplicationProvider
+import cn.yunji.journal.core.export.SummaryBlock
+import cn.yunji.journal.core.export.SummarySection
+import cn.yunji.journal.core.export.VisitSummary
+import cn.yunji.journal.data.SummaryPdfWriter
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
+import org.junit.Test
+import java.io.ByteArrayOutputStream
+import java.io.File
+import java.security.MessageDigest
+
+/**
+ * TEMPORARY probe (Lead, API26 verification): why does PdfRenderer reject some PdfDocument output on
+ * this image while other output opens? Every case also drops a copy under getExternalFilesDir("probe")
+ * so the bytes can be pulled and inspected on the host. Delete after the investigation.
+ */
+class Api26PdfProbeTest {
+    private companion object { const val TAG = "Api26PdfProbe" }
+
+    private val context = ApplicationProvider.getApplicationContext<android.content.Context>()
+    private val dumpDir = File(context.getExternalFilesDir(null), "probe").apply { mkdirs() }
+
+    private fun describe(name: String, bytes: ByteArray) {
+        val sha = MessageDigest.getInstance("SHA-256").digest(bytes).joinToString("") { "%02x".format(it) }
+        val header = bytes.take(8).joinToString(" ") { "%02x".format(it) }
+        Log.i(TAG, "$name len=${bytes.size} sha=$sha header=$header")
+    }
+
+    private fun keep(name: String, bytes: ByteArray): File = File(dumpDir, name).also { it.writeBytes(bytes) }
+
+    private fun openAndRender(name: String, bytes: ByteArray, expectInk: Boolean = true) {
+        describe(name, bytes)
+        val file = keep(name, bytes)
+        ParcelFileDescriptor.open(file, ParcelFileDescriptor.MODE_READ_ONLY).use { descriptor ->
+            PdfRenderer(descriptor).use { renderer ->
+                Log.i(TAG, "$name pages=${renderer.pageCount}")
+                assertTrue("$name must have pages", renderer.pageCount > 0)
+                renderer.openPage(0).use { page ->
+                    val bitmap = Bitmap.createBitmap(
+                        page.width.coerceAtLeast(1), page.height.coerceAtLeast(1), Bitmap.Config.ARGB_8888
+                    )
+                    bitmap.eraseColor(Color.WHITE)
+                    page.render(bitmap, null, null, PdfRenderer.Page.RENDER_MODE_FOR_DISPLAY)
+                    var dark = 0
+                    for (y in 0 until bitmap.height step 7) for (x in 0 until bitmap.width step 7) {
+                        if (bitmap.getPixel(x, y) != Color.WHITE) dark++
+                    }
+                    Log.i(TAG, "$name page0 ${page.width}x${page.height} dark=$dark")
+                    if (expectInk) assertTrue("$name page 0 rendered blank", dark > 0)
+                    bitmap.recycle()
+                }
+            }
+        }
+    }
+
+    private fun blankA4(): ByteArray {
+        val doc = PdfDocument()
+        try {
+            val page = doc.startPage(PdfDocument.PageInfo.Builder(595, 842, 1).create())
+            page.canvas.drawColor(Color.WHITE)
+            doc.finishPage(page)
+            return ByteArrayOutputStream().use { doc.writeTo(it); it.toByteArray() }
+        } finally { doc.close() }
+    }
+
+    private fun blankSmall(): ByteArray {
+        val doc = PdfDocument()
+        try {
+            val page = doc.startPage(PdfDocument.PageInfo.Builder(200, 300, 1).create())
+            page.canvas.drawColor(Color.WHITE)
+            doc.finishPage(page)
+            return ByteArrayOutputStream().use { doc.writeTo(it); it.toByteArray() }
+        } finally { doc.close() }
+    }
+
+    private fun textA4(): ByteArray {
+        val doc = PdfDocument()
+        try {
+            val page = doc.startPage(PdfDocument.PageInfo.Builder(595, 842, 1).create())
+            page.canvas.drawColor(Color.WHITE)
+            page.canvas.drawText("合成摘要 用户整理记录", 48f, 80f, android.graphics.Paint().apply {
+                color = Color.BLACK
+                textSize = 22f
+            })
+            doc.finishPage(page)
+            return ByteArrayOutputStream().use { doc.writeTo(it); it.toByteArray() }
+        } finally { doc.close() }
+    }
+
+    private fun minimalSummary() = VisitSummary(
+        title = "合成摘要",
+        scopeLabel = "全部记录",
+        generatedAt = 1_700_000_000_000,
+        sections = listOf(
+            SummarySection("孕期信息", listOf(
+                SummaryBlock.KeyValue("末次月经", "2026-03-01"),
+                SummaryBlock.Heading("产检"),
+                SummaryBlock.Paragraph("合成备注" + "测试内容".repeat(40)),
+            )),
+        ),
+    )
+
+    @Test fun smallBlankViaByteArrayOpens() = openAndRender("small-blank-bytearray.pdf", blankSmall(), expectInk = false)
+
+    @Test fun a4BlankViaByteArrayOpens() = openAndRender("a4-blank-bytearray.pdf", blankA4(), expectInk = false)
+
+    @Test fun a4TextViaByteArrayOpens() = openAndRender("a4-text-bytearray.pdf", textA4())
+
+    @Test fun writerOutputViaByteArrayOpens() {
+        val bytes = ByteArrayOutputStream().use { out ->
+            val pages = SummaryPdfWriter.write(minimalSummary(), out)
+            Log.i(TAG, "writer via bytearray pages=$pages")
+            out.toByteArray()
+        }
+        openAndRender("writer-bytearray.pdf", bytes)
+    }
+
+    @Test fun writerOutputDirectFileStreamOpens() {
+        val file = File(dumpDir, "writer-filestream.pdf")
+        val pages = file.outputStream().use { SummaryPdfWriter.write(minimalSummary(), it) }
+        Log.i(TAG, "writer via FileOutputStream pages=$pages len=${file.length()}")
+        openAndRender("writer-filestream-copy.pdf", file.readBytes())
+    }
+
+    @Test fun writerOutputCopiedThroughStreamOpens() {
+        val original = File(dumpDir, "writer-source.pdf")
+        original.outputStream().use { SummaryPdfWriter.write(minimalSummary(), it) }
+        val copy = File(dumpDir, "writer-stream-copy.pdf")
+        original.inputStream().use { input -> copy.outputStream().use { output -> input.copyTo(output) } }
+        openAndRender("writer-stream-copied.pdf", copy.readBytes())
+    }
+
+    /** Opens one file, returns page count, logs instead of throwing so a churn loop can continue. */
+    private fun openOnce(name: String, file: File): Int {
+        val descriptor = ParcelFileDescriptor.open(file, ParcelFileDescriptor.MODE_READ_ONLY)
+        return try {
+            PdfRenderer(descriptor).use { it.pageCount }
+        } catch (throwable: Throwable) {
+            Log.i(TAG, "$name OPEN FAILED len=${file.length()} ${throwable.javaClass.simpleName}: ${throwable.message}")
+            -1
+        } finally {
+            runCatching { descriptor.close() }
+        }
+    }
+
+    @Test fun repeatedWriterOutputsStayOpenable() {
+        repeat(10) { index ->
+            val file = File(dumpDir, "repeat-writer-$index.pdf")
+            file.outputStream().use { SummaryPdfWriter.write(minimalSummary(), it) }
+            val pages = openOnce("repeat-writer-$index", file)
+            Log.i(TAG, "repeat-writer-$index len=${file.length()} pages=$pages")
+        }
+    }
+
+    @Test fun sameWriterFileStaysOpenableInAChurnLoop() {
+        val file = File(dumpDir, "churn-writer.pdf")
+        file.outputStream().use { SummaryPdfWriter.write(minimalSummary(), it) }
+        var failures = 0
+        repeat(20) { index ->
+            val pages = openOnce("churn-writer-$index", file)
+            if (pages != 1) failures++
+            Log.i(TAG, "churn-writer-$index len=${file.length()} pages=$pages failures=$failures")
+        }
+        assertEquals("churn open failures", 0, failures)
+    }
+
+    @Test fun jpegExifOrientationCanBeSaved() {
+        val bitmap = Bitmap.createBitmap(600, 900, Bitmap.Config.ARGB_8888)
+        bitmap.eraseColor(Color.BLUE)
+        val bytes = ByteArrayOutputStream().use { output ->
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 90, output)
+            output.toByteArray()
+        }
+        bitmap.recycle()
+        val file = File(dumpDir, "camera.jpg").also { it.writeBytes(bytes) }
+        Log.i(TAG, "camera len=${file.length()} header=${bytes.take(4).joinToString(" ") { "%02x".format(it) }}")
+        val exif = android.media.ExifInterface(file.absolutePath)
+        try {
+            exif.setAttribute(android.media.ExifInterface.TAG_ORIENTATION, "6")
+            exif.saveAttributes()
+            val reread = android.media.ExifInterface(file.absolutePath)
+            Log.i(TAG, "camera exif saved orientation=${reread.getAttributeInt(android.media.ExifInterface.TAG_ORIENTATION, -1)}")
+        } catch (throwable: Throwable) {
+            Log.i(TAG, "camera exif save FAILED ${throwable.javaClass.simpleName}: ${throwable.message}")
+        }
+    }
+
+    @Test fun samePdfBytesOpenFromEveryStorageLocation() {
+        val bytes = blankSmall()
+        val locations = listOf(
+            File(context.cacheDir, "probe-internal").apply { mkdirs() },
+            File(context.noBackupFilesDir, "probe-nobackup").apply { mkdirs() },
+            File(context.filesDir, "probe-files").apply { mkdirs() },
+            File(context.getExternalFilesDir(null), "probe-external").apply { mkdirs() },
+            File(context.cacheDir, "import-test-synthetic/document-viewers").apply { mkdirs() }
+        )
+        locations.forEachIndexed { index, directory ->
+            val file = File(directory, "loc-$index.pdf").also { it.writeBytes(bytes) }
+            val pages = openOnce("loc-$index", file)
+            Log.i(TAG, "location[$index]=${directory.absolutePath} len=${file.length()} pages=$pages")
+        }
+    }
+
+    private fun storeProbeDir(): File = File(dumpDir, "store").apply { mkdirs() }
+
+    @Test fun encryptedStoreRoundTripKeepsPdfOpenable() {
+        val dir = storeProbeDir()
+        val store = cn.yunji.journal.core.storage.EncryptedFileStore(
+            File(dir, "objects"),
+            cn.yunji.journal.core.security.VaultMaterial(java.util.UUID.randomUUID().toString(), cn.yunji.journal.core.security.VaultCrypto.randomKey())
+        )
+        val bytes = blankSmall()
+        val stored = store.put(bytes.inputStream())
+        val preview = File(dir, "preview.pdf")
+        preview.delete()
+        store.decryptTo(stored, preview)
+        Log.i(TAG, "store-roundtrip source=${bytes.size} plainSize=${stored.plainSize} preview=${preview.length()}")
+        val pages = openOnce("store-roundtrip", preview)
+        Log.i(TAG, "store-roundtrip pages=$pages")
+        assertEquals(1, pages)
+    }
+
+    @Test fun captureProviderStreamRoundTripKeepsPdfOpenable() {
+        val bytes = blankSmall()
+        val source = File(context.cacheDir, "capture/probe-${java.util.UUID.randomUUID()}.pdf").apply {
+            parentFile!!.mkdirs()
+            writeBytes(bytes)
+        }
+        val uri = androidx.core.content.FileProvider.getUriForFile(context, "${context.packageName}.capture", source)
+        val read = requireNotNull(context.contentResolver.openInputStream(uri)).use { it.readBytes() }
+        Log.i(TAG, "provider-read len=${read.size} identical=${read.contentEquals(bytes)}")
+        val dir = storeProbeDir()
+        val store = cn.yunji.journal.core.storage.EncryptedFileStore(
+            File(dir, "objects2"),
+            cn.yunji.journal.core.security.VaultMaterial(java.util.UUID.randomUUID().toString(), cn.yunji.journal.core.security.VaultCrypto.randomKey())
+        )
+        val stored = store.put(read.inputStream())
+        val preview = File(dir, "preview2.pdf")
+        preview.delete()
+        store.decryptTo(stored, preview)
+        Log.i(TAG, "provider-roundtrip plainSize=${stored.plainSize} preview=${preview.length()}")
+        val pages = openOnce("provider-roundtrip", preview)
+        Log.i(TAG, "provider-roundtrip pages=$pages")
+        assertEquals(1, pages)
+    }
+
+    @Test fun malformedPdfOpenPoisonsFollowingValidRender() {
+        val valid = File(context.filesDir, "probe-files/poison-baseline.pdf").apply {
+            parentFile!!.mkdirs()
+            writeBytes(blankSmall())
+        }
+        val beforePages = openOnce("poison-before", valid)
+        val malformed = File(context.cacheDir, "probe-poison.pdf").apply {
+            writeBytes("%PDF-1.7\ntruncated synthetic document".toByteArray())
+        }
+        val malformedResult = try {
+            val descriptor = ParcelFileDescriptor.open(malformed, ParcelFileDescriptor.MODE_READ_ONLY)
+            try { PdfRenderer(descriptor).use { it.pageCount }.toString() } finally { runCatching { descriptor.close() } }
+        } catch (throwable: Throwable) {
+            throwable.javaClass.simpleName + ": " + throwable.message
+        }
+        Log.i(TAG, "poison malformedOpen=$malformedResult")
+        val afterPages = openOnce("poison-after", valid)
+        Log.i(TAG, "poison before=$beforePages after=$afterPages")
+    }
+
+    @Test fun jpegCompressProducesUsableBytesForExif() {
+        val bitmap = Bitmap.createBitmap(600, 900, Bitmap.Config.ARGB_8888)
+        bitmap.eraseColor(Color.BLUE)
+        val bytes = try {
+            java.io.ByteArrayOutputStream().use { out ->
+                val ok = bitmap.compress(Bitmap.CompressFormat.JPEG, 90, out)
+                Log.i(TAG, "jpeg compress ok=$ok bytes=${out.size()}")
+                out.toByteArray()
+            }
+        } finally {
+            bitmap.recycle()
+        }
+        val file = File(context.cacheDir, "probe-jpeg/probe-${System.nanoTime()}.jpg").apply {
+            parentFile!!.mkdirs()
+            writeBytes(bytes)
+        }
+        val result = try {
+            android.media.ExifInterface(file.path).apply {
+                setAttribute(android.media.ExifInterface.TAG_ORIENTATION, "6")
+                saveAttributes()
+            }
+            "saved"
+        } catch (throwable: Throwable) {
+            throwable.javaClass.simpleName + ": " + throwable.message
+        }
+        Log.i(TAG, "exif fileLen=${file.length()} result=$result")
+    }
+}

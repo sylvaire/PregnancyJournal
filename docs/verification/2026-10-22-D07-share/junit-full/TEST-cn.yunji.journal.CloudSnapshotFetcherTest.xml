@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.CloudSnapshotFetcherTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-22T07:08:29.874Z" hostname="SUN-KDQ5E4QJN34" time="0.322">
+  <properties/>
+  <testcase name="downloadsVerifiedSnapshotAndRebuildsAnArchiveTheRecoveryKeyOpens" classname="cn.yunji.journal.CloudSnapshotFetcherTest" time="0.067"/>
+  <testcase name="missingManifestOrObjectOrCommitIsRefusedWithoutPartialOutput" classname="cn.yunji.journal.CloudSnapshotFetcherTest" time="0.037"/>
+  <testcase name="discoveryFindsOnlyTheVaultThisRecoveryKeyOpens" classname="cn.yunji.journal.CloudSnapshotFetcherTest" time="0.064"/>
+  <testcase name="wrongRecoveryKeyCannotProduceAFetchedArchive" classname="cn.yunji.journal.CloudSnapshotFetcherTest" time="0.033"/>
+  <testcase name="corruptedRemoteObjectIsRejectedAndLeavesNoArchive" classname="cn.yunji.journal.CloudSnapshotFetcherTest" time="0.03"/>
+  <testcase name="discoveryWithAWrongKeyFindsNothingAndEmptyDirectoryIsNotAnError" classname="cn.yunji.journal.CloudSnapshotFetcherTest" time="0.032"/>
+  <testcase name="downloadRefusesForeignVaultOrInvalidIdentifiers" classname="cn.yunji.journal.CloudSnapshotFetcherTest" time="0.027"/>
+  <testcase name="listRestorableReturnsOnlyAuthenticatedSnapshotsNewestFirst" classname="cn.yunji.journal.CloudSnapshotFetcherTest" time="0.032"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

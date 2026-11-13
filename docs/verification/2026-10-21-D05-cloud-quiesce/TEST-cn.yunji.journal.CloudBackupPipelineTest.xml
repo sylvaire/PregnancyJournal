@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.CloudBackupPipelineTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-21T09:42:33.204Z" hostname="SUN-KDQ5E4QJN34" time="0.579">
+  <properties/>
+  <testcase name="cancellationDuringArchiveBuildNeverUploadsAndCleansWorkspace" classname="cn.yunji.journal.CloudBackupPipelineTest" time="0.257"/>
+  <testcase name="happyPathStagesCiphertextAndCommitsAfterSelfCheck" classname="cn.yunji.journal.CloudBackupPipelineTest" time="0.094"/>
+  <testcase name="unreadableCommitCannotProduceAReceipt" classname="cn.yunji.journal.CloudBackupPipelineTest" time="0.034"/>
+  <testcase name="manifestIsBoundToVaultAndSlotIdentity" classname="cn.yunji.journal.CloudBackupPipelineTest" time="0.037"/>
+  <testcase name="corruptStoredObjectIsDetectedLocallyWithoutUpload" classname="cn.yunji.journal.CloudBackupPipelineTest" time="0.019"/>
+  <testcase name="localSelfCheckAndSnapshotFailuresNeverReachTheUploader" classname="cn.yunji.journal.CloudBackupPipelineTest" time="0.019"/>
+  <testcase name="sequencesAdvanceAcrossRunsAndAreNeverReusedAfterFailure" classname="cn.yunji.journal.CloudBackupPipelineTest" time="0.118"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

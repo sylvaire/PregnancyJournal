@@ -1,0 +1,462 @@
+--------- beginning of main
+10-22 07:43:27.882 11764 11782 D WM-Processor: WorkerWrapper could not be found for 592a9cba-d55f-412f-9281-a6bb5215dbe8
+10-22 07:43:27.886 11764 11782 D WM-GreedyScheduler: Cancelling work ID 592a9cba-d55f-412f-9281-a6bb5215dbe8
+10-22 07:43:27.887 11764 11764 D WM-SystemJobService: onStopJob for WorkGenerationalId(workSpecId=592a9cba-d55f-412f-9281-a6bb5215dbe8, generation=0)
+--------- beginning of system
+10-22 07:43:27.891   678  1672 W JobScheduler: Job didn't exist in JobStore: 7ced14e {androidx.work.systemjobscheduler} #u0a227/27 @androidx.work.systemjobscheduler@cn.yunji.journal/androidx.work.impl.background.systemjob.SystemJobService
+10-22 07:43:27.901 11764 11782 W JobInfo : Requested important-while-foreground flag for job28 is ignored and takes no effect
+10-22 07:43:27.901 11764 11782 D WM-SystemJobScheduler: Scheduling work ID b3b921a0-739b-4a58-9a63-cec69fefed34Job ID 28
+10-22 07:43:27.915 11764 11782 D WM-GreedyScheduler: Starting work for b3b921a0-739b-4a58-9a63-cec69fefed34
+10-22 07:43:27.915 11764 11764 D WM-SystemJobService: onStartJob for WorkGenerationalId(workSpecId=b3b921a0-739b-4a58-9a63-cec69fefed34, generation=0)
+10-22 07:43:27.939 11764 11782 D WM-Processor: Processor: processing WorkGenerationalId(workSpecId=b4cee3ab-8677-4edd-b763-c7ddb8c12a7c, generation=0)
+10-22 07:43:27.943 11764 11782 D WM-Processor: Work WorkGenerationalId(workSpecId=b4cee3ab-8677-4edd-b763-c7ddb8c12a7c, generation=0) is already enqueued for processing
+10-22 07:43:27.945 11764 11782 D WM-Processor: Processor: processing WorkGenerationalId(workSpecId=629bc9c7-7674-450a-8d23-20949c050f48, generation=0)
+10-22 07:43:27.948 11764 11782 D WM-Processor: Work WorkGenerationalId(workSpecId=629bc9c7-7674-450a-8d23-20949c050f48, generation=0) is already enqueued for processing
+10-22 07:43:27.950 11764 11782 W WM-Processor: Didn't find WorkSpec for id WorkGenerationalId(workSpecId=592a9cba-d55f-412f-9281-a6bb5215dbe8, generation=0)
+10-22 07:43:27.951 11764 11764 D WM-SystemJobService: 592a9cba-d55f-412f-9281-a6bb5215dbe8 executed on JobScheduler
+10-22 07:43:27.953 11764 11782 W WM-Processor: Didn't find WorkSpec for id WorkGenerationalId(workSpecId=592a9cba-d55f-412f-9281-a6bb5215dbe8, generation=0)
+10-22 07:43:27.954 11764 11764 D WM-SystemJobService: 592a9cba-d55f-412f-9281-a6bb5215dbe8 executed on JobScheduler
+10-22 07:43:27.955 11764 11782 D WM-StopWorkRunnable: StopWorkRunnable for 592a9cba-d55f-412f-9281-a6bb5215dbe8; Processor.stopWork = false
+10-22 07:43:27.955 11764 11782 D WM-StopWorkRunnable: StopWorkRunnable for 592a9cba-d55f-412f-9281-a6bb5215dbe8; Processor.stopWork = false
+10-22 07:43:27.958 11764 11782 D WM-Processor: Processor: processing WorkGenerationalId(workSpecId=b3b921a0-739b-4a58-9a63-cec69fefed34, generation=0)
+10-22 07:43:27.960 11764 11782 D WM-Processor: Work WorkGenerationalId(workSpecId=b3b921a0-739b-4a58-9a63-cec69fefed34, generation=0) is already enqueued for processing
+10-22 07:43:28.003 11764 11764 D WM-WorkerWrapper: Starting work for cn.yunji.journal.data.ImportWorker
+10-22 07:43:28.011 11764 11782 D WM-GreedyScheduler: Cancelling work ID 592a9cba-d55f-412f-9281-a6bb5215dbe8
+10-22 07:43:28.019 11764 11764 D WM-WorkerWrapper: Starting work for cn.yunji.journal.data.TrashWorker
+10-22 07:43:28.024 11764 11782 D WM-GreedyScheduler: Cancelling work ID 592a9cba-d55f-412f-9281-a6bb5215dbe8
+10-22 07:43:28.037 11764 11764 D WM-WorkerWrapper: Starting work for cn.yunji.journal.data.ReminderWorker
+10-22 07:43:28.043 11764 11782 D WM-PackageManagerHelper: Skipping component enablement for androidx.work.impl.background.systemalarm.RescheduleReceiver
+10-22 07:43:28.151 11764 11785 D nativeloader: Load /data/app/~~I6gkoIWEYcPQSpM-Qhx7YA==/cn.yunji.journal-ltpNGmKyTUEbS_W2xR19yw==/base.apk!/lib/x86_64/libsqlcipher.so using class loader ns clns-9 (caller=/data/app/~~I6gkoIWEYcPQSpM-Qhx7YA==/cn.yunji.journal-ltpNGmKyTUEbS_W2xR19yw==/base.apk!classes10.dex): ok
+10-22 07:43:28.495 11764 11788 I SQLiteConnection: Database keying operation returned:0
+10-22 07:43:28.496 11764 11785 I SQLiteConnection: Database keying operation returned:0
+10-22 07:43:28.936 11764 11788 I SQLiteConnection: Database keying operation returned:0
+10-22 07:43:28.942 11764 11785 I SQLiteConnection: Database keying operation returned:0
+10-22 07:43:29.238 11764 11790 I SQLiteConnection: Database keying operation returned:0
+10-22 07:43:29.243 11764 11778 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=b3b921a0-739b-4a58-9a63-cec69fefed34, tags={ cn.yunji.journal.data.ReminderWorker } ]
+10-22 07:43:29.246 11764 11764 D WM-Processor: Processor b3b921a0-739b-4a58-9a63-cec69fefed34 executed; reschedule = false
+10-22 07:43:29.247 11764 11764 D WM-SystemJobService: b3b921a0-739b-4a58-9a63-cec69fefed34 executed on JobScheduler
+10-22 07:43:29.250 11764 11778 D WM-GreedyScheduler: Cancelling work ID b3b921a0-739b-4a58-9a63-cec69fefed34
+10-22 07:43:29.257   678  2061 W JobScheduler: Job didn't exist in JobStore: 1096c05 {androidx.work.systemjobscheduler} #u0a227/28 @androidx.work.systemjobscheduler@cn.yunji.journal/androidx.work.impl.background.systemjob.SystemJobService
+10-22 07:43:29.262 11764 11779 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-22 07:43:29.263 11764 11764 D WM-SystemJobService: onStopJob for WorkGenerationalId(workSpecId=b3b921a0-739b-4a58-9a63-cec69fefed34, generation=0)
+10-22 07:43:29.278   678  1672 V GrammaticalInflectionUtils: AttributionSource: android.content.AttributionSource@b2705f9e does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+10-22 07:43:29.279   678  1672 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_USER_ASPECT_RATIO_OVERRIDE
+10-22 07:43:29.279   678  1672 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_USER_ASPECT_RATIO_FULLSCREEN_OVERRIDE
+10-22 07:43:29.279   678  1672 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_RESIZEABLE_ACTIVITY_OVERRIDES
+10-22 07:43:29.279   678  1672 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_MIN_ASPECT_RATIO_OVERRIDE
+10-22 07:43:29.285   678  1672 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_ORIENTATION_OVERRIDE
+10-22 07:43:29.288   545  1138 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-22 07:43:29.292   678  1672 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 xflg=0x4 cmp=cn.yunji.journal/.MainActivity} with LAUNCH_MULTIPLE from uid 10227 (BAL_ALLOW_PERMISSION) result code=0
+10-22 07:43:29.294   927  1026 I ndroid.systemui: AssetManager2(0x71b53313ecd8) locale list changing from [] to [en-US]
+10-22 07:43:29.296   927   985 V WindowManagerShell: Transition requested (#130): android.os.BinderProxy@f125157 TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=80 effectiveUid=10227 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=cn.yunji.journal/.MainActivity } baseActivity=ComponentInfo{cn.yunji.journal/cn.yunji.journal.MainActivity} topActivity=ComponentInfo{cn.yunji.journal/cn.yunji.journal.MainActivity} origActivity=null realActivity=ComponentInfo{cn.yunji.journal/cn.yunji.journal.MainActivity} numActivities=1 lastActiveTime=3017625 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.window.IWindowContainerToken$Stub$Proxy@fdf5444} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 128 - 0, 0) topActivityInfo=ActivityInfo{e5bc92d cn.yunji.journal.MainActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isVisible=false isVisibleRequested=false isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=false lastNonFullscreenBounds=Rect(276, 692 - 804, 1772) capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=-9 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false eligibleForLetterboxEducation= false isLetterboxEducationEnabled= true isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(0, 0 - 1080, 2400) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=null cameraCompatTaskInfo=CameraCompatTaskInfo { freeformCameraCompatMode=inactive}} topActivityMainWindowFrame=null}, pipChange = null, remoteTransition = null, displayChange = null, flags = 0, debugId = 130 }
+10-22 07:43:29.296   678  1051 D CompatChangeReporter: Compat change id reported: 377864165; UID 10227; state: ENABLED
+10-22 07:43:29.296   927   985 D ShellSplitScreen: logExit: no-op, mLoggerSessionId is null
+10-22 07:43:29.297  1066  1066 W SplitSelectStateCtor: Missing session instanceIds
+10-22 07:43:29.297  1066  1066 D StatsLog: LAUNCHER_SPLIT_SELECTION_EXIT_INTERRUPTED
+10-22 07:43:29.303   545   545 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-22 07:43:29.312   678  2464 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ENABLE_FAKE_FOCUS
+10-22 07:43:29.312   678   880 D BackgroundInstallControlService: Package event received: 0
+10-22 07:43:29.313   927   985 D WindowManagerShell: setLauncherKeepClearAreaHeight: visible=false, height=527
+10-22 07:43:29.325 11764 11792 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+10-22 07:43:29.330   678   880 D BackgroundInstallControlService: Package event received: 0
+10-22 07:43:29.352   678   708 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:29.352   678   708 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:29.357 11764 11792 I EGL_emulation: Opening libGLESv1_CM_emulation.so
+10-22 07:43:29.357 11764 11792 I EGL_emulation: Opening libGLESv2_emulation.so
+10-22 07:43:29.359   678   708 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:29.359   678   708 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:29.361 11764 11764 I n.yunji.journal: AssetManager2(0x71b53310dc78) locale list changing from [] to [en-US]
+10-22 07:43:29.362   678   708 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:29.364   678   708 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:29.364   678   708 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:29.364   678   708 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:29.365   678   708 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:29.365   678   880 D BackgroundInstallControlService: Package event received: 0
+10-22 07:43:29.366   678   708 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:29.373 11764 11792 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-22 07:43:29.373   678   708 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:29.377   678   708 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:29.378   678   708 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:29.378   678   708 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:29.378   678   708 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:29.378   678   708 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:29.378   678   708 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:29.381   678   880 D BackgroundInstallControlService: Package event received: 0
+10-22 07:43:29.401   678   705 V WindowManager: Sent Transition (#130) createdAt=10-22 07:43:29.280 via request=TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=80 effectiveUid=10227 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=cn.yunji.journal/.MainActivity } baseActivity=ComponentInfo{cn.yunji.journal/cn.yunji.journal.MainActivity} topActivity=ComponentInfo{cn.yunji.journal/cn.yunji.journal.MainActivity} origActivity=null realActivity=ComponentInfo{cn.yunji.journal/cn.yunji.journal.MainActivity} numActivities=1 lastActiveTime=3017625 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{RemoteToken{5da2b29 Task{e966075 #80 type=standard A=10227:cn.yunji.journal}}} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 128 - 0, 0) topActivityInfo=ActivityInfo{1c10eae cn.yunji.journal.MainActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isVisible=false isVisibleRequested=false isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=false lastNonFullscreenBounds=Rect(276, 692 - 804, 1772) capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=-9 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false eligibleForLetterboxEducation= false isLetterboxEducationEnabled= true isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(0, 0 - 1080, 2400) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=null cameraCompatTaskInfo=CameraCompatTaskInfo { freeformCameraCompatMode=inactive}} topActivityMainWindowFrame=null}, pipChange = null, remoteTransition = null, displayChange = null, flags = 0, debugId = 130 }
+10-22 07:43:29.402   678   705 V WindowManager:     startWCT=WindowContainerTransaction { changes= {} hops= [] errorCallbackToken=null taskFragmentOrganizer=null }
+10-22 07:43:29.402   678   705 V WindowManager:     info={id=130 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[
+10-22 07:43:29.402   678   705 V WindowManager:         {WCT{RemoteToken{5da2b29 Task{e966075 #80 type=standard A=10227:cn.yunji.journal}}} m=OPEN f=NONE leash=Surface(name=Task=80)/@0xe8b0bf3 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1},
+10-22 07:43:29.402   678   705 V WindowManager:         {WCT{RemoteToken{f98b6c0 Task{ce3ba4b #1 type=home}}} m=TO_BACK f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0x9454401 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1},
+10-22 07:43:29.402   678   705 V WindowManager:         {m=TO_BACK f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{9238ccb showWhenLocked=false})/@0x4e8d30b sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0}
+10-22 07:43:29.402   678   705 V WindowManager:     ]}
+10-22 07:43:29.402   927  1073 V WindowManagerShell: onTransitionReady(transaction=2911987831480)
+10-22 07:43:29.456   927   985 V WindowManagerShell: onTransitionReady (#130) android.os.BinderProxy@f125157: {id=130 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[
+10-22 07:43:29.456   927   985 V WindowManagerShell:         {m=OPEN f=NONE leash=Surface(name=Task=80)/@0x7c3a66b sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1},
+10-22 07:43:29.456   927   985 V WindowManagerShell:         {m=TO_BACK f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0xcc4a5c8 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1},
+10-22 07:43:29.456   927   985 V WindowManagerShell:         {m=TO_BACK f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{9238ccb showWhenLocked=false})/@0xaedb661 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0}
+10-22 07:43:29.456   927   985 V WindowManagerShell:     ]}
+10-22 07:43:29.457   927   985 V WindowManagerShell: Playing animation for (#130) android.os.BinderProxy@f125157@0
+10-22 07:43:29.457   927   985 V ShellRecents: RecentsTransitionHandler.startAnimation: no controller found
+10-22 07:43:29.457   927   985 V WindowManagerShell: Transition doesn't have explicit remote, search filters for match for {id=130 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{m=OPEN f=NONE leash=Surface(name=Task=80)/@0x7c3a66b sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1},{m=TO_BACK f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0xcc4a5c8 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1},{m=TO_BACK f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{9238ccb showWhenLocked=false})/@0xaedb661 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0}]}
+10-22 07:43:29.458   927   985 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x0 checks=[{atype=undefined independent=true modes=[CLOSE,TO_BACK] flags=IN_TASK_WITH_EMBEDDED_ACTIVITY mustBeTask=false order=ANY topActivity=null launchCookie=null taskFragmentToken=android.os.BinderProxy@f14e7d5 windowingMode=undefined}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@e47cbea, appThread = android.app.IApplicationThread$Stub$Proxy@5af4edb, debugName = overlayBackTransition }}
+10-22 07:43:29.458   927   985 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x0 checks=[{atype=dream independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined},{atype=home independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@ac92c51, appThread = android.app.IApplicationThread$Stub$Proxy@acebcb6, debugName = LauncherToDream }}
+10-22 07:43:29.458   927   985 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x100 checks=[{atype=home independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=TOP topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null windowingMode=undefined},{atype=standard independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined},{NOT atype=undefined independent=true modes=[] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null customAnim=true windowingMode=undefined}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@249fdb7, appThread = android.app.IApplicationThread$Stub$Proxy@758f924, debugName = QuickstepLaunchHome }}
+10-22 07:43:29.458   927   985 V WindowManagerShell:  Delegate animation for (#130) to null
+10-22 07:43:29.467   927   985 V WindowManagerShell: start default transition animation, info = {id=130 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{m=OPEN f=NONE leash=Surface(name=Task=80)/@0x7c3a66b sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1},{m=TO_BACK f=SHOW_WALLPAPER leash=Surface(name=Task=1)/@0xcc4a5c8 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1},{m=TO_BACK f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{9238ccb showWhenLocked=false})/@0xaedb661 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0}]}
+10-22 07:43:29.467   678   778 D ActivityManager: freezing 4578 com.google.android.permissioncontroller
+10-22 07:43:29.468   927   985 V WindowManagerShell: loadAnimation: anim=android.view.animation.AnimationSet@1ee579d animAttr=0x13 type=OPEN isEntrance=false
+10-22 07:43:29.477   927   985 V WindowManagerShell: loadAnimation: anim=android.view.animation.AnimationSet@85dd099 animAttr=0x12 type=OPEN isEntrance=true
+10-22 07:43:29.479   927   985 V WindowManagerShell:  animated by com.android.wm.shell.transition.DefaultTransitionHandler@579365d
+10-22 07:43:29.537   678  1051 W HWUI    : Image decoding logging dropped!
+10-22 07:43:29.561   678  6794 I EGL_emulation: Opening libGLESv1_CM_emulation.so
+10-22 07:43:29.572   678  6794 I EGL_emulation: Opening libGLESv2_emulation.so
+10-22 07:43:29.584   678  6794 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-22 07:43:29.763 11764 11764 D LifecycleMonitor: Lifecycle status change: cn.yunji.journal.MainActivity@50ea807 in: PRE_ON_CREATE
+10-22 07:43:29.766 11764 11764 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+10-22 07:43:29.769   927   985 V WindowManagerShell: Transition animation finished (aborted=false), notifying core (#130) android.os.BinderProxy@f125157@0
+10-22 07:43:29.780   678   705 V WindowManager: Finish Transition (#130): created at 10-22 07:43:29.280 collect-started=0.094ms request-sent=12.193ms started=17.073ms ready=59.157ms sent=117.709ms commit=88.087ms finished=490.795ms
+10-22 07:43:29.782  1066  1066 D VRI[NexusLauncherActivity]: visibilityChanged oldVisibility=true newVisibility=false
+10-22 07:43:29.784   927   985 V WindowManagerShell: Track 0 became idle
+10-22 07:43:29.784   927   985 V WindowManagerShell: All active transition animations finished
+10-22 07:43:29.796  1066  1066 D NexusLauncherModelDelegate: notifySmartspaceEvent: SmartspaceTargetEvent{mSmartspaceTarget=null, mSmartspaceActionId='null', mEventType=7}
+10-22 07:43:30.014 11764 11764 D CompatChangeReporter: Compat change id reported: 377864165; UID 10227; state: ENABLED
+10-22 07:43:30.018 11764 11764 D DesktopModeFlags: Toggle override initialized to: OVERRIDE_UNSET
+10-22 07:43:30.085 11764 11764 D LifecycleMonitor: Lifecycle status change: cn.yunji.journal.MainActivity@50ea807 in: CREATED
+10-22 07:43:30.085 11764 11764 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=cn.yunji.journal.MainActivity@50ea807
+10-22 07:43:30.086 11764 11764 D LifecycleMonitor: Lifecycle status change: cn.yunji.journal.MainActivity@50ea807 in: STARTED
+10-22 07:43:30.087 11764 11764 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=cn.yunji.journal.MainActivity@50ea807
+10-22 07:43:30.097 11764 11764 D LifecycleMonitor: Lifecycle status change: cn.yunji.journal.MainActivity@50ea807 in: RESUMED
+10-22 07:43:30.097 11764 11764 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=cn.yunji.journal.MainActivity@50ea807
+10-22 07:43:30.126 11764 11764 W HWUI    : Unknown dataspace 0
+10-22 07:43:30.164 11764 11780 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=629bc9c7-7674-450a-8d23-20949c050f48, tags={ cn.yunji.journal.data.TrashWorker } ]
+10-22 07:43:30.176   678  1051 D CoreBackPreview: Window{b7a737 u0 cn.yunji.journal/cn.yunji.journal.MainActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@894c20d, mPriority=-1, mIsAnimationCallback=false, mOverrideBehavior=0}
+10-22 07:43:30.179 11764 11780 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=b4cee3ab-8677-4edd-b763-c7ddb8c12a7c, tags={ cn.yunji.journal.data.ImportWorker } ]
+10-22 07:43:30.809 11764 11768 I n.yunji.journal: Compiler allocated 5057KB to compile void android.view.ViewRootImpl.performTraversals()
+10-22 07:43:30.895   678   829 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+10-22 07:43:30.895   678   829 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+10-22 07:43:30.895   678   829 D InetDiagMessage: Destroyed live tcp sockets for uids={10209} in 1ms
+10-22 07:43:30.902  8988 11370 W WakeLock: GCM_HB_ALARM release without a matched acquire! [CONTEXT service_id=259 ]
+10-22 07:43:30.903  8988 11370 W WakeLock: GCM_HB_ALARM counter does not exist
+10-22 07:43:30.906  8988 11370 I AlarmManager: setExactAndAllowWhileIdle [name: GCM_CONN_ALARM type: 2 triggerAtMillis: 3024239]
+10-22 07:43:30.908  8988 11370 W WakeLock: GCM_CONN_ALARM counter does not exist
+10-22 07:43:31.247 11764 11764 I n.yunji.journal: hiddenapi: Accessing hidden method Landroid/os/SystemProperties;->addChangeCallback(Ljava/lang/Runnable;)V (runtime_flags=0, domain=platform, api=unsupported) from Landroidx/compose/ui/platform/AndroidComposeView$Companion; (domain=app) using reflection: allowed
+10-22 07:43:32.329 11764 11764 D WM-Processor: Processor 629bc9c7-7674-450a-8d23-20949c050f48 executed; reschedule = false
+10-22 07:43:32.330 11764 11764 D WM-SystemJobService: 629bc9c7-7674-450a-8d23-20949c050f48 executed on JobScheduler
+10-22 07:43:32.332 11764 11764 D WM-Processor: Processor b4cee3ab-8677-4edd-b763-c7ddb8c12a7c executed; reschedule = false
+10-22 07:43:32.332 11764 11764 D WM-SystemJobService: b4cee3ab-8677-4edd-b763-c7ddb8c12a7c executed on JobScheduler
+10-22 07:43:32.356   678   705 I ActivityTaskManager: Displayed cn.yunji.journal/.MainActivity for user 0: +3s77ms
+10-22 07:43:32.365 11764 11780 D WM-GreedyScheduler: Cancelling work ID 629bc9c7-7674-450a-8d23-20949c050f48
+10-22 07:43:32.380 11764 11773 I HWUI    : Davey! duration=2151ms; Flags=1, FrameTimelineVsyncId=128512, IntendedVsync=3018500578462, Vsync=3018500578462, InputEventId=0, HandleInputStart=3018502812756, AnimationStart=3018503160156, PerformTraversalsStart=3018503335756, DrawStart=3020406033356, FrameDeadline=3018517245128, FrameStartTime=3018502688756, FrameInterval=16666666, WorkloadTarget=16666666, SyncQueued=3020449008556, SyncStart=3020449827656, IssueDrawCommandsStart=3020450199656, SwapBuffers=3020589902656, FrameCompleted=3020653135356, DequeueBufferDuration=703200, QueueBufferDuration=460400, GpuCompleted=3020651653856, SwapBuffersCompleted=3020653135356, DisplayPresentTime=0, CommandSubmissionCompleted=3020589902656, 
+10-22 07:43:32.396 11764 11764 I Choreographer: Skipped 121 frames!  The application may be doing too much work on its main thread.
+10-22 07:43:32.455   678  1676 W JobScheduler: Job didn't exist in JobStore: d500813 {androidx.work.systemjobscheduler} #u0a227/26 @androidx.work.systemjobscheduler@cn.yunji.journal/androidx.work.impl.background.systemjob.SystemJobService
+10-22 07:43:32.459 11764 11764 D WM-SystemJobService: onStopJob for WorkGenerationalId(workSpecId=629bc9c7-7674-450a-8d23-20949c050f48, generation=0)
+10-22 07:43:32.497   678   794 I ImeTracker: cn.yunji.journal:ffa01bf7: onRequestHide at ORIGIN_SERVER reason HIDE_UNSPECIFIED_WINDOW fromUser false
+10-22 07:43:32.512  9119  9119 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2043 
+10-22 07:43:32.517   678  1676 I ImeTracker: system_server:2635d34a: onRequestHide at ORIGIN_SERVER reason IME_REQUESTED_CHANGED_LISTENER fromUser false
+10-22 07:43:32.520  9119  9119 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-22 07:43:32.525   678   708 I ImeTracker: system_server:2635d34a: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-22 07:43:32.525 11764 11764 D InsetsController: hide(ime(), fromIme=false)
+10-22 07:43:32.527 11764 11764 I ImeTracker: cn.yunji.journal:ffa01bf7: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+10-22 07:43:32.531 11764 11780 D WM-GreedyScheduler: Cancelling work ID b4cee3ab-8677-4edd-b763-c7ddb8c12a7c
+10-22 07:43:32.552  9119  9119 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1293 onStartInput(EditorInfo{EditorInfo{packageName=cn.yunji.journal, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-22 07:43:32.563  9119  9119 I EmojiCompatManager: EmojiCompatManager.getEmojiCompatIfLoaded():343 EmojiCompat.init() was never called.
+10-22 07:43:32.563  9119  9119 I EmojiCompatManager: java.lang.IllegalStateException: EmojiCompat is not initialized. Please call EmojiCompat.init() first
+10-22 07:43:32.563  9119  9119 I EmojiCompatManager: 	at asx.p(PG:6)
+10-22 07:43:32.563  9119  9119 I EmojiCompatManager: 	at axb.b(PG:13)
+10-22 07:43:32.563  9119  9119 I EmojiCompatManager: 	at jnr.b(PG:2)
+10-22 07:43:32.563  9119  9119 I EmojiCompatManager: 	at jnr.c(PG:4)
+10-22 07:43:32.563  9119  9119 I EmojiCompatManager: 	at jnr.f(PG:3)
+10-22 07:43:32.563  9119  9119 I EmojiCompatManager: 	at jnx.c(PG:3)
+10-22 07:43:32.563  9119  9119 I EmojiCompatManager: 	at kif.cz(PG:47)
+10-22 07:43:32.563  9119  9119 I EmojiCompatManager: 	at lhl.run(PG:1025)
+10-22 07:43:32.563  9119  9119 I EmojiCompatManager: 	at jaf.execute(PG:12)
+10-22 07:43:32.563  9119  9119 I EmojiCompatManager: 	at nco.v(PG:13)
+10-22 07:43:32.563  9119  9119 I EmojiCompatManager: 	at lhn.m(PG:96)
+10-22 07:43:32.563  9119  9119 I EmojiCompatManager: 	at lhn.k(PG:25)
+10-22 07:43:32.563  9119  9119 I EmojiCompatManager: 	at kgn.onStartInput(PG:250)
+10-22 07:43:32.563  9119  9119 I EmojiCompatManager: 	at android.inputmethodservice.InputMethodService.doStartInput(InputMethodService.java:3521)
+10-22 07:43:32.563  9119  9119 I EmojiCompatManager: 	at android.inputmethodservice.InputMethodService$InputMethodImpl.startInput(InputMethodService.java:879)
+10-22 07:43:32.563  9119  9119 I EmojiCompatManager: 	at android.inputmethodservice.InputMethodService$InputMethodImpl.dispatchStartInput(InputMethodService.java:908)
+10-22 07:43:32.563  9119  9119 I EmojiCompatManager: 	at android.inputmethodservice.IInputMethodWrapper.executeMessage(IInputMethodWrapper.java:201)
+10-22 07:43:32.563  9119  9119 I EmojiCompatManager: 	at com.android.internal.os.HandlerCaller$MyHandler.handleMessage(HandlerCaller.java:44)
+10-22 07:43:32.563  9119  9119 I EmojiCompatManager: 	at android.os.Handler.dispatchMessage(Handler.java:110)
+10-22 07:43:32.563  9119  9119 I EmojiCompatManager: 	at android.os.Looper.loopOnce(Looper.java:248)
+10-22 07:43:32.563  9119  9119 I EmojiCompatManager: 	at android.os.Looper.loop(Looper.java:338)
+10-22 07:43:32.563  9119  9119 I EmojiCompatManager: 	at android.app.ActivityThread.main(ActivityThread.java:9067)
+10-22 07:43:32.563  9119  9119 I EmojiCompatManager: 	at java.lang.reflect.Method.invoke(Native Method)
+10-22 07:43:32.563  9119  9119 I EmojiCompatManager: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:593)
+10-22 07:43:32.563  9119  9119 I EmojiCompatManager: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:932)
+10-22 07:43:32.570  9119  9119 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-22 07:43:32.574  1066  1066 D BaseDepthController: setSurface:
+10-22 07:43:32.574  1066  1066 D BaseDepthController: 	mWaitingOnSurfaceValidity: false
+10-22 07:43:32.574  1066  1066 D BaseDepthController: 	mBaseSurface: null
+10-22 07:43:32.575  1066  1066 D BaseDepthController: mSurface is null and mCurrentBlur is: 0
+10-22 07:43:32.580   678   708 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:32.585  1066  1066 D StateManager: goToState - fromState: Normal, toState: Normal, partial trace:
+10-22 07:43:32.585  1066  1066 D StateManager: 	at com.android.launcher3.statemanager.StateManager.moveToRestState(go/retraceme 72a59688580715d19f0e415c69e80376c2f062d1648c80db6730905005a27c20:4)
+10-22 07:43:32.585  1066  1066 D StateManager: 	at com.android.launcher3.statemanager.StateManager.moveToRestState(go/retraceme 72a59688580715d19f0e415c69e80376c2f062d1648c80db6730905005a27c20:1)
+10-22 07:43:32.585  1066  1066 D StateManager: 	at com.android.launcher3.statemanager.StatefulActivity.onStop(go/retraceme 72a59688580715d19f0e415c69e80376c2f062d1648c80db6730905005a27c20:34)
+10-22 07:43:32.588  1066  1066 D StatsLog: LAUNCHER_ONSTOP
+10-22 07:43:32.590  1066  1066 D StatsLog: LAUNCHER_GOOGLE_SEARCH_RESTORE_LIST_SIZE_AFTER_ACTIVITY_RESTART
+10-22 07:43:32.651   678  2061 W PackageConfigPersister: App-specific configuration not found for packageName: cn.yunji.journal and userId: 0
+10-22 07:43:32.651  9119  9119 W NotificationCenter: NotificationCenter$NotificationQueue.notifyPendingNotificationsOnExecutor():877 Heavy notify work detected on UI thread: [kig->jjs] takes 78ms
+10-22 07:43:32.662  8988  8998 I FontLog : (REDACTED) Received query %s, URI %s
+10-22 07:43:32.662  8988  8998 I FontLog : (REDACTED) Query [%s] resolved to %s
+10-22 07:43:32.673   678   880 D BackgroundInstallControlService: Package event received: 0
+10-22 07:43:32.680  8988  8998 I FontLog : (REDACTED) Fetch %s end status %s
+10-22 07:43:32.747  8988  9294 I FontLog : (REDACTED) Pulling font file for id = %d, cache size = %d
+10-22 07:43:32.749  8988  9294 I FontLog : (REDACTED) Pulling font file for id = %d, cache size = %d
+10-22 07:43:32.852   678  1647 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+10-22 07:43:33.047 11764 11779 I UiAutomation: Initialized for user 0 on display 0
+10-22 07:43:33.056   678  1662 D AccessibilityManagerService: changeCurrentUserForTestAutomationIfNeededLocked(0): ignoring because device doesn't support visible background users
+10-22 07:43:33.056   678  1662 I UiAutomationManager: Registering UiTestAutomationService (id=com.android.server.accessibility/UiAutomation, flags=0x0) when called by user 0
+10-22 07:43:33.057   678  1662 V AccessibilityManagerService: onUserStateChangedLocked for userId: 0, forceUpdate: false
+10-22 07:43:33.061   678  1662 W MagnificationConnectionManager: requestConnection duplicated request: connect=false, mConnectionState=DISCONNECTED
+10-22 07:43:33.062  3073  3709 I AiAiEcho: Settings changed for uri: content://settings/secure/accessibility_enabled
+10-22 07:43:33.074  3073  3107 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+10-22 07:43:33.075  3073  3107 I AiAiEcho: EchoTargets: 
+10-22 07:43:33.075  3073  3107 I AiAiEcho: Filtered by AiAi flag check: 
+10-22 07:43:33.075  3073  3107 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+10-22 07:43:33.076  3073  3107 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+10-22 07:43:33.077  3073  3107 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+10-22 07:43:33.077  3073  3107 I AiAiEcho: EchoTargets: 
+10-22 07:43:33.077  3073  3107 I AiAiEcho: Filtered by AiAi flag check: 
+10-22 07:43:33.077  3073  3107 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+10-22 07:43:33.077   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:33.077   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:33.077  3073  3107 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+10-22 07:43:33.078   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:33.081  3073  3107 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+10-22 07:43:33.081   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:33.088   927   927 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+10-22 07:43:33.089   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:33.089   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:33.090   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:33.091   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:33.098   678  2464 V AccessibilityManagerService: onUserStateChangedLocked for userId: 0, forceUpdate: false
+10-22 07:43:33.099  3073  3107 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+10-22 07:43:33.104   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:33.104   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:33.107   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:33.107   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:33.115  3073  3709 I AiAiEcho: Settings changed for uri: content://settings/secure/accessibility_enabled
+10-22 07:43:33.117   678   678 D BatterySaverPolicy: accessibility changed to true, updating policy.
+10-22 07:43:33.126  3073  3107 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+10-22 07:43:33.128  3073  3107 I AiAiEcho: EchoTargets: 
+10-22 07:43:33.128  3073  3107 I AiAiEcho: Filtered by AiAi flag check: 
+10-22 07:43:33.128  3073  3107 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+10-22 07:43:33.129   678  2464 W MagnificationConnectionManager: requestConnection duplicated request: connect=false, mConnectionState=DISCONNECTED
+10-22 07:43:33.137   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:33.137   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:33.138  3073  3107 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+10-22 07:43:33.143   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:33.143   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:33.147  3073  3107 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+10-22 07:43:33.147  3073  3107 I AiAiEcho: EchoTargets: 
+10-22 07:43:33.147  3073  3107 I AiAiEcho: Filtered by AiAi flag check: 
+10-22 07:43:33.147  3073  3107 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+10-22 07:43:33.148   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:33.149   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:33.152  3073  3107 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+10-22 07:43:33.152   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:33.153   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:33.155  3073  3107 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+10-22 07:43:33.157  3073  3107 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+10-22 07:43:33.177  1066  1066 D SsBaseTemplateCard: No text view can be set up
+10-22 07:43:33.177  1066  1066 D SsBaseTemplateCard: Passed-in item info is null
+10-22 07:43:33.177  1066  1066 D SsBaseTemplateCard: Passed-in item info is null
+10-22 07:43:33.178  1066  1066 D SsBaseTemplateCard: Passed-in item info is null
+10-22 07:43:33.178  1066  1066 I SsBaseTemplateCard: Secondary card pane is null
+10-22 07:43:33.179  1066  1066 D SsBaseTemplateCard: No text view can be set up
+10-22 07:43:33.179  1066  1066 D SsBaseTemplateCard: Passed-in item info is null
+10-22 07:43:33.179  1066  1066 D SsBaseTemplateCard: Passed-in item info is null
+10-22 07:43:33.179  1066  1066 D SsBaseTemplateCard: Passed-in item info is null
+10-22 07:43:33.179  1066  1066 I SsBaseTemplateCard: Secondary card pane is null
+10-22 07:43:33.221   927   927 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+10-22 07:43:33.462 11764 11804 D ProfileInstaller: Installing profile for cn.yunji.journal
+10-22 07:43:34.044   678  1051 I system_server: AssetManager2(0x71b53314e9f8) locale list changing from [] to [en-US]
+10-22 07:43:34.045   678  1051 V GrammaticalInflectionUtils: AttributionSource: android.content.AttributionSource@b425383d does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+10-22 07:43:34.046   678  1051 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_USER_ASPECT_RATIO_OVERRIDE
+10-22 07:43:34.046   678  1051 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_USER_ASPECT_RATIO_FULLSCREEN_OVERRIDE
+10-22 07:43:34.047   678  1051 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_RESIZEABLE_ACTIVITY_OVERRIDES
+10-22 07:43:34.048   678  1051 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_MIN_ASPECT_RATIO_OVERRIDE
+10-22 07:43:34.067   678  1051 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_ORIENTATION_OVERRIDE
+10-22 07:43:34.074   545   555 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-22 07:43:34.099   927  1026 I ndroid.systemui: AssetManager2(0x71b5331259b8) locale list changing from [] to [en-US]
+10-22 07:43:34.103   678  1676 D CompatChangeReporter: Compat change id reported: 377864165; UID 10228; state: ENABLED
+10-22 07:43:34.111   927   985 V WindowManagerShell: Transition requested (#131): android.os.BinderProxy@68244a4 TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=81 effectiveUid=10228 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=cn.yunji.journal.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity } baseActivity=ComponentInfo{cn.yunji.journal.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity} topActivity=ComponentInfo{cn.yunji.journal.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity} origActivity=null realActivity=ComponentInfo{cn.yunji.journal.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity} numActivities=1 lastActiveTime=3022438 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.window.IWindowContainerToken$Stub$Proxy@139620d} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 128 - 0, 0) topActivityInfo=ActivityInfo{45ce5c2 androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isVisible=false isVisibleRequested=false isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=false lastNonFullscreenBounds=Rect(276, 692 - 804, 1772) capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=-9 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false eligibleForLetterboxEducation= false isLetterboxEducationEnabled= true isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(0, 0 - 1080, 2400) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=null cameraCompatTaskInfo=CameraCompatTaskInfo { freeformCameraCompatMode=inactive}} topActivityMainWindowFrame=null}, pipChange = null, remoteTransition = null, displayChange = null, flags = 0, debugId = 131 }
+10-22 07:43:34.111   678  1051 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 xflg=0x4 cmp=cn.yunji.journal.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity} with LAUNCH_MULTIPLE from uid 10227 (BAL_ALLOW_VISIBLE_WINDOW) result code=0
+10-22 07:43:34.111   927   985 D ShellSplitScreen: logExit: no-op, mLoggerSessionId is null
+10-22 07:43:34.163   545   555 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-22 07:43:34.212 11764 11764 D LifecycleMonitor: Lifecycle status change: cn.yunji.journal.MainActivity@50ea807 in: PAUSED
+10-22 07:43:34.212 11764 11764 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=cn.yunji.journal.MainActivity@50ea807
+10-22 07:43:34.244   678   708 V GrammaticalInflectionUtils: AttributionSource: android.content.AttributionSource@b425383d does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+10-22 07:43:34.277   678   708 W ActivityManager: Slow operation: 73ms so far, now at startProcess: done starting proc!
+10-22 07:43:34.296   471   471 D Zygote  : Forked child process 11806
+10-22 07:43:34.304   927  6706 V WindowManagerShell: onTransitionReady(transaction=2911987831542)
+10-22 07:43:34.313   678   715 W ActivityManager: Slow operation: 68ms so far, now at startProcess: returned from zygote!
+10-22 07:43:34.316   678   715 W ActivityManager: Slow operation: 71ms so far, now at startProcess: done updating battery stats
+10-22 07:43:34.317   678   715 W ActivityManager: Slow operation: 71ms so far, now at startProcess: building log message
+10-22 07:43:34.317   678   715 I ActivityManager: Start proc 11806:cn.yunji.journal.test/u0a228 for next-top-activity {cn.yunji.journal.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity}
+10-22 07:43:34.317   678   715 W ActivityManager: Slow operation: 71ms so far, now at startProcess: starting to update pids map
+10-22 07:43:34.317   678   705 V WindowManager: Sent Transition (#131) createdAt=10-22 07:43:34.048 via request=TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=81 effectiveUid=10228 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=cn.yunji.journal.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity } baseActivity=ComponentInfo{cn.yunji.journal.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity} topActivity=ComponentInfo{cn.yunji.journal.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity} origActivity=null realActivity=ComponentInfo{cn.yunji.journal.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity} numActivities=1 lastActiveTime=3022438 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{RemoteToken{8c15a2a Task{8227734 #81 type=standard A=10228:cn.yunji.journal.test}}} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 128 - 0, 0) topActivityInfo=ActivityInfo{a48601b androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isVisible=false isVisibleRequested=false isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=false lastNonFullscreenBounds=Rect(276, 692 - 804, 1772) capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=-9 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false eligibleForLetterboxEducation= false isLetterboxEducationEnabled= true isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(0, 0 - 1080, 2400) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=null cameraCompatTaskInfo=CameraCompatTaskInfo { freeformCameraCompatMode=inactive}} topActivityMainWindowFrame=null}, pipChange = null, remoteTransition = null, displayChange = null, flags = 0, debugId = 131 }
+10-22 07:43:34.318   678   705 V WindowManager:     startWCT=WindowContainerTransaction { changes= {} hops= [] errorCallbackToken=null taskFragmentOrganizer=null }
+10-22 07:43:34.319   678   880 D BackgroundInstallControlService: Package event received: 0
+10-22 07:43:34.321 11806 11806 I ji.journal.test: Late-enabling -Xcheck:jni
+10-22 07:43:34.329   678   705 V WindowManager:     info={id=131 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[
+10-22 07:43:34.329   678   705 V WindowManager:         {WCT{RemoteToken{8c15a2a Task{8227734 #81 type=standard A=10228:cn.yunji.journal.test}}} m=OPEN f=NONE leash=Surface(name=Task=81)/@0x34978cc sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1},
+10-22 07:43:34.329   678   705 V WindowManager:         {WCT{RemoteToken{5da2b29 Task{e966075 #80 type=standard A=10227:cn.yunji.journal}}} m=TO_BACK f=NONE leash=Surface(name=Task=80)/@0xe8b0bf3 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1}
+10-22 07:43:34.329   678   705 V WindowManager:     ]}
+10-22 07:43:34.341 11806 11806 I ji.journal.test: Using CollectorTypeCC GC.
+10-22 07:43:34.343 11806 11806 W ji.journal.test: Unexpected CPU variant for x86: x86_64.
+10-22 07:43:34.343 11806 11806 W ji.journal.test: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, alderlake, default
+10-22 07:43:34.345   927   985 V WindowManagerShell: onTransitionReady (#131) android.os.BinderProxy@68244a4: {id=131 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[
+10-22 07:43:34.345   927   985 V WindowManagerShell:         {m=OPEN f=NONE leash=Surface(name=Task=81)/@0xb5e6c27 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1},
+10-22 07:43:34.345   927   985 V WindowManagerShell:         {m=TO_BACK f=NONE leash=Surface(name=Task=80)/@0x9521ed4 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1}
+10-22 07:43:34.345   927   985 V WindowManagerShell:     ]}
+10-22 07:43:34.346   927   985 V WindowManagerShell: Playing animation for (#131) android.os.BinderProxy@68244a4@0
+10-22 07:43:34.346   927   985 V ShellRecents: RecentsTransitionHandler.startAnimation: no controller found
+10-22 07:43:34.346   927   985 V WindowManagerShell: Transition doesn't have explicit remote, search filters for match for {id=131 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{m=OPEN f=NONE leash=Surface(name=Task=81)/@0xb5e6c27 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1},{m=TO_BACK f=NONE leash=Surface(name=Task=80)/@0x9521ed4 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1}]}
+10-22 07:43:34.346   927   985 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x0 checks=[{atype=undefined independent=true modes=[CLOSE,TO_BACK] flags=IN_TASK_WITH_EMBEDDED_ACTIVITY mustBeTask=false order=ANY topActivity=null launchCookie=null taskFragmentToken=android.os.BinderProxy@f14e7d5 windowingMode=undefined}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@e47cbea, appThread = android.app.IApplicationThread$Stub$Proxy@5af4edb, debugName = overlayBackTransition }}
+10-22 07:43:34.347   927   985 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x0 checks=[{atype=dream independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined},{atype=home independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@ac92c51, appThread = android.app.IApplicationThread$Stub$Proxy@acebcb6, debugName = LauncherToDream }}
+10-22 07:43:34.347   927   985 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0] notFlags=0x100 checks=[{atype=home independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=TOP topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null windowingMode=undefined},{atype=standard independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined},{NOT atype=undefined independent=true modes=[] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null customAnim=true windowingMode=undefined}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@249fdb7, appThread = android.app.IApplicationThread$Stub$Proxy@758f924, debugName = QuickstepLaunchHome }}
+10-22 07:43:34.347   927   985 V WindowManagerShell:  Delegate animation for (#131) to null
+10-22 07:43:34.347   927   985 V WindowManagerShell: start default transition animation, info = {id=131 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{m=OPEN f=NONE leash=Surface(name=Task=81)/@0xb5e6c27 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1},{m=TO_BACK f=NONE leash=Surface(name=Task=80)/@0x9521ed4 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1}]}
+10-22 07:43:34.350   678   715 I ActivityManager: ProcessObserver broadcast disabled
+10-22 07:43:34.350   678   715 W ActivityManager: Slow operation: 104ms so far, now at startProcess: done updating pids map
+10-22 07:43:34.352 11764 11782 W JobInfo : Requested important-while-foreground flag for job29 is ignored and takes no effect
+10-22 07:43:34.353 11764 11782 D WM-SystemJobScheduler: Scheduling work ID 421d3dfc-a8d3-4961-a593-ed71c07d6c16Job ID 29
+10-22 07:43:34.355   552   573 I adbd    : jdwp connection from 11806
+10-22 07:43:34.364 11806 11806 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+10-22 07:43:34.371   927   985 V WindowManagerShell: loadAnimation: anim=android.view.animation.AnimationSet@e3b8f79 animAttr=0x9 type=OPEN isEntrance=false
+10-22 07:43:34.372   927   985 I ndroid.systemui: AssetManager2(0x71b5331450d8) locale list changing from [] to [en-US]
+10-22 07:43:34.382   678   880 D BackgroundInstallControlService: Package event received: 0
+10-22 07:43:34.385   927   985 I ndroid.systemui: AssetManager2(0x71b53313b498) locale list changing from [] to [en-US]
+10-22 07:43:34.389   927   985 V WindowManagerShell: loadAnimation: anim=android.view.animation.AnimationSet@4ececa animAttr=0x8 type=OPEN isEntrance=true
+10-22 07:43:34.391 11764 11782 D WM-GreedyScheduler: Starting work for 421d3dfc-a8d3-4961-a593-ed71c07d6c16
+10-22 07:43:34.398   678  6531 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-22 07:43:34.408   927   985 V WindowManagerShell:  animated by com.android.wm.shell.transition.DefaultTransitionHandler@579365d
+10-22 07:43:34.421 11764 11764 D WM-SystemJobService: onStartJob for WorkGenerationalId(workSpecId=421d3dfc-a8d3-4961-a593-ed71c07d6c16, generation=0)
+10-22 07:43:34.432 11764 11782 D WM-Processor: Processor: processing WorkGenerationalId(workSpecId=421d3dfc-a8d3-4961-a593-ed71c07d6c16, generation=0)
+10-22 07:43:34.446   506 11290 I RanchuHwc: logCompositionFallbackIfChanged: layer 361 CompositionType fallback from 3 to 1
+10-22 07:43:34.450 11764 11778 D WM-Processor: Work WorkGenerationalId(workSpecId=421d3dfc-a8d3-4961-a593-ed71c07d6c16, generation=0) is already enqueued for processing
+10-22 07:43:34.457 11806 11806 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+10-22 07:43:34.473 11806 11806 D nativeloader: Configuring clns-9 for other apk /system/framework/android.test.mock.jar. target_sdk_version=36, uses_libraries=ALL, library_path=/data/app/~~HNdHKhKObpLY_5Wk90Z2eg==/cn.yunji.journal.test-Ttx2K88nJ6HrZCnxKqzHhg==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/cn.yunji.journal.test
+10-22 07:43:34.473 11806 11806 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+10-22 07:43:34.475 11764 11764 D WM-WorkerWrapper: Starting work for cn.yunji.journal.data.ReminderWorker
+10-22 07:43:34.492 11806 11806 D nativeloader: Configuring clns-10 for other apk /system/framework/android.test.runner.jar. target_sdk_version=36, uses_libraries=ALL, library_path=/data/app/~~HNdHKhKObpLY_5Wk90Z2eg==/cn.yunji.journal.test-Ttx2K88nJ6HrZCnxKqzHhg==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/cn.yunji.journal.test
+10-22 07:43:34.506 11764 11778 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=421d3dfc-a8d3-4961-a593-ed71c07d6c16, tags={ cn.yunji.journal.data.ReminderWorker } ]
+10-22 07:43:34.523 11764 11764 D WM-Processor: Processor 421d3dfc-a8d3-4961-a593-ed71c07d6c16 executed; reschedule = false
+10-22 07:43:34.523 11764 11764 D WM-SystemJobService: 421d3dfc-a8d3-4961-a593-ed71c07d6c16 executed on JobScheduler
+10-22 07:43:34.541 11806 11806 D nativeloader: Configuring clns-11 for other apk /data/app/~~HNdHKhKObpLY_5Wk90Z2eg==/cn.yunji.journal.test-Ttx2K88nJ6HrZCnxKqzHhg==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~HNdHKhKObpLY_5Wk90Z2eg==/cn.yunji.journal.test-Ttx2K88nJ6HrZCnxKqzHhg==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/cn.yunji.journal.test
+10-22 07:43:34.553 11806 11806 I ji.journal.test: AssetManager2(0x71b53310c9b8) locale list changing from [] to [en-US]
+10-22 07:43:34.612 11806 11806 V GraphicsEnvironment: Currently set values for:
+10-22 07:43:34.613 11806 11806 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+10-22 07:43:34.613 11806 11806 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+10-22 07:43:34.613 11806 11806 V GraphicsEnvironment: cn.yunji.journal.test is not listed in per-application setting
+10-22 07:43:34.613 11806 11806 V GraphicsEnvironment: ANGLE allowlist from config: com.dreamgames.royalmatch com.dts.freefiremax com.dxx.firenow com.gramgames.mergedragons com.ludo.king com.mojang.minecraftpe com.my.defense com.nintendo.zaka com.os.airforce com.playrix.fishdomdd.gplay io.teslatech.callbreak jp.konami.prospia net.peakgames.toonblast
+10-22 07:43:34.613 11806 11806 V GraphicsEnvironment: cn.yunji.journal.test is not listed in ANGLE allowlist or settings, returning default
+10-22 07:43:34.613 11806 11806 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+10-22 07:43:34.632   678   708 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:34.634   678   708 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:34.666   678  1662 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ENABLE_FAKE_FOCUS
+10-22 07:43:34.745 11806 11820 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+10-22 07:43:34.761 11806 11806 I ji.journal.test: AssetManager2(0x71b533112a98) locale list changing from [] to [en-US]
+10-22 07:43:34.765   678   678 W AccessibilityManagerService:  wait for adding window timeout: 21
+10-22 07:43:34.769   678   880 D BackgroundInstallControlService: Package event received: 0
+10-22 07:43:34.770   678   880 D BackgroundInstallControlService: Package event received: 0
+10-22 07:43:34.810 11806 11806 E ashmem  : Pinning is deprecated since Android Q. Please use trim or other methods.
+10-22 07:43:34.834  1066  1085 W System  : A resource failed to call release. 
+10-22 07:43:34.834  1066  1085 W System  : A resource failed to call release. 
+10-22 07:43:34.836  1066  1085 W System  : A resource failed to call release. 
+10-22 07:43:34.859 11806 11820 I EGL_emulation: Opening libGLESv1_CM_emulation.so
+10-22 07:43:34.868   678   778 D ActivityManager: freezing 4884 com.android.vending
+10-22 07:43:34.868 11806 11820 I EGL_emulation: Opening libGLESv2_emulation.so
+10-22 07:43:34.898   678   829 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+10-22 07:43:34.901   678   829 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+10-22 07:43:34.901   678   829 D InetDiagMessage: Destroyed live tcp sockets for uids={10145} in 15ms
+10-22 07:43:34.905 11806 11820 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-22 07:43:34.962   927   985 V WindowManagerShell: Transition animation finished (aborted=false), notifying core (#131) android.os.BinderProxy@68244a4@0
+10-22 07:43:34.983   678   705 V WindowManager: Finish Transition (#131): created at 10-22 07:43:34.048 collect-started=0.475ms request-sent=56.912ms started=93.602ms ready=247.235ms sent=252.992ms commit=103.098ms finished=925.11ms
+10-22 07:43:34.992 11806 11806 D CompatChangeReporter: Compat change id reported: 377864165; UID 10228; state: ENABLED
+10-22 07:43:35.004 11806 11806 D DesktopModeFlags: Toggle override initialized to: OVERRIDE_UNSET
+10-22 07:43:35.041   927   985 V WindowManagerShell: Track 0 became idle
+10-22 07:43:35.042   927   985 V WindowManagerShell: All active transition animations finished
+10-22 07:43:35.083 11764 11764 D VRI[MainActivity]: visibilityChanged oldVisibility=true newVisibility=false
+10-22 07:43:35.086 11764 11782 D WM-GreedyScheduler: Cancelling work ID 421d3dfc-a8d3-4961-a593-ed71c07d6c16
+10-22 07:43:35.137 11806 11806 W HWUI    : Unknown dataspace 0
+10-22 07:43:35.233   678   708 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:35.235   678   701 D CoreBackPreview: Window{5c615c4 u0 cn.yunji.journal.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@40e6a9, mPriority=-1, mIsAnimationCallback=false, mOverrideBehavior=0}
+10-22 07:43:35.276 11764 11764 D LifecycleMonitor: Lifecycle status change: cn.yunji.journal.MainActivity@50ea807 in: STOPPED
+10-22 07:43:35.277 11764 11764 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=cn.yunji.journal.MainActivity@50ea807
+10-22 07:43:35.396 11764 11764 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.app.Activity$$ExternalSyntheticLambda0@7e06871
+10-22 07:43:35.401   678  1672 D CoreBackPreview: Window{b7a737 u0 cn.yunji.journal/cn.yunji.journal.MainActivity}: Setting back callback null
+10-22 07:43:35.402 11764 11764 D LifecycleMonitor: Lifecycle status change: cn.yunji.journal.MainActivity@50ea807 in: DESTROYED
+10-22 07:43:35.404 11764 11764 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-22 07:43:35.486   678   705 I ActivityTaskManager: Displayed cn.yunji.journal.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity for user 0: +1s440ms
+10-22 07:43:35.488 11764 11779 I TestRunner: finished: phase2LockedColdStartKeepsDraftAndNeverShowsJournal(cn.yunji.journal.ProcessRecoveryTest)
+10-22 07:43:35.521   927   985 V WindowManagerShell: Transition requested (#132): android.os.BinderProxy@ffa280f TransitionRequestInfo { type = CLOSE, triggerTask = TaskInfo{userId=0 taskId=81 effectiveUid=10228 displayId=0 isRunning=false baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=cn.yunji.journal.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity } baseActivity=null topActivity=null origActivity=null realActivity=ComponentInfo{cn.yunji.journal.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity} numActivities=0 lastActiveTime=3023001 supportsMultiWindow=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.window.IWindowContainerToken$Stub$Proxy@51d09c} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 0 - 0, 0) topActivityInfo=null launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=true isVisible=true isVisibleRequested=true isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=true lastNonFullscreenBounds=Rect(276, 692 - 804, 1772) capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=-9 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false eligibleForLetterboxEducation= false isLetterboxEducationEnabled= false isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(0, 0 - 0, 0) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=null cameraCompatTaskInfo=CameraCompatTaskInfo { freeformCameraCompatMode=undefined}} topActivityMainWindowFrame=null}, pipChange = null, remoteTransition = null, displayChange = null, flags = 0, debugId = 132 }
+10-22 07:43:35.523 11764 11779 I TestRunner: run finished: 1 tests, 0 failed, 0 ignored
+10-22 07:43:35.557   545   545 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-22 07:43:35.573   678   706 W ActivityTaskManager: callingPackage for (uid=-1, pid=0) has no WPC
+10-22 07:43:35.574   678   706 W ActivityStartInterceptor: Starting home with component specified, uid=0
+10-22 07:43:35.575   678   706 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_USER_ASPECT_RATIO_OVERRIDE
+10-22 07:43:35.579   678   706 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_USER_ASPECT_RATIO_FULLSCREEN_OVERRIDE
+10-22 07:43:35.580   678   706 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_RESIZEABLE_ACTIVITY_OVERRIDES
+10-22 07:43:35.581   678   706 W OptProp : Cannot read opt property android.window.PROPERTY_COMPAT_ALLOW_MIN_ASPECT_RATIO_OVERRIDE
+10-22 07:43:35.581   678   706 V GrammaticalInflectionUtils: AttributionSource: android.content.AttributionSource@65a64bab does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+10-22 07:43:35.583   678   706 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000100 cmp=com.google.android.apps.nexuslauncher/.NexusLauncherActivity (has extras)} with LAUNCH_SINGLE_TASK from uid 0 (BAL_ALLOW_ALLOWLISTED_UID) result code=3
+10-22 07:43:35.596   678  1672 V AccessibilityManagerService: onUserStateChangedLocked for userId: 0, forceUpdate: false
+10-22 07:43:35.623 11764 11764 D ViewRootImpl: Skipping stats log for color mode
+10-22 07:43:35.632   545   642 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+10-22 07:43:35.637   678  1676 I ImeTracker: system_server:7d3b2aba: onRequestHide at ORIGIN_SERVER reason IME_REQUESTED_CHANGED_LISTENER fromUser false
+10-22 07:43:35.645  1066  1066 D ViewRootImpl: Skipping stats log for color mode
+10-22 07:43:35.664  1066  1066 D TFOManager: playPanelCloseAnimation() duration=200 traceTag=LauncherOverlay-hide isHomeButtonTap=true
+10-22 07:43:35.673  1066  1066 D TFOManager: Skipped creating panel close animation because -1 is invisible.
+10-22 07:43:35.673  1066  1066 D OverviewCommandHelper: clearing pending commands: []
+10-22 07:43:35.674   927   927 I vol.VolumeDialogImpl: mDialog.dismiss() reason: volume_controller from: com.android.systemui.volume.VolumeDialogImpl$7.onDismissRequested:3
+10-22 07:43:35.685  3073  3082 I AiAiEcho: Settings changed for uri: content://settings/secure/accessibility_enabled
+10-22 07:43:35.688  3073  3107 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+10-22 07:43:35.697  3073  3107 I AiAiEcho: EchoTargets: 
+10-22 07:43:35.697  3073  3107 I AiAiEcho: Filtered by AiAi flag check: 
+10-22 07:43:35.697  3073  3107 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+10-22 07:43:35.700  3073  3107 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+10-22 07:43:35.701  1066  1066 D NexusLauncherModelDelegate: notifySmartspaceEvent: SmartspaceTargetEvent{mSmartspaceTarget=null, mSmartspaceActionId='null', mEventType=6}
+10-22 07:43:35.701  3073  3107 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+10-22 07:43:35.707  3073  3107 I AiAiEcho: EchoTargets: 
+10-22 07:43:35.707  3073  3107 I AiAiEcho: Filtered by AiAi flag check: 
+10-22 07:43:35.707  3073  3107 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+10-22 07:43:35.709  3073  3107 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+10-22 07:43:35.716  3073  3107 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+10-22 07:43:35.718   927   927 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+10-22 07:43:35.719  3073  3107 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+10-22 07:43:35.721   927   985 D WindowManagerShell: setLauncherKeepClearAreaHeight: visible=true, height=527
+10-22 07:43:35.741   678  1672 W MagnificationConnectionManager: requestConnection duplicated request: connect=false, mConnectionState=DISCONNECTED
+10-22 07:43:35.743   678  1672 D AccessibilityManagerService: restoreCurrentUserForTestAutomationIfNeededLocked(): ignoring because device doesn't support visible background users
+10-22 07:43:35.747   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:35.749   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:35.750   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:35.754   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:35.756   927   985 D WindowManagerShell: onActivityRestartAttempt: topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity}, wasVisible=false
+10-22 07:43:35.770   678  2464 I ActivityManager: Force stopping cn.yunji.journal appid=10227 user=0: finished inst
+10-22 07:43:35.776 11753 11753 I app_process: System.exit called, status: 0
+10-22 07:43:35.776 11753 11753 I AndroidRuntime: VM exiting with result code 0.
+10-22 07:43:35.777   678   880 D BackgroundInstallControlService: Package event received: 0
+10-22 07:43:35.804   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:35.807   678  2464 E ActivityManager: Unable to freeze binder for 11764: -11
+10-22 07:43:35.811   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:35.813   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:35.817  1066  1066 D BaseDepthController: setSurface:
+10-22 07:43:35.817  1066  1066 D BaseDepthController: 	mWaitingOnSurfaceValidity: false
+10-22 07:43:35.817  1066  1066 D BaseDepthController: 	mBaseSurface: Surface(name=com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity)/@0xd2fccca
+10-22 07:43:35.821   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:35.839   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:35.840   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:35.840   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:35.840   678   678 W IPCThreadState: Sending oneway calls to frozen process.
+10-22 07:43:35.840   678   678 W AccessibilityManagerService:  wait for adding window timeout: 22
+10-22 07:43:35.841   678   678 D BatterySaverPolicy: accessibility changed to false, updating policy.
+10-22 07:43:35.850   678  2464 I ActivityManager: Killing 11764:cn.yunji.journal/u0a227 (adj 0): stop cn.yunji.journal due to finished inst
+10-22 07:43:35.853   678   880 D BackgroundInstallControlService: Package event received: 0
+10-22 07:43:35.881   678   880 D BackgroundInstallControlService: Package event received: 0
+10-22 07:43:35.945  1066  1066 D ActivityAllAppsContainerView: rebindAdapters: force: false

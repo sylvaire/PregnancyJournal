@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.ShareOriginalPolicyTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-22T07:08:31.499Z" hostname="SUN-KDQ5E4QJN34" time="0.005">
+  <properties/>
+  <testcase name="shareFlagsAreReadOnly" classname="cn.yunji.journal.ShareOriginalPolicyTest" time="0.001"/>
+  <testcase name="invocationSendsExactlyOneContentStream" classname="cn.yunji.journal.ShareOriginalPolicyTest" time="0.001"/>
+  <testcase name="shareTypeKeepsTheConcreteMimeAndDropsParameters" classname="cn.yunji.journal.ShareOriginalPolicyTest" time="0.0"/>
+  <testcase name="invocationRejectsNonContentAndUnsafeUris" classname="cn.yunji.journal.ShareOriginalPolicyTest" time="0.001"/>
+  <testcase name="shareAuthorityIsTheApplicationIdPlusTheDedicatedSuffix" classname="cn.yunji.journal.ShareOriginalPolicyTest" time="0.0"/>
+  <testcase name="shareFlagsCarryNoWriteOrPersistableBits" classname="cn.yunji.journal.ShareOriginalPolicyTest" time="0.0"/>
+  <testcase name="safeBaseNameStripsTraversalSeparatorsAndControlCharacters" classname="cn.yunji.journal.ShareOriginalPolicyTest" time="0.001"/>
+  <testcase name="shareAuthorityRejectsMalformedApplicationIds" classname="cn.yunji.journal.ShareOriginalPolicyTest" time="0.0"/>
+  <testcase name="shareGrantNeedsTheReadBit" classname="cn.yunji.journal.ShareOriginalPolicyTest" time="0.0"/>
+  <testcase name="temporaryNameIsStableSafeAndUniquePerToken" classname="cn.yunji.journal.ShareOriginalPolicyTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

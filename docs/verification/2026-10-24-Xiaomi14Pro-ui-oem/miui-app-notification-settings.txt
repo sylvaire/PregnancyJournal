@@ -1,0 +1,17 @@
+# MIUI app notification settings (opened via the app's 系统通知设置 button)
+
+Activity: com.android.settings/.Settings$AppNotificationSettingsActivity
+
+Rows and read-back switch state:
+- 允许通知 ... checked=true
+- 焦点通知 (将关键通知以特殊样式展示) ... checked=true
+- 通知权限设置
+- 桌面角标 ... checked=false
+- 悬浮通知 (允许在屏幕上方弹出通知) ... checked=true
+- 锁屏通知 (允许在锁屏时进行通知提醒) ... checked=true
+- 发声 ... checked=true
+- 振动 ... checked=true
+- 常驻通知 ... checked=true
+- 通知类别: 孕迹提醒 - 产检、用药和自定义本地提醒；锁屏默认隐藏具体内容
+
+Returning with BACK goes back to the app (the system settings activity is opened inside the app task).

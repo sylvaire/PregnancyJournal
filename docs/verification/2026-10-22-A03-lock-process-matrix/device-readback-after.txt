@@ -1,0 +1,7 @@
+1.0
+Night mode: no
+1
+0
+Physical size: 1080x2400
+Physical density: 420
+NO_APP_OR_TEST_PROCESS

@@ -1,0 +1,13 @@
+Performing Streamed Install
+Success
+Starting: Intent { cmp=cn.yunji.journal/.MainActivity }
+Status: ok
+LaunchState: COLD
+Activity: cn.yunji.journal/.MainActivity
+TotalTime: 704
+WaitTime: 707
+Complete
+
+    versionCode=15 minSdk=26 targetSdk=36
+    versionName=0.14.0-dev
+

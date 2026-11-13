@@ -1,0 +1,10 @@
+{
+  "platform": "API34模拟器 (emulator-5580)",
+  "versionName": "0.19.0-dev",
+  "versionCode": 20,
+  "activityStartOk": true,
+  "coldStartMs": 2570,
+  "api34Tests": 171,
+  "api34Seconds": 399.56,
+  "phone": "本轮未连接，未安装"
+}

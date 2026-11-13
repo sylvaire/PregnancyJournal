@@ -1,0 +1,447 @@
+{
+  "screens": [
+    {
+      "id": "12:26",
+      "name": "01 Welcome",
+      "bodyHeight": 765,
+      "contentBottom": 646,
+      "statusWidth": 412,
+      "buttons": [
+        {
+          "id": "12:55",
+          "w": 364,
+          "h": 52,
+          "label": "创建我的孕期档案",
+          "fills": 1
+        },
+        {
+          "id": "12:61",
+          "w": 364,
+          "h": 52,
+          "label": "恢复已有资料",
+          "fills": 1
+        }
+      ],
+      "horizontalOverflow": []
+    },
+    {
+      "id": "12:68",
+      "name": "02 CreatePregnancy",
+      "bodyHeight": 765,
+      "contentBottom": 591,
+      "statusWidth": 412,
+      "buttons": [
+        {
+          "id": "12:126",
+          "w": 364,
+          "h": 52,
+          "label": "保存并进入首页",
+          "fills": 1
+        },
+        {
+          "id": "12:132",
+          "w": 364,
+          "h": 52,
+          "label": "日期暂不确定，先建档",
+          "fills": 1
+        }
+      ],
+      "horizontalOverflow": []
+    },
+    {
+      "id": "12:138",
+      "name": "03 Today",
+      "bodyHeight": 671,
+      "contentBottom": 641,
+      "statusWidth": 412,
+      "buttons": [],
+      "horizontalOverflow": []
+    },
+    {
+      "id": "12:217",
+      "name": "04 Visits",
+      "bodyHeight": 671,
+      "contentBottom": 554,
+      "statusWidth": 412,
+      "buttons": [
+        {
+          "id": "12:272",
+          "w": 364,
+          "h": 52,
+          "label": "新建产检预约",
+          "fills": 1
+        }
+      ],
+      "horizontalOverflow": []
+    },
+    {
+      "id": "12:283",
+      "name": "05 VisitDetail",
+      "bodyHeight": 765,
+      "contentBottom": 668,
+      "statusWidth": 412,
+      "buttons": [
+        {
+          "id": "12:321",
+          "w": 364,
+          "h": 52,
+          "label": "记录本次就诊",
+          "fills": 1
+        },
+        {
+          "id": "12:327",
+          "w": 364,
+          "h": 52,
+          "label": "修改预约",
+          "fills": 1
+        }
+      ],
+      "horizontalOverflow": []
+    },
+    {
+      "id": "12:333",
+      "name": "06 VisitEditor",
+      "bodyHeight": 765,
+      "contentBottom": 548,
+      "statusWidth": 412,
+      "buttons": [
+        {
+          "id": "12:402",
+          "w": 364,
+          "h": 52,
+          "label": "保存预约",
+          "fills": 1
+        }
+      ],
+      "horizontalOverflow": []
+    },
+    {
+      "id": "12:409",
+      "name": "07 Documents",
+      "bodyHeight": 671,
+      "contentBottom": 588,
+      "statusWidth": 412,
+      "buttons": [
+        {
+          "id": "12:490",
+          "w": 364,
+          "h": 52,
+          "label": "保存检查资料",
+          "fills": 1
+        }
+      ],
+      "horizontalOverflow": []
+    },
+    {
+      "id": "12:497",
+      "name": "08 DocumentDetail",
+      "bodyHeight": 765,
+      "contentBottom": 655,
+      "statusWidth": 412,
+      "buttons": [
+        {
+          "id": "12:533",
+          "w": 364,
+          "h": 52,
+          "label": "查看原件",
+          "fills": 1
+        },
+        {
+          "id": "12:539",
+          "w": 364,
+          "h": 52,
+          "label": "导出或分享",
+          "fills": 1
+        }
+      ],
+      "horizontalOverflow": []
+    },
+    {
+      "id": "14:255",
+      "name": "09 Medication",
+      "bodyHeight": 671,
+      "contentBottom": 663,
+      "statusWidth": 412,
+      "buttons": [
+        {
+          "id": "14:309",
+          "w": 364,
+          "h": 52,
+          "label": "记录已服用",
+          "fills": 1
+        },
+        {
+          "id": "14:315",
+          "w": 364,
+          "h": 52,
+          "label": "稍后提醒",
+          "fills": 1
+        }
+      ],
+      "horizontalOverflow": []
+    },
+    {
+      "id": "14:329",
+      "name": "10 MedicationEditor",
+      "bodyHeight": 765,
+      "contentBottom": 585,
+      "statusWidth": 412,
+      "buttons": [
+        {
+          "id": "14:402",
+          "w": 364,
+          "h": 52,
+          "label": "保存用药方案",
+          "fills": 1
+        }
+      ],
+      "horizontalOverflow": []
+    },
+    {
+      "id": "14:408",
+      "name": "11 Health",
+      "bodyHeight": 671,
+      "contentBottom": 665,
+      "statusWidth": 412,
+      "buttons": [
+        {
+          "id": "14:479",
+          "w": 364,
+          "h": 52,
+          "label": "记录健康指标",
+          "fills": 1
+        }
+      ],
+      "horizontalOverflow": []
+    },
+    {
+      "id": "14:485",
+      "name": "12 Timeline",
+      "bodyHeight": 671,
+      "contentBottom": 612,
+      "statusWidth": 412,
+      "buttons": [
+        {
+          "id": "14:554",
+          "w": 364,
+          "h": 52,
+          "label": "写一条日常备注",
+          "fills": 1
+        }
+      ],
+      "horizontalOverflow": []
+    },
+    {
+      "id": "14:564",
+      "name": "13 Settings",
+      "bodyHeight": 671,
+      "contentBottom": 593,
+      "statusWidth": 412,
+      "buttons": [],
+      "horizontalOverflow": []
+    },
+    {
+      "id": "14:635",
+      "name": "14 Backup",
+      "bodyHeight": 765,
+      "contentBottom": 732,
+      "statusWidth": 412,
+      "buttons": [
+        {
+          "id": "14:681",
+          "w": 364,
+          "h": 52,
+          "label": "立即备份",
+          "fills": 1
+        },
+        {
+          "id": "14:687",
+          "w": 364,
+          "h": 52,
+          "label": "从备份恢复",
+          "fills": 1
+        }
+      ],
+      "horizontalOverflow": []
+    },
+    {
+      "id": "14:694",
+      "name": "15 RestorePreview",
+      "bodyHeight": 765,
+      "contentBottom": 580,
+      "statusWidth": 412,
+      "buttons": [
+        {
+          "id": "14:726",
+          "w": 364,
+          "h": 52,
+          "label": "确认恢复",
+          "fills": 1
+        },
+        {
+          "id": "14:732",
+          "w": 364,
+          "h": 52,
+          "label": "暂不恢复",
+          "fills": 1
+        }
+      ],
+      "horizontalOverflow": []
+    },
+    {
+      "id": "14:738",
+      "name": "16 BackupError",
+      "bodyHeight": 765,
+      "contentBottom": 554,
+      "statusWidth": 412,
+      "buttons": [
+        {
+          "id": "14:768",
+          "w": 364,
+          "h": 52,
+          "label": "更新云盘凭据",
+          "fills": 1
+        },
+        {
+          "id": "14:774",
+          "w": 364,
+          "h": 52,
+          "label": "导出本地加密备份",
+          "fills": 1
+        }
+      ],
+      "horizontalOverflow": []
+    },
+    {
+      "id": "16:472",
+      "name": "17 EmptyDocuments",
+      "bodyHeight": 671,
+      "contentBottom": 434,
+      "statusWidth": 412,
+      "buttons": [
+        {
+          "id": "16:508",
+          "w": 364,
+          "h": 52,
+          "label": "拍照保存",
+          "fills": 1
+        },
+        {
+          "id": "16:514",
+          "w": 364,
+          "h": 52,
+          "label": "选择图片或 PDF",
+          "fills": 1
+        }
+      ],
+      "horizontalOverflow": []
+    },
+    {
+      "id": "16:521",
+      "name": "18 ImportProgress",
+      "bodyHeight": 765,
+      "contentBottom": 626,
+      "statusWidth": 412,
+      "buttons": [
+        {
+          "id": "16:570",
+          "w": 364,
+          "h": 52,
+          "label": "暂时返回列表",
+          "fills": 1
+        }
+      ],
+      "horizontalOverflow": []
+    },
+    {
+      "id": "16:576",
+      "name": "19 CloudConnect",
+      "bodyHeight": 765,
+      "contentBottom": 588,
+      "statusWidth": 412,
+      "buttons": [
+        {
+          "id": "16:631",
+          "w": 364,
+          "h": 52,
+          "label": "测试连接",
+          "fills": 1
+        },
+        {
+          "id": "16:637",
+          "w": 364,
+          "h": 52,
+          "label": "暂不开启备份",
+          "fills": 1
+        }
+      ],
+      "horizontalOverflow": []
+    },
+    {
+      "id": "16:644",
+      "name": "20 RecoveryKey",
+      "bodyHeight": 765,
+      "contentBottom": 542,
+      "statusWidth": 412,
+      "buttons": [
+        {
+          "id": "16:672",
+          "w": 364,
+          "h": 52,
+          "label": "验证并检查备份",
+          "fills": 1
+        },
+        {
+          "id": "16:678",
+          "w": 364,
+          "h": 52,
+          "label": "重新选择备份文件",
+          "fills": 1
+        }
+      ],
+      "horizontalOverflow": []
+    }
+  ],
+  "remainingGlyphs": [],
+  "quick": [
+    {
+      "id": "12:197",
+      "w": 113,
+      "h": 77
+    },
+    {
+      "id": "12:201",
+      "w": 113,
+      "h": 77
+    },
+    {
+      "id": "12:205",
+      "w": 113,
+      "h": 77
+    }
+  ],
+  "flowStartingPoints": [
+    {
+      "nodeId": "12:26",
+      "name": "首次使用"
+    },
+    {
+      "nodeId": "12:138",
+      "name": "日常记录"
+    },
+    {
+      "nodeId": "14:635",
+      "name": "备份与恢复"
+    }
+  ],
+  "prototypeReactions": 86,
+  "contrast": {
+    "bodyOnBackground": "11.18",
+    "secondaryOnBackground": "4.87",
+    "button": "6.21",
+    "selectedLabel": "6.21",
+    "secondaryOnWhite": "5.20"
+  },
+  "explicitPrototypeLinksVerified": 63,
+  "missingPrototypeLinks": []
+}

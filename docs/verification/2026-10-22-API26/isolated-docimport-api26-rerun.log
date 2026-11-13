@@ -1,0 +1,652 @@
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+cn.yunji.journal.DocumentImportTest:
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=syntheticImportTiming
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+cn.yunji.journal.DocumentImportTest:
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=syntheticImportTiming
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: stack=org.junit.AssumptionViolatedException: got: <false>, expected: is <true>
+	at org.junit.Assume.assumeThat(Assume.java:106)
+	at org.junit.Assume.assumeTrue(Assume.java:50)
+	at cn.yunji.journal.DocumentImportTest$syntheticImportTiming$1.invokeSuspend(DocumentImportTest.kt:108)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.DocumentImportTest.syntheticImportTiming(DocumentImportTest.kt:106)
+
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS_CODE: -4
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=permanentVisitDeletionKeepsReportsAccessibleAndRestorable
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=permanentVisitDeletionKeepsReportsAccessibleAndRestorable
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=lockingImporterCancelsSnapshotAndWaitsForReleaseBeforeDatabaseClose
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=lockingImporterCancelsSnapshotAndWaitsForReleaseBeforeDatabaseClose
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=scopedSnapshotReleasesPinsAndRetiredObjectsWhenCallbackFails
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=scopedSnapshotReleasesPinsAndRetiredObjectsWhenCallbackFails
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=thumbnailRetryUsesNewImmutableObjectAndRemovesSupersededFile
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=thumbnailRetryUsesNewImmutableObjectAndRemovesSupersededFile
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=imageAndPdfAreAuthenticatedAndIndependentOfSource
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=imageAndPdfAreAuthenticatedAndIndependentOfSource
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=cancelledScopedSnapshotReleasesBeforeJobFinishes
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=cancelledScopedSnapshotReleasesBeforeJobFinishes
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=corruptedOriginalCanBeReplacedAndExportedWithoutLeakingPlaintext
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=corruptedOriginalCanBeReplacedAndExportedWithoutLeakingPlaintext
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=malformedPdfKeepsOriginalAndDoesNotLeaveViewerPlaintext
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=malformedPdfKeepsOriginalAndDoesNotLeaveViewerPlaintext
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=orphanPinSurvivesDatabaseReopenUntilRecoveryThenRetiredFileIsRemoved
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=orphanPinSurvivesDatabaseReopenUntilRecoveryThenRetiredFileIsRemoved
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=retentionBoundaryDoesNotCleanBeforeThirtyDays
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=11
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=retentionBoundaryDoesNotCleanBeforeThirtyDays
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=11
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=partialFailureCanBeReselectedWithoutDuplicatingSuccessfulFiles
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=12
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=partialFailureCanBeReselectedWithoutDuplicatingSuccessfulFiles
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=12
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=lockingImporterClosesNativePdfAndDeletesPlaintextBeforeRejectingNewPreviews
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=13
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+Error in lockingImporterClosesNativePdfAndDeletesPlaintextBeforeRejectingNewPreviews(cn.yunji.journal.DocumentImportTest):
+java.io.IOException: file not in PDF format or corrupted
+	at android.graphics.pdf.PdfRenderer.nativeCreate(Native Method)
+	at android.graphics.pdf.PdfRenderer.<init>(PdfRenderer.java:166)
+	at cn.yunji.journal.feature.PdfSession.<init>(PdfDocumentView.kt:37)
+	at cn.yunji.journal.DocumentImportTest$lockingImporterClosesNativePdfAndDeletesPlaintextBeforeRejectingNewPreviews$1.invokeSuspend(DocumentImportTest.kt:62)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.DocumentImportTest.lockingImporterClosesNativePdfAndDeletesPlaintextBeforeRejectingNewPreviews(DocumentImportTest.kt:56)
+
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=lockingImporterClosesNativePdfAndDeletesPlaintextBeforeRejectingNewPreviews
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: stack=java.io.IOException: file not in PDF format or corrupted
+	at android.graphics.pdf.PdfRenderer.nativeCreate(Native Method)
+	at android.graphics.pdf.PdfRenderer.<init>(PdfRenderer.java:166)
+	at cn.yunji.journal.feature.PdfSession.<init>(PdfDocumentView.kt:37)
+	at cn.yunji.journal.DocumentImportTest$lockingImporterClosesNativePdfAndDeletesPlaintextBeforeRejectingNewPreviews$1.invokeSuspend(DocumentImportTest.kt:62)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.DocumentImportTest.lockingImporterClosesNativePdfAndDeletesPlaintextBeforeRejectingNewPreviews(DocumentImportTest.kt:56)
+
+INSTRUMENTATION_STATUS: current=13
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=schemaOneThroughTwelveUpgradeKeepsExistingRecordsAndDrafts
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=14
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=schemaOneThroughTwelveUpgradeKeepsExistingRecordsAndDrafts
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=14
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=twoSnapshotsKeepReplacedObjectsUntilBothRelease
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=15
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=twoSnapshotsKeepReplacedObjectsUntilBothRelease
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=15
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=lateImportCannotReviveCancelledOrDeletedItem
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=16
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=lateImportCannotReviveCancelledOrDeletedItem
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=16
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=medicationPhotosAreEncryptedOwnedByDrugAndFollowTrashLifecycle
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=17
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=medicationPhotosAreEncryptedOwnedByDrugAndFollowTrashLifecycle
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=17
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=tamperedOriginalIsNeverExposedForPreview
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=18
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=tamperedOriginalIsNeverExposedForPreview
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=18
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=metadataEditsRemainEncryptedAndSurviveRecycleWithoutChangingOriginal
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=19
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=metadataEditsRemainEncryptedAndSurviveRecycleWithoutChangingOriginal
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=19
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=batchLimitAndOversizedFileDoNotCommitAttachments
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=20
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=batchLimitAndOversizedFileDoNotCommitAttachments
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=20
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=replayedFileHandoffDoesNotDuplicateOrReviveImport
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=21
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=replayedFileHandoffDoesNotDuplicateOrReviveImport
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=21
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=previewTrashRestoreAndPermanentDeleteKeepSourceUntouched
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=22
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=previewTrashRestoreAndPermanentDeleteKeepSourceUntouched
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=22
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=snapshotKeepsPermanentlyDeletedFileAndRejectsCaptureDuringPurge
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=23
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=snapshotKeepsPermanentlyDeletedFileAndRejectsCaptureDuringPurge
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=23
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=deletionDuringImportCannotResurrectAfterParentRestore
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=24
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=deletionDuringImportCannotResurrectAfterParentRestore
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=24
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=interruptedObjectAndMissingSourceRemainRecoverable
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=25
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=interruptedObjectAndMissingSourceRemainRecoverable
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=25
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=pdfPagesAreBoundedAndPreviewCloseRemovesPlaintext
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=26
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+Error in pdfPagesAreBoundedAndPreviewCloseRemovesPlaintext(cn.yunji.journal.DocumentImportTest):
+java.io.IOException: file not in PDF format or corrupted
+	at android.graphics.pdf.PdfRenderer.nativeCreate(Native Method)
+	at android.graphics.pdf.PdfRenderer.<init>(PdfRenderer.java:166)
+	at cn.yunji.journal.feature.PdfSession.<init>(PdfDocumentView.kt:37)
+	at cn.yunji.journal.DocumentImportTest$pdfPagesAreBoundedAndPreviewCloseRemovesPlaintext$1.invokeSuspend(DocumentImportTest.kt:474)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.DocumentImportTest.pdfPagesAreBoundedAndPreviewCloseRemovesPlaintext(DocumentImportTest.kt:454)
+
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=pdfPagesAreBoundedAndPreviewCloseRemovesPlaintext
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: stack=java.io.IOException: file not in PDF format or corrupted
+	at android.graphics.pdf.PdfRenderer.nativeCreate(Native Method)
+	at android.graphics.pdf.PdfRenderer.<init>(PdfRenderer.java:166)
+	at cn.yunji.journal.feature.PdfSession.<init>(PdfDocumentView.kt:37)
+	at cn.yunji.journal.DocumentImportTest$pdfPagesAreBoundedAndPreviewCloseRemovesPlaintext$1.invokeSuspend(DocumentImportTest.kt:474)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.DocumentImportTest.pdfPagesAreBoundedAndPreviewCloseRemovesPlaintext(DocumentImportTest.kt:454)
+
+INSTRUMENTATION_STATUS: current=26
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=pregnancyPurgeRetriesFileFailureAndCleansIndependentTrashToo
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=27
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=pregnancyPurgeRetriesFileFailureAndCleansIndependentTrashToo
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=27
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=coverAndRelinkStayWithinPregnancyAndClearStaleOwners
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=28
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=coverAndRelinkStayWithinPregnancyAndClearStaleOwners
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=28
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=cameraOrientationAndRegionDecodingStayBounded
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=29
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+Error in cameraOrientationAndRegionDecodingStayBounded(cn.yunji.journal.DocumentImportTest):
+java.io.IOException: ExifInterface only supports saving attributes on JPEG formats.
+	at android.media.ExifInterface.saveAttributes(ExifInterface.java:1770)
+	at cn.yunji.journal.DocumentImportTest$cameraOrientationAndRegionDecodingStayBounded$1.invokeSuspend(DocumentImportTest.kt:323)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.DocumentImportTest.cameraOrientationAndRegionDecodingStayBounded(DocumentImportTest.kt:315)
+
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=cameraOrientationAndRegionDecodingStayBounded
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: stack=java.io.IOException: ExifInterface only supports saving attributes on JPEG formats.
+	at android.media.ExifInterface.saveAttributes(ExifInterface.java:1770)
+	at cn.yunji.journal.DocumentImportTest$cameraOrientationAndRegionDecodingStayBounded$1.invokeSuspend(DocumentImportTest.kt:323)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.DocumentImportTest.cameraOrientationAndRegionDecodingStayBounded(DocumentImportTest.kt:315)
+
+INSTRUMENTATION_STATUS: current=29
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=largeImageAndMultiPagePdfStayWithinThumbnailAndRenderBounds
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=30
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+Error in largeImageAndMultiPagePdfStayWithinThumbnailAndRenderBounds(cn.yunji.journal.DocumentImportTest):
+java.io.IOException: file not in PDF format or corrupted
+	at android.graphics.pdf.PdfRenderer.nativeCreate(Native Method)
+	at android.graphics.pdf.PdfRenderer.<init>(PdfRenderer.java:166)
+	at cn.yunji.journal.feature.PdfSession.<init>(PdfDocumentView.kt:37)
+	at cn.yunji.journal.DocumentImportTest$largeImageAndMultiPagePdfStayWithinThumbnailAndRenderBounds$1.invokeSuspend(DocumentImportTest.kt:827)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.DocumentImportTest.largeImageAndMultiPagePdfStayWithinThumbnailAndRenderBounds(DocumentImportTest.kt:796)
+
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=largeImageAndMultiPagePdfStayWithinThumbnailAndRenderBounds
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: stack=java.io.IOException: file not in PDF format or corrupted
+	at android.graphics.pdf.PdfRenderer.nativeCreate(Native Method)
+	at android.graphics.pdf.PdfRenderer.<init>(PdfRenderer.java:166)
+	at cn.yunji.journal.feature.PdfSession.<init>(PdfDocumentView.kt:37)
+	at cn.yunji.journal.DocumentImportTest$largeImageAndMultiPagePdfStayWithinThumbnailAndRenderBounds$1.invokeSuspend(DocumentImportTest.kt:827)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.DocumentImportTest.largeImageAndMultiPagePdfStayWithinThumbnailAndRenderBounds(DocumentImportTest.kt:796)
+
+INSTRUMENTATION_STATUS: current=30
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=foregroundQueueStartsWithoutWaitingForWorkerDispatch
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=31
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=foregroundQueueStartsWithoutWaitingForWorkerDispatch
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=31
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=pregnancyBatchRestoreDoesNotReviveIndependentlyDeletedVisitsOrFiles
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=32
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=pregnancyBatchRestoreDoesNotReviveIndependentlyDeletedVisitsOrFiles
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.DocumentImportTest
+INSTRUMENTATION_STATUS: current=32
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 34.896
+There were 4 failures:
+1) lockingImporterClosesNativePdfAndDeletesPlaintextBeforeRejectingNewPreviews(cn.yunji.journal.DocumentImportTest)
+java.io.IOException: file not in PDF format or corrupted
+	at android.graphics.pdf.PdfRenderer.nativeCreate(Native Method)
+	at android.graphics.pdf.PdfRenderer.<init>(PdfRenderer.java:166)
+	at cn.yunji.journal.feature.PdfSession.<init>(PdfDocumentView.kt:37)
+	at cn.yunji.journal.DocumentImportTest$lockingImporterClosesNativePdfAndDeletesPlaintextBeforeRejectingNewPreviews$1.invokeSuspend(DocumentImportTest.kt:62)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.DocumentImportTest.lockingImporterClosesNativePdfAndDeletesPlaintextBeforeRejectingNewPreviews(DocumentImportTest.kt:56)
+2) pdfPagesAreBoundedAndPreviewCloseRemovesPlaintext(cn.yunji.journal.DocumentImportTest)
+java.io.IOException: file not in PDF format or corrupted
+	at android.graphics.pdf.PdfRenderer.nativeCreate(Native Method)
+	at android.graphics.pdf.PdfRenderer.<init>(PdfRenderer.java:166)
+	at cn.yunji.journal.feature.PdfSession.<init>(PdfDocumentView.kt:37)
+	at cn.yunji.journal.DocumentImportTest$pdfPagesAreBoundedAndPreviewCloseRemovesPlaintext$1.invokeSuspend(DocumentImportTest.kt:474)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.DocumentImportTest.pdfPagesAreBoundedAndPreviewCloseRemovesPlaintext(DocumentImportTest.kt:454)
+3) cameraOrientationAndRegionDecodingStayBounded(cn.yunji.journal.DocumentImportTest)
+java.io.IOException: ExifInterface only supports saving attributes on JPEG formats.
+	at android.media.ExifInterface.saveAttributes(ExifInterface.java:1770)
+	at cn.yunji.journal.DocumentImportTest$cameraOrientationAndRegionDecodingStayBounded$1.invokeSuspend(DocumentImportTest.kt:323)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.DocumentImportTest.cameraOrientationAndRegionDecodingStayBounded(DocumentImportTest.kt:315)
+4) largeImageAndMultiPagePdfStayWithinThumbnailAndRenderBounds(cn.yunji.journal.DocumentImportTest)
+java.io.IOException: file not in PDF format or corrupted
+	at android.graphics.pdf.PdfRenderer.nativeCreate(Native Method)
+	at android.graphics.pdf.PdfRenderer.<init>(PdfRenderer.java:166)
+	at cn.yunji.journal.feature.PdfSession.<init>(PdfDocumentView.kt:37)
+	at cn.yunji.journal.DocumentImportTest$largeImageAndMultiPagePdfStayWithinThumbnailAndRenderBounds$1.invokeSuspend(DocumentImportTest.kt:827)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.DocumentImportTest.largeImageAndMultiPagePdfStayWithinThumbnailAndRenderBounds(DocumentImportTest.kt:796)
+
+FAILURES!!!
+Tests run: 32,  Failures: 4
+
+
+INSTRUMENTATION_CODE: -1

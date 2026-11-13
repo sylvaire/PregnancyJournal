@@ -1,0 +1,71 @@
+== device before ==
+device: 26   font_scale=null   night=null   rotation=null
+== export-selfcheck phase1: phase1ExportSelfCheckBlocked
+   marker: phase=export-selfcheck pid=16224 token=d02selfcheck
+ workRoot=/data/user/0/cn.yunji.journal/no_backup/vault/backup-work
+ destination=/data/user/0/cn.yunji.journal/cache/task8-selfcheck-destination.yunji
+ blockedAt=正在校验原件与恢复数据
+   force-stopping cn.yunji.journal (SIGKILL)
+   marker after kill: phase=export-selfcheck pid=16224 token=d02selfcheck
+ workRoot=/data/user/0/cn.yunji.journal/no_backup/vault/backup-work
+ destination=/data/user/0/cn.yunji.journal/cache/task8-selfcheck-destination.yunji
+ blockedAt=正在校验原件与恢复数据forceStoppedAt=1792662148
+ 
+== export-selfcheck phase2: phase2ExportSelfCheckRecovered
+PASS export-selfcheck phase2
+== export-write phase1: phase1ExportDestinationWriteBlocked
+   marker: phase=export-write pid=16332 token=d02write key=YJ1:qLuWtZKo0ANMTfjCGNELDgX9lKjVx32NoxJ2msPt-xJEqqCg
+ destination=/data/user/0/cn.yunji.journal/files/task6-recovery-d02write/destination-prefix.yunji
+   force-stopping cn.yunji.journal (SIGKILL)
+   marker after kill: phase=export-write pid=16332 token=d02write key=YJ1:qLuWtZKo0ANMTfjCGNELDgX9lKjVx32NoxJ2msPt-xJEqqCg
+ destination=/data/user/0/cn.yunji.journal/files/task6-recovery-d02write/destination-prefix.yunjiforceStoppedAt=1792662150
+ 
+== export-write phase2: phase2TruncatedDestinationIsRejectedAndRetryWorks
+PASS export-write phase2
+== verify phase1: phase1VerifyBlocked
+   marker: phase=verify pid=16438 token=d02verify key=YJ1:8cjSzJ85zFCmfskZTtdN5RKUW2YsaNikVKZD1_Vs2bnbtfMW
+ archive=/data/user/0/cn.yunji.journal/files/task6-recovery-d02verify/source.yunji
+ archiveDigest=a66b9c4799592585ffe59b8193ba8f412d348592764e3dde76a775c12925aae3
+ blockedDuringVerify=true
+   force-stopping cn.yunji.journal (SIGKILL)
+   marker after kill: phase=verify pid=16438 token=d02verify key=YJ1:8cjSzJ85zFCmfskZTtdN5RKUW2YsaNikVKZD1_Vs2bnbtfMW
+ archive=/data/user/0/cn.yunji.journal/files/task6-recovery-d02verify/source.yunji
+ archiveDigest=a66b9c4799592585ffe59b8193ba8f412d348592764e3dde76a775c12925aae3
+ blockedDuringVerify=trueforceStoppedAt=1792662154
+ 
+== verify phase2: phase2VerifyKilledProcessKeepsArchiveAndRetryVerifies
+PASS verify phase2
+== purge phase1: phase1PurgeStarted
+   marker: phase=purge pid=16548 token=d02purge key=YJ1:tebnfA1o7aq8lOSJ895uTUqFBLXIA3LDkvgFvpvt7DTH9R-- attachmentId=d370c6b2-c983-4e4e-9274-bbca632d1bda
+ objectFile=/data/user/0/cn.yunji.journal/files/task6-recovery-d02purge/vault/objects/d370c6b2-c983-4e4e-9274-bbca632d1bda.bin
+   force-stopping cn.yunji.journal (SIGKILL)
+   marker after kill: phase=purge pid=16548 token=d02purge key=YJ1:tebnfA1o7aq8lOSJ895uTUqFBLXIA3LDkvgFvpvt7DTH9R-- attachmentId=d370c6b2-c983-4e4e-9274-bbca632d1bda
+ objectFile=/data/user/0/cn.yunji.journal/files/task6-recovery-d02purge/vault/objects/d370c6b2-c983-4e4e-9274-bbca632d1bda.binforceStoppedAt=1792662156
+ 
+== purge phase2: phase2PurgingIsNotCompleteAndResumeFinishesIt
+PASS purge phase2
+== orphan phase1: phase1OrphanArtifactsCreated
+   marker: phase=orphan pid=16652
+ backupOrphan=/data/user/0/cn.yunji.journal/no_backup/vault/backup-work/job-76b9d672-2ff4-47ed-959f-9059f7271625
+ backupKeep=/data/user/0/cn.yunji.journal/no_backup/vault/backup-work
+ restoreOrphan=/data/user/0/cn.yunji.journal/no_backup/vault/restore-input/job-0cd2d25b-5d2c-4876-bb91-f687a50c2b12
+ exportOrphan=/data/user/0/cn.yunji.journal/cache/export-work/job-2a1c29e4-4314-47c8-85b9-5bbc449a8296
+   force-stopping cn.yunji.journal (SIGKILL)
+   marker after kill: phase=orphan pid=16652
+ backupOrphan=/data/user/0/cn.yunji.journal/no_backup/vault/backup-work/job-76b9d672-2ff4-47ed-959f-9059f7271625
+ backupKeep=/data/user/0/cn.yunji.journal/no_backup/vault/backup-work
+ restoreOrphan=/data/user/0/cn.yunji.journal/no_backup/vault/restore-input/job-0cd2d25b-5d2c-4876-bb91-f687a50c2b12
+ exportOrphan=/data/user/0/cn.yunji.journal/cache/export-work/job-2a1c29e4-4314-47c8-85b9-5bbc449a8296forceStoppedAt=1792662158
+ 
+== orphan phase2: phase2ColdStartCleansBackupRestoreOrphansAndDocumentsExportWorkGap
+PASS orphan phase2
+== device after ==
+device: 26   font_scale=null   night=null   rotation=null
+
+== PASS/FAIL ==
+PASS  export-selfcheck phase2
+PASS  export-write phase2
+PASS  verify phase2
+PASS  purge phase2
+PASS  orphan phase2
+TOTAL: pass=5 fail=0

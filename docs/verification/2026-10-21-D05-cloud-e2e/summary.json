@@ -1,0 +1,8 @@
+{
+  "jvm": 235,
+  "api34": 213,
+  "api34Seconds": 378.604,
+  "newE2e": 3,
+  "fatalInLogcat": 0,
+  "note": "云端恢复生产适配端到端：TLS假DAV→CloudSnapshotFetcher→LocalRestoreAccess→预览→提交。"
+}

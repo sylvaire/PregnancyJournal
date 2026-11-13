@@ -1,0 +1,113 @@
+{
+  "runId": "figma-ui-alignment-20261024",
+  "generatedAt": "2026-10-24",
+  "purpose": "M6 小米 11 Ultra 全功能调试 · UI 对齐素材：导出孕迹 Figma 设计屏、核对设计令牌、建立实现屏↔设计屏映射",
+  "author": "figma-analyst (teammate)",
+  "figma": {
+    "fileKey": "qwUxmzTnSJtzppU5eZwHcy",
+    "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy",
+    "pageId": "0:1",
+    "pageName": "01 · 孕迹 V1.0",
+    "sessionId": "250e26e9-e82e-431d-a65c-e4ddaca48efe",
+    "access": "只读（未修改画布）",
+    "observedAt": "2026-10-24 (Asia/Shanghai)"
+  },
+  "method": {
+    "structureCheck": "mcp__figma__get_metadata(page 0:1) — 逐节点确认 20 个设计屏与组件集合存在",
+    "export": "mcp__figma__download_assets(defaultFormat=png, defaultScale=2)；图幅 412×915 dp → 824×1830 px",
+    "alternativeTried": "mcp__figma__get_screenshot(maxDimension=1600) 只输出 1x（412×915，不放大），故改用 download_assets scale=2",
+    "download": "curl -f -L 下载 Figma MCP 临时 asset URL；URL 短时有效，未写入清单",
+    "tokens": "mcp__figma__get_variable_defs(node 12:138)；get_libraries；get_metadata；并以导出图像素取色与既有构建记录交叉核对",
+    "pixelVerification": "figma/_tools/verify_colors.py → color-evidence.json；figma/_tools/measure_geometry.py → geometry-evidence.json"
+  },
+  "screens": [
+    { "index": "01", "name": "01 Welcome", "nodeId": "12:26", "file": "screens/01-Welcome.png", "status": "exported", "width": 824, "height": 1830, "bytes": 97013, "covers": ["欢迎/无档案首屏"] },
+    { "index": "02", "name": "02 CreatePregnancy", "nodeId": "12:68", "file": "screens/02-CreatePregnancy.png", "status": "exported", "width": 824, "height": 1830, "bytes": 99781, "covers": ["创建孕期档案"] },
+    { "index": "03", "name": "03 Today", "nodeId": "12:138", "file": "screens/03-Today.png", "status": "exported", "width": 824, "height": 1830, "bytes": 110348, "covers": ["首页今天"] },
+    { "index": "04", "name": "04 Visits", "nodeId": "12:217", "file": "screens/04-Visits.png", "status": "exported", "width": 824, "height": 1830, "bytes": 99882, "covers": ["产检列表"] },
+    { "index": "05", "name": "05 VisitDetail", "nodeId": "12:283", "file": "screens/05-VisitDetail.png", "status": "exported", "width": 824, "height": 1830, "bytes": 100885, "covers": ["产检详情"] },
+    { "index": "06", "name": "06 VisitEditor", "nodeId": "12:333", "file": "screens/06-VisitEditor.png", "status": "exported", "width": 824, "height": 1830, "bytes": 86545, "covers": ["新建产检预约"] },
+    { "index": "07", "name": "07 Documents", "nodeId": "12:409", "file": "screens/07-Documents.png", "status": "exported", "width": 824, "height": 1830, "bytes": 108314, "covers": ["我的记录（资料/用药/健康/时间线入口）"] },
+    { "index": "08", "name": "08 DocumentDetail", "nodeId": "12:497", "file": "screens/08-DocumentDetail.png", "status": "exported", "width": 824, "height": 1830, "bytes": 104805, "covers": ["资料详情（原件预览占位）"] },
+    { "index": "09", "name": "09 Medication", "nodeId": "14:255", "file": "screens/09-Medication.png", "status": "exported", "width": 824, "height": 1830, "bytes": 113665, "covers": ["用药记录/当前方案/服药确认"] },
+    { "index": "10", "name": "10 MedicationEditor", "nodeId": "14:329", "file": "screens/10-MedicationEditor.png", "status": "exported", "width": 824, "height": 1830, "bytes": 90811, "covers": ["记录用药方案"] },
+    { "index": "11", "name": "11 Health", "nodeId": "14:408", "file": "screens/11-Health.png", "status": "exported", "width": 824, "height": 1830, "bytes": 100912, "covers": ["健康记录（体重趋势）"] },
+    { "index": "12", "name": "12 Timeline", "nodeId": "14:485", "file": "screens/12-Timeline.png", "status": "exported", "width": 824, "height": 1830, "bytes": 112285, "covers": ["孕期时间线"] },
+    { "index": "13", "name": "13 Settings", "nodeId": "14:564", "file": "screens/13-Settings.png", "status": "exported", "width": 824, "height": 1830, "bytes": 111109, "covers": ["我的"] },
+    { "index": "14", "name": "14 Backup", "nodeId": "14:635", "file": "screens/14-Backup.png", "status": "exported", "width": 824, "height": 1830, "bytes": 112151, "covers": ["备份与恢复"] },
+    { "index": "15", "name": "15 RestorePreview", "nodeId": "14:694", "file": "screens/15-RestorePreview.png", "status": "exported", "width": 824, "height": 1830, "bytes": 105772, "covers": ["恢复预览"] },
+    { "index": "16", "name": "16 BackupError", "nodeId": "14:738", "file": "screens/16-BackupError.png", "status": "exported", "width": 824, "height": 1830, "bytes": 98489, "covers": ["备份失败"] },
+    { "index": "17", "name": "17 EmptyDocuments", "nodeId": "16:472", "file": "screens/17-EmptyDocuments.png", "status": "exported", "width": 824, "height": 1830, "bytes": 76700, "covers": ["检查资料空状态"] },
+    { "index": "18", "name": "18 ImportProgress", "nodeId": "16:521", "file": "screens/18-ImportProgress.png", "status": "exported", "width": 824, "height": 1830, "bytes": 90636, "covers": ["文件导入进度"] },
+    { "index": "19", "name": "19 CloudConnect", "nodeId": "16:576", "file": "screens/19-CloudConnect.png", "status": "exported", "width": 824, "height": 1830, "bytes": 88170, "covers": ["坚果云/WebDAV 连接"] },
+    { "index": "20", "name": "20 RecoveryKey", "nodeId": "16:644", "file": "screens/20-RecoveryKey.png", "status": "export-failed-rate-limit", "width": null, "height": null, "bytes": null, "covers": ["恢复密钥输入"], "error": "Figma MCP Starter 计划调用上限：download_assets 返回 'You've reached the Figma MCP tool call limit on the Starter plan'；同批 17/18/19 已成功，仅此屏失败", "fallback": "节点 16:644 已由 get_metadata(page 0:1) 确认存在；结构=徽章「已找到加密备份」/标题「输入你的 恢复密钥」/说明卡/Field·恢复密钥/Button·验证并检查备份/Button·重新选择备份文件/页脚说明；无 PNG" }
+  ],
+  "exportSummary": {
+    "requested": 20,
+    "exported": 19,
+    "failed": 1,
+    "rateLimit": {
+      "plan": "Starter",
+      "tool": "mcp__figma__*",
+      "message": "You've reached the Figma MCP tool call limit on the Starter plan.",
+      "firstHitAt": "2026-10-24 ~02:0x Asia/Shanghai（第 30 次调用附近）",
+      "retryAfterWork": "1 次重试仍限流；未继续轮询",
+      "successfulCallsBeforeLimit": 29
+    }
+  },
+  "implementationBoard": {
+    "declaredInState": {
+      "nodeId": "50:581",
+      "name": "06 · 当前实现（2026-10-22 同步）",
+      "screensFrame": "50:584",
+      "screens": [
+        { "name": "A1 · 今天（实现）", "nodeId": "50:585" },
+        { "name": "A2 · 产检（实现）", "nodeId": "50:653" },
+        { "name": "A3 · 记录枢纽（实现）", "nodeId": "50:712" },
+        { "name": "A4 · 我的（实现）", "nodeId": "50:812" },
+        { "name": "A5 · 用药方案（实现）", "nodeId": "51:751" },
+        { "name": "A6 · 服药记录（实现）", "nodeId": "51:783" },
+        { "name": "A7 · 健康指标（实现）", "nodeId": "51:822" },
+        { "name": "A8 · 产检资料（实现）", "nodeId": "51:847" },
+        { "name": "A9 · 本地加密备份（实现）", "nodeId": "51:893" }
+      ]
+    },
+    "liveStatus": "absent",
+    "evidence": [
+      "mcp__figma__get_metadata(nodeId=50:581) → 'The provided node ID was not found in the file.'（Figma Debug UUID ed17b42c-02d6-48c3-90bd-9c15de757f76）",
+      "mcp__figma__get_metadata(page 0:1) 顶层节点清单中不存在「06 · 当前实现」板；顶层仅有 7:41 设计基础、7:2461 基础组件、5 个分组画板(12:22/12:279/14:251/14:560/16:468)、20 个手机屏、22:575 图标集",
+      "仓库 docs/design/figma-state.json（2026-10-22）与 docs/verification/2026-10-22-figma-sync/manifest.json 仍登记该板（y=7100），说明索引已过期或画布在 2026-10-22 之后被删除/回退；本任务只读，无法确认原因"
+    ],
+    "exports": [],
+    "fallback": {
+      "file": "implementation-board/board-06-preview-2026-10-22-historical.png",
+      "source": "docs/verification/2026-10-22-figma-sync/board-06-preview.png",
+      "width": 1300,
+      "height": 1122,
+      "provenance": "2026-10-22 同步板当时的板级预览截图（含 A1–A9 九帧），非 2026-10-24 现导；仅作历史参照"
+    },
+    "actionNeeded": "若用户确认仍需该板，需要重新在 Figma 中创建或在历史版本恢复；本次未修改画布"
+  },
+  "designTokens": {
+    "file": "design-tokens.md",
+    "sources": {
+      "live": "get_variable_defs(12:138) 于 2026-10-24 返回：color/bg、color/surface、color/ink、color/muted(#5F7166)、color/primary、color/soft、color/line、space/4..24、radius/12,20,28、孕迹/title、display、body、label、caption",
+      "buildRecord": "docs/design/figma-foundations.js + figma-foundations-result.json（2026-10-17 创建记录，含完整 21 个变量与 6 个文字样式）",
+      "pixelEvidence": "figma/_tools/color-evidence.json（19 张导出图的精确色值统计）",
+      "geometryEvidence": "figma/_tools/geometry-evidence.json（按钮 52 高圆角约 26、标签 48 高圆角约 12、记录行 72 高的像素测量）"
+    },
+    "notObtained": [
+      "search_design_system：未执行成功（MCP 限流），未确认是否存在团队库级组件/变量可复用",
+      "get_variable_defs 仅成功采样 1 个代表节点（12:138），heading 文字样式与 color/apricot、amber、danger、dangerSoft 未在实时返回中出现",
+      "get_metadata 是结构树（无 fills/字体字段），样式值以构建记录+像素取色交叉验证"
+    ]
+  },
+  "files": {
+    "screensDir": "screens/",
+    "implementationBoardDir": "implementation-board/",
+    "implementationBoardProvenance": "implementation-board/_PROVENANCE.md",
+    "designTokens": "design-tokens.md",
+    "readme": "README.md",
+    "evidenceTools": "_tools/verify_colors.py, _tools/measure_geometry.py, _tools/color-evidence.json, _tools/geometry-evidence.json"
+  }
+}

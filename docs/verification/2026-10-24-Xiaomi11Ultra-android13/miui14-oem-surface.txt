@@ -1,0 +1,19 @@
+# MIUI 14 (Android 13) UI differences observed in the app's vendor/OEM surface
+
+Reminder settings page (app):
+- 通知权限: 已允许显示通知 (granted through pm grant; MIUI permission dialog not exercised this round).
+- 提醒时间: 可使用精确提醒.
+- 后台可靠性: initially "未加入电池优化白名单；系统省电可能推迟或跳过提醒" with a 允许后台运行 button. Tapping it opened com.miui.powerkeeper/.ui.HiddenAppsConfigActivity ("后台配置", options: 无限制 / 智能限制后台运行(推荐) / 后台运行超过10分钟后关闭 / 禁止后台运行; default was 智能限制后台运行(推荐)). After selecting 无限制 the app page showed "已加入电池优化白名单，系统不会因省电冻结提醒".
+- 小米/Redmi vendor hint and 打开自启动设置 / 应用信息 entries are present.
+- 自定义提醒 section renders ("可按一次、每天或每周提醒…"), gated on an active pregnancy.
+
+MIUI app notification settings page (opened by the app's 系统通知设置 button):
+- Activity: com.android.settings/.Settings$AppNotificationSettingsActivity
+- Rows: 允许通知 (on), 通知过滤规则 = 系统推荐, 桌面图标角标权限 (off), 悬浮通知权限 (on), 锁屏通知权限 (on), 发声权限 (on), 振动权限 (on), 常驻通知权限 (on), 通知类别: 孕迹提醒.
+- Differences vs HyperOS 3 (Android 16): MIUI 14 appends "权限" to the row names and exposes 通知过滤规则/系统推荐; HyperOS 3 used 焦点通知, 通知权限设置, 桌面角标, 悬浮通知, 锁屏通知, 发声, 振动, 常驻通知.
+
+MIUI autostart management (opened by the app's 打开自启动设置 button):
+- Activity: com.miui.securitycenter/.permcenter.autostart.AutoStartManagementActivity
+- First visit showed an info dialog: 关于自启动的说明 ("MIUI从系统底层管理应用的自启动行为…请以MIUI的显示为准") with 确定.
+- Before the power-policy change, the page header read "禁止53个应用自启动" and 孕迹 appeared in that list (autostart disabled).
+- After selecting 无限制 in MIUI powerkeeper, the header read "允许1个应用自启动" and 孕迹 appeared there (autostart allowed), i.e. the MIUI 14 power policy and autostart state are coupled.

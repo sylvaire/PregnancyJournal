@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.CloudCleanupControllerTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-22T07:20:02.429Z" hostname="SUN-KDQ5E4QJN34" time="0.075">
+  <properties/>
+  <testcase name="successRecordsOutcomeCountsAndClearsRunning" classname="cn.yunji.journal.CloudCleanupControllerTest" time="0.064"/>
+  <testcase name="leavingPageCancelsPassWithoutRecordingFailure" classname="cn.yunji.journal.CloudCleanupControllerTest" time="0.004"/>
+  <testcase name="timeLabelUsesRequestedZone" classname="cn.yunji.journal.CloudCleanupControllerTest" time="0.0"/>
+  <testcase name="skippedPassStoresReasonWithoutCounts" classname="cn.yunji.journal.CloudCleanupControllerTest" time="0.002"/>
+  <testcase name="failedPassRecordsReasonAndLeavesUiUsable" classname="cn.yunji.journal.CloudCleanupControllerTest" time="0.002"/>
+  <testcase name="refreshReloadsPersistedRecord" classname="cn.yunji.journal.CloudCleanupControllerTest" time="0.001"/>
+  <testcase name="duplicateClicksStartOnlyOneCleanupPass" classname="cn.yunji.journal.CloudCleanupControllerTest" time="0.001"/>
+  <testcase name="backupInFlightSkipsManualCleanupWithoutCallingRunner" classname="cn.yunji.journal.CloudCleanupControllerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

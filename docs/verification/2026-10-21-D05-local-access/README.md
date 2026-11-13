@@ -1,0 +1,11 @@
+# D05 生产本地恢复适配
+
+2026-10-21：完整178项JVM/0失败，应用/测试构建通过，lint0错误/24警告（新增Uri.parse的UseKtx提示）。API34新增LocalRestoreAccessTest5项和真实代际原件1项，共6项通过（10.61秒）。未发布新版本或安装手机。
+
+LocalRestoreAccess是RestoreAccess的生产实现，仅保存Application Context。限定content URI和长度，64KiB固定缓冲复制到随机私有作业目录，输入最大8GiB+64MiB，按块检查取消；校验后删除输入副本，源文件不改。Runtime.prepareRestore执行真实认证/SQLCipher导入/VMK封装。commit串联RestoreCloudControl暂停等待、旧ReminderScheduler暂停、Runtime安全副本/封锁/关闭/认证切换，并重开触发完成设置。严格模式需重新认证时保留云端暂停，提供finishReopen供认证后调用。
+
+失败且未提交时尝试恢复旧提醒和云端；无法安全重开则继续保持暂停，交由重新认证/重开处理。discard不删除任何活动代际，只清匹配PREPARED，其他异常状态保留。实际提交判断依据指针与VERIFIED/完成标记。DocumentImporter启动恢复接入输入作业清理，只清识别的非活动作业，跳过无关目录和根外/符号链接路径。
+
+5项新设备测试使用隔离目录、偏好、AndroidKeyStore别名及真实SQLCipher/归档/Runtime；云端控制为记录调用的测试实现，输入打开器注入实际本机合成文件流（URI令牌为合成值）：完整prepare→后台暂停→commit→重开，新库读到合成记录且安全副本可恢复旧记录；超限输入不暂停后台且无残留；错误密钥保留旧图/清输入；孤立目录清理保留无关目录；无安全备份恢复槽时拒绝切换、恢复后台并保留旧数据。原件认证专项回归通过。
+
+这些测试尚未覆盖真实ContentResolver提供方/SAF授权、实际WorkManager/慢网网络暂停或严格模式新系统认证；不得用注入文件流/云端控制替代上述证据。大文件输入提供方阻塞read的取消、错误文件输入与严格模式异常退出清理仍需矩阵。Activity/Main/Compose界面尚未接线，首次无已确认当前恢复槽的空库体验、旧VM销毁、旧代际回收/再次恢复、安全副本管理仍保留。D05未验收。

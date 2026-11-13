@@ -1,0 +1,11 @@
+# D05 提醒停机与恢复默认设置
+
+2026-10-21：构建、完整166项JVM/0失败通过。API34 RestoreDeviceSettingsTest新增3项、ReminderSchedulerTest5项、ReminderNotificationTest2项，共10项通过（9.741秒）。lint0错误/22警告；较上一增量新增2条UseKtx，来自明确检查SharedPreferences.commit返回值的同步持久化实现，未隐藏或写成20警告。本轮未发布版本或安装手机。
+
+ReminderScheduler.pauseForRestore等待共用互斥锁中的重建/认证动作完成，再禁止后续重建、已服用和稍后；稍后调度与停机另用同步监视器串行。停机提升提醒generation、清snooze/已排程键并取消已知旧闹钟/通知，旧resolveAction直接拒绝；中止可恢复调度器。markTaken拆为加锁入口和锁内实现，避免认证动作重复获取同一非重入Mutex；既有提醒动作回归通过。
+
+ReminderStore.invalidateForRestore原子同步保存新代际并返回旧键，保留本机通知许可询问和提醒类型偏好。CloudSchedulerStore.afterRestore同步清旧调度高水位/失败状态，明确SECONDARY、自动关闭、仅Wi-Fi；不会沿用旧主设备身份。
+
+新3项使用独立命名偏好与隔离SQLCipher：旧主设备/自动开启重置为非主设备关闭，旧generation/稍后失效且许可/类型偏好保留，暂停后重建拒绝、中止后恢复。后两组为已有合成提醒测试，无个人手机操作。没有为新测试实际发布通知或提交真实医疗记录。
+
+尚未通过统一恢复入口调用暂停/恢复设置；需将云端停机、提醒停机与Runtime协调接成一处，并持久记录恢复后设置重建待办，保证崩溃后重试。旧通知正在到达/系统动作回调、WorkManager在途停机、严格认证/OEM矩阵未验收。恢复UI、提醒重新投影、云盘凭据/恢复槽设置重建及旧ViewModel清理仍待完成，不能宣称恢复后设置重建整体已完成。

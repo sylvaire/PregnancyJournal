@@ -1,0 +1,64 @@
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stream=
+cn.yunji.journal.Api26PdfProbeTest:
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=pdfDocumentOutputOpens
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.Api26PdfProbeTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stream=
+Error in pdfDocumentOutputOpens(cn.yunji.journal.Api26PdfProbeTest):
+java.lang.IllegalStateException: cannot load page
+	at android.graphics.pdf.PdfRenderer.nativeOpenPageAndGetSize(Native Method)
+	at android.graphics.pdf.PdfRenderer.-wrap0(Unknown Source:0)
+	at android.graphics.pdf.PdfRenderer$Page.<init>(PdfRenderer.java:302)
+	at android.graphics.pdf.PdfRenderer$Page.<init>(Unknown Source:0)
+	at android.graphics.pdf.PdfRenderer.openPage(PdfRenderer.java:226)
+	at cn.yunji.journal.Api26PdfProbeTest.pdfDocumentOutputOpens(Api26PdfProbeTest.kt:42)
+
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=pdfDocumentOutputOpens
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.Api26PdfProbeTest
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalStateException: cannot load page
+	at android.graphics.pdf.PdfRenderer.nativeOpenPageAndGetSize(Native Method)
+	at android.graphics.pdf.PdfRenderer.-wrap0(Unknown Source:0)
+	at android.graphics.pdf.PdfRenderer$Page.<init>(PdfRenderer.java:302)
+	at android.graphics.pdf.PdfRenderer$Page.<init>(Unknown Source:0)
+	at android.graphics.pdf.PdfRenderer.openPage(PdfRenderer.java:226)
+	at cn.yunji.journal.Api26PdfProbeTest.pdfDocumentOutputOpens(Api26PdfProbeTest.kt:42)
+
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=handwrittenMinimalPdfOpens
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.Api26PdfProbeTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=handwrittenMinimalPdfOpens
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.Api26PdfProbeTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 0.042
+There was 1 failure:
+1) pdfDocumentOutputOpens(cn.yunji.journal.Api26PdfProbeTest)
+java.lang.IllegalStateException: cannot load page
+	at android.graphics.pdf.PdfRenderer.nativeOpenPageAndGetSize(Native Method)
+	at android.graphics.pdf.PdfRenderer.-wrap0(Unknown Source:0)
+	at android.graphics.pdf.PdfRenderer$Page.<init>(PdfRenderer.java:302)
+	at android.graphics.pdf.PdfRenderer$Page.<init>(Unknown Source:0)
+	at android.graphics.pdf.PdfRenderer.openPage(PdfRenderer.java:226)
+	at cn.yunji.journal.Api26PdfProbeTest.pdfDocumentOutputOpens(Api26PdfProbeTest.kt:42)
+
+FAILURES!!!
+Tests run: 2,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

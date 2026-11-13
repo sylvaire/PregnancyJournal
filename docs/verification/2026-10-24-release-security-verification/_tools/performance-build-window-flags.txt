@@ -1,0 +1,6 @@
+    mPrepareSyncSeqId=0
+  Window #8 Window{4db2b9f u0 cn.yunji.journal/cn.yunji.journal.MainActivity}:
+    mDisplayId=0 taskId=8 mSession=Session{2040089 6319:u0a10213} mClient=android.os.BinderProxy@fe1d13e
+    mOwnerUid=10213 showForAllUsers=false package=cn.yunji.journal appop=NONE
+    mAttrs={(0,0)(fillxfill) sim={adjust=resize forwardNavigation} layoutInDisplayCutoutMode=always ty=BASE_APPLICATION wanim=0x103030e
+      fl=LAYOUT_IN_SCREEN SECURE LAYOUT_INSET_DECOR SPLIT_TOUCH HARDWARE_ACCELERATED DRAWS_SYSTEM_BAR_BACKGROUNDS

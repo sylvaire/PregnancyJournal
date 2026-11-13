@@ -1,0 +1,28 @@
+databases:
+total 16
+drwxrwx--x 2 u0_a235 u0_a235 4096 2026-10-24 01:37 .
+drwx------ 7 u0_a235 u0_a235 4096 2026-10-24 01:37 ..
+
+files:
+total 32
+drwxrwx--x 3 u0_a235 u0_a235 4096 2026-10-24 01:49 .
+drwx------ 7 u0_a235 u0_a235 4096 2026-10-24 01:37 ..
+drwx------ 2 u0_a235 u0_a235 4096 2026-10-24 01:49 datastore
+-rw------- 1 u0_a235 u0_a235   24 2026-10-24 01:37 profileInstalled
+
+no_backup:
+total 624
+drwxrwx--x 5 u0_a235 u0_a235   4096 2026-10-24 02:44 .
+drwx------ 7 u0_a235 u0_a235   4096 2026-10-24 01:37 ..
+-rw-rw---- 1 u0_a235 u0_a235 106496 2026-10-24 02:52 androidx.work.workdb
+-rw------- 1 u0_a235 u0_a235  32768 2026-10-24 02:52 androidx.work.workdb-shm
+-rw------- 1 u0_a235 u0_a235 444992 2026-10-24 02:52 androidx.work.workdb-wal
+drwx------ 2 u0_a235 u0_a235   4096 2026-10-24 01:37 document-viewers
+drwx------ 2 u0_a235 u0_a235   4096 2026-10-24 01:37 import-preview
+drwx------ 3 u0_a235 u0_a235   4096 2026-10-24 01:37 vault
+
+shared_prefs:
+total 24
+drwxrwx--x 2 u0_a235 u0_a235 4096 2026-10-24 02:52 .
+drwx------ 7 u0_a235 u0_a235 4096 2026-10-24 01:37 ..
+-rw-rw---- 1 u0_a235 u0_a235  242 2026-10-24 02:52 reminder-state.xml

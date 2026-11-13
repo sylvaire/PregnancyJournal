@@ -1,0 +1,8 @@
+
+cn.yunji.journal.DocumentImportTest:.
+
+Time: 9.496
+
+OK (1 test)
+
+

@@ -1,0 +1,17 @@
+{
+  "versionName": "0.15.0-dev",
+  "versionCode": 16,
+  "schemaVersion": 12,
+  "apkSha256": "263dfbee28f35e4252c89491de342fc17d407fbf3f8ac0464b17ceb43240a881",
+  "artifact": "PregnancyJournal-0.15.0-dev-263dfbee.apk",
+  "emulatorFullTests": 107,
+  "finalUiChecks": 3,
+  "jvmTests": 54,
+  "lintErrors": 0,
+  "lintWarnings": 20,
+  "phoneInstalled": false,
+  "latestPhoneVersion": "0.14.0-dev",
+  "realProviderVerified": false,
+  "finalPlatformChecks": 7,
+  "actualMainEntryChecked": true
+}

@@ -1,0 +1,22 @@
+--------- beginning of main
+--------- beginning of system
+10-22 08:29:14.612  8523  8541 I Api26PdfProbe: small-blank-bytearray.pdf len=810 sha=2f3d6ebf12d5dd46c87934f3c7dc2586cad1ac92f27a3fbf7a8d15a603015fed header=25 50 44 46 2d 31 2e 34
+10-22 08:29:14.627  8523  8541 I Api26PdfProbe: small-blank-bytearray.pdf pages=1
+10-22 08:29:14.629  8523  8541 I Api26PdfProbe: small-blank-bytearray.pdf page0 200x300 dark=0
+10-22 08:29:22.774  8523  8541 I Api26PdfProbe: writer-stream-copied.pdf len=108188 sha=4f73fca4270c48c51bc0e5ab45035d95bcb11b5aab66d1785f7facd40a6cd8f8 header=25 50 44 46 2d 31 2e 34
+10-22 08:29:22.779  8523  8541 I Api26PdfProbe: writer-stream-copied.pdf pages=1
+10-22 08:29:22.791  8523  8541 I Api26PdfProbe: writer-stream-copied.pdf page0 595x842 dark=298
+10-22 08:29:31.168  8523  8541 I Api26PdfProbe: writer via FileOutputStream pages=1 len=108188
+10-22 08:29:31.170  8523  8541 I Api26PdfProbe: writer-filestream-copy.pdf len=108188 sha=4f73fca4270c48c51bc0e5ab45035d95bcb11b5aab66d1785f7facd40a6cd8f8 header=25 50 44 46 2d 31 2e 34
+10-22 08:29:31.175  8523  8541 I Api26PdfProbe: writer-filestream-copy.pdf pages=1
+10-22 08:29:31.181  8523  8541 I Api26PdfProbe: writer-filestream-copy.pdf page0 595x842 dark=298
+10-22 08:29:31.203  8523  8541 I Api26PdfProbe: writer via bytearray pages=1
+10-22 08:29:31.205  8523  8541 I Api26PdfProbe: writer-bytearray.pdf len=108188 sha=4f73fca4270c48c51bc0e5ab45035d95bcb11b5aab66d1785f7facd40a6cd8f8 header=25 50 44 46 2d 31 2e 34
+10-22 08:29:31.209  8523  8541 I Api26PdfProbe: writer-bytearray.pdf pages=1
+10-22 08:29:31.215  8523  8541 I Api26PdfProbe: writer-bytearray.pdf page0 595x842 dark=298
+10-22 08:29:31.221  8523  8541 I Api26PdfProbe: a4-blank-bytearray.pdf len=811 sha=ec7d9d7958074f3bca9416cf80398103be6a0e8d484d8b3bda262be991327dec header=25 50 44 46 2d 31 2e 34
+10-22 08:29:31.225  8523  8541 I Api26PdfProbe: a4-blank-bytearray.pdf pages=1
+10-22 08:29:31.227  8523  8541 I Api26PdfProbe: a4-blank-bytearray.pdf page0 595x842 dark=0
+10-22 08:29:31.238  8523  8541 I Api26PdfProbe: a4-text-bytearray.pdf len=35713 sha=0f5a792396ff20a08ee06e537d54fea0e411e0bf43aeeaf3b657a3c98549ca0e header=25 50 44 46 2d 31 2e 34
+10-22 08:29:31.242  8523  8541 I Api26PdfProbe: a4-text-bytearray.pdf pages=1
+10-22 08:29:31.245  8523  8541 I Api26PdfProbe: a4-text-bytearray.pdf page0 595x842 dark=54

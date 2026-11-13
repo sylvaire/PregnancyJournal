@@ -1,0 +1,13 @@
+# D05 Activity恢复宿主与真实系统选择
+
+2026-10-21：新增2项宿主准备JVM，完整180项JVM/0失败，应用/测试构建与lint0错误/24警告通过。API34分组25项通过（50.092秒）：MainRestorePicker2、FileHandoff9、RestoreUi3、RecoveryUi2、BackupSystemJourney2、LocalRestoreAccess7。最后忙状态/认证守卫版本对Main选择/重建与RestoreUi重复5项通过（18.144秒），不把重复算成30个独立用例。未发布新版本/安装手机。
+
+本地备份页INTRO/READY新增从备份恢复资料入口，Activity独立RestoreController与SecureOn全屏Dialog；窗口FLAG_SECURE保留。系统选择采用RESTORE文件交接、OpenDocument只读持久授权，结果仍以AndroidKeyStore加密，认证后核对请求ownerVault，重复恢复同一结果不清正在输入的密钥。后台/销毁清理未提交密钥，配置重建保留加密文件选择但不保存密钥。
+
+Main确认即冻结控制器交互，在其beforeCommit任务中取消旧打开任务、刷草稿、核对前台/认证、清旧通知动作/模型与ViewModelStore、重置导航，再执行生产恢复服务。完成/错误时按ID清交接，显式重新打开重建页面；处理中阻止新的认证，交接清理未完成时按钮禁用。云端Runner/状态Store改为Singleton，确保页面、Worker和恢复服务共享同一停机门。完成设置后关闭VERIFIED日志，旧代际/安全副本继续保留，解除下一次prepare的日志阻断。
+
+真实Main测试使用应用拥有的随机MediaStore Downloads合成归档：从实际DocumentsUI选取→密码输入→真实校验/预览→取消，证明原活动指针与恢复设置不变、交接/准备日志清理；第二条实际ActivityScenario.recreate，反射只断言新控制器key为空（不打印密钥），重新输入后可校验/取消。测试只在专用API34模拟器运行，不提交恢复替换。FileHandoff新例证明RESTORE强制确认且URI不以明文存储。
+
+2项新JVM证明异步宿主准备期间确认冻结/重复操作忽略，以及宿主准备失败不调用commit且清预览。25项还回归原系统备份保存与确认前重建、UI和生产适配。当前已接入口，但正式Main点击确认后的整体替换/完成打开尚未E2E验证；不能拿服务层真实切换证明Activity旧模型/导航处理已全部通过。
+
+下一步正式Main提交/重开及再次恢复测试，严格认证/中途旋转/进程终止，旧代际确认回收、安全副本管理与授权引用释放。开发源仍0.18.0-dev后续增量，未归档新发布包，不代表D05或V1.0验收。

@@ -1,0 +1,215 @@
+== dirs ==
+after: exists=True count=22
+after-supplementary: exists=True count=9
+navigation: exists=True count=20
+theme-fix: exists=True count=22
+figma-alignment: exists=True count=22
+
+== P0-1 tag heights: before (theme-fix / figma-alignment) vs after ==
+theme-fix/timeline.png: selected=[] unselected_h=[] old_soft_32dp=[(32.0, 24.0, 181.0, 64.0)]
+figma-alignment/timeline.png: selected=[] unselected_h=[] old_soft_32dp=[(32.0, 24.0, 181.0, 64.0)]
+after/timeline.png: selected=[(48.4, 64.0)] unselected_h=[48.4, 48.4, 48.4, 48.4] old_soft_32dp=[]
+theme-fix/trash-empty.png: selected=[] unselected_h=[] old_soft_32dp=[(32.0, 24.0, 120.8, 153.1)]
+figma-alignment/trash-empty.png: selected=[] unselected_h=[] old_soft_32dp=[(32.0, 24.0, 120.8, 153.1)]
+after/trash-empty.png: selected=[(48.4, 153.1)] unselected_h=[48.4] old_soft_32dp=[]
+theme-fix/security-settings.png: selected=[] unselected_h=[] old_soft_32dp=[(32.0, 20.2, 461.7, 73.1)]
+figma-alignment/security-settings.png: selected=[] unselected_h=[] old_soft_32dp=[(32.0, 20.2, 461.7, 73.1)]
+after/security-settings.png: selected=[(48.4, 73.1)] unselected_h=[48.4, 48.4] old_soft_32dp=[]
+after-supplementary/02-visits.png: selected=[(48.4, 64.0), (48.4, 64.0)] unselected_h=[48.4, 48.4, 48.4, 48.4] old_soft_32dp=[(32.0, 125.3, 819.4, 56.0)]
+after-supplementary/06-intakes.png: selected=[(48.4, 96.0)] unselected_h=[48.4] old_soft_32dp=[]
+after-supplementary/07-measurements.png: selected=[(48.4, 96.0)] unselected_h=[48.4] old_soft_32dp=[]
+after-supplementary/08-visit-documents.png: selected=[(48.4, 96.0)] unselected_h=[48.4] old_soft_32dp=[]
+navigation/c04-timeline.png: selected=[(48.4, 64.0)] unselected_h=[48.4, 48.4, 48.4, 48.4] old_soft_32dp=[]
+
+== P0-1 selected tag detail (after) ==
+after/timeline.png: h=48.4dp w=64.0dp x0=24.0dp y0=173.0dp fill_px=18509 white_text_px=902 top_inset=31px
+after/timeline.png: UNSEL h=48.4dp w=64.0dp x0=96.0dp white_fill_ratio=0.816 muted_text_px=731 top_inset=31px
+after/timeline.png: UNSEL h=48.4dp w=64.0dp x0=168.0dp white_fill_ratio=0.803 muted_text_px=838 top_inset=31px
+after/timeline.png: UNSEL h=48.4dp w=96.0dp x0=240.0dp white_fill_ratio=0.8 muted_text_px=1848 top_inset=31px
+after/timeline.png: UNSEL h=48.4dp w=43.4dp x0=344.0dp white_fill_ratio=0.788 muted_text_px=874 top_inset=31px
+after/trash-empty.png: h=48.4dp w=153.1dp x0=24.0dp y0=112.8dp fill_px=43906 white_text_px=2886 top_inset=31px
+after/trash-empty.png: UNSEL h=48.4dp w=153.1dp x0=185.1dp white_fill_ratio=0.823 muted_text_px=2760 top_inset=31px
+after/security-settings.png: h=48.4dp w=73.1dp x0=24.0dp y0=458.3dp fill_px=21423 white_text_px=1056 top_inset=31px
+after/security-settings.png: UNSEL h=48.4dp w=64.0dp x0=24.0dp white_fill_ratio=0.81 muted_text_px=878 top_inset=31px
+after/security-settings.png: UNSEL h=48.4dp w=73.1dp x0=24.0dp white_fill_ratio=0.82 muted_text_px=974 top_inset=31px
+after-supplementary/02-visits.png: h=48.4dp w=64.0dp x0=24.0dp y0=219.0dp fill_px=18476 white_text_px=938 top_inset=31px
+after-supplementary/02-visits.png: h=48.4dp w=64.0dp x0=24.0dp y0=279.6dp fill_px=18423 white_text_px=882 top_inset=31px
+after-supplementary/02-visits.png: UNSEL h=48.4dp w=64.0dp x0=96.0dp white_fill_ratio=0.81 muted_text_px=878 top_inset=31px
+after-supplementary/02-visits.png: UNSEL h=48.4dp w=80.0dp x0=96.0dp white_fill_ratio=0.804 muted_text_px=1218 top_inset=31px
+after-supplementary/02-visits.png: UNSEL h=48.4dp w=80.0dp x0=184.0dp white_fill_ratio=0.804 muted_text_px=1338 top_inset=31px
+after-supplementary/02-visits.png: UNSEL h=48.4dp w=80.0dp x0=272.0dp white_fill_ratio=0.804 muted_text_px=1299 top_inset=31px
+after-supplementary/06-intakes.png: h=48.4dp w=96.0dp x0=24.0dp y0=112.8dp fill_px=27482 white_text_px=1805 top_inset=31px
+after-supplementary/06-intakes.png: UNSEL h=48.4dp w=96.0dp x0=128.0dp white_fill_ratio=0.806 muted_text_px=1809 top_inset=31px
+after-supplementary/07-measurements.png: h=48.4dp w=96.0dp x0=24.0dp y0=177.1dp fill_px=27445 white_text_px=1830 top_inset=31px
+after-supplementary/07-measurements.png: UNSEL h=48.4dp w=96.0dp x0=128.0dp white_fill_ratio=0.8 muted_text_px=1849 top_inset=31px
+after-supplementary/08-visit-documents.png: h=48.4dp w=96.0dp x0=24.0dp y0=112.8dp fill_px=27640 white_text_px=1641 top_inset=31px
+after-supplementary/08-visit-documents.png: UNSEL h=48.4dp w=121.1dp x0=132.2dp white_fill_ratio=0.832 muted_text_px=1902 top_inset=31px
+navigation/c04-timeline.png: h=48.4dp w=64.0dp x0=75.4dp y0=173.0dp fill_px=18482 white_text_px=838 top_inset=31px
+navigation/c04-timeline.png: UNSEL h=48.4dp w=43.4dp x0=24.0dp white_fill_ratio=0.816 muted_text_px=625 top_inset=0px
+navigation/c04-timeline.png: UNSEL h=48.4dp w=96.0dp x0=147.4dp white_fill_ratio=0.8 muted_text_px=1848 top_inset=31px
+navigation/c04-timeline.png: UNSEL h=48.4dp w=64.0dp x0=251.4dp white_fill_ratio=0.795 muted_text_px=989 top_inset=31px
+navigation/c04-timeline.png: UNSEL h=48.4dp w=64.0dp x0=323.4dp white_fill_ratio=0.784 muted_text_px=1136 top_inset=31px
+
+== P0-3 buttons: before (theme-fix) vs after ==
+theme-fix/local-backup.png:
+   primary_full_width: h=40.0dp w=371.05dp x0=20.19dp y0=893 color=#356B53
+   outline_rings: h=40.0dp w=371.05dp x0=20.19dp y0=1061 color=-
+after/local-backup.png:
+   primary_full_width: h=52.19dp w=363.43dp x0=24.0dp y0=892 color=#356B53
+   soft_full_width: h=52.19dp w=363.43dp x0=24.0dp y0=1071 color=#E7F0E6
+theme-fix/restore-wizard.png:
+   primary_full_width: h=40.0dp w=371.05dp x0=20.19dp y0=830 color=#356B53
+   outline_rings: h=40.0dp w=371.05dp x0=20.19dp y0=998 color=-
+after/restore-wizard.png:
+   primary_full_width: h=52.19dp w=363.43dp x0=24.0dp y0=829 color=#356B53
+   soft_full_width: h=52.19dp w=363.43dp x0=24.0dp y0=1008 color=#E7F0E6
+theme-fix/restore-wizard-key.png:
+   other_full_width: h=40.0dp w=371.05dp x0=20.19dp y0=875 color=#E1E5DF
+   outline_rings: h=56.0dp w=371.05dp x0=20.19dp y0=675 color=-
+after/restore-wizard-key.png:
+   other_full_width: h=52.19dp w=363.43dp x0=24.0dp y0=874 color=#E1E5DF
+   outline_rings: h=56.0dp w=363.43dp x0=24.0dp y0=685 color=-
+theme-fix/export-screen.png:
+after/export-screen.png:
+theme-fix/export-screen-disabled.png:
+   other_full_width: h=40.0dp w=371.05dp x0=20.19dp y0=2232 color=#E1E5DF
+after/export-screen-disabled.png:
+   other_full_width: h=52.19dp w=363.43dp x0=24.0dp y0=2200 color=#E1E5DF
+
+== P0-6 page margin: after ==
+after-supplementary/01-today.png: x0=24.0dp (63px, votes=831/1618)
+after-supplementary/02-visits.png: x0=24.0dp (63px, votes=276/800)
+after-supplementary/03-records-hub.png: x0=24.0dp (63px, votes=570/1354)
+after-supplementary/04-profiles.png: x0=24.0dp (63px, votes=760/1717)
+after-supplementary/05-medications.png: x0=24.0dp (63px, votes=1068/1460)
+after-supplementary/06-intakes.png: x0=24.0dp (63px, votes=235/591)
+after-supplementary/07-measurements.png: x0=24.0dp (63px, votes=252/543)
+after-supplementary/08-visit-documents.png: x0=24.0dp (63px, votes=1479/1792)
+after-supplementary/09-recovery.png: x0=25.14dp (66px, votes=78/545)
+after/cloud-connection-backup.png: x0=26.29dp (69px, votes=123/911)
+after/cloud-connection-cleanup.png: x0=25.9dp (68px, votes=96/843)
+after/cloud-connection.png: x0=24.0dp (63px, votes=558/1168)
+after/custom-reminder-editor.png: x0=0.0dp (0px, votes=2020/2020)
+after/drug-catalog.png: x0=24.0dp (63px, votes=437/704)
+after/drug-editor.png: x0=24.0dp (63px, votes=422/706)
+after/export-screen-disabled.png: x0=25.52dp (67px, votes=96/579)
+after/export-screen.png: x0=24.0dp (63px, votes=140/653)
+after/journal-entry-editor.png: x0=24.0dp (63px, votes=940/1232)
+after/local-backup.png: x0=26.67dp (70px, votes=110/720)
+after/measurement-editor.png: x0=24.0dp (63px, votes=831/1195)
+after/pregnancy-editor.png: x0=24.0dp (63px, votes=983/1452)
+after/reminder-settings-custom.png: x0=24.0dp (63px, votes=1642/1924)
+after/reminder-settings.png: x0=24.0dp (63px, votes=1474/1867)
+after/restore-wizard-key.png: x0=24.0dp (63px, votes=152/463)
+after/restore-wizard.png: x0=26.67dp (70px, votes=78/496)
+after/security-settings.png: x0=24.0dp (63px, votes=296/1223)
+after/timeline-source-detail.png: x0=25.14dp (66px, votes=55/483)
+after/timeline.png: x0=24.0dp (63px, votes=1275/1732)
+after/trash-empty.png: x0=24.0dp (63px, votes=79/239)
+after/visit-detail.png: x0=24.0dp (63px, votes=865/1573)
+after/visit-editor.png: x0=24.0dp (63px, votes=689/920)
+navigation/b04-empty.png: x0=24.0dp (63px, votes=321/577)
+navigation/b05-cover.png: x0=24.0dp (63px, votes=1479/1792)
+navigation/b05-pdf.png: x0=0.0dp (0px, votes=1785/1863)
+navigation/b05-retained-relink.png: x0=0.0dp (0px, votes=318/318)
+navigation/b05-zoom.png: x0=0.0dp (0px, votes=1557/1577)
+navigation/b06-delete-scope.png: x0=0.0dp (0px, votes=437/437)
+navigation/b06-global-trash.png: x0=24.0dp (63px, votes=492/696)
+navigation/c01-history.png: x0=24.0dp (63px, votes=1162/1464)
+navigation/c01left-delete-scope.png: x0=0.0dp (0px, votes=437/437)
+navigation/c01left-history.png: x0=24.0dp (63px, votes=676/884)
+navigation/c01left-photos.png: x0=24.0dp (63px, votes=1464/1792)
+navigation/c01left-trash.png: x0=24.0dp (63px, votes=521/725)
+navigation/c02-history.png: x0=24.0dp (63px, votes=1333/1854)
+navigation/c02-home.png: x0=24.0dp (63px, votes=866/1727)
+navigation/c03-measurement.png: x0=24.0dp (63px, votes=515/808)
+navigation/c04-journal.png: x0=24.0dp (63px, votes=847/1170)
+navigation/c04-timeline.png: x0=24.0dp (63px, votes=847/1170)
+navigation/c05-reminder-settings.png: x0=24.0dp (63px, votes=1474/1867)
+navigation/c05-visit-reminder.png: x0=24.0dp (63px, votes=865/1573)
+navigation/d01-cloud-connection.png: x0=24.0dp (63px, votes=558/1131)
+
+== P0-6 white card x0: after vs before(theme-fix) ==
+after/drug-catalog.png: cards=[(24.0, 193.14)]
+after/reminder-settings-custom.png: cards=[(24.0, 193.9), (24.0, 246.86), (24.0, 255.62)]
+after/reminder-settings.png: cards=[(24.0, 156.95), (24.0, 204.57), (24.0, 288.76)]
+after/timeline.png: cards=[(24.0, 251.05), (24.0, 205.33)]
+after/visit-detail.png: cards=[(24.0, 204.57)]
+after-supplementary/01-today.png: cards=[(24.0, 72.0), (24.0, 72.0)]
+after-supplementary/02-visits.png: cards=[(24.0, 72.0)]
+after-supplementary/03-records-hub.png: cards=[(24.0, 72.0), (24.0, 72.0), (24.0, 72.0), (24.0, 72.0), (24.0, 72.0), (24.0, 72.0)]
+after-supplementary/04-profiles.png: cards=[(24.0, 72.0), (24.0, 72.0), (24.0, 72.0), (24.0, 72.0), (24.0, 72.0), (24.0, 72.0), (24.0, 72.0), (0.0, 170.29)]
+after-supplementary/05-medications.png: cards=[(24.0, 427.43)]
+after-supplementary/08-visit-documents.png: cards=[(24.0, 494.1)]
+navigation/b05-cover.png: cards=[(24.0, 494.1)]
+navigation/b05-pdf.png: cards=[(0.0, 697.52)]
+navigation/b06-global-trash.png: cards=[(24.0, 193.14)]
+navigation/c01-history.png: cards=[(24.0, 257.14), (24.0, 257.14)]
+navigation/c01left-history.png: cards=[(24.0, 293.33)]
+navigation/c01left-photos.png: cards=[(24.0, 494.1)]
+navigation/c01left-trash.png: cards=[(24.0, 204.19)]
+navigation/c02-history.png: cards=[(24.0, 288.0), (24.0, 231.62)]
+navigation/c02-home.png: cards=[(24.0, 72.0), (24.0, 72.0)]
+navigation/c03-measurement.png: cards=[(24.0, 193.14)]
+navigation/c04-journal.png: cards=[(24.0, 251.05)]
+navigation/c04-timeline.png: cards=[(24.0, 251.05)]
+navigation/c05-reminder-settings.png: cards=[(24.0, 156.95), (24.0, 204.57), (24.0, 288.76)]
+navigation/c05-visit-reminder.png: cards=[(24.0, 204.57)]
+-- before(theme-fix) --
+theme-fix/drug-catalog.png: cards=[(24.0, 193.14)]
+theme-fix/reminder-settings-custom.png: cards=[(28.19, 193.9), (28.19, 246.86), (28.19, 255.62)]
+theme-fix/reminder-settings.png: cards=[(28.19, 156.95), (28.19, 204.57), (28.19, 288.76)]
+theme-fix/timeline.png: cards=[(24.0, 251.05), (24.0, 205.71)]
+theme-fix/visit-detail.png: cards=[(24.0, 204.57)]
+
+== P0-6 page margin: before (figma-alignment = pre-P0-2; theme-fix = post-P0-2) ==
+-- figma-alignment --
+figma-alignment/cloud-connection-backup.png: x0=22.48dp (59px)
+figma-alignment/cloud-connection-cleanup.png: x0=22.48dp (59px)
+figma-alignment/cloud-connection.png: x0=20.19dp (53px)
+figma-alignment/custom-reminder-editor.png: x0=0.0dp (0px)
+figma-alignment/drug-catalog.png: x0=24.0dp (63px)
+figma-alignment/drug-editor.png: x0=20.19dp (53px)
+figma-alignment/export-screen-disabled.png: x0=21.71dp (57px)
+figma-alignment/export-screen.png: x0=20.19dp (53px)
+figma-alignment/journal-entry-editor.png: x0=20.19dp (53px)
+figma-alignment/local-backup.png: x0=22.86dp (60px)
+figma-alignment/measurement-editor.png: x0=20.19dp (53px)
+figma-alignment/pregnancy-editor.png: x0=24.0dp (63px)
+figma-alignment/reminder-settings-custom.png: x0=28.19dp (74px)
+figma-alignment/reminder-settings.png: x0=28.19dp (74px)
+figma-alignment/restore-wizard-key.png: x0=20.19dp (53px)
+figma-alignment/restore-wizard.png: x0=22.86dp (60px)
+figma-alignment/security-settings.png: x0=20.19dp (53px)
+figma-alignment/timeline-source-detail.png: x0=21.33dp (56px)
+figma-alignment/timeline.png: x0=24.0dp (63px)
+figma-alignment/trash-empty.png: x0=24.0dp (63px)
+figma-alignment/visit-detail.png: x0=24.0dp (63px)
+figma-alignment/visit-editor.png: x0=24.0dp (63px)
+-- theme-fix --
+theme-fix/cloud-connection-backup.png: x0=22.48dp (59px)
+theme-fix/cloud-connection-cleanup.png: x0=22.48dp (59px)
+theme-fix/cloud-connection.png: x0=20.19dp (53px)
+theme-fix/custom-reminder-editor.png: x0=0.0dp (0px)
+theme-fix/drug-catalog.png: x0=24.0dp (63px)
+theme-fix/drug-editor.png: x0=20.19dp (53px)
+theme-fix/export-screen-disabled.png: x0=21.71dp (57px)
+theme-fix/export-screen.png: x0=20.19dp (53px)
+theme-fix/journal-entry-editor.png: x0=20.19dp (53px)
+theme-fix/local-backup.png: x0=22.86dp (60px)
+theme-fix/measurement-editor.png: x0=20.19dp (53px)
+theme-fix/pregnancy-editor.png: x0=24.0dp (63px)
+theme-fix/reminder-settings-custom.png: x0=28.19dp (74px)
+theme-fix/reminder-settings.png: x0=28.19dp (74px)
+theme-fix/restore-wizard-key.png: x0=20.19dp (53px)
+theme-fix/restore-wizard.png: x0=22.86dp (60px)
+theme-fix/security-settings.png: x0=20.19dp (53px)
+theme-fix/timeline-source-detail.png: x0=21.33dp (56px)
+theme-fix/timeline.png: x0=24.0dp (63px)
+theme-fix/trash-empty.png: x0=24.0dp (63px)
+theme-fix/visit-detail.png: x0=24.0dp (63px)
+theme-fix/visit-editor.png: x0=24.0dp (63px)
+
+== sha256 before(theme-fix) vs after ==
+identical=4 changed=18
+changed: cloud-connection-backup.png, cloud-connection-cleanup.png, cloud-connection.png, custom-reminder-editor.png, drug-editor.png, export-screen-disabled.png, export-screen.png, journal-entry-editor.png, local-backup.png, measurement-editor.png, reminder-settings-custom.png, reminder-settings.png, restore-wizard-key.png, restore-wizard.png, security-settings.png, timeline-source-detail.png, timeline.png, trash-empty.png

@@ -1,0 +1,146 @@
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.BackupFailureNotifierTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=
+cn.yunji.journal.BackupFailureNotifierTest:
+INSTRUMENTATION_STATUS: test=threeFailuresPostOnePrivateNoticeUntilSuccessResetsTheEpisode
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.BackupFailureNotifierTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: expected null, but was:<StatusBarNotification(pkg=cn.yunji.journal user=UserHandle{0} id=700004 tag=null key=0|cn.yunji.journal|700004|null|10235: Notification(channel=backup-status shortcut=null contentView=null vibrate=null sound=null defaults=0 flags=ONLY_ALERT_ONCE|AUTO_CANCEL color=0x00000000 category=status vis=PRIVATE publicVersion=Notification(channel=backup-status shortcut=null contentView=null vibrate=null sound=null defaults=0 flags=0 color=0x00000000 vis=PUBLIC)))>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotNull(Assert.java:756)
+	at org.junit.Assert.assertNull(Assert.java:738)
+	at org.junit.Assert.assertNull(Assert.java:748)
+	at cn.yunji.journal.BackupFailureNotifierTest.threeFailuresPostOnePrivateNoticeUntilSuccessResetsTheEpisode(BackupFailureNotifierTest.kt:56)
+
+INSTRUMENTATION_STATUS: stream=
+Error in threeFailuresPostOnePrivateNoticeUntilSuccessResetsTheEpisode(cn.yunji.journal.BackupFailureNotifierTest):
+java.lang.AssertionError: expected null, but was:<StatusBarNotification(pkg=cn.yunji.journal user=UserHandle{0} id=700004 tag=null key=0|cn.yunji.journal|700004|null|10235: Notification(channel=backup-status shortcut=null contentView=null vibrate=null sound=null defaults=0 flags=ONLY_ALERT_ONCE|AUTO_CANCEL color=0x00000000 category=status vis=PRIVATE publicVersion=Notification(channel=backup-status shortcut=null contentView=null vibrate=null sound=null defaults=0 flags=0 color=0x00000000 vis=PUBLIC)))>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotNull(Assert.java:756)
+	at org.junit.Assert.assertNull(Assert.java:738)
+	at org.junit.Assert.assertNull(Assert.java:748)
+	at cn.yunji.journal.BackupFailureNotifierTest.threeFailuresPostOnePrivateNoticeUntilSuccessResetsTheEpisode(BackupFailureNotifierTest.kt:56)
+
+INSTRUMENTATION_STATUS: test=threeFailuresPostOnePrivateNoticeUntilSuccessResetsTheEpisode
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.BackupFailureNotifierTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=foreignWriterBlockAlertsImmediatelyWithoutExposingDetails
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.BackupFailureNotifierTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=foreignWriterBlockAlertsImmediatelyWithoutExposingDetails
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.CloudSchedulerStoreTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=
+cn.yunji.journal.CloudSchedulerStoreTest:
+INSTRUMENTATION_STATUS: test=automationIsOffByDefaultAndSecondaryIsNotActive
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.CloudSchedulerStoreTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=automationIsOffByDefaultAndSecondaryIsNotActive
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.CloudSchedulerStoreTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=confirmationPersistsOnlyTheObservedForeignCommitsAndRestoreClearsIt
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.CloudSchedulerStoreTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=confirmationPersistsOnlyTheObservedForeignCommitsAndRestoreClearsIt
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.CloudSchedulerStoreTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=secondaryDeviceNeverBecomesAutoActiveEvenWhenEnabled
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.CloudSchedulerStoreTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=secondaryDeviceNeverBecomesAutoActiveEvenWhenEnabled
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.CloudSchedulerStoreTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=failureCountAndBackoffStatePersistAcrossInstances
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.CloudSchedulerStoreTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=failureCountAndBackoffStatePersistAcrossInstances
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.CloudSchedulerStoreTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=resetRestoresDefaultsWithoutTouchingUploadStatus
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.CloudSchedulerStoreTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=resetRestoresDefaultsWithoutTouchingUploadStatus
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.CloudSchedulerStoreTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=foreignWriterBlockStopsAutomationUntilPrimaryIsConfirmed
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.CloudSchedulerStoreTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=foreignWriterBlockStopsAutomationUntilPrimaryIsConfirmed
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 0.251
+There was 1 failure:
+1) threeFailuresPostOnePrivateNoticeUntilSuccessResetsTheEpisode(cn.yunji.journal.BackupFailureNotifierTest)
+java.lang.AssertionError: expected null, but was:<StatusBarNotification(pkg=cn.yunji.journal user=UserHandle{0} id=700004 tag=null key=0|cn.yunji.journal|700004|null|10235: Notification(channel=backup-status shortcut=null contentView=null vibrate=null sound=null defaults=0 flags=ONLY_ALERT_ONCE|AUTO_CANCEL color=0x00000000 category=status vis=PRIVATE publicVersion=Notification(channel=backup-status shortcut=null contentView=null vibrate=null sound=null defaults=0 flags=0 color=0x00000000 vis=PUBLIC)))>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotNull(Assert.java:756)
+	at org.junit.Assert.assertNull(Assert.java:738)
+	at org.junit.Assert.assertNull(Assert.java:748)
+	at cn.yunji.journal.BackupFailureNotifierTest.threeFailuresPostOnePrivateNoticeUntilSuccessResetsTheEpisode(BackupFailureNotifierTest.kt:56)
+
+FAILURES!!!
+Tests run: 8,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

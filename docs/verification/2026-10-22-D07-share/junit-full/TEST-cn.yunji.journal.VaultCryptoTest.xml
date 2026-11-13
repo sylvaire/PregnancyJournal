@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.VaultCryptoTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-22T07:08:31.656Z" hostname="SUN-KDQ5E4QJN34" time="0.0">
+  <properties/>
+  <testcase name="recoveryKeyChecksTranscription" classname="cn.yunji.journal.VaultCryptoTest" time="0.0"/>
+  <testcase name="newEncryptionUsesDifferentNonces" classname="cn.yunji.journal.VaultCryptoTest" time="0.0"/>
+  <testcase name="authenticatedRoundTripBindsIdentity" classname="cn.yunji.journal.VaultCryptoTest" time="0.0"/>
+  <testcase name="keysAreSeparatedByPurposeAndVault" classname="cn.yunji.journal.VaultCryptoTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

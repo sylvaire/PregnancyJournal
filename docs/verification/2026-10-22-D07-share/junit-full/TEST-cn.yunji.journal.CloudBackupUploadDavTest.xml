@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.CloudBackupUploadDavTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-22T07:08:29.034Z" hostname="SUN-KDQ5E4QJN34" time="0.384">
+  <properties/>
+  <testcase name="foreignVaultSlotAndUnreadableCommitNeverReturnSuccess" classname="cn.yunji.journal.CloudBackupUploadDavTest" time="0.034"/>
+  <testcase name="untrustedCertificateIsRejectedWithoutTrustAllFallback" classname="cn.yunji.journal.CloudBackupUploadDavTest" time="0.035"/>
+  <testcase name="ownBackupHistoryAndForeignWriterArbitrationAreResolvedOverTls" classname="cn.yunji.journal.CloudBackupUploadDavTest" time="0.146"/>
+  <testcase name="uploadsAttachmentsAndCommitOverTlsAndReusesVerifiedObjects" classname="cn.yunji.journal.CloudBackupUploadDavTest" time="0.062"/>
+  <testcase name="foreignIdentityAndCorruptedExistingObjectAreNeverOverwritten" classname="cn.yunji.journal.CloudBackupUploadDavTest" time="0.038"/>
+  <testcase name="missingSourceFailsBeforeAnyRemoteRequest" classname="cn.yunji.journal.CloudBackupUploadDavTest" time="0.017"/>
+  <testcase name="corruptedBytesAlreadyInCloudBlockReuseInsteadOfBeingSilentlyReplaced" classname="cn.yunji.journal.CloudBackupUploadDavTest" time="0.051"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

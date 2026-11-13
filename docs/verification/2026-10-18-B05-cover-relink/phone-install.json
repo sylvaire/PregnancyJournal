@@ -1,0 +1,11 @@
+{
+  "versionNameVerified": true,
+  "versionCodeVerified": true,
+  "versionName": "0.12.0-dev",
+  "versionCode": 13,
+  "activityStartOk": true,
+  "coldStartMs": 649,
+  "dataPreserved": true,
+  "schemaUpgrade": "10 -> 11",
+  "note": "保留数据覆盖安装；数据库与加密对象目录存在，未读取个人医疗内容。启动成功不等于真机UI验收。"
+}

@@ -1,0 +1,27 @@
+Performing Streamed Install
+Success
+
+cn.yunji.journal.ReleaseBackupUiSmokeTest:
+Error in genuinelyObfuscatedReleaseConfirmsKeySavesAndIndependentlyRecoversManifest(cn.yunji.journal.ReleaseBackupUiSmokeTest):
+java.lang.AssertionError: expected:<2> but was:<8>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at cn.yunji.journal.ReleaseBackupUiSmokeTest.genuinelyObfuscatedReleaseConfirmsKeySavesAndIndependentlyRecoversManifest(ReleaseBackupUiSmokeTest.java:121)
+
+
+Time: 4.552
+There was 1 failure:
+1) genuinelyObfuscatedReleaseConfirmsKeySavesAndIndependentlyRecoversManifest(cn.yunji.journal.ReleaseBackupUiSmokeTest)
+java.lang.AssertionError: expected:<2> but was:<8>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at cn.yunji.journal.ReleaseBackupUiSmokeTest.genuinelyObfuscatedReleaseConfirmsKeySavesAndIndependentlyRecoversManifest(ReleaseBackupUiSmokeTest.java:121)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+

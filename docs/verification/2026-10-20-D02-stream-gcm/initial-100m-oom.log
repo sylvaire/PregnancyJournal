@@ -1,0 +1,57 @@
+Performing Streamed Install
+Success
+
+cn.yunji.journal.LargeBackupArchiveTest:
+Error in hundredMiBSupportedLimitAuthenticatesAndRestoresFromStreamedArchive(cn.yunji.journal.LargeBackupArchiveTest):
+java.lang.OutOfMemoryError: Failed to allocate a 134086672 byte allocation with 25165824 free bytes and 125MB until OOM, target footprint 95308576, growth limit 201326592
+	at com.android.org.conscrypt.OpenSSLAeadCipher.expand(OpenSSLAeadCipher.java:127)
+	at com.android.org.conscrypt.OpenSSLAeadCipher.updateInternal(OpenSSLAeadCipher.java:300)
+	at com.android.org.conscrypt.OpenSSLCipher.engineUpdate(OpenSSLCipher.java:332)
+	at javax.crypto.Cipher.update(Cipher.java:1723)
+	at javax.crypto.CipherOutputStream.write(CipherOutputStream.java:158)
+	at cn.yunji.journal.core.storage.EncryptedFileStore.put(EncryptedFileStore.kt:51)
+	at cn.yunji.journal.core.storage.EncryptedFileStore.put$default(EncryptedFileStore.kt:22)
+	at cn.yunji.journal.LargeBackupArchiveTest$Fixture.create(LargeBackupArchiveTest.kt:40)
+	at cn.yunji.journal.LargeBackupArchiveTest.verifySize(LargeBackupArchiveTest.kt:58)
+	at cn.yunji.journal.LargeBackupArchiveTest.access$verifySize(LargeBackupArchiveTest.kt:22)
+	at cn.yunji.journal.LargeBackupArchiveTest$hundredMiBSupportedLimitAuthenticatesAndRestoresFromStreamedArchive$1.invokeSuspend(LargeBackupArchiveTest.kt:53)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.LargeBackupArchiveTest.hundredMiBSupportedLimitAuthenticatesAndRestoresFromStreamedArchive(LargeBackupArchiveTest.kt:53)
+
+
+Time: 0.331
+There was 1 failure:
+1) hundredMiBSupportedLimitAuthenticatesAndRestoresFromStreamedArchive(cn.yunji.journal.LargeBackupArchiveTest)
+java.lang.OutOfMemoryError: Failed to allocate a 134086672 byte allocation with 25165824 free bytes and 125MB until OOM, target footprint 95308576, growth limit 201326592
+	at com.android.org.conscrypt.OpenSSLAeadCipher.expand(OpenSSLAeadCipher.java:127)
+	at com.android.org.conscrypt.OpenSSLAeadCipher.updateInternal(OpenSSLAeadCipher.java:300)
+	at com.android.org.conscrypt.OpenSSLCipher.engineUpdate(OpenSSLCipher.java:332)
+	at javax.crypto.Cipher.update(Cipher.java:1723)
+	at javax.crypto.CipherOutputStream.write(CipherOutputStream.java:158)
+	at cn.yunji.journal.core.storage.EncryptedFileStore.put(EncryptedFileStore.kt:51)
+	at cn.yunji.journal.core.storage.EncryptedFileStore.put$default(EncryptedFileStore.kt:22)
+	at cn.yunji.journal.LargeBackupArchiveTest$Fixture.create(LargeBackupArchiveTest.kt:40)
+	at cn.yunji.journal.LargeBackupArchiveTest.verifySize(LargeBackupArchiveTest.kt:58)
+	at cn.yunji.journal.LargeBackupArchiveTest.access$verifySize(LargeBackupArchiveTest.kt:22)
+	at cn.yunji.journal.LargeBackupArchiveTest$hundredMiBSupportedLimitAuthenticatesAndRestoresFromStreamedArchive$1.invokeSuspend(LargeBackupArchiveTest.kt:53)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.LargeBackupArchiveTest.hundredMiBSupportedLimitAuthenticatesAndRestoresFromStreamedArchive(LargeBackupArchiveTest.kt:53)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+

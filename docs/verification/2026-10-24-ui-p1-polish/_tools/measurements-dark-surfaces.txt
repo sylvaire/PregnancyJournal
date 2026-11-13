@@ -1,0 +1,23 @@
+== surface-alert-dialog.png
+  dominant colours: [('#080C09', 1140622), ('#0C100D', 775898), ('#213228', 473350), ('#425348', 37628)]
+  surfaceContainerHigh:    #213228  320.00 x  236.19 dp @ (45.71, 352.00)  area=469568 px
+  light exact px: {'#E7F0E6': 0, '#FFFFFF': 1784, '#DDE4DA': 0, '#F7F8F3': 0}
+  large (>5,000px) light components: []
+== surface-date-picker.png
+  dominant colours: [('#213228', 1355171), ('#080C09', 1146204), ('#5B5E59', 12043), ('#B9C8BB', 11913)]
+  surfaceContainerHigh:    #213228  359.62 x  448.00 dp @ (25.90, 306.29)  area=1071776 px
+  light exact px: {'#E7F0E6': 0, '#FFFFFF': 1784, '#DDE4DA': 0, '#F7F8F3': 0}
+  large (>5,000px) light components: []
+== surface-dropdown-menu.png
+  dominant colours: [('#141D17', 1097821), ('#1D2921', 904313), ('#1B2A20', 291906), ('#FFFFFF', 149690)]
+  surfaceContainer:        #1B2A20  112.76 x  400.76 dp @ (24.38, 158.48)  area=292064 px
+  surface:                 #1D2921  364.19 x  472.38 dp @ (24.38, 419.05)  area=866256 px
+  light exact px: {'#E7F0E6': 0, '#FFFFFF': 149690, '#DDE4DA': 27, '#F7F8F3': 0}
+  large (>5,000px) light components: [{'colour': '#FFFFFF', 'x0_dp': np.float64(146.29), 'y0_dp': np.float64(434.29), 'w_dp': np.float64(120.38), 'h_dp': np.float64(181.33), 'px': 149328}]
+== surface-snackbar.png
+  dominant colours: [('#141D17', 1540581), ('#1D2921', 358125), ('#294C39', 307914), ('#A5D0B3', 160882)]
+  surfaceContainerHighest: #294C39  364.19 x  124.95 dp @ (24.38, 341.33)  area=293632 px
+  inverseSurface:          #E3EADF  362.67 x   47.24 dp @ (24.38, 739.05)  area=111024 px
+  surface:                 #1D2921  411.43 x  103.62 dp @ (0.00, 810.67)  area=272240 px
+  light exact px: {'#E7F0E6': 0, '#FFFFFF': 0, '#DDE4DA': 9, '#F7F8F3': 0}
+  large (>5,000px) light components: []

@@ -1,0 +1,47 @@
+> Task :release-validation:copySmokeTest
+> Task :release-validation:preBuild
+> Task :release-validation:preDebugBuild
+> Task :release-validation:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :release-validation:javaPreCompileDebug UP-TO-DATE
+> Task :release-validation:checkDebugAarMetadata UP-TO-DATE
+> Task :release-validation:processDebugNavigationResources UP-TO-DATE
+> Task :release-validation:compileDebugNavigationResources UP-TO-DATE
+> Task :release-validation:generateDebugResValues UP-TO-DATE
+> Task :release-validation:mapDebugSourceSetPaths UP-TO-DATE
+> Task :release-validation:generateDebugResources UP-TO-DATE
+> Task :release-validation:mergeDebugResources UP-TO-DATE
+> Task :release-validation:packageDebugResources UP-TO-DATE
+> Task :release-validation:parseDebugLocalResources UP-TO-DATE
+> Task :release-validation:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :release-validation:extractDeepLinksDebug UP-TO-DATE
+> Task :release-validation:processDebugMainManifest UP-TO-DATE
+> Task :release-validation:processDebugManifest UP-TO-DATE
+> Task :release-validation:processDebugManifestForPackage UP-TO-DATE
+> Task :release-validation:processDebugResources UP-TO-DATE
+> Task :release-validation:compileDebugJavaWithJavac
+> Task :release-validation:mergeDebugShaders UP-TO-DATE
+> Task :release-validation:compileDebugShaders NO-SOURCE
+> Task :release-validation:generateDebugAssets UP-TO-DATE
+> Task :release-validation:mergeDebugAssets UP-TO-DATE
+> Task :release-validation:compressDebugAssets UP-TO-DATE
+> Task :release-validation:desugarDebugFileDependencies UP-TO-DATE
+> Task :release-validation:dexBuilderDebug
+> Task :release-validation:mergeDebugGlobalSynthetics UP-TO-DATE
+> Task :release-validation:processDebugJavaRes NO-SOURCE
+> Task :release-validation:mergeDebugJavaResource UP-TO-DATE
+> Task :release-validation:checkDebugDuplicateClasses UP-TO-DATE
+> Task :release-validation:mergeExtDexDebug UP-TO-DATE
+> Task :release-validation:mergeLibDexDebug UP-TO-DATE
+> Task :release-validation:mergeDebugJniLibFolders UP-TO-DATE
+> Task :release-validation:mergeDebugNativeLibs NO-SOURCE
+> Task :release-validation:stripDebugDebugSymbols NO-SOURCE
+> Task :release-validation:validateSigningDebug UP-TO-DATE
+> Task :release-validation:writeDebugAppMetadata UP-TO-DATE
+> Task :release-validation:writeDebugSigningConfigVersions UP-TO-DATE
+> Task :release-validation:mergeProjectDexDebug
+> Task :release-validation:packageDebug
+> Task :release-validation:createDebugApkListingFileRedirect UP-TO-DATE
+> Task :release-validation:assembleDebug
+
+BUILD SUCCESSFUL in 1s
+35 actionable tasks: 5 executed, 30 up-to-date

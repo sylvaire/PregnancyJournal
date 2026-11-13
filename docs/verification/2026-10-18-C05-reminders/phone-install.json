@@ -1,0 +1,11 @@
+{
+  "versionNameVerified": true,
+  "versionCodeVerified": true,
+  "versionName": "0.13.0-dev",
+  "versionCode": 14,
+  "activityStartOk": true,
+  "coldStartMs": 669,
+  "dataPreserved": true,
+  "schemaUpgrade": "11 -> 12",
+  "note": "保留数据覆盖安装；通知/精确闹钟权限由测试命令授予，发布前需用户在运行设置页确认。启动成功不等于真机UI验收。"
+}

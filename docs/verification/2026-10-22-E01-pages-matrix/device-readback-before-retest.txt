@@ -1,0 +1,14 @@
+E01 pages matrix retest - device readback BEFORE (extreme)
+time: 2026-10-22 16:23:00
+$ adb -s emulator-5556 shell settings get system font_scale
+2.0
+$ adb -s emulator-5556 shell cmd uimode night
+Night mode: yes
+$ adb -s emulator-5556 shell settings get system accelerometer_rotation
+0
+$ adb -s emulator-5556 shell settings get system user_rotation
+1
+$ adb -s emulator-5556 shell dumpsys window displays | Select-String -Pattern "init=|mCurrentRotation|mUserRotationMode|mGlobalConfiguration"
+init=1080x2400 420dpi mMinSizeOfResizeableTaskDp=220 cur=2400x1080 app=2400x1080 rng=1080x1080-2400x2400
+mCurrentRotation=ROTATION_90
+mUserRotationMode=USER_ROTATION_LOCKED mUserRotation=ROTATION_90 mCameraRotationMode=0 mAllowAllRotations=false

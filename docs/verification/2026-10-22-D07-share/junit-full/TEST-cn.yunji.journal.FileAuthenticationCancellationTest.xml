@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.FileAuthenticationCancellationTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-22T07:08:30.316Z" hostname="SUN-KDQ5E4QJN34" time="0.044">
+  <properties/>
+  <testcase name="cancellationDuringAuthenticationNeverPublishesPlaintextOrDamagesOriginal" classname="cn.yunji.journal.FileAuthenticationCancellationTest" time="0.036"/>
+  <testcase name="cancellationImmediatelyBeforePublicationAlsoRemovesAuthenticatedTemporaryFile" classname="cn.yunji.journal.FileAuthenticationCancellationTest" time="0.008"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

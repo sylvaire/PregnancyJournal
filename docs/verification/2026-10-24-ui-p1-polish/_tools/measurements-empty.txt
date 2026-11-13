@@ -1,0 +1,14 @@
+== before / trash-empty.png
+  soft card components (>=80dp tall, >=300dp wide): 0
+== after / trash-empty.png
+  soft card components (>=80dp tall, >=300dp wide): 1
+    card 364.19 x 96.00 dp @ (24.38, 243.81)  area=225376 px (8.7%)
+    card evidence: {'primary_icon_px': 5525, 'title_ink_px': 0, 'subtitle_muted_px': 0, 'white_px': 0, 'soft_px': 228477, 'icon_bbox_dp': {'w_dp': np.float64(136.0), 'h_dp': np.float64(58.67)}}
+== before / local-backup.png
+  soft card components (>=80dp tall, >=300dp wide): 0
+    soft button 364.19 x 53.33 dp @ (24.38, 423.62)
+== after / local-backup.png
+  soft card components (>=80dp tall, >=300dp wide): 1
+    card 364.19 x 97.52 dp @ (24.38, 600.38)  area=230048 px (8.9%)
+    soft button 364.19 x 53.33 dp @ (24.38, 423.62)
+    card evidence: {'primary_icon_px': 5647, 'title_ink_px': 0, 'subtitle_muted_px': 0, 'white_px': 0, 'soft_px': 229971, 'icon_bbox_dp': {'w_dp': np.float64(136.76), 'h_dp': np.float64(58.67)}}

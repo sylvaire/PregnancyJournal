@@ -1,0 +1,12 @@
+emulator-5556 baseline restored at 2026-10-24T10:54:46.1308335+08:00
+font_scale=1.0
+night=Night mode: no
+stay_on_while_plugged_in=0
+accelerometer_rotation=1
+user_rotation=0
+wm_size=Physical size: 1080x2400
+wm_density=Physical density: 420
+yunji_processes_after_force_stop=
+app_data=retained: pregnancy 'PJ Emulator', reminders/measurements deleted during walkthrough, Download exports retained
+permissions_granted_for_test=POST_NOTIFICATIONS, SCHEDULE_EXACT_ALARM(appops allow)
+xiaomi_devices_touched=none (11 Ultra offline; only emulator-5556)

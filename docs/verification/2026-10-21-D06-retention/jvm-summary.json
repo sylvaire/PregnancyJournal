@@ -1,0 +1,6 @@
+{
+  "totalJvmTests": 205,
+  "failures": 0,
+  "classes": 40,
+  "note": "完整JVM套件；D06新增20项(保留策略13/远端适配6/清理节流1)。"
+}

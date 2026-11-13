@@ -1,0 +1,95 @@
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.BackupSystemJourneyTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+cn.yunji.journal.BackupSystemJourneyTest:
+INSTRUMENTATION_STATUS: test=recreatingActivityDuringHundredMiBSaveNeverLeavesAnUnverifiedTarget
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.BackupSystemJourneyTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stack=java.lang.SecurityException: Permission Denial: reading com.android.providers.downloads.DownloadStorageProvider uri content://com.android.providers.downloads.documents/document/57 from pid=6264, uid=10235 requires that you obtain access using ACTION_OPEN_DOCUMENT or related APIs
+	at android.os.Parcel.createExceptionOrNull(Parcel.java:3340)
+	at android.os.Parcel.createException(Parcel.java:3324)
+	at android.os.Parcel.readException(Parcel.java:3307)
+	at android.database.DatabaseUtils.readExceptionFromParcel(DatabaseUtils.java:201)
+	at android.database.DatabaseUtils.readExceptionWithFileNotFoundExceptionFromParcel(DatabaseUtils.java:164)
+	at android.content.ContentProviderProxy.openTypedAssetFile(ContentProviderNative.java:814)
+	at android.content.ContentResolver.openTypedAssetFileDescriptor(ContentResolver.java:2045)
+	at android.content.ContentResolver.openAssetFileDescriptor(ContentResolver.java:1860)
+	at android.content.ContentResolver.openInputStream(ContentResolver.java:1530)
+	at cn.yunji.journal.BackupSystemJourneyTest.journey(BackupSystemJourneyTest.kt:230)
+	at cn.yunji.journal.BackupSystemJourneyTest.access$journey(BackupSystemJourneyTest.kt:40)
+	at cn.yunji.journal.BackupSystemJourneyTest$journey$1.invokeSuspend(Unknown Source:18)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.BackupSystemJourneyTest.recreatingActivityDuringHundredMiBSaveNeverLeavesAnUnverifiedTarget(BackupSystemJourneyTest.kt:85)
+
+INSTRUMENTATION_STATUS: stream=
+Error in recreatingActivityDuringHundredMiBSaveNeverLeavesAnUnverifiedTarget(cn.yunji.journal.BackupSystemJourneyTest):
+java.lang.SecurityException: Permission Denial: reading com.android.providers.downloads.DownloadStorageProvider uri content://com.android.providers.downloads.documents/document/57 from pid=6264, uid=10235 requires that you obtain access using ACTION_OPEN_DOCUMENT or related APIs
+	at android.os.Parcel.createExceptionOrNull(Parcel.java:3340)
+	at android.os.Parcel.createException(Parcel.java:3324)
+	at android.os.Parcel.readException(Parcel.java:3307)
+	at android.database.DatabaseUtils.readExceptionFromParcel(DatabaseUtils.java:201)
+	at android.database.DatabaseUtils.readExceptionWithFileNotFoundExceptionFromParcel(DatabaseUtils.java:164)
+	at android.content.ContentProviderProxy.openTypedAssetFile(ContentProviderNative.java:814)
+	at android.content.ContentResolver.openTypedAssetFileDescriptor(ContentResolver.java:2045)
+	at android.content.ContentResolver.openAssetFileDescriptor(ContentResolver.java:1860)
+	at android.content.ContentResolver.openInputStream(ContentResolver.java:1530)
+	at cn.yunji.journal.BackupSystemJourneyTest.journey(BackupSystemJourneyTest.kt:230)
+	at cn.yunji.journal.BackupSystemJourneyTest.access$journey(BackupSystemJourneyTest.kt:40)
+	at cn.yunji.journal.BackupSystemJourneyTest$journey$1.invokeSuspend(Unknown Source:18)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.BackupSystemJourneyTest.recreatingActivityDuringHundredMiBSaveNeverLeavesAnUnverifiedTarget(BackupSystemJourneyTest.kt:85)
+
+INSTRUMENTATION_STATUS: test=recreatingActivityDuringHundredMiBSaveNeverLeavesAnUnverifiedTarget
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 12.573
+There was 1 failure:
+1) recreatingActivityDuringHundredMiBSaveNeverLeavesAnUnverifiedTarget(cn.yunji.journal.BackupSystemJourneyTest)
+java.lang.SecurityException: Permission Denial: reading com.android.providers.downloads.DownloadStorageProvider uri content://com.android.providers.downloads.documents/document/57 from pid=6264, uid=10235 requires that you obtain access using ACTION_OPEN_DOCUMENT or related APIs
+	at android.os.Parcel.createExceptionOrNull(Parcel.java:3340)
+	at android.os.Parcel.createException(Parcel.java:3324)
+	at android.os.Parcel.readException(Parcel.java:3307)
+	at android.database.DatabaseUtils.readExceptionFromParcel(DatabaseUtils.java:201)
+	at android.database.DatabaseUtils.readExceptionWithFileNotFoundExceptionFromParcel(DatabaseUtils.java:164)
+	at android.content.ContentProviderProxy.openTypedAssetFile(ContentProviderNative.java:814)
+	at android.content.ContentResolver.openTypedAssetFileDescriptor(ContentResolver.java:2045)
+	at android.content.ContentResolver.openAssetFileDescriptor(ContentResolver.java:1860)
+	at android.content.ContentResolver.openInputStream(ContentResolver.java:1530)
+	at cn.yunji.journal.BackupSystemJourneyTest.journey(BackupSystemJourneyTest.kt:230)
+	at cn.yunji.journal.BackupSystemJourneyTest.access$journey(BackupSystemJourneyTest.kt:40)
+	at cn.yunji.journal.BackupSystemJourneyTest$journey$1.invokeSuspend(Unknown Source:18)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.BackupSystemJourneyTest.recreatingActivityDuringHundredMiBSaveNeverLeavesAnUnverifiedTarget(BackupSystemJourneyTest.kt:85)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

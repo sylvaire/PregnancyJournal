@@ -1,0 +1,18 @@
+# P0-2 UI 主题修复验证 · 构建产物信息（终版 Theme.kt）
+生成时间（宿主）：2026-10-24 04:42:30 +08:00
+构建命令：.\gradlew.bat --gradle-user-home .gradle-user --offline :app:assembleDebug :app:assembleDebugAndroidTest :app:testDebugUnitTest
+结果：BUILD SUCCESSFUL in 21s（86 actionable tasks: 9 executed, 77 up-to-date），GRADLE_EXIT=0，墙钟 21.9s
+说明：本次为 Lead 微调 surfaceContainerLow/Container/High=White 后的**终版**构建；主题源文件 Theme.kt sha256=C5D494446CA07E6605B2AD5A3A863D63FC59361457CF8157A33D02E614D75C7F
+
+## APK
+app-debug.apk:
+  path: app/build/outputs/apk/debug/app-debug.apk
+  bytes: 29877582
+  lastWriteTime: 2026-10-24 04:34:19
+  sha256: 1B8D7FA8C3C32FCA2B8104F295C34F7B4022597EE9F4699D8E31365DE94100E3
+app-debug-androidTest.apk:
+  path: app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk
+  bytes: 2082107
+  lastWriteTime: 2026-10-24 03:40:59
+  sha256: 1783B068E7983B5F1E37F215B467B9C4A08D9D053F6B5E1E61B75CEB9420BBD2
+  说明：测试代码本轮未变，assembleDebugAndroidTest UP-TO-DATE（测试 APK 不包含 app 类，主题修复在 app-debug.apk 内）。

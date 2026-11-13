@@ -1,0 +1,29 @@
+[
+  {
+    "phase": "after",
+    "sample": 1,
+    "frames": 88,
+    "janky": 1,
+    "legacyJanky": 12,
+    "p95BucketMs": 34,
+    "p99BucketMs": 46
+  },
+  {
+    "phase": "after",
+    "sample": 2,
+    "frames": 88,
+    "janky": 1,
+    "legacyJanky": 20,
+    "p95BucketMs": 18,
+    "p99BucketMs": 40
+  },
+  {
+    "phase": "after",
+    "sample": 3,
+    "frames": 90,
+    "janky": 1,
+    "legacyJanky": 16,
+    "p95BucketMs": 21,
+    "p99BucketMs": 150
+  }
+]

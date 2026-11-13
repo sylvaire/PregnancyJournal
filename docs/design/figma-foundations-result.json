@@ -1,0 +1,119 @@
+{
+  "createdNodeIds": [
+    "7:41",
+    "7:42",
+    "7:43",
+    "7:44",
+    "7:45",
+    "7:46",
+    "7:47",
+    "7:48",
+    "7:49",
+    "7:50",
+    "7:51",
+    "7:52",
+    "7:53",
+    "7:54",
+    "7:55",
+    "7:56",
+    "7:57",
+    "7:58",
+    "7:59",
+    "7:60",
+    "7:61",
+    "7:2461",
+    "7:2462",
+    "7:2463",
+    "I7:2463;58653:14016",
+    "I7:2463;58653:14017",
+    "I7:2463;58653:14019",
+    "7:2470",
+    "7:2471",
+    "I7:2471;58653:14016",
+    "I7:2471;58653:14017",
+    "I7:2471;58653:14019",
+    "7:2477",
+    "7:2478",
+    "I7:2478;58653:14016",
+    "I7:2478;58653:14017",
+    "I7:2478;58653:14019",
+    "7:2484",
+    "7:2485",
+    "7:2486",
+    "I7:2486;52798:24398",
+    "I7:2486;52798:24399",
+    "I7:2486;52798:24400",
+    "I7:2486;52798:24401",
+    "I7:2486;52798:24402",
+    "I7:2486;52798:24403",
+    "I7:2486;52798:24404",
+    "7:2497",
+    "7:2498",
+    "7:2499",
+    "7:2500",
+    "7:2501",
+    "7:2502",
+    "7:2496"
+  ],
+  "mutatedNodeIds": [
+    "0:1"
+  ],
+  "pageId": "0:1",
+  "foundationId": "7:41",
+  "componentAreaId": "7:2461",
+  "components": {
+    "buttonSet": "7:2484",
+    "buttons": [
+      {
+        "id": "7:2462",
+        "name": "Style=Primary"
+      },
+      {
+        "id": "7:2470",
+        "name": "Style=Secondary"
+      },
+      {
+        "id": "7:2477",
+        "name": "Style=Disabled"
+      }
+    ],
+    "field": "7:2485",
+    "row": "7:2496"
+  },
+  "styles": {
+    "display": "S:f7af3b6e3d7f141ca772f9e266c8b6699e28ba2d,",
+    "title": "S:559203aa19abba981971080cd00371ea573b240c,",
+    "heading": "S:57fd80e0fe1a5bd0f2c8284c1c3c8ef25fd2efe6,",
+    "body": "S:71aff54881adf2ab5fbaa6a3b5172ff67e1f7eb8,",
+    "label": "S:a64755d3dba4fad50a8bc270106257d6297ea67f,",
+    "caption": "S:7b58a2f6fe4d38bffd644efc763a2592a98fd7e7,"
+  },
+  "variables": {
+    "color/bg": "VariableID:7:14",
+    "color/surface": "VariableID:7:15",
+    "color/ink": "VariableID:7:16",
+    "color/muted": "VariableID:7:17",
+    "color/primary": "VariableID:7:18",
+    "color/soft": "VariableID:7:19",
+    "color/line": "VariableID:7:20",
+    "color/apricot": "VariableID:7:21",
+    "color/amber": "VariableID:7:22",
+    "color/danger": "VariableID:7:23",
+    "color/dangerSoft": "VariableID:7:24",
+    "space/4": "VariableID:7:25",
+    "space/8": "VariableID:7:26",
+    "space/12": "VariableID:7:27",
+    "space/16": "VariableID:7:28",
+    "space/20": "VariableID:7:29",
+    "space/24": "VariableID:7:30",
+    "space/32": "VariableID:7:31",
+    "radius/12": "VariableID:7:32",
+    "radius/20": "VariableID:7:33",
+    "radius/28": "VariableID:7:34"
+  },
+  "font": "Noto Sans SC",
+  "checks": {
+    "tokens": 21,
+    "styles": 6
+  }
+}

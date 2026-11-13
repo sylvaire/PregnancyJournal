@@ -1,0 +1,56 @@
+
+cn.yunji.journal.RestoreGenerationDatabaseTest:.
+cn.yunji.journal.BackupSystemJourneyTest:
+Error in mainActivityCreatesBackupThroughSystemDocumentsUiAndRecoveryKeyOpensIt(cn.yunji.journal.BackupSystemJourneyTest):
+java.lang.NullPointerException: Attempt to invoke virtual method 'boolean android.util.ArraySet.remove(java.lang.Object)' on a null object reference
+	at android.os.Parcel.createExceptionOrNull(Parcel.java:3063)
+	at android.os.Parcel.createException(Parcel.java:3041)
+	at android.os.Parcel.readException(Parcel.java:3024)
+	at android.database.DatabaseUtils.readExceptionFromParcel(DatabaseUtils.java:190)
+	at android.database.DatabaseUtils.readExceptionFromParcel(DatabaseUtils.java:142)
+	at android.content.ContentProviderProxy.call(ContentProviderNative.java:764)
+	at android.content.ContentResolver.call(ContentResolver.java:2466)
+	at android.provider.DocumentsContract.deleteDocument(DocumentsContract.java:1469)
+	at cn.yunji.journal.BackupSystemJourneyTest.journey(BackupSystemJourneyTest.kt:111)
+	at cn.yunji.journal.BackupSystemJourneyTest.access$journey(BackupSystemJourneyTest.kt:26)
+	at cn.yunji.journal.BackupSystemJourneyTest$journey$1.invokeSuspend(Unknown Source:15)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.BackupSystemJourneyTest.mainActivityCreatesBackupThroughSystemDocumentsUiAndRecoveryKeyOpensIt(BackupSystemJourneyTest.kt:59)
+.
+
+Time: 15.344
+There was 1 failure:
+1) mainActivityCreatesBackupThroughSystemDocumentsUiAndRecoveryKeyOpensIt(cn.yunji.journal.BackupSystemJourneyTest)
+java.lang.NullPointerException: Attempt to invoke virtual method 'boolean android.util.ArraySet.remove(java.lang.Object)' on a null object reference
+	at android.os.Parcel.createExceptionOrNull(Parcel.java:3063)
+	at android.os.Parcel.createException(Parcel.java:3041)
+	at android.os.Parcel.readException(Parcel.java:3024)
+	at android.database.DatabaseUtils.readExceptionFromParcel(DatabaseUtils.java:190)
+	at android.database.DatabaseUtils.readExceptionFromParcel(DatabaseUtils.java:142)
+	at android.content.ContentProviderProxy.call(ContentProviderNative.java:764)
+	at android.content.ContentResolver.call(ContentResolver.java:2466)
+	at android.provider.DocumentsContract.deleteDocument(DocumentsContract.java:1469)
+	at cn.yunji.journal.BackupSystemJourneyTest.journey(BackupSystemJourneyTest.kt:111)
+	at cn.yunji.journal.BackupSystemJourneyTest.access$journey(BackupSystemJourneyTest.kt:26)
+	at cn.yunji.journal.BackupSystemJourneyTest$journey$1.invokeSuspend(Unknown Source:15)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.BackupSystemJourneyTest.mainActivityCreatesBackupThroughSystemDocumentsUiAndRecoveryKeyOpensIt(BackupSystemJourneyTest.kt:59)
+
+FAILURES!!!
+Tests run: 3,  Failures: 1
+
+

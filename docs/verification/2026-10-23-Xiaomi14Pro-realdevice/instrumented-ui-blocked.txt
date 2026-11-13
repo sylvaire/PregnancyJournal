@@ -1,0 +1,12 @@
+# Instrumented UI class attempts on the Xiaomi device (all terminated after 120-300 s without progress)
+
+| Attempt | Class | Outcome |
+|---|---|---|
+| full suite (run 1) | all 338 tests | 4 AccessStateTest tests passed, then BackgroundReliabilityUiTest hung after its activity start was denied; terminated by Lead (shortMsg=Process crashed is the force-stop by us, not a product crash) |
+| class batch | CustomReminderUiTest | hung 300 s; killed |
+| pre-start probe | BackgroundReliabilityUiTest | hung 150 s; killed |
+| single-test probe | LockEntryMatrixTest#t1ColdStartShowsLockScreenAndNoJournalContent | hung 120 s; killed |
+
+Common cause: MIUI 'Permission Denied Activity' for both ComponentActivity and MainActivity when started from the instrumentation process (background app). No activity window is created, so the tests wait indefinitely.
+Workaround not attempted this round: manually grant the MIUI '后台弹出界面' permission to the app in the isolated user, or drive the UI with adb (shell m start is allowed) instead of instrumentation.
+

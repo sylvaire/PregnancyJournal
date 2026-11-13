@@ -1,0 +1,172 @@
+===== t4-logcat.txt =====
+10-22 05:11:28.753   274 11560 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:34:39.466   274 12472 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:35:00.614   274 12537 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:35:31.145 12622 12637 I ExtremeMatrix: setUp start
+10-22 05:35:33.962 12622 12637 I ExtremeMatrix: setUp done
+10-22 05:35:33.962 12622 12637 I ExtremeMatrix: t4: 1 open manager
+10-22 05:35:35.581 12622 12637 I ExtremeMatrix: t4: 2 click 创建新的孕期档案
+10-22 05:35:36.576 12622 12637 I ExtremeMatrix: t4: 3 editor opened, scroll to 档案名称
+10-22 05:35:36.592 12622 12637 I ExtremeMatrix: t4: 4 type title
+10-22 05:35:36.890 12622 12637 I ExtremeMatrix: t4: 5 scroll to 保存档案
+10-22 05:35:39.916   274 12646 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:47:40.232   479   479 I Zygote  : Process 2849 exited due to signal 9 (Killed)
+10-22 05:48:21.593   693  1525 I ActivityManager: Killing 12622:cn.yunji.journal/u0a221 (adj 0): stop cn.yunji.journal due to from pid 12888
+10-22 05:48:21.645   479   479 I Zygote  : Process 12622 exited due to signal 9 (Killed)
+===== t4b-logcat.txt =====
+10-22 05:11:28.753   274 11560 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:34:39.466   274 12472 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:35:00.614   274 12537 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:35:31.145 12622 12637 I ExtremeMatrix: setUp start
+10-22 05:35:33.962 12622 12637 I ExtremeMatrix: setUp done
+10-22 05:35:33.962 12622 12637 I ExtremeMatrix: t4: 1 open manager
+10-22 05:35:35.581 12622 12637 I ExtremeMatrix: t4: 2 click 创建新的孕期档案
+10-22 05:35:36.576 12622 12637 I ExtremeMatrix: t4: 3 editor opened, scroll to 档案名称
+10-22 05:35:36.592 12622 12637 I ExtremeMatrix: t4: 4 type title
+10-22 05:35:36.890 12622 12637 I ExtremeMatrix: t4: 5 scroll to 保存档案
+10-22 05:35:39.916   274 12646 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:47:40.232   479   479 I Zygote  : Process 2849 exited due to signal 9 (Killed)
+10-22 05:48:21.593   693  1525 I ActivityManager: Killing 12622:cn.yunji.journal/u0a221 (adj 0): stop cn.yunji.journal due to from pid 12888
+10-22 05:48:21.645   479   479 I Zygote  : Process 12622 exited due to signal 9 (Killed)
+10-22 05:49:08.455   274 12934 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:51:39.711   274 13071 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:51:58.872   274 13127 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:52:28.162 13220 13236 I ExtremeMatrix: setUp start
+10-22 05:52:30.432 13220 13236 I ExtremeMatrix: setUp done
+10-22 05:52:30.432 13220 13236 I ExtremeMatrix: t4: 1 open manager
+10-22 05:52:32.046 13220 13236 I ExtremeMatrix: t4: 2 click 创建新的孕期档案
+10-22 05:52:32.924 13220 13236 I ExtremeMatrix: t4: 3 editor opened, scroll to 档案名称
+10-22 05:52:32.939 13220 13236 I ExtremeMatrix: t4: 4 type title
+10-22 05:52:33.647 13220 13236 I ExtremeMatrix: t4: 5 scroll to 保存档案
+10-22 05:52:33.974 13220 13236 I ExtremeMatrix: t4: 6 click save
+10-22 05:52:34.688 13220 13236 I ExtremeMatrix: t4: 7 wait db
+10-22 05:52:34.690 13220 13236 I ExtremeMatrix: tearDown start
+10-22 05:52:35.626 13220 13236 E TestRunner: java.lang.AssertionError: 保存后应写入第二个孕期档案
+10-22 05:52:35.687   693  1868 I ActivityManager: Killing 13220:cn.yunji.journal/u0a223 (adj 0): stop cn.yunji.journal due to finished inst
+10-22 05:52:35.764   479   479 I Zygote  : Process 13220 exited due to signal 9 (Killed)
+10-22 05:52:37.061   274 13245 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:52:59.896   693   739 I ActivityManager: Killing 13285:cn.yunji.journal.test/u0a224 (adj 900): stop cn.yunji.journal.test due to deletePackageX
+10-22 05:52:59.909   479   479 I Zygote  : Process 13285 exited due to signal 9 (Killed)
+===== t4c-logcat.txt =====
+10-22 05:11:28.753   274 11560 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:34:39.466   274 12472 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:35:00.614   274 12537 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:35:31.145 12622 12637 I ExtremeMatrix: setUp start
+10-22 05:35:33.962 12622 12637 I ExtremeMatrix: setUp done
+10-22 05:35:33.962 12622 12637 I ExtremeMatrix: t4: 1 open manager
+10-22 05:35:35.581 12622 12637 I ExtremeMatrix: t4: 2 click 创建新的孕期档案
+10-22 05:35:36.576 12622 12637 I ExtremeMatrix: t4: 3 editor opened, scroll to 档案名称
+10-22 05:35:36.592 12622 12637 I ExtremeMatrix: t4: 4 type title
+10-22 05:35:36.890 12622 12637 I ExtremeMatrix: t4: 5 scroll to 保存档案
+10-22 05:35:39.916   274 12646 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:47:40.232   479   479 I Zygote  : Process 2849 exited due to signal 9 (Killed)
+10-22 05:48:21.593   693  1525 I ActivityManager: Killing 12622:cn.yunji.journal/u0a221 (adj 0): stop cn.yunji.journal due to from pid 12888
+10-22 05:48:21.645   479   479 I Zygote  : Process 12622 exited due to signal 9 (Killed)
+10-22 05:49:08.455   274 12934 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:51:39.711   274 13071 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:51:58.872   274 13127 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:52:28.162 13220 13236 I ExtremeMatrix: setUp start
+10-22 05:52:30.432 13220 13236 I ExtremeMatrix: setUp done
+10-22 05:52:30.432 13220 13236 I ExtremeMatrix: t4: 1 open manager
+10-22 05:52:32.046 13220 13236 I ExtremeMatrix: t4: 2 click 创建新的孕期档案
+10-22 05:52:32.924 13220 13236 I ExtremeMatrix: t4: 3 editor opened, scroll to 档案名称
+10-22 05:52:32.939 13220 13236 I ExtremeMatrix: t4: 4 type title
+10-22 05:52:33.647 13220 13236 I ExtremeMatrix: t4: 5 scroll to 保存档案
+10-22 05:52:33.974 13220 13236 I ExtremeMatrix: t4: 6 click save
+10-22 05:52:34.688 13220 13236 I ExtremeMatrix: t4: 7 wait db
+10-22 05:52:34.690 13220 13236 I ExtremeMatrix: tearDown start
+10-22 05:52:35.626 13220 13236 E TestRunner: java.lang.AssertionError: 保存后应写入第二个孕期档案
+10-22 05:52:35.687   693  1868 I ActivityManager: Killing 13220:cn.yunji.journal/u0a223 (adj 0): stop cn.yunji.journal due to finished inst
+10-22 05:52:35.764   479   479 I Zygote  : Process 13220 exited due to signal 9 (Killed)
+10-22 05:52:37.061   274 13245 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:52:59.896   693   739 I ActivityManager: Killing 13285:cn.yunji.journal.test/u0a224 (adj 900): stop cn.yunji.journal.test due to deletePackageX
+10-22 05:52:59.909   479   479 I Zygote  : Process 13285 exited due to signal 9 (Killed)
+10-22 05:53:10.451   274 13338 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:53:33.378   274 13562 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:54:26.228   479   479 I Zygote  : Process 4039 exited due to signal 9 (Killed)
+10-22 05:55:03.899   693   764 I ActivityManager: Killing 2880:com.google.android.settings.intelligence/u0a144 (adj 250): change com.google.android.settings.intelligence
+10-22 05:55:04.146   479   479 I Zygote  : Process 2880 exited due to signal 9 (Killed)
+10-22 05:56:25.073   274 14035 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:56:45.146   274 14087 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+===== t4-t6-logcat.txt =====
+10-22 05:11:28.753   274 11560 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:34:39.466   274 12472 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:35:00.614   274 12537 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:35:31.145 12622 12637 I ExtremeMatrix: setUp start
+10-22 05:35:33.962 12622 12637 I ExtremeMatrix: setUp done
+10-22 05:35:33.962 12622 12637 I ExtremeMatrix: t4: 1 open manager
+10-22 05:35:35.581 12622 12637 I ExtremeMatrix: t4: 2 click 创建新的孕期档案
+10-22 05:35:36.576 12622 12637 I ExtremeMatrix: t4: 3 editor opened, scroll to 档案名称
+10-22 05:35:36.592 12622 12637 I ExtremeMatrix: t4: 4 type title
+10-22 05:35:36.890 12622 12637 I ExtremeMatrix: t4: 5 scroll to 保存档案
+10-22 05:35:39.916   274 12646 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:47:40.232   479   479 I Zygote  : Process 2849 exited due to signal 9 (Killed)
+10-22 05:48:21.593   693  1525 I ActivityManager: Killing 12622:cn.yunji.journal/u0a221 (adj 0): stop cn.yunji.journal due to from pid 12888
+10-22 05:48:21.645   479   479 I Zygote  : Process 12622 exited due to signal 9 (Killed)
+10-22 05:49:08.455   274 12934 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:51:39.711   274 13071 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:51:58.872   274 13127 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:52:28.162 13220 13236 I ExtremeMatrix: setUp start
+10-22 05:52:30.432 13220 13236 I ExtremeMatrix: setUp done
+10-22 05:52:30.432 13220 13236 I ExtremeMatrix: t4: 1 open manager
+10-22 05:52:32.046 13220 13236 I ExtremeMatrix: t4: 2 click 创建新的孕期档案
+10-22 05:52:32.924 13220 13236 I ExtremeMatrix: t4: 3 editor opened, scroll to 档案名称
+10-22 05:52:32.939 13220 13236 I ExtremeMatrix: t4: 4 type title
+10-22 05:52:33.647 13220 13236 I ExtremeMatrix: t4: 5 scroll to 保存档案
+10-22 05:52:33.974 13220 13236 I ExtremeMatrix: t4: 6 click save
+10-22 05:52:34.688 13220 13236 I ExtremeMatrix: t4: 7 wait db
+10-22 05:52:34.690 13220 13236 I ExtremeMatrix: tearDown start
+10-22 05:52:35.626 13220 13236 E TestRunner: java.lang.AssertionError: 保存后应写入第二个孕期档案
+10-22 05:52:35.687   693  1868 I ActivityManager: Killing 13220:cn.yunji.journal/u0a223 (adj 0): stop cn.yunji.journal due to finished inst
+10-22 05:52:35.764   479   479 I Zygote  : Process 13220 exited due to signal 9 (Killed)
+10-22 05:52:37.061   274 13245 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:52:59.896   693   739 I ActivityManager: Killing 13285:cn.yunji.journal.test/u0a224 (adj 900): stop cn.yunji.journal.test due to deletePackageX
+10-22 05:52:59.909   479   479 I Zygote  : Process 13285 exited due to signal 9 (Killed)
+10-22 05:53:10.451   274 13338 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:53:33.378   274 13562 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:54:26.228   479   479 I Zygote  : Process 4039 exited due to signal 9 (Killed)
+10-22 05:55:03.899   693   764 I ActivityManager: Killing 2880:com.google.android.settings.intelligence/u0a144 (adj 250): change com.google.android.settings.intelligence
+10-22 05:55:04.146   479   479 I Zygote  : Process 2880 exited due to signal 9 (Killed)
+10-22 05:56:25.073   274 14035 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:56:45.146   274 14087 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+===== t6-dbg-logcat.txt =====
+10-22 05:11:28.753   274 11560 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:34:39.466   274 12472 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:35:00.614   274 12537 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:35:31.145 12622 12637 I ExtremeMatrix: setUp start
+10-22 05:35:33.962 12622 12637 I ExtremeMatrix: setUp done
+10-22 05:35:33.962 12622 12637 I ExtremeMatrix: t4: 1 open manager
+10-22 05:35:35.581 12622 12637 I ExtremeMatrix: t4: 2 click 创建新的孕期档案
+10-22 05:35:36.576 12622 12637 I ExtremeMatrix: t4: 3 editor opened, scroll to 档案名称
+10-22 05:35:36.592 12622 12637 I ExtremeMatrix: t4: 4 type title
+10-22 05:35:36.890 12622 12637 I ExtremeMatrix: t4: 5 scroll to 保存档案
+10-22 05:35:39.916   274 12646 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:47:40.232   479   479 I Zygote  : Process 2849 exited due to signal 9 (Killed)
+10-22 05:48:21.593   693  1525 I ActivityManager: Killing 12622:cn.yunji.journal/u0a221 (adj 0): stop cn.yunji.journal due to from pid 12888
+10-22 05:48:21.645   479   479 I Zygote  : Process 12622 exited due to signal 9 (Killed)
+10-22 05:49:08.455   274 12934 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:51:39.711   274 13071 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:51:58.872   274 13127 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:52:28.162 13220 13236 I ExtremeMatrix: setUp start
+10-22 05:52:30.432 13220 13236 I ExtremeMatrix: setUp done
+10-22 05:52:30.432 13220 13236 I ExtremeMatrix: t4: 1 open manager
+10-22 05:52:32.046 13220 13236 I ExtremeMatrix: t4: 2 click 创建新的孕期档案
+10-22 05:52:32.924 13220 13236 I ExtremeMatrix: t4: 3 editor opened, scroll to 档案名称
+10-22 05:52:32.939 13220 13236 I ExtremeMatrix: t4: 4 type title
+10-22 05:52:33.647 13220 13236 I ExtremeMatrix: t4: 5 scroll to 保存档案
+10-22 05:52:33.974 13220 13236 I ExtremeMatrix: t4: 6 click save
+10-22 05:52:34.688 13220 13236 I ExtremeMatrix: t4: 7 wait db
+10-22 05:52:34.690 13220 13236 I ExtremeMatrix: tearDown start
+10-22 05:52:35.626 13220 13236 E TestRunner: java.lang.AssertionError: 保存后应写入第二个孕期档案
+10-22 05:52:35.687   693  1868 I ActivityManager: Killing 13220:cn.yunji.journal/u0a223 (adj 0): stop cn.yunji.journal due to finished inst
+10-22 05:52:35.764   479   479 I Zygote  : Process 13220 exited due to signal 9 (Killed)
+10-22 05:52:37.061   274 13245 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:52:59.896   693   739 I ActivityManager: Killing 13285:cn.yunji.journal.test/u0a224 (adj 900): stop cn.yunji.journal.test due to deletePackageX
+10-22 05:52:59.909   479   479 I Zygote  : Process 13285 exited due to signal 9 (Killed)
+10-22 05:53:10.451   274 13338 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:53:33.378   274 13562 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:54:26.228   479   479 I Zygote  : Process 4039 exited due to signal 9 (Killed)
+10-22 05:55:03.899   693   764 I ActivityManager: Killing 2880:com.google.android.settings.intelligence/u0a144 (adj 250): change com.google.android.settings.intelligence
+10-22 05:55:04.146   479   479 I Zygote  : Process 2880 exited due to signal 9 (Killed)
+10-22 05:56:25.073   274 14035 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.
+10-22 05:56:45.146   274 14087 I keystore2: system/security/keystore2/watchdog/src/lib.rs:377 - Watchdog thread idle -> terminating. Have a great day.

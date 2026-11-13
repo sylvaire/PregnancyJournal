@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.CloudWriterStoreTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-20T15:14:00.958Z" hostname="SUN-KDQ5E4QJN34" time="0.153">
+  <properties/>
+  <testcase name="abandonedEncryptedPendingDoesNotAdvanceCommittedState" classname="cn.yunji.journal.CloudWriterStoreTest" time="0.021"/>
+  <testcase name="recreationKeepsIdentityAndConsumesFailedAttemptSequence" classname="cn.yunji.journal.CloudWriterStoreTest" time="0.01"/>
+  <testcase name="directorySyncFailureDoesNotReturnReservationOrReuseSequence" classname="cn.yunji.journal.CloudWriterStoreTest" time="0.01"/>
+  <testcase name="concurrentInstancesIssueUniqueMonotonicReservations" classname="cn.yunji.journal.CloudWriterStoreTest" time="0.101"/>
+  <testcase name="corruptedOrWrongVaultStateStopsInsteadOfResetting" classname="cn.yunji.journal.CloudWriterStoreTest" time="0.008"/>
+  <testcase name="wipedKeyCannotCreateWriterState" classname="cn.yunji.journal.CloudWriterStoreTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

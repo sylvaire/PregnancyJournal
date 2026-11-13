@@ -1,0 +1,4 @@
+10-21 15:17:01.588 10498 10542 I System.out: PERF[record-save] samples=30 p50=2.0ms p95=3.0ms min=2ms max=274ms device=Google sdk_gphone64_x86_64 / API 34
+10-21 15:17:01.588 10498 10542 I System.out: PERF[record-save] target=500.0 ms, measured P95=3.0 ms
+10-21 15:17:26.816 10498 10542 I System.out: PERF[first-content] samples=30 p50=785.0ms p95=869.0ms min=711ms max=2429ms device=Google sdk_gphone64_x86_64 / API 34
+10-21 15:17:26.816 10498 10542 I System.out: PERF[first-content] target=2000.0 ms, measured P95=869.0 ms

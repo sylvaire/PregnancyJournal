@@ -1,0 +1,1 @@
+AlarmManager alarms owned by cn.yunji.journal: before=0 after=7 (captured 23:05 before upgrade / after first launch on 0.26.0-dev).

@@ -1,0 +1,13 @@
+# Targeted instrumented batch (Xiaomi 14 Pro, isolated user 10, versionCode 27 / 0.26.0-dev)
+
+Command: adb -s <xiaomi> shell am instrument --user 10 -w -r -e class "cn.yunji.journal.ReminderNotificationTest,cn.yunji.journal.ReminderSchedulerTest,cn.yunji.journal.CustomReminderUiTest" cn.yunji.journal.test/androidx.test.runner.AndroidJUnitRunner
+Result: Tests run: 8, Failures: 1
+
+- ReminderNotificationTest: 2/2 passed on HyperOS
+  - existingForegroundNotificationIsRedactedWithoutLosingAction
+  - exactAlarmPostsPrivateNotificationThroughReceiver (real AlarmManager -> BroadcastReceiver -> privacy notification; visibility PRIVATE, generic title/text)
+- ReminderSchedulerTest: 5/5 passed (synthetic encrypted DB + fixed clock; projection, generation, snooze, rebuild, unauthenticated action)
+- CustomReminderUiTest: initializationError ClassNotFoundException -- the test APK cloned into user 10 was the older 2026-10-22 build (it lacked the 2026-10-23 classes). Operational lesson: install the current androidTest APK before pm install-existing --user N.
+
+A retry after updating the test APK could not complete because every UI test class hung on the MIUI activity-launch denial (see miui-activity-launch-denied.txt); it is not a product failure.
+

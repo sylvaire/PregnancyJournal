@@ -1,0 +1,9 @@
+{
+  "platform": "API34模拟器 (emulator-5580)",
+  "versionName": "0.17.0-dev",
+  "versionCode": 18,
+  "activityStartOk": true,
+  "coldStartMs": 1457,
+  "phone": "本轮未连接，未安装",
+  "note": "模拟器覆盖安装并启动；不含真实服务商与OEM验证。"
+}

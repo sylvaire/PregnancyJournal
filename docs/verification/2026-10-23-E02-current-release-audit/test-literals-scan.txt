@@ -1,0 +1,7 @@
+dex_files=1
+10.0.2.2=0
+127.0.0.1=0
+localhost=0
+example.com=0
+mockwebserver=1
+test-password=0

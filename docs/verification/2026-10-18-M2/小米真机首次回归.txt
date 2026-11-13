@@ -1,0 +1,4 @@
+
+cn.yunji.journal.EncryptedDatabaseTest:......
+cn.yunji.journal.NavigationExperienceTest:INSTRUMENTATION_RESULT: shortMsg=Process crashed.
+INSTRUMENTATION_CODE: 0

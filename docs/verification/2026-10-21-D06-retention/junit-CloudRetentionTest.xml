@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.CloudRetentionTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-10-21T12:56:10.818Z" hostname="SUN-KDQ5E4QJN34" time="0.004">
+  <properties/>
+  <testcase name="ledgerDropsEntriesThatBecameReferencedAgainOrNoLongerExist" classname="cn.yunji.journal.CloudRetentionTest" time="0.0"/>
+  <testcase name="otherDeviceStopsCleanup" classname="cn.yunji.journal.CloudRetentionTest" time="0.0"/>
+  <testcase name="selectionIsDeterministicAndRejectsDuplicates" classname="cn.yunji.journal.CloudRetentionTest" time="0.001"/>
+  <testcase name="rewrittenObjectRestartsItsGracePeriod" classname="cn.yunji.journal.CloudRetentionTest" time="0.0"/>
+  <testcase name="orphanIsDeletedOnlyAfterTheFullGracePeriod" classname="cn.yunji.journal.CloudRetentionTest" time="0.0"/>
+  <testcase name="keepsNewestOfEachOfTheLastSevenDaysAndFourWeeks" classname="cn.yunji.journal.CloudRetentionTest" time="0.001"/>
+  <testcase name="longRunningVaultKeepsWithinDailyAndWeeklyBudgets" classname="cn.yunji.journal.CloudRetentionTest" time="0.001"/>
+  <testcase name="retiredCommitOrphansItsObjectsButNothingIsDeletedInTheSamePass" classname="cn.yunji.journal.CloudRetentionTest" time="0.0"/>
+  <testcase name="commitNotPresentRemotelyIsNotPlannedForDeletion" classname="cn.yunji.journal.CloudRetentionTest" time="0.0"/>
+  <testcase name="unverifiedCommitStopsCleanup" classname="cn.yunji.journal.CloudRetentionTest" time="0.001"/>
+  <testcase name="incompleteListingStopsCleanup" classname="cn.yunji.journal.CloudRetentionTest" time="0.0"/>
+  <testcase name="newestSnapshotIsAlwaysKept" classname="cn.yunji.journal.CloudRetentionTest" time="0.0"/>
+  <testcase name="sharedObjectSurvivesWhileAnyKeptSnapshotReferencesIt" classname="cn.yunji.journal.CloudRetentionTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

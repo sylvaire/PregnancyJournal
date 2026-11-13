@@ -1,0 +1,7 @@
+version=0.2.0-dev
+versionCode=2
+file=app/build/outputs/apk/debug/app-debug.apk
+bytes=24794138
+sha256=FC12C74B9B3AC46EC6B6488CE4AEE47136F6EEB3DDDE98B4C5223F3B6741EE08
+signing=debug
+verified=12 unit tests;13 emulator device tests;lint 0 errors 14 dependency updates;Xiaomi 6 business tests passed;direct app navigation and physical edge-back passed;JUnit UI host blocked by system launch confirmation

@@ -1,0 +1,17 @@
+== emulator baseline restored 2026-10-24 05:59:17 on emulator-5556 ==
+font_scale=1.0
+night_mode=Night mode: no
+stay_on_while_plugged_in=0
+accelerometer_rotation=1
+user_rotation=0
+wm_size=Physical size: 1080x2400
+wm_density=Physical density: 420
+orientation=
+remaining_yunji_processes=
+
+== device verification dir (post-run) ==
+/sdcard/Android/data/cn.yunji.journal/files/verification
+/sdcard/Android/data/cn.yunji.journal/files/verification/figma-ui-alignment
+/sdcard/Android/data/cn.yunji.journal/files/verification/figma-sync
+
+    init=1080x2400 420dpi mMinSizeOfResizeableTaskDp=220 cur=1080x2400 app=1080x2400 rng=1080x1080-2400x2400

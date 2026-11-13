@@ -1,0 +1,13 @@
+# Encrypted original objects: md5 before vs after the vc26 -> vc27 / schema13 -> schema14 upgrade
+# before = captured 2026-10-23 23:05 from no_backup/vault/objects/ (and verified identical in files/vault-backup-before-vc27)
+# after  = captured 2026-10-23 23:47 from no_backup/vault/objects/
+
+before                                             after                                              file
+85830ca62236a3967aca0d1d9b9ac1a9  85830ca62236a3967aca0d1d9b9ac1a9  41d37dcd-e731-48a8-8cae-b14ad5229f39.bin
+d09373382ce9d42edfdde3f098880be1  d09373382ce9d42edfdde3f098880be1  6d121995-4705-4ee7-bc9b-05596ecc2be4.bin
+47dfe03f856c5361d54e5510c7fcc767  47dfe03f856c5361d54e5510c7fcc767  8e13373e-6237-35fa-a846-a34d2688336e.bin
+eb582841614cd9d6a3a4626c47bb45f7  eb582841614cd9d6a3a4626c47bb45f7  93d90204-7e5f-41c0-a9ae-d7600307562d.bin
+518f7353b31662cca382b5469e240f31  518f7353b31662cca382b5469e240f31  a8643f41-d1e2-3c60-85ec-271d1b052b6b.bin
+b77a2eb99b63b1bbc56143c64ffd3fef  b77a2eb99b63b1bbc56143c64ffd3fef  c2dba2d2-9012-3c14-a0bb-3c93853cc87b.bin
+
+# Conclusion: all 6 immutable encrypted originals are byte-identical before and after the upgrade.

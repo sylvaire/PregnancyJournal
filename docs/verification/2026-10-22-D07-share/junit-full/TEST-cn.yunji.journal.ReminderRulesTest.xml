@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.ReminderRulesTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-22T07:08:30.628Z" hostname="SUN-KDQ5E4QJN34" time="0.002">
+  <properties/>
+  <testcase name="medicationReminderRequiresActivePlanAndOccurrence" classname="cn.yunji.journal.ReminderRulesTest" time="0.002"/>
+  <testcase name="visitReminderHandlesDstGapWithoutSilentMidnight" classname="cn.yunji.journal.ReminderRulesTest" time="0.0"/>
+  <testcase name="visitReminderUsesLocalWallClockAndSkipsInactiveOrPastRows" classname="cn.yunji.journal.ReminderRulesTest" time="0.0"/>
+  <testcase name="generationAndSnoozeBoundariesAreExplicit" classname="cn.yunji.journal.ReminderRulesTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

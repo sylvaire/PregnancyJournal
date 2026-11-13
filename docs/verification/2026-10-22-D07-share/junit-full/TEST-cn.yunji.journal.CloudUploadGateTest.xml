@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.CloudUploadGateTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-22T07:08:30.198Z" hostname="SUN-KDQ5E4QJN34" time="0.008">
+  <properties/>
+  <testcase name="admissionAlreadyExclusiveDuringPreparation" classname="cn.yunji.journal.CloudUploadGateTest" time="0.001"/>
+  <testcase name="preparationCannotBindNetworkAfterRestorePause" classname="cn.yunji.journal.CloudUploadGateTest" time="0.004"/>
+  <testcase name="restorePauseCancelsAndWaitsForFinallyCleanup" classname="cn.yunji.journal.CloudUploadGateTest" time="0.002"/>
+  <testcase name="userCancellationBeforeClientBindingIsNotLost" classname="cn.yunji.journal.CloudUploadGateTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

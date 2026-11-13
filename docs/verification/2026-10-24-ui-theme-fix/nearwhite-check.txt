@@ -1,0 +1,22 @@
+near-white #FFFBFF tol2 before/after (only files with any):
+  cloud-connection-backup.png: before=88 after=88
+  cloud-connection-cleanup.png: before=99 after=99
+  cloud-connection.png: before=38 after=38
+  custom-reminder-editor.png: before=27 after=266
+  drug-catalog.png: before=386 after=386
+  drug-editor.png: before=33 after=33
+  journal-entry-editor.png: before=30 after=30
+  local-backup.png: before=11 after=11
+  measurement-editor.png: before=27 after=27
+  pregnancy-editor.png: before=26 after=26
+  reminder-settings-custom.png: before=762 after=762
+  reminder-settings.png: before=920 after=918
+  restore-wizard.png: before=38 after=38
+  security-settings.png: before=71 after=71
+  timeline-source-detail.png: before=13 after=13
+  timeline.png: before=618 after=617
+  visit-detail.png: before=297 after=297
+  visit-editor.png: before=28 after=28
+contrast Ink#223C32 on Soft#E7F0E6: 10.23
+contrast Outline#DDE4DA on Background#F7F8F3: 1.22
+contrast Ink#223C32 on White: 11.93

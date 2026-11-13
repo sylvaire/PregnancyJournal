@@ -1,0 +1,18 @@
+[
+  {
+    "phase": "before",
+    "sample": 2,
+    "frames": 86,
+    "janky": 1,
+    "p95BucketMs": 19,
+    "p99BucketMs": 73
+  },
+  {
+    "phase": "before",
+    "sample": 3,
+    "frames": 88,
+    "janky": 1,
+    "p95BucketMs": 21,
+    "p99BucketMs": 101
+  }
+]

@@ -1,0 +1,352 @@
+################ coverage (UiSnapshotCoverageTest, 22 PNG)
+== cloud-connection-backup.png
+  title     before h= 19.1dp x0= 57.5dp w=  77.7dp y0=  72.0dp
+  title     after  h= 27.1dp x0= 77.7dp w= 109.0dp y0=  69.0dp
+  subtitle  before none
+  subtitle  after  h= 11.4dp x0= 76.6dp w=  58.3dp y0= 109.0dp
+  back arrow glyph before h= 15.6dp x0= 23.6dp w=   8.4dp y0=  73.1dp slot_x0=4.02 dp
+  back arrow glyph after  h= 15.6dp x0= 43.4dp w=   8.4dp y0=  84.2dp slot_x0=23.83 dp
+  title-sized lines (top 250dp) before 1 [(19.05, 72.0)]
+  title-sized lines (top 250dp) after  1 [(27.05, 68.95)]
+  content heading below header before none
+  content heading below header after  none
+== cloud-connection-cleanup.png
+  title     before h= 19.1dp x0= 57.5dp w=  77.7dp y0=  72.0dp
+  title     after  h= 27.1dp x0= 77.7dp w= 109.0dp y0=  69.0dp
+  subtitle  before none
+  subtitle  after  h= 11.4dp x0= 76.6dp w=  58.3dp y0= 109.0dp
+  back arrow glyph before h= 15.6dp x0= 23.6dp w=   8.4dp y0=  73.1dp slot_x0=4.02 dp
+  back arrow glyph after  h= 15.6dp x0= 43.4dp w=   8.4dp y0=  84.2dp slot_x0=23.83 dp
+  title-sized lines (top 250dp) before 2 [(19.05, 72.0), (19.05, 159.62)]
+  title-sized lines (top 250dp) after  2 [(27.05, 68.95), (19.05, 159.62)]
+  content heading below header before h= 16.8dp x0= 24.8dp w= 329.9dp y0= 203.8dp
+  content heading below header after  h= 16.8dp x0= 24.8dp w= 329.9dp y0= 203.8dp
+== cloud-connection.png
+  title     before h= 19.1dp x0= 57.5dp w=  77.7dp y0=  72.0dp
+  title     after  h= 27.1dp x0= 77.7dp w= 109.0dp y0=  69.0dp
+  subtitle  before none
+  subtitle  after  h= 11.4dp x0= 76.6dp w=  58.3dp y0= 109.0dp
+  back arrow glyph before h= 15.6dp x0= 23.6dp w=   8.4dp y0=  73.1dp slot_x0=4.02 dp
+  back arrow glyph after  h= 15.6dp x0= 43.4dp w=   8.4dp y0=  84.2dp slot_x0=23.83 dp
+  title-sized lines (top 250dp) before 2 [(19.05, 72.0), (22.86, 144.0)]
+  title-sized lines (top 250dp) after  2 [(27.05, 68.95), (19.05, 164.57)]
+  content heading below header before h= 22.9dp x0= 26.3dp w= 212.9dp y0= 144.0dp
+  content heading below header after  h= 19.1dp x0= 25.9dp w= 176.0dp y0= 164.6dp
+== custom-reminder-editor.png
+  title     before h=266.7dp x0= 53.3dp w= 358.1dp y0=   0.0dp
+  title     after  h=266.7dp x0= 53.3dp w= 358.1dp y0=   0.0dp
+  subtitle  before none
+  subtitle  after  none
+  back arrow glyph before none slot_x0=None dp
+  back arrow glyph after  none slot_x0=None dp
+  title-sized lines (top 250dp) before 0 []
+  title-sized lines (top 250dp) after  0 []
+  content heading below header before none
+  content heading below header after  none
+== drug-catalog.png
+  title     before h= 19.1dp x0= 57.1dp w=  77.3dp y0=  72.0dp
+  title     after  h= 27.1dp x0= 77.3dp w= 108.6dp y0=  69.0dp
+  subtitle  before none
+  subtitle  after  h= 11.4dp x0= 76.6dp w=  58.3dp y0= 109.0dp
+  back arrow glyph before h= 15.6dp x0= 23.6dp w=   8.4dp y0=  73.1dp slot_x0=4.02 dp
+  back arrow glyph after  h= 15.6dp x0= 43.4dp w=   8.4dp y0=  84.2dp slot_x0=23.83 dp
+  title-sized lines (top 250dp) before 2 [(19.05, 72.0), (19.05, 246.48)]
+  title-sized lines (top 250dp) after  1 [(27.05, 68.95)]
+  content heading below header before h= 19.1dp x0= 45.0dp w= 203.8dp y0= 246.5dp
+  content heading below header after  none
+== drug-editor.png
+  title     before h= 19.1dp x0= 57.1dp w=  77.3dp y0=  72.0dp
+  title     after  h= 26.7dp x0= 77.0dp w= 109.0dp y0=  69.3dp
+  subtitle  before none
+  subtitle  after  h= 11.4dp x0= 76.6dp w=  58.3dp y0= 109.0dp
+  back arrow glyph before h= 15.6dp x0= 23.6dp w=   8.4dp y0=  73.1dp slot_x0=4.02 dp
+  back arrow glyph after  h= 15.6dp x0= 43.4dp w=   8.4dp y0=  84.2dp slot_x0=23.83 dp
+  title-sized lines (top 250dp) before 1 [(19.05, 72.0)]
+  title-sized lines (top 250dp) after  1 [(26.67, 69.33)]
+  content heading below header before none
+  content heading below header after  none
+== export-screen-disabled.png
+  title     before h= 19.1dp x0= 57.5dp w=  77.7dp y0=  72.0dp
+  title     after  h= 26.7dp x0= 77.7dp w= 109.3dp y0=  69.3dp
+  subtitle  before none
+  subtitle  after  h= 11.4dp x0= 76.6dp w=  58.3dp y0= 109.0dp
+  back arrow glyph before h= 15.6dp x0= 23.6dp w=   8.4dp y0=  73.1dp slot_x0=4.02 dp
+  back arrow glyph after  h= 15.6dp x0= 43.4dp w=   8.4dp y0=  84.2dp slot_x0=23.83 dp
+  title-sized lines (top 250dp) before 3 [(19.05, 72.0), (20.19, 153.9), (20.19, 216.0)]
+  title-sized lines (top 250dp) after  3 [(26.67, 69.33), (20.19, 153.9), (20.19, 216.0)]
+  content heading below header before h= 20.2dp x0= 24.8dp w= 348.9dp y0= 153.9dp
+  content heading below header after  h= 20.2dp x0= 24.8dp w= 348.9dp y0= 153.9dp
+== export-screen.png
+  title     before h= 19.1dp x0= 57.5dp w=  77.7dp y0=  72.0dp
+  title     after  h= 26.7dp x0= 77.7dp w= 109.3dp y0=  69.3dp
+  subtitle  before none
+  subtitle  after  h= 11.4dp x0= 76.6dp w=  58.3dp y0= 109.0dp
+  back arrow glyph before h= 15.6dp x0= 23.6dp w=   8.4dp y0=  73.1dp slot_x0=4.02 dp
+  back arrow glyph after  h= 15.6dp x0= 43.4dp w=   8.4dp y0=  84.2dp slot_x0=23.83 dp
+  title-sized lines (top 250dp) before 2 [(19.05, 72.0), (22.48, 144.38)]
+  title-sized lines (top 250dp) after  1 [(26.67, 69.33)]
+  content heading below header before none
+  content heading below header after  h= 15.2dp x0= 26.7dp w= 180.6dp y0= 234.7dp
+== journal-entry-editor.png
+  title     before h= 19.1dp x0= 57.9dp w=  96.8dp y0=  72.0dp
+  title     after  h= 26.7dp x0= 78.1dp w= 136.0dp y0=  69.3dp
+  subtitle  before none
+  subtitle  after  h= 11.4dp x0= 76.6dp w=  58.3dp y0= 109.0dp
+  back arrow glyph before h= 15.6dp x0= 23.6dp w=   8.4dp y0=  73.1dp slot_x0=4.02 dp
+  back arrow glyph after  h= 15.6dp x0= 43.4dp w=   8.4dp y0=  84.2dp slot_x0=23.83 dp
+  title-sized lines (top 250dp) before 2 [(19.05, 72.0), (28.57, 155.81)]
+  title-sized lines (top 250dp) after  2 [(26.67, 69.33), (28.57, 177.9)]
+  content heading below header before h= 15.2dp x0= 40.8dp w= 198.5dp y0= 240.8dp
+  content heading below header after  none
+== local-backup.png
+  title     before h= 19.1dp x0= 57.1dp w= 117.7dp y0=  72.0dp
+  title     after  h= 27.1dp x0= 77.0dp w= 165.7dp y0=  69.0dp
+  subtitle  before none
+  subtitle  after  h= 11.4dp x0= 76.6dp w=  58.3dp y0= 109.0dp
+  back arrow glyph before h= 15.6dp x0= 23.6dp w=   8.4dp y0=  73.1dp slot_x0=4.02 dp
+  back arrow glyph after  h= 15.6dp x0= 43.4dp w=   8.4dp y0=  84.2dp slot_x0=23.83 dp
+  title-sized lines (top 250dp) before 2 [(19.05, 72.0), (22.48, 144.38)]
+  title-sized lines (top 250dp) after  2 [(27.05, 68.95), (19.05, 164.57)]
+  content heading below header before h= 22.5dp x0= 24.8dp w= 214.1dp y0= 144.4dp
+  content heading below header after  h= 19.1dp x0= 24.8dp w= 177.1dp y0= 164.6dp
+== measurement-editor.png
+  title     before h= 18.7dp x0= 57.1dp w=  77.7dp y0=  72.4dp
+  title     after  h= 26.3dp x0= 77.3dp w= 109.0dp y0=  69.7dp
+  subtitle  before none
+  subtitle  after  h= 11.4dp x0= 76.6dp w=  58.3dp y0= 109.0dp
+  back arrow glyph before h= 15.6dp x0= 23.6dp w=   8.4dp y0=  73.1dp slot_x0=4.02 dp
+  back arrow glyph after  h= 15.6dp x0= 43.4dp w=   8.4dp y0=  84.2dp slot_x0=23.83 dp
+  title-sized lines (top 250dp) before 3 [(18.67, 72.38), (17.14, 159.62), (17.14, 232.76)]
+  title-sized lines (top 250dp) after  2 [(26.29, 69.71), (17.14, 181.71)]
+  content heading below header before none
+  content heading below header after  none
+== pregnancy-editor.png
+  title     before h= 19.1dp x0= 57.1dp w= 117.7dp y0=  72.0dp
+  title     after  h= 27.4dp x0= 77.0dp w= 165.7dp y0=  69.0dp
+  subtitle  before none
+  subtitle  after  h= 11.4dp x0= 76.6dp w=  58.3dp y0= 109.0dp
+  back arrow glyph before h= 15.6dp x0= 23.6dp w=   8.4dp y0=  73.1dp slot_x0=4.02 dp
+  back arrow glyph after  h= 15.6dp x0= 43.4dp w=   8.4dp y0=  84.2dp slot_x0=23.83 dp
+  title-sized lines (top 250dp) before 2 [(19.05, 72.0), (19.05, 225.14)]
+  title-sized lines (top 250dp) after  2 [(27.43, 68.95), (19.05, 247.24)]
+  content heading below header before h= 19.1dp x0= 25.1dp w= 117.0dp y0= 225.1dp
+  content heading below header after  h= 19.1dp x0= 25.1dp w= 117.0dp y0= 247.2dp
+== reminder-settings-custom.png
+  title     before h= 18.3dp x0= 57.1dp w=  77.7dp y0=  72.4dp
+  title     after  h= 26.7dp x0= 77.0dp w= 109.3dp y0=  69.3dp
+  subtitle  before none
+  subtitle  after  h= 11.4dp x0= 76.6dp w=  58.3dp y0= 109.0dp
+  back arrow glyph before h= 15.6dp x0= 23.6dp w=   8.4dp y0=  73.1dp slot_x0=4.02 dp
+  back arrow glyph after  h= 15.6dp x0= 43.4dp w=   8.4dp y0=  84.2dp slot_x0=23.83 dp
+  title-sized lines (top 250dp) before 1 [(18.29, 72.38)]
+  title-sized lines (top 250dp) after  1 [(26.67, 69.33)]
+  content heading below header before none
+  content heading below header after  none
+== reminder-settings.png
+  title     before h= 18.3dp x0= 57.1dp w=  77.7dp y0=  72.4dp
+  title     after  h= 26.7dp x0= 77.0dp w= 109.3dp y0=  69.3dp
+  subtitle  before none
+  subtitle  after  h= 11.4dp x0= 76.6dp w=  58.3dp y0= 109.0dp
+  back arrow glyph before h= 15.6dp x0= 23.6dp w=   8.4dp y0=  73.1dp slot_x0=4.02 dp
+  back arrow glyph after  h= 15.6dp x0= 43.4dp w=   8.4dp y0=  84.2dp slot_x0=23.83 dp
+  title-sized lines (top 250dp) before 2 [(18.29, 72.38), (18.67, 182.48)]
+  title-sized lines (top 250dp) after  2 [(26.67, 69.33), (18.67, 204.57)]
+  content heading below header before h= 15.2dp x0= 45.7dp w= 109.0dp y0= 222.5dp
+  content heading below header after  h= 15.2dp x0= 45.7dp w= 109.0dp y0= 244.6dp
+== restore-wizard-key.png
+  title     before h= 19.1dp x0= 57.1dp w=  78.1dp y0=  72.0dp
+  title     after  h= 26.7dp x0= 77.0dp w= 110.1dp y0=  69.3dp
+  subtitle  before none
+  subtitle  after  h= 11.4dp x0= 76.6dp w=  58.3dp y0= 109.0dp
+  back arrow glyph before h= 15.6dp x0= 23.6dp w=   8.4dp y0=  73.1dp slot_x0=4.02 dp
+  back arrow glyph after  h= 15.6dp x0= 43.4dp w=   8.4dp y0=  84.2dp slot_x0=23.83 dp
+  title-sized lines (top 250dp) before 2 [(19.05, 72.0), (22.86, 144.0)]
+  title-sized lines (top 250dp) after  2 [(26.67, 69.33), (19.05, 164.57)]
+  content heading below header before h= 22.9dp x0= 25.1dp w= 140.9dp y0= 144.0dp
+  content heading below header after  h= 19.1dp x0= 24.8dp w= 116.6dp y0= 164.6dp
+== restore-wizard.png
+  title     before h= 19.1dp x0= 57.1dp w=  78.1dp y0=  72.0dp
+  title     after  h= 26.7dp x0= 77.0dp w= 110.1dp y0=  69.3dp
+  subtitle  before none
+  subtitle  after  h= 11.4dp x0= 76.6dp w=  58.3dp y0= 109.0dp
+  back arrow glyph before h= 15.6dp x0= 23.6dp w=   8.4dp y0=  73.1dp slot_x0=4.02 dp
+  back arrow glyph after  h= 15.6dp x0= 43.4dp w=   8.4dp y0=  84.2dp slot_x0=23.83 dp
+  title-sized lines (top 250dp) before 3 [(19.05, 72.0), (22.86, 144.0), (17.14, 193.14)]
+  title-sized lines (top 250dp) after  3 [(26.67, 69.33), (19.05, 164.57), (17.14, 208.76)]
+  content heading below header before h= 22.9dp x0= 25.1dp w= 214.1dp y0= 144.0dp
+  content heading below header after  h= 19.1dp x0= 24.8dp w= 177.1dp y0= 164.6dp
+== security-settings.png
+  title     before h= 18.7dp x0= 57.5dp w=  77.3dp y0=  72.0dp
+  title     after  h= 27.1dp x0= 77.7dp w= 108.6dp y0=  69.0dp
+  subtitle  before none
+  subtitle  after  h= 11.4dp x0= 76.6dp w=  58.3dp y0= 109.0dp
+  back arrow glyph before h= 15.6dp x0= 23.6dp w=   8.4dp y0=  73.1dp slot_x0=4.02 dp
+  back arrow glyph after  h= 15.6dp x0= 43.4dp w=   8.4dp y0=  84.2dp slot_x0=23.83 dp
+  title-sized lines (top 250dp) before 2 [(18.67, 72.0), (18.67, 142.48)]
+  title-sized lines (top 250dp) after  3 [(27.05, 68.95), (18.67, 164.57), (23.24, 243.43)]
+  content heading below header before h= 15.2dp x0= 25.5dp w= 307.8dp y0= 186.7dp
+  content heading below header after  h= 15.2dp x0= 25.5dp w= 307.8dp y0= 208.8dp
+== timeline-source-detail.png
+  title     before h= 18.7dp x0= 57.1dp w=  77.7dp y0=  72.4dp
+  title     after  h= 26.7dp x0= 77.0dp w= 109.3dp y0=  69.3dp
+  subtitle  before none
+  subtitle  after  h= 11.4dp x0= 76.6dp w=  58.3dp y0= 109.0dp
+  back arrow glyph before h= 15.6dp x0= 23.6dp w=   8.4dp y0=  73.1dp slot_x0=4.02 dp
+  back arrow glyph after  h= 15.6dp x0= 43.4dp w=   8.4dp y0=  84.2dp slot_x0=23.83 dp
+  title-sized lines (top 250dp) before 2 [(18.67, 72.38), (19.43, 118.48)]
+  title-sized lines (top 250dp) after  2 [(26.67, 69.33), (19.43, 140.57)]
+  content heading below header before h= 19.4dp x0= 24.8dp w= 323.1dp y0= 118.5dp
+  content heading below header after  h= 19.4dp x0= 24.8dp w= 323.1dp y0= 140.6dp
+== timeline.png
+  title     before h= 18.7dp x0= 57.1dp w=  97.9dp y0=  72.4dp
+  title     after  h= 27.1dp x0= 77.3dp w= 137.1dp y0=  69.3dp
+  subtitle  before none
+  subtitle  after  h= 11.4dp x0= 76.6dp w=  58.3dp y0= 109.0dp
+  back arrow glyph before h= 15.6dp x0= 23.6dp w=   8.4dp y0=  73.1dp slot_x0=4.02 dp
+  back arrow glyph after  h= 15.6dp x0= 43.4dp w=   8.4dp y0=  84.2dp slot_x0=23.83 dp
+  title-sized lines (top 250dp) before 1 [(18.67, 72.38)]
+  title-sized lines (top 250dp) after  1 [(27.05, 69.33)]
+  content heading below header before none
+  content heading below header after  none
+== trash-empty.png
+  title     before h= 19.1dp x0= 57.1dp w=  97.5dp y0=  72.0dp
+  title     after  h= 27.1dp x0= 77.0dp w= 137.5dp y0=  69.0dp
+  subtitle  before none
+  subtitle  after  h= 11.4dp x0= 76.6dp w=  58.3dp y0= 109.0dp
+  back arrow glyph before h= 15.6dp x0= 23.6dp w=   8.4dp y0=  73.1dp slot_x0=4.02 dp
+  back arrow glyph after  h= 15.6dp x0= 43.4dp w=   8.4dp y0=  84.2dp slot_x0=23.83 dp
+  title-sized lines (top 250dp) before 2 [(19.05, 72.0), (19.05, 226.67)]
+  title-sized lines (top 250dp) after  2 [(27.05, 68.95), (17.9, 248.76)]
+  content heading below header before h= 19.1dp x0= 24.8dp w= 136.8dp y0= 226.7dp
+  content heading below header after  h= 17.9dp x0= 24.8dp w= 136.8dp y0= 248.8dp
+== visit-detail.png
+  title     before h= 19.1dp x0= 57.1dp w=  77.7dp y0=  72.0dp
+  title     after  h= 27.1dp x0= 77.0dp w= 109.7dp y0=  69.0dp
+  subtitle  before none
+  subtitle  after  h= 11.4dp x0= 76.6dp w=  58.3dp y0= 109.0dp
+  back arrow glyph before h= 15.6dp x0= 23.6dp w=   8.4dp y0=  73.1dp slot_x0=4.02 dp
+  back arrow glyph after  h= 15.6dp x0= 43.4dp w=   8.4dp y0=  84.2dp slot_x0=23.83 dp
+  title-sized lines (top 250dp) before 2 [(19.05, 72.0), (27.05, 166.1)]
+  title-sized lines (top 250dp) after  2 [(27.05, 68.95), (27.05, 188.19)]
+  content heading below header before h= 15.2dp x0= 45.0dp w= 156.6dp y0= 216.0dp
+  content heading below header after  h= 15.2dp x0= 45.0dp w= 156.6dp y0= 238.1dp
+== visit-editor.png
+  title     before h= 19.1dp x0= 57.1dp w= 117.0dp y0=  72.0dp
+  title     after  h= 27.1dp x0= 77.0dp w= 164.6dp y0=  69.0dp
+  subtitle  before none
+  subtitle  after  h= 11.4dp x0= 76.6dp w=  58.3dp y0= 109.0dp
+  back arrow glyph before h= 15.6dp x0= 23.6dp w=   8.4dp y0=  73.1dp slot_x0=4.02 dp
+  back arrow glyph after  h= 15.6dp x0= 43.4dp w=   8.4dp y0=  84.2dp slot_x0=23.83 dp
+  title-sized lines (top 250dp) before 2 [(19.05, 72.0), (28.57, 155.81)]
+  title-sized lines (top 250dp) after  2 [(27.05, 68.95), (28.57, 177.9)]
+  content heading below header before none
+  content heading below header after  none
+################ supplementary (UiSnapshotTest, 9 PNG)
+== 01-today.png
+  title     before h= 28.2dp x0= 53.3dp w= 136.8dp y0=  73.1dp
+  title     after  h= 28.2dp x0= 53.3dp w= 136.8dp y0=  73.1dp
+  subtitle  before h= 11.4dp x0= 53.3dp w= 161.5dp y0= 112.8dp
+  subtitle  after  h= 11.4dp x0= 53.3dp w= 161.5dp y0= 112.8dp
+  back arrow glyph before none slot_x0=None dp
+  back arrow glyph after  none slot_x0=None dp
+  title-sized lines (top 250dp) before 1 [(28.19, 73.14)]
+  title-sized lines (top 250dp) after  1 [(28.19, 73.14)]
+  content heading below header before none
+  content heading below header after  none
+== 02-visits.png
+  title     before h= 27.1dp x0= 53.3dp w=  25.9dp y0=  72.8dp
+  title     after  h= 27.1dp x0= 53.3dp w=  25.9dp y0=  72.8dp
+  subtitle  before h= 11.8dp x0= 60.2dp w= 164.2dp y0= 112.8dp
+  subtitle  after  h= 11.8dp x0= 60.2dp w= 164.2dp y0= 112.8dp
+  back arrow glyph before none slot_x0=None dp
+  back arrow glyph after  none slot_x0=None dp
+  title-sized lines (top 250dp) before 1 [(27.05, 72.76)]
+  title-sized lines (top 250dp) after  1 [(27.05, 72.76)]
+  content heading below header before none
+  content heading below header after  none
+== 03-records-hub.png
+  title     before h= 25.5dp x0= 53.3dp w=  25.1dp y0=  74.3dp
+  title     after  h= 25.5dp x0= 53.3dp w=  25.1dp y0=  74.3dp
+  subtitle  before h= 11.4dp x0= 53.3dp w=  64.4dp y0= 112.8dp
+  subtitle  after  h= 11.4dp x0= 53.3dp w=  64.4dp y0= 112.8dp
+  back arrow glyph before none slot_x0=None dp
+  back arrow glyph after  none slot_x0=None dp
+  title-sized lines (top 250dp) before 1 [(25.52, 74.29)]
+  title-sized lines (top 250dp) after  1 [(25.52, 74.29)]
+  content heading below header before none
+  content heading below header after  none
+== 04-profiles.png
+  title     before h= 26.7dp x0= 53.7dp w=  24.4dp y0=  73.1dp
+  title     after  h= 26.7dp x0= 53.7dp w=  24.4dp y0=  73.1dp
+  subtitle  before h= 11.4dp x0= 53.3dp w=  76.6dp y0= 112.8dp
+  subtitle  after  h= 11.4dp x0= 53.3dp w=  76.6dp y0= 112.8dp
+  back arrow glyph before none slot_x0=None dp
+  back arrow glyph after  none slot_x0=None dp
+  title-sized lines (top 250dp) before 1 [(26.67, 73.14)]
+  title-sized lines (top 250dp) after  1 [(26.67, 73.14)]
+  content heading below header before none
+  content heading below header after  none
+== 05-medications.png
+  title     before h= 19.1dp x0= 57.1dp w=  78.1dp y0=  72.0dp
+  title     after  h= 27.1dp x0= 77.0dp w= 110.1dp y0=  69.0dp
+  subtitle  before none
+  subtitle  after  h= 11.4dp x0= 76.6dp w=  58.3dp y0= 109.0dp
+  back arrow glyph before h= 15.6dp x0= 23.6dp w=   8.4dp y0=  73.1dp slot_x0=4.02 dp
+  back arrow glyph after  h= 15.6dp x0= 43.4dp w=   8.4dp y0=  84.2dp slot_x0=23.83 dp
+  title-sized lines (top 250dp) before 1 [(19.05, 72.0)]
+  title-sized lines (top 250dp) after  1 [(27.05, 68.95)]
+  content heading below header before none
+  content heading below header after  none
+== 06-intakes.png
+  title     before h= 19.1dp x0= 57.1dp w=  77.7dp y0=  72.0dp
+  title     after  h= 26.7dp x0= 77.0dp w= 109.3dp y0=  69.3dp
+  subtitle  before none
+  subtitle  after  h= 11.4dp x0= 76.6dp w=  58.3dp y0= 109.0dp
+  back arrow glyph before h= 15.6dp x0= 23.6dp w=   8.4dp y0=  73.1dp slot_x0=4.02 dp
+  back arrow glyph after  h= 15.6dp x0= 43.4dp w=   8.4dp y0=  84.2dp slot_x0=23.83 dp
+  title-sized lines (top 250dp) before 1 [(19.05, 72.0)]
+  title-sized lines (top 250dp) after  2 [(26.67, 69.33), (23.62, 243.05)]
+  content heading below header before none
+  content heading below header after  h= 23.6dp x0= 24.0dp w= 363.4dp y0= 243.1dp
+== 07-measurements.png
+  title     before h= 19.1dp x0= 57.1dp w=  77.7dp y0=  72.0dp
+  title     after  h= 27.1dp x0= 77.0dp w= 109.7dp y0=  69.0dp
+  subtitle  before none
+  subtitle  after  h= 11.4dp x0= 76.6dp w=  58.3dp y0= 109.0dp
+  back arrow glyph before h= 15.6dp x0= 23.6dp w=   8.4dp y0=  73.1dp slot_x0=4.02 dp
+  back arrow glyph after  h= 15.6dp x0= 43.4dp w=   8.4dp y0=  84.2dp slot_x0=23.83 dp
+  title-sized lines (top 250dp) before 1 [(19.05, 72.0)]
+  title-sized lines (top 250dp) after  1 [(27.05, 68.95)]
+  content heading below header before none
+  content heading below header after  none
+== 08-visit-documents.png
+  title     before h= 19.1dp x0= 57.1dp w=  78.1dp y0=  72.0dp
+  title     after  h= 27.1dp x0= 77.0dp w= 110.1dp y0=  69.0dp
+  subtitle  before none
+  subtitle  after  h= 11.4dp x0= 76.6dp w=  58.3dp y0= 109.0dp
+  back arrow glyph before h= 15.6dp x0= 23.6dp w=   8.4dp y0=  73.1dp slot_x0=4.02 dp
+  back arrow glyph after  h= 15.6dp x0= 43.4dp w=   8.4dp y0=  84.2dp slot_x0=23.83 dp
+  title-sized lines (top 250dp) before 1 [(19.05, 72.0)]
+  title-sized lines (top 250dp) after  1 [(27.05, 68.95)]
+  content heading below header before h= 15.2dp x0= 58.7dp w= 286.1dp y0= 220.2dp
+  content heading below header after  h= 15.2dp x0= 58.7dp w= 286.1dp y0= 242.3dp
+== 09-recovery.png
+  title     before h= 19.1dp x0= 57.1dp w= 117.7dp y0=  72.0dp
+  title     after  h= 27.1dp x0= 77.0dp w= 165.7dp y0=  69.0dp
+  subtitle  before none
+  subtitle  after  h= 11.4dp x0= 76.6dp w=  58.3dp y0= 109.0dp
+  back arrow glyph before h= 15.6dp x0= 23.6dp w=   8.4dp y0=  73.1dp slot_x0=4.02 dp
+  back arrow glyph after  h= 15.6dp x0= 43.4dp w=   8.4dp y0=  84.2dp slot_x0=23.83 dp
+  title-sized lines (top 250dp) before 2 [(19.05, 72.0), (22.48, 144.38)]
+  title-sized lines (top 250dp) after  2 [(27.05, 68.95), (19.05, 164.57)]
+  content heading below header before h= 22.5dp x0= 24.8dp w= 214.1dp y0= 144.4dp
+  content heading below header after  h= 19.1dp x0= 24.8dp w= 177.1dp y0= 164.6dp
+== DESIGN 05-VisitDetail.png (2x -> dp)
+  design title    h= 26.5dp x0= 25.0dp w= 110.0dp y0=  58.0dp
+  design subtitle h= 11.0dp x0= 24.5dp w=  47.0dp y0= 100.0dp
+== DESIGN 06-VisitEditor.png (2x -> dp)
+  design title    h= 26.5dp x0= 25.0dp w= 165.0dp y0=  58.0dp
+  design subtitle h= 11.0dp x0= 24.5dp w= 165.5dp y0= 100.0dp
+== DESIGN 19-CloudConnect.png (2x -> dp)
+  design title    h= 26.5dp x0= 24.5dp w= 138.0dp y0=  58.0dp
+  design subtitle h= 11.0dp x0= 24.5dp w= 117.5dp y0= 100.0dp

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.WebDavClientTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2026-10-21T09:42:35.944Z" hostname="SUN-KDQ5E4QJN34" time="0.792">
+  <properties/>
+  <testcase name="streamsFileAndDownloadsForContentVerification" classname="cn.yunji.journal.WebDavClientTest" time="0.049"/>
+  <testcase name="retryAfterHttpDateIsParsedWithoutRetrying" classname="cn.yunji.journal.WebDavClientTest" time="0.013"/>
+  <testcase name="depthZeroCannotAcceptChildInsteadOfTargetCollection" classname="cn.yunji.journal.WebDavClientTest" time="0.015"/>
+  <testcase name="crossOriginHrefAndEscapedRootAreRejected" classname="cn.yunji.journal.WebDavClientTest" time="0.019"/>
+  <testcase name="readbackCancellationAndAuthenticationFailureCannotSucceed" classname="cn.yunji.journal.WebDavClientTest" time="0.02"/>
+  <testcase name="successfulUnrelatedPropertyCannotHideForbiddenTargetCollection" classname="cn.yunji.journal.WebDavClientTest" time="0.019"/>
+  <testcase name="malformedMissingAndDuplicateCollectionsAreRejected" classname="cn.yunji.journal.WebDavClientTest" time="0.021"/>
+  <testcase name="sameLengthCorruptionTruncationAndExtraBytesFailReadback" classname="cn.yunji.journal.WebDavClientTest" time="0.014"/>
+  <testcase name="refusesRedirectsInsteadOfLeakingCredentials" classname="cn.yunji.journal.WebDavClientTest" time="0.013"/>
+  <testcase name="fileMutationAndExistingTargetAreNotReportedAsUploaded" classname="cn.yunji.journal.WebDavClientTest" time="0.015"/>
+  <testcase name="nonAsciiCredentialsAreNotLossilyReplacedInAuthorizationHeader" classname="cn.yunji.journal.WebDavClientTest" time="0.013"/>
+  <testcase name="listKeepsFailedChildrenAndRequestsOnlyOneLevel" classname="cn.yunji.journal.WebDavClientTest" time="0.015"/>
+  <testcase name="dtdAndExcessiveXmlNestingAreRejected" classname="cn.yunji.journal.WebDavClientTest" time="0.014"/>
+  <testcase name="http2BinaryReadbackUsesActualBytesWithoutChunkFraming" classname="cn.yunji.journal.WebDavClientTest" time="0.015"/>
+  <testcase name="handlesMultiStatusAndAuthenticationFailure" classname="cn.yunji.journal.WebDavClientTest" time="0.013"/>
+  <testcase name="closeCancelsAnAlreadyStreamingResponseBody" classname="cn.yunji.journal.WebDavClientTest" time="0.512"/>
+  <testcase name="refusesOversizedAndUnsafePaths" classname="cn.yunji.journal.WebDavClientTest" time="0.011"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[10月 21, 2026 5:42:36 下午 okhttp3.internal.platform.Platform log
+信息: Http2Connection.Listener failure for MockWebServer ttc.gdt.qq.com
+okhttp3.internal.http2.StreamResetException: stream was reset: CANCEL
+	at okhttp3.internal.http2.Http2Stream.checkOutNotClosed$okhttp(Http2Stream.kt:646)
+	at okhttp3.internal.http2.Http2Stream$FramingSink.flush(Http2Stream.kt:576)
+	at okio.RealBufferedSink.flush(RealBufferedSink.kt:270)
+	at okhttp3.mockwebserver.MockWebServer.throttledTransfer(MockWebServer.kt:888)
+	at okhttp3.mockwebserver.MockWebServer.access$throttledTransfer(MockWebServer.kt:101)
+	at okhttp3.mockwebserver.MockWebServer$Http2SocketHandler.writeResponse(MockWebServer.kt:1098)
+	at okhttp3.mockwebserver.MockWebServer$Http2SocketHandler.onStream(MockWebServer.kt:977)
+	at okhttp3.internal.http2.Http2Connection$ReaderRunnable$headers$lambda$2$$inlined$execute$default$1.runOnce(TaskQueue.kt:220)
+	at okhttp3.internal.concurrent.TaskRunner.runTask(TaskRunner.kt:116)
+	at okhttp3.internal.concurrent.TaskRunner.access$runTask(TaskRunner.kt:42)
+	at okhttp3.internal.concurrent.TaskRunner$runnable$1.run(TaskRunner.kt:65)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+
+10月 21, 2026 5:42:36 下午 okhttp3.internal.platform.Platform log
+信息: Http2Connection.Listener failure for MockWebServer ttc.gdt.qq.com
+java.io.IOException: closed
+	at okhttp3.internal.http2.Http2Writer.flush(Http2Writer.kt:119)
+	at okhttp3.internal.http2.Http2Connection.flush(Http2Connection.kt:408)
+	at okhttp3.internal.http2.Http2Stream$FramingSink.close(Http2Stream.kt:624)
+	at okio.RealBufferedSink.close(RealBufferedSink.kt:287)
+	at kotlin.io.CloseableKt.closeFinally(Closeable.kt:47)
+	at okhttp3.mockwebserver.MockWebServer$Http2SocketHandler.writeResponse(MockWebServer.kt:1096)
+	at okhttp3.mockwebserver.MockWebServer$Http2SocketHandler.onStream(MockWebServer.kt:977)
+	at okhttp3.internal.http2.Http2Connection$ReaderRunnable$headers$lambda$2$$inlined$execute$default$1.runOnce(TaskQueue.kt:220)
+	at okhttp3.internal.concurrent.TaskRunner.runTask(TaskRunner.kt:116)
+	at okhttp3.internal.concurrent.TaskRunner.access$runTask(TaskRunner.kt:42)
+	at okhttp3.internal.concurrent.TaskRunner$runnable$1.run(TaskRunner.kt:65)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+
+]]></system-err>
+</testsuite>

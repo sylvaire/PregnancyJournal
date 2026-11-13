@@ -1,0 +1,99 @@
+====================================================================================================
+0. 文件核对
+====================================================================================================
+after=22 before=22 delta=[]/[]
+
+====================================================================================================
+1. before -> after 变更文件（sha256）与差异 bbox（定位变更只发生在容器色区域）
+====================================================================================================
+cloud-connection-backup.png: IDENTICAL
+cloud-connection-cleanup.png: IDENTICAL
+cloud-connection.png: IDENTICAL
+custom-reminder-editor.png: CHANGED diff_px=1070358 (41.295%) bbox_dp=[np.float64(32.0), np.float64(19.0), np.float64(334.9), np.float64(701.0)]
+drug-catalog.png: IDENTICAL
+drug-editor.png: IDENTICAL
+export-screen-disabled.png: IDENTICAL
+export-screen.png: CHANGED diff_px=6768 (0.261%) bbox_dp=[np.float64(339.0), np.float64(440.0), np.float64(52.2), np.float64(32.0)]
+journal-entry-editor.png: IDENTICAL
+local-backup.png: IDENTICAL
+measurement-editor.png: CHANGED diff_px=1391 (0.054%) bbox_dp=[np.float64(36.6), np.float64(378.7), np.float64(61.7), np.float64(12.2)]
+pregnancy-editor.png: IDENTICAL
+reminder-settings-custom.png: IDENTICAL
+reminder-settings.png: CHANGED diff_px=14545 (0.561%) bbox_dp=[np.float64(48.8), np.float64(222.1), np.float64(207.2), np.float64(64.4)]
+restore-wizard-key.png: IDENTICAL
+restore-wizard.png: IDENTICAL
+security-settings.png: IDENTICAL
+timeline-source-detail.png: CHANGED diff_px=1912 (0.074%) bbox_dp=[np.float64(123.8), np.float64(159.2), np.float64(62.5), np.float64(218.7)]
+timeline.png: CHANGED diff_px=269 (0.01%) bbox_dp=[np.float64(50.7), np.float64(808.8), np.float64(6.9), np.float64(9.1)]
+trash-empty.png: IDENTICAL
+visit-detail.png: IDENTICAL
+visit-editor.png: IDENTICAL
+
+====================================================================================================
+2. 关键界面 before -> after 颜色测量
+====================================================================================================
+
+-- 2.1 custom-reminder-editor.png（自定义提醒对话框，整屏含 dim）--
+before top4: [('#ECE6F0', 40.71, 1055245), ('#636361', 28.82, 747078), ('#666666', 22.71, 588545), ('#595D59', 4.05, 104961)]
+after top4: [('#FFFFFF', 40.78, 1057030), ('#636361', 28.82, 747106), ('#666666', 22.71, 588545), ('#585D58', 3.87, 100207)]
+before dialog surface #ECE6F0 bbox(dialog region): {'px': [120, 574, 959, 1889], 'w_px': 840, 'h_px': 1316, 'w_dp': np.float64(320.0), 'h_dp': np.float64(501.3), 'n_px': 1055245, 'pct': 40.71}
+after  dialog surface #FFFFFF bbox(dialog region): {'px': [120, 574, 959, 1889], 'w_px': 840, 'h_px': 1316, 'w_dp': np.float64(320.0), 'h_dp': np.float64(501.3), 'n_px': 1055274, 'pct': 40.71}
+after  #FFFFFF all={'px': [85, 47, 1004, 1889], 'w_px': 920, 'h_px': 1843, 'w_dp': np.float64(350.5), 'h_dp': np.float64(702.1), 'n_px': 1057030, 'pct': 40.78}  #E7F0E6=None
+after  #ECE6F0 remaining: None  #E6E0E9 remaining: None
+
+-- 2.2 export-screen.png（导出资料：M3 Switch 未选中轨道）--
+before_track: #E6E0E9 total=6352px (0.245%) comps=[(np.float64(47.6), np.float64(27.4), 6352, [np.int64(896), np.int64(1161)])]
+after_track: #DDE4DA total=20952px (0.808%) comps=[(np.float64(52.2), np.float64(32.0), 9896, [np.int64(890), np.int64(1155)]), (np.float64(179.4), np.float64(56.0), 3580, [np.int64(53), np.int64(787)]), (np.float64(179.4), np.float64(56.0), 3580, [np.int64(556), np.int64(787)])]
+after_old_track: #E6E0E9 total=0px (0.0%) comps=[]
+before_new_track: #DDE4DA total=14276px (0.551%) comps=[(np.float64(179.4), np.float64(56.0), 3580, [np.int64(53), np.int64(787)]), (np.float64(179.4), np.float64(56.0), 3580, [np.int64(556), np.int64(787)])]
+
+-- 2.3 reminder-settings.png（提醒设置：JournalCard 底色）--
+before top4: [('#FFFFFF', 60.72, 1573761), ('#F7F8F3', 33.75, 874856), ('#223C32', 1.65, 42847), ('#356B53', 0.59, 15204)]
+before white card coverage: 60.72%  background #F7F8F3: 33.75%
+after top4: [('#FFFFFF', 60.85, 1577109), ('#F7F8F3', 33.75, 874856), ('#223C32', 1.59, 41146), ('#356B53', 0.58, 15135)]
+after white card coverage: 60.85%  background #F7F8F3: 33.75%
+
+====================================================================================================
+3. 22 张 after 截图中 M3 基线淡紫灰色（tol=2）扫描
+====================================================================================================
+files_with_lavender_hits=0 / 22
+
+-- 3.1 近白 #FFFBFF 单独判别（before/after 计数 + 最大连通域）--
+cloud-connection-backup.png: before={'px': 0, 'max_component_px': 0, 'max_component_dp': []} after={'px': 0, 'max_component_px': 0, 'max_component_dp': []}
+cloud-connection-cleanup.png: before={'px': 0, 'max_component_px': 0, 'max_component_dp': []} after={'px': 0, 'max_component_px': 0, 'max_component_dp': []}
+cloud-connection.png: before={'px': 0, 'max_component_px': 0, 'max_component_dp': []} after={'px': 0, 'max_component_px': 0, 'max_component_dp': []}
+custom-reminder-editor.png: before={'px': 0, 'max_component_px': 0, 'max_component_dp': []} after={'px': 0, 'max_component_px': 0, 'max_component_dp': []}
+drug-catalog.png: before={'px': 0, 'max_component_px': 0, 'max_component_dp': []} after={'px': 0, 'max_component_px': 0, 'max_component_dp': []}
+drug-editor.png: before={'px': 0, 'max_component_px': 0, 'max_component_dp': []} after={'px': 0, 'max_component_px': 0, 'max_component_dp': []}
+export-screen-disabled.png: before={'px': 0, 'max_component_px': 0, 'max_component_dp': []} after={'px': 0, 'max_component_px': 0, 'max_component_dp': []}
+export-screen.png: before={'px': 0, 'max_component_px': 0, 'max_component_dp': []} after={'px': 0, 'max_component_px': 0, 'max_component_dp': []}
+journal-entry-editor.png: before={'px': 0, 'max_component_px': 0, 'max_component_dp': []} after={'px': 0, 'max_component_px': 0, 'max_component_dp': []}
+local-backup.png: before={'px': 0, 'max_component_px': 0, 'max_component_dp': []} after={'px': 0, 'max_component_px': 0, 'max_component_dp': []}
+measurement-editor.png: before={'px': 0, 'max_component_px': 0, 'max_component_dp': []} after={'px': 0, 'max_component_px': 0, 'max_component_dp': []}
+pregnancy-editor.png: before={'px': 0, 'max_component_px': 0, 'max_component_dp': []} after={'px': 0, 'max_component_px': 0, 'max_component_dp': []}
+reminder-settings-custom.png: before={'px': 0, 'max_component_px': 0, 'max_component_dp': []} after={'px': 0, 'max_component_px': 0, 'max_component_dp': []}
+reminder-settings.png: before={'px': 0, 'max_component_px': 0, 'max_component_dp': []} after={'px': 0, 'max_component_px': 0, 'max_component_dp': []}
+restore-wizard-key.png: before={'px': 0, 'max_component_px': 0, 'max_component_dp': []} after={'px': 0, 'max_component_px': 0, 'max_component_dp': []}
+restore-wizard.png: before={'px': 0, 'max_component_px': 0, 'max_component_dp': []} after={'px': 0, 'max_component_px': 0, 'max_component_dp': []}
+security-settings.png: before={'px': 0, 'max_component_px': 0, 'max_component_dp': []} after={'px': 0, 'max_component_px': 0, 'max_component_dp': []}
+timeline-source-detail.png: before={'px': 0, 'max_component_px': 0, 'max_component_dp': []} after={'px': 0, 'max_component_px': 0, 'max_component_dp': []}
+timeline.png: before={'px': 0, 'max_component_px': 0, 'max_component_dp': []} after={'px': 0, 'max_component_px': 0, 'max_component_dp': []}
+trash-empty.png: before={'px': 0, 'max_component_px': 0, 'max_component_dp': []} after={'px': 0, 'max_component_px': 0, 'max_component_dp': []}
+visit-detail.png: before={'px': 0, 'max_component_px': 0, 'max_component_dp': []} after={'px': 0, 'max_component_px': 0, 'max_component_dp': []}
+visit-editor.png: before={'px': 0, 'max_component_px': 0, 'max_component_dp': []} after={'px': 0, 'max_component_px': 0, 'max_component_dp': []}
+
+====================================================================================================
+4. 22 张 after 截图中设计令牌色的总像素（验证容器色回落到令牌色）
+====================================================================================================
+Background #F7F8F3: 43458289 px
+Surface(White) #FFFFFF: 6302004 px
+Soft #E7F0E6: 1280655 px
+Outline #DDE4DA: 257751 px
+Primary #356B53: 2216887 px
+Ink #223C32: 605098 px
+Muted #5F7166: 132636 px
+Danger #A44238: 8010 px
+Apricot #FAEAD8: 0 px
+Amber #80582C: 0 px
+
+JSON -> docs/verification/2026-10-24-ui-theme-fix/measure-output.json

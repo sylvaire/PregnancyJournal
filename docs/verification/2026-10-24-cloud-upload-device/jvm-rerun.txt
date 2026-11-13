@@ -1,0 +1,7 @@
+command: .\gradlew.bat --gradle-user-home .gradle-user --offline :app:testDebugUnitTest --rerun
+run_date: 2026-10-24 (Asia/Shanghai)
+result: BUILD SUCCESSFUL in 9s (exit code 0)
+jvm_test_classes: 56
+jvm_tests: 342, failures: 0, errors: 0, skipped: 0
+note: forced rerun (--rerun) because the earlier assemble command reported testDebugUnitTest UP-TO-DATE
+xml_dir: app/build/test-results/testDebugUnitTest

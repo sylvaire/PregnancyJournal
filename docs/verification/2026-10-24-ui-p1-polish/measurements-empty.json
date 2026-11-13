@@ -1,0 +1,169 @@
+{
+ "before/trash-empty.png": {
+  "file": "trash-empty.png",
+  "size": [
+   1080,
+   2400
+  ],
+  "soft_components": [],
+  "cards": [],
+  "buttons": [],
+  "card_evidence": null
+ },
+ "after/trash-empty.png": {
+  "file": "trash-empty.png",
+  "size": [
+   1080,
+   2400
+  ],
+  "soft_components": [
+   {
+    "px": 225376,
+    "x0": 64,
+    "y0": 640,
+    "x1": 1019,
+    "y1": 891,
+    "w_dp": 364.19,
+    "h_dp": 96.0,
+    "x0_dp": 24.38,
+    "y0_dp": 243.81,
+    "share": 8.7
+   }
+  ],
+  "cards": [
+   {
+    "px": 225376,
+    "x0": 64,
+    "y0": 640,
+    "x1": 1019,
+    "y1": 891,
+    "w_dp": 364.19,
+    "h_dp": 96.0,
+    "x0_dp": 24.38,
+    "y0_dp": 243.81,
+    "share": 8.7
+   }
+  ],
+  "buttons": [],
+  "card_evidence": {
+   "primary_icon_px": 5525,
+   "title_ink_px": 0,
+   "subtitle_muted_px": 0,
+   "white_px": 0,
+   "soft_px": 228477,
+   "icon_bbox_dp": {
+    "w_dp": 136.0,
+    "h_dp": 58.67
+   }
+  }
+ },
+ "before/local-backup.png": {
+  "file": "local-backup.png",
+  "size": [
+   1080,
+   2400
+  ],
+  "soft_components": [
+   {
+    "px": 122432,
+    "x0": 64,
+    "y0": 1112,
+    "x1": 1019,
+    "y1": 1251,
+    "w_dp": 364.19,
+    "h_dp": 53.33,
+    "x0_dp": 24.38,
+    "y0_dp": 423.62,
+    "share": 4.72
+   }
+  ],
+  "cards": [],
+  "buttons": [
+   {
+    "px": 122432,
+    "x0": 64,
+    "y0": 1112,
+    "x1": 1019,
+    "y1": 1251,
+    "w_dp": 364.19,
+    "h_dp": 53.33,
+    "x0_dp": 24.38,
+    "y0_dp": 423.62,
+    "share": 4.72
+   }
+  ],
+  "card_evidence": null
+ },
+ "after/local-backup.png": {
+  "file": "local-backup.png",
+  "size": [
+   1080,
+   2400
+  ],
+  "soft_components": [
+   {
+    "px": 230048,
+    "x0": 64,
+    "y0": 1576,
+    "x1": 1019,
+    "y1": 1831,
+    "w_dp": 364.19,
+    "h_dp": 97.52,
+    "x0_dp": 24.38,
+    "y0_dp": 600.38,
+    "share": 8.88
+   },
+   {
+    "px": 122432,
+    "x0": 64,
+    "y0": 1112,
+    "x1": 1019,
+    "y1": 1251,
+    "w_dp": 364.19,
+    "h_dp": 53.33,
+    "x0_dp": 24.38,
+    "y0_dp": 423.62,
+    "share": 4.72
+   }
+  ],
+  "cards": [
+   {
+    "px": 230048,
+    "x0": 64,
+    "y0": 1576,
+    "x1": 1019,
+    "y1": 1831,
+    "w_dp": 364.19,
+    "h_dp": 97.52,
+    "x0_dp": 24.38,
+    "y0_dp": 600.38,
+    "share": 8.88
+   }
+  ],
+  "buttons": [
+   {
+    "px": 122432,
+    "x0": 64,
+    "y0": 1112,
+    "x1": 1019,
+    "y1": 1251,
+    "w_dp": 364.19,
+    "h_dp": 53.33,
+    "x0_dp": 24.38,
+    "y0_dp": 423.62,
+    "share": 4.72
+   }
+  ],
+  "card_evidence": {
+   "primary_icon_px": 5647,
+   "title_ink_px": 0,
+   "subtitle_muted_px": 0,
+   "white_px": 0,
+   "soft_px": 229971,
+   "icon_bbox_dp": {
+    "w_dp": 136.76,
+    "h_dp": 58.67
+   }
+  }
+ }
+}

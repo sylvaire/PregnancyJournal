@@ -1,0 +1,6 @@
+full-suite: classes=49 tests=292 failures=0 errors=0 skipped=0 (baseline 45/266 -> +4类/+26项)
+targeted share-only: classes=4 tests=26 failures=0 errors=0
+TEST-cn.yunji.journal.ShareOriginalPolicyTest tests=10 failures=0 time=0.036s
+TEST-cn.yunji.journal.ShareReleaseTest tests=6 failures=0 time=0.006s
+TEST-cn.yunji.journal.ShareTemporaryFilesTest tests=8 failures=0 time=0.065s
+TEST-cn.yunji.journal.ShareWiringTest tests=2 failures=0 time=0.024s

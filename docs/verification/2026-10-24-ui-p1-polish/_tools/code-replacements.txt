@@ -1,0 +1,46 @@
+# Code-level verification for task-10 (P1 polish), generated 2026-10-24T09:12:56.0530028+08:00
+
+## JournalSwitch definition + call sites
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\core\designsystem\Components.kt:50: @Composable fun JournalSwitch(checked: Boolean, onCheckedChange: (Boolean) -> Unit,
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\CloudConnectionScreen.kt:24: import cn.yunji.journal.core.designsystem.JournalSwitch
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\CloudConnectionScreen.kt:130: JournalSwitch(schedulerState.autoEnabled && schedulerState.role==cn.yunji.journal.data.DeviceRole.PRIMARY,
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\CloudConnectionScreen.kt:135: JournalSwitch(schedulerState.wifiOnly,onCheckedChange=setWifi,enabled=!backup.running,modifier=Modifier.testTag("cloud-wifi"))
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\ExportScreen.kt:14: import cn.yunji.journal.core.designsystem.JournalSwitch
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\ExportScreen.kt:47: JournalSwitch(state.includeOriginals, setOriginals, enabled = !state.busy, modifier = Modifier.testTag("export-originals"))
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\ExportScreen.kt:51: JournalSwitch(state.includeTrash, setTrash, enabled = !state.busy, modifier = Modifier.testTag("export-trash"))
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\ReminderSettingsScreen.kt:120: Text("产检提醒"); JournalSwitch(visits, { visits = it; model.setReminderTypeEnabled(true, it) }, Modifier.testTag("reminder-visits"))
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\ReminderSettingsScreen.kt:123: Text("用药提醒"); JournalSwitch(medications, { medications = it; model.setReminderTypeEnabled(null, it) }, Modifier.testTag("reminder-medications"))
+
+## remaining raw Switch( occurrences (expect only the JournalSwitch delegate)
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\core\designsystem\Components.kt:50: @Composable fun JournalSwitch(checked: Boolean, onCheckedChange: (Boolean) -> Unit,
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\core\designsystem\Components.kt:52: Switch(checked = checked, onCheckedChange = onCheckedChange, modifier = modifier, enabled = enabled,
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\CloudConnectionScreen.kt:130: JournalSwitch(schedulerState.autoEnabled && schedulerState.role==cn.yunji.journal.data.DeviceRole.PRIMARY,
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\CloudConnectionScreen.kt:135: JournalSwitch(schedulerState.wifiOnly,onCheckedChange=setWifi,enabled=!backup.running,modifier=Modifier.testTag("cloud-wifi"))
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\ExportScreen.kt:47: JournalSwitch(state.includeOriginals, setOriginals, enabled = !state.busy, modifier = Modifier.testTag("export-originals"))
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\ExportScreen.kt:51: JournalSwitch(state.includeTrash, setTrash, enabled = !state.busy, modifier = Modifier.testTag("export-trash"))
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\ReminderSettingsScreen.kt:120: Text("产检提醒"); JournalSwitch(visits, { visits = it; model.setReminderTypeEnabled(true, it) }, Modifier.testTag("reminder-visits"))
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\ReminderSettingsScreen.kt:123: Text("用药提醒"); JournalSwitch(medications, { medications = it; model.setReminderTypeEnabled(null, it) }, Modifier.testTag("reminder-medications"))
+
+## JournalEmptyState definition + call sites
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\core\designsystem\Components.kt:160: @Composable fun JournalEmptyState(title: String, subtitle: String? = null, icon: String = "86969.svg",
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\DocumentScreen.kt:152: JournalEmptyState(
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\DocumentScreen.kt:219: if (trash.isEmpty()) item { Inset { JournalEmptyState("回收站为空") } }
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\DrugScreens.kt:28: if(drugs.isEmpty())item {Inset {JournalEmptyState("还没有药品，可以先录入基本信息，再创建用药方案。")}}
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\IntakeScreens.kt:144: if (records.isEmpty()) item { Inset { JournalEmptyState("还没有服药记录") } }
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\PrenatalScreens.kt:86: JournalEmptyState(
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\SafetyCopiesScreen.kt:16: import cn.yunji.journal.core.designsystem.JournalEmptyState
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\SafetyCopiesScreen.kt:84: else if(copies.isEmpty() && message==null)JournalEmptyState("还没有安全副本")
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\TrashScreen.kt:76: if (retained.isEmpty()) item { Inset { JournalEmptyState("暂无保留的资料") } }
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\TrashScreen.kt:88: if (count == 0) item { Inset { JournalEmptyState("全局回收站为空") } }
+
+## changed files (mtime)
+Components.kt size=10335 mtime=10/24/2026 09:12:09
+CloudConnectionScreen.kt size=17167 mtime=10/24/2026 08:45:27
+ExportScreen.kt size=6289 mtime=10/24/2026 08:45:34
+ReminderSettingsScreen.kt size=15754 mtime=10/24/2026 08:45:40
+TrashScreen.kt size=14324 mtime=10/24/2026 08:49:51
+PrenatalScreens.kt size=9822 mtime=10/24/2026 08:50:05
+DocumentScreen.kt size=29031 mtime=10/24/2026 08:50:42
+IntakeScreens.kt size=17346 mtime=10/24/2026 08:50:05
+DrugScreens.kt size=4446 mtime=10/24/2026 08:50:11
+SafetyCopiesScreen.kt size=5779 mtime=10/24/2026 08:58:40

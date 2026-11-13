@@ -1,0 +1,8 @@
+{
+  "totalJvmTests": 230,
+  "failures": 0,
+  "api34Tests": 207,
+  "api34Seconds": 383.126,
+  "newJvm": 8,
+  "note": "新增8项云端快照下载/发现测试；修复MediaStore提供方崩溃。"
+}

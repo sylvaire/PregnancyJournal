@@ -1,0 +1,30 @@
+# AlarmManager pending alarm entries for cn.yunji.journal after the upgrade (captured 2026-10-23 23:47; 7 RTC_WAKEUP reminder alarms, one per scheduled reminder key)
+
+RTC_WAKEUP #137: Alarm{89a3849 type 0 origWhen 1792843200000 whenElapsed 1789391496 cn.yunji.journal}
+tag=*walarm*:cn.yunji.journal.REMINDER_ALARM
+operation=PendingIntent{c676844: PendingIntentRecord{2644d2d cn.yunji.journal broadcastIntent}}
+
+RTC_WAKEUP #150: Alarm{846654e type 0 origWhen 1792929600000 whenElapsed 1875791496 cn.yunji.journal}
+tag=*walarm*:cn.yunji.journal.REMINDER_ALARM
+operation=PendingIntent{5e6cff3: PendingIntentRecord{f94c4b0 cn.yunji.journal broadcastIntent}}
+
+RTC_WAKEUP #155: Alarm{12b166f type 0 origWhen 1793016000000 whenElapsed 1962191496 cn.yunji.journal}
+tag=*walarm*:cn.yunji.journal.REMINDER_ALARM
+operation=PendingIntent{6658f29: PendingIntentRecord{d92a2ae cn.yunji.journal broadcastIntent}}
+
+RTC_WAKEUP #159: Alarm{9088f7c type 0 origWhen 1793102400000 whenElapsed 2048591496 cn.yunji.journal}
+tag=*walarm*:cn.yunji.journal.REMINDER_ALARM
+operation=PendingIntent{594784f: PendingIntentRecord{8f97bdc cn.yunji.journal broadcastIntent}}
+
+RTC_WAKEUP #160: Alarm{a451005 type 0 origWhen 1793188800000 whenElapsed 2134991496 cn.yunji.journal}
+tag=*walarm*:cn.yunji.journal.REMINDER_ALARM
+operation=PendingIntent{e1ef4e5: PendingIntentRecord{fea3bba cn.yunji.journal broadcastIntent}}
+
+RTC_WAKEUP #162: Alarm{327885a type 0 origWhen 1793275200000 whenElapsed 2221391496 cn.yunji.journal}
+tag=*walarm*:cn.yunji.journal.REMINDER_ALARM
+operation=PendingIntent{ca4a6b: PendingIntentRecord{29079c8 cn.yunji.journal broadcastIntent}}
+
+RTC_WAKEUP #163: Alarm{2fcaa8b type 0 origWhen 1793361600000 whenElapsed 2307791496 cn.yunji.journal}
+tag=*walarm*:cn.yunji.journal.REMINDER_ALARM
+operation=PendingIntent{54efa61: PendingIntentRecord{af05986 cn.yunji.journal broadcastIntent}}
+

@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <long name="generation" value="6" />
+    <set name="missed-alarms" />
+    <set name="scheduled-keys">
+        <string>CUSTOM:27f5e530-4a68-4ac6-ad19-09f7906f1795:2026-10-24:2</string>
+    </set>
+    <set name="delivered-alarms" />
+    <set name="snoozes" />
+</map>

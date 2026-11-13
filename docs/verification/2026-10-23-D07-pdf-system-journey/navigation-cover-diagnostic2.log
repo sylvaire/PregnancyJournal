@@ -1,0 +1,235 @@
+
+cn.yunji.journal.NavigationExperienceTest:
+Error in documentCoverAndRelinkKeepOwnershipVisible(cn.yunji.journal.NavigationExperienceTest):
+java.lang.AssertionError: 重新关联弹窗未出现；界面尾部=estFocus, SetSelection, SetText, SetTextSubstitution, ShowTextSubstitution]
+    |     |  | MergeDescendants = 'true'
+    |     |  |-Node #375 at (l=63.0, t=892.0, r=357.0, b=997.0)px
+    |     |  | Focused = 'false'
+    |     |  | Role = 'Button'
+    |     |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |  | Text = '[全部分类]'
+    |     |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |  | MergeDescendants = 'true'
+    |     |  |-Node #379 at (l=378.0, t=892.0, r=672.0, b=997.0)px
+    |     |  | Focused = 'false'
+    |     |  | Role = 'Button'
+    |     |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |  | Text = '[最近导入]'
+    |     |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |  | MergeDescendants = 'true'
+    |     |  |-Node #384 at (l=63.0, t=1039.0, r=1017.0, b=2382.0)px, Tag: 'document-a604e706-ce6d-4578-8c3a-52968bbae623'
+    |     |    ContentDescription = '[产检资料缩略图]'
+    |     |    Focused = 'false'
+    |     |    IsContainer = 'true'
+    |     |    Text = '[封面关联合成资料.png, 封面, 已加密保存, 其他 · 图片 · 59 KB, 可导出原件；无法打开时可替换为新的加密原件。]'
+    |     |    Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |    MergeDescendants = 'true'
+    |     |     |-Node #394 at (l=116.0, t=1941.0, r=348.0, b=2046.0)px
+    |     |     | Focused = 'false'
+    |     |     | Role = 'Button'
+    |     |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |     | Text = '[查看大图]'
+    |     |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |     | MergeDescendants = 'true'
+    |     |     |-Node #397 at (l=369.0, t=1941.0, r=521.0, b=2046.0)px
+    |     |     | Focused = 'false'
+    |     |     | Role = 'Button'
+    |     |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |     | Text = '[编辑]'
+    |     |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |     | MergeDescendants = 'true'
+    |     |     |-Node #400 at (l=542.0, t=1941.0, r=694.0, b=2046.0)px
+    |     |     | Focused = 'false'
+    |     |     | Role = 'Button'
+    |     |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |     | Text = '[删除]'
+    |     |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |     | MergeDescendants = 'true'
+    |     |     |-Node #427 at (l=116.0, t=2099.0, r=348.0, b=2204.0)px, Tag: 'clear-cover'
+    |     |     | Focused = 'false'
+    |     |     | Role = 'Button'
+    |     |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |     | Text = '[取消封面]'
+    |     |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |     | MergeDescendants = 'true'
+    |     |     |-Node #408 at (l=359.0, t=2099.0, r=591.0, b=2204.0)px, Tag: 'relink-a604e706-ce6d-4578-8c3a-52968bbae623'
+    |     |     | Focused = 'false'
+    |     |     | Role = 'Button'
+    |     |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |     | Text = '[关联产检]'
+    |     |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |     | MergeDescendants = 'true'
+    |     |     |-Node #411 at (l=602.0, t=2099.0, r=834.0, b=2204.0)px, Tag: 'export-a604e706-ce6d-4578-8c3a-52968bbae623'
+    |     |     | Focused = 'false'
+    |     |     | Role = 'Button'
+    |     |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |     | Text = '[导出原件]'
+    |     |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |     | MergeDescendants = 'true'
+    |     |     |-Node #414 at (l=116.0, t=2225.0, r=348.0, b=2330.0)px, Tag: 'share-a604e706-ce6d-4578-8c3a-52968bbae623'
+    |     |     | Focused = 'false'
+    |     |     | Role = 'Button'
+    |     |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |     | Text = '[分享原件]'
+    |     |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |     | MergeDescendants = 'true'
+    |     |     |-Node #417 at (l=359.0, t=2225.0, r=591.0, b=2330.0)px, Tag: 'replace-a604e706-ce6d-4578-8c3a-52968bbae623'
+    |     |       Focused = 'false'
+    |     |       Role = 'Button'
+    |     |       Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |       Text = '[替换原件]'
+    |     |       Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |       MergeDescendants = 'true'
+    |     |-Node #308 at (l=0.0, t=0.0, r=1080.0, b=296.0)px
+    |       IsTraversalGroup = 'true'
+    |        |-Node #309 at (l=0.0, t=128.0, r=1080.0, b=296.0)px
+    |          Shape = 'RectangleShape'
+    |           |-Node #311 at (l=22.0, t=160.0, r=127.0, b=265.0)px, Tag: 'navigate-up'
+    |           | ContentDescription = '[返回上一级]'
+    |           | Focused = 'false'
+    |           | Role = 'Button'
+    |           | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |           | Actions = [OnClick, RequestFocus]
+    |           | MergeDescendants = 'true'
+    |           |-Node #314 at (l=148.0, t=172.0, r=356.0, b=251.0)px
+    |              |-Node #315 at (l=148.0, t=172.0, r=356.0, b=251.0)px
+    |                Text = '[产检资料]'
+    |                Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |-Node #421 at (l=32.0, t=2115.0, r=1048.0, b=2305.0)px
+      LiveRegion = 'Polite'
+      PaneTitle = 'Alert'
+      Actions = [Dismiss]
+       |-Node #422 at (l=64.0, t=2147.0, r=1016.0, b=2273.0)px
+         IsContainer = 'true'
+         Shape = 'RoundedCornerShape(topStart = CornerSize(size = 4.0.dp), topEnd = CornerSize(size = 4.0.dp), bottomEnd = CornerSize(size = 4.0.dp), bottomStart = CornerSize(size = 4.0.dp))'
+          |-Node #425 at (l=106.0, t=2184.0, r=430.0, b=2236.0)px
+            Text = '[已设为本次产检封面]'
+            Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+	at cn.yunji.journal.NavigationExperienceTest.documentCoverAndRelinkKeepOwnershipVisible(NavigationExperienceTest.kt:745)
+	... 66 trimmed
+Caused by: androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 5000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at cn.yunji.journal.NavigationExperienceTest.documentCoverAndRelinkKeepOwnershipVisible(NavigationExperienceTest.kt:743)
+	... 67 more
+
+
+Time: 12.511
+There was 1 failure:
+1) documentCoverAndRelinkKeepOwnershipVisible(cn.yunji.journal.NavigationExperienceTest)
+java.lang.AssertionError: 重新关联弹窗未出现；界面尾部=estFocus, SetSelection, SetText, SetTextSubstitution, ShowTextSubstitution]
+    |     |  | MergeDescendants = 'true'
+    |     |  |-Node #375 at (l=63.0, t=892.0, r=357.0, b=997.0)px
+    |     |  | Focused = 'false'
+    |     |  | Role = 'Button'
+    |     |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |  | Text = '[全部分类]'
+    |     |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |  | MergeDescendants = 'true'
+    |     |  |-Node #379 at (l=378.0, t=892.0, r=672.0, b=997.0)px
+    |     |  | Focused = 'false'
+    |     |  | Role = 'Button'
+    |     |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |  | Text = '[最近导入]'
+    |     |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |  | MergeDescendants = 'true'
+    |     |  |-Node #384 at (l=63.0, t=1039.0, r=1017.0, b=2382.0)px, Tag: 'document-a604e706-ce6d-4578-8c3a-52968bbae623'
+    |     |    ContentDescription = '[产检资料缩略图]'
+    |     |    Focused = 'false'
+    |     |    IsContainer = 'true'
+    |     |    Text = '[封面关联合成资料.png, 封面, 已加密保存, 其他 · 图片 · 59 KB, 可导出原件；无法打开时可替换为新的加密原件。]'
+    |     |    Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |    MergeDescendants = 'true'
+    |     |     |-Node #394 at (l=116.0, t=1941.0, r=348.0, b=2046.0)px
+    |     |     | Focused = 'false'
+    |     |     | Role = 'Button'
+    |     |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |     | Text = '[查看大图]'
+    |     |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |     | MergeDescendants = 'true'
+    |     |     |-Node #397 at (l=369.0, t=1941.0, r=521.0, b=2046.0)px
+    |     |     | Focused = 'false'
+    |     |     | Role = 'Button'
+    |     |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |     | Text = '[编辑]'
+    |     |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |     | MergeDescendants = 'true'
+    |     |     |-Node #400 at (l=542.0, t=1941.0, r=694.0, b=2046.0)px
+    |     |     | Focused = 'false'
+    |     |     | Role = 'Button'
+    |     |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |     | Text = '[删除]'
+    |     |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |     | MergeDescendants = 'true'
+    |     |     |-Node #427 at (l=116.0, t=2099.0, r=348.0, b=2204.0)px, Tag: 'clear-cover'
+    |     |     | Focused = 'false'
+    |     |     | Role = 'Button'
+    |     |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |     | Text = '[取消封面]'
+    |     |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |     | MergeDescendants = 'true'
+    |     |     |-Node #408 at (l=359.0, t=2099.0, r=591.0, b=2204.0)px, Tag: 'relink-a604e706-ce6d-4578-8c3a-52968bbae623'
+    |     |     | Focused = 'false'
+    |     |     | Role = 'Button'
+    |     |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |     | Text = '[关联产检]'
+    |     |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |     | MergeDescendants = 'true'
+    |     |     |-Node #411 at (l=602.0, t=2099.0, r=834.0, b=2204.0)px, Tag: 'export-a604e706-ce6d-4578-8c3a-52968bbae623'
+    |     |     | Focused = 'false'
+    |     |     | Role = 'Button'
+    |     |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |     | Text = '[导出原件]'
+    |     |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |     | MergeDescendants = 'true'
+    |     |     |-Node #414 at (l=116.0, t=2225.0, r=348.0, b=2330.0)px, Tag: 'share-a604e706-ce6d-4578-8c3a-52968bbae623'
+    |     |     | Focused = 'false'
+    |     |     | Role = 'Button'
+    |     |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |     | Text = '[分享原件]'
+    |     |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |     | MergeDescendants = 'true'
+    |     |     |-Node #417 at (l=359.0, t=2225.0, r=591.0, b=2330.0)px, Tag: 'replace-a604e706-ce6d-4578-8c3a-52968bbae623'
+    |     |       Focused = 'false'
+    |     |       Role = 'Button'
+    |     |       Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |       Text = '[替换原件]'
+    |     |       Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |       MergeDescendants = 'true'
+    |     |-Node #308 at (l=0.0, t=0.0, r=1080.0, b=296.0)px
+    |       IsTraversalGroup = 'true'
+    |        |-Node #309 at (l=0.0, t=128.0, r=1080.0, b=296.0)px
+    |          Shape = 'RectangleShape'
+    |           |-Node #311 at (l=22.0, t=160.0, r=127.0, b=265.0)px, Tag: 'navigate-up'
+    |           | ContentDescription = '[返回上一级]'
+    |           | Focused = 'false'
+    |           | Role = 'Button'
+    |           | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |           | Actions = [OnClick, RequestFocus]
+    |           | MergeDescendants = 'true'
+    |           |-Node #314 at (l=148.0, t=172.0, r=356.0, b=251.0)px
+    |              |-Node #315 at (l=148.0, t=172.0, r=356.0, b=251.0)px
+    |                Text = '[产检资料]'
+    |                Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |-Node #421 at (l=32.0, t=2115.0, r=1048.0, b=2305.0)px
+      LiveRegion = 'Polite'
+      PaneTitle = 'Alert'
+      Actions = [Dismiss]
+       |-Node #422 at (l=64.0, t=2147.0, r=1016.0, b=2273.0)px
+         IsContainer = 'true'
+         Shape = 'RoundedCornerShape(topStart = CornerSize(size = 4.0.dp), topEnd = CornerSize(size = 4.0.dp), bottomEnd = CornerSize(size = 4.0.dp), bottomStart = CornerSize(size = 4.0.dp))'
+          |-Node #425 at (l=106.0, t=2184.0, r=430.0, b=2236.0)px
+            Text = '[已设为本次产检封面]'
+            Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+	at cn.yunji.journal.NavigationExperienceTest.documentCoverAndRelinkKeepOwnershipVisible(NavigationExperienceTest.kt:745)
+	... 66 trimmed
+Caused by: androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 5000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at cn.yunji.journal.NavigationExperienceTest.documentCoverAndRelinkKeepOwnershipVisible(NavigationExperienceTest.kt:743)
+	... 67 more
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+

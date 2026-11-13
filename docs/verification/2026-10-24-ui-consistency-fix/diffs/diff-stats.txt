@@ -1,0 +1,22 @@
+cloud-connection-backup.png: changed=162170px (6.257%) bbox=px[53,299]-[1027,2337] dp[20.2,113.9]-[391.2,890.3] (371.0x776.4dp) top_pairs=#F7F8F3->#223C32 x12031; #223C32->#F7F8F3 x11931; #356B53->#F7F8F3 x2846
+cloud-connection-cleanup.png: changed=161885px (6.246%) bbox=px[53,296]-[1027,2332] dp[20.2,112.8]-[391.2,888.4] (371.0x775.6dp) top_pairs=#F7F8F3->#223C32 x12782; #223C32->#F7F8F3 x12587; #356B53->#F7F8F3 x3041
+cloud-connection.png: changed=267218px (10.309%) bbox=px[53,368]-[1027,2337] dp[20.2,140.2]-[391.2,890.3] (371.0x750.1dp) top_pairs=#223C32->#F7F8F3 x7209; #F7F8F3->#223C32 x7135; #DDE4DA->#F7F8F3 x6713
+custom-reminder-editor.png: changed=44994px (1.736%) bbox=px[83,50]-[964,2337] dp[31.6,19.0]-[367.2,890.3] (335.6x871.2dp) top_pairs=#666666->#0E1814 x3854; #0E1814->#666666 x3715; #262D29->#666666 x3013
+drug-catalog.png: IDENTICAL
+drug-editor.png: changed=58211px (2.246%) bbox=px[53,304]-[1027,1287] dp[20.2,115.8]-[391.2,490.3] (371.0x374.5dp) top_pairs=#223C32->#F7F8F3 x5144; #F7F8F3->#223C32 x5129; #DDE4DA->#F7F8F3 x2778
+export-screen-disabled.png: changed=152528px (5.885%) bbox=px[53,296]-[1027,2337] dp[20.2,112.8]-[391.2,890.3] (371.0x777.5dp) top_pairs=#F7F8F3->#E1E5DF x14501; #356B53->#F7F8F3 x7558; #223C32->#F7F8F3 x7379
+export-screen.png: changed=160365px (6.187%) bbox=px[53,369]-[1027,2337] dp[20.2,140.6]-[391.2,890.3] (371.0x749.7dp) top_pairs=#223C32->#F7F8F3 x10783; #F7F8F3->#223C32 x10554; #DDE4DA->#F7F8F3 x5944
+journal-entry-editor.png: changed=79771px (3.078%) bbox=px[53,304]-[1027,1830] dp[20.2,115.8]-[391.2,697.1] (371.0x581.3dp) top_pairs=#223C32->#F7F8F3 x6358; #F7F8F3->#223C32 x6354; #DDE4DA->#F7F8F3 x6232
+local-backup.png: changed=335123px (12.929%) bbox=px[53,369]-[1027,1726] dp[20.2,140.6]-[391.2,657.5] (371.0x517.0dp) top_pairs=#F7F8F3->#E7F0E6 x22640; #F7F8F3->#356B53 x6758; #F7F8F3->#223C32 x6701
+measurement-editor.png: changed=63570px (2.453%) bbox=px[53,304]-[1027,1862] dp[20.2,115.8]-[391.2,709.3] (371.0x593.5dp) top_pairs=#DDE4DA->#F7F8F3 x6040; #F7F8F3->#DDE4DA x5580; #F7F8F3->#5F7166 x4586
+pregnancy-editor.png: IDENTICAL
+reminder-settings-custom.png: changed=168354px (6.495%) bbox=px[63,296]-[1017,2337] dp[24.0,112.8]-[387.4,890.3] (363.4x777.5dp) top_pairs=#F7F8F3->#FFFFFF x20982; #223C32->#FFFFFF x4881; #FFFFFF->#223C32 x4753
+reminder-settings.png: changed=204138px (7.876%) bbox=px[63,304]-[1017,2337] dp[24.0,115.8]-[387.4,890.3] (363.4x774.5dp) top_pairs=#F7F8F3->#FFFFFF x13029; #FFFFFF->#223C32 x4531; #223C32->#FFFFFF x4510
+restore-wizard-key.png: changed=105223px (4.060%) bbox=px[53,368]-[1027,1139] dp[20.2,140.2]-[391.2,433.9] (371.0x293.7dp) top_pairs=#F7F8F3->#E1E5DF x28875; #223C32->#F7F8F3 x9526; #F7F8F3->#223C32 x9389
+restore-wizard.png: changed=255776px (9.868%) bbox=px[53,368]-[1027,1145] dp[20.2,140.2]-[391.2,436.2] (371.0x296.0dp) top_pairs=#F7F8F3->#E7F0E6 x28245; #F7F8F3->#356B53 x7847; #223C32->#F7F8F3 x4986
+security-settings.png: changed=320674px (12.372%) bbox=px[53,364]-[1027,2301] dp[20.2,138.7]-[391.2,876.6] (371.0x737.9dp) top_pairs=#F7F8F3->#FFFFFF x6520; #223C32->#F7F8F3 x6510; #F7F8F3->#223C32 x6432
+timeline-source-detail.png: changed=78250px (3.019%) bbox=px[53,311]-[1027,1288] dp[20.2,118.5]-[391.2,490.7] (371.0x372.2dp) top_pairs=#223C32->#F7F8F3 x14292; #F7F8F3->#223C32 x14183; #356B53->#F7F8F3 x2328
+timeline.png: changed=155616px (6.004%) bbox=px[63,454]-[1017,2320] dp[24.0,173.0]-[387.4,883.8] (363.4x710.9dp) top_pairs=#F7F8F3->#FFFFFF x33901; #E7F0E6->#356B53 x6028; #F7F8F3->#356B53 x3292
+trash-empty.png: changed=115389px (4.452%) bbox=px[63,296]-[996,645] dp[24.0,112.8]-[379.4,245.7] (355.4x133.0dp) top_pairs=#F7F8F3->#FFFFFF x39486; #E7F0E6->#356B53 x28093; #F7F8F3->#356B53 x16646
+visit-detail.png: IDENTICAL
+visit-editor.png: IDENTICAL

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.VisitSummaryTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-22T07:08:31.713Z" hostname="SUN-KDQ5E4QJN34" time="0.005">
+  <properties/>
+  <testcase name="emptyAndBlankValuesAreExplicitlyShownAndDistinctFromText" classname="cn.yunji.journal.VisitSummaryTest" time="0.004"/>
+  <testcase name="headerCarriesScopeGenerationTimeAndNonClinicalMarker" classname="cn.yunji.journal.VisitSummaryTest" time="0.0"/>
+  <testcase name="everyPageIsAttributableAndNoContentIsLost" classname="cn.yunji.journal.VisitSummaryTest" time="0.0"/>
+  <testcase name="tableRowsKeepTheirColumnsAndHeaderFlag" classname="cn.yunji.journal.VisitSummaryTest" time="0.001"/>
+  <testcase name="minimumCapacityIsEnforced" classname="cn.yunji.journal.VisitSummaryTest" time="0.0"/>
+  <testcase name="pagesRespectCapacityAndAreNumberedFromOne" classname="cn.yunji.journal.VisitSummaryTest" time="0.0"/>
+  <testcase name="sectionTitleIsNotOrphanedAtTheBottomOfAPage" classname="cn.yunji.journal.VisitSummaryTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

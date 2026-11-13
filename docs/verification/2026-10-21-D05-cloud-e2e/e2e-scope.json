@@ -1,0 +1,9 @@
+{
+  "transport": "androidTest 引入 mockwebserver + okhttp-tls，在设备内运行 TLS WebDAV 子集",
+  "covered": [
+    "列出并下载云端快照→预览→提交→资料与新库一致",
+    "错误密钥找不到、远端对象被篡改被拒且不留暂存",
+    "缺少或未校验的云盘连接被拒"
+  ],
+  "fixture": "云端的资料库与本机资料库不同，即新设备恢复路径"
+}

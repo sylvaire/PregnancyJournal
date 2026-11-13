@@ -1,0 +1,11 @@
+date=2026-10-24T02:01:45.6428237+08:00
+device=emulator-5556
+sdk=36
+release=16
+model=sdk_gphone16k_x86_64
+abi=x86_64
+font_scale=1.0
+night=Night mode: no
+wm_size=Physical size: 1080x2400
+wm_density=Physical density: 420
+app_version=    versionName=0.26.0-dev

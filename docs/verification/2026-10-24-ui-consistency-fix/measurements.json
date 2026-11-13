@@ -1,0 +1,7870 @@
+{
+ "scale_px_per_dp": 2.625,
+ "dirs": {
+  "after": {
+   "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after",
+   "exists": true,
+   "count": 22,
+   "files": [
+    "cloud-connection-backup.png",
+    "cloud-connection-cleanup.png",
+    "cloud-connection.png",
+    "custom-reminder-editor.png",
+    "drug-catalog.png",
+    "drug-editor.png",
+    "export-screen-disabled.png",
+    "export-screen.png",
+    "journal-entry-editor.png",
+    "local-backup.png",
+    "measurement-editor.png",
+    "pregnancy-editor.png",
+    "reminder-settings-custom.png",
+    "reminder-settings.png",
+    "restore-wizard-key.png",
+    "restore-wizard.png",
+    "security-settings.png",
+    "timeline-source-detail.png",
+    "timeline.png",
+    "trash-empty.png",
+    "visit-detail.png",
+    "visit-editor.png"
+   ]
+  },
+  "after-supplementary": {
+   "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after-supplementary",
+   "exists": true,
+   "count": 9,
+   "files": [
+    "01-today.png",
+    "02-visits.png",
+    "03-records-hub.png",
+    "04-profiles.png",
+    "05-medications.png",
+    "06-intakes.png",
+    "07-measurements.png",
+    "08-visit-documents.png",
+    "09-recovery.png"
+   ]
+  },
+  "navigation": {
+   "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\navigation",
+   "exists": true,
+   "count": 20,
+   "files": [
+    "b04-empty.png",
+    "b05-cover.png",
+    "b05-pdf.png",
+    "b05-retained-relink.png",
+    "b05-zoom.png",
+    "b06-delete-scope.png",
+    "b06-global-trash.png",
+    "c01-history.png",
+    "c01left-delete-scope.png",
+    "c01left-history.png",
+    "c01left-photos.png",
+    "c01left-trash.png",
+    "c02-history.png",
+    "c02-home.png",
+    "c03-measurement.png",
+    "c04-journal.png",
+    "c04-timeline.png",
+    "c05-reminder-settings.png",
+    "c05-visit-reminder.png",
+    "d01-cloud-connection.png"
+   ]
+  },
+  "theme-fix": {
+   "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-theme-fix\\after",
+   "exists": true,
+   "count": 22,
+   "files": [
+    "cloud-connection-backup.png",
+    "cloud-connection-cleanup.png",
+    "cloud-connection.png",
+    "custom-reminder-editor.png",
+    "drug-catalog.png",
+    "drug-editor.png",
+    "export-screen-disabled.png",
+    "export-screen.png",
+    "journal-entry-editor.png",
+    "local-backup.png",
+    "measurement-editor.png",
+    "pregnancy-editor.png",
+    "reminder-settings-custom.png",
+    "reminder-settings.png",
+    "restore-wizard-key.png",
+    "restore-wizard.png",
+    "security-settings.png",
+    "timeline-source-detail.png",
+    "timeline.png",
+    "trash-empty.png",
+    "visit-detail.png",
+    "visit-editor.png"
+   ]
+  },
+  "figma-alignment": {
+   "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-figma-ui-alignment\\app-screens",
+   "exists": true,
+   "count": 22,
+   "files": [
+    "cloud-connection-backup.png",
+    "cloud-connection-cleanup.png",
+    "cloud-connection.png",
+    "custom-reminder-editor.png",
+    "drug-catalog.png",
+    "drug-editor.png",
+    "export-screen-disabled.png",
+    "export-screen.png",
+    "journal-entry-editor.png",
+    "local-backup.png",
+    "measurement-editor.png",
+    "pregnancy-editor.png",
+    "reminder-settings-custom.png",
+    "reminder-settings.png",
+    "restore-wizard-key.png",
+    "restore-wizard.png",
+    "security-settings.png",
+    "timeline-source-detail.png",
+    "timeline.png",
+    "trash-empty.png",
+    "visit-detail.png",
+    "visit-editor.png"
+   ]
+  }
+ },
+ "files": {
+  "after": {
+   "cloud-connection-backup.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after\\cloud-connection-backup.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "E2DB5C16C414E017CE0A3BC978EB677CB9AB47354EADB222EC0C0886654049B8",
+    "page_margin": {
+     "x0_px": 69,
+     "x0_dp": 26.29,
+     "votes": 123,
+     "rows": 911
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1798,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 186844,
+     "soft": 0,
+     "bg": 2206614,
+     "white": 7442,
+     "outline": 5724,
+     "muted": 3188,
+     "ink": 51755
+    }
+   },
+   "cloud-connection-cleanup.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after\\cloud-connection-cleanup.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "99884A1EFF2DA0D8D4A4B5EDD75D948ED2CC91B576B3EB1102CEF0B6AEF02179",
+    "page_margin": {
+     "x0_px": 68,
+     "x0_dp": 25.9,
+     "votes": 96,
+     "rows": 843
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 713,
+       "color": "#356B53",
+       "max_row_count": 948
+      },
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 2065,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 258539,
+     "soft": 0,
+     "bg": 2189551,
+     "white": 10469,
+     "outline": 5724,
+     "muted": 0,
+     "ink": 53785
+    }
+   },
+   "cloud-connection.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after\\cloud-connection.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "0D7C54A4376297245732B91F5F301B9E6160C8101E183AFEA51A0B9AAE4568AF",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 558,
+     "rows": 1168
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 685
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 898
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1111
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1383
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 57883,
+     "soft": 0,
+     "bg": 2321932,
+     "white": 1876,
+     "outline": 26245,
+     "muted": 10438,
+     "ink": 45987
+    }
+   },
+   "custom-reminder-editor.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after\\custom-reminder-editor.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "3E122CFED69FFE4B880C8A239CFC9318B45A36303D2CBBC127B3B06E1726656F",
+    "page_margin": {
+     "x0_px": 0,
+     "x0_dp": 0.0,
+     "votes": 2020,
+     "rows": 2020
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [
+      {
+       "h_px": 136,
+       "h_dp": 51.81,
+       "w_px": 1000,
+       "w_dp": 380.95,
+       "x0_px": 40,
+       "x0_dp": 15.24,
+       "y0_px": 160,
+       "color": "#636361",
+       "max_row_count": 1000
+      },
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 848,
+       "w_dp": 323.05,
+       "x0_px": 116,
+       "x0_dp": 44.19,
+       "y0_px": 2200,
+       "color": "#5A5E5A",
+       "max_row_count": 842
+      }
+     ],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 9837,
+     "soft": 0,
+     "bg": 0,
+     "white": 1056976,
+     "outline": 10076,
+     "muted": 5529,
+     "ink": 4255
+    }
+   },
+   "drug-catalog.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after\\drug-catalog.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "C99306FC3D31184AC0108108FC8A78C5E0E682E1B4A6A8E2C29182AD6CE78064",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 437,
+     "rows": 704
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 507,
+      "h_dp": 193.14,
+      "y0_px": 590
+     }
+    ],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 296,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 128039,
+     "soft": 0,
+     "bg": 1962764,
+     "white": 453600,
+     "outline": 0,
+     "muted": 0,
+     "ink": 20573
+    }
+   },
+   "drug-editor.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after\\drug-editor.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "BBB779DFD14E44325145DAEFB0D6ABAD7A2FC2C8B457DEF221CDA226065D2BBB",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 422,
+     "rows": 706
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1030,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 445
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 648
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 851
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 123309,
+     "soft": 0,
+     "bg": 2401921,
+     "white": 1890,
+     "outline": 19434,
+     "muted": 4599,
+     "ink": 13739
+    }
+   },
+   "export-screen-disabled.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after\\export-screen-disabled.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "75A890E639F079FCE000CD29218F2F0007751CAFA2FFF7F298CEA06E53F45C5C",
+    "page_margin": {
+     "x0_px": 67,
+     "x0_dp": 25.52,
+     "votes": 96,
+     "rows": 579
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 2200,
+       "color": "#E1E5DF",
+       "max_row_count": 948
+      }
+     ],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 25667,
+     "soft": 0,
+     "bg": 2388271,
+     "white": 2205,
+     "outline": 1908,
+     "muted": 920,
+     "ink": 20504
+    }
+   },
+   "export-screen.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after\\export-screen.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "D96F0A4D7AEFA58CC96BF03C085BB617F24596C5E5643264EA48577EE1A51D82",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 140,
+     "rows": 653
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 21168,
+     "soft": 0,
+     "bg": 2463104,
+     "white": 4465,
+     "outline": 20752,
+     "muted": 4535,
+     "ink": 35000
+    }
+   },
+   "journal-entry-editor.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after\\journal-entry-editor.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "F7639C2A1248877F664957F8021D7F2AFA93A33431ED52454DB172456E872E4A",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 940,
+     "rows": 1232
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1693,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 373
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 576
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 856
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1059
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 122677,
+     "soft": 0,
+     "bg": 2377259,
+     "white": 2698,
+     "outline": 31862,
+     "muted": 8018,
+     "ink": 16400
+    }
+   },
+   "local-backup.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after\\local-backup.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "109C03F6868F35989BF810BB0F875E41860DB9F1B654DCCE985823DD8D46F9D0",
+    "page_margin": {
+     "x0_px": 70,
+     "x0_dp": 26.67,
+     "votes": 110,
+     "rows": 720
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 892,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1071,
+       "color": "#E7F0E6",
+       "max_row_count": 948
+      }
+     ],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 127423,
+     "soft": 120760,
+     "bg": 2231082,
+     "white": 2887,
+     "outline": 1908,
+     "muted": 0,
+     "ink": 48260
+    }
+   },
+   "measurement-editor.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after\\measurement-editor.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "6873B16266169CE34E4D82856AF6BA453ADEDD7F0928235BF24BBF6DF799EAED",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 831,
+     "rows": 1195
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1725,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 555
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 734
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 937
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1217
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 123857,
+     "soft": 0,
+     "bg": 2388065,
+     "white": 1871,
+     "outline": 33258,
+     "muted": 8526,
+     "ink": 9652
+    }
+   },
+   "pregnancy-editor.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after\\pregnancy-editor.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "D804B306A7703F4D14D7D8D0F892968502D55948C84EF1AAAF775E2F85D28F09",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 983,
+     "rows": 1452
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 2118,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 397
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 683
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 988
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1736
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1939
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 133065,
+     "soft": 337578,
+     "bg": 2004606,
+     "white": 1938,
+     "outline": 31154,
+     "muted": 21622,
+     "ink": 14072
+    }
+   },
+   "reminder-settings-custom.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after\\reminder-settings-custom.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "34BE08D0A4F5D4CE491C582CF438E53D8B766DE435949F63AA543B8AE316F0C7",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 1642,
+     "rows": 1924
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 509,
+      "h_dp": 193.9,
+      "y0_px": 296
+     },
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 648,
+      "h_dp": 246.86,
+      "y0_px": 837
+     },
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 671,
+      "h_dp": 255.62,
+      "y0_px": 1517
+     }
+    ],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 848,
+       "w_dp": 323.05,
+       "x0_px": 116,
+       "x0_dp": 44.19,
+       "y0_px": 1743,
+       "color": "#E7F0E6",
+       "max_row_count": 842
+      }
+     ],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 21995,
+     "soft": 107975,
+     "bg": 737131,
+     "white": 1628417,
+     "outline": 0,
+     "muted": 14174,
+     "ink": 25371
+    }
+   },
+   "reminder-settings.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after\\reminder-settings.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "01C231B855DA9064E275D92D468D359E8473FD7B27A0DB39525722D3D7B64F8B",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 1474,
+     "rows": 1867
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 412,
+      "h_dp": 156.95,
+      "y0_px": 421
+     },
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 537,
+      "h_dp": 204.57,
+      "y0_px": 865
+     },
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 758,
+      "h_dp": 288.76,
+      "y0_px": 1434
+     }
+    ],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 15135,
+     "soft": 0,
+     "bg": 834816,
+     "white": 1617149,
+     "outline": 0,
+     "muted": 10721,
+     "ink": 41146
+    }
+   },
+   "restore-wizard-key.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after\\restore-wizard-key.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "90F12BB100989A0E57756BB810A9A64E5F8F39CF5D7DCD39B410A8CAB3C67689",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 152,
+     "rows": 463
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 874,
+       "color": "#E1E5DF",
+       "max_row_count": 948
+      }
+     ],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 685
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 2910,
+     "soft": 0,
+     "bg": 2416714,
+     "white": 0,
+     "outline": 6478,
+     "muted": 1425,
+     "ink": 17151
+    }
+   },
+   "restore-wizard.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after\\restore-wizard.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "DF969727C3542A6237BBDF85E7F12FBD04BC19EAF95A6C1C3E5DE09C836E5151",
+    "page_margin": {
+     "x0_px": 70,
+     "x0_dp": 26.67,
+     "votes": 78,
+     "rows": 496
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 829,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1008,
+       "color": "#E7F0E6",
+       "max_row_count": 948
+      }
+     ],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 124558,
+     "soft": 120745,
+     "bg": 2277080,
+     "white": 2928,
+     "outline": 0,
+     "muted": 0,
+     "ink": 31044
+    }
+   },
+   "security-settings.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after\\security-settings.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "B7301E9209771E265C556493F88A4EE62064611C23810156BE12A0A63446D6E0",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 296,
+     "rows": 1223
+    },
+    "white_cards": [],
+    "tags_selected": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 458.3,
+      "w_dp": 73.1,
+      "h_dp": 48.4,
+      "fill_px": 21423,
+      "white_text_px": 1056,
+      "primary_text_px": 21548,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.043,
+      "corner_void_px": 242,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tags_unselected": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 329.5,
+      "w_dp": 64.0,
+      "h_dp": 48.4,
+      "border_px": 1398,
+      "white_fill_px": 17276,
+      "white_ratio_of_bbox": 0.81,
+      "muted_text_px": 878,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     },
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 393.9,
+      "w_dp": 73.1,
+      "h_dp": 48.4,
+      "border_px": 1542,
+      "white_fill_px": 20006,
+      "white_ratio_of_bbox": 0.82,
+      "muted_text_px": 974,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 581,
+       "color": "#356B53",
+       "max_row_count": 948
+      },
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 2034,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1720,
+       "color": "#E7F0E6",
+       "max_row_count": 948
+      }
+     ],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 269862,
+     "soft": 121825,
+     "bg": 2035175,
+     "white": 42523,
+     "outline": 2940,
+     "muted": 1852,
+     "ink": 48951
+    }
+   },
+   "timeline-source-detail.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after\\timeline-source-detail.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "6C1E6EEFEC4846C7E9937E452A27E539BDAECA283C47A5779829BDBD5DB8EE13",
+    "page_margin": {
+     "x0_px": 66,
+     "x0_dp": 25.14,
+     "votes": 55,
+     "rows": 483
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1032,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 121612,
+     "soft": 0,
+     "bg": 2400652,
+     "white": 2734,
+     "outline": 0,
+     "muted": 0,
+     "ink": 30880
+    }
+   },
+   "timeline.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after\\timeline.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "6C4D3E52DF8D026E0CF88979E56A4FF37FE3EE831C2BA249D690797D057ECCEF",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 1275,
+     "rows": 1732
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 659,
+      "h_dp": 251.05,
+      "y0_px": 1013
+     },
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 539,
+      "h_dp": 205.33,
+      "y0_px": 1798
+     }
+    ],
+    "tags_selected": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 173.0,
+      "w_dp": 64.0,
+      "h_dp": 48.4,
+      "fill_px": 18509,
+      "white_text_px": 902,
+      "primary_text_px": 18759,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.042,
+      "corner_void_px": 242,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tags_unselected": [
+     {
+      "x0_dp": 96.0,
+      "y0_dp": 173.0,
+      "w_dp": 64.0,
+      "h_dp": 48.4,
+      "border_px": 1398,
+      "white_fill_px": 17402,
+      "white_ratio_of_bbox": 0.816,
+      "muted_text_px": 731,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     },
+     {
+      "x0_dp": 168.0,
+      "y0_dp": 173.0,
+      "w_dp": 64.0,
+      "h_dp": 48.4,
+      "border_px": 1398,
+      "white_fill_px": 17133,
+      "white_ratio_of_bbox": 0.803,
+      "muted_text_px": 838,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     },
+     {
+      "x0_dp": 240.0,
+      "y0_dp": 173.0,
+      "w_dp": 96.0,
+      "h_dp": 48.4,
+      "border_px": 1902,
+      "white_fill_px": 25615,
+      "white_ratio_of_bbox": 0.8,
+      "muted_text_px": 1848,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     },
+     {
+      "x0_dp": 344.0,
+      "y0_dp": 173.0,
+      "w_dp": 43.4,
+      "h_dp": 48.4,
+      "border_px": 879,
+      "white_fill_px": 11403,
+      "white_ratio_of_bbox": 0.788,
+      "muted_text_px": 874,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 296,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 626
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 146003,
+     "soft": 0,
+     "bg": 1174535,
+     "white": 1163915,
+     "outline": 12055,
+     "muted": 6914,
+     "ink": 38077
+    }
+   },
+   "trash-empty.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after\\trash-empty.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "1AB107830D2D217AA6B437A45CB4D971E41552E2EB019ED8B5BC85132BC5B18B",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 79,
+     "rows": 239
+    },
+    "white_cards": [],
+    "tags_selected": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 112.8,
+      "w_dp": 153.1,
+      "h_dp": 48.4,
+      "fill_px": 43906,
+      "white_text_px": 2886,
+      "primary_text_px": 44859,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.057,
+      "corner_void_px": 242,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tags_unselected": [
+     {
+      "x0_dp": 185.1,
+      "y0_dp": 112.8,
+      "w_dp": 153.1,
+      "h_dp": 48.4,
+      "border_px": 2802,
+      "white_fill_px": 42016,
+      "white_ratio_of_bbox": 0.823,
+      "muted_text_px": 2760,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 45017,
+     "soft": 0,
+     "bg": 2456377,
+     "white": 44902,
+     "outline": 2802,
+     "muted": 2760,
+     "ink": 16673
+    }
+   },
+   "visit-detail.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after\\visit-detail.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "7DB83EF5B5BBD0747A35F67B5B12052675D5D87276D3452AD5AF848A62E4F263",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 865,
+     "rows": 1573
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 537,
+      "h_dp": 204.57,
+      "y0_px": 785
+     }
+    ],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1894,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1556,
+       "color": "#E7F0E6",
+       "max_row_count": 948
+      },
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1725,
+       "color": "#E7F0E6",
+       "max_row_count": 948
+      }
+     ],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 138341,
+     "soft": 659591,
+     "bg": 1237626,
+     "white": 484096,
+     "outline": 0,
+     "muted": 8757,
+     "ink": 13875
+    }
+   },
+   "visit-editor.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after\\visit-editor.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "225CA230D675A429E216C0DB2A527E30D618BC2A32EAB259F75BFD1E6BB0CC45",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 689,
+     "rows": 920
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1341,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 373
+      },
+      {
+       "h_px": 148,
+       "h_dp": 56.38,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 552
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 756
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 959
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1162
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 124095,
+     "soft": 0,
+     "bg": 2390514,
+     "white": 1838,
+     "outline": 31778,
+     "muted": 12465,
+     "ink": 6612
+    }
+   }
+  },
+  "after-supplementary": {
+   "01-today.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after-supplementary\\01-today.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "787A6124533B42936069B541B4B09AC00622E705927EAFEFFAA50D10D6E79963",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 831,
+     "rows": 1618
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 189,
+      "h_dp": 72.0,
+      "y0_px": 935
+     },
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 189,
+      "h_dp": 72.0,
+      "y0_px": 1325
+     }
+    ],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [
+     {
+      "x0_dp": 20.6,
+      "y0_dp": 819.4,
+      "w_dp": 56.0,
+      "h_dp": 32.0,
+      "fill_px": 8688,
+      "white_text_px": 1392,
+      "primary_text_px": 642,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.113,
+      "corner_void_px": 389,
+      "top_row_inset_px": 41
+     }
+    ],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1156,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 159419,
+     "soft": 736590,
+     "bg": 1023258,
+     "white": 589322,
+     "outline": 0,
+     "muted": 8535,
+     "ink": 17004
+    }
+   },
+   "02-visits.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after-supplementary\\02-visits.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "9755008B2F787E51A0920031230C4F682BED70D50AF62CC0C359AEE4165B1EC2",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 276,
+     "rows": 800
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 189,
+      "h_dp": 72.0,
+      "y0_px": 893
+     }
+    ],
+    "tags_selected": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 219.0,
+      "w_dp": 64.0,
+      "h_dp": 48.4,
+      "fill_px": 18476,
+      "white_text_px": 938,
+      "primary_text_px": 18606,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.044,
+      "corner_void_px": 246,
+      "top_row_inset_px": 31
+     },
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 279.6,
+      "w_dp": 64.0,
+      "h_dp": 48.4,
+      "fill_px": 18423,
+      "white_text_px": 882,
+      "primary_text_px": 18623,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.041,
+      "corner_void_px": 246,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tags_unselected": [
+     {
+      "x0_dp": 96.0,
+      "y0_dp": 219.0,
+      "w_dp": 64.0,
+      "h_dp": 48.4,
+      "border_px": 1398,
+      "white_fill_px": 17274,
+      "white_ratio_of_bbox": 0.81,
+      "muted_text_px": 878,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     },
+     {
+      "x0_dp": 96.0,
+      "y0_dp": 279.6,
+      "w_dp": 80.0,
+      "h_dp": 48.4,
+      "border_px": 1650,
+      "white_fill_px": 21454,
+      "white_ratio_of_bbox": 0.804,
+      "muted_text_px": 1218,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     },
+     {
+      "x0_dp": 184.0,
+      "y0_dp": 279.6,
+      "w_dp": 80.0,
+      "h_dp": 48.4,
+      "border_px": 1650,
+      "white_fill_px": 21430,
+      "white_ratio_of_bbox": 0.804,
+      "muted_text_px": 1338,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     },
+     {
+      "x0_dp": 272.0,
+      "y0_dp": 279.6,
+      "w_dp": 80.0,
+      "h_dp": 48.4,
+      "border_px": 1650,
+      "white_fill_px": 21434,
+      "white_ratio_of_bbox": 0.804,
+      "muted_text_px": 1299,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tag_candidates_soft_old": [
+     {
+      "x0_dp": 125.3,
+      "y0_dp": 819.4,
+      "w_dp": 56.0,
+      "h_dp": 32.0,
+      "fill_px": 8397,
+      "white_text_px": 1392,
+      "primary_text_px": 808,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.113,
+      "corner_void_px": 389,
+      "top_row_inset_px": 41
+     }
+    ],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 406,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 160590,
+     "soft": 20732,
+     "bg": 1840539,
+     "white": 518188,
+     "outline": 6348,
+     "muted": 11288,
+     "ink": 5487
+    }
+   },
+   "03-records-hub.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after-supplementary\\03-records-hub.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "88F35E2F5CFD90019D250394E0AEE974E76DD28176E5EE4B66018B138CF89D86",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 570,
+     "rows": 1354
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 189,
+      "h_dp": 72.0,
+      "y0_px": 406
+     },
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 189,
+      "h_dp": 72.0,
+      "y0_px": 627
+     },
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 189,
+      "h_dp": 72.0,
+      "y0_px": 848
+     },
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 189,
+      "h_dp": 72.0,
+      "y0_px": 1069
+     },
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 189,
+      "h_dp": 72.0,
+      "y0_px": 1290
+     },
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 189,
+      "h_dp": 72.0,
+      "y0_px": 1511
+     }
+    ],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [
+     {
+      "x0_dp": 230.1,
+      "y0_dp": 819.4,
+      "w_dp": 56.0,
+      "h_dp": 32.0,
+      "fill_px": 8681,
+      "white_text_px": 1392,
+      "primary_text_px": 610,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.113,
+      "corner_void_px": 389,
+      "top_row_inset_px": 41
+     }
+    ],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 5497,
+     "soft": 78143,
+     "bg": 1219183,
+     "white": 1220540,
+     "outline": 0,
+     "muted": 12888,
+     "ink": 11505
+    }
+   },
+   "04-profiles.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after-supplementary\\04-profiles.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "6862AA672EE46E51744CC11D5C142BFCC5E02BB4F3A36CE21A07DB7886803158",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 760,
+     "rows": 1717
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 189,
+      "h_dp": 72.0,
+      "y0_px": 406
+     },
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 189,
+      "h_dp": 72.0,
+      "y0_px": 627
+     },
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 189,
+      "h_dp": 72.0,
+      "y0_px": 848
+     },
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 189,
+      "h_dp": 72.0,
+      "y0_px": 1069
+     },
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 189,
+      "h_dp": 72.0,
+      "y0_px": 1290
+     },
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 189,
+      "h_dp": 72.0,
+      "y0_px": 1511
+     },
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 189,
+      "h_dp": 72.0,
+      "y0_px": 1732
+     },
+     {
+      "x0_px": 0,
+      "x0_dp": 0.0,
+      "w_px": 1080,
+      "w_dp": 411.43,
+      "h_px": 447,
+      "h_dp": 170.29,
+      "y0_px": 1953
+     }
+    ],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [
+     {
+      "x0_dp": 334.9,
+      "y0_dp": 819.4,
+      "w_dp": 56.0,
+      "h_dp": 32.0,
+      "fill_px": 9736,
+      "white_text_px": 1392,
+      "primary_text_px": 449,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.113,
+      "corner_void_px": 389,
+      "top_row_inset_px": 41
+     }
+    ],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 6599,
+     "soft": 101278,
+     "bg": 876034,
+     "white": 1512253,
+     "outline": 0,
+     "muted": 18500,
+     "ink": 14656
+    }
+   },
+   "05-medications.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after-supplementary\\05-medications.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "7F2AB9087B0B5B7A15DDB6E7FE720068A654030A37BD74F8FE6A8E5BF51AF3DE",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 1068,
+     "rows": 1460
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 1122,
+      "h_dp": 427.43,
+      "y0_px": 759
+     }
+    ],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 421,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 590,
+       "color": "#E7F0E6",
+       "max_row_count": 948
+      }
+     ],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 131811,
+     "soft": 122932,
+     "bg": 1242936,
+     "white": 1012881,
+     "outline": 0,
+     "muted": 0,
+     "ink": 32805
+    }
+   },
+   "06-intakes.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after-supplementary\\06-intakes.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "2B3DFDDEE47F7BDED89EB53EB534571060585A5FE0B73A9DAB06147875E2904D",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 235,
+     "rows": 591
+    },
+    "white_cards": [],
+    "tags_selected": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 112.8,
+      "w_dp": 96.0,
+      "h_dp": 48.4,
+      "fill_px": 27482,
+      "white_text_px": 1805,
+      "primary_text_px": 27927,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.056,
+      "corner_void_px": 242,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tags_unselected": [
+     {
+      "x0_dp": 128.0,
+      "y0_dp": 112.8,
+      "w_dp": 96.0,
+      "h_dp": 48.4,
+      "border_px": 1902,
+      "white_fill_px": 25802,
+      "white_ratio_of_bbox": 0.806,
+      "muted_text_px": 1809,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 580,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 749
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 154811,
+     "soft": 0,
+     "bg": 2345597,
+     "white": 29363,
+     "outline": 8380,
+     "muted": 3737,
+     "ink": 17623
+    }
+   },
+   "07-measurements.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after-supplementary\\07-measurements.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "A28E164364653F20CBAA471471019C49621F236B8B505CB38E623E492B10100E",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 252,
+     "rows": 543
+    },
+    "white_cards": [],
+    "tags_selected": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 177.1,
+      "w_dp": 96.0,
+      "h_dp": 48.4,
+      "fill_px": 27445,
+      "white_text_px": 1830,
+      "primary_text_px": 27701,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.057,
+      "corner_void_px": 242,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tags_unselected": [
+     {
+      "x0_dp": 128.0,
+      "y0_dp": 177.1,
+      "w_dp": 96.0,
+      "h_dp": 48.4,
+      "border_px": 1902,
+      "white_fill_px": 25617,
+      "white_ratio_of_bbox": 0.8,
+      "muted_text_px": 1849,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 296,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 160981,
+     "soft": 211697,
+     "bg": 2164063,
+     "white": 29257,
+     "outline": 1902,
+     "muted": 1849,
+     "ink": 3538
+    }
+   },
+   "08-visit-documents.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after-supplementary\\08-visit-documents.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "5C433BCC2C7968DDCE60C6A82BC815CD7ABD4BD76881D8378D87595004D87E23",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 1479,
+     "rows": 1792
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 1297,
+      "h_dp": 494.1,
+      "y0_px": 1040
+     }
+    ],
+    "tags_selected": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 112.8,
+      "w_dp": 96.0,
+      "h_dp": 48.4,
+      "fill_px": 27640,
+      "white_text_px": 1641,
+      "primary_text_px": 27935,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.051,
+      "corner_void_px": 242,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tags_unselected": [
+     {
+      "x0_dp": 132.2,
+      "y0_dp": 112.8,
+      "w_dp": 121.1,
+      "h_dp": 48.4,
+      "border_px": 2298,
+      "white_fill_px": 33613,
+      "white_ratio_of_bbox": 0.832,
+      "muted_text_px": 1902,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 714
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 32808,
+     "soft": 0,
+     "bg": 1234428,
+     "white": 1230899,
+     "outline": 18066,
+     "muted": 18439,
+     "ink": 11982
+    }
+   },
+   "09-recovery.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\after-supplementary\\09-recovery.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "7CC605CD60B48AC2D168A26CC936DEA73BFE85235DDB705CB2C0F45BB6993CB9",
+    "page_margin": {
+     "x0_px": 66,
+     "x0_dp": 25.14,
+     "votes": 78,
+     "rows": 545
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 829,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 124194,
+     "soft": 0,
+     "bg": 2355858,
+     "white": 2823,
+     "outline": 1908,
+     "muted": 0,
+     "ink": 49572
+    }
+   }
+  },
+  "navigation": {
+   "b04-empty.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\navigation\\b04-empty.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "E21F2DD4B36D8DC6F4D927B5A7FA025DB116E46463FA7982756CFE9488B04363",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 321,
+     "rows": 577
+    },
+    "white_cards": [],
+    "tags_selected": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 112.8,
+      "w_dp": 96.0,
+      "h_dp": 48.4,
+      "fill_px": 27640,
+      "white_text_px": 1641,
+      "primary_text_px": 27935,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.051,
+      "corner_void_px": 242,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tags_unselected": [
+     {
+      "x0_dp": 132.2,
+      "y0_dp": 112.8,
+      "w_dp": 121.1,
+      "h_dp": 48.4,
+      "border_px": 2298,
+      "white_fill_px": 33613,
+      "white_ratio_of_bbox": 0.832,
+      "muted_text_px": 1902,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 39085,
+     "soft": 278969,
+     "bg": 2194988,
+     "white": 35254,
+     "outline": 7944,
+     "muted": 8472,
+     "ink": 2639
+    }
+   },
+   "b05-cover.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\navigation\\b05-cover.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "3EEB1ED109C90D61C14243381C71E12FFB9745ECF73FBF0ABE138C9A7F6AC591",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 1479,
+     "rows": 1792
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 1297,
+      "h_dp": 494.1,
+      "y0_px": 1040
+     }
+    ],
+    "tags_selected": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 112.8,
+      "w_dp": 96.0,
+      "h_dp": 48.4,
+      "fill_px": 27640,
+      "white_text_px": 1641,
+      "primary_text_px": 27935,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.051,
+      "corner_void_px": 242,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tags_unselected": [
+     {
+      "x0_dp": 132.2,
+      "y0_dp": 112.8,
+      "w_dp": 121.1,
+      "h_dp": 48.4,
+      "border_px": 2298,
+      "white_fill_px": 33613,
+      "white_ratio_of_bbox": 0.832,
+      "muted_text_px": 1902,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 714
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 42775,
+     "soft": 0,
+     "bg": 1234428,
+     "white": 1204968,
+     "outline": 18066,
+     "muted": 18439,
+     "ink": 8164
+    }
+   },
+   "b05-pdf.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\navigation\\b05-pdf.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "5E8254797F6A979B403F2FF054A1A9023BCEFAA9EB65F7ECF7299E104418343B",
+    "page_margin": {
+     "x0_px": 0,
+     "x0_dp": 0.0,
+     "votes": 1785,
+     "rows": 1863
+    },
+    "white_cards": [
+     {
+      "x0_px": 0,
+      "x0_dp": 0.0,
+      "w_px": 1080,
+      "w_dp": 411.43,
+      "h_px": 1831,
+      "h_dp": 697.52,
+      "y0_px": 254
+     }
+    ],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 7373,
+     "soft": 0,
+     "bg": 580093,
+     "white": 1948754,
+     "outline": 0,
+     "muted": 0,
+     "ink": 2681
+    }
+   },
+   "b05-retained-relink.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\navigation\\b05-retained-relink.png",
+    "size": [
+     840,
+     698
+    ],
+    "sha256": "48E5A58CD6D08D0FD5AC68B63EB39FE336B32003DF313461576D786AFDF46933",
+    "page_margin": {
+     "x0_px": 0,
+     "x0_dp": 0.0,
+     "votes": 318,
+     "rows": 318
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 4196,
+     "soft": 0,
+     "bg": 0,
+     "white": 548667,
+     "outline": 0,
+     "muted": 6671,
+     "ink": 5928
+    }
+   },
+   "b05-zoom.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\navigation\\b05-zoom.png",
+    "size": [
+     1080,
+     1957
+    ],
+    "sha256": "71FD263901585E9976C56DC70B737BA4B270F0A7E4E8059B98A50E67854F2C82",
+    "page_margin": {
+     "x0_px": 0,
+     "x0_dp": 0.0,
+     "votes": 1557,
+     "rows": 1577
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 0,
+     "soft": 0,
+     "bg": 0,
+     "white": 1911338,
+     "outline": 0,
+     "muted": 0,
+     "ink": 0
+    }
+   },
+   "b06-delete-scope.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\navigation\\b06-delete-scope.png",
+    "size": [
+     840,
+     817
+    ],
+    "sha256": "2006FFFF653E6A243F3CF26D1F422AD43D3316FD1540E7D3879B1825402BCD5D",
+    "page_margin": {
+     "x0_px": 0,
+     "x0_dp": 0.0,
+     "votes": 437,
+     "rows": 437
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 4009,
+     "soft": 0,
+     "bg": 0,
+     "white": 614460,
+     "outline": 0,
+     "muted": 21547,
+     "ink": 5567
+    }
+   },
+   "b06-global-trash.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\navigation\\b06-global-trash.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "F5F1C65557EFD6BEEECE7B10A62BED4D53962E4D3AF0D2EA274F68DD5F88EB92",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 492,
+     "rows": 696
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 507,
+      "h_dp": 193.14,
+      "y0_px": 580
+     }
+    ],
+    "tags_selected": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 112.8,
+      "w_dp": 153.1,
+      "h_dp": 48.4,
+      "fill_px": 44250,
+      "white_text_px": 2774,
+      "primary_text_px": 45044,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.054,
+      "corner_void_px": 242,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tags_unselected": [
+     {
+      "x0_dp": 185.1,
+      "y0_dp": 112.8,
+      "w_dp": 153.1,
+      "h_dp": 48.4,
+      "border_px": 2802,
+      "white_fill_px": 42016,
+      "white_ratio_of_bbox": 0.823,
+      "muted_text_px": 2760,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 46099,
+     "soft": 0,
+     "bg": 1983088,
+     "white": 498691,
+     "outline": 2802,
+     "muted": 2760,
+     "ink": 20426
+    }
+   },
+   "c01-history.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\navigation\\c01-history.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "529CCD3FDE6C92A5D45DDB104E8307E75BAE79184EBFD73BF6AE7B4C184AFCCB",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 1162,
+     "rows": 1464
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 675,
+      "h_dp": 257.14,
+      "y0_px": 528
+     },
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 675,
+      "h_dp": 257.14,
+      "y0_px": 1235
+     }
+    ],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 158,
+     "soft": 0,
+     "bg": 1268264,
+     "white": 1216474,
+     "outline": 0,
+     "muted": 0,
+     "ink": 53227
+    }
+   },
+   "c01left-delete-scope.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\navigation\\c01left-delete-scope.png",
+    "size": [
+     840,
+     817
+    ],
+    "sha256": "4FFC99EF938EA0FF205A7B5C6D8559439625147D7DC48ED013B1A567365F5DFD",
+    "page_margin": {
+     "x0_px": 0,
+     "x0_dp": 0.0,
+     "votes": 437,
+     "rows": 437
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 4009,
+     "soft": 0,
+     "bg": 0,
+     "white": 612559,
+     "outline": 0,
+     "muted": 22647,
+     "ink": 5444
+    }
+   },
+   "c01left-history.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\navigation\\c01left-history.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "EBE2EB20BCF8729842BBEDFDA52A5293E6B44821CFC59510C1C671A6515EEEDE",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 676,
+     "rows": 884
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 770,
+      "h_dp": 293.33,
+      "y0_px": 528
+     }
+    ],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 158,
+     "soft": 0,
+     "bg": 1815413,
+     "white": 698831,
+     "outline": 0,
+     "muted": 0,
+     "ink": 39268
+    }
+   },
+   "c01left-photos.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\navigation\\c01left-photos.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "320C9A98C063FE1838D3F772E2D6D4A5E2DA664520BDF14DFFF91F5995BE92A4",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 1464,
+     "rows": 1792
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 1297,
+      "h_dp": 494.1,
+      "y0_px": 1040
+     }
+    ],
+    "tags_selected": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 112.8,
+      "w_dp": 96.0,
+      "h_dp": 48.4,
+      "fill_px": 27358,
+      "white_text_px": 1866,
+      "primary_text_px": 27751,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.058,
+      "corner_void_px": 242,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tags_unselected": [
+     {
+      "x0_dp": 132.2,
+      "y0_dp": 112.8,
+      "w_dp": 121.1,
+      "h_dp": 48.4,
+      "border_px": 2298,
+      "white_fill_px": 33613,
+      "white_ratio_of_bbox": 0.832,
+      "muted_text_px": 1902,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 714
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 38110,
+     "soft": 0,
+     "bg": 1239858,
+     "white": 1229573,
+     "outline": 16312,
+     "muted": 15321,
+     "ink": 10588
+    }
+   },
+   "c01left-trash.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\navigation\\c01left-trash.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "0609EA906F36F244F844F07F307DD31DD52A1372BE44DE3DE1BCDD50420C6E96",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 521,
+     "rows": 725
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 536,
+      "h_dp": 204.19,
+      "y0_px": 580
+     }
+    ],
+    "tags_selected": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 112.8,
+      "w_dp": 153.1,
+      "h_dp": 48.4,
+      "fill_px": 44250,
+      "white_text_px": 2774,
+      "primary_text_px": 45044,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.054,
+      "corner_void_px": 242,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tags_unselected": [
+     {
+      "x0_dp": 185.1,
+      "y0_dp": 112.8,
+      "w_dp": 153.1,
+      "h_dp": 48.4,
+      "border_px": 2802,
+      "white_fill_px": 42016,
+      "white_ratio_of_bbox": 0.823,
+      "muted_text_px": 2760,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 46099,
+     "soft": 0,
+     "bg": 1955422,
+     "white": 524643,
+     "outline": 2802,
+     "muted": 4734,
+     "ink": 21331
+    }
+   },
+   "c02-history.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\navigation\\c02-history.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "E28C4D3CF4285CDE63142F5EB2B7AAB3EABB04AEC86D163B535DA924D8027841",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 1333,
+     "rows": 1854
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 756,
+      "h_dp": 288.0,
+      "y0_px": 749
+     },
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 608,
+      "h_dp": 231.62,
+      "y0_px": 1537
+     }
+    ],
+    "tags_selected": [
+     {
+      "x0_dp": 128.0,
+      "y0_dp": 112.8,
+      "w_dp": 96.0,
+      "h_dp": 48.4,
+      "fill_px": 27475,
+      "white_text_px": 1809,
+      "primary_text_px": 27868,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.057,
+      "corner_void_px": 242,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tags_unselected": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 112.8,
+      "w_dp": 96.0,
+      "h_dp": 48.4,
+      "border_px": 1902,
+      "white_fill_px": 25861,
+      "white_ratio_of_bbox": 0.808,
+      "muted_text_px": 1805,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 580,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [
+      {
+       "h_px": 126,
+       "h_dp": 48.0,
+       "w_px": 952,
+       "w_dp": 362.67,
+       "x0_px": 64,
+       "x0_dp": 24.38,
+       "y0_px": 2147,
+       "color": "#223C32",
+       "max_row_count": 952
+      }
+     ],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 157132,
+     "soft": 0,
+     "bg": 889451,
+     "white": 1268670,
+     "outline": 1902,
+     "muted": 1805,
+     "ink": 154695
+    }
+   },
+   "c02-home.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\navigation\\c02-home.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "218385881B758E966B3F7056EBEBB458B410DAD14EB978BB2C62985CBA1E8BA9",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 866,
+     "rows": 1727
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 189,
+      "h_dp": 72.0,
+      "y0_px": 935
+     },
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 189,
+      "h_dp": 72.0,
+      "y0_px": 1325
+     }
+    ],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [
+     {
+      "x0_dp": 20.6,
+      "y0_dp": 819.4,
+      "w_dp": 56.0,
+      "h_dp": 32.0,
+      "fill_px": 8698,
+      "white_text_px": 1392,
+      "primary_text_px": 705,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.113,
+      "corner_void_px": 389,
+      "top_row_inset_px": 41
+     }
+    ],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1156,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [
+      {
+       "h_px": 126,
+       "h_dp": 48.0,
+       "w_px": 952,
+       "w_dp": 362.67,
+       "x0_px": 64,
+       "x0_dp": 24.38,
+       "y0_px": 1937,
+       "color": "#223C32",
+       "max_row_count": 952
+      }
+     ],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 161104,
+     "soft": 710812,
+     "bg": 874050,
+     "white": 590631,
+     "outline": 0,
+     "muted": 9006,
+     "ink": 134812
+    }
+   },
+   "c03-measurement.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\navigation\\c03-measurement.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "D61D9C6B192665FE95669BF7A46FF061B6443FC3AF777397DAFF5D8FA3225C95",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 515,
+     "rows": 808
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 507,
+      "h_dp": 193.14,
+      "y0_px": 750
+     }
+    ],
+    "tags_selected": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 177.1,
+      "w_dp": 96.0,
+      "h_dp": 48.4,
+      "fill_px": 27445,
+      "white_text_px": 1830,
+      "primary_text_px": 27701,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.057,
+      "corner_void_px": 242,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tags_unselected": [
+     {
+      "x0_dp": 128.0,
+      "y0_dp": 177.1,
+      "w_dp": 96.0,
+      "h_dp": 48.4,
+      "border_px": 1902,
+      "white_fill_px": 25617,
+      "white_ratio_of_bbox": 0.8,
+      "muted_text_px": 1849,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 296,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 155848,
+     "soft": 0,
+     "bg": 1911253,
+     "white": 493008,
+     "outline": 1902,
+     "muted": 1849,
+     "ink": 9920
+    }
+   },
+   "c04-journal.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\navigation\\c04-journal.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "CADEA203910C9552036FD0A4BB4287E7203DE36D13E8EF238BB1533FCD6916E5",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 847,
+     "rows": 1170
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 659,
+      "h_dp": 251.05,
+      "y0_px": 1013
+     }
+    ],
+    "tags_selected": [
+     {
+      "x0_dp": 323.4,
+      "y0_dp": 173.0,
+      "w_dp": 64.0,
+      "h_dp": 48.4,
+      "fill_px": 18400,
+      "white_text_px": 907,
+      "primary_text_px": 18822,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.043,
+      "corner_void_px": 242,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tags_unselected": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 173.0,
+      "w_dp": 43.4,
+      "h_dp": 48.4,
+      "border_px": 879,
+      "white_fill_px": 11564,
+      "white_ratio_of_bbox": 0.799,
+      "muted_text_px": 736,
+      "corner_void_px": 928,
+      "top_row_inset_px": 0
+     },
+     {
+      "x0_dp": 75.4,
+      "y0_dp": 173.0,
+      "w_dp": 96.0,
+      "h_dp": 48.4,
+      "border_px": 1902,
+      "white_fill_px": 25615,
+      "white_ratio_of_bbox": 0.8,
+      "muted_text_px": 1848,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     },
+     {
+      "x0_dp": 179.4,
+      "y0_dp": 173.0,
+      "w_dp": 64.0,
+      "h_dp": 48.4,
+      "border_px": 1398,
+      "white_fill_px": 16967,
+      "white_ratio_of_bbox": 0.795,
+      "muted_text_px": 989,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     },
+     {
+      "x0_dp": 251.4,
+      "y0_dp": 173.0,
+      "w_dp": 64.0,
+      "h_dp": 48.4,
+      "border_px": 1398,
+      "white_fill_px": 16725,
+      "white_ratio_of_bbox": 0.784,
+      "muted_text_px": 1136,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 296,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 626
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 145335,
+     "soft": 0,
+     "bg": 1693381,
+     "white": 680600,
+     "outline": 12055,
+     "muted": 7332,
+     "ink": 18815
+    }
+   },
+   "c04-timeline.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\navigation\\c04-timeline.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "976E94B26B4119F97550943FD203DD4CBB0C0E196E3ABBD347C9D7689B5FBDAF",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 847,
+     "rows": 1170
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 659,
+      "h_dp": 251.05,
+      "y0_px": 1013
+     }
+    ],
+    "tags_selected": [
+     {
+      "x0_dp": 75.4,
+      "y0_dp": 173.0,
+      "w_dp": 64.0,
+      "h_dp": 48.4,
+      "fill_px": 18482,
+      "white_text_px": 838,
+      "primary_text_px": 18695,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.039,
+      "corner_void_px": 242,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tags_unselected": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 173.0,
+      "w_dp": 43.4,
+      "h_dp": 48.4,
+      "border_px": 879,
+      "white_fill_px": 11817,
+      "white_ratio_of_bbox": 0.816,
+      "muted_text_px": 625,
+      "corner_void_px": 928,
+      "top_row_inset_px": 0
+     },
+     {
+      "x0_dp": 147.4,
+      "y0_dp": 173.0,
+      "w_dp": 96.0,
+      "h_dp": 48.4,
+      "border_px": 1902,
+      "white_fill_px": 25615,
+      "white_ratio_of_bbox": 0.8,
+      "muted_text_px": 1848,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     },
+     {
+      "x0_dp": 251.4,
+      "y0_dp": 173.0,
+      "w_dp": 64.0,
+      "h_dp": 48.4,
+      "border_px": 1398,
+      "white_fill_px": 16967,
+      "white_ratio_of_bbox": 0.795,
+      "muted_text_px": 989,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     },
+     {
+      "x0_dp": 323.4,
+      "y0_dp": 173.0,
+      "w_dp": 64.0,
+      "h_dp": 48.4,
+      "border_px": 1398,
+      "white_fill_px": 16725,
+      "white_ratio_of_bbox": 0.784,
+      "muted_text_px": 1136,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     }
+    ],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 296,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 626
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 145139,
+     "soft": 0,
+     "bg": 1691830,
+     "white": 670234,
+     "outline": 12055,
+     "muted": 7221,
+     "ink": 25281
+    }
+   },
+   "c05-reminder-settings.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\navigation\\c05-reminder-settings.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "01C231B855DA9064E275D92D468D359E8473FD7B27A0DB39525722D3D7B64F8B",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 1474,
+     "rows": 1867
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 412,
+      "h_dp": 156.95,
+      "y0_px": 421
+     },
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 537,
+      "h_dp": 204.57,
+      "y0_px": 865
+     },
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 758,
+      "h_dp": 288.76,
+      "y0_px": 1434
+     }
+    ],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 15135,
+     "soft": 0,
+     "bg": 834816,
+     "white": 1617149,
+     "outline": 0,
+     "muted": 10721,
+     "ink": 41146
+    }
+   },
+   "c05-visit-reminder.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\navigation\\c05-visit-reminder.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "AA963842ACAD0EC80F11E75C83AFACE2F4987CDEBD06107A8A664D98D1060401",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 865,
+     "rows": 1573
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 537,
+      "h_dp": 204.57,
+      "y0_px": 785
+     }
+    ],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1894,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1556,
+       "color": "#E7F0E6",
+       "max_row_count": 948
+      },
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1725,
+       "color": "#E7F0E6",
+       "max_row_count": 948
+      }
+     ],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 140265,
+     "soft": 659736,
+     "bg": 1237626,
+     "white": 478913,
+     "outline": 0,
+     "muted": 8757,
+     "ink": 14835
+    }
+   },
+   "d01-cloud-connection.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-consistency-fix\\navigation\\d01-cloud-connection.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "F59DFE78037EC36439F1F561E47906650909AFDCA2CA43F864C0A96DD2B7A321",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 558,
+     "rows": 1131
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 685
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 898
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1111
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1383
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 59131,
+     "soft": 0,
+     "bg": 2331624,
+     "white": 1876,
+     "outline": 27388,
+     "muted": 12484,
+     "ink": 37644
+    }
+   }
+  },
+  "theme-fix": {
+   "cloud-connection-backup.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-theme-fix\\after\\cloud-connection-backup.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "11267631D88554C87F8684300396E95E096D8AC6728B0B4C284A04F4F9F86715",
+    "page_margin": {
+     "x0_px": 59,
+     "x0_dp": 22.48,
+     "votes": 124,
+     "rows": 911
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 1798,
+       "color": "#356B53",
+       "max_row_count": 968
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 190954,
+     "soft": 0,
+     "bg": 2200954,
+     "white": 7442,
+     "outline": 5844,
+     "muted": 3188,
+     "ink": 51755
+    }
+   },
+   "cloud-connection-cleanup.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-theme-fix\\after\\cloud-connection-cleanup.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "F9E3385152116CBD8B73883DD89271FD1A3F930C58115AC8784727F0C348F1FA",
+    "page_margin": {
+     "x0_px": 59,
+     "x0_dp": 22.48,
+     "votes": 98,
+     "rows": 843
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 713,
+       "color": "#356B53",
+       "max_row_count": 968
+      },
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 2065,
+       "color": "#356B53",
+       "max_row_count": 968
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 264019,
+     "soft": 0,
+     "bg": 2183891,
+     "white": 10469,
+     "outline": 5844,
+     "muted": 0,
+     "ink": 53785
+    }
+   },
+   "cloud-connection.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-theme-fix\\after\\cloud-connection.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "6E7B48F9531F72C19558816A3BBC23BF3236DED87898BC7567F4BC953E1A171F",
+    "page_margin": {
+     "x0_px": 53,
+     "x0_dp": 20.19,
+     "votes": 558,
+     "rows": 1168
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 675
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 888
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 1101
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 1373
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 59426,
+     "soft": 0,
+     "bg": 2317474,
+     "white": 1876,
+     "outline": 26765,
+     "muted": 10438,
+     "ink": 46384
+    }
+   },
+   "custom-reminder-editor.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-theme-fix\\after\\custom-reminder-editor.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "F94AB93C9AD4E4458338794C3F63663BE539F034FCAF1A9250CA65BE86AE2ED1",
+    "page_margin": {
+     "x0_px": 0,
+     "x0_dp": 0.0,
+     "votes": 2020,
+     "rows": 2020
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [
+      {
+       "h_px": 136,
+       "h_dp": 51.81,
+       "w_px": 1000,
+       "w_dp": 380.95,
+       "x0_px": 40,
+       "x0_dp": 15.24,
+       "y0_px": 160,
+       "color": "#636361",
+       "max_row_count": 1000
+      },
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 768,
+       "w_dp": 292.57,
+       "x0_px": 156,
+       "x0_dp": 59.43,
+       "y0_px": 2200,
+       "color": "#585D58",
+       "max_row_count": 768
+      }
+     ],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 9825,
+     "soft": 0,
+     "bg": 0,
+     "white": 1057030,
+     "outline": 10076,
+     "muted": 5529,
+     "ink": 4255
+    }
+   },
+   "drug-catalog.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-theme-fix\\after\\drug-catalog.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "C99306FC3D31184AC0108108FC8A78C5E0E682E1B4A6A8E2C29182AD6CE78064",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 437,
+     "rows": 704
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 507,
+      "h_dp": 193.14,
+      "y0_px": 590
+     }
+    ],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 296,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 128039,
+     "soft": 0,
+     "bg": 1962764,
+     "white": 453600,
+     "outline": 0,
+     "muted": 0,
+     "ink": 20573
+    }
+   },
+   "drug-editor.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-theme-fix\\after\\drug-editor.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "003A49255665A62C9FA215B7B64FFE8E5AF11C3068E822BF6722509EF48D91FD",
+    "page_margin": {
+     "x0_px": 53,
+     "x0_dp": 20.19,
+     "votes": 422,
+     "rows": 706
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 1030,
+       "color": "#356B53",
+       "max_row_count": 968
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 445
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 648
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 851
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 126049,
+     "soft": 0,
+     "bg": 2398821,
+     "white": 1890,
+     "outline": 19794,
+     "muted": 4599,
+     "ink": 13739
+    }
+   },
+   "export-screen-disabled.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-theme-fix\\after\\export-screen-disabled.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "1CDB4904432AF65A0E3756336C516A0963FD1024EF0ACB6AB8DC933CFF7142DD",
+    "page_margin": {
+     "x0_px": 57,
+     "x0_dp": 21.71,
+     "votes": 96,
+     "rows": 558
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [
+      {
+       "h_px": 105,
+       "h_dp": 40.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 2232,
+       "color": "#E1E5DF",
+       "max_row_count": 966
+      }
+     ],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 26612,
+     "soft": 0,
+     "bg": 2412969,
+     "white": 2247,
+     "outline": 1948,
+     "muted": 920,
+     "ink": 20961
+    }
+   },
+   "export-screen.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-theme-fix\\after\\export-screen.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "04AC72B3DA603F11B8B58DCEB98DFA8DA6DD1B70DA2F51C81FC15510859850FB",
+    "page_margin": {
+     "x0_px": 53,
+     "x0_dp": 20.19,
+     "votes": 140,
+     "rows": 663
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 21692,
+     "soft": 0,
+     "bg": 2461960,
+     "white": 4471,
+     "outline": 20952,
+     "muted": 4535,
+     "ink": 35184
+    }
+   },
+   "journal-entry-editor.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-theme-fix\\after\\journal-entry-editor.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "75AB6167130687AFBB8454ABD4BFEF23D77CCD4AA5785FAB9A5F2A6EAA34807D",
+    "page_margin": {
+     "x0_px": 53,
+     "x0_dp": 20.19,
+     "votes": 940,
+     "rows": 1232
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 1693,
+       "color": "#356B53",
+       "max_row_count": 968
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 373
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 576
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 856
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 1059
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 125417,
+     "soft": 0,
+     "bg": 2373919,
+     "white": 2698,
+     "outline": 32462,
+     "muted": 8018,
+     "ink": 16400
+    }
+   },
+   "local-backup.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-theme-fix\\after\\local-backup.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "F728B5E25E78FDCE589C884A80E51F0DF790B13660B1908AB0689D5543359A26",
+    "page_margin": {
+     "x0_px": 60,
+     "x0_dp": 22.86,
+     "votes": 100,
+     "rows": 649
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 105,
+       "h_dp": 40.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 893,
+       "color": "#356B53",
+       "max_row_count": 966
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 105,
+       "h_dp": 40.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 1061
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 97640,
+     "soft": 0,
+     "bg": 2372528,
+     "white": 2887,
+     "outline": 7850,
+     "muted": 3051,
+     "ink": 48260
+    }
+   },
+   "measurement-editor.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-theme-fix\\after\\measurement-editor.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "032CB546EF4CB9D596381036C862F3DF58ED3D9661EA4E6DF016FC8FC905BD69",
+    "page_margin": {
+     "x0_px": 53,
+     "x0_dp": 20.19,
+     "votes": 831,
+     "rows": 1195
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 1725,
+       "color": "#356B53",
+       "max_row_count": 968
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 555
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 734
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 937
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 1217
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 126597,
+     "soft": 0,
+     "bg": 2384699,
+     "white": 1871,
+     "outline": 33858,
+     "muted": 8526,
+     "ink": 9681
+    }
+   },
+   "pregnancy-editor.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-theme-fix\\after\\pregnancy-editor.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "D804B306A7703F4D14D7D8D0F892968502D55948C84EF1AAAF775E2F85D28F09",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 983,
+     "rows": 1452
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 2118,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 397
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 683
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 988
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1736
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1939
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 133065,
+     "soft": 337578,
+     "bg": 2004606,
+     "white": 1938,
+     "outline": 31154,
+     "muted": 21622,
+     "ink": 14072
+    }
+   },
+   "reminder-settings-custom.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-theme-fix\\after\\reminder-settings-custom.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "92B5880770B930B862D5E3E5A0C28FC4577B9380FAD035E1CB4579B4CEDA7813",
+    "page_margin": {
+     "x0_px": 74,
+     "x0_dp": 28.19,
+     "votes": 1642,
+     "rows": 1924
+    },
+    "white_cards": [
+     {
+      "x0_px": 74,
+      "x0_dp": 28.19,
+      "w_px": 932,
+      "w_dp": 355.05,
+      "h_px": 509,
+      "h_dp": 193.9,
+      "y0_px": 296
+     },
+     {
+      "x0_px": 74,
+      "x0_dp": 28.19,
+      "w_px": 932,
+      "w_dp": 355.05,
+      "h_px": 648,
+      "h_dp": 246.86,
+      "y0_px": 837
+     },
+     {
+      "x0_px": 74,
+      "x0_dp": 28.19,
+      "w_px": 932,
+      "w_dp": 355.05,
+      "h_px": 671,
+      "h_dp": 255.62,
+      "y0_px": 1517
+     }
+    ],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 826,
+       "w_dp": 314.67,
+       "x0_px": 127,
+       "x0_dp": 48.38,
+       "y0_px": 1743,
+       "color": "#E7F0E6",
+       "max_row_count": 820
+      }
+     ],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 21995,
+     "soft": 104961,
+     "bg": 779921,
+     "white": 1588283,
+     "outline": 0,
+     "muted": 14174,
+     "ink": 25535
+    }
+   },
+   "reminder-settings.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-theme-fix\\after\\reminder-settings.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "28B7551656643C4BA7972A6F5CF04667FFC99770BB4B41334F1BD020A322242F",
+    "page_margin": {
+     "x0_px": 74,
+     "x0_dp": 28.19,
+     "votes": 1474,
+     "rows": 1867
+    },
+    "white_cards": [
+     {
+      "x0_px": 74,
+      "x0_dp": 28.19,
+      "w_px": 932,
+      "w_dp": 355.05,
+      "h_px": 412,
+      "h_dp": 156.95,
+      "y0_px": 421
+     },
+     {
+      "x0_px": 74,
+      "x0_dp": 28.19,
+      "w_px": 932,
+      "w_dp": 355.05,
+      "h_px": 537,
+      "h_dp": 204.57,
+      "y0_px": 865
+     },
+     {
+      "x0_px": 74,
+      "x0_dp": 28.19,
+      "w_px": 932,
+      "w_dp": 355.05,
+      "h_px": 758,
+      "h_dp": 288.76,
+      "y0_px": 1434
+     }
+    ],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 15135,
+     "soft": 0,
+     "bg": 874856,
+     "white": 1577109,
+     "outline": 0,
+     "muted": 10721,
+     "ink": 41146
+    }
+   },
+   "restore-wizard-key.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-theme-fix\\after\\restore-wizard-key.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "B02C9E61090F2C50CB8D56F178B15EFA43D731DC9248F79743698C934710C4E0",
+    "page_margin": {
+     "x0_px": 53,
+     "x0_dp": 20.19,
+     "votes": 150,
+     "rows": 432
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [
+      {
+       "h_px": 105,
+       "h_dp": 40.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 875,
+       "color": "#E1E5DF",
+       "max_row_count": 966
+      }
+     ],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 675
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 2910,
+     "soft": 0,
+     "bg": 2443442,
+     "white": 0,
+     "outline": 6598,
+     "muted": 1425,
+     "ink": 17151
+    }
+   },
+   "restore-wizard.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-theme-fix\\after\\restore-wizard.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "430E3666EE572F2B4B14022E098B026604D9BA036DAE92D5F6643D421A9477A2",
+    "page_margin": {
+     "x0_px": 60,
+     "x0_dp": 22.86,
+     "votes": 52,
+     "rows": 431
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 105,
+       "h_dp": 40.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 830,
+       "color": "#356B53",
+       "max_row_count": 966
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 105,
+       "h_dp": 40.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 998
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 94684,
+     "soft": 0,
+     "bg": 2418571,
+     "white": 2928,
+     "outline": 5902,
+     "muted": 3142,
+     "ink": 31044
+    }
+   },
+   "security-settings.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-theme-fix\\after\\security-settings.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "748D89693F347A6BE034776900B8668791B333B60DE4145C34B179DD2FB789F8",
+    "page_margin": {
+     "x0_px": 53,
+     "x0_dp": 20.19,
+     "votes": 217,
+     "rows": 1094
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [
+     {
+      "x0_dp": 20.2,
+      "y0_dp": 461.7,
+      "w_dp": 73.1,
+      "h_dp": 32.0,
+      "fill_px": 13687,
+      "white_text_px": 0,
+      "primary_text_px": 1056,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.0,
+      "corner_void_px": 112,
+      "top_row_inset_px": 20
+     }
+    ],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 571,
+       "color": "#356B53",
+       "max_row_count": 968
+      },
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 2021,
+       "color": "#356B53",
+       "max_row_count": 968
+      }
+     ],
+     "soft_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 1707,
+       "color": "#E7F0E6",
+       "max_row_count": 968
+      }
+     ],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 254850,
+     "soft": 138377,
+     "bg": 2072621,
+     "white": 4185,
+     "outline": 2672,
+     "muted": 1852,
+     "ink": 48951
+    }
+   },
+   "timeline-source-detail.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-theme-fix\\after\\timeline-source-detail.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "97AC1C59C7CBAEB156847A7D1A5616EF4ABE15A4B351615D3BFD0658E0DB344F",
+    "page_margin": {
+     "x0_px": 56,
+     "x0_dp": 21.33,
+     "votes": 55,
+     "rows": 483
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 1032,
+       "color": "#356B53",
+       "max_row_count": 968
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 124352,
+     "soft": 0,
+     "bg": 2397719,
+     "white": 2734,
+     "outline": 0,
+     "muted": 0,
+     "ink": 30971
+    }
+   },
+   "timeline.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-theme-fix\\after\\timeline.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "1FD71DE9EDD0B3B66446A97D99AB1C8B6D9B75FD2CF5146D9F5E02DCEB7CC447",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 1247,
+     "rows": 1690
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 659,
+      "h_dp": 251.05,
+      "y0_px": 1012
+     },
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 540,
+      "h_dp": 205.71,
+      "y0_px": 1797
+     }
+    ],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 181.0,
+      "w_dp": 64.0,
+      "h_dp": 32.0,
+      "fill_px": 11805,
+      "white_text_px": 0,
+      "primary_text_px": 902,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.0,
+      "corner_void_px": 112,
+      "top_row_inset_px": 20
+     }
+    ],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 296,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 625
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 128146,
+     "soft": 12055,
+     "bg": 1252909,
+     "white": 1092412,
+     "outline": 11586,
+     "muted": 6914,
+     "ink": 38091
+    }
+   },
+   "trash-empty.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-theme-fix\\after\\trash-empty.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "4A559CC873A188D34AB5CE759D730D5B840129CA7491EBBA6B359122648A17F4",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 50,
+     "rows": 200
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 120.8,
+      "w_dp": 153.1,
+      "h_dp": 32.0,
+      "fill_px": 27140,
+      "white_text_px": 0,
+      "primary_text_px": 2886,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.0,
+      "corner_void_px": 112,
+      "top_row_inset_px": 20
+     }
+    ],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 3044,
+     "soft": 28093,
+     "bg": 2515525,
+     "white": 0,
+     "outline": 2668,
+     "muted": 2760,
+     "ink": 16673
+    }
+   },
+   "visit-detail.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-theme-fix\\after\\visit-detail.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "7DB83EF5B5BBD0747A35F67B5B12052675D5D87276D3452AD5AF848A62E4F263",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 865,
+     "rows": 1573
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 537,
+      "h_dp": 204.57,
+      "y0_px": 785
+     }
+    ],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1894,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1556,
+       "color": "#E7F0E6",
+       "max_row_count": 948
+      },
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1725,
+       "color": "#E7F0E6",
+       "max_row_count": 948
+      }
+     ],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 138341,
+     "soft": 659591,
+     "bg": 1237626,
+     "white": 484096,
+     "outline": 0,
+     "muted": 8757,
+     "ink": 13875
+    }
+   },
+   "visit-editor.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-ui-theme-fix\\after\\visit-editor.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "225CA230D675A429E216C0DB2A527E30D618BC2A32EAB259F75BFD1E6BB0CC45",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 689,
+     "rows": 920
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1341,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 373
+      },
+      {
+       "h_px": 148,
+       "h_dp": 56.38,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 552
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 756
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 959
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1162
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 124095,
+     "soft": 0,
+     "bg": 2390514,
+     "white": 1838,
+     "outline": 31778,
+     "muted": 12465,
+     "ink": 6612
+    }
+   }
+  },
+  "figma-alignment": {
+   "cloud-connection-backup.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-figma-ui-alignment\\app-screens\\cloud-connection-backup.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "11267631D88554C87F8684300396E95E096D8AC6728B0B4C284A04F4F9F86715",
+    "page_margin": {
+     "x0_px": 59,
+     "x0_dp": 22.48,
+     "votes": 124,
+     "rows": 911
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 1798,
+       "color": "#356B53",
+       "max_row_count": 968
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 190954,
+     "soft": 0,
+     "bg": 2200954,
+     "white": 7442,
+     "outline": 5844,
+     "muted": 3188,
+     "ink": 51755
+    }
+   },
+   "cloud-connection-cleanup.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-figma-ui-alignment\\app-screens\\cloud-connection-cleanup.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "F9E3385152116CBD8B73883DD89271FD1A3F930C58115AC8784727F0C348F1FA",
+    "page_margin": {
+     "x0_px": 59,
+     "x0_dp": 22.48,
+     "votes": 98,
+     "rows": 843
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 713,
+       "color": "#356B53",
+       "max_row_count": 968
+      },
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 2065,
+       "color": "#356B53",
+       "max_row_count": 968
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 264019,
+     "soft": 0,
+     "bg": 2183891,
+     "white": 10469,
+     "outline": 5844,
+     "muted": 0,
+     "ink": 53785
+    }
+   },
+   "cloud-connection.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-figma-ui-alignment\\app-screens\\cloud-connection.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "6E7B48F9531F72C19558816A3BBC23BF3236DED87898BC7567F4BC953E1A171F",
+    "page_margin": {
+     "x0_px": 53,
+     "x0_dp": 20.19,
+     "votes": 558,
+     "rows": 1168
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 675
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 888
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 1101
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 1373
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 59426,
+     "soft": 0,
+     "bg": 2317474,
+     "white": 1876,
+     "outline": 26765,
+     "muted": 10438,
+     "ink": 46384
+    }
+   },
+   "custom-reminder-editor.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-figma-ui-alignment\\app-screens\\custom-reminder-editor.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "467E126309F73292FFEF038408625AAC6FF53339D312C7079C2461A8886C7119",
+    "page_margin": {
+     "x0_px": 0,
+     "x0_dp": 0.0,
+     "votes": 2020,
+     "rows": 2020
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [
+      {
+       "h_px": 136,
+       "h_dp": 51.81,
+       "w_px": 1000,
+       "w_dp": 380.95,
+       "x0_px": 40,
+       "x0_dp": 15.24,
+       "y0_px": 160,
+       "color": "#636361",
+       "max_row_count": 1000
+      },
+      {
+       "h_px": 141,
+       "h_dp": 53.71,
+       "w_px": 840,
+       "w_dp": 320.0,
+       "x0_px": 120,
+       "x0_dp": 45.71,
+       "y0_px": 798,
+       "color": "#ECE6F0",
+       "max_row_count": 834
+      },
+      {
+       "h_px": 141,
+       "h_dp": 53.71,
+       "w_px": 840,
+       "w_dp": 320.0,
+       "x0_px": 120,
+       "x0_dp": 45.71,
+       "y0_px": 990,
+       "color": "#ECE6F0",
+       "max_row_count": 834
+      },
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 826,
+       "w_dp": 314.67,
+       "x0_px": 127,
+       "x0_dp": 48.38,
+       "y0_px": 2200,
+       "color": "#595D59",
+       "max_row_count": 820
+      }
+     ],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 9840,
+     "soft": 0,
+     "bg": 0,
+     "white": 1803,
+     "outline": 10076,
+     "muted": 5529,
+     "ink": 4255
+    }
+   },
+   "drug-catalog.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-figma-ui-alignment\\app-screens\\drug-catalog.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "C99306FC3D31184AC0108108FC8A78C5E0E682E1B4A6A8E2C29182AD6CE78064",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 437,
+     "rows": 704
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 507,
+      "h_dp": 193.14,
+      "y0_px": 590
+     }
+    ],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 296,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 128039,
+     "soft": 0,
+     "bg": 1962764,
+     "white": 453600,
+     "outline": 0,
+     "muted": 0,
+     "ink": 20573
+    }
+   },
+   "drug-editor.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-figma-ui-alignment\\app-screens\\drug-editor.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "003A49255665A62C9FA215B7B64FFE8E5AF11C3068E822BF6722509EF48D91FD",
+    "page_margin": {
+     "x0_px": 53,
+     "x0_dp": 20.19,
+     "votes": 422,
+     "rows": 706
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 1030,
+       "color": "#356B53",
+       "max_row_count": 968
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 445
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 648
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 851
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 126049,
+     "soft": 0,
+     "bg": 2398821,
+     "white": 1890,
+     "outline": 19794,
+     "muted": 4599,
+     "ink": 13739
+    }
+   },
+   "export-screen-disabled.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-figma-ui-alignment\\app-screens\\export-screen-disabled.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "1CDB4904432AF65A0E3756336C516A0963FD1024EF0ACB6AB8DC933CFF7142DD",
+    "page_margin": {
+     "x0_px": 57,
+     "x0_dp": 21.71,
+     "votes": 96,
+     "rows": 558
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [
+      {
+       "h_px": 105,
+       "h_dp": 40.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 2232,
+       "color": "#E1E5DF",
+       "max_row_count": 966
+      }
+     ],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 26612,
+     "soft": 0,
+     "bg": 2412969,
+     "white": 2247,
+     "outline": 1948,
+     "muted": 920,
+     "ink": 20961
+    }
+   },
+   "export-screen.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-figma-ui-alignment\\app-screens\\export-screen.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "EE9D009CA932DF740345E4FA11B8CD0557361A8531AFAE545B36F99669E7E84A",
+    "page_margin": {
+     "x0_px": 53,
+     "x0_dp": 20.19,
+     "votes": 140,
+     "rows": 663
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 21692,
+     "soft": 0,
+     "bg": 2461960,
+     "white": 4471,
+     "outline": 14276,
+     "muted": 4535,
+     "ink": 35184
+    }
+   },
+   "journal-entry-editor.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-figma-ui-alignment\\app-screens\\journal-entry-editor.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "75AB6167130687AFBB8454ABD4BFEF23D77CCD4AA5785FAB9A5F2A6EAA34807D",
+    "page_margin": {
+     "x0_px": 53,
+     "x0_dp": 20.19,
+     "votes": 940,
+     "rows": 1232
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 1693,
+       "color": "#356B53",
+       "max_row_count": 968
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 373
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 576
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 856
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 1059
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 125417,
+     "soft": 0,
+     "bg": 2373919,
+     "white": 2698,
+     "outline": 32462,
+     "muted": 8018,
+     "ink": 16400
+    }
+   },
+   "local-backup.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-figma-ui-alignment\\app-screens\\local-backup.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "F728B5E25E78FDCE589C884A80E51F0DF790B13660B1908AB0689D5543359A26",
+    "page_margin": {
+     "x0_px": 60,
+     "x0_dp": 22.86,
+     "votes": 100,
+     "rows": 649
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 105,
+       "h_dp": 40.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 893,
+       "color": "#356B53",
+       "max_row_count": 966
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 105,
+       "h_dp": 40.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 1061
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 97640,
+     "soft": 0,
+     "bg": 2372528,
+     "white": 2887,
+     "outline": 7850,
+     "muted": 3051,
+     "ink": 48260
+    }
+   },
+   "measurement-editor.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-figma-ui-alignment\\app-screens\\measurement-editor.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "B644DD789AFD4B5596BC300FF084C27A75C943470DD097D3B0D384FE0E4B0F4A",
+    "page_margin": {
+     "x0_px": 53,
+     "x0_dp": 20.19,
+     "votes": 831,
+     "rows": 1195
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 1725,
+       "color": "#356B53",
+       "max_row_count": 968
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 555
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 734
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 937
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 1217
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 126597,
+     "soft": 0,
+     "bg": 2384665,
+     "white": 1871,
+     "outline": 33858,
+     "muted": 8526,
+     "ink": 9714
+    }
+   },
+   "pregnancy-editor.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-figma-ui-alignment\\app-screens\\pregnancy-editor.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "D804B306A7703F4D14D7D8D0F892968502D55948C84EF1AAAF775E2F85D28F09",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 983,
+     "rows": 1452
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 2118,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 397
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 683
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 988
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1736
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1939
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 133065,
+     "soft": 337578,
+     "bg": 2004606,
+     "white": 1938,
+     "outline": 31154,
+     "muted": 21622,
+     "ink": 14072
+    }
+   },
+   "reminder-settings-custom.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-figma-ui-alignment\\app-screens\\reminder-settings-custom.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "92B5880770B930B862D5E3E5A0C28FC4577B9380FAD035E1CB4579B4CEDA7813",
+    "page_margin": {
+     "x0_px": 74,
+     "x0_dp": 28.19,
+     "votes": 1642,
+     "rows": 1924
+    },
+    "white_cards": [
+     {
+      "x0_px": 74,
+      "x0_dp": 28.19,
+      "w_px": 932,
+      "w_dp": 355.05,
+      "h_px": 509,
+      "h_dp": 193.9,
+      "y0_px": 296
+     },
+     {
+      "x0_px": 74,
+      "x0_dp": 28.19,
+      "w_px": 932,
+      "w_dp": 355.05,
+      "h_px": 648,
+      "h_dp": 246.86,
+      "y0_px": 837
+     },
+     {
+      "x0_px": 74,
+      "x0_dp": 28.19,
+      "w_px": 932,
+      "w_dp": 355.05,
+      "h_px": 671,
+      "h_dp": 255.62,
+      "y0_px": 1517
+     }
+    ],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 826,
+       "w_dp": 314.67,
+       "x0_px": 127,
+       "x0_dp": 48.38,
+       "y0_px": 1743,
+       "color": "#E7F0E6",
+       "max_row_count": 820
+      }
+     ],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 21995,
+     "soft": 104961,
+     "bg": 779921,
+     "white": 1588283,
+     "outline": 0,
+     "muted": 14174,
+     "ink": 25535
+    }
+   },
+   "reminder-settings.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-figma-ui-alignment\\app-screens\\reminder-settings.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "D0549BBA6FCC461FA6522CABBB92B2B9CE88AA9C265F161BED1FE413586E8FC8",
+    "page_margin": {
+     "x0_px": 74,
+     "x0_dp": 28.19,
+     "votes": 1474,
+     "rows": 1867
+    },
+    "white_cards": [
+     {
+      "x0_px": 74,
+      "x0_dp": 28.19,
+      "w_px": 932,
+      "w_dp": 355.05,
+      "h_px": 412,
+      "h_dp": 156.95,
+      "y0_px": 421
+     },
+     {
+      "x0_px": 74,
+      "x0_dp": 28.19,
+      "w_px": 932,
+      "w_dp": 355.05,
+      "h_px": 537,
+      "h_dp": 204.57,
+      "y0_px": 865
+     },
+     {
+      "x0_px": 74,
+      "x0_dp": 28.19,
+      "w_px": 932,
+      "w_dp": 355.05,
+      "h_px": 758,
+      "h_dp": 288.76,
+      "y0_px": 1434
+     }
+    ],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 15204,
+     "soft": 0,
+     "bg": 874856,
+     "white": 1573761,
+     "outline": 0,
+     "muted": 10721,
+     "ink": 42847
+    }
+   },
+   "restore-wizard-key.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-figma-ui-alignment\\app-screens\\restore-wizard-key.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "B02C9E61090F2C50CB8D56F178B15EFA43D731DC9248F79743698C934710C4E0",
+    "page_margin": {
+     "x0_px": 53,
+     "x0_dp": 20.19,
+     "votes": 150,
+     "rows": 432
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [
+      {
+       "h_px": 105,
+       "h_dp": 40.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 875,
+       "color": "#E1E5DF",
+       "max_row_count": 966
+      }
+     ],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 675
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 2910,
+     "soft": 0,
+     "bg": 2443442,
+     "white": 0,
+     "outline": 6598,
+     "muted": 1425,
+     "ink": 17151
+    }
+   },
+   "restore-wizard.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-figma-ui-alignment\\app-screens\\restore-wizard.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "430E3666EE572F2B4B14022E098B026604D9BA036DAE92D5F6643D421A9477A2",
+    "page_margin": {
+     "x0_px": 60,
+     "x0_dp": 22.86,
+     "votes": 52,
+     "rows": 431
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 105,
+       "h_dp": 40.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 830,
+       "color": "#356B53",
+       "max_row_count": 966
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 105,
+       "h_dp": 40.0,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 998
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 94684,
+     "soft": 0,
+     "bg": 2418571,
+     "white": 2928,
+     "outline": 5902,
+     "muted": 3142,
+     "ink": 31044
+    }
+   },
+   "security-settings.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-figma-ui-alignment\\app-screens\\security-settings.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "748D89693F347A6BE034776900B8668791B333B60DE4145C34B179DD2FB789F8",
+    "page_margin": {
+     "x0_px": 53,
+     "x0_dp": 20.19,
+     "votes": 217,
+     "rows": 1094
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [
+     {
+      "x0_dp": 20.2,
+      "y0_dp": 461.7,
+      "w_dp": 73.1,
+      "h_dp": 32.0,
+      "fill_px": 13687,
+      "white_text_px": 0,
+      "primary_text_px": 1056,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.0,
+      "corner_void_px": 112,
+      "top_row_inset_px": 20
+     }
+    ],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 571,
+       "color": "#356B53",
+       "max_row_count": 968
+      },
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 2021,
+       "color": "#356B53",
+       "max_row_count": 968
+      }
+     ],
+     "soft_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 1707,
+       "color": "#E7F0E6",
+       "max_row_count": 968
+      }
+     ],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 254850,
+     "soft": 138377,
+     "bg": 2072621,
+     "white": 4185,
+     "outline": 2672,
+     "muted": 1852,
+     "ink": 48951
+    }
+   },
+   "timeline-source-detail.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-figma-ui-alignment\\app-screens\\timeline-source-detail.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "748D1FE30A49EEECDC462DFC7C410E3F74C5821E406B831C3BF4CA14DC776E28",
+    "page_margin": {
+     "x0_px": 56,
+     "x0_dp": 21.33,
+     "votes": 55,
+     "rows": 483
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 974,
+       "w_dp": 371.05,
+       "x0_px": 53,
+       "x0_dp": 20.19,
+       "y0_px": 1032,
+       "color": "#356B53",
+       "max_row_count": 968
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 124352,
+     "soft": 0,
+     "bg": 2397748,
+     "white": 2734,
+     "outline": 0,
+     "muted": 0,
+     "ink": 30985
+    }
+   },
+   "timeline.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-figma-ui-alignment\\app-screens\\timeline.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "876020C61EF77BCF8C7619CE37694D56B0E2FA9C578DBFAD4794FBAFCE7C56B1",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 1247,
+     "rows": 1690
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 659,
+      "h_dp": 251.05,
+      "y0_px": 1012
+     },
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 540,
+      "h_dp": 205.71,
+      "y0_px": 1797
+     }
+    ],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 181.0,
+      "w_dp": 64.0,
+      "h_dp": 32.0,
+      "fill_px": 11805,
+      "white_text_px": 0,
+      "primary_text_px": 902,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.0,
+      "corner_void_px": 112,
+      "top_row_inset_px": 20
+     }
+    ],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 296,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 625
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 128146,
+     "soft": 12055,
+     "bg": 1252909,
+     "white": 1092419,
+     "outline": 11586,
+     "muted": 6914,
+     "ink": 38081
+    }
+   },
+   "trash-empty.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-figma-ui-alignment\\app-screens\\trash-empty.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "4A559CC873A188D34AB5CE759D730D5B840129CA7491EBBA6B359122648A17F4",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 50,
+     "rows": 200
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 120.8,
+      "w_dp": 153.1,
+      "h_dp": 32.0,
+      "fill_px": 27140,
+      "white_text_px": 0,
+      "primary_text_px": 2886,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.0,
+      "corner_void_px": 112,
+      "top_row_inset_px": 20
+     }
+    ],
+    "buttons": {
+     "primary_full_width": [],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 3044,
+     "soft": 28093,
+     "bg": 2515525,
+     "white": 0,
+     "outline": 2668,
+     "muted": 2760,
+     "ink": 16673
+    }
+   },
+   "visit-detail.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-figma-ui-alignment\\app-screens\\visit-detail.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "7DB83EF5B5BBD0747A35F67B5B12052675D5D87276D3452AD5AF848A62E4F263",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 865,
+     "rows": 1573
+    },
+    "white_cards": [
+     {
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "h_px": 537,
+      "h_dp": 204.57,
+      "y0_px": 785
+     }
+    ],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1894,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1556,
+       "color": "#E7F0E6",
+       "max_row_count": 948
+      },
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1725,
+       "color": "#E7F0E6",
+       "max_row_count": 948
+      }
+     ],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": []
+    },
+    "token_counts": {
+     "primary": 138341,
+     "soft": 659591,
+     "bg": 1237626,
+     "white": 484096,
+     "outline": 0,
+     "muted": 8757,
+     "ink": 13875
+    }
+   },
+   "visit-editor.png": {
+    "path": "D:\\Devtools\\Code\\CodexWorkspace\\PregnancyJournal\\docs\\verification\\2026-10-24-figma-ui-alignment\\app-screens\\visit-editor.png",
+    "size": [
+     1080,
+     2400
+    ],
+    "sha256": "225CA230D675A429E216C0DB2A527E30D618BC2A32EAB259F75BFD1E6BB0CC45",
+    "page_margin": {
+     "x0_px": 63,
+     "x0_dp": 24.0,
+     "votes": 689,
+     "rows": 920
+    },
+    "white_cards": [],
+    "tags_selected": [],
+    "tags_unselected": [],
+    "tag_candidates_soft_old": [],
+    "buttons": {
+     "primary_full_width": [
+      {
+       "h_px": 137,
+       "h_dp": 52.19,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1341,
+       "color": "#356B53",
+       "max_row_count": 948
+      }
+     ],
+     "soft_full_width": [],
+     "outline_full_width": [],
+     "other_full_width": [],
+     "outline_rings": [
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 373
+      },
+      {
+       "h_px": 148,
+       "h_dp": 56.38,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 552
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 756
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 959
+      },
+      {
+       "h_px": 147,
+       "h_dp": 56.0,
+       "w_px": 954,
+       "w_dp": 363.43,
+       "x0_px": 63,
+       "x0_dp": 24.0,
+       "y0_px": 1162
+      }
+     ]
+    },
+    "token_counts": {
+     "primary": 124095,
+     "soft": 0,
+     "bg": 2390514,
+     "white": 1838,
+     "outline": 31778,
+     "muted": 12465,
+     "ink": 6612
+    }
+   }
+  }
+ },
+ "summary": {
+  "tags": {
+   "after/timeline.png": {
+    "selected_tags": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 173.0,
+      "w_dp": 64.0,
+      "h_dp": 48.4,
+      "fill_px": 18509,
+      "white_text_px": 902,
+      "primary_text_px": 18759,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.042,
+      "corner_void_px": 242,
+      "top_row_inset_px": 31
+     }
+    ],
+    "unselected_tags": [
+     {
+      "x0_dp": 96.0,
+      "y0_dp": 173.0,
+      "w_dp": 64.0,
+      "h_dp": 48.4,
+      "border_px": 1398,
+      "white_fill_px": 17402,
+      "white_ratio_of_bbox": 0.816,
+      "muted_text_px": 731,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     },
+     {
+      "x0_dp": 168.0,
+      "y0_dp": 173.0,
+      "w_dp": 64.0,
+      "h_dp": 48.4,
+      "border_px": 1398,
+      "white_fill_px": 17133,
+      "white_ratio_of_bbox": 0.803,
+      "muted_text_px": 838,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     },
+     {
+      "x0_dp": 240.0,
+      "y0_dp": 173.0,
+      "w_dp": 96.0,
+      "h_dp": 48.4,
+      "border_px": 1902,
+      "white_fill_px": 25615,
+      "white_ratio_of_bbox": 0.8,
+      "muted_text_px": 1848,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     },
+     {
+      "x0_dp": 344.0,
+      "y0_dp": 173.0,
+      "w_dp": 43.4,
+      "h_dp": 48.4,
+      "border_px": 879,
+      "white_fill_px": 11403,
+      "white_ratio_of_bbox": 0.788,
+      "muted_text_px": 874,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     }
+    ],
+    "old_soft_32dp_chips": []
+   },
+   "after/trash-empty.png": {
+    "selected_tags": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 112.8,
+      "w_dp": 153.1,
+      "h_dp": 48.4,
+      "fill_px": 43906,
+      "white_text_px": 2886,
+      "primary_text_px": 44859,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.057,
+      "corner_void_px": 242,
+      "top_row_inset_px": 31
+     }
+    ],
+    "unselected_tags": [
+     {
+      "x0_dp": 185.1,
+      "y0_dp": 112.8,
+      "w_dp": 153.1,
+      "h_dp": 48.4,
+      "border_px": 2802,
+      "white_fill_px": 42016,
+      "white_ratio_of_bbox": 0.823,
+      "muted_text_px": 2760,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     }
+    ],
+    "old_soft_32dp_chips": []
+   },
+   "after/security-settings.png": {
+    "selected_tags": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 458.3,
+      "w_dp": 73.1,
+      "h_dp": 48.4,
+      "fill_px": 21423,
+      "white_text_px": 1056,
+      "primary_text_px": 21548,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.043,
+      "corner_void_px": 242,
+      "top_row_inset_px": 31
+     }
+    ],
+    "unselected_tags": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 329.5,
+      "w_dp": 64.0,
+      "h_dp": 48.4,
+      "border_px": 1398,
+      "white_fill_px": 17276,
+      "white_ratio_of_bbox": 0.81,
+      "muted_text_px": 878,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     },
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 393.9,
+      "w_dp": 73.1,
+      "h_dp": 48.4,
+      "border_px": 1542,
+      "white_fill_px": 20006,
+      "white_ratio_of_bbox": 0.82,
+      "muted_text_px": 974,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     }
+    ],
+    "old_soft_32dp_chips": []
+   },
+   "after-supplementary/02-visits.png": {
+    "selected_tags": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 219.0,
+      "w_dp": 64.0,
+      "h_dp": 48.4,
+      "fill_px": 18476,
+      "white_text_px": 938,
+      "primary_text_px": 18606,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.044,
+      "corner_void_px": 246,
+      "top_row_inset_px": 31
+     },
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 279.6,
+      "w_dp": 64.0,
+      "h_dp": 48.4,
+      "fill_px": 18423,
+      "white_text_px": 882,
+      "primary_text_px": 18623,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.041,
+      "corner_void_px": 246,
+      "top_row_inset_px": 31
+     }
+    ],
+    "unselected_tags": [
+     {
+      "x0_dp": 96.0,
+      "y0_dp": 219.0,
+      "w_dp": 64.0,
+      "h_dp": 48.4,
+      "border_px": 1398,
+      "white_fill_px": 17274,
+      "white_ratio_of_bbox": 0.81,
+      "muted_text_px": 878,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     },
+     {
+      "x0_dp": 96.0,
+      "y0_dp": 279.6,
+      "w_dp": 80.0,
+      "h_dp": 48.4,
+      "border_px": 1650,
+      "white_fill_px": 21454,
+      "white_ratio_of_bbox": 0.804,
+      "muted_text_px": 1218,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     },
+     {
+      "x0_dp": 184.0,
+      "y0_dp": 279.6,
+      "w_dp": 80.0,
+      "h_dp": 48.4,
+      "border_px": 1650,
+      "white_fill_px": 21430,
+      "white_ratio_of_bbox": 0.804,
+      "muted_text_px": 1338,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     },
+     {
+      "x0_dp": 272.0,
+      "y0_dp": 279.6,
+      "w_dp": 80.0,
+      "h_dp": 48.4,
+      "border_px": 1650,
+      "white_fill_px": 21434,
+      "white_ratio_of_bbox": 0.804,
+      "muted_text_px": 1299,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     }
+    ],
+    "old_soft_32dp_chips": [
+     {
+      "x0_dp": 125.3,
+      "y0_dp": 819.4,
+      "w_dp": 56.0,
+      "h_dp": 32.0,
+      "fill_px": 8397,
+      "white_text_px": 1392,
+      "primary_text_px": 808,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.113,
+      "corner_void_px": 389,
+      "top_row_inset_px": 41
+     }
+    ]
+   },
+   "after-supplementary/06-intakes.png": {
+    "selected_tags": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 112.8,
+      "w_dp": 96.0,
+      "h_dp": 48.4,
+      "fill_px": 27482,
+      "white_text_px": 1805,
+      "primary_text_px": 27927,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.056,
+      "corner_void_px": 242,
+      "top_row_inset_px": 31
+     }
+    ],
+    "unselected_tags": [
+     {
+      "x0_dp": 128.0,
+      "y0_dp": 112.8,
+      "w_dp": 96.0,
+      "h_dp": 48.4,
+      "border_px": 1902,
+      "white_fill_px": 25802,
+      "white_ratio_of_bbox": 0.806,
+      "muted_text_px": 1809,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     }
+    ],
+    "old_soft_32dp_chips": []
+   },
+   "after-supplementary/07-measurements.png": {
+    "selected_tags": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 177.1,
+      "w_dp": 96.0,
+      "h_dp": 48.4,
+      "fill_px": 27445,
+      "white_text_px": 1830,
+      "primary_text_px": 27701,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.057,
+      "corner_void_px": 242,
+      "top_row_inset_px": 31
+     }
+    ],
+    "unselected_tags": [
+     {
+      "x0_dp": 128.0,
+      "y0_dp": 177.1,
+      "w_dp": 96.0,
+      "h_dp": 48.4,
+      "border_px": 1902,
+      "white_fill_px": 25617,
+      "white_ratio_of_bbox": 0.8,
+      "muted_text_px": 1849,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     }
+    ],
+    "old_soft_32dp_chips": []
+   },
+   "after-supplementary/08-visit-documents.png": {
+    "selected_tags": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 112.8,
+      "w_dp": 96.0,
+      "h_dp": 48.4,
+      "fill_px": 27640,
+      "white_text_px": 1641,
+      "primary_text_px": 27935,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.051,
+      "corner_void_px": 242,
+      "top_row_inset_px": 31
+     }
+    ],
+    "unselected_tags": [
+     {
+      "x0_dp": 132.2,
+      "y0_dp": 112.8,
+      "w_dp": 121.1,
+      "h_dp": 48.4,
+      "border_px": 2298,
+      "white_fill_px": 33613,
+      "white_ratio_of_bbox": 0.832,
+      "muted_text_px": 1902,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     }
+    ],
+    "old_soft_32dp_chips": []
+   },
+   "navigation/c04-timeline.png": {
+    "selected_tags": [
+     {
+      "x0_dp": 75.4,
+      "y0_dp": 173.0,
+      "w_dp": 64.0,
+      "h_dp": 48.4,
+      "fill_px": 18482,
+      "white_text_px": 838,
+      "primary_text_px": 18695,
+      "muted_text_px": 0,
+      "white_ratio_of_bbox": 0.039,
+      "corner_void_px": 242,
+      "top_row_inset_px": 31
+     }
+    ],
+    "unselected_tags": [
+     {
+      "x0_dp": 24.0,
+      "y0_dp": 173.0,
+      "w_dp": 43.4,
+      "h_dp": 48.4,
+      "border_px": 879,
+      "white_fill_px": 11817,
+      "white_ratio_of_bbox": 0.816,
+      "muted_text_px": 625,
+      "corner_void_px": 928,
+      "top_row_inset_px": 0
+     },
+     {
+      "x0_dp": 147.4,
+      "y0_dp": 173.0,
+      "w_dp": 96.0,
+      "h_dp": 48.4,
+      "border_px": 1902,
+      "white_fill_px": 25615,
+      "white_ratio_of_bbox": 0.8,
+      "muted_text_px": 1848,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     },
+     {
+      "x0_dp": 251.4,
+      "y0_dp": 173.0,
+      "w_dp": 64.0,
+      "h_dp": 48.4,
+      "border_px": 1398,
+      "white_fill_px": 16967,
+      "white_ratio_of_bbox": 0.795,
+      "muted_text_px": 989,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     },
+     {
+      "x0_dp": 323.4,
+      "y0_dp": 173.0,
+      "w_dp": 64.0,
+      "h_dp": 48.4,
+      "border_px": 1398,
+      "white_fill_px": 16725,
+      "white_ratio_of_bbox": 0.784,
+      "muted_text_px": 1136,
+      "corner_void_px": 925,
+      "top_row_inset_px": 31
+     }
+    ],
+    "old_soft_32dp_chips": []
+   }
+  },
+  "buttons": {
+   "after/local-backup.png": {
+    "primary_full_width": [
+     {
+      "h_px": 137,
+      "h_dp": 52.19,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "y0_px": 892,
+      "color": "#356B53",
+      "max_row_count": 948
+     }
+    ],
+    "soft_full_width": [
+     {
+      "h_px": 137,
+      "h_dp": 52.19,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "y0_px": 1071,
+      "color": "#E7F0E6",
+      "max_row_count": 948
+     }
+    ],
+    "outline_full_width": [],
+    "other_full_width": [],
+    "outline_rings": []
+   },
+   "after/restore-wizard.png": {
+    "primary_full_width": [
+     {
+      "h_px": 137,
+      "h_dp": 52.19,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "y0_px": 829,
+      "color": "#356B53",
+      "max_row_count": 948
+     }
+    ],
+    "soft_full_width": [
+     {
+      "h_px": 137,
+      "h_dp": 52.19,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "y0_px": 1008,
+      "color": "#E7F0E6",
+      "max_row_count": 948
+     }
+    ],
+    "outline_full_width": [],
+    "other_full_width": [],
+    "outline_rings": []
+   },
+   "after/restore-wizard-key.png": {
+    "primary_full_width": [],
+    "soft_full_width": [],
+    "outline_full_width": [],
+    "other_full_width": [
+     {
+      "h_px": 137,
+      "h_dp": 52.19,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "y0_px": 874,
+      "color": "#E1E5DF",
+      "max_row_count": 948
+     }
+    ],
+    "outline_rings": [
+     {
+      "h_px": 147,
+      "h_dp": 56.0,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "y0_px": 685
+     }
+    ]
+   },
+   "after/export-screen.png": {
+    "primary_full_width": [],
+    "soft_full_width": [],
+    "outline_full_width": [],
+    "other_full_width": [],
+    "outline_rings": []
+   },
+   "after/export-screen-disabled.png": {
+    "primary_full_width": [],
+    "soft_full_width": [],
+    "outline_full_width": [],
+    "other_full_width": [
+     {
+      "h_px": 137,
+      "h_dp": 52.19,
+      "w_px": 954,
+      "w_dp": 363.43,
+      "x0_px": 63,
+      "x0_dp": 24.0,
+      "y0_px": 2200,
+      "color": "#E1E5DF",
+      "max_row_count": 948
+     }
+    ],
+    "outline_rings": []
+   }
+  },
+  "page_margin_after": {
+   "after/cloud-connection-backup.png": {
+    "x0_px": 69,
+    "x0_dp": 26.29,
+    "votes": 123,
+    "rows": 911
+   },
+   "after/cloud-connection-cleanup.png": {
+    "x0_px": 68,
+    "x0_dp": 25.9,
+    "votes": 96,
+    "rows": 843
+   },
+   "after/cloud-connection.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 558,
+    "rows": 1168
+   },
+   "after/custom-reminder-editor.png": {
+    "x0_px": 0,
+    "x0_dp": 0.0,
+    "votes": 2020,
+    "rows": 2020
+   },
+   "after/drug-catalog.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 437,
+    "rows": 704
+   },
+   "after/drug-editor.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 422,
+    "rows": 706
+   },
+   "after/export-screen-disabled.png": {
+    "x0_px": 67,
+    "x0_dp": 25.52,
+    "votes": 96,
+    "rows": 579
+   },
+   "after/export-screen.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 140,
+    "rows": 653
+   },
+   "after/journal-entry-editor.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 940,
+    "rows": 1232
+   },
+   "after/local-backup.png": {
+    "x0_px": 70,
+    "x0_dp": 26.67,
+    "votes": 110,
+    "rows": 720
+   },
+   "after/measurement-editor.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 831,
+    "rows": 1195
+   },
+   "after/pregnancy-editor.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 983,
+    "rows": 1452
+   },
+   "after/reminder-settings-custom.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 1642,
+    "rows": 1924
+   },
+   "after/reminder-settings.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 1474,
+    "rows": 1867
+   },
+   "after/restore-wizard-key.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 152,
+    "rows": 463
+   },
+   "after/restore-wizard.png": {
+    "x0_px": 70,
+    "x0_dp": 26.67,
+    "votes": 78,
+    "rows": 496
+   },
+   "after/security-settings.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 296,
+    "rows": 1223
+   },
+   "after/timeline-source-detail.png": {
+    "x0_px": 66,
+    "x0_dp": 25.14,
+    "votes": 55,
+    "rows": 483
+   },
+   "after/timeline.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 1275,
+    "rows": 1732
+   },
+   "after/trash-empty.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 79,
+    "rows": 239
+   },
+   "after/visit-detail.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 865,
+    "rows": 1573
+   },
+   "after/visit-editor.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 689,
+    "rows": 920
+   },
+   "after-supplementary/01-today.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 831,
+    "rows": 1618
+   },
+   "after-supplementary/02-visits.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 276,
+    "rows": 800
+   },
+   "after-supplementary/03-records-hub.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 570,
+    "rows": 1354
+   },
+   "after-supplementary/04-profiles.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 760,
+    "rows": 1717
+   },
+   "after-supplementary/05-medications.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 1068,
+    "rows": 1460
+   },
+   "after-supplementary/06-intakes.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 235,
+    "rows": 591
+   },
+   "after-supplementary/07-measurements.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 252,
+    "rows": 543
+   },
+   "after-supplementary/08-visit-documents.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 1479,
+    "rows": 1792
+   },
+   "after-supplementary/09-recovery.png": {
+    "x0_px": 66,
+    "x0_dp": 25.14,
+    "votes": 78,
+    "rows": 545
+   },
+   "navigation/b04-empty.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 321,
+    "rows": 577
+   },
+   "navigation/b05-cover.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 1479,
+    "rows": 1792
+   },
+   "navigation/b05-pdf.png": {
+    "x0_px": 0,
+    "x0_dp": 0.0,
+    "votes": 1785,
+    "rows": 1863
+   },
+   "navigation/b05-retained-relink.png": {
+    "x0_px": 0,
+    "x0_dp": 0.0,
+    "votes": 318,
+    "rows": 318
+   },
+   "navigation/b05-zoom.png": {
+    "x0_px": 0,
+    "x0_dp": 0.0,
+    "votes": 1557,
+    "rows": 1577
+   },
+   "navigation/b06-delete-scope.png": {
+    "x0_px": 0,
+    "x0_dp": 0.0,
+    "votes": 437,
+    "rows": 437
+   },
+   "navigation/b06-global-trash.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 492,
+    "rows": 696
+   },
+   "navigation/c01-history.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 1162,
+    "rows": 1464
+   },
+   "navigation/c01left-delete-scope.png": {
+    "x0_px": 0,
+    "x0_dp": 0.0,
+    "votes": 437,
+    "rows": 437
+   },
+   "navigation/c01left-history.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 676,
+    "rows": 884
+   },
+   "navigation/c01left-photos.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 1464,
+    "rows": 1792
+   },
+   "navigation/c01left-trash.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 521,
+    "rows": 725
+   },
+   "navigation/c02-history.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 1333,
+    "rows": 1854
+   },
+   "navigation/c02-home.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 866,
+    "rows": 1727
+   },
+   "navigation/c03-measurement.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 515,
+    "rows": 808
+   },
+   "navigation/c04-journal.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 847,
+    "rows": 1170
+   },
+   "navigation/c04-timeline.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 847,
+    "rows": 1170
+   },
+   "navigation/c05-reminder-settings.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 1474,
+    "rows": 1867
+   },
+   "navigation/c05-visit-reminder.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 865,
+    "rows": 1573
+   },
+   "navigation/d01-cloud-connection.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 558,
+    "rows": 1131
+   }
+  },
+  "page_margin_before": {
+   "theme-fix/cloud-connection-backup.png": {
+    "x0_px": 59,
+    "x0_dp": 22.48,
+    "votes": 124,
+    "rows": 911
+   },
+   "theme-fix/cloud-connection-cleanup.png": {
+    "x0_px": 59,
+    "x0_dp": 22.48,
+    "votes": 98,
+    "rows": 843
+   },
+   "theme-fix/cloud-connection.png": {
+    "x0_px": 53,
+    "x0_dp": 20.19,
+    "votes": 558,
+    "rows": 1168
+   },
+   "theme-fix/custom-reminder-editor.png": {
+    "x0_px": 0,
+    "x0_dp": 0.0,
+    "votes": 2020,
+    "rows": 2020
+   },
+   "theme-fix/drug-catalog.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 437,
+    "rows": 704
+   },
+   "theme-fix/drug-editor.png": {
+    "x0_px": 53,
+    "x0_dp": 20.19,
+    "votes": 422,
+    "rows": 706
+   },
+   "theme-fix/export-screen-disabled.png": {
+    "x0_px": 57,
+    "x0_dp": 21.71,
+    "votes": 96,
+    "rows": 558
+   },
+   "theme-fix/export-screen.png": {
+    "x0_px": 53,
+    "x0_dp": 20.19,
+    "votes": 140,
+    "rows": 663
+   },
+   "theme-fix/journal-entry-editor.png": {
+    "x0_px": 53,
+    "x0_dp": 20.19,
+    "votes": 940,
+    "rows": 1232
+   },
+   "theme-fix/local-backup.png": {
+    "x0_px": 60,
+    "x0_dp": 22.86,
+    "votes": 100,
+    "rows": 649
+   },
+   "theme-fix/measurement-editor.png": {
+    "x0_px": 53,
+    "x0_dp": 20.19,
+    "votes": 831,
+    "rows": 1195
+   },
+   "theme-fix/pregnancy-editor.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 983,
+    "rows": 1452
+   },
+   "theme-fix/reminder-settings-custom.png": {
+    "x0_px": 74,
+    "x0_dp": 28.19,
+    "votes": 1642,
+    "rows": 1924
+   },
+   "theme-fix/reminder-settings.png": {
+    "x0_px": 74,
+    "x0_dp": 28.19,
+    "votes": 1474,
+    "rows": 1867
+   },
+   "theme-fix/restore-wizard-key.png": {
+    "x0_px": 53,
+    "x0_dp": 20.19,
+    "votes": 150,
+    "rows": 432
+   },
+   "theme-fix/restore-wizard.png": {
+    "x0_px": 60,
+    "x0_dp": 22.86,
+    "votes": 52,
+    "rows": 431
+   },
+   "theme-fix/security-settings.png": {
+    "x0_px": 53,
+    "x0_dp": 20.19,
+    "votes": 217,
+    "rows": 1094
+   },
+   "theme-fix/timeline-source-detail.png": {
+    "x0_px": 56,
+    "x0_dp": 21.33,
+    "votes": 55,
+    "rows": 483
+   },
+   "theme-fix/timeline.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 1247,
+    "rows": 1690
+   },
+   "theme-fix/trash-empty.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 50,
+    "rows": 200
+   },
+   "theme-fix/visit-detail.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 865,
+    "rows": 1573
+   },
+   "theme-fix/visit-editor.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 689,
+    "rows": 920
+   },
+   "figma-alignment/cloud-connection-backup.png": {
+    "x0_px": 59,
+    "x0_dp": 22.48,
+    "votes": 124,
+    "rows": 911
+   },
+   "figma-alignment/cloud-connection-cleanup.png": {
+    "x0_px": 59,
+    "x0_dp": 22.48,
+    "votes": 98,
+    "rows": 843
+   },
+   "figma-alignment/cloud-connection.png": {
+    "x0_px": 53,
+    "x0_dp": 20.19,
+    "votes": 558,
+    "rows": 1168
+   },
+   "figma-alignment/custom-reminder-editor.png": {
+    "x0_px": 0,
+    "x0_dp": 0.0,
+    "votes": 2020,
+    "rows": 2020
+   },
+   "figma-alignment/drug-catalog.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 437,
+    "rows": 704
+   },
+   "figma-alignment/drug-editor.png": {
+    "x0_px": 53,
+    "x0_dp": 20.19,
+    "votes": 422,
+    "rows": 706
+   },
+   "figma-alignment/export-screen-disabled.png": {
+    "x0_px": 57,
+    "x0_dp": 21.71,
+    "votes": 96,
+    "rows": 558
+   },
+   "figma-alignment/export-screen.png": {
+    "x0_px": 53,
+    "x0_dp": 20.19,
+    "votes": 140,
+    "rows": 663
+   },
+   "figma-alignment/journal-entry-editor.png": {
+    "x0_px": 53,
+    "x0_dp": 20.19,
+    "votes": 940,
+    "rows": 1232
+   },
+   "figma-alignment/local-backup.png": {
+    "x0_px": 60,
+    "x0_dp": 22.86,
+    "votes": 100,
+    "rows": 649
+   },
+   "figma-alignment/measurement-editor.png": {
+    "x0_px": 53,
+    "x0_dp": 20.19,
+    "votes": 831,
+    "rows": 1195
+   },
+   "figma-alignment/pregnancy-editor.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 983,
+    "rows": 1452
+   },
+   "figma-alignment/reminder-settings-custom.png": {
+    "x0_px": 74,
+    "x0_dp": 28.19,
+    "votes": 1642,
+    "rows": 1924
+   },
+   "figma-alignment/reminder-settings.png": {
+    "x0_px": 74,
+    "x0_dp": 28.19,
+    "votes": 1474,
+    "rows": 1867
+   },
+   "figma-alignment/restore-wizard-key.png": {
+    "x0_px": 53,
+    "x0_dp": 20.19,
+    "votes": 150,
+    "rows": 432
+   },
+   "figma-alignment/restore-wizard.png": {
+    "x0_px": 60,
+    "x0_dp": 22.86,
+    "votes": 52,
+    "rows": 431
+   },
+   "figma-alignment/security-settings.png": {
+    "x0_px": 53,
+    "x0_dp": 20.19,
+    "votes": 217,
+    "rows": 1094
+   },
+   "figma-alignment/timeline-source-detail.png": {
+    "x0_px": 56,
+    "x0_dp": 21.33,
+    "votes": 55,
+    "rows": 483
+   },
+   "figma-alignment/timeline.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 1247,
+    "rows": 1690
+   },
+   "figma-alignment/trash-empty.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 50,
+    "rows": 200
+   },
+   "figma-alignment/visit-detail.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 865,
+    "rows": 1573
+   },
+   "figma-alignment/visit-editor.png": {
+    "x0_px": 63,
+    "x0_dp": 24.0,
+    "votes": 689,
+    "rows": 920
+   }
+  }
+ }
+}

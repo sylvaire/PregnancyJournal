@@ -1,0 +1,29 @@
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+cn.yunji.journal.D02ProcessMatrixTest:
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=phase2ColdStartCleansBackupRestoreOrphansAndDocumentsExportWorkGap
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.D02ProcessMatrixTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+cn.yunji.journal.D02ProcessMatrixTest:
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=phase2ColdStartCleansBackupRestoreOrphansAndDocumentsExportWorkGap
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.D02ProcessMatrixTest
+INSTRUMENTATION_STATUS: stack=org.junit.AssumptionViolatedException: phase2 必须由宿主脚本驱动：标记缺少 forceStoppedAt（脚本在 force-stop 后追加）
+	at org.junit.Assume.assumeTrue(Assume.java:68)
+	at cn.yunji.journal.D02ProcessMatrixTest.hostDrivenLines(D02ProcessMatrixTest.kt:65)
+	at cn.yunji.journal.D02ProcessMatrixTest.phase2ColdStartCleansBackupRestoreOrphansAndDocumentsExportWorkGap(D02ProcessMatrixTest.kt:393)
+
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS_CODE: -4
+INSTRUMENTATION_RESULT: stream=
+
+Time: 0.028
+
+OK (1 test)
+
+
+INSTRUMENTATION_CODE: -1

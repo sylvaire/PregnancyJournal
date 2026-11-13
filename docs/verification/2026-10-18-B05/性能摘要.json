@@ -1,0 +1,92 @@
+[
+  {
+    "label": "before-small",
+    "case": "single",
+    "samples": 5,
+    "medianMs": 534,
+    "maxMs": 562,
+    "bytesPerFile": 81819,
+    "totalsMs": [
+      462,
+      530,
+      534,
+      549,
+      562
+    ]
+  },
+  {
+    "label": "before-small",
+    "case": "batch-2",
+    "samples": 5,
+    "medianMs": 1050,
+    "maxMs": 1065,
+    "bytesPerFile": 81819,
+    "totalsMs": [
+      1029,
+      1045,
+      1050,
+      1055,
+      1065
+    ]
+  },
+  {
+    "label": "after-small",
+    "case": "single",
+    "samples": 5,
+    "medianMs": 27,
+    "maxMs": 34,
+    "bytesPerFile": 81819,
+    "totalsMs": [
+      23,
+      27,
+      27,
+      31,
+      34
+    ]
+  },
+  {
+    "label": "after-small",
+    "case": "batch-2",
+    "samples": 5,
+    "medianMs": 53,
+    "maxMs": 62,
+    "bytesPerFile": 81819,
+    "totalsMs": [
+      46,
+      51,
+      53,
+      58,
+      62
+    ]
+  },
+  {
+    "label": "after-final-large",
+    "case": "single",
+    "samples": 5,
+    "medianMs": 109,
+    "maxMs": 129,
+    "bytesPerFile": 5183211,
+    "totalsMs": [
+      101,
+      106,
+      109,
+      124,
+      129
+    ]
+  },
+  {
+    "label": "after-final-large",
+    "case": "batch-2",
+    "samples": 5,
+    "medianMs": 198,
+    "maxMs": 207,
+    "bytesPerFile": 5183211,
+    "totalsMs": [
+      191,
+      197,
+      198,
+      200,
+      207
+    ]
+  }
+]

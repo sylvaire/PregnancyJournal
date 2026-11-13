@@ -1,0 +1,26 @@
+[
+  {
+    "name": "cn.yunji.journal.PregnancyRulesTest",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0
+  },
+  {
+    "name": "cn.yunji.journal.StorageAndSnapshotTest",
+    "tests": 3,
+    "failures": 0,
+    "errors": 0
+  },
+  {
+    "name": "cn.yunji.journal.VaultCryptoTest",
+    "tests": 4,
+    "failures": 0,
+    "errors": 0
+  },
+  {
+    "name": "cn.yunji.journal.WebDavClientTest",
+    "tests": 3,
+    "failures": 0,
+    "errors": 0
+  }
+]

@@ -1,0 +1,12 @@
+# MIUI autostart management (opened via the app's 打开自启动设置 button)
+
+Activity: com.miui.securitycenter/com.miui.permcenter.autostart.AutoStartManagementActivity
+
+Page text observed:
+- 自启动管理
+- 系统会根据您对应用的使用情况，智能优化不常用应用的自启动权限，以降低内存占用并减少功耗。
+- 禁止1个应用自启动
+- 孕迹   [switch = OFF]
+
+Finding: on HyperOS 3.0.309, a newly installed app's 自启动 (autostart) is DISABLED by default; the app's vendor guidance (安全中心 → 应用管理 → 自启动, 省电策略 → 无限制) is therefore actionable. This was NOT changed during the test; the isolated user was deleted afterwards.
+Implication for reminders: with autostart disabled, after reboot / background freeze the app may not be started by the system; notification delivery may be delayed. This matches the known OEM limitation and is now observed on the real device.

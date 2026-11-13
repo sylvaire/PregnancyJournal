@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="cn.yunji.journal.CloudSchedulerStoreTest" tests="6" failures="0" errors="0" skipped="0" time="29.196" timestamp="2026-10-22T03:07:51" hostname="localhost">
+  <properties>
+    <property name="device" value="PJ_API36_16K(AVD) - 16" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="automationIsOffByDefaultAndSecondaryIsNotActive" classname="cn.yunji.journal.CloudSchedulerStoreTest" time="0.009" />
+  <testcase name="confirmationPersistsOnlyTheObservedForeignCommitsAndRestoreClearsIt" classname="cn.yunji.journal.CloudSchedulerStoreTest" time="0.0" />
+  <testcase name="secondaryDeviceNeverBecomesAutoActiveEvenWhenEnabled" classname="cn.yunji.journal.CloudSchedulerStoreTest" time="0.0" />
+  <testcase name="failureCountAndBackoffStatePersistAcrossInstances" classname="cn.yunji.journal.CloudSchedulerStoreTest" time="0.0" />
+  <testcase name="resetRestoresDefaultsWithoutTouchingUploadStatus" classname="cn.yunji.journal.CloudSchedulerStoreTest" time="0.003" />
+  <testcase name="foreignWriterBlockStopsAutomationUntilPrimaryIsConfirmed" classname="cn.yunji.journal.CloudSchedulerStoreTest" time="0.004" />
+</testsuite>

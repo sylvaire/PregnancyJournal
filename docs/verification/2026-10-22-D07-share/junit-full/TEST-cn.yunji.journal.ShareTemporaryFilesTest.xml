@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.ShareTemporaryFilesTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-22T07:08:31.510Z" hostname="SUN-KDQ5E4QJN34" time="0.054">
+  <properties/>
+  <testcase name="prepareCreatesNamesOnlyInsideTheShareDirectory" classname="cn.yunji.journal.ShareTemporaryFilesTest" time="0.016"/>
+  <testcase name="prepareRejectsTraversalSeparatorsAndHiddenNames" classname="cn.yunji.journal.ShareTemporaryFilesTest" time="0.002"/>
+  <testcase name="containsAndDeleteRejectFilesOutsideTheShareDirectory" classname="cn.yunji.journal.ShareTemporaryFilesTest" time="0.013"/>
+  <testcase name="clearStaleRemovesEntriesWithUnknownTimestamps" classname="cn.yunji.journal.ShareTemporaryFilesTest" time="0.004"/>
+  <testcase name="directoryNameMustBeTheDedicatedShareDirectory" classname="cn.yunji.journal.ShareTemporaryFilesTest" time="0.001"/>
+  <testcase name="clearStaleRemovesOldFilesAndKeepsFreshOnes" classname="cn.yunji.journal.ShareTemporaryFilesTest" time="0.004"/>
+  <testcase name="prepareClearsThePreviousStagedOriginal" classname="cn.yunji.journal.ShareTemporaryFilesTest" time="0.01"/>
+  <testcase name="clearAllRemovesResidueAndKeepsTheDirectory" classname="cn.yunji.journal.ShareTemporaryFilesTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

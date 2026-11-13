@@ -1,0 +1,7 @@
+{
+  "tests": 30,
+  "failures": 0,
+  "errors": 0,
+  "suites": 10,
+  "note": "新增4项提醒规则单元测试（本地墙钟、DST缺口、用药事件、generation/snooze）。"
+}

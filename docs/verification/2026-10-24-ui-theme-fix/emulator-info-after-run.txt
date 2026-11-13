@@ -1,0 +1,18 @@
+# P0-2 UI 主题修复验证 · 模拟器状态（终版截图运行后、恢复基线前）
+生成时间（宿主）：2026-10-24 04:44:42 +08:00
+adb serial: emulator-5556
+model: sdk_gphone16k_x86_64
+sdk: 36
+abi: x86_64
+page size: 16384
+wm size: Physical size: 1080x2400
+wm density: Physical density: 420
+font_scale: 1.0
+night mode: Night mode: no
+stay_on_while_plugged_in: 0
+accelerometer_rotation: 1
+user_rotation: 0
+package cn.yunji.journal:     versionName=0.26.0-dev
+POST_NOTIFICATIONS:         android.permission.POST_NOTIFICATIONS: granted=true, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED]
+终版截图运行：UiSnapshotCoverageTest OK (17 tests) Time 53.161s（设备文件 2026-10-23 20:35 UTC = 宿主 2026-10-24 04:35 +08）；UiSnapshotTest OK (9 tests) Time 36.411s。
+说明：设备时钟为 UTC；终版运行前已删除设备旧截图目录后重跑。

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.RestoreControllerTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2026-10-21T16:29:04.712Z" hostname="SUN-KDQ5E4QJN34" time="0.011">
+  <properties/>
+  <testcase name="emptyCloudResultKeepsTheUserInTheLookupStage" classname="cn.yunji.journal.RestoreControllerTest" time="0.002"/>
+  <testcase name="cancelledUncommittedSwitchDiscardsPreview" classname="cn.yunji.journal.RestoreControllerTest" time="0.002"/>
+  <testcase name="hostPreparationFailureNeverCallsCommit" classname="cn.yunji.journal.RestoreControllerTest" time="0.001"/>
+  <testcase name="cancelledButAlreadyCommittedSwitchRemainsDone" classname="cn.yunji.journal.RestoreControllerTest" time="0.0"/>
+  <testcase name="explicitAcknowledgementRequiredAndDuplicateConfirmIgnored" classname="cn.yunji.journal.RestoreControllerTest" time="0.0"/>
+  <testcase name="commitErrorCleansUncommittedPreviewWithoutLeakingDetails" classname="cn.yunji.journal.RestoreControllerTest" time="0.001"/>
+  <testcase name="leavingTheCloudFlowClearsKeyAndSelection" classname="cn.yunji.journal.RestoreControllerTest" time="0.0"/>
+  <testcase name="asynchronousHostPreparationFreezesConfirmationBeforeCommit" classname="cn.yunji.journal.RestoreControllerTest" time="0.001"/>
+  <testcase name="failedCloudDownloadReturnsToTheListWithTheChoiceKept" classname="cn.yunji.journal.RestoreControllerTest" time="0.0"/>
+  <testcase name="leaveDiscardsPreparedPreviewAndClearsUi" classname="cn.yunji.journal.RestoreControllerTest" time="0.001"/>
+  <testcase name="cloudFlowRequiresKeyThenExplicitSnapshotBeforeDownloading" classname="cn.yunji.journal.RestoreControllerTest" time="0.001"/>
+  <testcase name="actualCommittedPointerWinsOverLateFailure" classname="cn.yunji.journal.RestoreControllerTest" time="0.0"/>
+  <testcase name="keyDisappearsBeforePreviewAndStateStringNeverExposesIt" classname="cn.yunji.journal.RestoreControllerTest" time="0.0"/>
+  <testcase name="cloudListingRejectsUnknownSnapshotsAndSurvivesLookupFailure" classname="cn.yunji.journal.RestoreControllerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

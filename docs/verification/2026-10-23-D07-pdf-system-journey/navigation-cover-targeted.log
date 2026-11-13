@@ -1,0 +1,21 @@
+
+cn.yunji.journal.NavigationExperienceTest:
+Error in documentCoverAndRelinkKeepOwnershipVisible(cn.yunji.journal.NavigationExperienceTest):
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 5000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at cn.yunji.journal.NavigationExperienceTest.documentCoverAndRelinkKeepOwnershipVisible(NavigationExperienceTest.kt:742)
+
+
+Time: 13.281
+There was 1 failure:
+1) documentCoverAndRelinkKeepOwnershipVisible(cn.yunji.journal.NavigationExperienceTest)
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 5000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at cn.yunji.journal.NavigationExperienceTest.documentCoverAndRelinkKeepOwnershipVisible(NavigationExperienceTest.kt:742)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+

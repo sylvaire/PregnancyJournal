@@ -1,0 +1,7 @@
+Starting: Intent { cmp=cn.yunji.journal/.MainActivity }
+Status: ok
+LaunchState: COLD
+Activity: cn.yunji.journal/.MainActivity
+TotalTime: 1310
+WaitTime: 1313
+Complete

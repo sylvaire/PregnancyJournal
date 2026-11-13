@@ -1,0 +1,10 @@
+{
+  "verifiedAt": "2026-10-21",
+  "api34": "207/0 (363.603s)",
+  "api36_16k": "207 run / 2 failed (205 pass); one load flake passes in isolation, one fixture interaction issue unresolved",
+  "jvm": "222/0",
+  "lint": "0 errors / 24 warnings",
+  "releaseR8": "assembleRelease success, unsigned 11.4MB",
+  "performance": "record-save P95 3.0ms / first-content P95 869ms (30 samples, API34 emulator)",
+  "pageSize": "16384 (API36 emulator), libsqlcipher load ok, ELF LOAD align 0x4000 all ABIs, zipalign -P 16 OK"
+}

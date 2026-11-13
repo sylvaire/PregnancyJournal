@@ -1,0 +1,6 @@
+captured_at=2026-10-22 15:05:10 +08:00
+font_scale=1.0
+ui_night_mode=Night mode: no
+user_rotation=0
+window_displays=    init=1080x2400 420dpi mMinSizeOfResizeableTaskDp=220 cur=1080x2400 app=1080x2400 rng=1080x1080-2400x2400
+foreground=

@@ -1,0 +1,249 @@
+
+cn.yunji.journal.NavigationExperienceTest:
+Error in documentCoverAndRelinkKeepOwnershipVisible(cn.yunji.journal.NavigationExperienceTest):
+java.lang.AssertionError: 重新关联弹窗未出现；界面=Printing with useUnmergedTree = 'false'
+Node #1 at (l=0.0, t=0.0, r=1080.0, b=2400.0)px
+ |-Node #2 at (l=0.0, t=0.0, r=1080.0, b=2400.0)px
+   Shape = 'RectangleShape'
+    |-Node #303 at (l=0.0, t=0.0, r=1080.0, b=2400.0)px
+    |  |-Node #304 at (l=0.0, t=0.0, r=1080.0, b=2400.0)px, Tag: '产检资料'
+    |    IsContainer = 'true'
+    |    Shape = 'RectangleShape'
+    |     |-Node #327 at (l=0.0, t=296.0, r=1080.0, b=2337.0)px, Tag: 'document-list'
+    |     | CollectionInfo = 'CollectionInfo(rowCount=5, columnCount=1)'
+    |     | IsTraversalGroup = 'true'
+    |     | Shape = 'androidx.compose.foundation.VerticalScrollableClipShape@e413e2c'
+    |     | VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=100.0, reverseScrolling=false)'
+    |     | Actions = [GetScrollViewportLength, IndexForKey, ScrollBy, ScrollByOffset, ScrollToIndex]
+    |     |  |-Node #331 at (l=63.0, t=317.0, r=315.0, b=401.0)px
+    |     |  | Focused = 'false'
+    |     |  | Role = 'Checkbox'
+    |     |  | Selected = 'true'
+    |     |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 8.0.dp), topEnd = CornerSize(size = 8.0.dp), bottomEnd = CornerSize(size = 8.0.dp), bottomStart = CornerSize(size = 8.0.dp))'
+    |     |  | Text = '[本次资料]'
+    |     |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |  | MergeDescendants = 'true'
+    |     |  |-Node #335 at (l=347.0, t=317.0, r=665.0, b=401.0)px
+    |     |  | Focused = 'false'
+    |     |  | Role = 'Checkbox'
+    |     |  | Selected = 'false'
+    |     |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 8.0.dp), topEnd = CornerSize(size = 8.0.dp), bottomEnd = CornerSize(size = 8.0.dp), bottomStart = CornerSize(size = 8.0.dp))'
+    |     |  | Text = '[回收站（0）]'
+    |     |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |  | MergeDescendants = 'true'
+    |     |  |-Node #341 at (l=63.0, t=454.0, r=687.0, b=499.0)px
+    |     |  | Text = '[图片或PDF · 单份最多100 MiB · 一次最多20项]'
+    |     |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |     |  |-Node #345 at (l=63.0, t=542.0, r=367.0, b=647.0)px
+    |     |  | Focused = 'false'
+    |     |  | Role = 'Button'
+    |     |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |  | Text = '[选图片]'
+    |     |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |  | MergeDescendants = 'true'
+    |     |  |-Node #348 at (l=388.0, t=542.0, r=692.0, b=647.0)px
+    |     |  | Focused = 'false'
+    |     |  | Role = 'Button'
+    |     |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |  | Text = '[选PDF]'
+    |     |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |  | MergeDescendants = 'true'
+    |     |  |-Node #351 at (l=713.0, t=542.0, r=1017.0, b=647.0)px
+    |     |  | Focused = 'false'
+    |     |  | Role = 'Button'
+    |     |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |  | Text = '[拍照]'
+    |     |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |  | MergeDescendants = 'true'
+    |     |  |-Node #362 at (l=63.0, t=689.0, r=1017.0, b=860.0)px, Tag: 'document-search'
+    |     |  | ContentDataType = 'AndroidContentDataType(androidAutofillType=1)'
+    |     |  | EditableText = ''
+    |     |  | FillableData = 'androidx.compose.ui.autofill.AndroidFillableData@1403a10'
+    |     |  | Focused = 'false'
+    |     |  | ImeAction = 'Default'
+    |     |  | InputText = ''
+    |     |  | IsEditable = 'true'
+    |     |  | Text = '[搜索名称、备注或医院]'
+    |     |  | TextSelectionRange = 'TextRange(0, 0)'
+    |     |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, InsertTextAtCursor, OnClick, OnFillData, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText, SetTextSubstitution, ShowTextSubstitution]
+    |     |  | MergeDescendants = 'true'
+    |     |  |-Node #375 at (l=63.0, t=892.0, r=357.0, b=997.0)px
+    |     |  | Focused = 'false'
+    |     |  | Role = 'Button'
+    |     |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |  | Text = '[全部分类]'
+    |     |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |  | MergeDescendants = 'true'
+    |     |  |-Node #379 at (l=378.0, t=892.0, r=672.0, b=997.0)px
+    |     |  | Focused = 'false'
+    |     |  | Role = 'Button'
+    |     |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |  | Text = '[最近导入]'
+    |     |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |  | MergeDescendants = 'true'
+    |     |  |-Node #384 at (l=63.0, t=1039.0, r=1017.0, b=2382.0)px, Tag: 'document-af2d93cb-a8cc-47fc-903f-5b87ecc726c3'
+    |     |    ContentDescription = '[产检资料缩略图]'
+    |     |    Focused = 'false'
+    |     |    IsContainer = 'true'
+    |     |    Text = '[封面关联合成资料.png, 封面, 已加密保存, 其他 · 图片 · 59 KB, 可导出原件；无法打开时可替换为新的加密原件。]'
+    |     |    Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |    MergeDescendants = 'true'
+    |     |     |-Node #394 at (l=116.0, t=1941.0, r=348.0, b=2046.0)px
+    |     |     | Focused = 'false'
+    |     |     | Role = 'Button'
+    |     |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |     | Text = '[查看大图]'
+    |     |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |     | MergeDescendants = 'true'
+    |     |     |-Node #397 at (l=369.0, t=1941.0, r=521.0, b=2046.0)px
+    |     |     | Focused = 'false'
+    |     |     | Role = 'Button'
+    |     |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |     | Text = '[编辑]'
+    |     |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |     | MergeDescendants = 'true'
+    |     |     |-Node #400 at (l=542.0, t=1941.0, r=694.0, b=2046.0)px
+    |     |     | Focused = 'false'
+    |     |     | Role = 'Button'
+    |     |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |     | Text = '[删除]'
+    |     |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |     | MergeDescendants = 'true'
+    |     |     |-Node #427 at (l=116.0, t=2099.0, r=348.0, b=2204.0)px, Tag: 'clear-cover'
+    |     |     | Focused = 'false'
+    |     | 
+	at cn.yunji.journal.NavigationExperienceTest.documentCoverAndRelinkKeepOwnershipVisible(NavigationExperienceTest.kt:745)
+	... 66 trimmed
+Caused by: androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 5000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at cn.yunji.journal.NavigationExperienceTest.documentCoverAndRelinkKeepOwnershipVisible(NavigationExperienceTest.kt:743)
+	... 67 more
+
+
+Time: 12.519
+There was 1 failure:
+1) documentCoverAndRelinkKeepOwnershipVisible(cn.yunji.journal.NavigationExperienceTest)
+java.lang.AssertionError: 重新关联弹窗未出现；界面=Printing with useUnmergedTree = 'false'
+Node #1 at (l=0.0, t=0.0, r=1080.0, b=2400.0)px
+ |-Node #2 at (l=0.0, t=0.0, r=1080.0, b=2400.0)px
+   Shape = 'RectangleShape'
+    |-Node #303 at (l=0.0, t=0.0, r=1080.0, b=2400.0)px
+    |  |-Node #304 at (l=0.0, t=0.0, r=1080.0, b=2400.0)px, Tag: '产检资料'
+    |    IsContainer = 'true'
+    |    Shape = 'RectangleShape'
+    |     |-Node #327 at (l=0.0, t=296.0, r=1080.0, b=2337.0)px, Tag: 'document-list'
+    |     | CollectionInfo = 'CollectionInfo(rowCount=5, columnCount=1)'
+    |     | IsTraversalGroup = 'true'
+    |     | Shape = 'androidx.compose.foundation.VerticalScrollableClipShape@e413e2c'
+    |     | VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=100.0, reverseScrolling=false)'
+    |     | Actions = [GetScrollViewportLength, IndexForKey, ScrollBy, ScrollByOffset, ScrollToIndex]
+    |     |  |-Node #331 at (l=63.0, t=317.0, r=315.0, b=401.0)px
+    |     |  | Focused = 'false'
+    |     |  | Role = 'Checkbox'
+    |     |  | Selected = 'true'
+    |     |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 8.0.dp), topEnd = CornerSize(size = 8.0.dp), bottomEnd = CornerSize(size = 8.0.dp), bottomStart = CornerSize(size = 8.0.dp))'
+    |     |  | Text = '[本次资料]'
+    |     |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |  | MergeDescendants = 'true'
+    |     |  |-Node #335 at (l=347.0, t=317.0, r=665.0, b=401.0)px
+    |     |  | Focused = 'false'
+    |     |  | Role = 'Checkbox'
+    |     |  | Selected = 'false'
+    |     |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 8.0.dp), topEnd = CornerSize(size = 8.0.dp), bottomEnd = CornerSize(size = 8.0.dp), bottomStart = CornerSize(size = 8.0.dp))'
+    |     |  | Text = '[回收站（0）]'
+    |     |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |  | MergeDescendants = 'true'
+    |     |  |-Node #341 at (l=63.0, t=454.0, r=687.0, b=499.0)px
+    |     |  | Text = '[图片或PDF · 单份最多100 MiB · 一次最多20项]'
+    |     |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |     |  |-Node #345 at (l=63.0, t=542.0, r=367.0, b=647.0)px
+    |     |  | Focused = 'false'
+    |     |  | Role = 'Button'
+    |     |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |  | Text = '[选图片]'
+    |     |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |  | MergeDescendants = 'true'
+    |     |  |-Node #348 at (l=388.0, t=542.0, r=692.0, b=647.0)px
+    |     |  | Focused = 'false'
+    |     |  | Role = 'Button'
+    |     |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |  | Text = '[选PDF]'
+    |     |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |  | MergeDescendants = 'true'
+    |     |  |-Node #351 at (l=713.0, t=542.0, r=1017.0, b=647.0)px
+    |     |  | Focused = 'false'
+    |     |  | Role = 'Button'
+    |     |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |  | Text = '[拍照]'
+    |     |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |  | MergeDescendants = 'true'
+    |     |  |-Node #362 at (l=63.0, t=689.0, r=1017.0, b=860.0)px, Tag: 'document-search'
+    |     |  | ContentDataType = 'AndroidContentDataType(androidAutofillType=1)'
+    |     |  | EditableText = ''
+    |     |  | FillableData = 'androidx.compose.ui.autofill.AndroidFillableData@1403a10'
+    |     |  | Focused = 'false'
+    |     |  | ImeAction = 'Default'
+    |     |  | InputText = ''
+    |     |  | IsEditable = 'true'
+    |     |  | Text = '[搜索名称、备注或医院]'
+    |     |  | TextSelectionRange = 'TextRange(0, 0)'
+    |     |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, InsertTextAtCursor, OnClick, OnFillData, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText, SetTextSubstitution, ShowTextSubstitution]
+    |     |  | MergeDescendants = 'true'
+    |     |  |-Node #375 at (l=63.0, t=892.0, r=357.0, b=997.0)px
+    |     |  | Focused = 'false'
+    |     |  | Role = 'Button'
+    |     |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |  | Text = '[全部分类]'
+    |     |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |  | MergeDescendants = 'true'
+    |     |  |-Node #379 at (l=378.0, t=892.0, r=672.0, b=997.0)px
+    |     |  | Focused = 'false'
+    |     |  | Role = 'Button'
+    |     |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |  | Text = '[最近导入]'
+    |     |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |  | MergeDescendants = 'true'
+    |     |  |-Node #384 at (l=63.0, t=1039.0, r=1017.0, b=2382.0)px, Tag: 'document-af2d93cb-a8cc-47fc-903f-5b87ecc726c3'
+    |     |    ContentDescription = '[产检资料缩略图]'
+    |     |    Focused = 'false'
+    |     |    IsContainer = 'true'
+    |     |    Text = '[封面关联合成资料.png, 封面, 已加密保存, 其他 · 图片 · 59 KB, 可导出原件；无法打开时可替换为新的加密原件。]'
+    |     |    Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |    MergeDescendants = 'true'
+    |     |     |-Node #394 at (l=116.0, t=1941.0, r=348.0, b=2046.0)px
+    |     |     | Focused = 'false'
+    |     |     | Role = 'Button'
+    |     |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |     | Text = '[查看大图]'
+    |     |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |     | MergeDescendants = 'true'
+    |     |     |-Node #397 at (l=369.0, t=1941.0, r=521.0, b=2046.0)px
+    |     |     | Focused = 'false'
+    |     |     | Role = 'Button'
+    |     |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |     | Text = '[编辑]'
+    |     |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |     | MergeDescendants = 'true'
+    |     |     |-Node #400 at (l=542.0, t=1941.0, r=694.0, b=2046.0)px
+    |     |     | Focused = 'false'
+    |     |     | Role = 'Button'
+    |     |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+    |     |     | Text = '[删除]'
+    |     |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+    |     |     | MergeDescendants = 'true'
+    |     |     |-Node #427 at (l=116.0, t=2099.0, r=348.0, b=2204.0)px, Tag: 'clear-cover'
+    |     |     | Focused = 'false'
+    |     | 
+	at cn.yunji.journal.NavigationExperienceTest.documentCoverAndRelinkKeepOwnershipVisible(NavigationExperienceTest.kt:745)
+	... 66 trimmed
+Caused by: androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 5000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at cn.yunji.journal.NavigationExperienceTest.documentCoverAndRelinkKeepOwnershipVisible(NavigationExperienceTest.kt:743)
+	... 67 more
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+

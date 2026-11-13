@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.RestoreWizardTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-10-22T05:11:26.664Z" hostname="SUN-KDQ5E4QJN34" time="0.311">
+  <properties/>
+  <testcase name="oldGenerationCannotBeReclaimedBeforeValidation" classname="cn.yunji.journal.RestoreWizardTest" time="0.031"/>
+  <testcase name="secondPrepareCannotDestroyPendingRestoreJournal" classname="cn.yunji.journal.RestoreWizardTest" time="0.025"/>
+  <testcase name="discardAfterPreviewLeavesCurrentDataUsable" classname="cn.yunji.journal.RestoreWizardTest" time="0.027"/>
+  <testcase name="actualReopenFailureRollsBackWithoutMarkingVerified" classname="cn.yunji.journal.RestoreWizardTest" time="0.033"/>
+  <testcase name="cancelledPrepareKeepsOldPointerAndNoPreparedJournal" classname="cn.yunji.journal.RestoreWizardTest" time="0.014"/>
+  <testcase name="failedImportLeavesNoStagingAndNoJournal" classname="cn.yunji.journal.RestoreWizardTest" time="0.018"/>
+  <testcase name="prepareReportsCountsWithoutTouchingLiveGeneration" classname="cn.yunji.journal.RestoreWizardTest" time="0.029"/>
+  <testcase name="commitRefusesWhenStagingDataIsMissingOrStateChanged" classname="cn.yunji.journal.RestoreWizardTest" time="0.024"/>
+  <testcase name="discardCannotDeleteActivatedGeneration" classname="cn.yunji.journal.RestoreWizardTest" time="0.031"/>
+  <testcase name="confirmationSwitchesAtomicallyAndRetainsPreviousGeneration" classname="cn.yunji.journal.RestoreWizardTest" time="0.036"/>
+  <testcase name="wrongRecoveryKeyFailsBeforeAnyGenerationOrJournalIsCreated" classname="cn.yunji.journal.RestoreWizardTest" time="0.014"/>
+  <testcase name="stalePreviewCannotCommitTwice" classname="cn.yunji.journal.RestoreWizardTest" time="0.028"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

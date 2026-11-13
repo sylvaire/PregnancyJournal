@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.StructuredExportTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-22T07:08:31.591Z" hostname="SUN-KDQ5E4QJN34" time="0.059">
+  <properties/>
+  <testcase name="sectionsAreWrittenAsSeparateArraysAndEmptySectionsStillProduceAFile" classname="cn.yunji.journal.StructuredExportTest" time="0.019"/>
+  <testcase name="manifestIsWrittenLastAndStatesCountsAndObjects" classname="cn.yunji.journal.StructuredExportTest" time="0.003"/>
+  <testcase name="fieldCatalogCoversEveryBusinessSectionAndNamesWhatIsExcluded" classname="cn.yunji.journal.StructuredExportTest" time="0.001"/>
+  <testcase name="packageContainsReadmeFieldsManifestDataSourcesAndOriginal" classname="cn.yunji.journal.StructuredExportTest" time="0.002"/>
+  <testcase name="largeOriginalStreamsWithoutBufferingWholeFile" classname="cn.yunji.journal.StructuredExportTest" time="0.025"/>
+  <testcase name="scopeValidatesRangeAndFiltersByDateAndTrash" classname="cn.yunji.journal.StructuredExportTest" time="0.001"/>
+  <testcase name="checkpointCancellationStopsTheWrite" classname="cn.yunji.journal.StructuredExportTest" time="0.004"/>
+  <testcase name="nullsAreDistinctFromEmptyTextAndOnlyCataloguedFieldsAppear" classname="cn.yunji.journal.StructuredExportTest" time="0.002"/>
+  <testcase name="mismatchedOriginalHashAbortsInsteadOfShippingWrongBytes" classname="cn.yunji.journal.StructuredExportTest" time="0.001"/>
+  <testcase name="writingRejectsSectionsOutsideTheChosenScope" classname="cn.yunji.journal.StructuredExportTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

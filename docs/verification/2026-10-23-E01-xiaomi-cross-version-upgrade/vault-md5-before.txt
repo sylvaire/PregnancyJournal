@@ -1,0 +1,4 @@
+# Vault database hash before the upgrade (captured 2026-10-23 23:05)
+023bf6e3e61f33d7214dec5292a39dc7  no_backup/vault/journal.db  (278528 bytes)
+023bf6e3e61f33d7214dec5292a39dc7  files/vault-backup-before-vc27/journal.db  (on-device backup copy, verified identical at creation)
+# Original object files listed separately in objects-md5-before-after.txt

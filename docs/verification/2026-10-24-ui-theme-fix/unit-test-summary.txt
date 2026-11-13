@@ -1,0 +1,5 @@
+# P0-2 UI 主题修复验证 · JVM 单元测试结果（testDebugUnitTest，终版）
+生成时间（宿主）：2026-10-24 04:42:30 +08:00
+结果：tests=342 failures=0 errors=0 skipped=0，测试类 XML 文件 56 个
+来源：app/build/test-results/testDebugUnitTest/TEST-*.xml
+结论：342/342 通过（0 失败 0 错误 0 跳过）

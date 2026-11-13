@@ -1,0 +1,20 @@
+=== pre-run readback 2026-10-23 23:45:54 ===
+serial=emulator-5556
+date=Fri Oct 23 15:45:55 GMT 2026
+timezone=GMT
+font_scale=1.0
+night=Night mode: no
+wm_size=Physical size: 1080x2400
+wm_density=Physical density: 420
+sdk=36
+model=sdk_gphone16k_x86_64
+pagesize=16384
+---
+=== post-run readback 2026-10-24 00:31:33 ===
+date=Fri Oct 23 16:31:32 GMT 2026
+timezone=GMT
+font_scale=1.0
+night=Night mode: no
+wm_size=Physical size: 1080x2400
+user_rotation=0
+versionName=    versionName=0.26.0-dev

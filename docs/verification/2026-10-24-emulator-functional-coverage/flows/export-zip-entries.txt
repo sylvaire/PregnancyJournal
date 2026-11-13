@@ -1,0 +1,19 @@
+zip=export-data-2026-10-24.zip
+entries=17
+README.txt  703 bytes
+fields.json  12440 bytes
+sources.json  109 bytes
+data/pregnancies.json  258 bytes
+data/date_revisions.json  184 bytes
+data/visits.json  2 bytes
+data/attachments.json  2 bytes
+data/deletion_batches.json  2 bytes
+data/medications.json  2 bytes
+data/medication_plans.json  2 bytes
+data/medication_occurrences.json  2 bytes
+data/medication_intakes.json  2 bytes
+data/metric_definitions.json  2 bytes
+data/measurements.json  2 bytes
+data/measurement_values.json  2 bytes
+data/journal_entries.json  2 bytes
+manifest.json  867 bytes

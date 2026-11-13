@@ -1,0 +1,177 @@
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\data\BackgroundAssist.kt:26: Warning: Use of REQUEST_IGNORE_BATTERY_OPTIMIZATIONS violates the Play Store Content Policy regarding acceptable use cases, as described in https://developer.android.com/training/monitoring-device-state/doze-standby.html [BatteryLife]
+        Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS, "package:${context.packageName}".toUri())
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "BatteryLife":
+   This issue flags code that either
+   * negatively affects battery life, or
+   * uses APIs that have recently changed behavior to prevent background tasks
+   from consuming memory and battery excessively.
+
+   Generally, you should be using WorkManager instead.
+
+   For more details on how to update your code, please see
+   https://developer.android.com/topic/performance/background-optimization
+
+
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\gradle\wrapper\gradle-wrapper.properties:3: Warning: A newer version of Gradle than 8.13 is available: 8.14.6 [AndroidGradlePluginVersion]
+distributionUrl=https\://downloads.gradle.org/distributions/gradle-8.13-bin.zip
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "AndroidGradlePluginVersion":
+   This detector looks for usage of the Android Gradle Plugin where the
+   version you are using is not the current stable release. Using older
+   versions is fine, and there are cases where you deliberately want to stick
+   with an older version. However, you may simply not be aware that a more
+   recent version is available, and that is what this lint check helps find.
+
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\gradle\libs.versions.toml:22: Warning: A newer version of androidx.test.espresso:espresso-core than 3.5.0 is available: 3.5.1 [GradleDependency]
+espresso = "3.5.0"
+           ~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\gradle\libs.versions.toml:3: Warning: A newer version of org.jetbrains.kotlin.android than 2.3.20 is available: 2.4.21 [NewerVersionAvailable]
+kotlin = "2.3.20"
+         ~~~~~~~~
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\gradle\libs.versions.toml:3: Warning: A newer version of org.jetbrains.kotlin.plugin.compose than 2.3.20 is available: 2.4.21 [NewerVersionAvailable]
+kotlin = "2.3.20"
+         ~~~~~~~~
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\gradle\libs.versions.toml:3: Warning: A newer version of org.jetbrains.kotlin.plugin.serialization than 2.3.20 is available: 2.4.21 [NewerVersionAvailable]
+kotlin = "2.3.20"
+         ~~~~~~~~
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\gradle\libs.versions.toml:12: Warning: A newer version of com.google.dagger.hilt.android than 2.57.2 is available: 2.60.1 [NewerVersionAvailable]
+hilt = "2.57.2"
+       ~~~~~~~~
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\gradle\libs.versions.toml:12: Warning: A newer version of com.google.dagger:hilt-android than 2.57.2 is available: 2.60.1 [NewerVersionAvailable]
+hilt = "2.57.2"
+       ~~~~~~~~
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\gradle\libs.versions.toml:12: Warning: A newer version of com.google.dagger:hilt-compiler than 2.57.2 is available: 2.60.1 [NewerVersionAvailable]
+hilt = "2.57.2"
+       ~~~~~~~~
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\gradle\libs.versions.toml:14: Warning: A newer version of org.jetbrains.kotlinx:kotlinx-coroutines-android than 1.10.2 is available: 1.11.0 [NewerVersionAvailable]
+coroutines = "1.10.2"
+             ~~~~~~~~
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\gradle\libs.versions.toml:14: Warning: A newer version of org.jetbrains.kotlinx:kotlinx-coroutines-test than 1.10.2 is available: 1.11.0 [NewerVersionAvailable]
+coroutines = "1.10.2"
+             ~~~~~~~~
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\gradle\libs.versions.toml:15: Warning: A newer version of org.jetbrains.kotlinx:kotlinx-serialization-json than 1.9.0 is available: 1.11.0 [NewerVersionAvailable]
+serialization = "1.9.0"
+                ~~~~~~~
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\gradle\libs.versions.toml:16: Warning: A newer version of com.squareup.okhttp3:mockwebserver than 4.12.0 is available: 5.5.0 [NewerVersionAvailable]
+okhttp = "4.12.0"
+         ~~~~~~~~
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\gradle\libs.versions.toml:16: Warning: A newer version of com.squareup.okhttp3:okhttp than 4.12.0 is available: 5.5.0 [NewerVersionAvailable]
+okhttp = "4.12.0"
+         ~~~~~~~~
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\gradle\libs.versions.toml:16: Warning: A newer version of com.squareup.okhttp3:okhttp-tls than 4.12.0 is available: 5.5.0 [NewerVersionAvailable]
+okhttp = "4.12.0"
+         ~~~~~~~~
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\gradle\libs.versions.toml:17: Warning: A newer version of com.google.crypto.tink:tink-android than 1.18.0 is available: 1.24.0 [NewerVersionAvailable]
+tink = "1.18.0"
+       ~~~~~~~~
+
+   Explanation for issues of type "NewerVersionAvailable":
+   This detector checks with a central repository to see if there are newer
+   versions available for the dependencies used by this project. This is
+   similar to the GradleDependency check, which checks for newer versions
+   available in the Android SDK tools and libraries, but this works with any
+   MavenCentral dependency, and connects to the library every time, which
+   makes it more flexible but also much slower.
+
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\data\CloudSchedulerStore.kt:85: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        check(prefs.edit().putStringSet("acknowledgedForeignCommitIds", accepted)
+              ~~~~~~~~~~~~
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\data\CloudSchedulerStore.kt:92: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        check(prefs.edit().clear().putString("role",DeviceRole.SECONDARY.name)
+              ~~~~~~~~~~~~
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\data\CloudUploadStatusStore.kt:49: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+    @Synchronized fun afterRestore() {check(prefs.edit().clear().commit()) {"恢复后的备份状态未保存"}}
+                                            ~~~~~~~~~~~~
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\DocumentPreview.kt:232: Warning: Use the KTX extension function Canvas.withMatrix instead? [UseKtx]
+                    native.save(); native.concat(matrix)
+                    ~~~~~~~~~~~~~
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\data\LocalRestoreAccess.kt:41: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                val uri=Uri.parse(document)
+                        ~~~~~~~~~~~~~~~~~~~
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\data\ReminderNotifier.kt:117: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+            .setData(android.net.Uri.parse("yunji://reminder-action/${android.net.Uri.encode(action)}/${android.net.Uri.encode(base.getStringExtra(ReminderContract.EXTRA_KEY))}"))
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\data\ReminderStore.kt:36: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        check(prefs.edit().putStringSet("missed-alarms", next).commit()) {"未送达提醒状态未保存"}
+              ~~~~~~~~~~~~
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\data\ReminderStore.kt:54: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        check(prefs.edit().putStringSet("delivered-alarms", next).commit()) {"提醒投递状态未保存"}
+              ~~~~~~~~~~~~
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\data\ReminderStore.kt:83: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        check(prefs.edit().putLong("generation",generation+1).remove("scheduled-keys").remove("snoozes")
+              ~~~~~~~~~~~~
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\data\SecurityStore.kt:14: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+    @Synchronized fun setLockEnabled(enabled: Boolean) { check(prefs.edit().putBoolean("lock-enabled",enabled).commit()) {"安全设置未保存，请重试"} }
+                                                               ~~~~~~~~~~~~
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\data\SecurityStore.kt:17: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+    @Synchronized fun setTimeoutMinutes(minutes: Int) { require(minutes in setOf(0,1,5));check(prefs.edit().putInt("lock-timeout",minutes).commit()) }
+                                                                                               ~~~~~~~~~~~~
+
+   Explanation for issues of type "UseKtx":
+   The Android KTX libraries decorates the Android platform SDK as well as
+   various libraries with more convenient extension functions available from
+   Kotlin, allowing you to use default parameters, named parameters, and
+   more.
+
+   Available options:
+
+   **remove-defaults** (default is true):
+   Whether to skip arguments that match the defaults provided by the extension.
+
+   Extensions often provide default values for some of the parameters. For example:
+   ```kotlin
+   fun Path.readLines(charset: Charset = Charsets.UTF_8): List<String> { return Files.readAllLines(this, charset) }
+   ```
+   This lint check will by default automatically omit parameters that match the default, so if your code was calling
+
+   ```kotlin
+   Files.readAllLines(file, Charset.UTF_8)
+   ```
+   lint would replace this with
+   ```kotlin
+   file.readLines()
+   ```
+   rather than
+
+   ```kotlin
+   file.readLines(Charset.UTF_8
+   ```
+   You can turn this behavior off using this option.
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UseKtx">
+           <option name="remove-defaults" value="true" />
+       </issue>
+   </lint>
+   ```
+
+   **require-present** (default is true):
+   Whether to only offer extensions already available.
+
+   This option lets you only have lint suggest extension replacements if those extensions are already available on the class path (in other words, you're already depending on the library containing the extension method.)
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UseKtx">
+           <option name="require-present" value="true" />
+       </issue>
+   </lint>
+   ```
+
+0 errors, 27 warnings

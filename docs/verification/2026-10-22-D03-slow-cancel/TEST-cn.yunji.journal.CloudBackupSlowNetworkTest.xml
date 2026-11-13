@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.CloudBackupSlowNetworkTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-10-22T04:40:15.513Z" hostname="SUN-KDQ5E4QJN34" time="4.438">
+  <properties/>
+  <testcase name="deletedSourceAfterPreflightFailsClosedWithoutCommit" classname="cn.yunji.journal.CloudBackupSlowNetworkTest" time="0.439"/>
+  <testcase name="interruptedVerifyDownloadFailsClosedAndRetryPublishesOnce" classname="cn.yunji.journal.CloudBackupSlowNetworkTest" time="0.132"/>
+  <testcase name="restoreCancelMidStreamRemovesStagingAndPartialObjects" classname="cn.yunji.journal.CloudBackupSlowNetworkTest" time="0.184"/>
+  <testcase name="commitConflictFailsClosedAndRetryPublishes" classname="cn.yunji.journal.CloudBackupSlowNetworkTest" time="0.081"/>
+  <testcase name="identicalCommitConflictIsReusedNotDuplicated" classname="cn.yunji.journal.CloudBackupSlowNetworkTest" time="0.06"/>
+  <testcase name="prepareServerErrorFailsWithoutPartialLayoutAndRetrySucceeds" classname="cn.yunji.journal.CloudBackupSlowNetworkTest" time="0.055"/>
+  <testcase name="readbackFailureAfterCommitLeavesExactlyOneCommitAndRetrySucceeds" classname="cn.yunji.journal.CloudBackupSlowNetworkTest" time="0.067"/>
+  <testcase name="writerStateRebuiltAfterTerminationKeepsIdentityAndAdvancesSequence" classname="cn.yunji.journal.CloudBackupSlowNetworkTest" time="0.102"/>
+  <testcase name="objectPutServerErrorFailsBeforeCommitAndRetrySucceeds" classname="cn.yunji.journal.CloudBackupSlowNetworkTest" time="0.075"/>
+  <testcase name="largeDownloadStreamsInBoundedMemory" classname="cn.yunji.journal.CloudBackupSlowNetworkTest" time="0.133"/>
+  <testcase name="mutatedSourceAfterPreflightFailsBeforeCommit" classname="cn.yunji.journal.CloudBackupSlowNetworkTest" time="0.048"/>
+  <testcase name="cancelBeforeCommitLeavesVerifiedObjectsAndRetryOnlyPublishesCommit" classname="cn.yunji.journal.CloudBackupSlowNetworkTest" time="0.065"/>
+  <testcase name="slowUploadCancelMidStreamPublishesNothingAndRetrySucceeds" classname="cn.yunji.journal.CloudBackupSlowNetworkTest" time="2.995"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

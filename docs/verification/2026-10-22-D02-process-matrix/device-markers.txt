@@ -1,0 +1,23 @@
+captured=2026-10-22T17:43:15.4020626+08:00 device=emulator-5554
+--- export-selfcheck ---
+phase=export-selfcheck pid=16224 token=d02selfcheck
+workRoot=/data/user/0/cn.yunji.journal/no_backup/vault/backup-work
+destination=/data/user/0/cn.yunji.journal/cache/task8-selfcheck-destination.yunji
+blockedAt=正在校验原件与恢复数据forceStoppedAt=1792662148
+--- export-write ---
+phase=export-write pid=16332 token=d02write key=<已脱敏的合成恢复密钥>
+destination=/data/user/0/cn.yunji.journal/files/task6-recovery-d02write/destination-prefix.yunjiforceStoppedAt=1792662150
+--- verify ---
+phase=verify pid=16438 token=d02verify key=<已脱敏的合成恢复密钥>
+archive=/data/user/0/cn.yunji.journal/files/task6-recovery-d02verify/source.yunji
+archiveDigest=a66b9c4799592585ffe59b8193ba8f412d348592764e3dde76a775c12925aae3
+blockedDuringVerify=trueforceStoppedAt=1792662154
+--- purge ---
+phase=purge pid=16548 token=d02purge key=<已脱敏的合成恢复密钥> attachmentId=d370c6b2-c983-4e4e-9274-bbca632d1bda
+objectFile=/data/user/0/cn.yunji.journal/files/task6-recovery-d02purge/vault/objects/d370c6b2-c983-4e4e-9274-bbca632d1bda.binforceStoppedAt=1792662156
+--- orphan ---
+phase=orphan pid=16652
+backupOrphan=/data/user/0/cn.yunji.journal/no_backup/vault/backup-work/job-76b9d672-2ff4-47ed-959f-9059f7271625
+backupKeep=/data/user/0/cn.yunji.journal/no_backup/vault/backup-work
+restoreOrphan=/data/user/0/cn.yunji.journal/no_backup/vault/restore-input/job-0cd2d25b-5d2c-4876-bb91-f687a50c2b12
+exportOrphan=/data/user/0/cn.yunji.journal/cache/export-work/job-2a1c29e4-4314-47c8-85b9-5bbc449a8296forceStoppedAt=1792662158

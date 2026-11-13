@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="cn.yunji.journal.ExtremeLayoutMatrixPagesTest" tests="13" failures="0" errors="0" skipped="0" time="131.874" timestamp="2026-10-22T08:25:57" hostname="localhost">
+  <properties>
+    <property name="device" value="PJ_API36_16K(AVD) - 16" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="p3MedicationPagesExtreme" classname="cn.yunji.journal.ExtremeLayoutMatrixPagesTest" time="32.458" />
+  <testcase name="p4ReminderSettingsExtreme" classname="cn.yunji.journal.ExtremeLayoutMatrixPagesTest" time="8.124" />
+  <testcase name="p1HomeAndRootEntrancesExtreme" classname="cn.yunji.journal.ExtremeLayoutMatrixPagesTest" time="10.285" />
+  <testcase name="p6PrenatalListDetailAndEditorExtreme" classname="cn.yunji.journal.ExtremeLayoutMatrixPagesTest" time="9.986" />
+  <testcase name="p5SecuritySettingsExtreme" classname="cn.yunji.journal.ExtremeLayoutMatrixPagesTest" time="4.758" />
+  <testcase name="p2TimelineLongContentExtreme" classname="cn.yunji.journal.ExtremeLayoutMatrixPagesTest" time="10.714" />
+  <testcase name="s2TimelineEmptyState" classname="cn.yunji.journal.UiStateMatrixTest" time="6.889" />
+  <testcase name="s7DocumentFailedShowsRetryAndReselect" classname="cn.yunji.journal.UiStateMatrixTest" time="8.588" />
+  <testcase name="s6DocumentLoadingQueuedState" classname="cn.yunji.journal.UiStateMatrixTest" time="8.695" />
+  <testcase name="s4MeasurementEmptyState" classname="cn.yunji.journal.UiStateMatrixTest" time="6.544" />
+  <testcase name="s3MedicationAndIntakeEmptyStates" classname="cn.yunji.journal.UiStateMatrixTest" time="8.94" />
+  <testcase name="s1VisitsEmptyState" classname="cn.yunji.journal.UiStateMatrixTest" time="5.487" />
+  <testcase name="s5DocumentEmptyState" classname="cn.yunji.journal.UiStateMatrixTest" time="7.662" />
+</testsuite>

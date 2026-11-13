@@ -1,0 +1,13 @@
+# D05 代际VMK封装持久化与Runtime解封
+
+2026-10-21：新增3项JVM，完整158项JVM/0失败；应用/测试构建、lint0错误/20警告通过。专用API34模拟器：真实恢复+两条系统备份3项通过（15.527秒）；VaultSecurityTest报告9项，其中7项执行通过、2项因安全凭据/显式live探针条件不满足跳过（1.733秒）。不把跳过写成严格认证通过。未发布新版本/安装手机。
+
+GenerationKeyStore把恢复VMK封装为gen/<id>/material.enc，暂存fd.sync→原子移动→同步代际/gen/vault目录；不覆盖已有封装。损坏/缺失时停止。RestoreWizard在验证器作用域内接收deviceVault参数并安装封装，再写PREPARED；没有提供deviceVault的旧核心测试路径不会安装，正式Runtime对此拒绝打开，正式恢复调用必须提供已解锁设备根。
+
+Runtime分别保有设备解锁根和恢复数据密钥，活动代际先解封再用恢复密钥打开SQLCipher，并绑定对应objects目录。普通模式临时设备根副本及时擦除，严格模式设备根由VaultSession管理；撤销资源时同时擦除恢复会话并清设备解锁会话。初始化异常关闭已打开数据库。
+
+新设备集成使用与来源不同的合成设备根，prepare保存封装后重新创建Store解封，使用解封VMK重开真实SQLCipher与原件。新增Runtime隔离测试沿用独立Context目录/Keystore别名：真实数据VMK与设备根不同，Runtime能读合成记录和正确对象目录，revoke擦除其恢复VMK，本机设备根重新解锁保持不变。未改个人手机凭据/严格模式，不提交真实医疗记录。
+
+初轮系统测试在删除测试输出时遇到API34 DocumentsProvider的ArraySet空指针，异常发生于清理；新增仅针对NullPointerException的独立存在性检查，只有重新openInputStream返回FileNotFound才接受文件已经删除，其余情况仍失败。最终两条流程均通过，保留初轮失败日志。Runtime测试初编译缺journalWrite导入，补齐后通过。
+
+剩余：启动SWITCHED状态的真实验证/回滚、恢复前旧库完整安全备份、恢复设置/云盘凭据/提醒及非主设备重建、确认后回收/再次恢复生命周期与UI。严格认证下恢复代际端到端、断电/进程/OEM矩阵未测，不能宣称正式换机恢复已可用。

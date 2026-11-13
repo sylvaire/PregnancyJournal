@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="cn.yunji.journal.OriginalShareDeviceTest" tests="7" failures="0" errors="0" skipped="0" time="0.964" timestamp="2026-10-22T07:03:29" hostname="localhost">
+  <properties>
+    <property name="device" value="PJ_API36_16K(AVD) - 16" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="providerIsRegisteredNonExportedWithGrantOnly" classname="cn.yunji.journal.OriginalShareDeviceTest" time="0.014" />
+  <testcase name="shareNamesNeverEscapeTheShareDirectory" classname="cn.yunji.journal.OriginalShareDeviceTest" time="0.004" />
+  <testcase name="shareIntentCarriesExactlyOneReadOnlyStream" classname="cn.yunji.journal.OriginalShareDeviceTest" time="0.042" />
+  <testcase name="residualPlaintextIsClearedWhenTheScreenStarts" classname="cn.yunji.journal.OriginalShareDeviceTest" time="0.004" />
+  <testcase name="returningRevokesThenDeletesTheTemporaryCopy" classname="cn.yunji.journal.OriginalShareDeviceTest" time="0.004" />
+  <testcase name="onlyTheShareDirectoryIsReachableThroughTheProvider" classname="cn.yunji.journal.OriginalShareDeviceTest" time="0.004" />
+  <testcase name="launchPassesExactlyThePublishedInvocation" classname="cn.yunji.journal.OriginalShareDeviceTest" time="0.004" />
+</testsuite>

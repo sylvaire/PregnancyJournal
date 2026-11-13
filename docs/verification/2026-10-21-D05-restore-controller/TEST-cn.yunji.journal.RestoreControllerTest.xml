@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.RestoreControllerTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-21T10:05:56.265Z" hostname="SUN-KDQ5E4QJN34" time="0.008">
+  <properties/>
+  <testcase name="cancelledUncommittedSwitchDiscardsPreview" classname="cn.yunji.journal.RestoreControllerTest" time="0.003"/>
+  <testcase name="cancelledButAlreadyCommittedSwitchRemainsDone" classname="cn.yunji.journal.RestoreControllerTest" time="0.001"/>
+  <testcase name="explicitAcknowledgementRequiredAndDuplicateConfirmIgnored" classname="cn.yunji.journal.RestoreControllerTest" time="0.001"/>
+  <testcase name="commitErrorCleansUncommittedPreviewWithoutLeakingDetails" classname="cn.yunji.journal.RestoreControllerTest" time="0.0"/>
+  <testcase name="leaveDiscardsPreparedPreviewAndClearsUi" classname="cn.yunji.journal.RestoreControllerTest" time="0.002"/>
+  <testcase name="actualCommittedPointerWinsOverLateFailure" classname="cn.yunji.journal.RestoreControllerTest" time="0.0"/>
+  <testcase name="keyDisappearsBeforePreviewAndStateStringNeverExposesIt" classname="cn.yunji.journal.RestoreControllerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

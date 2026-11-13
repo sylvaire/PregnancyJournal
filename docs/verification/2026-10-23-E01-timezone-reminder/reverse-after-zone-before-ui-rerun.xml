@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <long name="generation" value="39" />
+    <boolean name="visits-enabled" value="true" />
+    <set name="delivered-alarms" />
+    <set name="scheduled-keys">
+        <string>VISIT:0aae0c25-c883-4024-bb37-58ae583493b7:2026-10-25:12:00</string>
+    </set>
+    <set name="snoozes" />
+</map>

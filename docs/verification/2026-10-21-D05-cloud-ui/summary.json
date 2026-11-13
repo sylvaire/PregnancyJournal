@@ -1,0 +1,9 @@
+{
+  "totalJvmTests": 235,
+  "failures": 0,
+  "api34Tests": 210,
+  "api34Seconds": 373.6,
+  "newJvm": 5,
+  "newUi": 3,
+  "note": "云端恢复界面接线：控制器云端流程5项、恢复界面3项；LocalRestoreAccess云端粘合层尚无端到端测试。"
+}

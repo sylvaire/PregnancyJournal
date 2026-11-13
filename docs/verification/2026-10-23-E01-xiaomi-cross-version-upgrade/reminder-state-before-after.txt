@@ -1,0 +1,3 @@
+before: generation=42, scheduled-keys=7 (captured 23:05 before install)
+after: generation=45, scheduled-keys=7 (captured after first launch on vc27)
+interpretation: app startup on the new version rebuilt the 7-day reminder projection from the migrated encrypted database and re-registered AlarmManager alarms; generation advanced 42->45.

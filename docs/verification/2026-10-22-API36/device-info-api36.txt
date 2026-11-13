@@ -1,0 +1,15 @@
+=== device info ===
+collected=2026-10-22 19:37:26
+serial=emulator-5556
+sdk=36
+release=16
+model=sdk_gphone16k_x86_64
+fingerprint=google/sdk_gphone16k_x86_64/emu64xa16k:16/BE2A.250530.026.F3/13894323:user/dev-keys
+abi=x86_64
+pagesize=16384
+avd=PJ_API36_16K
+font_scale=1.0
+user_rotation=0
+night=Night mode: no
+display=    init=1080x2400 420dpi mMinSizeOfResizeableTaskDp=220 cur=1080x2400 app=1080x2400 rng=1080x1080-2400x2400
+versionName=    versionName=0.25.0-dev

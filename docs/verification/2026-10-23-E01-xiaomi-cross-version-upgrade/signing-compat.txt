@@ -1,0 +1,3 @@
+installed vc26 APK signer SHA-256: b6614bc40cd64e8e2bd38419055afd3328d94bba29bcba309b100ff84d3cde20
+new vc27 debug APK signer SHA-256: b6614bc40cd64e8e2bd38419055afd3328d94bba29bcba309b100ff84d3cde20
+=> same Android Debug certificate, upgrade-compatible (data retained)

@@ -1,0 +1,82 @@
+> Task :app:preBuild UP-TO-DATE
+> Task :app:prePerformanceBuild UP-TO-DATE
+> Task :app:mergePerformanceJniLibFolders
+> Task :app:mergePerformanceNativeLibs
+> Task :app:checkPerformanceDuplicateClasses
+> Task :app:buildKotlinToolingMetadata
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:generatePerformanceBuildConfig
+> Task :app:mergePerformanceArtProfile
+> Task :app:processPerformanceNavigationResources
+> Task :app:generatePerformanceResValues
+> Task :app:compilePerformanceNavigationResources
+> Task :app:checkPerformanceAarMetadata
+> Task :app:mapPerformanceSourceSetPaths
+> Task :app:generatePerformanceResources
+> Task :app:stripPerformanceDebugSymbols
+> Task :app:packagePerformanceResources
+> Task :app:mergePerformanceResources
+> Task :app:createPerformanceCompatibleScreenManifests
+> Task :app:extractDeepLinksPerformance
+> Task :app:processPerformanceMainManifest
+> Task :app:processPerformanceManifest
+> Task :app:parsePerformanceLocalResources
+> Task :app:processPerformanceManifestForPackage
+> Task :app:extractPerformanceNativeSymbolTables
+> Task :app:javaPreCompilePerformance
+> Task :app:extractProguardFiles UP-TO-DATE
+> Task :app:mergePerformanceStartupProfile
+> Task :app:mergePerformanceNativeDebugMetadata
+> Task :app:mergePerformanceShaders
+> Task :app:compilePerformanceShaders NO-SOURCE
+> Task :app:generatePerformanceAssets UP-TO-DATE
+> Task :app:mergePerformanceAssets
+> Task :app:compressPerformanceAssets
+> Task :app:extractPerformanceVersionControlInfo
+> Task :app:collectPerformanceDependencies
+> Task :app:processPerformanceResources
+> Task :app:sdkPerformanceDependencyData
+> Task :app:validateSigningPerformance
+> Task :app:writePerformanceAppMetadata
+> Task :app:writePerformanceSigningConfigVersions
+> Task :app:optimizePerformanceResources
+> Task :app:kspPerformanceKotlin
+
+> Task :app:compilePerformanceKotlin
+w: file:///D:/Devtools/Code/CodexWorkspace/PregnancyJournal/app/src/main/java/cn/yunji/journal/core/security/DeviceKeyStore.kt:77:23 'fun setUserAuthenticationValidityDurationSeconds(p0: Int): KeyGenParameterSpec.Builder' is deprecated. Deprecated in Java.
+w: file:///D:/Devtools/Code/CodexWorkspace/PregnancyJournal/app/src/main/java/cn/yunji/journal/data/IntakeRepository.kt:116:34 Unnecessary non-null assertion (!!) on a non-null receiver of type 'Long'.
+w: file:///D:/Devtools/Code/CodexWorkspace/PregnancyJournal/app/src/main/java/cn/yunji/journal/data/MeasurementRepository.kt:81:35 Unnecessary non-null assertion (!!) on a non-null receiver of type 'MeasurementEntity'.
+w: file:///D:/Devtools/Code/CodexWorkspace/PregnancyJournal/app/src/main/java/cn/yunji/journal/data/ReminderStore.kt:11:41 Redundant annotation target 'param'.
+w: file:///D:/Devtools/Code/CodexWorkspace/PregnancyJournal/app/src/main/java/cn/yunji/journal/data/SecurityStore.kt:11:41 Redundant annotation target 'param'.
+w: file:///D:/Devtools/Code/CodexWorkspace/PregnancyJournal/app/src/main/java/cn/yunji/journal/feature/DocumentPreview.kt:179:70 Unnecessary non-null assertion (!!) on a non-null receiver of type 'DocumentPreview'.
+w: file:///D:/Devtools/Code/CodexWorkspace/PregnancyJournal/app/src/main/java/cn/yunji/journal/feature/DocumentPreview.kt:186:86 Unnecessary safe call on a non-null receiver of type 'ImageRegion'.
+w: file:///D:/Devtools/Code/CodexWorkspace/PregnancyJournal/app/src/main/java/cn/yunji/journal/feature/PdfDocumentView.kt:89:69 Unnecessary non-null assertion (!!) on a non-null receiver of type 'DocumentPreview'.
+w: file:///D:/Devtools/Code/CodexWorkspace/PregnancyJournal/app/src/main/java/cn/yunji/journal/feature/PdfDocumentView.kt:91:43 Unnecessary non-null assertion (!!) on a non-null receiver of type 'PdfSession'.
+w: file:///D:/Devtools/Code/CodexWorkspace/PregnancyJournal/app/src/main/java/cn/yunji/journal/feature/PdfDocumentView.kt:98:86 Unnecessary safe call on a non-null receiver of type 'PdfSession'.
+w: file:///D:/Devtools/Code/CodexWorkspace/PregnancyJournal/app/src/main/java/cn/yunji/journal/feature/ReminderSettingsScreen.kt:28:21 'val LocalLifecycleOwner: ProvidableCompositionLocal<LifecycleOwner>' is deprecated. Moved to lifecycle-runtime-compose library in androidx.lifecycle.compose package.
+
+> Task :app:compilePerformanceJavaWithJavac
+> Task :app:copyRoomSchemas NO-SOURCE
+> Task :app:hiltAggregateDepsPerformance
+> Task :app:hiltJavaCompilePerformance
+> Task :app:processPerformanceJavaRes
+> Task :app:generatePerformanceLintVitalReportModel
+> Task :app:mergePerformanceJavaResource
+> Task :app:transformPerformanceClassesWithAsm
+> Task :app:mergePerformanceGeneratedProguardFiles
+> Task :app:expandPerformanceArtProfileWildcards
+> Task :app:producePerformanceComposeMapping
+> Task :app:reportPerformanceComposeMappingErrors
+> Task :app:lintVitalAnalyzePerformance
+> Task :app:lintVitalReportPerformance
+> Task :app:lintVitalPerformance
+> Task :app:minifyPerformanceWithR8
+> Task :app:mergePerformanceComposeMapping
+> Task :app:compilePerformanceArtProfile
+> Task :app:packagePerformance
+> Task :app:createPerformanceApkListingFileRedirect
+> Task :app:assemblePerformance
+w: Detected multiple Kotlin daemon sessions at 
+
+BUILD SUCCESSFUL in 2m 13s
+58 actionable tasks: 57 executed, 1 up-to-date

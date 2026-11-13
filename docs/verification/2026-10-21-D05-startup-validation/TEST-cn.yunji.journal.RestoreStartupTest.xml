@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.RestoreStartupTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-21T05:45:19.573Z" hostname="SUN-KDQ5E4QJN34" time="0.155">
+  <properties/>
+  <testcase name="reconciliationIsIdempotent" classname="cn.yunji.journal.RestoreStartupTest" time="0.027"/>
+  <testcase name="verifierSuccessMarksVerifiedOnlyAfterCallback" classname="cn.yunji.journal.RestoreStartupTest" time="0.017"/>
+  <testcase name="preparedButNeverSwitchedStagingIsDiscarded" classname="cn.yunji.journal.RestoreStartupTest" time="0.015"/>
+  <testcase name="failedFirstRestoreFallsBackToLegacyLayout" classname="cn.yunji.journal.RestoreStartupTest" time="0.015"/>
+  <testcase name="verifierFailureRollsBackAndPreservesFailedGeneration" classname="cn.yunji.journal.RestoreStartupTest" time="0.018"/>
+  <testcase name="missingOldDataDoesNotCreateEmptyFallbackOrEraseJournal" classname="cn.yunji.journal.RestoreStartupTest" time="0.014"/>
+  <testcase name="noJournalIsANormalStartup" classname="cn.yunji.journal.RestoreStartupTest" time="0.004"/>
+  <testcase name="switchedButUnreadableRollsBackToPreviousGeneration" classname="cn.yunji.journal.RestoreStartupTest" time="0.016"/>
+  <testcase name="verifiedJournalDoesNotDisturbTheActiveGeneration" classname="cn.yunji.journal.RestoreStartupTest" time="0.014"/>
+  <testcase name="switchedAndReadableStaysOnTheNewGeneration" classname="cn.yunji.journal.RestoreStartupTest" time="0.014"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

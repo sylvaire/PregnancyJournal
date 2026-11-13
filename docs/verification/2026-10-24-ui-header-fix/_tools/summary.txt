@@ -1,0 +1,66 @@
+## header title/subtitle per page (coverage)
+| page | title h before | title h after | ratio | title w before | title w after | subtitle after h | subtitle after x0 |
+|---|---|---|---|---|---|---|---|
+| cloud-connection-backup.png | 19.05 | 27.05 | 1.420 | 77.71 | 108.95 | 11.43 | 76.57 |
+| cloud-connection-cleanup.png | 19.05 | 27.05 | 1.420 | 77.71 | 108.95 | 11.43 | 76.57 |
+| cloud-connection.png | 19.05 | 27.05 | 1.420 | 77.71 | 108.95 | 11.43 | 76.57 |
+| custom-reminder-editor.png | 266.67 | 266.67 | 1.000 | 358.1 | 358.1 | — | — |
+| drug-catalog.png | 19.05 | 27.05 | 1.420 | 77.33 | 108.57 | 11.43 | 76.57 |
+| drug-editor.png | 19.05 | 26.67 | 1.400 | 77.33 | 108.95 | 11.43 | 76.57 |
+| export-screen-disabled.png | 19.05 | 26.67 | 1.400 | 77.71 | 109.33 | 11.43 | 76.57 |
+| export-screen.png | 19.05 | 26.67 | 1.400 | 77.71 | 109.33 | 11.43 | 76.57 |
+| journal-entry-editor.png | 19.05 | 26.67 | 1.400 | 96.76 | 136 | 11.43 | 76.57 |
+| local-backup.png | 19.05 | 27.05 | 1.420 | 117.71 | 165.71 | 11.43 | 76.57 |
+| measurement-editor.png | 18.67 | 26.29 | 1.408 | 77.71 | 108.95 | 11.43 | 76.57 |
+| pregnancy-editor.png | 19.05 | 27.43 | 1.440 | 117.71 | 165.71 | 11.43 | 76.57 |
+| reminder-settings-custom.png | 18.29 | 26.67 | 1.458 | 77.71 | 109.33 | 11.43 | 76.57 |
+| reminder-settings.png | 18.29 | 26.67 | 1.458 | 77.71 | 109.33 | 11.43 | 76.57 |
+| restore-wizard-key.png | 19.05 | 26.67 | 1.400 | 78.1 | 110.1 | 11.43 | 76.57 |
+| restore-wizard.png | 19.05 | 26.67 | 1.400 | 78.1 | 110.1 | 11.43 | 76.57 |
+| security-settings.png | 18.67 | 27.05 | 1.449 | 77.33 | 108.57 | 11.43 | 76.57 |
+| timeline-source-detail.png | 18.67 | 26.67 | 1.428 | 77.71 | 109.33 | 11.43 | 76.57 |
+| timeline.png | 18.67 | 27.05 | 1.449 | 97.9 | 137.14 | 11.43 | 76.57 |
+| trash-empty.png | 19.05 | 27.05 | 1.420 | 97.52 | 137.52 | 11.43 | 76.57 |
+| visit-detail.png | 19.05 | 27.05 | 1.420 | 77.71 | 109.71 | 11.43 | 76.57 |
+| visit-editor.png | 19.05 | 27.05 | 1.420 | 116.95 | 164.57 | 11.43 | 76.57 |
+
+## supplementary (root pages unchanged, title pages updated)
+| page | title h before | title h after | subtitle before | subtitle after |
+|---|---|---|---|---|
+| 01-today.png | 28.19 | 28.19 | yes | yes |
+| 02-visits.png | 27.05 | 27.05 | yes | yes |
+| 03-records-hub.png | 25.52 | 25.52 | yes | yes |
+| 04-profiles.png | 26.67 | 26.67 | yes | yes |
+| 05-medications.png | 19.05 | 27.05 | no | yes |
+| 06-intakes.png | 19.05 | 26.67 | no | yes |
+| 07-measurements.png | 19.05 | 27.05 | no | yes |
+| 08-visit-documents.png | 19.05 | 27.05 | no | yes |
+| 09-recovery.png | 19.05 | 27.05 | no | yes |
+
+## back arrow glyph -> IconButton slot x0
+export-screen.png: before glyph_x0=23.62 slot_x0=4.02 | after glyph_x0=43.43 slot_x0=23.83
+local-backup.png: before glyph_x0=23.62 slot_x0=4.02 | after glyph_x0=43.43 slot_x0=23.83
+cloud-connection.png: before glyph_x0=23.62 slot_x0=4.02 | after glyph_x0=43.43 slot_x0=23.83
+restore-wizard.png: before glyph_x0=23.62 slot_x0=4.02 | after glyph_x0=43.43 slot_x0=23.83
+
+## title colour (exact #223C32 ink px) / subtitle colour (exact #5F7166 px)
+export-screen.png: title_colour before=2788 after=7902 | subtitle_colour before=0 after=579
+local-backup.png: title_colour before=4713 after=12292 | subtitle_colour before=0 after=579
+cloud-connection.png: title_colour before=3292 after=8616 | subtitle_colour before=0 after=579
+restore-wizard.png: title_colour before=2923 after=7941 | subtitle_colour before=0 after=579
+
+## Export duplicate title (title-sized lines in top 250dp)
+export-screen.png: before [(19.05, 72.0), (22.48, 144.38)] -> after [(26.67, 69.33)]
+export-screen-disabled.png: before [(19.05, 72.0), (20.19, 153.9), (20.19, 216.0)] -> after [(26.67, 69.33), (20.19, 153.9), (20.19, 216.0)]
+
+## content heading 24sp -> 20sp
+cloud-connection.png: before ('22.86', '26.29', '212.95', '144') -> after ('19.05', '25.9', '176', '164.57')
+local-backup.png: before ('22.48', '24.76', '214.1', '144.38') -> after ('19.05', '24.76', '177.14', '164.57')
+restore-wizard.png: before ('22.86', '25.14', '214.1', '144') -> after ('19.05', '24.76', '177.14', '164.57')
+restore-wizard-key.png: before ('22.86', '25.14', '140.95', '144') -> after ('19.05', '24.76', '116.57', '164.57')
+09-recovery.png: before ('22.48', '24.76', '214.1', '144.38') -> after ('19.05', '24.76', '177.14', '164.57')
+
+## design reference (Figma 2x -> dp)
+05-VisitDetail.png: title ('26.5', '25', '110', '58') | subtitle ('11', '24.5', '47', '100')
+06-VisitEditor.png: title ('26.5', '25', '165', '58') | subtitle ('11', '24.5', '165.5', '100')
+19-CloudConnect.png: title ('26.5', '24.5', '138', '58') | subtitle ('11', '24.5', '117.5', '100')

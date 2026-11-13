@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generated from raw `am instrument -w -r` output: fixed-navigation-class-rerun.log -->
+<testsuite name="cn.yunji.journal.test" tests="23" failures="0" errors="0" skipped="0">
+  <testcase classname="cn.yunji.journal.NavigationExperienceTest" name="documentCoverAndRelinkKeepOwnershipVisible"/>
+  <testcase classname="cn.yunji.journal.NavigationExperienceTest" name="manageAndEditorReturnToTheirActualParent"/>
+  <testcase classname="cn.yunji.journal.NavigationExperienceTest" name="drugCatalogEditKeepsPlanSnapshotAndPackagePhotosFollowDrugTrash"/>
+  <testcase classname="cn.yunji.journal.NavigationExperienceTest" name="predictiveBackCancellationKeepsPageAndCommitReturnsOnce"/>
+  <testcase classname="cn.yunji.journal.NavigationExperienceTest" name="scheduledIntakeEditDeleteUndoAndManualHistoryKeepOriginalPlan"/>
+  <testcase classname="cn.yunji.journal.NavigationExperienceTest" name="calendarMonthAndCancellationRemainConsistentAfterReturning"/>
+  <testcase classname="cn.yunji.journal.NavigationExperienceTest" name="documentEntryReturnsToItsVisitAndShowsImportChoices"/>
+  <testcase classname="cn.yunji.journal.NavigationExperienceTest" name="cloudConnectionValidatesBeforeNetworkAndClearsUnsavedPasswordOnReturn"/>
+  <testcase classname="cn.yunji.journal.NavigationExperienceTest" name="reminderSettingsShowsPermissionAndTypeControls"/>
+  <testcase classname="cn.yunji.journal.NavigationExperienceTest" name="medicationDraftEditsAndHistoryRetainOldDose"/>
+  <testcase classname="cn.yunji.journal.NavigationExperienceTest" name="oldVersionBookingDraftIsRecoveredWithoutMixingPregnancies"/>
+  <testcase classname="cn.yunji.journal.NavigationExperienceTest" name="openingAndReturningWithoutChangesDoesNotCreateDraft"/>
+  <testcase classname="cn.yunji.journal.NavigationExperienceTest" name="forwardMovesInAndBackMovesOutWithoutChangingDirection"/>
+  <testcase classname="cn.yunji.journal.NavigationExperienceTest" name="retainedDocumentRelinksToRemainingVisit"/>
+  <testcase classname="cn.yunji.journal.NavigationExperienceTest" name="imageZoomDeleteUndoAndRecycleRestore"/>
+  <testcase classname="cn.yunji.journal.NavigationExperienceTest" name="timelineOpensEveryOriginalSourceAndReturnsToSelectedType"/>
+  <testcase classname="cn.yunji.journal.NavigationExperienceTest" name="measurementDraftTrendDetailDeleteAndUndoKeepExactValue"/>
+  <testcase classname="cn.yunji.journal.NavigationExperienceTest" name="globalTrashKeepsVisitReportsAndRestoresLastPregnancy"/>
+  <testcase classname="cn.yunji.journal.NavigationExperienceTest" name="journalDraftSourceEditDeleteUndoAndTimelineFilterSurviveBack"/>
+  <testcase classname="cn.yunji.journal.NavigationExperienceTest" name="rootSwitchRetainsVisitFilterAndDoesNotCreateNestedProfileRoot"/>
+  <testcase classname="cn.yunji.journal.NavigationExperienceTest" name="visitReminderCanBeSetAndCleared"/>
+  <testcase classname="cn.yunji.journal.NavigationExperienceTest" name="bookingDraftSurvivesTopBarReturn"/>
+  <testcase classname="cn.yunji.journal.NavigationExperienceTest" name="pdfNavigationMetadataSearchAndBackgroundCleanup"/>
+</testsuite>

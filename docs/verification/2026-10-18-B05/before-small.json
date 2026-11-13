@@ -1,0 +1,82 @@
+[
+  {
+    "iteration": 1,
+    "bytes": 81819,
+    "width": 256,
+    "height": 384,
+    "encrypt": 143,
+    "authenticate": 1,
+    "thumbnail": 130,
+    "total": 562
+  },
+  {
+    "iteration": 2,
+    "bytes": 81819,
+    "width": 256,
+    "height": 384,
+    "encrypt": 154,
+    "authenticate": 1,
+    "thumbnail": 111,
+    "total": 462
+  },
+  {
+    "iteration": 3,
+    "bytes": 81819,
+    "width": 256,
+    "height": 384,
+    "encrypt": 171,
+    "authenticate": 1,
+    "thumbnail": 126,
+    "total": 534
+  },
+  {
+    "iteration": 4,
+    "bytes": 81819,
+    "width": 256,
+    "height": 384,
+    "encrypt": 157,
+    "authenticate": 1,
+    "thumbnail": 126,
+    "total": 530
+  },
+  {
+    "iteration": 5,
+    "bytes": 81819,
+    "width": 256,
+    "height": 384,
+    "encrypt": 179,
+    "authenticate": 1,
+    "thumbnail": 124,
+    "total": 549
+  },
+  {
+    "case": "batch-2",
+    "iteration": 1,
+    "bytesPerFile": 81819,
+    "total": 1029
+  },
+  {
+    "case": "batch-2",
+    "iteration": 2,
+    "bytesPerFile": 81819,
+    "total": 1045
+  },
+  {
+    "case": "batch-2",
+    "iteration": 3,
+    "bytesPerFile": 81819,
+    "total": 1050
+  },
+  {
+    "case": "batch-2",
+    "iteration": 4,
+    "bytesPerFile": 81819,
+    "total": 1055
+  },
+  {
+    "case": "batch-2",
+    "iteration": 5,
+    "bytesPerFile": 81819,
+    "total": 1065
+  }
+]

@@ -1,0 +1,7 @@
+Android lint（命令：.\gradlew.bat :app:lintDebug --console=plain）
+当前：0 errors, 35 warnings（见 lint-results.txt/xml）
+D04 归档基线（docs/verification/2026-10-22-D04-writer-arbitration/lint-results.xml）：0 errors, 29 warnings
+按 issue 类型对比：  基线: AndroidGradlePluginVersion=1, ExifInterface=2, GradleDependency=4, NewerVersionAvailable=13, UseKtx=9
+  当前: AndroidGradlePluginVersion=2, ExifInterface=2, GradleDependency=9, NewerVersionAvailable=13, UseKtx=9
+差异 6 项全部为依赖/插件新版本可用检查（GradleDependency +5、AndroidGradlePluginVersion +1），位置仅在 gradle/libs.versions.toml 与 gradle/wrapper/gradle-wrapper.properties；与本轮改动无关。
+本轮新增/修改文件（app/src/test/java/cn/yunji/journal/CloudBackupSlowNetworkTest.kt、docs/*）在 lint 中 0 条。ExifInterface/UseKtx 共 11 条为既有主代码告警，未变化。

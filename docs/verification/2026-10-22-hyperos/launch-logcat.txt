@@ -1,0 +1,42 @@
+
+10-22 21:23:00.556 18842 18842 D ActivityThread: Package [cn.yunji.journal] reported as REPLACED, but missing application info. Assuming REMOVED.
+10-22 21:23:00.556 15091 15091 D ActivityThread: Package [cn.yunji.journal] reported as REPLACED, but missing application info. Assuming REMOVED.
+10-22 21:23:00.556  5322  5322 D ActivityThread: Package [cn.yunji.journal] reported as REPLACED, but missing application info. Assuming REMOVED.
+10-22 21:23:00.557 15781 15781 D ActivityThread: Package [cn.yunji.journal] reported as REPLACED, but missing application info. Assuming REMOVED.
+10-22 21:23:00.558 15781 15781 D ActivityThread: Package [cn.yunji.journal] reported as REPLACED, but missing application info. Assuming REMOVED.
+10-22 21:23:00.560 15091 15091 D ActivityThread: Package [cn.yunji.journal] reported as REPLACED, but missing application info. Assuming REMOVED.
+10-22 21:23:00.562 11433 11433 D ActivityThread: Package [cn.yunji.journal] reported as REPLACED, but missing application info. Assuming REMOVED.
+10-22 21:23:00.562  5014  5014 D ActivityThread: Package [cn.yunji.journal] reported as REPLACED, but missing application info. Assuming REMOVED.
+10-22 21:23:00.563 21159 21159 D ActivityThread: Package [cn.yunji.journal] reported as REPLACED, but missing application info. Assuming REMOVED.
+10-22 21:23:00.564 21159 21159 D ActivityThread: Package [cn.yunji.journal] reported as REPLACED, but missing application info. Assuming REMOVED.
+10-22 21:23:00.566 18842 19234 I Market-PackageMonitor: [Download/Install] onReceive: android.intent.action.PACKAGE_REMOVED, pkg: cn.yunji.journal
+10-22 21:23:00.566 18842 19245 I Market-PackageMonitor: [Download/Install] onReceive: android.intent.action.PACKAGE_ADDED, pkg: cn.yunji.journal
+10-22 21:23:00.567 18842 19245 I Market-LocalAppManager: add package to list: cn.yunji.journal
+10-22 21:23:00.641 14297 14297 I Finsky:background: [2] IQ: onPackageRemoved cn.yunji.journal, replacing=true, uninstallingFromPlay=false
+10-22 21:23:00.681 14297 14297 D ActivityThread: Package [cn.yunji.journal] reported as REPLACED, but missing application info. Assuming REMOVED.
+10-22 21:23:00.692 14500 14500 I Finsky  : [2] AIM: AppInfoCacheUpdater -> invalidating apps: [cn.yunji.journal]
+10-22 21:23:00.701 14500 14584 I Finsky  : [106454] AIM: AppInfoManager-Perf > OnDeviceAppInfo > cacheHitCount=0, cacheMissCount=1. Missed  in cache (limit 10) : [cn.yunji.journal]
+10-22 21:23:00.714 14500 14585 D IconCustomizer: Generate customized icon for cn.yunji.journal.png, false
+10-22 21:23:00.716 14500 14500 I Finsky  : [2] AIM: AppInfoCacheUpdater -> invalidating apps: [cn.yunji.journal]
+10-22 21:23:00.717 14500 14584 I Finsky  : [106454] AIM: AppInfoManager-Perf > OnDeviceAppInfo > cacheHitCount=0, cacheMissCount=1. Missed  in cache (limit 10) : [cn.yunji.journal]
+10-22 21:23:00.740 14500 14500 D ActivityThread: Package [cn.yunji.journal] reported as REPLACED, but missing application info. Assuming REMOVED.
+10-22 21:23:00.791  1772  1772 I vendor.qti.hardware.servicetrackeraidl-service: unbindService is called for service : cn.yunji.journal/androidx.work.impl.background.systemjob.SystemJobService and for client system
+10-22 21:23:00.791  2408  5620 W SSRU-ResourceUsageProxy: Nonexistent ongoing transaction JDR:108 for u:0 pkg:cn.yunji.journal ended
+10-22 21:23:00.793  2408  4835 W SSRU-ResourceUsageProxy: Nonexistent ongoing transaction JDR:107 for u:0 pkg:cn.yunji.journal ended
+10-22 21:23:00.794  1772  1772 I vendor.qti.hardware.servicetrackeraidl-service: unbindService is called for service : cn.yunji.journal/androidx.work.impl.background.systemjob.SystemJobService and for client system
+10-22 21:23:00.795  2408  4570 I whetstone.activity: processNotifyEvent1 resId = 256, bundle = Bundle[{startTime=1621573411, sourcePkg=cn.yunji.journal, sourceUid=10554, status=0, jobId=108, batteryName=@androidx.work.systemjobscheduler@cn.yunji.journal/androidx.work.impl.background.systemjob.SystemJobService, elapsedRealtime=1621573411}]
+10-22 21:23:00.795  2408  4570 I whetstone.activity: processNotifyEvent1 resId = 256, bundle = Bundle[{startTime=1621573413, sourcePkg=cn.yunji.journal, sourceUid=10554, status=0, jobId=107, batteryName=@androidx.work.systemjobscheduler@cn.yunji.journal/androidx.work.impl.background.systemjob.SystemJobService, elapsedRealtime=1621573413}]
+10-22 21:23:00.798 12914 21564 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=b9dc39e9-f36d-4789-b48f-88468e070b3d, tags={ cn.yunji.journal.data.ReminderWorker } ]
+10-22 21:23:00.842  2408  4570 I whetstone.activity: processNotifyEvent1 resId = 256, bundle = Bundle[{startTime=1621573463, sourcePkg=cn.yunji.journal, sourceUid=10554, status=0, jobId=110, batteryName=@androidx.work.systemjobscheduler@cn.yunji.journal/androidx.work.impl.background.systemjob.SystemJobService, elapsedRealtime=1621573463}]
+10-22 21:23:00.843  1772  1772 I vendor.qti.hardware.servicetrackeraidl-service: unbindService is called for service : cn.yunji.journal/androidx.work.impl.background.systemjob.SystemJobService and for client system
+10-22 21:23:00.843  1772  1772 I vendor.qti.hardware.servicetrackeraidl-service: size of service connections for service: cn.yunji.journal/androidx.work.impl.background.systemjob.SystemJobServiceafter removal is 0
+10-22 21:23:00.844  1772  1772 I vendor.qti.hardware.servicetrackeraidl-service: destroyService is called for service : cn.yunji.journal/androidx.work.impl.background.systemjob.SystemJobService
+10-22 21:23:00.844  2408  6762 W SSRU-ResourceUsageProxy: Nonexistent ongoing transaction JDR:110 for u:0 pkg:cn.yunji.journal ended
+10-22 21:23:01.051 11606 17401 D MiEvent : flatten EventId 902001004 -t 1792675381 -paraList {"Delay":314,"LayerName":"allSame","PackageName":"cn.yunji.journal","Scene":"FocusApp-Animating"}
+10-22 21:23:01.052 11606 17401 D MiEvent : report:EventId 902001004 -t 1792675381 -paraList {"Delay":314,"LayerName":"allSame","PackageName":"cn.yunji.journal","Scene":"FocusApp-Animating"} success
+10-22 21:23:01.052 11606 17401 D MiEvent : flatten EventId 902001003 -t 1792675381 -paraList {"Delay":340,"LayerName":"allSame","PackageName":"cn.yunji.journal","Scene":"FocusApp-Animating"}
+10-22 21:23:01.052 11606 17401 D MiEvent : report:EventId 902001003 -t 1792675381 -paraList {"Delay":340,"LayerName":"allSame","PackageName":"cn.yunji.journal","Scene":"FocusApp-Animating"} success
+10-22 21:23:01.405 12914 21709 D ProfileInstaller: Installing profile for cn.yunji.journal
+10-22 21:23:04.739 27155 27155 I adbd    : in ShellService: pidof cn.yunji.journal
+10-22 21:23:05.386  2028  2028 I SurfaceFlinger: SF-MICapture: mode:0, layerName:cn.yunji.journal/cn.yunji.journal.MainActivity#203890
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.RestoreCompletionTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-22T07:08:30.631Z" hostname="SUN-KDQ5E4QJN34" time="0.014">
+  <properties/>
+  <testcase name="successfulEffectsAreNotRepeatedOnNextStartup" classname="cn.yunji.journal.RestoreCompletionTest" time="0.006"/>
+  <testcase name="stalePendingCannotMasqueradeAsCompleted" classname="cn.yunji.journal.RestoreCompletionTest" time="0.004"/>
+  <testcase name="malformedReadyFailsClosedWithoutReapplyingUserSettings" classname="cn.yunji.journal.RestoreCompletionTest" time="0.001"/>
+  <testcase name="failedEffectsLeaveNoReadyAndAreRetried" classname="cn.yunji.journal.RestoreCompletionTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

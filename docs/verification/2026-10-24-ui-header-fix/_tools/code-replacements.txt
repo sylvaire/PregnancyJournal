@@ -1,0 +1,58 @@
+# Code-level verification for task-8 (P0-4 header fix), generated 2026-10-24T07:10:46.1650304+08:00
+
+## headlineSmall occurrences in app/src/main (expect 0)
+count=0
+
+## headlineMedium (JournalPageHeader title) occurrences
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\core\designsystem\Components.kt:93: Text(title, style = MaterialTheme.typography.headlineMedium)
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\core\designsystem\Components.kt:119: Text(title, style = MaterialTheme.typography.headlineMedium, maxLines = 1, overflow = TextOverflow.Ellipsis)
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\core\designsystem\Theme.kt:63: headlineMedium = type(28, 42, FontWeight.Bold), titleLarge = type(20, 30, FontWeight.Medium),
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\JournalApp.kt:167: Text(visit.items.ifBlank { "产检预约" }, style = MaterialTheme.typography.headlineMedium)
+
+## TopAppBar / TopAppBarDefaults occurrences (expect only the KDOC reference + windowInsets usage)
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\core\designsystem\Components.kt:105: * [TopAppBarDefaults.windowInsets] as the previous Material3 TopAppBar and the Scaffold keeps
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\core\designsystem\Components.kt:110: .windowInsetsPadding(TopAppBarDefaults.windowInsets)
+
+## JournalPageHeader occurrences (definition + JournalPage call)
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\core\designsystem\Components.kt:108: @Composable fun JournalPageHeader(title: String, subtitle: String? = null, onBack: (() -> Unit)? = null) {
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\JournalNavigation.kt:370: topBar = { if (title != null) JournalPageHeader(title = title, subtitle = if (back != null) "返回上一级" else null, onBack = back) },
+
+## navigate-up testTag (expect exactly 1, inside JournalPageHeader)
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\core\designsystem\Components.kt:101: * as the content. The optional back affordance keeps the `navigate-up` test tag, the mirrored
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\core\designsystem\Components.kt:113: if (onBack != null) IconButton(onBack, Modifier.testTag("navigate-up")) {
+
+## Return subtitle literal "返回上一级" in JournalNavigation (expect 1)
+JournalNavigation.kt:370: topBar = { if (title != null) JournalPageHeader(title = title, subtitle = if (back != null) "返回上一级" else null, onBack = back) },
+
+## ExportScreen page-title duplication removed (expect 0 "导出资料" in ExportScreen.kt)
+ExportScreen-导出资料-count=0
+
+## titleLarge conversions (Cloud 1 / Recovery 1 / Restore 7 = 9)
+CloudConnectionScreen.kt titleLarge=3
+RecoveryScreen.kt titleLarge=2
+RestoreScreen.kt titleLarge=9
+
+## Render-output files changed (product files)
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\core\designsystem\Components.kt size=7627 mtime=10/24/2026 06:34:26
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\JournalNavigation.kt size=27657 mtime=10/24/2026 06:34:57
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\ExportScreen.kt size=6219 mtime=10/24/2026 06:34:43
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\CloudConnectionScreen.kt size=17097 mtime=10/24/2026 06:34:43
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\RecoveryScreen.kt size=10883 mtime=10/24/2026 06:34:43
+D:\Devtools\Code\CodexWorkspace\PregnancyJournal\app\src\main\java\cn\yunji\journal\feature\RestoreScreen.kt size=8927 mtime=10/24/2026 06:34:47
+
+## Test-side adaptation (Lead-authorized, NavigationExperienceTest.kt lines 533-546)
+        // The empty-state card is a lazy item: scroll the list until it is actually composed. Whether it is
+        // already on screen depends on the device's insets, so waiting for it alone is not reliable.
+        ui.onNodeWithTag("document-list").performScrollToNode(hasText("没有匹配的资料"))
+        ui.onNodeWithText("没有匹配的资料").assertExists()
+        // The 28 sp JournalPageHeader is taller than the old 20 sp TopAppBar, so with the IME open the
+        // lazy viewport is short enough that the empty card's clear button can sit just outside it:
+        // scroll the button itself into view before tapping, otherwise the tap is injected off-list.
+        ui.onNodeWithText("清除搜索与筛选").performScrollTo().performClick(); settle()
+        // The document card is a lazy item below the search block; scroll the list until it is composed
+        // instead of assuming it is already inside the composition window.
+        ui.onNodeWithTag("document-list").performScrollToNode(hasText("查看PDF"))
+        ui.waitUntil(10_000) { ui.onAllNodesWithText("查看PDF").fetchSemanticsNodes().isNotEmpty() }
+        ui.onNodeWithText("查看PDF").performScrollTo()
+        ui.onNodeWithText("查看PDF").performClick(); settle()
+        ui.waitUntil(10_000) { ui.onAllNodesWithTag("document-pdf").fetchSemanticsNodes().isNotEmpty() }

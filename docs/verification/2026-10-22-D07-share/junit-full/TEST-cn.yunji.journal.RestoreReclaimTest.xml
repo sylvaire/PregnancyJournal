@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.RestoreReclaimTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2026-10-22T07:08:30.658Z" hostname="SUN-KDQ5E4QJN34" time="0.216">
+  <properties/>
+  <testcase name="reclaimKeepsSafetyCopiesExportsAndForeignFiles" classname="cn.yunji.journal.RestoreReclaimTest" time="0.018"/>
+  <testcase name="preparedRestoreBlocksReclaimAndKeepsEverything" classname="cn.yunji.journal.RestoreReclaimTest" time="0.017"/>
+  <testcase name="unusableActiveGenerationBlocksReclaim" classname="cn.yunji.journal.RestoreReclaimTest" time="0.01"/>
+  <testcase name="legacyVaultWithoutAPointerHasNothingToReclaim" classname="cn.yunji.journal.RestoreReclaimTest" time="0.002"/>
+  <testcase name="corruptedPointerIsReportedInsteadOfDeleting" classname="cn.yunji.journal.RestoreReclaimTest" time="0.009"/>
+  <testcase name="inconsistentPointerIsReportedAndNeverDeletesAnything" classname="cn.yunji.journal.RestoreReclaimTest" time="0.009"/>
+  <testcase name="orphanTrashFromAnEarlierInterruptedReclaimIsCleanedByTheNextReclaim" classname="cn.yunji.journal.RestoreReclaimTest" time="0.015"/>
+  <testcase name="activeGenerationWithoutPreviousHasNothingToReclaim" classname="cn.yunji.journal.RestoreReclaimTest" time="0.009"/>
+  <testcase name="verifiedCompletedRestoreExposesAndThenReclaimsOnlyThePreviousGeneration" classname="cn.yunji.journal.RestoreReclaimTest" time="0.018"/>
+  <testcase name="interruptedSecondRestoreAfterReclaimRollsBackToTheActiveGeneration" classname="cn.yunji.journal.RestoreReclaimTest" time="0.021"/>
+  <testcase name="switchedRestoreBlocksReclaimUntilReopenCompletes" classname="cn.yunji.journal.RestoreReclaimTest" time="0.013"/>
+  <testcase name="reclaimIsIdempotentAndNeverTouchesTheActiveGeneration" classname="cn.yunji.journal.RestoreReclaimTest" time="0.014"/>
+  <testcase name="clearedJournalAfterReopenStillAllowsReclaimAndStartupIsNormal" classname="cn.yunji.journal.RestoreReclaimTest" time="0.017"/>
+  <testcase name="interruptedRenameIsFinishedByRetry" classname="cn.yunji.journal.RestoreReclaimTest" time="0.013"/>
+  <testcase name="startupLeavesJournalWhenRollbackCannotProveAnyUsableGeneration" classname="cn.yunji.journal.RestoreReclaimTest" time="0.008"/>
+  <testcase name="secondRestoreAfterReclaimCanReclaimItsOwnPreviousAndReopen" classname="cn.yunji.journal.RestoreReclaimTest" time="0.023"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

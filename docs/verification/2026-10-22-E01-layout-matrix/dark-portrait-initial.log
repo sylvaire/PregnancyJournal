@@ -1,0 +1,66 @@
+
+cn.yunji.journal.NavigationExperienceTest:
+Error in manageAndEditorReturnToTheirActualParent(cn.yunji.journal.NavigationExperienceTest):
+java.lang.AssertionError: Failed to inject touch input.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains '管理我的孕期' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performTouchInput(Actions.kt:402)
+	at androidx.compose.ui.test.AndroidActions.performClickImpl(Actions.android.kt:23)
+	at androidx.compose.ui.test.ActionsKt.performClick(Actions.kt:60)
+	at cn.yunji.journal.NavigationExperienceTest.manageAndEditorReturnToTheirActualParent(NavigationExperienceTest.kt:760)
+
+Error in drugCatalogEditKeepsPlanSnapshotAndPackagePhotosFollowDrugTrash(cn.yunji.journal.NavigationExperienceTest):
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 5000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at cn.yunji.journal.NavigationExperienceTest.drugCatalogEditKeepsPlanSnapshotAndPackagePhotosFollowDrugTrash(NavigationExperienceTest.kt:355)
+
+Error in scheduledIntakeEditDeleteUndoAndManualHistoryKeepOriginalPlan(cn.yunji.journal.NavigationExperienceTest):
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 10000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at cn.yunji.journal.NavigationExperienceTest.scheduledIntakeEditDeleteUndoAndManualHistoryKeepOriginalPlan(NavigationExperienceTest.kt:260)
+
+Error in pdfNavigationMetadataSearchAndBackgroundCleanup(cn.yunji.journal.NavigationExperienceTest):
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 10000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at cn.yunji.journal.NavigationExperienceTest.pdfNavigationMetadataSearchAndBackgroundCleanup(NavigationExperienceTest.kt:498)
+
+
+Time: 53.776
+There were 4 failures:
+1) manageAndEditorReturnToTheirActualParent(cn.yunji.journal.NavigationExperienceTest)
+java.lang.AssertionError: Failed to inject touch input.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains '管理我的孕期' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performTouchInput(Actions.kt:402)
+	at androidx.compose.ui.test.AndroidActions.performClickImpl(Actions.android.kt:23)
+	at androidx.compose.ui.test.ActionsKt.performClick(Actions.kt:60)
+	at cn.yunji.journal.NavigationExperienceTest.manageAndEditorReturnToTheirActualParent(NavigationExperienceTest.kt:760)
+2) drugCatalogEditKeepsPlanSnapshotAndPackagePhotosFollowDrugTrash(cn.yunji.journal.NavigationExperienceTest)
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 5000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at cn.yunji.journal.NavigationExperienceTest.drugCatalogEditKeepsPlanSnapshotAndPackagePhotosFollowDrugTrash(NavigationExperienceTest.kt:355)
+3) scheduledIntakeEditDeleteUndoAndManualHistoryKeepOriginalPlan(cn.yunji.journal.NavigationExperienceTest)
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 10000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at cn.yunji.journal.NavigationExperienceTest.scheduledIntakeEditDeleteUndoAndManualHistoryKeepOriginalPlan(NavigationExperienceTest.kt:260)
+4) pdfNavigationMetadataSearchAndBackgroundCleanup(cn.yunji.journal.NavigationExperienceTest)
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 10000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at cn.yunji.journal.NavigationExperienceTest.pdfNavigationMetadataSearchAndBackgroundCleanup(NavigationExperienceTest.kt:498)
+
+FAILURES!!!
+Tests run: 4,  Failures: 4
+
+

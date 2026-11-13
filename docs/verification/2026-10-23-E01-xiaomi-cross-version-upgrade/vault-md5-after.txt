@@ -1,0 +1,4 @@
+# Vault database hash after the upgrade (captured 2026-10-23 23:47)
+9a8caecba6449521723b39151aff6f6b  no_backup/vault/journal.db  (290816 bytes)
+# journal.db was rewritten by the schema13 -> schema14 migration; WAL 49472 bytes right after first launch, checkpointed to 0 after the app process restarted at 23:41.
+# The change is expected; the app opened the migrated database without Room integrity errors.

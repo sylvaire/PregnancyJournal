@@ -1,0 +1,19 @@
+# P0-2 UI 主题修复验证 · 模拟器基线恢复记录
+恢复时间（宿主）：2026-10-24 04:43:03 +08:00
+设备：emulator-5556（PJ_API36_16K / Android 16 / API36 / 16KiB / 1080x2400 / 420dpi）
+恢复动作：
+  1) settings put system font_scale 1.0
+  2) cmd uimode night no（浅色）
+  3) settings put global stay_on_while_plugged_in 0（关 stay_on）
+  4) settings put system accelerometer_rotation 1；settings put system user_rotation 0（竖屏；与本轮开始前一致）
+  5) am force-stop cn.yunji.journal；am force-stop cn.yunji.journal.test；am kill-all
+
+恢复后核对：
+font_scale=1.0
+night=Night mode: no
+stay_on_while_plugged_in=0
+accelerometer_rotation=1
+user_rotation=0
+wm size=Physical size: 1080x2400
+当前前台/进程残留（期望无 cn.yunji.journal 进程）：
+

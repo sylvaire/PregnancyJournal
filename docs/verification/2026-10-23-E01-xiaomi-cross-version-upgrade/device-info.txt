@@ -1,0 +1,12 @@
+# Xiaomi 14 Pro device info (captured 2026-10-23 23:2x Asia/Shanghai)
+model=23116PN5BC
+device=shennong
+manufacturer=Xiaomi
+android_release=16
+sdk=36
+incremental=OS3.0.309.0.WNBCNXM
+mi_os=OS3.0
+page_size=4096
+wm_size=Physical size: 1440x3200
+wm_density=Physical density: 560
+timezone=Asia/Shanghai

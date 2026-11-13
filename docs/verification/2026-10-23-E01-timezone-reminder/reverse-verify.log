@@ -1,0 +1,47 @@
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ReminderColdProcessAlarmTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+cn.yunji.journal.ReminderColdProcessAlarmTest:
+INSTRUMENTATION_STATUS: test=verifyReverseTimeZoneRebuildAndCleanFixture
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ReminderColdProcessAlarmTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: 系统闹钟未重新注册
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertNotNull(Assert.java:713)
+	at cn.yunji.journal.ReminderColdProcessAlarmTest.verifyTimeZoneChange(ReminderColdProcessAlarmTest.kt:173)
+	at cn.yunji.journal.ReminderColdProcessAlarmTest.verifyReverseTimeZoneRebuildAndCleanFixture(ReminderColdProcessAlarmTest.kt:142)
+
+INSTRUMENTATION_STATUS: stream=
+Error in verifyReverseTimeZoneRebuildAndCleanFixture(cn.yunji.journal.ReminderColdProcessAlarmTest):
+java.lang.AssertionError: 系统闹钟未重新注册
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertNotNull(Assert.java:713)
+	at cn.yunji.journal.ReminderColdProcessAlarmTest.verifyTimeZoneChange(ReminderColdProcessAlarmTest.kt:173)
+	at cn.yunji.journal.ReminderColdProcessAlarmTest.verifyReverseTimeZoneRebuildAndCleanFixture(ReminderColdProcessAlarmTest.kt:142)
+
+INSTRUMENTATION_STATUS: test=verifyReverseTimeZoneRebuildAndCleanFixture
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 2.231
+There was 1 failure:
+1) verifyReverseTimeZoneRebuildAndCleanFixture(cn.yunji.journal.ReminderColdProcessAlarmTest)
+java.lang.AssertionError: 系统闹钟未重新注册
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertNotNull(Assert.java:713)
+	at cn.yunji.journal.ReminderColdProcessAlarmTest.verifyTimeZoneChange(ReminderColdProcessAlarmTest.kt:173)
+	at cn.yunji.journal.ReminderColdProcessAlarmTest.verifyReverseTimeZoneRebuildAndCleanFixture(ReminderColdProcessAlarmTest.kt:142)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

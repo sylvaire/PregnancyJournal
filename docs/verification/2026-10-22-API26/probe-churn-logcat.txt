@@ -1,0 +1,54 @@
+--------- beginning of main
+--------- beginning of system
+10-22 08:39:39.967  9678  9696 I Api26PdfProbe: repeat-writer-0 len=108188 pages=1
+10-22 08:39:48.757  9678  9696 I Api26PdfProbe: repeat-writer-1 len=108188 pages=1
+10-22 08:39:57.430  9678  9696 I Api26PdfProbe: repeat-writer-2 len=108188 pages=1
+10-22 08:40:06.018  9678  9696 I Api26PdfProbe: repeat-writer-3 len=108188 pages=1
+10-22 08:40:14.574  9678  9696 I Api26PdfProbe: repeat-writer-4 len=108188 pages=1
+10-22 08:40:22.902  9678  9696 I Api26PdfProbe: repeat-writer-5 len=108188 pages=1
+10-22 08:40:31.478  9678  9696 I Api26PdfProbe: repeat-writer-6 len=108188 pages=1
+10-22 08:40:39.884  9678  9696 I Api26PdfProbe: repeat-writer-7 len=108188 pages=1
+10-22 08:40:48.643  9678  9696 I Api26PdfProbe: repeat-writer-8 len=108188 pages=1
+10-22 08:40:57.502  9678  9696 I Api26PdfProbe: repeat-writer-9 len=108188 pages=1
+10-22 08:40:57.506  9678  9696 I Api26PdfProbe: small-blank-bytearray.pdf len=810 sha=2f3d6ebf12d5dd46c87934f3c7dc2586cad1ac92f27a3fbf7a8d15a603015fed header=25 50 44 46 2d 31 2e 34
+10-22 08:40:57.510  9678  9696 I Api26PdfProbe: small-blank-bytearray.pdf pages=1
+10-22 08:40:57.511  9678  9696 I Api26PdfProbe: small-blank-bytearray.pdf page0 200x300 dark=0
+10-22 08:41:06.270  9678  9696 I Api26PdfProbe: writer-stream-copied.pdf len=108188 sha=4f73fca4270c48c51bc0e5ab45035d95bcb11b5aab66d1785f7facd40a6cd8f8 header=25 50 44 46 2d 31 2e 34
+10-22 08:41:06.275  9678  9696 I Api26PdfProbe: writer-stream-copied.pdf pages=1
+10-22 08:41:06.286  9678  9696 I Api26PdfProbe: writer-stream-copied.pdf page0 595x842 dark=298
+10-22 08:41:15.170  9678  9696 I Api26PdfProbe: writer via FileOutputStream pages=1 len=108188
+10-22 08:41:15.172  9678  9696 I Api26PdfProbe: writer-filestream-copy.pdf len=108188 sha=4f73fca4270c48c51bc0e5ab45035d95bcb11b5aab66d1785f7facd40a6cd8f8 header=25 50 44 46 2d 31 2e 34
+10-22 08:41:15.176  9678  9696 I Api26PdfProbe: writer-filestream-copy.pdf pages=1
+10-22 08:41:15.183  9678  9696 I Api26PdfProbe: writer-filestream-copy.pdf page0 595x842 dark=298
+10-22 08:41:15.202  9678  9696 I Api26PdfProbe: writer via bytearray pages=1
+10-22 08:41:15.204  9678  9696 I Api26PdfProbe: writer-bytearray.pdf len=108188 sha=4f73fca4270c48c51bc0e5ab45035d95bcb11b5aab66d1785f7facd40a6cd8f8 header=25 50 44 46 2d 31 2e 34
+10-22 08:41:15.208  9678  9696 I Api26PdfProbe: writer-bytearray.pdf pages=1
+10-22 08:41:15.214  9678  9696 I Api26PdfProbe: writer-bytearray.pdf page0 595x842 dark=298
+10-22 08:41:15.220  9678  9696 I Api26PdfProbe: a4-blank-bytearray.pdf len=811 sha=ec7d9d7958074f3bca9416cf80398103be6a0e8d484d8b3bda262be991327dec header=25 50 44 46 2d 31 2e 34
+10-22 08:41:15.225  9678  9696 I Api26PdfProbe: a4-blank-bytearray.pdf pages=1
+10-22 08:41:15.227  9678  9696 I Api26PdfProbe: a4-blank-bytearray.pdf page0 595x842 dark=0
+10-22 08:41:23.807  9678  9696 I Api26PdfProbe: churn-writer-0 len=108188 pages=1 failures=0
+10-22 08:41:23.810  9678  9696 I Api26PdfProbe: churn-writer-1 len=108188 pages=1 failures=0
+10-22 08:41:23.813  9678  9696 I Api26PdfProbe: churn-writer-2 len=108188 pages=1 failures=0
+10-22 08:41:23.816  9678  9696 I Api26PdfProbe: churn-writer-3 len=108188 pages=1 failures=0
+10-22 08:41:23.819  9678  9696 I Api26PdfProbe: churn-writer-4 len=108188 pages=1 failures=0
+10-22 08:41:23.822  9678  9696 I Api26PdfProbe: churn-writer-5 len=108188 pages=1 failures=0
+10-22 08:41:23.824  9678  9696 I Api26PdfProbe: churn-writer-6 len=108188 pages=1 failures=0
+10-22 08:41:23.827  9678  9696 I Api26PdfProbe: churn-writer-7 len=108188 pages=1 failures=0
+10-22 08:41:23.830  9678  9696 I Api26PdfProbe: churn-writer-8 len=108188 pages=1 failures=0
+10-22 08:41:23.832  9678  9696 I Api26PdfProbe: churn-writer-9 len=108188 pages=1 failures=0
+10-22 08:41:23.835  9678  9696 I Api26PdfProbe: churn-writer-10 len=108188 pages=1 failures=0
+10-22 08:41:23.838  9678  9696 I Api26PdfProbe: churn-writer-11 len=108188 pages=1 failures=0
+10-22 08:41:23.841  9678  9696 I Api26PdfProbe: churn-writer-12 len=108188 pages=1 failures=0
+10-22 08:41:23.843  9678  9696 I Api26PdfProbe: churn-writer-13 len=108188 pages=1 failures=0
+10-22 08:41:23.845  9678  9696 I Api26PdfProbe: churn-writer-14 len=108188 pages=1 failures=0
+10-22 08:41:23.849  9678  9696 I Api26PdfProbe: churn-writer-15 len=108188 pages=1 failures=0
+10-22 08:41:23.851  9678  9696 I Api26PdfProbe: churn-writer-16 len=108188 pages=1 failures=0
+10-22 08:41:23.854  9678  9696 I Api26PdfProbe: churn-writer-17 len=108188 pages=1 failures=0
+10-22 08:41:23.857  9678  9696 I Api26PdfProbe: churn-writer-18 len=108188 pages=1 failures=0
+10-22 08:41:23.860  9678  9696 I Api26PdfProbe: churn-writer-19 len=108188 pages=1 failures=0
+10-22 08:41:23.868  9678  9696 I Api26PdfProbe: camera len=3537 header=ff d8 ff e0
+10-22 08:41:23.871  9678  9696 I Api26PdfProbe: camera exif save FAILED IOException: ExifInterface only supports saving attributes on JPEG formats.
+10-22 08:41:23.880  9678  9696 I Api26PdfProbe: a4-text-bytearray.pdf len=35713 sha=0f5a792396ff20a08ee06e537d54fea0e411e0bf43aeeaf3b657a3c98549ca0e header=25 50 44 46 2d 31 2e 34
+10-22 08:41:23.885  9678  9696 I Api26PdfProbe: a4-text-bytearray.pdf pages=1
+10-22 08:41:23.888  9678  9696 I Api26PdfProbe: a4-text-bytearray.pdf page0 595x842 dark=54

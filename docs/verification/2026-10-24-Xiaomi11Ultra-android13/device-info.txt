@@ -1,0 +1,12 @@
+# Xiaomi 11 Ultra (star / M2102K1C) device info
+model=M2102K1C
+device=star
+android=13
+sdk=33
+miui=V140
+miui_incremental=V14.0.22.12.5.DEV
+page_size=4096
+wm_size=Physical size: 1440x3200
+wm_density=Physical density: 560
+timezone=Asia/Shanghai
+app=cn.yunji.journal versionCode 27 / 0.26.0-dev / schema14, firstInstallTime=2026-10-24 01:13:33

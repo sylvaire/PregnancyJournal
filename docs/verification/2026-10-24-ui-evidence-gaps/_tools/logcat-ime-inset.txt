@@ -1,0 +1,4 @@
+--------- beginning of main
+10-23 23:36:43.906 20578 20592 I ImeInsetLayout: saved ime-open-document-list 1080x2400
+10-23 23:36:44.822 20578 20592 I ImeInsetLayout: saved ime-hidden-document-list 1080x2400
+10-23 23:36:44.825 20578 20592 I ImeInsetLayout: ime viewport heights: without=755.4286 with=443.0476 restored=755.4286

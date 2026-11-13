@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="cn.yunji.journal.LockEntryMatrixTest" tests="8" failures="0" errors="0" skipped="0" time="30.515" timestamp="2026-10-22T07:48:15" hostname="localhost">
+  <properties>
+    <property name="device" value="PJ_API36_16K(AVD) - 16" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="t1ColdStartShowsLockScreenAndNoJournalContent" classname="cn.yunji.journal.LockEntryMatrixTest" time="7.143" />
+  <testcase name="t2ActivityRecreationKeepsLockScreen" classname="cn.yunji.journal.LockEntryMatrixTest" time="3.746" />
+  <testcase name="t3RotationKeepsLockScreen" classname="cn.yunji.journal.LockEntryMatrixTest" time="3.203" />
+  <testcase name="t4BackPressCannotRevealJournalContent" classname="cn.yunji.journal.LockEntryMatrixTest" time="3.247" />
+  <testcase name="t5FailedUnlockAttemptKeepsLockScreen" classname="cn.yunji.journal.LockEntryMatrixTest" time="6.236" />
+  <testcase name="t6LockingClearsPrivateDocumentPreviewCache" classname="cn.yunji.journal.LockEntryMatrixTest" time="4.131" />
+  <testcase name="clearingPreviewsDeletesPrivateDocumentPreviews" classname="cn.yunji.journal.SessionCacheCleanupTest" time="0.289" />
+  <testcase name="clearingPreviewsKeepsCommittedRecords" classname="cn.yunji.journal.SessionCacheCleanupTest" time="0.717" />
+</testsuite>

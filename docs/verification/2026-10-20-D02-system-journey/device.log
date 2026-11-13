@@ -1,0 +1,17 @@
+Performing Streamed Install
+Success
+Performing Streamed Install
+Success
+
+cn.yunji.journal.BackupSystemJourneyTest:..
+cn.yunji.journal.NavigationExperienceTest:.......................
+cn.yunji.journal.BackupExporterTest:.......
+cn.yunji.journal.FileHandoffTest:........
+cn.yunji.journal.RecoveryUiTest:..
+cn.yunji.journal.IsolatedRestoreTest:.
+
+Time: 222.294
+
+OK (43 tests)
+
+

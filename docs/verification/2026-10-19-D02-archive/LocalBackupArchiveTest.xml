@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.LocalBackupArchiveTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-19T15:29:16.129Z" hostname="SUN-KDQ5E4QJN34" time="0.248">
+  <properties/>
+  <testcase name="wrongKeyMissingObjectAndTraversalAreRejectedWithoutStagingLeftovers" classname="cn.yunji.journal.LocalBackupArchiveTest" time="0.138"/>
+  <testcase name="interruptedWriteOrVerificationLeavesNoPublishedOrTemporaryBackup" classname="cn.yunji.journal.LocalBackupArchiveTest" time="0.027"/>
+  <testcase name="modifiedManifestAndCiphertextAreRejected" classname="cn.yunji.journal.LocalBackupArchiveTest" time="0.04"/>
+  <testcase name="allThirteenBusinessListsAndOriginalsRoundTripAndCloseWipesStaging" classname="cn.yunji.journal.LocalBackupArchiveTest" time="0.041"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

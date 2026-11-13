@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.CloudProbeTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-22T07:08:29.677Z" hostname="SUN-KDQ5E4QJN34" time="0.188">
+  <properties/>
+  <testcase name="readWriteProbeVerifiesDownloadedBytesAndCleansOnlyItsOwnPaths" classname="cn.yunji.journal.CloudProbeTest" time="0.04"/>
+  <testcase name="existingForeignVaultIsDiscoveredWithoutWritingIntoIt" classname="cn.yunji.journal.CloudProbeTest" time="0.024"/>
+  <testcase name="failedAuthenticationDoesNotCreateAnyTestObject" classname="cn.yunji.journal.CloudProbeTest" time="0.012"/>
+  <testcase name="retryAfterSurvivesRepositoryRecreationWithoutAnotherRequest" classname="cn.yunji.journal.CloudProbeTest" time="0.023"/>
+  <testcase name="cleanupFailureRemainsVisibleAndHeadIsOptional" classname="cn.yunji.journal.CloudProbeTest" time="0.019"/>
+  <testcase name="readOnlyDirectoryNeverClaimsWriteOrDeleteCapability" classname="cn.yunji.journal.CloudProbeTest" time="0.016"/>
+  <testcase name="incorrectGetCannotPassAndStillCleansTheProbe" classname="cn.yunji.journal.CloudProbeTest" time="0.02"/>
+  <testcase name="repositoryRecoversOldProbeAndNeverSavesCredentialsDuringTesting" classname="cn.yunji.journal.CloudProbeTest" time="0.033"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

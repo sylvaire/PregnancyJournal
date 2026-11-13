@@ -1,0 +1,1099 @@
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+cn.yunji.journal.ExportSafWriterTest:
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=releasingATransientGrantIsSafeWhenNoneWasTaken
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportSafWriterTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+Error in releasingATransientGrantIsSafeWhenNoneWasTaken(cn.yunji.journal.ExportSafWriterTest):
+java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportSafWriterTest.destination(ExportSafWriterTest.kt:25)
+	at cn.yunji.journal.ExportSafWriterTest.access$destination(ExportSafWriterTest.kt:21)
+	at cn.yunji.journal.ExportSafWriterTest$releasingATransientGrantIsSafeWhenNoneWasTaken$1.invokeSuspend(ExportSafWriterTest.kt:107)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportSafWriterTest.releasingATransientGrantIsSafeWhenNoneWasTaken(ExportSafWriterTest.kt:105)
+	... 31 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 44 more
+
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=releasingATransientGrantIsSafeWhenNoneWasTaken
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportSafWriterTest
+INSTRUMENTATION_STATUS: stack=java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportSafWriterTest.destination(ExportSafWriterTest.kt:25)
+	at cn.yunji.journal.ExportSafWriterTest.access$destination(ExportSafWriterTest.kt:21)
+	at cn.yunji.journal.ExportSafWriterTest$releasingATransientGrantIsSafeWhenNoneWasTaken$1.invokeSuspend(ExportSafWriterTest.kt:107)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportSafWriterTest.releasingATransientGrantIsSafeWhenNoneWasTaken(ExportSafWriterTest.kt:105)
+	... 31 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 44 more
+
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=summaryPdfIsWrittenAndVerifiedThroughTheProvider
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportSafWriterTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+Error in summaryPdfIsWrittenAndVerifiedThroughTheProvider(cn.yunji.journal.ExportSafWriterTest):
+java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportSafWriterTest.destination(ExportSafWriterTest.kt:25)
+	at cn.yunji.journal.ExportSafWriterTest.access$destination(ExportSafWriterTest.kt:21)
+	at cn.yunji.journal.ExportSafWriterTest$summaryPdfIsWrittenAndVerifiedThroughTheProvider$1.invokeSuspend(ExportSafWriterTest.kt:40)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportSafWriterTest.summaryPdfIsWrittenAndVerifiedThroughTheProvider(ExportSafWriterTest.kt:38)
+	... 31 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 44 more
+
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=summaryPdfIsWrittenAndVerifiedThroughTheProvider
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportSafWriterTest
+INSTRUMENTATION_STATUS: stack=java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportSafWriterTest.destination(ExportSafWriterTest.kt:25)
+	at cn.yunji.journal.ExportSafWriterTest.access$destination(ExportSafWriterTest.kt:21)
+	at cn.yunji.journal.ExportSafWriterTest$summaryPdfIsWrittenAndVerifiedThroughTheProvider$1.invokeSuspend(ExportSafWriterTest.kt:40)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportSafWriterTest.summaryPdfIsWrittenAndVerifiedThroughTheProvider(ExportSafWriterTest.kt:38)
+	... 31 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 44 more
+
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=occupiedDestinationIsRefusedAndTheUserFileIsPreserved
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportSafWriterTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+Error in occupiedDestinationIsRefusedAndTheUserFileIsPreserved(cn.yunji.journal.ExportSafWriterTest):
+java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportSafWriterTest.destination(ExportSafWriterTest.kt:25)
+	at cn.yunji.journal.ExportSafWriterTest.access$destination(ExportSafWriterTest.kt:21)
+	at cn.yunji.journal.ExportSafWriterTest$occupiedDestinationIsRefusedAndTheUserFileIsPreserved$1.invokeSuspend(ExportSafWriterTest.kt:93)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportSafWriterTest.occupiedDestinationIsRefusedAndTheUserFileIsPreserved(ExportSafWriterTest.kt:91)
+	... 31 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 44 more
+
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=occupiedDestinationIsRefusedAndTheUserFileIsPreserved
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportSafWriterTest
+INSTRUMENTATION_STATUS: stack=java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportSafWriterTest.destination(ExportSafWriterTest.kt:25)
+	at cn.yunji.journal.ExportSafWriterTest.access$destination(ExportSafWriterTest.kt:21)
+	at cn.yunji.journal.ExportSafWriterTest$occupiedDestinationIsRefusedAndTheUserFileIsPreserved$1.invokeSuspend(ExportSafWriterTest.kt:93)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportSafWriterTest.occupiedDestinationIsRefusedAndTheUserFileIsPreserved(ExportSafWriterTest.kt:91)
+	... 31 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 44 more
+
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=structuredPackageIsWrittenAndManifestIsReadableFromTheDestination
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportSafWriterTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+Error in structuredPackageIsWrittenAndManifestIsReadableFromTheDestination(cn.yunji.journal.ExportSafWriterTest):
+java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportSafWriterTest.destination(ExportSafWriterTest.kt:25)
+	at cn.yunji.journal.ExportSafWriterTest.access$destination(ExportSafWriterTest.kt:21)
+	at cn.yunji.journal.ExportSafWriterTest$structuredPackageIsWrittenAndManifestIsReadableFromTheDestination$1.invokeSuspend(ExportSafWriterTest.kt:62)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportSafWriterTest.structuredPackageIsWrittenAndManifestIsReadableFromTheDestination(ExportSafWriterTest.kt:60)
+	... 31 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 44 more
+
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=structuredPackageIsWrittenAndManifestIsReadableFromTheDestination
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportSafWriterTest
+INSTRUMENTATION_STATUS: stack=java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportSafWriterTest.destination(ExportSafWriterTest.kt:25)
+	at cn.yunji.journal.ExportSafWriterTest.access$destination(ExportSafWriterTest.kt:21)
+	at cn.yunji.journal.ExportSafWriterTest$structuredPackageIsWrittenAndManifestIsReadableFromTheDestination$1.invokeSuspend(ExportSafWriterTest.kt:62)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportSafWriterTest.structuredPackageIsWrittenAndManifestIsReadableFromTheDestination(ExportSafWriterTest.kt:60)
+	... 31 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 44 more
+
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+cn.yunji.journal.ExportServiceDeviceTest:
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=unreadableOriginalFailsTheWholeExportInsteadOfShippingAShorterPackage
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportServiceDeviceTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+Error in unreadableOriginalFailsTheWholeExportInsteadOfShippingAShorterPackage(cn.yunji.journal.ExportServiceDeviceTest):
+java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportServiceDeviceTest.destination(ExportServiceDeviceTest.kt:58)
+	at cn.yunji.journal.ExportServiceDeviceTest.access$destination(ExportServiceDeviceTest.kt:31)
+	at cn.yunji.journal.ExportServiceDeviceTest$unreadableOriginalFailsTheWholeExportInsteadOfShippingAShorterPackage$1.invokeSuspend(ExportServiceDeviceTest.kt:176)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportServiceDeviceTest.unreadableOriginalFailsTheWholeExportInsteadOfShippingAShorterPackage(ExportServiceDeviceTest.kt:174)
+	... 33 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 46 more
+
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=unreadableOriginalFailsTheWholeExportInsteadOfShippingAShorterPackage
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportServiceDeviceTest
+INSTRUMENTATION_STATUS: stack=java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportServiceDeviceTest.destination(ExportServiceDeviceTest.kt:58)
+	at cn.yunji.journal.ExportServiceDeviceTest.access$destination(ExportServiceDeviceTest.kt:31)
+	at cn.yunji.journal.ExportServiceDeviceTest$unreadableOriginalFailsTheWholeExportInsteadOfShippingAShorterPackage$1.invokeSuspend(ExportServiceDeviceTest.kt:176)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportServiceDeviceTest.unreadableOriginalFailsTheWholeExportInsteadOfShippingAShorterPackage(ExportServiceDeviceTest.kt:174)
+	... 33 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 46 more
+
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=excludedUnreadableOriginalAndUnselectedSourceMetadataNeverEnterPackage
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportServiceDeviceTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+Error in excludedUnreadableOriginalAndUnselectedSourceMetadataNeverEnterPackage(cn.yunji.journal.ExportServiceDeviceTest):
+java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportServiceDeviceTest.destination(ExportServiceDeviceTest.kt:58)
+	at cn.yunji.journal.ExportServiceDeviceTest.access$destination(ExportServiceDeviceTest.kt:31)
+	at cn.yunji.journal.ExportServiceDeviceTest$excludedUnreadableOriginalAndUnselectedSourceMetadataNeverEnterPackage$1.invokeSuspend(ExportServiceDeviceTest.kt:197)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportServiceDeviceTest.excludedUnreadableOriginalAndUnselectedSourceMetadataNeverEnterPackage(ExportServiceDeviceTest.kt:194)
+	... 33 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 46 more
+
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=excludedUnreadableOriginalAndUnselectedSourceMetadataNeverEnterPackage
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportServiceDeviceTest
+INSTRUMENTATION_STATUS: stack=java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportServiceDeviceTest.destination(ExportServiceDeviceTest.kt:58)
+	at cn.yunji.journal.ExportServiceDeviceTest.access$destination(ExportServiceDeviceTest.kt:31)
+	at cn.yunji.journal.ExportServiceDeviceTest$excludedUnreadableOriginalAndUnselectedSourceMetadataNeverEnterPackage$1.invokeSuspend(ExportServiceDeviceTest.kt:197)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportServiceDeviceTest.excludedUnreadableOriginalAndUnselectedSourceMetadataNeverEnterPackage(ExportServiceDeviceTest.kt:194)
+	... 33 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 46 more
+
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=selectedLeasePreservesOldOriginalAcrossReplacementThenReclaimsIt
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportServiceDeviceTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=selectedLeasePreservesOldOriginalAcrossReplacementThenReclaimsIt
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportServiceDeviceTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=attachmentOfDeletedPregnancyCannotLeakThroughNonDeletedChild
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportServiceDeviceTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+Error in attachmentOfDeletedPregnancyCannotLeakThroughNonDeletedChild(cn.yunji.journal.ExportServiceDeviceTest):
+java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportServiceDeviceTest.destination(ExportServiceDeviceTest.kt:58)
+	at cn.yunji.journal.ExportServiceDeviceTest.access$destination(ExportServiceDeviceTest.kt:31)
+	at cn.yunji.journal.ExportServiceDeviceTest$attachmentOfDeletedPregnancyCannotLeakThroughNonDeletedChild$1.invokeSuspend(ExportServiceDeviceTest.kt:237)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportServiceDeviceTest.attachmentOfDeletedPregnancyCannotLeakThroughNonDeletedChild(ExportServiceDeviceTest.kt:234)
+	... 33 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 46 more
+
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=attachmentOfDeletedPregnancyCannotLeakThroughNonDeletedChild
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportServiceDeviceTest
+INSTRUMENTATION_STATUS: stack=java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportServiceDeviceTest.destination(ExportServiceDeviceTest.kt:58)
+	at cn.yunji.journal.ExportServiceDeviceTest.access$destination(ExportServiceDeviceTest.kt:31)
+	at cn.yunji.journal.ExportServiceDeviceTest$attachmentOfDeletedPregnancyCannotLeakThroughNonDeletedChild$1.invokeSuspend(ExportServiceDeviceTest.kt:237)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportServiceDeviceTest.attachmentOfDeletedPregnancyCannotLeakThroughNonDeletedChild(ExportServiceDeviceTest.kt:234)
+	... 33 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 46 more
+
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=shutdownCancelsSelectedReaderAndWaitsForItsCleanup
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportServiceDeviceTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=shutdownCancelsSelectedReaderAndWaitsForItsCleanup
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportServiceDeviceTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=packageContainsRealRowsAndDistinguishesNullFromEmptyText
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportServiceDeviceTest
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+Error in packageContainsRealRowsAndDistinguishesNullFromEmptyText(cn.yunji.journal.ExportServiceDeviceTest):
+java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportServiceDeviceTest.destination(ExportServiceDeviceTest.kt:58)
+	at cn.yunji.journal.ExportServiceDeviceTest.access$destination(ExportServiceDeviceTest.kt:31)
+	at cn.yunji.journal.ExportServiceDeviceTest$packageContainsRealRowsAndDistinguishesNullFromEmptyText$1.invokeSuspend(ExportServiceDeviceTest.kt:105)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportServiceDeviceTest.packageContainsRealRowsAndDistinguishesNullFromEmptyText(ExportServiceDeviceTest.kt:103)
+	... 33 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 46 more
+
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=packageContainsRealRowsAndDistinguishesNullFromEmptyText
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportServiceDeviceTest
+INSTRUMENTATION_STATUS: stack=java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportServiceDeviceTest.destination(ExportServiceDeviceTest.kt:58)
+	at cn.yunji.journal.ExportServiceDeviceTest.access$destination(ExportServiceDeviceTest.kt:31)
+	at cn.yunji.journal.ExportServiceDeviceTest$packageContainsRealRowsAndDistinguishesNullFromEmptyText$1.invokeSuspend(ExportServiceDeviceTest.kt:105)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportServiceDeviceTest.packageContainsRealRowsAndDistinguishesNullFromEmptyText(ExportServiceDeviceTest.kt:103)
+	... 33 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 46 more
+
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=previewCountsMatchWhatThePackageWillContain
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportServiceDeviceTest
+INSTRUMENTATION_STATUS: current=11
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=previewCountsMatchWhatThePackageWillContain
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportServiceDeviceTest
+INSTRUMENTATION_STATUS: current=11
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=dateRangeAndSectionSelectionLimitWhatIsExported
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportServiceDeviceTest
+INSTRUMENTATION_STATUS: current=12
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+Error in dateRangeAndSectionSelectionLimitWhatIsExported(cn.yunji.journal.ExportServiceDeviceTest):
+java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportServiceDeviceTest.destination(ExportServiceDeviceTest.kt:58)
+	at cn.yunji.journal.ExportServiceDeviceTest.access$destination(ExportServiceDeviceTest.kt:31)
+	at cn.yunji.journal.ExportServiceDeviceTest$dateRangeAndSectionSelectionLimitWhatIsExported$1.invokeSuspend(ExportServiceDeviceTest.kt:138)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportServiceDeviceTest.dateRangeAndSectionSelectionLimitWhatIsExported(ExportServiceDeviceTest.kt:136)
+	... 33 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 46 more
+
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=dateRangeAndSectionSelectionLimitWhatIsExported
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportServiceDeviceTest
+INSTRUMENTATION_STATUS: stack=java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportServiceDeviceTest.destination(ExportServiceDeviceTest.kt:58)
+	at cn.yunji.journal.ExportServiceDeviceTest.access$destination(ExportServiceDeviceTest.kt:31)
+	at cn.yunji.journal.ExportServiceDeviceTest$dateRangeAndSectionSelectionLimitWhatIsExported$1.invokeSuspend(ExportServiceDeviceTest.kt:138)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportServiceDeviceTest.dateRangeAndSectionSelectionLimitWhatIsExported(ExportServiceDeviceTest.kt:136)
+	... 33 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 46 more
+
+INSTRUMENTATION_STATUS: current=12
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=measurementDateUsesRecordedZoneAndValuesFollowSelectedMeasurements
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportServiceDeviceTest
+INSTRUMENTATION_STATUS: current=13
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+Error in measurementDateUsesRecordedZoneAndValuesFollowSelectedMeasurements(cn.yunji.journal.ExportServiceDeviceTest):
+java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportServiceDeviceTest.destination(ExportServiceDeviceTest.kt:58)
+	at cn.yunji.journal.ExportServiceDeviceTest.access$destination(ExportServiceDeviceTest.kt:31)
+	at cn.yunji.journal.ExportServiceDeviceTest$measurementDateUsesRecordedZoneAndValuesFollowSelectedMeasurements$1.invokeSuspend(ExportServiceDeviceTest.kt:222)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportServiceDeviceTest.measurementDateUsesRecordedZoneAndValuesFollowSelectedMeasurements(ExportServiceDeviceTest.kt:211)
+	... 33 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 46 more
+
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=measurementDateUsesRecordedZoneAndValuesFollowSelectedMeasurements
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportServiceDeviceTest
+INSTRUMENTATION_STATUS: stack=java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportServiceDeviceTest.destination(ExportServiceDeviceTest.kt:58)
+	at cn.yunji.journal.ExportServiceDeviceTest.access$destination(ExportServiceDeviceTest.kt:31)
+	at cn.yunji.journal.ExportServiceDeviceTest$measurementDateUsesRecordedZoneAndValuesFollowSelectedMeasurements$1.invokeSuspend(ExportServiceDeviceTest.kt:222)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportServiceDeviceTest.measurementDateUsesRecordedZoneAndValuesFollowSelectedMeasurements(ExportServiceDeviceTest.kt:211)
+	... 33 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 46 more
+
+INSTRUMENTATION_STATUS: current=13
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=exportWaitsForAtomicRelatedRecordEdit
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportServiceDeviceTest
+INSTRUMENTATION_STATUS: current=14
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+Error in exportWaitsForAtomicRelatedRecordEdit(cn.yunji.journal.ExportServiceDeviceTest):
+java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportServiceDeviceTest.destination(ExportServiceDeviceTest.kt:58)
+	at cn.yunji.journal.ExportServiceDeviceTest.access$destination(ExportServiceDeviceTest.kt:31)
+	at cn.yunji.journal.ExportServiceDeviceTest$exportWaitsForAtomicRelatedRecordEdit$1.invokeSuspend(ExportServiceDeviceTest.kt:249)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportServiceDeviceTest.exportWaitsForAtomicRelatedRecordEdit(ExportServiceDeviceTest.kt:247)
+	... 33 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 46 more
+
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=exportWaitsForAtomicRelatedRecordEdit
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportServiceDeviceTest
+INSTRUMENTATION_STATUS: stack=java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportServiceDeviceTest.destination(ExportServiceDeviceTest.kt:58)
+	at cn.yunji.journal.ExportServiceDeviceTest.access$destination(ExportServiceDeviceTest.kt:31)
+	at cn.yunji.journal.ExportServiceDeviceTest$exportWaitsForAtomicRelatedRecordEdit$1.invokeSuspend(ExportServiceDeviceTest.kt:249)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportServiceDeviceTest.exportWaitsForAtomicRelatedRecordEdit(ExportServiceDeviceTest.kt:247)
+	... 33 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 46 more
+
+INSTRUMENTATION_STATUS: current=14
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=trashedOriginalMetadataIsExportedButItsPlaintextOriginalIsOmittedAndReported
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportServiceDeviceTest
+INSTRUMENTATION_STATUS: current=15
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+Error in trashedOriginalMetadataIsExportedButItsPlaintextOriginalIsOmittedAndReported(cn.yunji.journal.ExportServiceDeviceTest):
+java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportServiceDeviceTest.destination(ExportServiceDeviceTest.kt:58)
+	at cn.yunji.journal.ExportServiceDeviceTest.access$destination(ExportServiceDeviceTest.kt:31)
+	at cn.yunji.journal.ExportServiceDeviceTest$trashedOriginalMetadataIsExportedButItsPlaintextOriginalIsOmittedAndReported$1.invokeSuspend(ExportServiceDeviceTest.kt:294)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportServiceDeviceTest.trashedOriginalMetadataIsExportedButItsPlaintextOriginalIsOmittedAndReported(ExportServiceDeviceTest.kt:292)
+	... 33 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 46 more
+
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=trashedOriginalMetadataIsExportedButItsPlaintextOriginalIsOmittedAndReported
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportServiceDeviceTest
+INSTRUMENTATION_STATUS: stack=java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportServiceDeviceTest.destination(ExportServiceDeviceTest.kt:58)
+	at cn.yunji.journal.ExportServiceDeviceTest.access$destination(ExportServiceDeviceTest.kt:31)
+	at cn.yunji.journal.ExportServiceDeviceTest$trashedOriginalMetadataIsExportedButItsPlaintextOriginalIsOmittedAndReported$1.invokeSuspend(ExportServiceDeviceTest.kt:294)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportServiceDeviceTest.trashedOriginalMetadataIsExportedButItsPlaintextOriginalIsOmittedAndReported(ExportServiceDeviceTest.kt:292)
+	... 33 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 46 more
+
+INSTRUMENTATION_STATUS: current=15
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=trashIsExcludedByDefaultAndIncludedOnRequest
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportServiceDeviceTest
+INSTRUMENTATION_STATUS: current=16
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+Error in trashIsExcludedByDefaultAndIncludedOnRequest(cn.yunji.journal.ExportServiceDeviceTest):
+java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportServiceDeviceTest.destination(ExportServiceDeviceTest.kt:58)
+	at cn.yunji.journal.ExportServiceDeviceTest.access$destination(ExportServiceDeviceTest.kt:31)
+	at cn.yunji.journal.ExportServiceDeviceTest$trashIsExcludedByDefaultAndIncludedOnRequest$1.invokeSuspend(ExportServiceDeviceTest.kt:159)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportServiceDeviceTest.trashIsExcludedByDefaultAndIncludedOnRequest(ExportServiceDeviceTest.kt:153)
+	... 33 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 46 more
+
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=trashIsExcludedByDefaultAndIncludedOnRequest
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ExportServiceDeviceTest
+INSTRUMENTATION_STATUS: stack=java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportServiceDeviceTest.destination(ExportServiceDeviceTest.kt:58)
+	at cn.yunji.journal.ExportServiceDeviceTest.access$destination(ExportServiceDeviceTest.kt:31)
+	at cn.yunji.journal.ExportServiceDeviceTest$trashIsExcludedByDefaultAndIncludedOnRequest$1.invokeSuspend(ExportServiceDeviceTest.kt:159)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportServiceDeviceTest.trashIsExcludedByDefaultAndIncludedOnRequest(ExportServiceDeviceTest.kt:153)
+	... 33 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 46 more
+
+INSTRUMENTATION_STATUS: current=16
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+cn.yunji.journal.SafetyCopyExporterTest:
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=realContentDestinationMatchesCiphertextAndOccupiedOrStaleTargetsArePreserved
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.SafetyCopyExporterTest
+INSTRUMENTATION_STATUS: current=17
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=17
+INSTRUMENTATION_STATUS: stream=
+Error in realContentDestinationMatchesCiphertextAndOccupiedOrStaleTargetsArePreserved(cn.yunji.journal.SafetyCopyExporterTest):
+java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.SafetyCopyExporterTest$realContentDestinationMatchesCiphertextAndOccupiedOrStaleTargetsArePreserved$1.invokeSuspend(SafetyCopyExporterTest.kt:24)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.SafetyCopyExporterTest.realContentDestinationMatchesCiphertextAndOccupiedOrStaleTargetsArePreserved(SafetyCopyExporterTest.kt:17)
+	... 31 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 42 more
+
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=realContentDestinationMatchesCiphertextAndOccupiedOrStaleTargetsArePreserved
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.SafetyCopyExporterTest
+INSTRUMENTATION_STATUS: stack=java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.SafetyCopyExporterTest$realContentDestinationMatchesCiphertextAndOccupiedOrStaleTargetsArePreserved$1.invokeSuspend(SafetyCopyExporterTest.kt:24)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.SafetyCopyExporterTest.realContentDestinationMatchesCiphertextAndOccupiedOrStaleTargetsArePreserved(SafetyCopyExporterTest.kt:17)
+	... 31 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 42 more
+
+INSTRUMENTATION_STATUS: current=17
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 6.288
+There were 14 failures:
+1) releasingATransientGrantIsSafeWhenNoneWasTaken(cn.yunji.journal.ExportSafWriterTest)
+java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportSafWriterTest.destination(ExportSafWriterTest.kt:25)
+	at cn.yunji.journal.ExportSafWriterTest.access$destination(ExportSafWriterTest.kt:21)
+	at cn.yunji.journal.ExportSafWriterTest$releasingATransientGrantIsSafeWhenNoneWasTaken$1.invokeSuspend(ExportSafWriterTest.kt:107)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportSafWriterTest.releasingATransientGrantIsSafeWhenNoneWasTaken(ExportSafWriterTest.kt:105)
+	... 31 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 44 more
+2) summaryPdfIsWrittenAndVerifiedThroughTheProvider(cn.yunji.journal.ExportSafWriterTest)
+java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportSafWriterTest.destination(ExportSafWriterTest.kt:25)
+	at cn.yunji.journal.ExportSafWriterTest.access$destination(ExportSafWriterTest.kt:21)
+	at cn.yunji.journal.ExportSafWriterTest$summaryPdfIsWrittenAndVerifiedThroughTheProvider$1.invokeSuspend(ExportSafWriterTest.kt:40)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportSafWriterTest.summaryPdfIsWrittenAndVerifiedThroughTheProvider(ExportSafWriterTest.kt:38)
+	... 31 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 44 more
+3) occupiedDestinationIsRefusedAndTheUserFileIsPreserved(cn.yunji.journal.ExportSafWriterTest)
+java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportSafWriterTest.destination(ExportSafWriterTest.kt:25)
+	at cn.yunji.journal.ExportSafWriterTest.access$destination(ExportSafWriterTest.kt:21)
+	at cn.yunji.journal.ExportSafWriterTest$occupiedDestinationIsRefusedAndTheUserFileIsPreserved$1.invokeSuspend(ExportSafWriterTest.kt:93)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportSafWriterTest.occupiedDestinationIsRefusedAndTheUserFileIsPreserved(ExportSafWriterTest.kt:91)
+	... 31 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 44 more
+4) structuredPackageIsWrittenAndManifestIsReadableFromTheDestination(cn.yunji.journal.ExportSafWriterTest)
+java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportSafWriterTest.destination(ExportSafWriterTest.kt:25)
+	at cn.yunji.journal.ExportSafWriterTest.access$destination(ExportSafWriterTest.kt:21)
+	at cn.yunji.journal.ExportSafWriterTest$structuredPackageIsWrittenAndManifestIsReadableFromTheDestination$1.invokeSuspend(ExportSafWriterTest.kt:62)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportSafWriterTest.structuredPackageIsWrittenAndManifestIsReadableFromTheDestination(ExportSafWriterTest.kt:60)
+	... 31 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 44 more
+5) unreadableOriginalFailsTheWholeExportInsteadOfShippingAShorterPackage(cn.yunji.journal.ExportServiceDeviceTest)
+java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportServiceDeviceTest.destination(ExportServiceDeviceTest.kt:58)
+	at cn.yunji.journal.ExportServiceDeviceTest.access$destination(ExportServiceDeviceTest.kt:31)
+	at cn.yunji.journal.ExportServiceDeviceTest$unreadableOriginalFailsTheWholeExportInsteadOfShippingAShorterPackage$1.invokeSuspend(ExportServiceDeviceTest.kt:176)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportServiceDeviceTest.unreadableOriginalFailsTheWholeExportInsteadOfShippingAShorterPackage(ExportServiceDeviceTest.kt:174)
+	... 33 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 46 more
+6) excludedUnreadableOriginalAndUnselectedSourceMetadataNeverEnterPackage(cn.yunji.journal.ExportServiceDeviceTest)
+java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportServiceDeviceTest.destination(ExportServiceDeviceTest.kt:58)
+	at cn.yunji.journal.ExportServiceDeviceTest.access$destination(ExportServiceDeviceTest.kt:31)
+	at cn.yunji.journal.ExportServiceDeviceTest$excludedUnreadableOriginalAndUnselectedSourceMetadataNeverEnterPackage$1.invokeSuspend(ExportServiceDeviceTest.kt:197)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportServiceDeviceTest.excludedUnreadableOriginalAndUnselectedSourceMetadataNeverEnterPackage(ExportServiceDeviceTest.kt:194)
+	... 33 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 46 more
+7) attachmentOfDeletedPregnancyCannotLeakThroughNonDeletedChild(cn.yunji.journal.ExportServiceDeviceTest)
+java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportServiceDeviceTest.destination(ExportServiceDeviceTest.kt:58)
+	at cn.yunji.journal.ExportServiceDeviceTest.access$destination(ExportServiceDeviceTest.kt:31)
+	at cn.yunji.journal.ExportServiceDeviceTest$attachmentOfDeletedPregnancyCannotLeakThroughNonDeletedChild$1.invokeSuspend(ExportServiceDeviceTest.kt:237)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportServiceDeviceTest.attachmentOfDeletedPregnancyCannotLeakThroughNonDeletedChild(ExportServiceDeviceTest.kt:234)
+	... 33 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 46 more
+8) packageContainsRealRowsAndDistinguishesNullFromEmptyText(cn.yunji.journal.ExportServiceDeviceTest)
+java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportServiceDeviceTest.destination(ExportServiceDeviceTest.kt:58)
+	at cn.yunji.journal.ExportServiceDeviceTest.access$destination(ExportServiceDeviceTest.kt:31)
+	at cn.yunji.journal.ExportServiceDeviceTest$packageContainsRealRowsAndDistinguishesNullFromEmptyText$1.invokeSuspend(ExportServiceDeviceTest.kt:105)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportServiceDeviceTest.packageContainsRealRowsAndDistinguishesNullFromEmptyText(ExportServiceDeviceTest.kt:103)
+	... 33 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 46 more
+9) dateRangeAndSectionSelectionLimitWhatIsExported(cn.yunji.journal.ExportServiceDeviceTest)
+java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportServiceDeviceTest.destination(ExportServiceDeviceTest.kt:58)
+	at cn.yunji.journal.ExportServiceDeviceTest.access$destination(ExportServiceDeviceTest.kt:31)
+	at cn.yunji.journal.ExportServiceDeviceTest$dateRangeAndSectionSelectionLimitWhatIsExported$1.invokeSuspend(ExportServiceDeviceTest.kt:138)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportServiceDeviceTest.dateRangeAndSectionSelectionLimitWhatIsExported(ExportServiceDeviceTest.kt:136)
+	... 33 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 46 more
+10) measurementDateUsesRecordedZoneAndValuesFollowSelectedMeasurements(cn.yunji.journal.ExportServiceDeviceTest)
+java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportServiceDeviceTest.destination(ExportServiceDeviceTest.kt:58)
+	at cn.yunji.journal.ExportServiceDeviceTest.access$destination(ExportServiceDeviceTest.kt:31)
+	at cn.yunji.journal.ExportServiceDeviceTest$measurementDateUsesRecordedZoneAndValuesFollowSelectedMeasurements$1.invokeSuspend(ExportServiceDeviceTest.kt:222)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportServiceDeviceTest.measurementDateUsesRecordedZoneAndValuesFollowSelectedMeasurements(ExportServiceDeviceTest.kt:211)
+	... 33 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 46 more
+11) exportWaitsForAtomicRelatedRecordEdit(cn.yunji.journal.ExportServiceDeviceTest)
+java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportServiceDeviceTest.destination(ExportServiceDeviceTest.kt:58)
+	at cn.yunji.journal.ExportServiceDeviceTest.access$destination(ExportServiceDeviceTest.kt:31)
+	at cn.yunji.journal.ExportServiceDeviceTest$exportWaitsForAtomicRelatedRecordEdit$1.invokeSuspend(ExportServiceDeviceTest.kt:249)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportServiceDeviceTest.exportWaitsForAtomicRelatedRecordEdit(ExportServiceDeviceTest.kt:247)
+	... 33 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 46 more
+12) trashedOriginalMetadataIsExportedButItsPlaintextOriginalIsOmittedAndReported(cn.yunji.journal.ExportServiceDeviceTest)
+java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportServiceDeviceTest.destination(ExportServiceDeviceTest.kt:58)
+	at cn.yunji.journal.ExportServiceDeviceTest.access$destination(ExportServiceDeviceTest.kt:31)
+	at cn.yunji.journal.ExportServiceDeviceTest$trashedOriginalMetadataIsExportedButItsPlaintextOriginalIsOmittedAndReported$1.invokeSuspend(ExportServiceDeviceTest.kt:294)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportServiceDeviceTest.trashedOriginalMetadataIsExportedButItsPlaintextOriginalIsOmittedAndReported(ExportServiceDeviceTest.kt:292)
+	... 33 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 46 more
+13) trashIsExcludedByDefaultAndIncludedOnRequest(cn.yunji.journal.ExportServiceDeviceTest)
+java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.ExportServiceDeviceTest.destination(ExportServiceDeviceTest.kt:58)
+	at cn.yunji.journal.ExportServiceDeviceTest.access$destination(ExportServiceDeviceTest.kt:31)
+	at cn.yunji.journal.ExportServiceDeviceTest$trashIsExcludedByDefaultAndIncludedOnRequest$1.invokeSuspend(ExportServiceDeviceTest.kt:159)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.ExportServiceDeviceTest.trashIsExcludedByDefaultAndIncludedOnRequest(ExportServiceDeviceTest.kt:153)
+	... 33 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 46 more
+14) realContentDestinationMatchesCiphertextAndOccupiedOrStaleTargetsArePreserved(cn.yunji.journal.SafetyCopyExporterTest)
+java.lang.NoClassDefFoundError: Failed resolution of: Landroid/provider/MediaStore$Downloads;
+	at cn.yunji.journal.SafetyCopyExporterTest$realContentDestinationMatchesCiphertextAndOccupiedOrStaleTargetsArePreserved$1.invokeSuspend(SafetyCopyExporterTest.kt:24)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+	at cn.yunji.journal.SafetyCopyExporterTest.realContentDestinationMatchesCiphertextAndOccupiedOrStaleTargetsArePreserved(SafetyCopyExporterTest.kt:17)
+	... 31 trimmed
+Caused by: java.lang.ClassNotFoundException: Didn't find class "android.provider.MediaStore$Downloads" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk", zip file "/data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk"],nativeLibraryDirectories=[/data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/lib/x86_64, /data/app/cn.yunji.journal.test-xoo6N3Koz5U9x6e6UfIhpg==/base.apk!/lib/x86_64, /data/app/cn.yunji.journal-pVCzv70XDR9HFqbrg5NyMw==/base.apk!/lib/x86_64, /system/lib64, /vendor/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:93)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+	... 42 more
+
+FAILURES!!!
+Tests run: 17,  Failures: 14
+
+
+INSTRUMENTATION_CODE: -1

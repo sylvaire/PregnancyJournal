@@ -1,0 +1,27 @@
+E01 其余页面极端配置矩阵 — 运行前设备 readback
+时间：2026-10-22（task-7 合并设备运行前，约 15:56；运行日志 15:59:45）
+设备：emulator-5556（AVD PJ_API36_16K，Android 16/API36，16 KiB 页，1080x2400/420dpi）
+配置方式：docs\verification\2026-10-22-A02-ui-matrix\device-config.ps1 -Mode extreme
+
+$ adb -s emulator-5556 shell settings get system font_scale
+2.0
+
+$ adb -s emulator-5556 shell cmd uimode night
+Night mode: yes
+
+$ adb -s emulator-5556 shell settings get system accelerometer_rotation
+0
+
+$ adb -s emulator-5556 shell settings get system user_rotation
+1
+
+$ adb -s emulator-5556 shell dumpsys window displays
+  init=1080x2400 420dpi cur=2400x1080 app=2400x1080
+  mCurrentRotation=ROTATION_90
+  mUserRotationMode=USER_ROTATION_LOCKED mUserRotation=ROTATION_90
+  （同段 mGlobalConfiguration 行仍打印 w411dp h914dp port ROTATION_0 的缓存值，未在 readback 瞬间重算；
+    display 实际已旋转 90 度，用例内 assertExtreme() 于 p1/p4/p5 通过，证明测试进程运行在
+   fontScale=2.0 / NIGHT_YES / ORIENTATION_LANDSCAPE 组合下。）
+
+说明：API36 上仅写 settings put system user_rotation 不会真正旋转，需 cmd window user-rotation -d 0 lock 1
+（A02 脚本已包含）；缺 -d 0 时用例会被 assumeTrue 整体跳过，skip 不记为通过。

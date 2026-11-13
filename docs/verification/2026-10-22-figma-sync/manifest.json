@@ -1,0 +1,137 @@
+{
+  "runId": "figma-implementation-sync-20261022",
+  "date": "2026-10-22",
+  "goal": "把当前 App 实现 UI 同步到已有 Figma 项目（可编辑图层，非整页截图）",
+  "figma": {
+    "fileKey": "qwUxmzTnSJtzppU5eZwHcy",
+    "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy",
+    "pageId": "0:1",
+    "board": {
+      "nodeId": "50:581",
+      "name": "06 · 当前实现（2026-10-22 同步）",
+      "x": 100,
+      "y": 7100,
+      "width": 2324,
+      "height": 2096,
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=50-581"
+    },
+    "screensFrame": "50:584",
+    "sessionId": "47e58ce1-c926-4cbb-b0ec-970e0aecd41d"
+  },
+  "source": {
+    "device": "emulator-5556 · Android 16 (API 36) · 1080x2400 @420dpi → 412x915 dp",
+    "captureTest": "app/src/androidTest/java/cn/yunji/journal/UiSnapshotTest.kt",
+    "captureResult": "OK (9 tests)，根视图 captureToImage，落盘 getExternalFilesDir(\"verification/figma-sync\")",
+    "screenshots": "docs/verification/2026-10-22-figma-sync/screens/",
+    "designReference": "docs/verification/2026-10-22-figma-sync/design/"
+  },
+  "screens": [
+    {
+      "key": "today",
+      "name": "A1 · 今天（实现）",
+      "figmaNodeId": "50:585",
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=50-585",
+      "screenshot": "screens/01-today.png"
+    },
+    {
+      "key": "visits",
+      "name": "A2 · 产检（实现）",
+      "figmaNodeId": "50:653",
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=50-653",
+      "screenshot": "screens/02-visits.png"
+    },
+    {
+      "key": "records-hub",
+      "name": "A3 · 记录枢纽（实现）",
+      "figmaNodeId": "50:712",
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=50-712",
+      "screenshot": "screens/03-records-hub.png"
+    },
+    {
+      "key": "profiles",
+      "name": "A4 · 我的（实现）",
+      "figmaNodeId": "50:812",
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=50-812",
+      "screenshot": "screens/04-profiles.png"
+    },
+    {
+      "key": "medications",
+      "name": "A5 · 用药方案（实现）",
+      "figmaNodeId": "51:751",
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=51-751",
+      "screenshot": "screens/05-medications.png"
+    },
+    {
+      "key": "intakes",
+      "name": "A6 · 服药记录（实现）",
+      "figmaNodeId": "51:783",
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=51-783",
+      "screenshot": "screens/06-intakes.png"
+    },
+    {
+      "key": "measurements",
+      "name": "A7 · 健康指标（实现）",
+      "figmaNodeId": "51:822",
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=51-822",
+      "screenshot": "screens/07-measurements.png"
+    },
+    {
+      "key": "visit-documents",
+      "name": "A8 · 产检资料（实现）",
+      "figmaNodeId": "51:847",
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=51-847",
+      "screenshot": "screens/08-visit-documents.png"
+    },
+    {
+      "key": "recovery",
+      "name": "A9 · 本地加密备份（实现）",
+      "figmaNodeId": "51:893",
+      "url": "https://www.figma.com/design/qwUxmzTnSJtzppU5eZwHcy?node-id=51-893",
+      "screenshot": "screens/09-recovery.png"
+    }
+  ],
+  "editable": {
+    "materials": "文字样式 孕迹/display..button、颜色变量 color/*、记录行组件实例 孕迹/RecordRow、10 个 24×24 图标组件实例、状态栏/底部导航/手势区复用既有母组件",
+    "noFlattenedScreenshots": true,
+    "note": "9 帧均为可编辑图层与组件实例；仓库中的实机截图为对照证据，未作为成品图层导入 Figma"
+  },
+  "coverage": {
+    "synced": [
+      "今天（日期待补充/产检安排/今日服药记录）",
+      "产检（列表/日历切换与筛选）",
+      "记录枢纽（时间线/日常/资料/用药/服药/健康）",
+      "我的（管理孕期/回收站/提醒/云盘连接/本地备份/导出/用药/服药）",
+      "用药方案（含方案卡与操作）",
+      "服药记录（按日计划、补记、已服用/跳过）",
+      "健康指标（空态/分段）",
+      "产检资料（导入入口/搜索/筛选/资料卡与分享操作）",
+      "本地加密备份（恢复密钥与安全副本说明）"
+    ],
+    "notCaptured": [
+      "云盘连接（含 D06 云端清理小节与手动清理入口）",
+      "安全设置/应用锁与锁定页（A03 入口）",
+      "导出向导、恢复预览/执行、错误分支等其余页面",
+      "深色模式、平板、200% 字体与横屏的独立画板（自动化已覆盖，未单独出设计稿）"
+    ],
+    "nextStep": "补齐云盘连接与锁定页截图后按同一方式追加 A10/A11；再按用户评审意见更新既有 20 屏"
+  },
+  "verification": {
+    "boardPreview": "board-06-preview.png",
+    "figmaBoardScreenshot": "https://www.figma.com/api/mcp/asset/e34959d3-df37-4845-b446-6d357dd6b969.png",
+    "stats": {
+      "frames": 9,
+      "frameSize": "412x915",
+      "textNodes": 154,
+      "componentInstances": 52,
+      "vectorNodes": 101,
+      "imageFills": 0
+    },
+    "checks": [
+      "板 06 位于既有五组画板下方（y=7100），未移动/覆盖既有 20 屏与组件",
+      "9 帧尺寸 412×915、圆角 28、背景 color/bg；状态栏/底部导航/手势区与既有画板一致",
+      "所有文本使用 7 个既有文字样式；填充绑定 color/* 变量；记录行/图标为组件实例",
+      "只读遍历校验：9 帧齐全、IMAGE 填充 0（未导入任何截图）、文字 154 / 实例 52 / 矢量 101",
+      "板预览截图已下载核对（board-06-preview.png）"
+    ]
+  }
+}

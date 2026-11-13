@@ -1,0 +1,7 @@
+device=emulator-5556 (1080x2400 / 420dpi = 411.43x914.29 dp, density=2.625)
+page=产检资料（document-list LazyColumn）
+height_without_ime_dp=755.43
+height_with_ime_dp=443.05
+height_after_hide_ime_dp=755.43
+bug3_baseline_before_fix_dp=106.7
+assertion=height_with_ime_dp >= 300

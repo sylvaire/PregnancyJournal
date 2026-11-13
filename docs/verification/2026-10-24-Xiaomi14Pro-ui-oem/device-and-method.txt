@@ -1,0 +1,8 @@
+# Device and method
+
+- Device: 23116PN5BC (Xiaomi 14 Pro), HyperOS OS3.0.309.0.WNBCNXM, Android 16 / SDK 36, 1440x3200 560dpi, wireless debugging.
+- App: cn.yunji.journal versionCode 27 / 0.26.0-dev / schema14, installed for the isolated user via pm install-existing.
+- Isolated user: pm create-user PJTest -> user 11 (user 10 was already removed; ids are not reused). Removed after the checks (pm remove-user 11).
+- All app data in the isolated user was synthetic/empty; no personal data was read or exported. The owner user (user 0) was not modified.
+- UI driven with adb (shell am start + input tap/swipe + uiautomator dump + screencap), because MIUI blocks instrumented activity launches (see 2026-10-23-Xiaomi14Pro-realdevice).
+- Read-back state after cleanup: current user = 0, keyguard dismissed, only user 0 + XSpace left, owner vault and pre-upgrade backup intact, reminder generation 51.

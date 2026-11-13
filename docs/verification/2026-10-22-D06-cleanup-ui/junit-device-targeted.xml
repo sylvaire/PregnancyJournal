@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="cn.yunji.journal.CloudCleanupUiTest" tests="7" failures="0" errors="0" skipped="0" time="19.57" timestamp="2026-10-22T07:26:02" hostname="localhost">
+  <properties>
+    <property name="device" value="PJ_API36_16K(AVD) - 16" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="neverCleanedShowsHintAndManualEntryIsAvailable" classname="cn.yunji.journal.CloudCleanupUiTest" time="6.019" />
+  <testcase name="otherDeviceBackupDisablesManualEntryAndShowsReason" classname="cn.yunji.journal.CloudCleanupUiTest" time="2.31" />
+  <testcase name="runningCleanupShowsProgressAndDisablesButton" classname="cn.yunji.journal.CloudCleanupUiTest" time="2.075" />
+  <testcase name="succeededAttemptShowsTimeCountsAndResultMessage" classname="cn.yunji.journal.CloudCleanupUiTest" time="1.735" />
+  <testcase name="manualCleanupRequiresConfirmationAndRunsOnce" classname="cn.yunji.journal.CloudCleanupUiTest" time="2.713" />
+  <testcase name="unverifiedConnectionDisablesManualEntryAndShowsReason" classname="cn.yunji.journal.CloudCleanupUiTest" time="1.709" />
+  <testcase name="skippedAttemptExplainsWhyNothingWasDeleted" classname="cn.yunji.journal.CloudCleanupUiTest" time="2.038" />
+</testsuite>

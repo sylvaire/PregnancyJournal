@@ -1,0 +1,6 @@
+{
+  "totalJvmTests": 222,
+  "failures": 0,
+  "classes": 42,
+  "note": "本轮未新增JVM用例：导出向导门控改为仪器测试（Uri依赖）。"
+}

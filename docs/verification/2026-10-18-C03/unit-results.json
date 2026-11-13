@@ -1,0 +1,50 @@
+[
+  {
+    "suite": "cn.yunji.journal.DocumentQueryTest",
+    "tests": "1",
+    "failures": "0",
+    "errors": "0"
+  },
+  {
+    "suite": "cn.yunji.journal.MeasurementRulesTest",
+    "tests": "2",
+    "failures": "0",
+    "errors": "0"
+  },
+  {
+    "suite": "cn.yunji.journal.MedicationRulesTest",
+    "tests": "3",
+    "failures": "0",
+    "errors": "0"
+  },
+  {
+    "suite": "cn.yunji.journal.MedicationScheduleTest",
+    "tests": "3",
+    "failures": "0",
+    "errors": "0"
+  },
+  {
+    "suite": "cn.yunji.journal.PregnancyRulesTest",
+    "tests": "2",
+    "failures": "0",
+    "errors": "0"
+  },
+  {
+    "suite": "cn.yunji.journal.StorageAndSnapshotTest",
+    "tests": "3",
+    "failures": "0",
+    "errors": "0"
+  },
+  {
+    "suite": "cn.yunji.journal.VaultCryptoTest",
+    "tests": "4",
+    "failures": "0",
+    "errors": "0"
+  },
+  {
+    "suite": "cn.yunji.journal.WebDavClientTest",
+    "tests": "3",
+    "failures": "0",
+    "errors": "0"
+  }
+]

@@ -1,0 +1,11 @@
+emulator-5556 baseline restored at 2026-10-24T12:25:49.4555100+08:00
+font_scale=1.0
+night=Night mode: no
+stay_on_while_plugged_in=0
+accelerometer_rotation=1
+user_rotation=0
+wm_size=Physical size: 1080x2400
+wm_density=Physical density: 420
+yunji_processes_after_force_stop=
+app_data=navigation tests use isolated DB; app package data unchanged (no manual UI state kept from task-12)
+xiaomi_devices_touched=none (11 Ultra offline; only emulator-5556)

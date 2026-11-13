@@ -1,0 +1,5 @@
+JVM 全量基线（命令：.\\gradlew.bat :app:testDebugUnitTest --console=plain）
+时间：2026-10-22 12:4x（本地）
+classes=44  tests=250  failures=0  skipped=0
+新增类 CloudBackupSlowNetworkTest：tests=13 failures=0 errors=0 skipped=0 time=4.438s
+基线对照：改动前 43 类/237 项/0 失败 → 改动后 44 类/250 项/0 失败（新增 1 类 13 项，无回归）

@@ -1,0 +1,11 @@
+captured_at=2026-10-22 14:59:52 +08:00
+adb_devices=List of devices attached | emulator-5556	device | 
+sdk=36
+model=sdk_gphone16k_x86_64
+abi=x86_64
+page_size=16384
+font_scale=1.0
+ui_night_mode=Night mode: no
+user_rotation=0
+accel_rotation=1
+window_displays=    init=1080x2400 420dpi mMinSizeOfResizeableTaskDp=220 cur=1080x2400 app=1080x2400 rng=1080x1080-2400x2400

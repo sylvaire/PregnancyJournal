@@ -1,0 +1,14 @@
+Performing Streamed Install
+Success
+Performing Streamed Install
+Success
+
+cn.yunji.journal.EncryptedDatabaseTest:......
+cn.yunji.journal.MeasurementRepositoryTest:....
+cn.yunji.journal.JournalEntryRepositoryTest:.....
+
+Time: 14.948
+
+OK (15 tests)
+
+

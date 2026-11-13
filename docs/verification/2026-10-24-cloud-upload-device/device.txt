@@ -1,0 +1,13 @@
+device: emulator-5556 (PJ_API36_16K, dedicated AVD)
+model: sdk_gphone16k_x86_64
+abi: x86_64
+android_release: 16
+sdk: 36
+page_size_bytes: 16384
+screen: Physical size: 1080x2400
+density: Physical density: 420
+font_scale: 1.0
+night_mode: Night mode: no
+user_rotation: 0
+test_runner: androidx.test.runner.AndroidJUnitRunner (cn.yunji.journal.test)
+run_date: 2026-10-24 (Asia/Shanghai)

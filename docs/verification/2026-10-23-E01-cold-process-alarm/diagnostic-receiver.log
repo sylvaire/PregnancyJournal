@@ -1,0 +1,4 @@
+--------- beginning of main
+10-23 00:05:16.843 I/ColdAlarmDeviceTest(13155): scheduledAt=1792714020000
+10-23 00:09:10.389 I/ColdAlarmDeviceTest(13469): scheduledAt=1792714260000
+10-23 00:11:02.033 D/ReminderAlarmReceiver(13569): event changed before posting

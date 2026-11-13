@@ -1,0 +1,7 @@
+2026-10-22 task-3 D05 reclaim-lifecycle
+command: .\gradlew.bat :app:testDebugUnitTest --console=plain
+full JVM: classes=45 tests=266 failures=0 errors=0 skipped=0
+baseline before task-3: classes=44 tests=250 failures=0
+delta: +1 class (RestoreReclaimTest), +16 tests
+targeted: RestoreReclaimTest=16, RestoreWizardTest=12, VaultLayoutTest=11, total=39, failures=0
+

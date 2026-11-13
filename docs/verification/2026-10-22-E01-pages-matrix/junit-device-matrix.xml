@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="cn.yunji.journal.ExtremeLayoutMatrixPagesTest" tests="13" failures="8" errors="0" skipped="0" time="152.531" timestamp="2026-10-22T07:59:43" hostname="localhost">
+  <properties>
+    <property name="device" value="PJ_API36_16K(AVD) - 16" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="p3MedicationPagesExtreme" classname="cn.yunji.journal.ExtremeLayoutMatrixPagesTest" time="6.179">
+    <failure>java.lang.IllegalArgumentException: 请填写药品名称，最多100字
+at cn.yunji.journal.data.MedicationRules.normalize(MedicationRepository.kt:21)
+at cn.yunji.journal.data.MedicationRepository.save(MedicationRepository.kt:85)
+at cn.yunji.journal.PageMatrixBaseTest$seedMedicationPlan$1.invokeSuspend(PageMatrixBaseTest.kt:201)
+at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source:1)
+at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source:1)
+at cn.yunji.journal.PageMatrixBaseTest.seedMedicationPlan(PageMatrixBaseTest.kt:198)
+at cn.yunji.journal.ExtremeLayoutMatrixPagesTest.p3MedicationPagesExtreme(ExtremeLayoutMatrixPagesTest.kt:74)
+</failure>
+  </testcase>
+  <testcase name="p4ReminderSettingsExtreme" classname="cn.yunji.journal.ExtremeLayoutMatrixPagesTest" time="10.991" />
+  <testcase name="p1HomeAndRootEntrancesExtreme" classname="cn.yunji.journal.ExtremeLayoutMatrixPagesTest" time="8.829" />
+  <testcase name="p6PrenatalListDetailAndEditorExtreme" classname="cn.yunji.journal.ExtremeLayoutMatrixPagesTest" time="14.654">
+    <failure>androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 10000 ms
+at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+at cn.yunji.journal.ExtremeLayoutMatrixPagesTest.p6PrenatalListDetailAndEditorExtreme(ExtremeLayoutMatrixPagesTest.kt:145)
+</failure>
+  </testcase>
+  <testcase name="p5SecuritySettingsExtreme" classname="cn.yunji.journal.ExtremeLayoutMatrixPagesTest" time="3.622" />
+  <testcase name="p2TimelineLongContentExtreme" classname="cn.yunji.journal.ExtremeLayoutMatrixPagesTest" time="7.745">
+    <failure>java.lang.AssertionError: 查看原始记录按钮 未找到可检查的文本布局节点(nodes=0, checked=0)
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.assertTrue(Assert.java:42)
+at cn.yunji.journal.PageMatrixBaseTest.assertNoTruncation(PageMatrixBaseTest.kt:300)
+at cn.yunji.journal.ExtremeLayoutMatrixPagesTest.p2TimelineLongContentExtreme(ExtremeLayoutMatrixPagesTest.kt:65)
+</failure>
+  </testcase>
+  <testcase name="s2TimelineEmptyState" classname="cn.yunji.journal.UiStateMatrixTest" time="15.221">
+    <failure>androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 10000 ms
+at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+at cn.yunji.journal.UiStateMatrixTest.s2TimelineEmptyState(UiStateMatrixTest.kt:32)
+</failure>
+  </testcase>
+  <testcase name="s7DocumentFailedShowsRetryAndReselect" classname="cn.yunji.journal.UiStateMatrixTest" time="16.971">
+    <failure>androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 10000 ms
+at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+at cn.yunji.journal.UiStateMatrixTest.s7DocumentFailedShowsRetryAndReselect(UiStateMatrixTest.kt:98)
+</failure>
+  </testcase>
+  <testcase name="s6DocumentLoadingQueuedState" classname="cn.yunji.journal.UiStateMatrixTest" time="16.626">
+    <failure>androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 10000 ms
+at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+at cn.yunji.journal.UiStateMatrixTest.s6DocumentLoadingQueuedState(UiStateMatrixTest.kt:83)
+</failure>
+  </testcase>
+  <testcase name="s4MeasurementEmptyState" classname="cn.yunji.journal.UiStateMatrixTest" time="7.664" />
+  <testcase name="s3MedicationAndIntakeEmptyStates" classname="cn.yunji.journal.UiStateMatrixTest" time="19.25">
+    <failure>androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 10000 ms
+at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+at cn.yunji.journal.UiStateMatrixTest.s3MedicationAndIntakeEmptyStates(UiStateMatrixTest.kt:48)
+</failure>
+  </testcase>
+  <testcase name="s1VisitsEmptyState" classname="cn.yunji.journal.UiStateMatrixTest" time="16.206">
+    <failure>androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 10000 ms
+at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+at cn.yunji.journal.UiStateMatrixTest.s1VisitsEmptyState(UiStateMatrixTest.kt:20)
+</failure>
+  </testcase>
+  <testcase name="s5DocumentEmptyState" classname="cn.yunji.journal.UiStateMatrixTest" time="6.387" />
+</testsuite>

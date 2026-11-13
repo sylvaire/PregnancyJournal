@@ -1,0 +1,20 @@
+  --------- beginning of crash
+> 10-22 18:08:09.603  3614  5500 E AndroidRuntime: FATAL EXCEPTION: sAsyncHandlerThread
+> 10-22 18:08:09.603  3614  5500 E AndroidRuntime: Process: android.process.media, PID: 3614
+> 10-22 18:08:09.603  3614  5500 E AndroidRuntime: java.lang.IllegalStateException: java.io.FileNotFoundException: No item at content://media/external_primary/file/429
+  10-22 18:08:09.603  3614  5500 E AndroidRuntime: 	at android.os.Parcel.createExceptionOrNull(Parcel.java:3348)
+  10-22 18:08:09.603  3614  5500 E AndroidRuntime: 	at android.os.Parcel.createException(Parcel.java:3324)
+  10-22 18:08:09.603  3614  5500 E AndroidRuntime: 	at android.os.Parcel.readException(Parcel.java:3307)
+  10-22 18:08:09.603  3614  5500 E AndroidRuntime: 	at android.database.DatabaseUtils.readExceptionFromParcel(DatabaseUtils.java:201)
+  10-22 18:08:09.603  3614  5500 E AndroidRuntime: 	at android.database.DatabaseUtils.readExceptionFromParcel(DatabaseUtils.java:153)
+  10-22 18:08:09.603  3614  5500 E AndroidRuntime: 	at android.content.ContentProviderProxy.update(ContentProviderNative.java:685)
+  10-22 18:08:09.603  3614  5500 E AndroidRuntime: 	at android.content.ContentProviderClient.update(ContentProviderClient.java:417)
+  10-22 18:08:09.603  3614  5500 E AndroidRuntime: 	at android.content.ContentProviderClient.update(ContentProviderClient.java:406)
+> 10-22 18:08:09.603  3614  5500 E AndroidRuntime: 	at com.android.providers.downloads.DownloadProvider.updateMediaProvider(DownloadProvider.java:958)
+  10-22 18:08:09.603  3614  5500 E AndroidRuntime: 	at com.android.providers.downloads.DownloadProvider.update(DownloadProvider.java:1518)
+  10-22 18:08:09.603  3614  5500 E AndroidRuntime: 	at com.android.providers.downloads.DownloadProvider$1.onClose(DownloadProvider.java:1823)
+  10-22 18:08:09.603  3614  5500 E AndroidRuntime: 	at android.os.ParcelFileDescriptor$1.onFileDescriptorEvents(ParcelFileDescriptor.java:327)
+  10-22 18:08:09.603  3614  5500 E AndroidRuntime: 	at android.os.MessageQueue.dispatchEvents(MessageQueue.java:599)
+  10-22 18:08:09.603  3614  5500 E AndroidRuntime: 	at android.os.MessageQueue.nativePollOnce(Native Method)
+  10-22 18:08:09.603  3614  5500 E AndroidRuntime: 	at android.os.MessageQueue.nextLegacy(MessageQueue.java:913)
+  10-22 18:08:09.603  3614  5500 E AndroidRuntime: 	at android.os.MessageQueue.next(MessageQueue.java:1025)

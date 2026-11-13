@@ -1,0 +1,8 @@
+restored_at: 2026-10-24 (Asia/Shanghai)
+font_scale: 1.0
+night_mode: Night mode: no
+user_rotation: 0
+stay_on_while_plugged_in: 0
+app_process_pid: <none> (force-stopped)
+test_process_pid: <none> (force-stopped)
+cloud_upload_fixture_leftovers: <none>

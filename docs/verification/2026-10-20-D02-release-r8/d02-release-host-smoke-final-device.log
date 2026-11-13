@@ -1,0 +1,21 @@
+
+cn.yunji.journal.ReleaseBackupUiSmokeTest:
+Error in genuinelyObfuscatedReleaseConfirmsKeySavesAndIndependentlyRecoversManifest(cn.yunji.journal.ReleaseBackupUiSmokeTest):
+java.lang.AssertionError: Release control not clickable
+	at cn.yunji.journal.ReleaseBackupUiSmokeTest.click(ReleaseBackupUiSmokeTest.java:51)
+	at cn.yunji.journal.ReleaseBackupUiSmokeTest.clickText(ReleaseBackupUiSmokeTest.java:54)
+	at cn.yunji.journal.ReleaseBackupUiSmokeTest.genuinelyObfuscatedReleaseConfirmsKeySavesAndIndependentlyRecoversManifest(ReleaseBackupUiSmokeTest.java:129)
+
+
+Time: 4.324
+There was 1 failure:
+1) genuinelyObfuscatedReleaseConfirmsKeySavesAndIndependentlyRecoversManifest(cn.yunji.journal.ReleaseBackupUiSmokeTest)
+java.lang.AssertionError: Release control not clickable
+	at cn.yunji.journal.ReleaseBackupUiSmokeTest.click(ReleaseBackupUiSmokeTest.java:51)
+	at cn.yunji.journal.ReleaseBackupUiSmokeTest.clickText(ReleaseBackupUiSmokeTest.java:54)
+	at cn.yunji.journal.ReleaseBackupUiSmokeTest.genuinelyObfuscatedReleaseConfirmsKeySavesAndIndependentlyRecoversManifest(ReleaseBackupUiSmokeTest.java:129)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+

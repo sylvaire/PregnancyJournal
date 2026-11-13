@@ -1,0 +1,11 @@
+# D05 安全备份高水位检查与旧数据库写入封锁
+
+2026-10-21：构建、完整161项JVM/0失败、lint0错误/20警告通过；专用API34 BackupExporterTest新增3项，共13项通过（21.782秒）。未发布版本/安装手机，未重跑此前全量设备矩阵。
+
+JournalDatabase新增实例内恢复封锁，sealForRestore在共用mutationMutex中等待既有业务事务完成，再比较currentSequence与安全归档capturedSequence，匹配才设置随机令牌。journalWrite在同一锁内、进入数据库事务前检查封锁；未来/等待的旧资源写入不能在切换后盲目执行。RestoreSafetyBackup.sealCurrent先完整重新验证实际归档，再原子执行序号检查和封锁。
+
+RestoreWriteSeal.abort仅释放自己的未退役令牌；retire与abort共用数据库互斥锁，旧资源关闭后退役保持永久封锁，避免并发恢复其旧表单写入。不是跨进程全局锁，也不代替后台任务停机/旧数据库关闭。
+
+新3项实际SQLCipher验证：制作安全副本后新增业务档案，序号不符拒绝封锁，档案仍在且可继续普通事务；有效副本封锁后写入回调不执行，中止后可写；retire后abort不能恢复写入，检查回调确实未执行。其余10项安全副本/导出回归通过。
+
+尚未把此门接Runtime关闭→RestoreWizard.commit→设置重建；非journalWrite的内部DAO/草稿等路径、后台导入/提醒/云端消费者停机需统一核对。尚无多进程、真实旧表单/UI或并发后台任务切换集成证据。下一步实际恢复协调器持有封锁、取消后台消费者、关闭旧图后切换并验证/回滚，再恢复设置与UI。D05未验收。

@@ -1,0 +1,21 @@
+10-23 20:52:04.803 D/AndroidRuntime(14250): >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+10-23 20:52:04.806 I/AndroidRuntime(14250): Using default boot image
+10-23 20:52:04.806 I/AndroidRuntime(14250): Leaving lock profiling enabled
+10-23 20:52:04.859 D/AndroidRuntime(14250): Calling main entry com.android.commands.am.Am
+10-23 20:52:05.818 I/TestRunner(14263): run started: 7 tests
+10-23 20:52:05.820 I/TestRunner(14263): started: untrustedCertificateIsRejectedWithoutTrustAllFallback(cn.yunji.journal.CloudUploadDeviceTest)
+10-23 20:52:06.001 I/TestRunner(14263): finished: untrustedCertificateIsRejectedWithoutTrustAllFallback(cn.yunji.journal.CloudUploadDeviceTest)
+10-23 20:52:06.004 I/TestRunner(14263): started: missingCommitReadbackNeverReportsSuccess(cn.yunji.journal.CloudUploadDeviceTest)
+10-23 20:52:06.963 I/TestRunner(14263): finished: missingCommitReadbackNeverReportsSuccess(cn.yunji.journal.CloudUploadDeviceTest)
+10-23 20:52:06.965 I/TestRunner(14263): started: foreignIdentityAtDestinationIsNeverOverwritten(cn.yunji.journal.CloudUploadDeviceTest)
+10-23 20:52:07.274 I/TestRunner(14263): finished: foreignIdentityAtDestinationIsNeverOverwritten(cn.yunji.journal.CloudUploadDeviceTest)
+10-23 20:52:07.276 I/TestRunner(14263): started: corruptedRemoteObjectBlocksReuseInsteadOfBeingSilentlyReplaced(cn.yunji.journal.CloudUploadDeviceTest)
+10-23 20:52:08.361 I/TestRunner(14263): finished: corruptedRemoteObjectBlocksReuseInsteadOfBeingSilentlyReplaced(cn.yunji.journal.CloudUploadDeviceTest)
+10-23 20:52:08.363 I/TestRunner(14263): started: repeatedUploadReusesImmutableObjectsAndCommitWithoutRewriting(cn.yunji.journal.CloudUploadDeviceTest)
+10-23 20:52:09.804 I/TestRunner(14263): finished: repeatedUploadReusesImmutableObjectsAndCommitWithoutRewriting(cn.yunji.journal.CloudUploadDeviceTest)
+10-23 20:52:09.806 I/TestRunner(14263): started: firstUploadPublishesObjectsSnapshotIdentityAndCommitInPhaseOrder(cn.yunji.journal.CloudUploadDeviceTest)
+10-23 20:52:10.635 I/TestRunner(14263): finished: firstUploadPublishesObjectsSnapshotIdentityAndCommitInPhaseOrder(cn.yunji.journal.CloudUploadDeviceTest)
+10-23 20:52:10.636 I/TestRunner(14263): started: localValidationFailuresNeverWriteRemotely(cn.yunji.journal.CloudUploadDeviceTest)
+10-23 20:52:10.662 I/TestRunner(14263): finished: localValidationFailuresNeverWriteRemotely(cn.yunji.journal.CloudUploadDeviceTest)
+10-23 20:52:10.664 I/TestRunner(14263): run finished: 7 tests, 0 failed, 0 ignored
+10-23 20:52:10.668 I/AndroidRuntime(14250): VM exiting with result code 0.

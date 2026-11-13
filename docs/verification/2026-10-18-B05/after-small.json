@@ -1,0 +1,92 @@
+[
+  {
+    "iteration": 1,
+    "bytes": 81819,
+    "width": 256,
+    "height": 384,
+    "spaceCheck": 0,
+    "encrypt": 5,
+    "authenticate": 1,
+    "commit": 3,
+    "thumbnail": 10,
+    "total": 31
+  },
+  {
+    "iteration": 2,
+    "bytes": 81819,
+    "width": 256,
+    "height": 384,
+    "spaceCheck": 0,
+    "encrypt": 11,
+    "authenticate": 0,
+    "commit": 2,
+    "thumbnail": 10,
+    "total": 34
+  },
+  {
+    "iteration": 3,
+    "bytes": 81819,
+    "width": 256,
+    "height": 384,
+    "spaceCheck": 0,
+    "encrypt": 4,
+    "authenticate": 0,
+    "commit": 3,
+    "thumbnail": 11,
+    "total": 27
+  },
+  {
+    "iteration": 4,
+    "bytes": 81819,
+    "width": 256,
+    "height": 384,
+    "spaceCheck": 0,
+    "encrypt": 4,
+    "authenticate": 0,
+    "commit": 3,
+    "thumbnail": 11,
+    "total": 27
+  },
+  {
+    "iteration": 5,
+    "bytes": 81819,
+    "width": 256,
+    "height": 384,
+    "spaceCheck": 0,
+    "encrypt": 1,
+    "authenticate": 0,
+    "commit": 2,
+    "thumbnail": 10,
+    "total": 23
+  },
+  {
+    "case": "batch-2",
+    "iteration": 1,
+    "bytesPerFile": 81819,
+    "total": 51
+  },
+  {
+    "case": "batch-2",
+    "iteration": 2,
+    "bytesPerFile": 81819,
+    "total": 62
+  },
+  {
+    "case": "batch-2",
+    "iteration": 3,
+    "bytesPerFile": 81819,
+    "total": 58
+  },
+  {
+    "case": "batch-2",
+    "iteration": 4,
+    "bytesPerFile": 81819,
+    "total": 46
+  },
+  {
+    "case": "batch-2",
+    "iteration": 5,
+    "bytesPerFile": 81819,
+    "total": 53
+  }
+]

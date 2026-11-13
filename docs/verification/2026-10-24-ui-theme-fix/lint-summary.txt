@@ -1,0 +1,6 @@
+# P0-2 UI 主题修复验证 · lint（可选，终版）
+生成时间（宿主）：2026-10-24 04:42:30 +08:00
+命令：.\gradlew.bat --gradle-user-home .gradle-user --offline :app:lintDebug
+结果：BUILD SUCCESSFUL in 51s，LINT_EXIT=0，墙钟 52.1s
+报告：app/build/reports/lint-results-debug.txt -> **0 errors, 27 warnings**
+对照：2026-10-23 E02 记录为 0 错误/27 警告（本修复未改变 lint 结果）

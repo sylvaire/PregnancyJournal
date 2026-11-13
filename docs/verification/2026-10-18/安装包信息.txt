@@ -1,0 +1,7 @@
+version=0.1.0-dev
+revision=xiaomi-outline-fix
+file=app/build/outputs/apk/debug/app-debug.apk
+bytes=24660232
+sha256=58B3B91CC2ADB48965F21BDCE75F2DA4575F3BA8F399EA7C4E143D3D1E7F4408
+signing=debug
+verified=assembleDebug;12 unit tests;lint 0 errors 14 dependency update warnings;2 Android16 Xiaomi device tests

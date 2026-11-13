@@ -1,0 +1,7 @@
+{
+  "totalJvmTests": 222,
+  "failures": 0,
+  "classes": 42,
+  "d07New": 17,
+  "note": "D07新增：结构化导出10项(StructuredExportTest)、摘要组装与分页7项(VisitSummaryTest)。"
+}

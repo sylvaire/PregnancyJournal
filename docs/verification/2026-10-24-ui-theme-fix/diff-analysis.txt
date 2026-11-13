@@ -1,0 +1,60 @@
+== custom-reminder-editor.png diff_px 1070358 crop px (np.int64(54), np.int64(20), np.int64(993), np.int64(1920)) dp (np.float64(357.7), np.float64(723.8))
+   #ECE6F0 -> #FFFFFF  1054952 px
+   #356B53 -> #FFFFFF  195 px
+   #EAE5EE -> #FDFDFD  185 px
+   #ECE6F0 -> #356B53  177 px
+   #9CB0AB -> #A6BEB3  147 px
+   #CCCCD1 -> #DBDFDD  144 px
+   #D4D6DB -> #E4EBE8  135 px
+   #537F6D -> #56836F  130 px
+   crop -> docs/verification/2026-10-24-ui-theme-fix/diffs/custom-reminder-editor-before-after.png
+== export-screen.png diff_px 6768 crop px (np.int64(860), np.int64(1125), np.int64(1057), np.int64(1269)) dp (np.float64(75.0), np.float64(54.9))
+   #E6E0E9 -> #DDE4DA  6352 px
+   #E1E2E1 -> #DDE4DA  44 px
+   #E4E1E6 -> #DDE4DA  40 px
+   #E0E4DE -> #DEE5DB  36 px
+   #DFE3DD -> #DDE4DA  24 px
+   #E1E2E0 -> #DDE4DA  24 px
+   #E5E0E8 -> #DDE4DA  24 px
+   #E4E1E5 -> #DDE4DA  24 px
+   crop -> docs/verification/2026-10-24-ui-theme-fix/diffs/export-screen-before-after.png
+== measurement-editor.png diff_px 1391 crop px (np.int64(66), np.int64(964), np.int64(288), np.int64(1056)) dp (np.float64(84.6), np.float64(35.0))
+   #223C32 -> #F7F8F3  289 px
+   #F7F8F3 -> #223C32  251 px
+   #9BA7A0 -> #F7F8F3  26 px
+   #C2CAC3 -> #30493F  18 px
+   #30493F -> #F7F8F3  16 px
+   #4E635A -> #F7F8F3  15 px
+   #F7F8F3 -> #4E635A  14 px
+   #ECEEE9 -> #F7F8F3  13 px
+   crop -> docs/verification/2026-10-24-ui-theme-fix/diffs/measurement-editor-before-after.png
+== reminder-settings.png diff_px 14545 crop px (np.int64(98), np.int64(553), np.int64(702), np.int64(782)) dp (np.float64(230.1), np.float64(87.2))
+   #223C32 -> #FFFFFF  2612 px
+   #FFFFFF -> #356B53  1113 px
+   #356B53 -> #FFFFFF  1091 px
+   #FFFFFF -> #223C32  959 px
+   #5D7069 -> #FFFFFF  81 px
+   #657770 -> #FFFFFF  80 px
+   #DBE0DE -> #FFFFFF  74 px
+   #A7B2AE -> #FFFFFF  65 px
+   crop -> docs/verification/2026-10-24-ui-theme-fix/diffs/reminder-settings-before-after.png
+== timeline-source-detail.png diff_px 1912 crop px (np.int64(295), np.int64(388), np.int64(519), np.int64(1022)) dp (np.float64(85.3), np.float64(241.5))
+   #223C32 -> #F7F8F3  331 px
+   #F7F8F3 -> #223C32  318 px
+   #E7EAE5 -> #223C32  16 px
+   #7B8A82 -> #F7F8F3  16 px
+   #5A6D65 -> #F7F8F3  16 px
+   #EFF1EB -> #F7F8F3  14 px
+   #F7F8F3 -> #ECEEE9  13 px
+   #223C32 -> #9BA7A0  13 px
+   crop -> docs/verification/2026-10-24-ui-theme-fix/diffs/timeline-source-detail-before-after.png
+== timeline.png diff_px 269 crop px (np.int64(103), np.int64(2093), np.int64(181), np.int64(2177)) dp (np.float64(29.7), np.float64(32.0))
+   #FFFFFF -> #223C32  42 px
+   #223C32 -> #FFFFFF  40 px
+   #223C32 -> #EFF0F0  8 px
+   #FFFFFF -> #6F807A  7 px
+   #FFFFFF -> #5C6F68  6 px
+   #FFFFFF -> #EFF0F0  6 px
+   #BAC2BF -> #FFFFFF  6 px
+   #223C32 -> #5C6F68  4 px
+   crop -> docs/verification/2026-10-24-ui-theme-fix/diffs/timeline-before-after.png

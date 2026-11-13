@@ -1,0 +1,10 @@
+scenario,phase,result,detail
+draft,phase1,PASS,OK (1 test)
+draft,phase2,PASS,OK (1 test)
+backup,phase1,PASS,OK (1 test)
+backup,phase2,PASS,OK (1 test)
+crash,kill,PASS,pid=12006 method=am force-stop (kill -9 rejected by shell uid)
+crash,phase2,PASS,OK (1 test)
+device readback written to raw/device-readback.txt
+
+RESULT: ALL PHASES PASS

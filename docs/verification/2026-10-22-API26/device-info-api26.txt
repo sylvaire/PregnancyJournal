@@ -1,0 +1,14 @@
+captured=2026-10-22 17:57:51 +08:00
+ro.build.version.sdk=26
+ro.build.version.release=8.0.0
+ro.product.cpu.abi=x86_64
+ro.build.version.security_patch=2018-04-05
+ro.product.model=Android SDK built for x86_64
+ro.product.device=generic_x86_64
+ro.build.fingerprint=Android/sdk_gphone_x86_64/generic_x86_64:8.0.0/OSR1.180418.026/6741039:userdebug/dev-keys
+wm_size=Physical size: 1080x1920
+wm_density=Physical density: 420
+page_size=/system/bin/sh: getconf: not found
+font_scale=1.0
+night=Night mode: no
+user_rotation=0

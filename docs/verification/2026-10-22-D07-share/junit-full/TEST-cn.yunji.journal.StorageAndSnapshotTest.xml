@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.StorageAndSnapshotTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-22T07:08:31.572Z" hostname="SUN-KDQ5E4QJN34" time="0.017">
+  <properties/>
+  <testcase name="snapshotRestoresWithoutOriginalDeviceKeyAndRejectsWrongRecovery" classname="cn.yunji.journal.StorageAndSnapshotTest" time="0.004"/>
+  <testcase name="streamingFileRoundTripAndTamperDoesNotPublishPreview" classname="cn.yunji.journal.StorageAndSnapshotTest" time="0.011"/>
+  <testcase name="fileIdentityRejectsPathTraversal" classname="cn.yunji.journal.StorageAndSnapshotTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

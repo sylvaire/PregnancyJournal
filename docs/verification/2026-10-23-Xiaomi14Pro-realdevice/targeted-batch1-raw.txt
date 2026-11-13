@@ -1,0 +1,180 @@
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ReminderNotificationTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=
+cn.yunji.journal.ReminderNotificationTest:
+INSTRUMENTATION_STATUS: test=existingForegroundNotificationIsRedactedWithoutLosingAction
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ReminderNotificationTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=existingForegroundNotificationIsRedactedWithoutLosingAction
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ReminderNotificationTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=exactAlarmPostsPrivateNotificationThroughReceiver
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ReminderNotificationTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=exactAlarmPostsPrivateNotificationThroughReceiver
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ReminderSchedulerTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=
+cn.yunji.journal.ReminderSchedulerTest:
+INSTRUMENTATION_STATUS: test=generationIncreasesAndScheduledKeysAreReplaceable
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ReminderSchedulerTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=generationIncreasesAndScheduledKeysAreReplaceable
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ReminderSchedulerTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=unauthenticatedNotificationActionCannotWriteOrSnooze
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ReminderSchedulerTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=unauthenticatedNotificationActionCannotWriteOrSnooze
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ReminderSchedulerTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=eventsProjectVisitsAndMedicationWithinSevenDaysAndDropTakenDoses
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ReminderSchedulerTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=eventsProjectVisitsAndMedicationWithinSevenDaysAndDropTakenDoses
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ReminderSchedulerTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=rebuildSchedulesAlarmsAndReplacesPreviousGeneration
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ReminderSchedulerTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=rebuildSchedulesAlarmsAndReplacesPreviousGeneration
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ReminderSchedulerTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=snoozeKeepsOriginalOccurrenceButMovesNextAlarmProjection
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.ReminderSchedulerTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=snoozeKeepsOriginalOccurrenceButMovesNextAlarmProjection
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.CustomReminderUiTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stream=
+cn.yunji.journal.CustomReminderUiTest:
+INSTRUMENTATION_STATUS: test=initializationError
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.CustomReminderUiTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=8
+INSTRUMENTATION_STATUS: stack=java.lang.RuntimeException: Failed loading specified test class 'cn.yunji.journal.CustomReminderUiTest'
+	at androidx.test.internal.runner.DirectTestLoader.doCreateRunner(DirectTestLoader.java:50)
+	at androidx.test.internal.runner.TestLoader.getRunnersFor(TestLoader.java:64)
+	at androidx.test.internal.runner.TestRequestBuilder.build(TestRequestBuilder.java:842)
+	at androidx.test.runner.AndroidJUnitRunner.buildRequest(AndroidJUnitRunner.java:672)
+	at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:453)
+	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2661)
+Caused by: java.lang.ClassNotFoundException: cn.yunji.journal.CustomReminderUiTest
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:597)
+	at androidx.test.internal.runner.DirectTestLoader.doCreateRunner(DirectTestLoader.java:44)
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "cn.yunji.journal.CustomReminderUiTest" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~aJb4cIOUoELp5iVCpvFG3A==/cn.yunji.journal.test-ciocu0Ic--rFIDkEsdZL6g==/base.apk", zip file "/data/app/~~GQzINr1I3hSPqb2c0eSI_w==/cn.yunji.journal-CUF2C5OjxG8pyRS03pc7Mw==/base.apk"],nativeLibraryDirectories=[/data/app/~~aJb4cIOUoELp5iVCpvFG3A==/cn.yunji.journal.test-ciocu0Ic--rFIDkEsdZL6g==/lib/arm64, /data/app/~~GQzINr1I3hSPqb2c0eSI_w==/cn.yunji.journal-CUF2C5OjxG8pyRS03pc7Mw==/lib/arm64, /data/app/~~aJb4cIOUoELp5iVCpvFG3A==/cn.yunji.journal.test-ciocu0Ic--rFIDkEsdZL6g==/base.apk!/lib/arm64-v8a, /data/app/~~GQzINr1I3hSPqb2c0eSI_w==/cn.yunji.journal-CUF2C5OjxG8pyRS03pc7Mw==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:637)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:573)
+	... 8 more
+
+INSTRUMENTATION_STATUS: stream=
+Error in initializationError(cn.yunji.journal.CustomReminderUiTest):
+java.lang.RuntimeException: Failed loading specified test class 'cn.yunji.journal.CustomReminderUiTest'
+	at androidx.test.internal.runner.DirectTestLoader.doCreateRunner(DirectTestLoader.java:50)
+	at androidx.test.internal.runner.TestLoader.getRunnersFor(TestLoader.java:64)
+	at androidx.test.internal.runner.TestRequestBuilder.build(TestRequestBuilder.java:842)
+	at androidx.test.runner.AndroidJUnitRunner.buildRequest(AndroidJUnitRunner.java:672)
+	at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:453)
+	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2661)
+Caused by: java.lang.ClassNotFoundException: cn.yunji.journal.CustomReminderUiTest
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:597)
+	at androidx.test.internal.runner.DirectTestLoader.doCreateRunner(DirectTestLoader.java:44)
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "cn.yunji.journal.CustomReminderUiTest" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~aJb4cIOUoELp5iVCpvFG3A==/cn.yunji.journal.test-ciocu0Ic--rFIDkEsdZL6g==/base.apk", zip file "/data/app/~~GQzINr1I3hSPqb2c0eSI_w==/cn.yunji.journal-CUF2C5OjxG8pyRS03pc7Mw==/base.apk"],nativeLibraryDirectories=[/data/app/~~aJb4cIOUoELp5iVCpvFG3A==/cn.yunji.journal.test-ciocu0Ic--rFIDkEsdZL6g==/lib/arm64, /data/app/~~GQzINr1I3hSPqb2c0eSI_w==/cn.yunji.journal-CUF2C5OjxG8pyRS03pc7Mw==/lib/arm64, /data/app/~~aJb4cIOUoELp5iVCpvFG3A==/cn.yunji.journal.test-ciocu0Ic--rFIDkEsdZL6g==/base.apk!/lib/arm64-v8a, /data/app/~~GQzINr1I3hSPqb2c0eSI_w==/cn.yunji.journal-CUF2C5OjxG8pyRS03pc7Mw==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:637)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:573)
+	... 8 more
+
+INSTRUMENTATION_STATUS: test=initializationError
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 14.563
+There was 1 failure:
+1) initializationError(cn.yunji.journal.CustomReminderUiTest)
+java.lang.RuntimeException: Failed loading specified test class 'cn.yunji.journal.CustomReminderUiTest'
+	at androidx.test.internal.runner.DirectTestLoader.doCreateRunner(DirectTestLoader.java:50)
+	at androidx.test.internal.runner.TestLoader.getRunnersFor(TestLoader.java:64)
+	at androidx.test.internal.runner.TestRequestBuilder.build(TestRequestBuilder.java:842)
+	at androidx.test.runner.AndroidJUnitRunner.buildRequest(AndroidJUnitRunner.java:672)
+	at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:453)
+	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2661)
+Caused by: java.lang.ClassNotFoundException: cn.yunji.journal.CustomReminderUiTest
+	at java.lang.Class.classForName(Native Method)
+	at java.lang.Class.forName(Class.java:597)
+	at androidx.test.internal.runner.DirectTestLoader.doCreateRunner(DirectTestLoader.java:44)
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: Didn't find class "cn.yunji.journal.CustomReminderUiTest" on path: DexPathList[[zip file "/system/framework/android.test.runner.jar", zip file "/system/framework/android.test.mock.jar", zip file "/system/framework/android.test.base.jar", zip file "/data/app/~~aJb4cIOUoELp5iVCpvFG3A==/cn.yunji.journal.test-ciocu0Ic--rFIDkEsdZL6g==/base.apk", zip file "/data/app/~~GQzINr1I3hSPqb2c0eSI_w==/cn.yunji.journal-CUF2C5OjxG8pyRS03pc7Mw==/base.apk"],nativeLibraryDirectories=[/data/app/~~aJb4cIOUoELp5iVCpvFG3A==/cn.yunji.journal.test-ciocu0Ic--rFIDkEsdZL6g==/lib/arm64, /data/app/~~GQzINr1I3hSPqb2c0eSI_w==/cn.yunji.journal-CUF2C5OjxG8pyRS03pc7Mw==/lib/arm64, /data/app/~~aJb4cIOUoELp5iVCpvFG3A==/cn.yunji.journal.test-ciocu0Ic--rFIDkEsdZL6g==/base.apk!/lib/arm64-v8a, /data/app/~~GQzINr1I3hSPqb2c0eSI_w==/cn.yunji.journal-CUF2C5OjxG8pyRS03pc7Mw==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:637)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:573)
+	... 8 more
+
+FAILURES!!!
+Tests run: 8,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

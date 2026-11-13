@@ -1,0 +1,6 @@
+command: .\gradlew.bat :app:lintDebug --console=plain
+result: BUILD SUCCESSFUL; errors=0 warnings=35
+severity: Warning=35
+ids: AndroidGradlePluginVersion=2, ExifInterface=2, GradleDependency=9, NewerVersionAvailable=13, UseKtx=9
+baseline after task-2: 0 errors / 35 warnings (NewerVersionAvailable=13, GradleDependency=9, UseKtx=9, AndroidGradlePluginVersion=2, ExifInterface=2)
+delta: none

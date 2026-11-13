@@ -1,0 +1,6 @@
+lint issues=35 errors=0 warnings=35
+NewerVersionAvailable=13
+GradleDependency=9
+UseKtx=9
+AndroidGradlePluginVersion=2
+ExifInterface=2

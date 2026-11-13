@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <long name="generation" value="33" />
+    <set name="missed-alarms" />
+    <set name="scheduled-keys">
+        <string>MEDICATION:792b778e-0659-3e03-9489-1ed7906468fd</string>
+        <string>MEDICATION:d869eb44-f50a-35c5-b9e6-5d3932f11076</string>
+        <string>MEDICATION:b25d17d6-0606-347d-bc9b-683be6eaaeb3</string>
+        <string>MEDICATION:52cdce06-406d-3ac7-aac9-a1a3929f3351</string>
+        <string>MEDICATION:b5b7bc43-522a-3cb5-aafa-ed64466c691f</string>
+        <string>MEDICATION:29cc5603-f970-3c08-bac0-72268b4cc499</string>
+        <string>MEDICATION:63f39abc-7805-3640-8084-331f4a4e5445</string>
+        <string>MEDICATION:ab1f1dfe-029d-3afa-ba6a-573b7b06f6bd</string>
+        <string>MEDICATION:a2cb633b-42fd-399b-bb80-ff70980f1110</string>
+        <string>VISIT:c5c432d3-36f1-4be3-9441-1680a93194e6:2026-10-30:09:00</string>
+        <string>MEDICATION:dcfc01af-e818-3795-a7c2-d8878078c183</string>
+        <string>MEDICATION:871158d9-e786-3a6e-bbc9-c92e35b78d1e</string>
+        <string>MEDICATION:8d44611a-a504-399b-a593-be40679b8535</string>
+        <string>MEDICATION:26692ef8-4700-3e0c-a057-87f1aef5989b</string>
+    </set>
+    <set name="delivered-alarms" />
+    <set name="snoozes" />
+</map>

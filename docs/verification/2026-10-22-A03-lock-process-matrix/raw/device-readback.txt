@@ -1,0 +1,7 @@
+font_scale=1.0
+accelerometer_rotation=1
+user_rotation=0
+Night mode: no
+Physical size: 1080x2400
+Physical density: 420
+yunji_processes=u0_a228      11806   471   14229732 107868 0                   0 S cn.yunji.journal.test;

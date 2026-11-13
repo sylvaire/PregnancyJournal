@@ -1,0 +1,311 @@
+{
+  "task": ":app:testDebugUnitTest",
+  "classes": 43,
+  "tests": 237,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "classes_detail": [
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.CloudBackupPipelineTest",
+      "tests": 7,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.CloudBackupPolicyTest",
+      "tests": 7,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.CloudBackupUploadDavTest",
+      "tests": 7,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.CloudBackupUploadTest",
+      "tests": 5,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.CloudCommitTest",
+      "tests": 4,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.CloudConnectionControllerTest",
+      "tests": 4,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.CloudCredentialsTest",
+      "tests": 3,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.CloudMaintenanceTest",
+      "tests": 6,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.CloudProbeTest",
+      "tests": 8,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.CloudRetentionTest",
+      "tests": 13,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.CloudSnapshotFetcherTest",
+      "tests": 8,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.CloudUploadGateTest",
+      "tests": 4,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.CloudWriterStoreTest",
+      "tests": 6,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.DocumentQueryTest",
+      "tests": 2,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.FileAuthenticationCancellationTest",
+      "tests": 2,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.FileGcmCompatibilityTest",
+      "tests": 2,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.GenerationKeyEnvelopeTest",
+      "tests": 2,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.GenerationKeyStoreTest",
+      "tests": 3,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.LocalBackupArchiveTest",
+      "tests": 5,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.LogicalSnapshotTest",
+      "tests": 8,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.MeasurementRulesTest",
+      "tests": 2,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.MedicationRulesTest",
+      "tests": 4,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.MedicationScheduleTest",
+      "tests": 3,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.NavigationTapGateTest",
+      "tests": 2,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.PregnancyRulesTest",
+      "tests": 2,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.RecoveryControllerTest",
+      "tests": 2,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.RecoveryKeySetupTest",
+      "tests": 2,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.RecoverySlotTest",
+      "tests": 3,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.ReminderRulesTest",
+      "tests": 4,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.RestoreCompletionTest",
+      "tests": 4,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.RestoreControllerTest",
+      "tests": 14,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.RestoreStartupTest",
+      "tests": 10,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.RestoreWizardTest",
+      "tests": 12,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.SafetyCopyStoreTest",
+      "tests": 5,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.SnapshotContentTest",
+      "tests": 3,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.StorageAndSnapshotTest",
+      "tests": 3,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.StructuredExportTest",
+      "tests": 10,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.TimelineRulesTest",
+      "tests": 3,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.VaultCryptoTest",
+      "tests": 4,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.VaultLayoutTest",
+      "tests": 11,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.VisitSummaryTest",
+      "tests": 7,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.WebDavClientTest",
+      "tests": 17,
+      "failures": 0
+    },
+    {
+      "skipped": 0,
+      "errors": 0,
+      "name": "cn.yunji.journal.ZipPreflightTest",
+      "tests": 4,
+      "failures": 0
+    }
+  ]
+}

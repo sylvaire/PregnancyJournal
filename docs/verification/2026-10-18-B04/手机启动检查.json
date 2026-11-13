@@ -1,0 +1,10 @@
+{
+  "version": "0.3.0-dev",
+  "installed": true,
+  "activityStart": "ok",
+  "homeLoaded": false,
+  "userFilesImported": false,
+  "applicationVisible": true,
+  "presetStartupErrorVisible": false,
+  "rootNavigationVisible": true
+}

@@ -1,0 +1,16 @@
+# Test notification record on HyperOS (sanitized extract)
+
+Posted from the app's reminder settings page (发送测试通知, synthetic text only).
+
+NotificationRecord(0x0afe53b3: pkg=cn.yunji.journal user=UserHandle{11} id=700001 tag=null importance=4 key=11|cn.yunji.journal|700001|null|1110554 bbbc=0: Notification(channel=reminders shortcut=null contentView=null vibrate=null sound=null defaults=0 flags=AUTO_CANCEL color=0x00000000 category=reminder vis=PRIVATE focusType=null))
+uid=1110554 userId=11
+key=11|cn.yunji.journal|700001|null|1110554
+seen=false
+vis=0  (Notification.VISIBILITY_PRIVATE)
+
+Channel (read back):
+NotificationChannel{mId='reminders', mName=孕迹提醒, mImportance=4, mLockscreenVisibility=-1000, mSound=content://settings/system/notification_sound, mShowBadge=true, mDeleted=false}
+
+Note: the app creates the channel with lockscreenVisibility=PRIVATE, but HyperOS reports mLockscreenVisibility=-1000 (VISIBILITY_NO_OVERRIDE). Recorded as an observation; root cause not attributed.
+
+Notification shade: the notification is displayed with its synthetic title/text (see notification-shade.png).

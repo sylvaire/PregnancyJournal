@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.CloudBackupUploadTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-20T15:22:17.459Z" hostname="SUN-KDQ5E4QJN34" time="0.19">
+  <properties/>
+  <testcase name="failedManifestUploadNeverPublishesCommit" classname="cn.yunji.journal.CloudBackupUploadTest" time="0.137"/>
+  <testcase name="cancellationBeforeCommitLeavesNoDiscoverableCommit" classname="cn.yunji.journal.CloudBackupUploadTest" time="0.01"/>
+  <testcase name="corruptCommitReadbackCannotProduceSuccessReceipt" classname="cn.yunji.journal.CloudBackupUploadTest" time="0.009"/>
+  <testcase name="successfulReceiptUsesCapturedSequenceAndCommitIsLast" classname="cn.yunji.journal.CloudBackupUploadTest" time="0.013"/>
+  <testcase name="retryValidCommitIsReusedAndInvalidExistingCommitIsPreserved" classname="cn.yunji.journal.CloudBackupUploadTest" time="0.019"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

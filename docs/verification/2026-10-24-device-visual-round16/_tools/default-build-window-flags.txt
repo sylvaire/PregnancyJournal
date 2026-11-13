@@ -1,0 +1,7 @@
+默认构建窗口标志（FLAG_SECURE 已恢复）：
+    mDimAssist: false
+  Window #14 Window{b48488b u0 cn.yunji.journal/cn.yunji.journal.MainActivity}:
+    mDisplayId=0 rootTaskId=118 mSession=Session{6f64649 14427:u0a10284} mClient=android.os.BinderProxy@106de5a
+    mOwnerUid=10284 showForAllUsers=false package=cn.yunji.journal appop=NONE
+    mAttrs={(0,0)(fillxfill) sim={adjust=resize forwardNavigation} layoutInDisplayCutoutMode=always disableCutout=false ty=BASE_APPLICATION wanim=0x1030300
+      fl=LAYOUT_IN_SCREEN SECURE LAYOUT_INSET_DECOR SPLIT_TOUCH HARDWARE_ACCELERATED DRAWS_SYSTEM_BAR_BACKGROUNDS

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cn.yunji.journal.MedicationScheduleTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-22T07:08:30.604Z" hostname="SUN-KDQ5E4QJN34" time="0.006">
+  <properties/>
+  <testcase name="planIntervalsPauseAndResumeNeverRewriteEarlierBasis" classname="cn.yunji.journal.MedicationScheduleTest" time="0.004"/>
+  <testcase name="weeklyOnceTextAndAsNeededRespectTheirMeaning" classname="cn.yunji.journal.MedicationScheduleTest" time="0.001"/>
+  <testcase name="dstGapUsesFirstValidTimeAndOverlapProducesOnlyOnePoint" classname="cn.yunji.journal.MedicationScheduleTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

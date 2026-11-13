@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="cn.yunji.journal.RecoveryUiTest" tests="10" failures="0" errors="0" skipped="0" time="45.963" timestamp="2026-10-22T07:04:51" hostname="localhost">
+  <properties>
+    <property name="device" value="PJ_API36_16K(AVD) - 16" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="reclaimPanelIsHiddenWhenNoPreviousGenerationExists" classname="cn.yunji.journal.RecoveryUiTest" time="4.763" />
+  <testcase name="fullKeyIsHiddenBeforeVerificationAndPageDisposalClearsIt" classname="cn.yunji.journal.RecoveryUiTest" time="4.739" />
+  <testcase name="configuredPageLaunchesBackupForTheCurrentVaultWithoutShowingRecoveryKey" classname="cn.yunji.journal.RecoveryUiTest" time="1.57" />
+  <testcase name="productionReclaimPanelReclaimsPreviousGenerationThroughRealVault" classname="cn.yunji.journal.RecoveryUiTest" time="1.9" />
+  <testcase name="reclaimNeedsExplicitConfirmationAndCanBeCancelled" classname="cn.yunji.journal.RecoveryUiTest" time="1.939" />
+  <testcase name="reclaimActionIsDisabledWhileCoveredOrBusy" classname="cn.yunji.journal.RecoveryUiTest" time="1.274" />
+  <testcase name="cloudRestoreRequiresASavedVerifiedConnection" classname="cn.yunji.journal.LocalRestoreCloudTest" time="0.578" />
+  <testcase name="listsAndPreparesACloudSnapshotThenCommitsItThroughTheProductionAdapter" classname="cn.yunji.journal.LocalRestoreCloudTest" time="6.987" />
+  <testcase name="reclaimsTheConfirmedGenerationThenRestoresAgain" classname="cn.yunji.journal.LocalRestoreCloudTest" time="18.025" />
+  <testcase name="wrongKeyFindsNothingAndATamperedObjectIsRefusedWithoutStaging" classname="cn.yunji.journal.LocalRestoreCloudTest" time="2.985" />
+</testsuite>

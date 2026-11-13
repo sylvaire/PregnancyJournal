@@ -1,0 +1,37 @@
+# End-to-end reminder delivery on MIUI 14 / Android 13: before vs after the OEM power settings
+
+## Setup
+
+- Fresh install, synthetic pregnancy "我的孕期" (dates left blank) and one synthetic medication plan "SyntheticMed" with a daily fixed time; all data synthetic, deleted after the test.
+- Notification permission granted, SCHEDULE_EXACT_ALARM appop allow, exact alarm shown as "可使用精确提醒".
+- Planned due times: 01:22 (first attempt), then 01:33 (after changing the OEM power policy).
+
+## A. Default MIUI 14 power policy (智能限制后台运行(推荐))
+
+- App backgrounded at 01:20:01 after saving the plan.
+- MIUI power manager froze the app almost immediately (SmartPower log):
+  10-24 01:20:01.937 I/SmartPower.cn.yunji.journal/10284(13008)( 1876): background->idle(3002ms) R(become background) adj=700.
+  10-24 01:20:03.938 I/SmartPower( 1876): cn.yunji.journal/10284 state=idle adj=700 proc size=1 move to hibernation become background
+- At 01:22 the scheduled alarm disappeared from the pending alarm list, but no notification was posted and the app's delivered/missed markers stayed empty; `dumpsys notification` showed `AppSettings: cn.yunji.journal (10284) importance=NONE userSet=true` and appops `POST_NOTIFICATION: ignore` at that moment (observed only; root cause not attributed).
+- Conclusion for this device/ROM: with the default MIUI 14 power policy the reminder was NOT delivered; the app was hibernated seconds after leaving the foreground.
+
+## B. After setting 省电策略 = 无限制 (the app's own vendor guidance)
+
+- The app's 允许后台运行 button opens com.miui.powerkeeper/.ui.HiddenAppsConfigActivity; selecting 无限制 made the app page show "已加入电池优化白名单，系统不会因省电冻结提醒".
+- MIUI autostart page then showed "允许1个应用自启动" with 孕迹 (previously it was listed under "禁止53个应用自启动").
+- Plan edited to 01:33; app backgrounded at 01:30:23. No hibernation log for the app afterwards.
+
+### Result B1: catch-up of the missed 01:22 occurrence
+
+- NotificationRecord id=1926720625, when=2026-10-24 01:30:23.861 (+08:00), title=孕迹提醒, text=打开孕迹解锁后查看 — the missed 01:22 reminder was replayed within the app's 15-minute replay window when the app next ran.
+
+### Result B2: on-time scheduled delivery at 01:33
+
+- NotificationRecord id=1444995013, when=2026-10-24 01:33:00.041 (+08:00), channel=reminders, importance=4, visibility=PRIVATE, title=孕迹提醒, text=打开孕迹解锁后查看.
+- Delay vs the scheduled 01:33:00 = about 41 ms.
+- The notification appeared in the notification shade (see delivery-notifications-top.png; cropped to the two 孕迹 reminders and system entries, no third-party personal content).
+
+## Boundary
+
+- This is one synthetic occurrence on one MIUI 14 / Android 13 device; it does not prove long-term reliability, reboot behaviour, timezone changes, OEM variants or the lock-screen visual (the device has a device credential and was not locked during the test).
+- The MIUI power-policy/hibernation and permission observations are device-side observations; they are not attributed to a specific MIUI component beyond the logged SmartPower behaviour.

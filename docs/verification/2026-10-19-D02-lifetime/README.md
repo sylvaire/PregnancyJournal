@@ -1,0 +1,9 @@
+# D02 快照读取生命周期
+
+2026-10-19。debug/androidTest构建、62项JVM、31项API34模拟器DocumentImportTest通过（42.004秒），lint0错误/20警告。证据见build.log及device-regression.log。
+
+ObjectProtection.withSnapshot以coroutineScope注册读取任务、finally释放持久pin；回调异常或取消均等待NonCancellable释放。捕获已提交但在返回租约前被取消时，异常分支也尝试释放。关闭时拒绝新回调、取消并等待所有已注册读取任务。DocumentImporter.shutdown已接入，VaultRuntime现有顺序确保随后才关闭数据库并擦除主密钥。
+
+新增设备验证：回调在替换原件后抛出异常，原异常保留、pin/延期记录清空、旧件删除且新件保留；读取挂起后删除资料，取消读取并等待结束，pin及旧文件随后清空；关闭importer等待读取及finally结束、pin清空、新读取被VaultLockedException拒绝，已提交资料保留。其他资料回归继续通过。
+
+这是合成库上的生命周期组件测试，不是正式备份界面或系统认证全流程验收。正式备份控制器、恢复密钥确认/封装、归档完整性和独立恢复仍未实现；捕获提交瞬间取消尚无精确故障注入，实际进程终止/系统锁定矩阵仍保留。源schema13，无新版本发布或手机安装。

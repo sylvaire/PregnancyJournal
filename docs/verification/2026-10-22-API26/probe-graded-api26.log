@@ -1,0 +1,133 @@
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+cn.yunji.journal.Api26PdfProbeTest:
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=smallBlankViaByteArrayOpens
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.Api26PdfProbeTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+Error in smallBlankViaByteArrayOpens(cn.yunji.journal.Api26PdfProbeTest):
+java.lang.AssertionError: small-blank-bytearray.pdf page 0 rendered blank
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at cn.yunji.journal.Api26PdfProbeTest.openAndRender(Api26PdfProbeTest.kt:58)
+	at cn.yunji.journal.Api26PdfProbeTest.smallBlankViaByteArrayOpens(Api26PdfProbeTest.kt:112)
+
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=smallBlankViaByteArrayOpens
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.Api26PdfProbeTest
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: small-blank-bytearray.pdf page 0 rendered blank
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at cn.yunji.journal.Api26PdfProbeTest.openAndRender(Api26PdfProbeTest.kt:58)
+	at cn.yunji.journal.Api26PdfProbeTest.smallBlankViaByteArrayOpens(Api26PdfProbeTest.kt:112)
+
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=writerOutputCopiedThroughStreamOpens
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.Api26PdfProbeTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=writerOutputCopiedThroughStreamOpens
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.Api26PdfProbeTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=writerOutputDirectFileStreamOpens
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.Api26PdfProbeTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=writerOutputDirectFileStreamOpens
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.Api26PdfProbeTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=writerOutputViaByteArrayOpens
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.Api26PdfProbeTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=writerOutputViaByteArrayOpens
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.Api26PdfProbeTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=a4BlankViaByteArrayOpens
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.Api26PdfProbeTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+Error in a4BlankViaByteArrayOpens(cn.yunji.journal.Api26PdfProbeTest):
+java.lang.AssertionError: a4-blank-bytearray.pdf page 0 rendered blank
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at cn.yunji.journal.Api26PdfProbeTest.openAndRender(Api26PdfProbeTest.kt:58)
+	at cn.yunji.journal.Api26PdfProbeTest.a4BlankViaByteArrayOpens(Api26PdfProbeTest.kt:114)
+
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=a4BlankViaByteArrayOpens
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.Api26PdfProbeTest
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: a4-blank-bytearray.pdf page 0 rendered blank
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at cn.yunji.journal.Api26PdfProbeTest.openAndRender(Api26PdfProbeTest.kt:58)
+	at cn.yunji.journal.Api26PdfProbeTest.a4BlankViaByteArrayOpens(Api26PdfProbeTest.kt:114)
+
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=a4TextViaByteArrayOpens
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.Api26PdfProbeTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: test=a4TextViaByteArrayOpens
+INSTRUMENTATION_STATUS: class=cn.yunji.journal.Api26PdfProbeTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 16.653
+There were 2 failures:
+1) smallBlankViaByteArrayOpens(cn.yunji.journal.Api26PdfProbeTest)
+java.lang.AssertionError: small-blank-bytearray.pdf page 0 rendered blank
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at cn.yunji.journal.Api26PdfProbeTest.openAndRender(Api26PdfProbeTest.kt:58)
+	at cn.yunji.journal.Api26PdfProbeTest.smallBlankViaByteArrayOpens(Api26PdfProbeTest.kt:112)
+2) a4BlankViaByteArrayOpens(cn.yunji.journal.Api26PdfProbeTest)
+java.lang.AssertionError: a4-blank-bytearray.pdf page 0 rendered blank
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at cn.yunji.journal.Api26PdfProbeTest.openAndRender(Api26PdfProbeTest.kt:58)
+	at cn.yunji.journal.Api26PdfProbeTest.a4BlankViaByteArrayOpens(Api26PdfProbeTest.kt:114)
+
+FAILURES!!!
+Tests run: 6,  Failures: 2
+
+
+INSTRUMENTATION_CODE: -1

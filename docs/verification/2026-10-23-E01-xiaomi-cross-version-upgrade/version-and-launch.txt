@@ -1,0 +1,4 @@
+before: versionCode=26 versionName=0.25.0-dev lastUpdateTime=2026-10-22 21:45:49 firstInstallTime=2026-10-18 01:04:13
+install: adb install -r -g app/build/outputs/apk/debug/app-debug.apk -> Success (2026-10-23 23:06:10)
+after: versionCode=27 versionName=0.26.0-dev lastUpdateTime=2026-10-23 23:06:10
+launch: am start -W -n cn.yunji.journal/.MainActivity -> Status ok, LaunchState COLD, TotalTime 903ms, WaitTime 914ms
