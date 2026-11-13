@@ -110,7 +110,7 @@ internal fun TimelineScreen(pregnancy: PregnancyEntity?,initialType: String,mode
                 TIMELINE_FILTERS.forEach {(key,label)->JournalTag(selected=type==key,onClick={type=key},label={Text(label)},modifier=Modifier.testTag("timeline-filter-$key"))}
             }}
             if(state.loading) item {JournalLoading()}
-            else if(state.failed) item {Text("时间线暂时无法读取，请返回后重试。原记录未改变。",color=MaterialTheme.colorScheme.error)}
+            else if(state.failed) item {Inset { JournalError("时间线暂时无法读取，请返回后重试。原记录未改变。") }}
             else if(state.snapshot==null) item {Text("所属孕期已删除或不可用。")}
             else if(events.isEmpty()) item {JournalEmptyState("还没有这类记录","可写一条日常记录，或从产检、用药和健康指标录入。")}
             events.groupBy {it.date}.forEach {(date,rows)->
@@ -237,7 +237,7 @@ internal fun AllDocumentsScreen(pregnancyId: String?,model: JournalViewModel,ope
     LazyColumn(Modifier.fillMaxSize().testTag("all-documents-list"),
         contentPadding=PaddingValues(horizontal=24.dp,vertical=8.dp),verticalArrangement=Arrangement.spacedBy(12.dp)) {
         if(state.loading) item {JournalLoading()}
-        else if(state.failed) item {Text("资料列表暂时无法读取，请返回后重试。",color=MaterialTheme.colorScheme.error)}
+        else if(state.failed) item {Inset { JournalError("资料列表暂时无法读取，请返回后重试。") }}
         else if(documents.isEmpty()) item {JournalEmptyState("还没有产检资料","把这次产检的报告放在一起，之后更容易找到。")}
         else documents.groupBy {it.date}.forEach {(date,rows)->
             item(key="day-$date",contentType="day") {DateGroupHeader(date,null)}
@@ -253,16 +253,25 @@ internal fun AllDocumentsScreen(pregnancyId: String?,model: JournalViewModel,ope
 internal fun JournalEntryEditorScreen(form: JournalEntryForm,model: JournalViewModel,busy: Boolean) {
     fun update(value: JournalEntryForm)=model.updateJournalEntry(value)
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(horizontal=24.dp),verticalArrangement=Arrangement.spacedBy(12.dp)) {
-        DateField("发生日期",form.date,{update(form.copy(date=it))},required=true,maxDate=LocalDate.now(ZoneId.of(form.zoneId)),enabled=!busy)
-        OutlinedTextField(form.time,{update(form.copy(time=it))},label={Text("发生时间（选填，24小时制）")},singleLine=true,modifier=Modifier.fillMaxWidth().testTag("journal-time"),enabled=!busy)
-        if(form.time.isNotBlank())TextButton({update(form.copy(time="",offsetSeconds=null))},enabled=!busy){Text("设为时间未记录")}
-        Text("记录时区：${form.zoneId}",style=MaterialTheme.typography.bodySmall)
-        val offsets=runCatching {ZoneId.of(form.zoneId).rules.getValidOffsets(LocalDate.parse(form.date).atTime(LocalTime.parse(form.time)))}.getOrDefault(emptyList())
-        if(offsets.size>1) Column {Text("该时刻出现两次，请选择实际时段。");offsets.forEachIndexed {index,offset->JournalTag((offsets.firstOrNull {it.totalSeconds==form.offsetSeconds} ?: offsets.first())==offset,{update(form.copy(offsetSeconds=offset.totalSeconds))},{Text("第${index+1}次（UTC$offset）")})}}
-        OutlinedTextField(form.symptom,{update(form.copy(symptom=it))},label={Text("症状（选填）")},modifier=Modifier.fillMaxWidth().testTag("journal-symptom"),isError=form.symptom.length>1000,enabled=!busy)
-        OutlinedTextField(form.mood,{update(form.copy(mood=it))},label={Text("心情（选填）")},modifier=Modifier.fillMaxWidth().testTag("journal-mood"),isError=form.mood.length>40,enabled=!busy)
-        OutlinedTextField(form.text,{update(form.copy(text=it))},label={Text("日常备注（选填）")},minLines=3,modifier=Modifier.fillMaxWidth().testTag("journal-text"),isError=form.text.length>10_000,enabled=!busy)
-        Text("保存前请确认",style=MaterialTheme.typography.titleMedium)
+        JournalCard {
+            DateField("发生日期",form.date,{update(form.copy(date=it))},required=true,maxDate=LocalDate.now(ZoneId.of(form.zoneId)),enabled=!busy)
+            JournalField(form.time,{update(form.copy(time=it))}, "发生时间（选填，24小时制）", enabled=!busy,
+                modifier=Modifier.testTag("journal-time"))
+            if(form.time.isNotBlank()) JournalTextAction("设为时间未记录", enabled=!busy, onClick={update(form.copy(time="",offsetSeconds=null))})
+            Text("记录时区：${form.zoneId}",style=MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant)
+            val offsets=runCatching {ZoneId.of(form.zoneId).rules.getValidOffsets(LocalDate.parse(form.date).atTime(LocalTime.parse(form.time)))}.getOrDefault(emptyList())
+            if(offsets.size>1) Column {Text("该时刻出现两次，请选择实际时段。");offsets.forEachIndexed {index,offset->JournalTag((offsets.firstOrNull {it.totalSeconds==form.offsetSeconds} ?: offsets.first())==offset,{update(form.copy(offsetSeconds=offset.totalSeconds))},{Text("第${index+1}次（UTC$offset）")})}}
+        }
+        JournalCard {
+            JournalField(form.symptom,{update(form.copy(symptom=it))}, "症状（选填）",
+                modifier=Modifier.testTag("journal-symptom"), isError=form.symptom.length>1000, enabled=!busy)
+            JournalField(form.mood,{update(form.copy(mood=it))}, "心情（选填）",
+                modifier=Modifier.testTag("journal-mood"), isError=form.mood.length>40, enabled=!busy)
+            JournalField(form.text,{update(form.copy(text=it))}, "日常备注（选填）", singleLine=false, minLines=3,
+                modifier=Modifier.testTag("journal-text"), isError=form.text.length>10_000, enabled=!busy)
+        }
+        JournalSectionTitle("保存前请确认")
         RecordRow("症状、心情、备注至少填一项", "这些内容仅供个人整理", "cdc29.svg")
         JournalButton("保存日常记录",enabled=!busy,onClick=model::saveJournalEntry)
         Text("日期可调整，发生时间可以留空；返回会保留草稿。",style=MaterialTheme.typography.bodySmall)
@@ -283,7 +292,7 @@ internal fun TimelineSourceScreen(pregnancyId: String,type: String,id: String,mo
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(horizontal=24.dp).testTag("source-detail"),verticalArrangement=Arrangement.spacedBy(12.dp)) {
         when {
             state.loading -> JournalLoading()
-            state.failed -> Text("无法读取原记录，请返回后重试。",color=MaterialTheme.colorScheme.error)
+            state.failed -> JournalError("无法读取原记录，请返回后重试。")
             event==null || source==null -> Text("记录已删除或不可用，可返回时间线或在回收站核对。")
             else -> {
                 val journal = if(type=="JOURNAL") source.entries.firstOrNull {it.id==id} else null

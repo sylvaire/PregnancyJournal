@@ -212,18 +212,27 @@ internal fun DocumentScreen(visitId: String, model: JournalViewModel,medication:
                         } else LinearProgressIndicator(Modifier.fillMaxWidth())
                     }
                     if (!compactReadyRows || job.state != "READY" || expandedJobId == job.id) Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        if (canOpen) TextButton({ openDocument(job.id) }) { Text(openLabel) }
-                        if (attachment != null) TextButton({ editing = attachment.id }) { Text("编辑") }
+                        if (canOpen) JournalTextAction(openLabel, onClick = { openDocument(job.id) })
+                        if (attachment != null) JournalTextAction("编辑", onClick = { editing = attachment.id })
                         if (job.state == "FAILED") {
-                            TextButton({ model.retryDocument(job.id) }) { Text("重试") }
-                            TextButton({ if(fileLaunch!=null)fileLaunch(FileRequest("RETRY",visitId,medication,job.id),null) else {retryTarget = job.id; runCatching { replacementPicker.launch(if(medication)arrayOf("image/*") else arrayOf("image/*", "application/pdf")) }.onFailure { pickerError = "无法打开文件选择器" }} }) { Text("重新选择") }
+                            JournalTextAction("重试", onClick = { model.retryDocument(job.id) })
+                            JournalTextAction("重新选择", onClick = {
+                                if (fileLaunch != null) fileLaunch(FileRequest("RETRY", visitId, medication, job.id), null)
+                                else {
+                                    retryTarget = job.id
+                                    runCatching {
+                                        replacementPicker.launch(if (medication) arrayOf("image/*") else arrayOf("image/*", "application/pdf"))
+                                    }.onFailure { pickerError = "无法打开文件选择器" }
+                                }
+                            })
                         }
-                        TextButton({ confirmation = RemovalConfirmation(job.id, false, attachment == null) }) {
-                            Text(if (attachment != null) "删除" else "移除", color = MaterialTheme.colorScheme.error)
-                        }
-                        if (attachment != null && job.state == "READY" && !compactReadyRows) TextButton({ expandedJobId = if (expandedJobId == job.id) null else job.id }, Modifier.testTag("document-more-${job.id}")) {
-                            Text(if (expandedJobId == job.id) "收起" else "更多")
-                        }
+                        JournalTextAction(if (attachment != null) "删除" else "移除", danger = true, onClick = {
+                            confirmation = RemovalConfirmation(job.id, false, attachment == null)
+                        })
+                        if (attachment != null && job.state == "READY" && !compactReadyRows) JournalTextAction(
+                            if (expandedJobId == job.id) "收起" else "更多",
+                            Modifier.testTag("document-more-${job.id}"),
+                            onClick = { expandedJobId = if (expandedJobId == job.id) null else job.id })
                     }
                     if (attachment != null && job.state == "READY" && compactReadyRows && expandedJobId == job.id) TextButton(
                         { expandedJobId = null }, Modifier.testTag("document-more-${job.id}")) { Text("收起操作") }
@@ -259,7 +268,7 @@ internal fun DocumentScreen(visitId: String, model: JournalViewModel,medication:
                     if (purging) { Text("正在彻底删除…"); LinearProgressIndicator(Modifier.fillMaxWidth()) }
                     if (!compact || expandedTrashId == attachment.id) Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                         TextButton({ model.restoreDocument(attachment.id) }, enabled = !purging) { Text("恢复") }
-                        TextButton({ confirmation = RemovalConfirmation(attachment.id, true, false) }, enabled = !purging) { Text("彻底删除", color = MaterialTheme.colorScheme.error) }
+                        JournalTextAction("彻底删除", enabled = !purging, danger = true, onClick = { confirmation = RemovalConfirmation(attachment.id, true, false) })
                     }
                 } } }
             }

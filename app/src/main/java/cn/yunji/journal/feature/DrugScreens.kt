@@ -57,12 +57,17 @@ internal fun DrugEditorScreen(form: DrugForm,model: JournalViewModel,busy: Boole
     var attempted by rememberSaveable(form.id, form.pregnancyId) { mutableStateOf(false) }
     val error = runCatching { DrugRules.normalize(form); null }.getOrElse { it.message ?: "请检查填写内容" }
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(horizontal=24.dp),verticalArrangement=Arrangement.spacedBy(12.dp)) {
-        OutlinedTextField(form.name,{model.updateDrug(form.copy(name=it))},label={Text("药品名称")},modifier=Modifier.fillMaxWidth().testTag("drug-name"),enabled=!busy,isError=form.name.length>100,singleLine=true)
-        OutlinedTextField(form.specification,{model.updateDrug(form.copy(specification=it))},label={Text("规格（选填）")},modifier=Modifier.fillMaxWidth().testTag("drug-specification"),enabled=!busy,isError=form.specification.length>120)
-        OutlinedTextField(form.dosageForm,{model.updateDrug(form.copy(dosageForm=it))},label={Text("剂型（选填）")},modifier=Modifier.fillMaxWidth().testTag("drug-form"),enabled=!busy,isError=form.dosageForm.length>40)
-        Text("包装照片", style = MaterialTheme.typography.titleMedium)
+        JournalCard {
+            JournalField(form.name,{model.updateDrug(form.copy(name=it))}, "药品名称",
+                modifier=Modifier.testTag("drug-name"), enabled=!busy, isError=form.name.length>100)
+            JournalField(form.specification,{model.updateDrug(form.copy(specification=it))}, "规格（选填）",
+                modifier=Modifier.testTag("drug-specification"), enabled=!busy, isError=form.specification.length>120)
+            JournalField(form.dosageForm,{model.updateDrug(form.copy(dosageForm=it))}, "剂型（选填）",
+                modifier=Modifier.testTag("drug-form"), enabled=!busy, isError=form.dosageForm.length>40)
+        }
+        JournalSectionTitle("包装照片")
         RecordRow("保存后添加包装照片", "在药品目录中添加或查看加密照片", "ic-image.svg")
-        Text("关联方案", style = MaterialTheme.typography.titleMedium)
+        JournalSectionTitle("关联方案")
         RecordRow("添加到用药方案", "先保存药品，再设置剂量与时间", "ic-pill.svg")
         if (attempted && error != null) JournalError(error, Modifier.testTag("drug-validation"))
         JournalButton(if (busy) "正在保存…" else "保存药品",enabled=!busy,onClick={attempted=true;if(error==null)model.saveDrug()},modifier=Modifier.testTag("save-drug"))

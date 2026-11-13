@@ -12,6 +12,7 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import cn.yunji.journal.core.designsystem.JournalButton
+import cn.yunji.journal.core.designsystem.JournalError
 import cn.yunji.journal.core.designsystem.JournalCheckbox
 import cn.yunji.journal.core.designsystem.JournalCheckboxRow
 import cn.yunji.journal.core.designsystem.JournalField
@@ -43,8 +44,7 @@ internal fun ExportContent(state: ExportUiState, updateRange: (String, String) -
             placeholder = "不限", enabled = !state.busy, modifier = Modifier.testTag("export-from"))
         JournalField(state.to, { updateRange(state.from, it) }, "结束日期（选填）",
             placeholder = "不限", enabled = !state.busy, modifier = Modifier.testTag("export-to"))
-        if (!state.rangeValid) Text("日期范围无效，请检查起止日期。", color = MaterialTheme.colorScheme.error,
-            style = MaterialTheme.typography.bodySmall)
+        if (!state.rangeValid) JournalError("日期范围无效，请检查起止日期。")
         JournalSectionTitle("导出范围")
         RecordRow("已选择 ${state.sections.size} 类资料", if (state.sections.isEmpty()) "请选择要导出的记录" else state.sections.take(3).joinToString("、", transform = ::sectionLabel),
             "ic-file-text.svg", { scopeExpanded = !scopeExpanded }, Modifier.testTag("export-scope-toggle"))

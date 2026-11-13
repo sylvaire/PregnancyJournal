@@ -110,7 +110,7 @@ internal fun TrashScreen(model: JournalViewModel) {
                     Row {
                         TextButton({ selected = document.id }) { Text("查看资料") }
                         TextButton({ relinking = document }) { Text("重新关联产检") }
-                        TextButton({ confirmation = TrashConfirmation(document.id, batch = false, permanent = false) }) { Text("删除资料", color = MaterialTheme.colorScheme.error) }
+                        JournalTextAction("删除资料", danger = true, onClick = { confirmation = TrashConfirmation(document.id, batch = false, permanent = false) })
                     }
                 }
             } } }
@@ -158,7 +158,7 @@ internal fun TrashScreen(model: JournalViewModel) {
                         if (purging) { Text("正在彻底清理…"); LinearProgressIndicator(Modifier.fillMaxWidth()) }
                         Row {
                             TextButton({ model.restoreDocument(document.id) }, enabled = parentAvailable && !purging) { Text("恢复") }
-                            TextButton({ if (purging) model.purgeDocument(document.id) else confirmation = TrashConfirmation(document.id, false, true) }) { Text(if (purging) "重试清理" else "彻底删除", color = MaterialTheme.colorScheme.error) }
+                            JournalTextAction(if (purging) "重试清理" else "彻底删除", danger = true, onClick = { if (purging) model.purgeDocument(document.id) else confirmation = TrashConfirmation(document.id, false, true) })
                         }
                     }
                 } }

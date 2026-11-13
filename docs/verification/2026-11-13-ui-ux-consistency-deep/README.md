@@ -40,13 +40,13 @@
 | P0-3 | 暖色卡片 `Apricot`/`Amber` 硬编码，深色模式刺眼 | **高** | 1 处（4 行代码） | ✅ 已修 |
 | P0-4 | 底部导航等旧图标描边 1.7、颜色非 `#356B53` | **高（每次可见）** | 10 + 4 个文件 | ✅ 已修 |
 | P0-2 | 卡片列表 vs 裸 `Column` 两种页面范式并存 | **高** | 6 个页面无卡片容器 | ✅ 5/6 已收敛（仅 `DocumentPreview` 为全屏 Dialog，已统一顶栏） |
-| P1-1 | `OutlinedTextField` 48 处无组件包装（设计稿有 `孕迹/Field`） | 中 | 15 个文件 | ◐ 已替换 11 处（48→37），4 个目标页清零 |
-| P1-2 | `TextButton` 167 处无统一规格（4 种语义混用） | 中 | 16 个文件 | ⬜ 待排期 |
+| P1-1 | `OutlinedTextField` 48 处无组件包装（设计稿有 `孕迹/Field`） | 中 | 15 个文件 | ◐ 已替换 18 处（48→30） |
+| P1-2 | `TextButton` 167 处无统一规格（4 种语义混用） | 中 | 16 个文件 | ◐ 167→136；余 42 处为 AlertDialog 按钮（全站统一形态，保留） |
 | P1-3 | 两处全屏 Dialog 自建顶栏，且两者彼此不一致 | 中 | 2 处 | ✅ 已修 |
 | P2-1 | 按钮高度 40/52/56/72 四种 | 低 | 10 处 | ✅ 已修（单行动作 6 处；字段选择器保留 56dp） |
 | P2-2 | `Card`/`OutlinedCard`/`Checkbox`/`HorizontalDivider` 未包装 | 低 | 4 个文件 | ✅ 已修 |
-| P2-3 | 加载态 22 处裸 `CircularProgressIndicator`，无统一组件 | 低 | 8 个文件 | ◐ 已替换 13 处整页加载 |
-| P2-4 | 错误提示 29 处裸 `Text(color=error)`，无统一组件 | 低 | 多文件 | ◐ 已替换 15 处 |
+| P2-3 | 加载态 22 处裸 `CircularProgressIndicator`，无统一组件 | 低 | 8 个文件 | ✅ 整页加载已全替换；保留 4 处局部小 spinner（图片渲染/顶栏角标） |
+| P2-4 | 错误提示 29 处裸 `Text(color=error)`，无统一组件 | 低 | 多文件 | ✅ 已清零 |
 | P2-5 | 3 处可点行缺 `onClickLabel`；1 处可点文本高度 18dp | 低（无障碍） | 4 处 | ✅ 已修 |
 
 ## 3. P0 级问题
@@ -322,6 +322,19 @@ Ardot `7:2461`「孕迹 · 基础组件」定义 3 个组件：
 **未截图的页面**：`SecurityScreen` 与 `RestoreScreen` 自身触发 `FLAG_SECURE`（`secureFlagRequired` 只覆盖 MainActivity 窗口标志），
 `-PvisualVerification=true` 不足以截图。这两页改用代码级核对：`testTag` 全部保留、`OutlinedTextField` 降为 0。
 截图说明见 `screens/README-r4.md`。
+
+**第五轮（r5）：编辑页字段卡片化 + 残留错误/危险动作清零**
+
+实机走查时发现「写日常记录」与「编辑药品」两个编辑页的字段全部贴边（`JournalCard=0`），属 P0-2 同类问题，一并收敛：
+
+| 页面 | 改动 |
+|---|---|
+| `JournalEntryEditorScreen` | 日期/时间一组卡片，症状/心情/备注一组卡片；4 处 `OutlinedTextField` 改 `JournalField`；「设为时间未记录」改 `JournalTextAction`；「保存前请确认」改 `JournalSectionTitle` |
+| `DrugEditorScreen` | 3 个字段收进 `JournalCard`（原 `JournalCard=0`）；「包装照片」「关联方案」改 `JournalSectionTitle` |
+| 全局 | 5 处独立错误文本改 `JournalError`（P2-4 清零）；3 处行内危险动作改 `JournalTextAction(danger=true)`；`DocumentScreen` 动作行 5 个 `TextButton` 全部收敛 |
+
+`OutlinedTextField` **37 → 30**。剩余 30 处分属 `MeasurementScreens`(7)/`IntakeScreens`(6)/`MedicationScreens`(5)/`TimelineScreens`(5)/其余小量——
+均为已有 `JournalCard` 包裹、仅缺 `JournalField` 替换的页面，风险低、可分批。
 
 **SafetyCopiesScreen 全面重写**：原为 M3 默认 `Card`(12dp) + `OutlinedButton`(40dp) + 裸 `TextButton` + 裸 `HorizontalDivider`，
 现为 `JournalDivider` + `JournalSectionTitle` + `JournalCard`(20dp) + `JournalTextAction`。
