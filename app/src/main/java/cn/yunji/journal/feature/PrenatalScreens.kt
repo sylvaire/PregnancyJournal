@@ -55,12 +55,12 @@ internal fun VisitsScreen(state: JournalState, onAdd: () -> Unit, onSelect: (Str
         } } }
         if (calendar) item { Inset { Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceBetween) {
             Text("${month.year}年${month.monthValue}月", style = MaterialTheme.typography.titleLarge)
-            TextButton({ monthPickerExpanded = !monthPickerExpanded }) { Text("切换月份") }
+            JournalTextAction("切换月份", onClick = { monthPickerExpanded = !monthPickerExpanded })
         } } }
         if (calendar && monthPickerExpanded) item { Inset { Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-            TextButton({ monthText = month.minusMonths(1).toString(); day = "" }) { Text("上月") }
-            TextButton({ monthText = YearMonth.now().toString(); day = "" }) { Text("本月") }
-            TextButton({ monthText = month.plusMonths(1).toString(); day = "" }) { Text("下月") }
+            JournalTextAction("上月", onClick = { monthText = month.minusMonths(1).toString(); day = "" })
+            JournalTextAction("本月", onClick = { monthText = YearMonth.now().toString(); day = "" })
+            JournalTextAction("下月", onClick = { monthText = month.plusMonths(1).toString(); day = "" })
         } } }
         if (calendar) item { Inset { Surface(shape = RoundedCornerShape(20.dp), color = MaterialTheme.colorScheme.surface) {
             Column(Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 12.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
@@ -118,7 +118,7 @@ internal fun VisitTimeField(value: String, update: (String) -> Unit) {
                 Text(value.ifBlank { "时间待定" }, style = MaterialTheme.typography.bodyLarge)
             }
         }
-        if (value.isNotBlank()) TextButton({ update("") }) { Text("设为时间待定") }
+        if (value.isNotBlank()) JournalTextAction("设为时间待定", onClick = { update("") })
     }
     if (show) {
         val initial = runCatching { LocalTime.parse(value) }.getOrNull()

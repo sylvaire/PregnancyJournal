@@ -98,20 +98,22 @@ internal fun ReminderSettingsScreen(model: JournalViewModel) {
             Text("通知权限", style = MaterialTheme.typography.titleLarge)
             Text(if (notifications) "已允许显示通知" else "未允许；只能使用应用内待办", modifier = Modifier.testTag("reminder-permission"))
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                if (!notifications) TextButton({ if (Build.VERSION.SDK_INT >= 33) permission.launch(Manifest.permission.POST_NOTIFICATIONS) }, Modifier.testTag("request-notification")) { Text("开启通知权限") }
-                if (notifications) TextButton({ model.sendTestReminder() }, Modifier.testTag("reminder-test")) { Text("发送测试通知") }
-                TextButton({
+                if (!notifications) JournalTextAction("开启通知权限", Modifier.testTag("request-notification"),
+                    onClick = { if (Build.VERSION.SDK_INT >= 33) permission.launch(Manifest.permission.POST_NOTIFICATIONS) })
+                if (notifications) JournalTextAction("发送测试通知", Modifier.testTag("reminder-test"),
+                    onClick = { model.sendTestReminder() })
+                JournalTextAction("系统通知设置", onClick = {
                     context.startActivity(Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS).putExtra(Settings.EXTRA_APP_PACKAGE, context.packageName))
-                }) { Text("系统通知设置") }
+                })
             }
         } }
         }
         Inset { JournalCard {
             Text("提醒时间", style = MaterialTheme.typography.titleLarge)
             Text(if (exact) "可使用精确提醒" else "将使用非精确提醒，系统可能推迟", modifier = Modifier.testTag("reminder-exact"))
-            if (!exact && Build.VERSION.SDK_INT >= 31) TextButton({
+            if (!exact && Build.VERSION.SDK_INT >= 31) JournalTextAction("打开精确提醒系统设置", onClick = {
                 runCatching { context.startActivity(Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM, "package:${context.packageName}".toUri())) }
-            }) { Text("打开精确提醒系统设置") }
+            })
             Text("精确提醒资格由系统和发布渠道决定；未获授权时自动降级，不需要关闭提醒。", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
         } }
         Inset { JournalCard {
@@ -120,10 +122,10 @@ internal fun ReminderSettingsScreen(model: JournalViewModel) {
                 if (batteryOk) "已加入电池优化白名单，系统不会因省电冻结提醒" else "未加入电池优化白名单；系统省电可能推迟或跳过提醒",
                 modifier = Modifier.testTag("reminder-battery"),
             )
-            if (!batteryOk) TextButton({
+            if (!batteryOk) JournalTextAction("允许后台运行", Modifier.testTag("request-battery-ignore"), onClick = {
                 runCatching { context.startActivity(BackgroundAssist.ignoreBatteryRequestIntent(context)) }
                     .onFailure { runCatching { context.startActivity(BackgroundAssist.batterySettingsIntent()) } }
-            }, Modifier.testTag("request-battery-ignore")) { Text("允许后台运行") }
+            })
             val vendor = remember { BackgroundAssist.plan() }
             if (vendor != null) {
                 Text(
@@ -133,14 +135,16 @@ internal fun ReminderSettingsScreen(model: JournalViewModel) {
                     modifier = Modifier.testTag("reminder-vendor-hint"),
                 )
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    TextButton({
+                    JournalTextAction("打开自启动设置", Modifier.testTag("open-autostart"), onClick = {
                         if (!BackgroundAssist.openAutostart(context)) BackgroundAssist.openAppDetails(context)
-                    }, Modifier.testTag("open-autostart")) { Text("打开自启动设置") }
-                    TextButton({ BackgroundAssist.openAppDetails(context) }, Modifier.testTag("open-app-details")) { Text("应用信息") }
+                    })
+                    JournalTextAction("应用信息", Modifier.testTag("open-app-details"),
+                        onClick = { BackgroundAssist.openAppDetails(context) })
                 }
             } else {
                 Text("未识别到已知厂商限制；如提醒被延迟，请在系统设置中允许孕迹后台运行。", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
-                TextButton({ BackgroundAssist.openAppDetails(context) }, Modifier.testTag("open-app-details")) { Text("应用信息") }
+                JournalTextAction("应用信息", Modifier.testTag("open-app-details"),
+                    onClick = { BackgroundAssist.openAppDetails(context) })
             }
         } }
         Box(Modifier.bringIntoViewRequester(visitTarget)) {
@@ -171,8 +175,10 @@ internal fun ReminderSettingsScreen(model: JournalViewModel) {
                     Text(row.title, style = MaterialTheme.typography.titleMedium)
                     Text("${displayDateTime(row.startDate, row.localTime)} · $repeatText", style = MaterialTheme.typography.bodySmall)
                     Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        TextButton(onClick = { editingReminder = row; showReminderEditor = true },Modifier.testTag("custom-reminder-edit-${row.id}")) { Text("编辑") }
-                        TextButton(onClick = { deletingReminder = row },Modifier.testTag("custom-reminder-delete-${row.id}")) { Text("删除") }
+                        JournalTextAction("编辑", Modifier.testTag("custom-reminder-edit-${row.id}"),
+                            onClick = { editingReminder = row; showReminderEditor = true })
+                        JournalTextAction("删除", Modifier.testTag("custom-reminder-delete-${row.id}"), danger = true,
+                            onClick = { deletingReminder = row })
                     }
                 }
             }
@@ -285,10 +291,9 @@ private fun CustomReminderEditor(row: CustomReminderEntity?, onDismiss: () -> Un
                         }
                     }
                     if (repeat != "NONE") Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        TextButton(onClick = { focusManager.clearFocus(); pickDate(end) { end = it } }) {
-                            Text(if (end == null) "设置结束日期" else "结束 ${end?.let(::displayDate)}")
-                        }
-                        if (end != null) TextButton(onClick = { end = null }) { Text("不限期") }
+                        JournalTextAction(if (end == null) "设置结束日期" else "结束 ${end?.let(::displayDate)}",
+                            onClick = { focusManager.clearFocus(); pickDate(end) { end = it } })
+                        if (end != null) JournalTextAction("不限期", onClick = { end = null })
                     }
                     Text("提醒预览", style = MaterialTheme.typography.titleMedium)
                     RecordRow("${when (repeat) { "DAILY" -> "每天"; "WEEKLY" -> "每周"; else -> displayDate(date) }} $time",
@@ -300,7 +305,7 @@ private fun CustomReminderEditor(row: CustomReminderEntity?, onDismiss: () -> Un
                 Column(Modifier.fillMaxWidth().padding(horizontal = 24.dp, vertical = 12.dp),
                     verticalArrangement = Arrangement.spacedBy(4.dp)) {
                     JournalButton("保存提醒", modifier = Modifier.testTag("custom-reminder-save"), onClick = ::save)
-                    TextButton(onClick = onDismiss, modifier = Modifier.fillMaxWidth()) { Text("返回提醒设置") }
+                    JournalTextAction("返回提醒设置", Modifier.fillMaxWidth(), onClick = onDismiss)
                 }
             }
         }

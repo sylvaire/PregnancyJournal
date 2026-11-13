@@ -64,7 +64,7 @@ internal fun MeasurementScreen(pregnancy: PregnancyEntity?, model: JournalViewMo
         item { Inset { Column { Row(Modifier.horizontalScroll(rememberScrollState()),horizontalArrangement=Arrangement.spacedBy(8.dp)) {
             JournalTag(!trends,{trends=false},{Text("原始记录")}); JournalTag(trends,{trends=true},{Text("分组趋势")})
         }
-            TextButton({newDefinition=true}) { Text("自定义指标") }
+            JournalTextAction("自定义指标", onClick = { newDefinition = true })
         } } }
         if (loading) item { Inset { JournalLoading() } }
         failure?.let { message -> item { Inset { JournalError(message) } } }
@@ -76,10 +76,15 @@ internal fun MeasurementScreen(pregnancy: PregnancyEntity?, model: JournalViewMo
                     Text(def?.name ?: "指标",style=MaterialTheme.typography.titleLarge)
                     Text(values.filter { it.measurementId==row.id }.joinToString(" · ") { "${measurementKeyLabel(it.valueKey)} ${it.decimalValue} ${if(it.valueKey=="pulse") "次/分" else def?.unit.orEmpty()}" })
                     Text(listOf(measuredLabel(row),scenarioLabel(row)).filter { it.isNotBlank() }.joinToString(" · "))
-                    Row { TextButton({selected=row.id}) {Text("详情")}; TextButton({edit(row.id)}){Text("修改")}; TextButton({deleting=row.id}){Text("删除")} }
+                    Row {
+                        JournalTextAction("详情", onClick = { selected = row.id })
+                        JournalTextAction("修改", onClick = { edit(row.id) })
+                        JournalTextAction("删除", danger = true, onClick = { deleting = row.id })
+                    }
                 } }
             }
-            items(latestDefinitions.filter {it.kind=="CUSTOM"},key={"definition-${it.id}"},contentType={"definition"}) { def -> Inset { TextButton({definitionEditorId=def.id}) {Text("管理指标：${def.name} · ${def.unit}（第${def.version}版）")} } }
+            items(latestDefinitions.filter {it.kind=="CUSTOM"},key={"definition-${it.id}"},contentType={"definition"}) { def -> Inset { JournalTextAction("管理指标：${def.name} · ${def.unit}（第${def.version}版）",
+                onClick = { definitionEditorId = def.id }) } }
         } else {
             item { Inset { Row(Modifier.horizontalScroll(rememberScrollState()),horizontalArrangement=Arrangement.spacedBy(8.dp)) { listOf(7,30,0).forEach { range -> JournalTag(days==range,{days=range},{Text(if(range==0) "全部" else "近${range}天")}) } } } }
             item { Inset { Text("按指标、单位、测量场景及餐后分钟分别呈现。点之间不补零、不推断诊断。", style=MaterialTheme.typography.bodySmall) } }
@@ -97,7 +102,7 @@ internal fun MeasurementScreen(pregnancy: PregnancyEntity?, model: JournalViewMo
                 items(points.asReversed(),key={"point-${it.measurement.id}"},contentType={"trend-value"}) { point ->
                     val date=Instant.ofEpochMilli(point.measurement.measuredAt).atZone(ZoneId.of(point.measurement.zoneId)).toLocalDate()
                     val age=if(gestational) PregnancyRules.age(date,pregnancy.lmpDate?.let(LocalDate::parse),pregnancy.confirmedEdd?.let(LocalDate::parse))?.label() ?: "孕周未知" else ""
-                    Inset { TextButton({selected=point.measurement.id}) {Text("${measuredLabel(point.measurement)} $age · ${point.value}")} }
+                    Inset { JournalTextAction("${measuredLabel(point.measurement)} $age · ${point.value}", onClick = { selected = point.measurement.id }) }
                 }
             }
         }

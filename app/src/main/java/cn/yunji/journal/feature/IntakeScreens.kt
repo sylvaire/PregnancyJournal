@@ -53,7 +53,7 @@ internal fun HomeIntakeSummary(pregnancyId: String, date: LocalDate, model: Jour
         Text(when { loading -> "正在读取今日计划…"; failed -> "暂时无法读取计划，请打开记录重试"; activeIds.isEmpty() -> "今天没有固定服药计划"; else -> "固定计划${activeIds.size}项 · 已服用${taken}项 · 已跳过${skipped}项 · 未记录${activeIds.size - taken - skipped}项" })
         val manual = records.count { it.sourceOccurrenceId == null && it.eventDate == date.toString() }
         if (manual > 0) Text("另有补记${manual}条", style = MaterialTheme.typography.bodySmall)
-        TextButton(open) { Text("查看服药记录") }
+        JournalTextAction("查看服药记录", onClick = open)
     }
 }
 
@@ -142,14 +142,14 @@ internal fun IntakeScreen(pregnancyId: String?, model: JournalViewModel, openPla
             item { Inset { OutlinedTextField(dayQuery, { dayQuery = it }, modifier = Modifier.fillMaxWidth().testTag("intake-day-search"), label = { Text("搜索服药记录") }, placeholder = { Text("输入药品名称或计划时间") }, singleLine = true) } }
             item { Inset { Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                 Text(if (date == today.toString()) "今天的服药" else "${displayDate(date)}的服药", style = MaterialTheme.typography.titleLarge)
-                TextButton({ datePickerExpanded = !datePickerExpanded }) { Text("切换日期") }
+                JournalTextAction("切换日期", onClick = { datePickerExpanded = !datePickerExpanded })
             } } }
             if (datePickerExpanded) {
                 item { Inset { DateField("计划日期", date, { date = it }, required = true) } }
                 item { Inset { Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    TextButton({ date = LocalDate.parse(date).minusDays(1).toString() }) { Text("前一天") }
-                    TextButton({ date = LocalDate.now().toString() }) { Text("今天") }
-                    TextButton({ date = LocalDate.parse(date).plusDays(1).toString() }) { Text("后一天") }
+                    JournalTextAction("前一天", onClick = { date = LocalDate.parse(date).minusDays(1).toString() })
+                    JournalTextAction("今天", onClick = { date = LocalDate.now().toString() })
+                    JournalTextAction("后一天", onClick = { date = LocalDate.parse(date).plusDays(1).toString() })
                 } } }
             }
             if (error != null) item { Inset { JournalError(error!!, retry = { attempt++ }) } }
@@ -169,11 +169,14 @@ internal fun IntakeScreen(pregnancyId: String?, model: JournalViewModel, openPla
                         if (plan?.dose != null) Text("方案用量 ${plan.dose} ${plan.unit}", style = MaterialTheme.typography.bodySmall)
                         Text("计划时区：${point.zoneId}", style = MaterialTheme.typography.bodySmall)
                         if (record == null) Row {
-                            TextButton({ open(point.id, null, "TAKEN", date) }, Modifier.testTag("take-${point.id}")) { Text("已服用") }
-                            TextButton({ open(point.id, null, "SKIPPED", date) }) { Text("跳过") }
+                            JournalTextAction("已服用", Modifier.testTag("take-${point.id}"), onClick = { open(point.id, null, "TAKEN", date) })
+                            JournalTextAction("跳过", onClick = { open(point.id, null, "SKIPPED", date) })
                         } else {
                             IntakeSummary(record)
-                            Row { TextButton({ open(point.id, record.id, record.status, date) }) { Text("修改记录") }; TextButton({ removing = record.id }) { Text("删除记录") } }
+                            Row {
+                                JournalTextAction("修改记录", onClick = { open(point.id, record.id, record.status, date) })
+                                JournalTextAction("删除记录", danger = true, onClick = { removing = record.id })
+                            }
                         }
                     }
                 }
@@ -194,7 +197,10 @@ internal fun IntakeScreen(pregnancyId: String?, model: JournalViewModel, openPla
                     RecordRow("补记 · ${if (record.status == "TAKEN") "已服用" else "已跳过"}", name, "cdc29.svg", { expanded = !expanded }, Modifier.testTag("intake-manual-${record.id}"))
                     if (expanded) JournalCard {
                         IntakeSummary(record)
-                        Row { TextButton({ open(null, record.id, record.status, date) }) { Text("修改记录") }; TextButton({ removing = record.id }) { Text("删除记录") } }
+                        Row {
+                            JournalTextAction("修改记录", onClick = { open(null, record.id, record.status, date) })
+                            JournalTextAction("删除记录", danger = true, onClick = { removing = record.id })
+                        }
                     }
                 }
             }
@@ -227,8 +233,8 @@ internal fun IntakeScreen(pregnancyId: String?, model: JournalViewModel, openPla
                         if (point != null) Text("原计划 ${displayDateTime(point.plannedDate, point.localTime)}", style = MaterialTheme.typography.bodySmall)
                         IntakeSummary(record)
                         Row {
-                            TextButton({ open(record.sourceOccurrenceId, record.id, record.status, record.eventDate) }) { Text("修改记录") }
-                            TextButton({ removing = record.id }) { Text("删除记录") }
+                            JournalTextAction("修改记录", onClick = { open(record.sourceOccurrenceId, record.id, record.status, record.eventDate) })
+                            JournalTextAction("删除记录", danger = true, onClick = { removing = record.id })
                         }
                     }
                 }

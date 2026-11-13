@@ -108,8 +108,8 @@ internal fun TrashScreen(model: JournalViewModel) {
                 if (expandedRetainedId == document.id) JournalCard {
                     Text("原产检已删除，资料仍加密保存在本机。", style = MaterialTheme.typography.bodySmall)
                     Row {
-                        TextButton({ selected = document.id }) { Text("查看资料") }
-                        TextButton({ relinking = document }) { Text("重新关联产检") }
+                        JournalTextAction("查看资料", onClick = { selected = document.id })
+                        JournalTextAction("重新关联产检", onClick = { relinking = document })
                         JournalTextAction("删除资料", danger = true, onClick = { confirmation = TrashConfirmation(document.id, batch = false, permanent = false) })
                     }
                 }
@@ -138,10 +138,17 @@ internal fun TrashScreen(model: JournalViewModel) {
                     else if (!restorable) Text(restoreReason.orEmpty(), style = MaterialTheme.typography.bodySmall)
                     purgeReason?.let {Text(it,style=MaterialTheme.typography.bodySmall)}
                     Row {
-                        TextButton({ model.restoreBatch(batch.id) }, enabled = restorable, modifier = Modifier.testTag("restore-batch-${batch.id}")) { Text("恢复") }
-                        TextButton({ if (batch.state == "PURGING") model.purgeBatch(batch.id) else confirmation = TrashConfirmation(batch.id, batch = true, permanent = true, pregnancy = batch.kind == "PREGNANCY", intake = batch.kind == "INTAKE", measurement = batch.kind == "MEASUREMENT", journal = batch.kind == "JOURNAL",medication=batch.kind=="MEDICATION") },enabled=purgeReason==null) {
-                            Text(if (batch.state == "PURGING") "重试清理" else "彻底删除", color = if (purgeReason == null) MaterialTheme.colorScheme.error else MaterialTheme.colorScheme.onSurfaceVariant)
-                        }
+                        JournalTextAction("恢复", Modifier.testTag("restore-batch-${batch.id}"), enabled = restorable, onClick = { model.restoreBatch(batch.id) })
+                        JournalTextAction(
+                            if (batch.state == "PURGING") "重试清理" else "彻底删除",
+                            enabled = purgeReason == null, danger = purgeReason == null,
+                            onClick = {
+                                if (batch.state == "PURGING") model.purgeBatch(batch.id)
+                                else confirmation = TrashConfirmation(batch.id, batch = true, permanent = true,
+                                    pregnancy = batch.kind == "PREGNANCY", intake = batch.kind == "INTAKE",
+                                    measurement = batch.kind == "MEASUREMENT", journal = batch.kind == "JOURNAL",
+                                    medication = batch.kind == "MEDICATION")
+                            })
                     }
                     }
                 } }
@@ -157,7 +164,7 @@ internal fun TrashScreen(model: JournalViewModel) {
                         if (!parentAvailable) Text(if(document.medicationId!=null)"请先恢复所属药品或孕期" else "请先恢复所属孕期", style = MaterialTheme.typography.bodySmall)
                         if (purging) { Text("正在彻底清理…"); LinearProgressIndicator(Modifier.fillMaxWidth()) }
                         Row {
-                            TextButton({ model.restoreDocument(document.id) }, enabled = parentAvailable && !purging) { Text("恢复") }
+                            JournalTextAction("恢复", enabled = parentAvailable && !purging, onClick = { model.restoreDocument(document.id) })
                             JournalTextAction(if (purging) "重试清理" else "彻底删除", danger = true, onClick = { if (purging) model.purgeDocument(document.id) else confirmation = TrashConfirmation(document.id, false, true) })
                         }
                     }

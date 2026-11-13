@@ -353,7 +353,7 @@ internal fun TimelineSourceScreen(pregnancyId: String,type: String,id: String,mo
                         if(doc.hospital.isNotBlank())Text("医院：${doc.hospital}")
                         if(doc.note.isNotBlank())Text(doc.note)
                         JournalButton("查看原件",onClick={preview=true})
-                        TextButton({editingDocument=true}){Text("编辑资料信息")}
+                        JournalTextAction("编辑资料信息", onClick = { editingDocument = true })
                     }
                 }
                 }

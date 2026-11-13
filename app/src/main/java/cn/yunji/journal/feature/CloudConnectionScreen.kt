@@ -53,7 +53,7 @@ fun CloudConnectionScreen(controller: CloudConnectionController, backup: CloudBa
         AlertDialog(onDismissRequest=controller::closeBrowser,title={Text("选择备份父目录")},text={Column(verticalArrangement=Arrangement.spacedBy(8.dp)) {
             Text(if(path.isEmpty())"服务根目录" else path.joinToString("/"),maxLines=2,overflow=TextOverflow.Ellipsis)
             if(state.testing)LinearProgressIndicator(Modifier.fillMaxWidth())
-            if(path.isNotEmpty())TextButton(controller::parentDirectory,enabled=!state.testing){Text("上一级目录")}
+            if(path.isNotEmpty()) JournalTextAction("上一级目录", enabled=!state.testing, onClick=controller::parentDirectory)
             if(!state.directoryComplete && !state.testing)Text(state.message ?: "部分子目录不可读取，请核对云盘权限。")
             LazyColumn(Modifier.fillMaxWidth().heightIn(max=320.dp)) {
                 items(state.directoryNames,key={it},contentType={"directory"}) {name->TextButton({controller.chooseDirectory(name)},enabled=!state.testing){Text(name,maxLines=2,overflow=TextOverflow.Ellipsis)}}

@@ -23,6 +23,7 @@ import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.IntSize
+import cn.yunji.journal.core.designsystem.JournalTextAction
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
@@ -144,12 +145,12 @@ internal fun PdfDocumentView(id: String, model: JournalViewModel, modifier: Modi
                 }
                 if (renderError) Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     Text("本页无法显示，原件已保留")
-                    TextButton({ attempt++ }) { Text("重试") }
+                    JournalTextAction("重试", onClick = { attempt++ })
                 }
                 if (rendering) CircularProgressIndicator()
             } else if (error != null) Column(Modifier.padding(24.dp), horizontalAlignment = Alignment.CenterHorizontally) {
                 Text(error!!)
-                TextButton({ attempt++ }) { Text("重试") }
+                JournalTextAction("重试", onClick = { attempt++ })
             } else if (foreground) CircularProgressIndicator()
         }
         if (current != null) {

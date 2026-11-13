@@ -97,14 +97,14 @@ internal fun WelcomeScreen(onCreate: () -> Unit) {
             Text(when { pregnancy.status != "ONGOING" -> "已结束的孕期档案"; invalidFutureEdd || invalidFutureLmp -> "已保存日期 · 暂无法计算孕周"; age == null -> "日期待补充"; else -> when {age.days<98->"孕早期";age.days<196->"孕中期";else->"孕晚期"} }, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.primary)
             Text(when { age != null -> age.label(); invalidFutureEdd -> "请核对预产期"; invalidFutureLmp -> "请核对末次月经日期"; else -> "待补充日期" }, style = MaterialTheme.typography.displaySmall, color = MaterialTheme.colorScheme.primary)
             Text(when { invalidFutureEdd -> "已保存的预产期距今天超过40周，请检查年份和月份"; invalidFutureLmp -> "末次月经日期晚于今天，请检查年份和月份"; edd != null -> "预产期 ${displayDate(edd.toString())} · ${if (pregnancy.confirmedEdd != null) "医生确认" else "估算"}"; else -> "可稍后填写医生确认的预产期" }, style = MaterialTheme.typography.bodySmall)
-            if (invalidFutureEdd || invalidFutureLmp) TextButton(onEditPregnancy) { Text("修改日期") }
+            if (invalidFutureEdd || invalidFutureLmp) JournalTextAction("修改日期", onClick = onEditPregnancy)
             if (age != null) Box(Modifier.fillMaxWidth().height(6.dp).background(MaterialTheme.colorScheme.outline,RoundedCornerShape(3.dp))) {
                 Box(Modifier.fillMaxWidth((age.days/280f).coerceIn(0f,1f)).fillMaxHeight().background(MaterialTheme.colorScheme.primary,RoundedCornerShape(3.dp)))
             }
         } } }
         item { Inset { Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.SpaceBetween,verticalAlignment=Alignment.CenterVertically) {
             Text("今天的安排",style=MaterialTheme.typography.titleLarge)
-            TextButton(onVisits) {Text("查看全部")}
+            JournalTextAction("查看全部", onClick = onVisits)
         } } }
         if(model!=null) item {Inset {HomePendingIntakeRow(pregnancy.id,today,model,onIntakes)}}
         item { Inset { if (next == null) RecordRow("还没有产检预约", "添加下一次预约，留住后续安排", "ic-calendar-check.svg", onNewVisit)
@@ -217,7 +217,7 @@ internal fun WelcomeScreen(onCreate: () -> Unit) {
             Column(Modifier.weight(1f)) { Text(label, style = MaterialTheme.typography.bodySmall); Text(value.takeIf(String::isNotBlank)?.let(::displayDate) ?: "选择日期", style = MaterialTheme.typography.bodyLarge) }
             DesignIcon("42641.svg")
         }
-        if (!required && value.isNotBlank()) TextButton({ update("") },enabled=enabled) { Text("清除日期") }
+        if (!required && value.isNotBlank()) JournalTextAction("清除日期", enabled = enabled, onClick = { update("") })
     }
     if (show) {
         val initial = value.takeIf(String::isNotBlank)?.let { runCatching { LocalDate.parse(it) }.getOrNull() }
@@ -263,8 +263,10 @@ internal fun WelcomeScreen(onCreate: () -> Unit) {
                 val reminder = if (visit.reminderDate != null && visit.reminderTime != null) displayDateTime(visit.reminderDate!!, visit.reminderTime) else "未设置"
                 Text(reminder, modifier = Modifier.testTag("visit-reminder-value"))
                 Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                    TextButton({ editingReminder = true }, enabled = !busy, modifier = Modifier.testTag("visit-reminder-set")) { Text(if (visit.reminderDate == null) "设置提醒" else "修改提醒") }
-                    if (visit.reminderDate != null) TextButton({ onClearReminder() }, enabled = !busy, modifier = Modifier.testTag("clear-visit-reminder")) { Text("关闭提醒") }
+                    JournalTextAction(if (visit.reminderDate == null) "设置提醒" else "修改提醒",
+                        Modifier.testTag("visit-reminder-set"), enabled = !busy, onClick = { editingReminder = true })
+                    if (visit.reminderDate != null) JournalTextAction("关闭提醒",
+                        Modifier.testTag("clear-visit-reminder"), enabled = !busy, onClick = onClearReminder)
                 }
                 Text("提醒时间按本机当前时区计算；通知权限关闭时仍保留应用内待办。锁屏默认隐藏医院和具体安排。", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
             } } }

@@ -43,11 +43,13 @@ internal fun MedicationListScreen(pregnancyId: String?, model: JournalViewModel,
                 Text("${medicationStatusLabel(plan.status)} · 第${plan.version}版", color = MaterialTheme.colorScheme.primary)
                 PlanSummary(plan)
                 Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                    if (plan.status != "ENDED") TextButton({ edit(plan.id) }, enabled = !busy) { Text("修改方案") }
-                    TextButton({ history(plan.logicalPlanId) }) { Text("历史版本") }
-                    if (plan.status != "ENDED") TextButton({ statusChange = plan.id to if (plan.status == "ACTIVE") "PAUSED" else "ACTIVE" }, enabled = !busy) { Text(if (plan.status == "ACTIVE") "暂停" else "恢复方案") }
+                    if (plan.status != "ENDED") JournalTextAction("修改方案", enabled = !busy, onClick = { edit(plan.id) })
+                    JournalTextAction("历史版本", onClick = { history(plan.logicalPlanId) })
+                    if (plan.status != "ENDED") JournalTextAction(if (plan.status == "ACTIVE") "暂停" else "恢复方案",
+                        enabled = !busy,
+                        onClick = { statusChange = plan.id to if (plan.status == "ACTIVE") "PAUSED" else "ACTIVE" })
                 }
-                if (plan.status != "ENDED") TextButton({ statusChange = plan.id to "ENDED" }, enabled = !busy) { Text("结束方案") }
+                if (plan.status != "ENDED") JournalTextAction("结束方案", enabled = !busy, danger = true, onClick = { statusChange = plan.id to "ENDED" })
             } }
         }
     }
@@ -110,7 +112,7 @@ internal fun MedicationEditorScreen(form: MedicationForm, model: JournalViewMode
         DateField(if (form.frequency == "ONCE") "用药日期" else "开始日期", form.startDate, { update(form.copy(startDate = it)) }, required = true)
         if (form.frequency != "ONCE") {
             DateField("结束日期（选填）", form.endDate, { update(form.copy(endDate = it)) })
-            if (form.endDate.isNotEmpty()) TextButton({ update(form.copy(endDate = "")) }) { Text("清除结束日期") }
+            if (form.endDate.isNotEmpty()) JournalTextAction("清除结束日期", onClick = { update(form.copy(endDate = "")) })
         }
         FormField("医嘱来源（选填）", form.source, { update(form.copy(source = it)) }, 240)
         FormField("医嘱原文与备注", form.instructions, { update(form.copy(instructions = it)) }, 10_000, false)

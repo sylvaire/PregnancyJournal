@@ -193,8 +193,9 @@ internal fun DocumentScreen(visitId: String, model: JournalViewModel,medication:
                             Text(status, color = if (job.state == "FAILED") MaterialTheme.colorScheme.error else MaterialTheme.colorScheme.primary,
                                 style = MaterialTheme.typography.bodySmall)
                         }
-                        if (attachment != null && job.state == "READY" && compactReadyRows && expandedJobId != job.id) TextButton(
-                            { expandedJobId = job.id }, Modifier.testTag("document-more-${job.id}")) { Text("操作") }
+                        if (attachment != null && job.state == "READY" && compactReadyRows && expandedJobId != job.id)
+                            JournalTextAction("操作", Modifier.testTag("document-more-${job.id}"),
+                                onClick = { expandedJobId = job.id })
                     }
                     if (attachment != null && (!compactReadyRows || expandedJobId == job.id)) Text("${DOCUMENT_CATEGORIES[attachment.category] ?: "其他"} · ${if (attachment.mime == "application/pdf") "PDF" else "图片"} · ${formatFileSize(attachment.plainSize)}", style = MaterialTheme.typography.bodySmall)
                     if (attachment?.documentDate != null && (!compactReadyRows || expandedJobId == job.id)) Text("报告日期：${displayDate(attachment.documentDate!!)}", style = MaterialTheme.typography.bodySmall)
@@ -234,15 +235,34 @@ internal fun DocumentScreen(visitId: String, model: JournalViewModel,medication:
                             Modifier.testTag("document-more-${job.id}"),
                             onClick = { expandedJobId = if (expandedJobId == job.id) null else job.id })
                     }
-                    if (attachment != null && job.state == "READY" && compactReadyRows && expandedJobId == job.id) TextButton(
-                        { expandedJobId = null }, Modifier.testTag("document-more-${job.id}")) { Text("收起操作") }
+                    if (attachment != null && job.state == "READY" && compactReadyRows && expandedJobId == job.id)
+                        JournalTextAction("收起操作", Modifier.testTag("document-more-${job.id}"), onClick = { expandedJobId = null })
                     if (attachment != null && job.state == "READY" && expandedJobId == job.id) FlowRow(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                        if (!medication && currentCoverId != attachment.id) TextButton({ model.setDocumentCover(attachment.id, visitId) }, Modifier.testTag("set-cover-${attachment.id}")) { Text("设为封面") }
-                        if (!medication && currentCoverId == attachment.id) TextButton({ model.clearDocumentCover(visitId) }, Modifier.testTag("clear-cover")) { Text("取消封面") }
-                        if (!medication && visits.isNotEmpty()) TextButton({ relinking = attachment.id }, Modifier.testTag("relink-${attachment.id}")) { Text("关联产检") }
-                        TextButton({ if(fileLaunch!=null)fileLaunch(FileRequest("EXPORT",visitId,medication,attachment.id,attachment.revision),exportName(attachment)) else {exporting = attachment.id; runCatching { exporter.launch(exportName(attachment)) }.onFailure { pickerError = "无法打开导出位置选择器" }} }, Modifier.testTag("export-${attachment.id}")) { Text("导出原件") }
-                        TextButton({ shareError = null; shareTarget = attachment }, Modifier.testTag("share-${attachment.id}"), enabled = !shareBusy) { Text(if (shareBusy) "分享中…" else "分享原件") }
-                        TextButton({ if(fileLaunch!=null)fileLaunch(FileRequest("REPLACE",visitId,medication,attachment.id,attachment.revision),null) else {replaceTarget = attachment.id; runCatching { replacementPicker.launch(if(medication)arrayOf("image/*") else arrayOf("image/*", "application/pdf")) }.onFailure { pickerError = "无法打开文件选择器" }} }, Modifier.testTag("replace-${attachment.id}")) { Text("替换原件") }
+                        if (!medication && currentCoverId != attachment.id) JournalTextAction("设为封面",
+                            Modifier.testTag("set-cover-${attachment.id}"), onClick = { model.setDocumentCover(attachment.id, visitId) })
+                        if (!medication && currentCoverId == attachment.id) JournalTextAction("取消封面",
+                            Modifier.testTag("clear-cover"), onClick = { model.clearDocumentCover(visitId) })
+                        if (!medication && visits.isNotEmpty()) JournalTextAction("关联产检",
+                            Modifier.testTag("relink-${attachment.id}"), onClick = { relinking = attachment.id })
+                        JournalTextAction("导出原件", Modifier.testTag("export-${attachment.id}"), onClick = {
+                            if (fileLaunch != null) fileLaunch(FileRequest("EXPORT", visitId, medication, attachment.id, attachment.revision), exportName(attachment))
+                            else {
+                                exporting = attachment.id
+                                runCatching { exporter.launch(exportName(attachment)) }
+                                    .onFailure { pickerError = "无法打开导出位置选择器" }
+                            }
+                        })
+                        JournalTextAction(if (shareBusy) "分享中…" else "分享原件",
+                            Modifier.testTag("share-${attachment.id}"), enabled = !shareBusy,
+                            onClick = { shareError = null; shareTarget = attachment })
+                        JournalTextAction("替换原件", Modifier.testTag("replace-${attachment.id}"), onClick = {
+                            if (fileLaunch != null) fileLaunch(FileRequest("REPLACE", visitId, medication, attachment.id, attachment.revision), null)
+                            else {
+                                replaceTarget = attachment.id
+                                runCatching { replacementPicker.launch(if (medication) arrayOf("image/*") else arrayOf("image/*", "application/pdf")) }
+                                    .onFailure { pickerError = "无法打开文件选择器" }
+                            }
+                        })
                     }
                 } } }
             }
@@ -260,14 +280,13 @@ internal fun DocumentScreen(visitId: String, model: JournalViewModel,medication:
                             maxLines = if (compact) 1 else Int.MAX_VALUE,
                             overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
                             modifier = Modifier.weight(1f))
-                        if (compact) TextButton({ expandedTrashId = if (expandedTrashId == attachment.id) null else attachment.id },
-                            Modifier.testTag("document-trash-more-${attachment.id}")) {
-                            Text(if (expandedTrashId == attachment.id) "收起" else "操作")
-                        }
+                        if (compact) JournalTextAction(if (expandedTrashId == attachment.id) "收起" else "操作",
+                            Modifier.testTag("document-trash-more-${attachment.id}"),
+                            onClick = { expandedTrashId = if (expandedTrashId == attachment.id) null else attachment.id })
                     }
                     if (purging) { Text("正在彻底删除…"); LinearProgressIndicator(Modifier.fillMaxWidth()) }
                     if (!compact || expandedTrashId == attachment.id) Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        TextButton({ model.restoreDocument(attachment.id) }, enabled = !purging) { Text("恢复") }
+                        JournalTextAction("恢复", enabled = !purging, onClick = { model.restoreDocument(attachment.id) })
                         JournalTextAction("彻底删除", enabled = !purging, danger = true, onClick = { confirmation = RemovalConfirmation(attachment.id, true, false) })
                     }
                 } } }
