@@ -15,8 +15,8 @@ android {
         applicationId = "cn.yunji.journal"
         minSdk = 26
         targetSdk = 36
-        versionCode = 27
-        versionName = "0.26.0-dev"
+        versionCode = 28
+        versionName = "0.26.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         // Only the explicit verification build disables FLAG_SECURE to capture real-device screenshots;
         // release/performance and normal debug builds keep the secure flag.
