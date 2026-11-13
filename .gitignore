@@ -25,3 +25,7 @@ captures/
 # 环境与密钥文件
 .env
 .env.*
+
+# Python 临时产物
+__pycache__/
+*.pyc

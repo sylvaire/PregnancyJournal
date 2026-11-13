@@ -25,6 +25,7 @@
 | 动效 | 修复后改善 | 原有仅页面级转场；已为卡片加 `animateContentSize` |
 | 无障碍 | 部分修复 | `RecordRow` 补 `onClickLabel`；装饰图标不重复播报 |
 | 图标语义 | 已修复 | 新增 20 个语义化图标，27 处引用替换，无缺失引用 |
+| 图标风格 | 已统一 | Ardot 26 个组件与本地 20 个 SVG 描边统一 1.75，像素级核验通过 |
 
 ## 2. 已修复项
 
@@ -91,6 +92,33 @@
 **Ardot 状态**：配置已写入 `~/.zcode/cli/config.json`（`ardot-remote`），
 OAuth 元数据可读、动态注册成功，但授权页返回 `400 加载授权信息失败`——需要重启 ZCode
 在「设置 → MCP」内完成客户端侧授权。届时可用设计稿同名覆盖 SVG，代码无需改动。
+
+### 3.3 Ardot 设计稿同步（第二轮完成）
+
+Ardot MCP 恢复可用后，已在设计稿内补齐缺失图标并完成风格核验。
+
+- 图标帧 `22:575`「孕迹 · 精修图标」由 **10 个** 扩到 **26 个** COMPONENT
+- 新增 16 个：trash / bell / bell-plus / lock / cloud / calendar-check / activity /
+  notebook / backup / history / refresh / edit / info / user / pill / image
+- 结构统一为 `COMPONENT(24×24) → FRAME("Frame") → VECTOR`，
+  VECTOR 为 `strokeWeight=1.75`、`ROUND/ROUND`、`CENTER`，描边绑定变量 `$7:7`（`primitive/primary` = `#356B53`）
+- 修正两处历史命名错误：`pill`（实为禁止符）→ `prohibit`，`scale`（实为图片）→ `image-legacy`
+- **修正本地侧不一致**：首轮 `ic-*.svg` 混用 1.5/1.6/1.7/1.75，已全部归一到设计稿的 **1.75**
+
+**风格一致性核验**（27 个图标导出 10× PNG 做像素测量）：
+
+| 指标 | 原有 10 个 | 新增 17 个 | 结论 |
+|---|---|---|---|
+| 墨迹占比 | 6.5–27.0%（均值 17.2） | 11.6–28.3%（均值 19.1） | 同一量级 |
+| x / y 包围盒 | 2.1–21.9 | 2.1–21.9 | 一致 |
+| 主色 | `#356B53` | `#356B53` | 一致 |
+| 描边 | 1.75 ROUND/ROUND | 1.75 ROUND/ROUND | 一致 |
+
+真机复核（小米 11 Ultra，1440×3200 / 560dpi）：
+`screens/10-profile-icons-ardot-synced.png`、`11-profile-icons-scrolled.png`、
+`12-reminder-icons-ardot-synced.png` 确认 9 个「我的」行图标与 5 个「提醒设置」行图标语义正确、线宽统一。
+
+详见 [语义图标规范](../../design/语义图标规范.md) 与 [ardot-state.json](../../design/ardot-state.json)。
 
 ### 3.2 无障碍语义（已部分修复）
 

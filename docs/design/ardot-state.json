@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25",
+  "updatedAt": "2026-11-13",
   "fileUrl": "https://ardot.tencent.com/file/737849992357132?node_id=0%3A1",
   "fileId": "737849992357132",
   "pageId": "0:1",
@@ -37,6 +37,72 @@
     "layoutCheck": "22/22 可读取；均有 LARGE_EMPTY_AREA、OUTSIDE_PARENT 提示，主要来自原模板留白及组件子层，未作为视觉验收通过证据",
     "visualCheck": "用户授权后已截图并检查 N01-N22；N02/N11/N12 修订后重截确认；N20 最终月历修订仅通过 capture_layout，无最终截图",
     "visualEvidence": "../verification/2026-10-25-ardot-visual/README.md"
+  },
+  "mcpAccess": {
+    "checkedAt": "2026-11-13",
+    "endpoint": "https://ardot.tencent.com/mcp",
+    "serverInfo": "ardot-remote 2.0.0",
+    "toolCount": 28,
+    "auth": "OAuth 2.0 + PKCE（动态客户端注册）；authorize 必须携带 RFC 8707 resource=https://ardot.tencent.com/mcp，缺失时网页授权页返回 400、token 端点返回 invalid_target",
+    "verified": [
+      "fetch_file_info → success:true（fileId 737849992357132）",
+      "batch_read 0:1 → PAGE「01 · 孕迹 V1.0」含 50 个子节点",
+      "batch_read 22:575 → FRAME「孕迹 · 精修图标」含 10 个 24×24 图标组件",
+      "capture_screenshot 22:575 → 384×24 PNG 已下载目视核对",
+      "fetch_styles → 24 条本地样式（含 孕迹/{display,title,heading,body,label,caption}）",
+      "fetch_variables → 变量集「孕迹 · Light」，primitive/bg=#F7F8F3、primitive/ink=#223C32 与代码一致",
+      "server/discover → -32601 Method not found（91–140ms，正常回退旧协议）"
+    ],
+    "iconComponents": [
+      "22:576 孕迹/Icon/check",
+      "22:579 孕迹/Icon/plus",
+      "22:582 孕迹/Icon/file",
+      "22:585 孕迹/Icon/clock",
+      "22:588 孕迹/Icon/calendar",
+      "22:591 孕迹/Icon/shield",
+      "22:594 孕迹/Icon/prohibit（原名 pill，实为禁止符，已改名）",
+      "22:597 孕迹/Icon/image-legacy（原名 scale，实为图片图标，已改名）",
+      "22:600 孕迹/Icon/restore",
+      "22:603 孕迹/Icon/chevron",
+      "88:54 孕迹/Icon/trash",
+      "88:57 孕迹/Icon/bell",
+      "88:60 孕迹/Icon/bell-plus",
+      "88:64 孕迹/Icon/lock",
+      "88:67 孕迹/Icon/cloud",
+      "88:70 孕迹/Icon/calendar-check",
+      "88:74 孕迹/Icon/activity",
+      "88:77 孕迹/Icon/notebook",
+      "88:80 孕迹/Icon/backup",
+      "88:83 孕迹/Icon/history",
+      "88:86 孕迹/Icon/refresh",
+      "88:89 孕迹/Icon/edit",
+      "88:92 孕迹/Icon/info",
+      "88:95 孕迹/Icon/user",
+      "88:98 孕迹/Icon/pill",
+      "88:104 孕迹/Icon/image"
+    ],
+    "iconSync": {
+      "doneAt": "2026-11-13",
+      "frame": "22:575 孕迹 · 精修图标（layout=horizontal, gap=16）",
+      "count": 26,
+      "structure": "COMPONENT(24×24) → FRAME(Frame) → VECTOR",
+      "vectorSpec": "strokeWeight=1.75, strokeCap=ROUND, strokeJoin=ROUND, strokeAlign=CENTER, strokes=[$7:7]",
+      "localSpec": "app/src/main/assets/design/ic-*.svg 全部 stroke-width=1.75、fill=none、#356B53",
+      "consistencyCheck": "27 个图标 10x PNG 像素测量：墨迹占比 original 6.5–27.0%(均值17.2) vs new 11.6–28.3%(均值19.1)；包围盒两侧均 2.1–21.9；主色均 #356B53",
+      "codeRefs": "30 个引用 / 0 缺失",
+      "screenshots": "../verification/2026-11-13-ui-ux-audit/screens/10-profile-icons-ardot-synced.png"
+    },
+    "ardotPitfalls": [
+      "SVG 导入会把描边转成填充，且内层 Frame 定位到 x=-12,y=-12；需 U(frame,{x:0,y:0}) + U(component,{fills:[]})",
+      "vectorPaths 不支持写入：set_vectorPaths: (void 0) is not a function",
+      "description 写入恒失败：set_description: DOMParser is not defined（服务端缺陷）",
+      "变量别名不可引用：stroke \"$7:18\"(color/primary) 报 not a COLOR variable，须用 $:孕迹 · Light:primitive/primary 或 $7:7",
+      "batch_edit 的 operations 是单个字符串（换行分隔），不是数组",
+      "节点多时 batch_read 转存 JSONL 下载链接，需逐节点读取"
+    ],
+    "desktopMount": "ZCode 需重启后才会挂载 mcp__ardot-remote__* 工具；配置为 type=http + url + headers.Authorization + timeoutMs=60000（schema 校验通过，无未知键）",
+    "credentialNote": "access_token 有效期 15 天，refresh_token 已保存；凭据只存于 .local/ardot-oauth/（gitignore）与 ZCode MCP headers，未写入仓库文档",
+    "refreshCommand": "python -I .local/ardot-oauth/refresh.py"
   },
   "remaining": ["N20 最终月历视觉复核", "深色与大字状态", "云盘和恢复错误/完成等分支", "原型交互连线"]
 }
