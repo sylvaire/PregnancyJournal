@@ -46,7 +46,7 @@
 | P2-1 | 按钮高度 40/52/56/72 四种 | 低 | 10 处 | ✅ 已修（单行动作 6 处；字段选择器保留 56dp） |
 | P2-2 | `Card`/`OutlinedCard`/`Checkbox`/`HorizontalDivider` 未包装 | 低 | 4 个文件 | ✅ 已修 |
 | P2-3 | 加载态 22 处裸 `CircularProgressIndicator`，无统一组件 | 低 | 8 个文件 | ✅ 整页加载已全替换；保留 4 处局部小 spinner（图片渲染/顶栏角标） |
-| P2-4 | 错误提示 29 处裸 `Text(color=error)`，无统一组件 | 低 | 多文件 | ✅ 已清零 |
+| P2-4 | 错误提示 29 处裸 `Text(color=error)`，无统一组件 | 低 | 多文件 | ✅ 25 处改 `JournalError`；余 4 处为状态/结果行，见 §7.5 |
 | P2-5 | 3 处可点行缺 `onClickLabel`；1 处可点文本高度 18dp | 低（无障碍） | 4 处 | ✅ 已修 |
 
 ## 3. P0 级问题
@@ -359,6 +359,7 @@ Ardot `7:2461`「孕迹 · 基础组件」定义 3 个组件：
 | 列表行项（云盘目录项、产检日历日格） | 2 | 是列表/网格的单元格，不是独立动作；日格用 `Modifier.fillMaxSize()` + 自定义 contentPadding |
 | 对话框内部项（重新关联、导入选项等） | 5 | 在 `AlertDialog`/`BottomSheet` 内，随对话框统一样式 |
 | 7 处搜索框 + 1 处 PDF 页码输入 | 8 | 搜索框在 `LazyColumn` 内由 `Inset{}` 包裹，是筛选控件而非表单字段；改为 `JournalField` 会破坏列表节奏 |
+| 随状态变色的行内状态/结果文字 | 4 | ①`CloudConnectionScreen` 上传结果行（注释已说明「紧贴按钮、避免被视口裁掉」）；②`DocumentScreen` 的资料状态标签（「已加密保存/导入失败」）；③`ExportScreen` 导出结果行（成功 primary / 失败 error）；④`TrashScreen` 对话框确认按钮（彻底删除时变红）。这些是**状态文字**而非错误提示块，套 `JournalError` 的粉色容器会破坏其行内语义 |
 
 **判定标准**：`JournalTextAction` 适用于「页面/卡片内、与内容并列的独立动作」。
 工具栏、列表单元格、对话框、筛选控件属于不同控件族，强行统一会损害布局或交互。
