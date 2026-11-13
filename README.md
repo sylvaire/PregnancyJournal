@@ -71,6 +71,7 @@ adb shell am instrument -w -r cn.yunji.journal.test/androidx.test.runner.Android
 | [数据字典](docs/数据字典.md) / [备份格式](docs/备份格式.md) | schema 表结构与字节格式、认证范围 |
 | [用户指南](docs/用户指南.md) / [隐私说明](docs/隐私说明.md) / [已知限制](docs/已知限制.md) | 使用、恢复与当前限制 |
 | [剩余任务验收清单](docs/剩余任务验收清单.md) | 逐项对照的验收状态 |
+| [发布流程](docs/发布流程.md) | Release APK 自动构建、签名密钥配置与发布检查清单 |
 | [阶段记录](docs/阶段记录/) | 每个阶段的目标、交付物、验证证据与遗留问题 |
 | [验证证据](docs/verification/) | 各轮自动化/真机验证的原始记录与截图 |
 | [Figma UI 设计交付](docs/design/README.md) | 设计文件、节点索引与画板对照矩阵 |

@@ -30,10 +30,30 @@ android {
     testOptions { unitTests.isReturnDefaultValues = true }
     testBuildType = providers.gradleProperty("testBuildType").orElse("debug").get()
     packaging { resources.excludes += "/META-INF/{AL2.0,LGPL2.1}" }
+
+    // 发布签名由 CI 通过环境变量注入（密钥本身从不入库）。
+    // 四个变量齐备时才配置；缺任一则 release 仍产出未签名包，便于本地构建与审计。
+    val releaseStoreFile = providers.environmentVariable("RELEASE_KEYSTORE_PATH").orNull
+    val releaseStorePassword = providers.environmentVariable("RELEASE_KEYSTORE_PASSWORD").orNull
+    val releaseKeyAlias = providers.environmentVariable("RELEASE_KEY_ALIAS").orNull
+    val releaseKeyPassword = providers.environmentVariable("RELEASE_KEY_PASSWORD").orNull
+    val hasReleaseSigning = listOf(releaseStoreFile, releaseStorePassword, releaseKeyAlias, releaseKeyPassword)
+        .all { !it.isNullOrBlank() } && file(requireNotNull(releaseStoreFile)).exists()
+    signingConfigs {
+        if (hasReleaseSigning) {
+            create("release") {
+                storeFile = file(requireNotNull(releaseStoreFile))
+                storePassword = releaseStorePassword
+                this.keyAlias = releaseKeyAlias
+                keyPassword = releaseKeyPassword
+            }
+        }
+    }
     buildTypes {
         release {
             isMinifyEnabled = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            if (hasReleaseSigning) signingConfig = signingConfigs.getByName("release")
         }
         create("performance") {
             initWith(getByName("release"))

@@ -1,0 +1,135 @@
+name: Release APK
+
+# 发布 release（在 GitHub 上创建/发布 Release）时构建 APK 并作为附件上传。
+# 也可在 Actions 页面手动触发，用于预演构建。
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: '手动触发时作为 APK 文件名前缀的标签（可选）'
+        required: false
+        type: string
+
+# 同一 release 重复触发时，取消旧的那次，避免覆盖竞态。
+concurrency:
+  group: release-apk-${{ github.event.release.tag_name || inputs.tag || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write   # 上传 Release 附件需要
+
+jobs:
+  build:
+    name: Build release APK
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # 检查 release 对应 tag 的代码，而不是默认分支。
+          ref: ${{ github.event.release.tag_name || github.ref }}
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x ./gradlew
+
+      # 有签名密钥则产出已签名 APK；没有则产出未签名 APK（仅用于内部验证）。
+      # 注意：secrets 不能在 if 条件中直接引用，因此在步骤内部判断是否为空。
+      - name: Decode signing keystore
+        id: keystore
+        env:
+          RELEASE_KEYSTORE_BASE64: ${{ secrets.RELEASE_KEYSTORE_BASE64 }}
+        run: |
+          if [ -z "${RELEASE_KEYSTORE_BASE64:-}" ]; then
+            echo "::warning::未配置 RELEASE_KEYSTORE_BASE64，将产出未签名 APK（仅供内部验证）"
+            echo "path=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "$RELEASE_KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/release.jks"
+          echo "path=$RUNNER_TEMP/release.jks" >> "$GITHUB_OUTPUT"
+          echo "::notice::已检测到签名密钥，将产出签名 APK"
+
+      - name: Build release APK
+        env:
+          RELEASE_KEYSTORE_PATH: ${{ steps.keystore.outputs.path }}
+          RELEASE_KEYSTORE_PASSWORD: ${{ secrets.RELEASE_KEYSTORE_PASSWORD }}
+          RELEASE_KEY_ALIAS: ${{ secrets.RELEASE_KEY_ALIAS }}
+          RELEASE_KEY_PASSWORD: ${{ secrets.RELEASE_KEY_PASSWORD }}
+        run: |
+          # R8 与 Kotlin 编译在 CI 上更吃内存；以命令行属性覆盖 gradle.properties 默认值。
+          ./gradlew --no-daemon -Dorg.gradle.jvmargs=-Xmx4096m -Dfile.encoding=UTF-8 :app:assembleRelease
+          ls -l app/build/outputs/apk/release/
+
+      - name: Run unit tests
+        run: ./gradlew --no-daemon -Dorg.gradle.jvmargs=-Xmx4096m -Dfile.encoding=UTF-8 :app:testDebugUnitTest
+
+      - name: Collect and rename APK
+        id: collect
+        env:
+          TAG: ${{ github.event.release.tag_name || inputs.tag || github.sha }}
+        run: |
+          set -euo pipefail
+          SRC=$(ls app/build/outputs/apk/release/*.apk | head -n 1)
+          NAME="PregnancyJournal-${TAG}-$(basename "$SRC")"
+          mkdir -p dist
+          cp "$SRC" "dist/$NAME"
+          # 未签名包明确标注，避免被误当成可安装的发布件。
+          if echo "$NAME" | grep -q "unsigned"; then
+            echo "::warning::产物为未签名 APK，仅供内部验证，无法直接安装到用户设备"
+            echo "signed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "signed=true" >> "$GITHUB_OUTPUT"
+          fi
+          sha256sum "dist/$NAME" > "dist/$NAME.sha256"
+          echo "name=$NAME" >> "$GITHUB_OUTPUT"
+          cat "dist/$NAME.sha256"
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-apk
+          path: dist/
+          retention-days: 30
+
+      # 仅在由 Release 事件触发时上传附件（手动触发只留 artifact）。
+      - name: Attach APK to GitHub Release
+        if: ${{ github.event_name == 'release' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ github.event.release.tag_name }}
+          APK: ${{ steps.collect.outputs.name }}
+        run: |
+          set -euo pipefail
+          gh release upload "$TAG" "dist/$APK" "dist/$APK.sha256" --clobber
+          echo "::notice::已上传 $APK 及其 SHA-256 到 Release $TAG"
+
+      - name: Summary
+        if: always()
+        env:
+          APK: ${{ steps.collect.outputs.name }}
+          SIGNED: ${{ steps.collect.outputs.signed }}
+        run: |
+          {
+            echo "### Release APK 构建结果"
+            echo ""
+            if [ -n "${APK:-}" ]; then
+              echo "- 产物：\`${APK}\`"
+              echo "- 已签名：**${SIGNED}**"
+            else
+              echo "- 构建未产出 APK，请查看上方日志"
+            fi
+            echo "- 触发方式：${{ github.event_name }}"
+            echo "- 引用：${{ github.event.release.tag_name || github.ref }}"
+          } >> "$GITHUB_STEP_SUMMARY"
