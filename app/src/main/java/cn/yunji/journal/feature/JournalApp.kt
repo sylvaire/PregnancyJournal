@@ -205,7 +205,7 @@ internal fun WelcomeScreen(onCreate: () -> Unit) {
 @Composable internal fun DateField(label: String, value: String, update: (String) -> Unit, required: Boolean = false, maxDate: LocalDate? = null,enabled: Boolean=true) {
     var show by remember { mutableStateOf(false) }
     Column {
-        OutlinedButton({ show = true }, modifier = Modifier.fillMaxWidth().heightIn(min = 56.dp), enabled=enabled,shape = androidx.compose.foundation.shape.RoundedCornerShape(4.dp)) {
+        OutlinedButton({ show = true }, modifier = Modifier.fillMaxWidth().heightIn(min = 56.dp), enabled=enabled,shape = RoundedCornerShape(16.dp)) {
             Column(Modifier.weight(1f)) { Text(label, style = MaterialTheme.typography.bodySmall); Text(value.takeIf(String::isNotBlank)?.let(::displayDate) ?: "选择日期", style = MaterialTheme.typography.bodyLarge) }
             DesignIcon("42641.svg")
         }

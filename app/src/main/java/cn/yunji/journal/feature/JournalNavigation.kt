@@ -373,7 +373,12 @@ fun JournalApp(model: JournalViewModel,externalStack: NavBackStack<NavKey>?=null
         deletingRoot?.let { (kind, id) -> RootDeletionDialog(kind, id, model, { deletingRoot = null }) }
         if (preparing) CircularProgressIndicator(Modifier.align(Alignment.TopEnd).statusBarsPadding().padding(16.dp).size(20.dp), strokeWidth = 2.dp)
         SnackbarHost(snackbar, Modifier.align(Alignment.BottomCenter).navigationBarsPadding().imePadding()
-            .padding(horizontal = 12.dp).padding(bottom = if (isRoot(stack.lastOrNull())) 92.dp else 12.dp))
+            .padding(horizontal = 12.dp).padding(bottom = if (isRoot(stack.lastOrNull())) 92.dp else 12.dp)) {
+            // 默认 Snackbar 是直角矩形，与全站 20 dp 圆角卡片不一致。
+            Snackbar(snackbarData = it, shape = androidx.compose.foundation.shape.RoundedCornerShape(16.dp),
+                containerColor = MaterialTheme.colorScheme.inverseSurface,
+                contentColor = MaterialTheme.colorScheme.inverseOnSurface)
+        }
     }
 }
 

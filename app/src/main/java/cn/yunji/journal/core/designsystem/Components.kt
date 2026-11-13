@@ -8,6 +8,8 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
+import androidx.compose.animation.animateContentSize
+import androidx.compose.animation.core.tween
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
@@ -17,6 +19,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.onClick
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.LayoutDirection
@@ -106,7 +110,11 @@ import coil.decode.SvgDecoder
 
 @Composable fun JournalCard(soft: Boolean = false, content: @Composable ColumnScope.() -> Unit) {
     Surface(shape = RoundedCornerShape(20.dp), color = if (soft) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.surface) {
-        Column(Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 16.dp), verticalArrangement = Arrangement.spacedBy(12.dp), content = content)
+        Column(
+            // 卡片内容变化（如展开"操作"、显示进度）时平滑过渡，避免高度瞬间跳变。
+            Modifier.fillMaxWidth().animateContentSize(tween(durationMillis = 180))
+                .padding(horizontal = 20.dp, vertical = 16.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp), content = content)
     }
 }
 
@@ -127,7 +135,8 @@ import coil.decode.SvgDecoder
             if (onClick != null) DesignIcon("cfd63.svg", size = 20.dp)
         }
     }
-    if (onClick != null) Surface(onClick = onClick, modifier = modifier, shape = RoundedCornerShape(20.dp), color = MaterialTheme.colorScheme.surface, content = content)
+    if (onClick != null) Surface(onClick = onClick, modifier = modifier, shape = RoundedCornerShape(20.dp),
+        color = MaterialTheme.colorScheme.surface, content = content)
     else Surface(modifier = modifier, shape = RoundedCornerShape(20.dp), color = MaterialTheme.colorScheme.surface, content = content)
 }
 

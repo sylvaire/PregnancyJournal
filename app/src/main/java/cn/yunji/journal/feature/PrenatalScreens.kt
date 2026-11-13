@@ -112,7 +112,7 @@ internal fun VisitsScreen(state: JournalState, onAdd: () -> Unit, onSelect: (Str
 internal fun VisitTimeField(value: String, update: (String) -> Unit) {
     var show by remember { mutableStateOf(false) }
     Column {
-        OutlinedButton({ show = true }, Modifier.fillMaxWidth().heightIn(min = 56.dp), shape = androidx.compose.foundation.shape.RoundedCornerShape(4.dp)) {
+        OutlinedButton({ show = true }, Modifier.fillMaxWidth().heightIn(min = 56.dp), shape = RoundedCornerShape(16.dp)) {
             Column(Modifier.fillMaxWidth()) {
                 Text("预约时间（选填）", style = MaterialTheme.typography.bodySmall)
                 Text(value.ifBlank { "时间待定" }, style = MaterialTheme.typography.bodyLarge)

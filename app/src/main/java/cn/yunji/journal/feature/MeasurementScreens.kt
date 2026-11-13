@@ -6,6 +6,7 @@ import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.*
@@ -159,7 +160,7 @@ internal fun MeasurementEditorScreen(form: MeasurementForm, model: JournalViewMo
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(horizontal=24.dp),verticalArrangement=Arrangement.spacedBy(12.dp)) {
         if(form.id==null) Box {
             OutlinedButton({expanded=true},enabled=!busy,modifier=Modifier.fillMaxWidth().heightIn(min=56.dp),
-                shape=androidx.compose.foundation.shape.RoundedCornerShape(4.dp)){Text("指标：${def?.name ?: "选择指标"} · ${def?.unit.orEmpty()}")}
+                shape=RoundedCornerShape(16.dp)){Text("指标：${def?.name ?: "选择指标"} · ${def?.unit.orEmpty()}")}
             DropdownMenu(expanded,{expanded=false}) { available.forEach { item -> DropdownMenuItem({Text("${item.name} · ${item.unit}")},{expanded=false;model.updateMeasurement(form.copy(definitionId=item.id,values=emptyMap()))}) } }
         } else Text("${def?.name.orEmpty()} · ${def?.unit.orEmpty()} · 原指标第${def?.version ?: 1}版")
         def?.valueKeys?.split(",")?.forEach {key ->

@@ -1,0 +1,119 @@
+# UI/UX 一致性审计（2026-11-13）
+
+审计范围：整体视觉风格统一性（按钮、开关等组件）、布局合理性、人机交互合理性、过渡动画自然度。
+
+方法：读取设计系统与主题定义 → 统计业务代码绕过组件的情况 → 模拟器实景截图核对 → 修复高优先级项 → 全量回归。
+
+环境：AVD `PJ_API36_16K`（Android 16 / 16 KiB 页 / 1080×2400 / 420dpi / 字体 1.0 / 浅色），
+用 `-PvisualVerification=true` 构建以绕过 `FLAG_SECURE` 截图。
+
+## 1. 结论摘要
+
+**基础质量良好**：色板、字号、圆角、间距高度统一，无硬编码颜色，主按钮全部走设计系统，
+触摸目标全部达标。发现的问题是**局部不一致**与**动效缺失**，已修复 3 项、记录 3 项待决策。
+
+| 维度 | 评价 | 说明 |
+|---|---|---|
+| 色板 | 优秀 | 14 个语义色集中定义，业务代码 **0 处硬编码颜色** |
+| 字体 | 优秀 | 8 级字阶集中定义（displaySmall→labelSmall） |
+| 主按钮 | 优秀 | `JournalButton`/`JournalDangerButton` 全站唯一，**0 处裸 `Button`** |
+| 开关 | 优秀 | `JournalSwitch` 6 处替换，显式定义四态配色（含禁用态） |
+| 标签 | 优秀 | `JournalTag` 替换全部 `FilterChip`，48dp 高、selectable 语义 |
+| 卡片 | 良好 | `JournalCard` 统一 20dp 圆角 + 20/16dp 内边距 |
+| 圆角 | 修复后统一 | 原有 3 处 4dp 尖角，已统一为 16dp |
+| Snackbar | 修复后统一 | 原为直角矩形，已改 16dp 圆角 |
+| 动效 | 修复后改善 | 原有仅页面级转场；已为卡片加 `animateContentSize` |
+| 无障碍 | 待改进 | 交互语义标签偏少（仅 5 处 contentDescription） |
+| 图标语义 | 待改进 | **仅 14 个 SVG 资源**，被几十个功能复用，语义错配明显 |
+
+## 2. 已修复项
+
+### 2.1 Snackbar 直角与全站圆角冲突
+
+- 位置：`feature/JournalNavigation.kt`
+- 现象：首页保存后提示「已保存到本机」为**直角矩形**，与全站 20dp 圆角卡片明显冲突（见 `screens/03-home.png` 底部）。
+- 修复：`SnackbarHost` 自定义 `Snackbar(shape = RoundedCornerShape(16.dp))`，显式使用 `inverseSurface`/`inverseOnSurface` 保证深色模式跟随主题。
+
+### 2.2 表单类按钮圆角不统一（4dp vs 全站 20/26dp）
+
+- 位置：`JournalApp.kt:208`（建档日期）、`PrenatalScreens.kt:115`（预约日期）、`MeasurementScreens.kt:162`（指标选择）
+- 现象：三处 `OutlinedButton` 使用 `RoundedCornerShape(4.dp)`，是**孤立的尖角样式**，在其余全部 12/16/20/26dp 圆角中显得突兀。
+- 修复：统一为 `RoundedCornerShape(16.dp)`（与 Snackbar 一致，属"输入类"控件）。
+- 证据：`screens/02-create-form-before.png`（尖角）vs `screens/02-create-form-after.png`（圆角）。
+
+### 2.3 缺少组件级过渡动画
+
+- 位置：`core/designsystem/Components.kt` 的 `JournalCard`
+- 现象：全仓动画**仅有页面级转场**（`tween(320)` 滑入 + 根页 `fadeIn(160)`/`fadeOut(120)`），
+  **零组件级动画**。卡片内容变化（展开"操作"、显示导入进度、切换状态）时高度**瞬间跳变**。
+- 修复：`JournalCard` 的 `Column` 加 `animateContentSize(tween(180))`。
+  选 180ms 是因为短于此在展开长内容时仍显跳，长于此会与 320ms 页面转场叠加产生拖沓感。
+
+## 3. 记录但未修改的项（需决策）
+
+### 3.1 图标语义错配（影响最大）
+
+**根因**：`assets/design/` 下只有 **14 个 SVG**，而 `RecordRow` 被用于几十个不同功能，图标被迫复用。
+
+实测错配示例（`screens/04-profile.png`、`screens/05-reminder-settings.png`）：
+
+| 功能 | 实际图标 | 应为 |
+|---|---|---|
+| 全局回收站 | 禁止符号 ⊘ | 垃圾桶 |
+| 提醒设置 | 叶片 | 铃铛 |
+| 安全设置 | 叶片 | 盾牌/锁 |
+| 云盘连接 | 图表+WiFi | 云 |
+| 通知权限 | 叶片 | 铃铛 |
+| 产检提醒 | 人像 | 医院/日历 |
+| 用药提醒 | 日历 | 药丸 |
+| 自定义提醒 | 对勾 | 铃铛+加号 |
+| 调度检查 | 禁止符号 ⊘ | 时钟 |
+
+用户看到「回收站」配禁止符号、「安全设置」配叶片，需要读文字才能分辨——这是**可识别的可用性缺陷**。
+
+未直接修改的原因：需要补充约 10–15 个语义化 SVG 图标，属于**设计资源产出**，不是我能在代码层凭空替代的。
+建议从 Ardot/Figma 图标库补齐，或在设计系统里建立 `JournalIcon` 语义枚举，再做一次全站替换。
+
+### 3.2 无障碍语义偏少
+
+- `contentDescription` 仅 5 处、`onClickLabel` 仅 1 处，而交互点（`RecordRow`、`JournalTag`、列表行）数量远多于此。
+- `RecordRow` 的可点击 `Surface` 不声明动作语义，TalkBack 会读作「按钮」但不说明会打开什么。
+- 曾尝试补 `semantics { onClick(label = title, action = null) }`，但该写法**会覆盖原有点击行为**，已在编译前回退。
+- 正确做法是给 `Surface` 传 `onClickLabel` 参数（Compose 的 `Surface(onClick=...)` 重载不支持），
+  或改用 `Modifier.clickable(onClickLabel = ...)`。建议后续统一处理。
+
+### 3.3 底部导航选中态视觉权重
+
+- 选中项有 `primaryContainer` 圆角背景块，视觉上是全站最重的强调块之一。
+- 与内容区大量「软绿卡片」叠加时，层级略显抢眼。
+- 属于**主观审美**，未改动。若希望更克制，可把 indicator 改为更浅的色阶或仅保留图标着色。
+
+## 4. 已确认合规的项
+
+| 检查 | 结果 |
+|---|---|
+| 硬编码颜色 | **0 处**（业务代码全部使用 `MaterialTheme.colorScheme`） |
+| 裸 `Button(` | **0 处**（全部 `JournalButton`/`JournalDangerButton`） |
+| 裸 `Switch(` / `FilterChip(` | **0 处**（全部 `JournalSwitch`/`JournalTag`） |
+| `TopAppBar(` / `FloatingActionButton(` | **0 处**（统一用 `JournalPageHeader`） |
+| 触摸目标 | `JournalTag` 48dp 高/64dp 宽、`RecordRow` 72dp 行高、底栏 M3 标准 80dp，**无 <48dp 可点元素** |
+| 深色模式 | 完整 `darkColorScheme`，含 M3 1.2+ 全部 `surfaceContainer*` 角色，无默认淡紫灰残留 |
+| 字体缩放 | 全部使用 `MaterialTheme.typography`，无硬编码 `fontSize`（除 Theme 定义） |
+| 页面转场 | 根页 `fadeIn(160)`/`fadeOut(120)`，下级页 `slideIn(320, FastOutSlowInEasing)`，back 与 predictive-back 方向相反，时长统一 |
+
+## 5. 回归验证
+
+| 检查 | 结果 |
+|---|---|
+| JVM 单元测试 | **365 项 / 0 失败** |
+| 仪器全量矩阵（修复后） | **`OK (382 tests)` / 0 失败 / 0 跳过** |
+| 视觉复核 | `screens/02-create-form-before.png` vs `after.png` 确认圆角生效 |
+
+`animateContentSize` 未破坏任何既有断言（矩阵全绿），说明 180ms 的过渡在测试的 `settle()` 窗口内可完成。
+
+## 6. 建议后续动作
+
+1. **补齐语义化图标**（优先，影响可用性）：建立语义图标映射，从设计侧补 10–15 个 SVG。
+2. 统一无障碍动作标签：`RecordRow`/`JournalTag`/列表行补 `onClickLabel`。
+3. 为空态、加载态加淡入过渡（`AnimatedVisibility`），目前是瞬间出现。
+4. 评估底部导航 indicator 的视觉权重。
