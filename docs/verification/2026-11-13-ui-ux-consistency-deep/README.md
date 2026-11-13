@@ -449,8 +449,23 @@ adb: failed to install app-debug-androidTest.apk:
 覆盖首页、导出、提醒设置、自定义提醒全屏 Dialog、本地加密备份（含安全副本）、云盘连接 6 个页面。
 JVM 单测 365 项全通过、lint 0 错误。
 
-**未获证据**：UI 自动化断言（`testTag` 点击路径）本轮未在设备上执行。新增组件的 `testTag` 已保留原值，
-理论上不影响既有用例，但**未经仪器测试证实**。下次设备允许安装测试包时应补跑全量矩阵。
+**未获证据**：UI 自动化断言（`testTag` 点击路径）本轮未在设备上执行。
+新增组件的 `testTag` 已保留原值（逐项核对过），理论上不影响既有用例，但**未经仪器测试证实**。
+
+**已尝试的三条路径（2026-11-14）**：
+
+| 尝试 | 结果 |
+|---|---|
+| `adb install -r -t app-debug-androidTest.apk` | `INSTALL_FAILED_USER_RESTRICTED` |
+| `adb install -r -t -d ...` + `settings put global verifier_verify_adb_installs 0` | 同上 |
+| `adb push` 到 `/data/local/tmp` 后 `pm install -t -r` | 同上 |
+| `settings put global adb_install_need_confirm 0` + `install_non_market_apps 1` | 同上 |
+| `adb root` | `adbd cannot run as root in production builds` |
+
+**根因**：MIUI 的「USB 安装」授权开关未开启，开启需登录小米账号，属设备侧人工操作，脚本无法代劳。
+**需要的人工操作**：设置 → 更多设置 → 开发者选项 → **USB 安装**，打开后重跑：
+`adb install -r -t app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk`
+再执行 `am instrument -w -e notAnnotation androidx.test.filters.LargeTest cn.yunji.journal.test/androidx.test.runner.AndroidJUnitRunner`。
 
 ### 10.2 其他未覆盖
 
