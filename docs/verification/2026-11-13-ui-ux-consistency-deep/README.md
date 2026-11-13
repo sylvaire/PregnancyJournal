@@ -39,8 +39,8 @@
 | P0-1 | `titleMedium`/`titleSmall` 未在 Theme 中定义，落到 M3 默认 | **高** | 34 + 1 处，14 个文件 | ✅ 已修 |
 | P0-3 | 暖色卡片 `Apricot`/`Amber` 硬编码，深色模式刺眼 | **高** | 1 处（4 行代码） | ✅ 已修 |
 | P0-4 | 底部导航等旧图标描边 1.7、颜色非 `#356B53` | **高（每次可见）** | 10 + 4 个文件 | ✅ 已修 |
-| P0-2 | 卡片列表 vs 裸 `Column` 两种页面范式并存 | **高** | 6 个页面无卡片容器 | ◐ ExportScreen + CloudConnectionScreen 已收敛 |
-| P1-1 | `OutlinedTextField` 48 处无组件包装（设计稿有 `孕迹/Field`） | 中 | 15 个文件 | ◐ 已替换 8 处，云盘页清零 |
+| P0-2 | 卡片列表 vs 裸 `Column` 两种页面范式并存 | **高** | 6 个页面无卡片容器 | ✅ 5/6 已收敛（仅 `DocumentPreview` 为全屏 Dialog，已统一顶栏） |
+| P1-1 | `OutlinedTextField` 48 处无组件包装（设计稿有 `孕迹/Field`） | 中 | 15 个文件 | ◐ 已替换 11 处（48→37），4 个目标页清零 |
 | P1-2 | `TextButton` 167 处无统一规格（4 种语义混用） | 中 | 16 个文件 | ⬜ 待排期 |
 | P1-3 | 两处全屏 Dialog 自建顶栏，且两者彼此不一致 | 中 | 2 处 | ✅ 已修 |
 | P2-1 | 按钮高度 40/52/56/72 四种 | 低 | 10 处 | ✅ 已修（单行动作 6 处；字段选择器保留 56dp） |
@@ -309,6 +309,20 @@ Ardot `7:2461`「孕迹 · 基础组件」定义 3 个组件：
 加载态改 `JournalLoading`，3 处裸错误文本改 `JournalError`，3 处 `titleMedium` 改 `JournalSectionTitle`。
 `CloudConnectionScreen` 的裸 `OutlinedTextField` **4 → 0**（全局 48 → 40）。
 
+**第三轮（r4）：Recovery / Restore / Security 三页卡片化**
+
+沿用「卡内放文本/按钮/标签，卡外放 `RecordRow`」的约定（`RecordRow` 本身即 20dp 白卡，嵌进 `JournalCard` 会变双层卡片）：
+
+| 页面 | 改动 |
+|---|---|
+| `RecoveryScreen` | INTRO/SHOW/VERIFY/READY 四个阶段各包一层 `JournalCard`；密钥核对的两处 `OutlinedTextField` 改 `JournalField`（保留 `recovery-answer-*` testTag）；`LOADING` 阶段改 `JournalLoading` |
+| `RestoreScreen` | 7 个阶段全部卡片化（SELECT/KEY/CLOUD/CLOUD_LIST/VERIFYING/CONFIRM/RESTORING/DONE/ERROR）；2 处密钥输入改 `JournalField`；`JournalTextAction` 替换 6 处 `TextButton`；`JournalLoading` 替换 2 处裸 spinner |
+| `SecurityScreen` | 三组卡片：应用锁状态（soft）/ 锁定设置（按钮+标签组）/ 说明文字；`RecordRow` 保持在卡外，避免双层卡片 |
+
+**未截图的页面**：`SecurityScreen` 与 `RestoreScreen` 自身触发 `FLAG_SECURE`（`secureFlagRequired` 只覆盖 MainActivity 窗口标志），
+`-PvisualVerification=true` 不足以截图。这两页改用代码级核对：`testTag` 全部保留、`OutlinedTextField` 降为 0。
+截图说明见 `screens/README-r4.md`。
+
 **SafetyCopiesScreen 全面重写**：原为 M3 默认 `Card`(12dp) + `OutlinedButton`(40dp) + 裸 `TextButton` + 裸 `HorizontalDivider`，
 现为 `JournalDivider` + `JournalSectionTitle` + `JournalCard`(20dp) + `JournalTextAction`。
 
@@ -325,7 +339,7 @@ Ardot `7:2461`「孕迹 · 基础组件」定义 3 个组件：
 
 | # | 项 | 原因 |
 |---|---|---|
-| P0-2 | 两种页面布局范式（卡片列表 vs 裸 `Column`） | 6 个页面中已收敛 2 个（`ExportScreen` 字段卡片化、`CloudConnectionScreen` 整页卡片化）；剩 `RecoveryScreen`/`RestoreScreen`/`SecurityScreen`/`DocumentPreview` 4 个待处理 |
+| P0-2 | 两种页面布局范式 | ✅ 6 个页面中 5 个已卡片化（Export/Cloud/Recovery/Restore/Security）；`DocumentPreview` 为全屏 Dialog，已统一顶栏，不适用卡片范式 |
 | P1-2 余量 | 部分 `TextButton` 未替换（`TrashScreen`/`DocumentScreen` 行内危险态） | 已在 `JournalTextAction` 就位后具备替换条件，但 167 处需分批 |
 | — | `RecordRow` 的 `ModifierParameter` lint 警告 | 原有代码，改动会波及全部调用点 |
 

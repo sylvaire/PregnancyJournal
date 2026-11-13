@@ -27,6 +27,7 @@ import cn.yunji.journal.core.designsystem.JournalError
 import cn.yunji.journal.core.designsystem.JournalLoading
 import cn.yunji.journal.core.designsystem.JournalSectionTitle
 import cn.yunji.journal.core.designsystem.JournalCard
+import cn.yunji.journal.core.designsystem.JournalField
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -57,28 +58,41 @@ import java.io.File
                     Text("尚未确认恢复密钥", color = MaterialTheme.colorScheme.primary)
                     Text("先妥善保存恢复密钥，再导出可迁移的加密备份。", style = MaterialTheme.typography.bodySmall)
                 }
-                Text("恢复密钥用于在新设备上解密备份。请抄录到安全的地方，与备份分开保管。")
-                Text("如果设备丢失且恢复密钥遗失，将无法解密备份。离开页面或锁定后，未确认的密钥会作废。")
-                JournalButton("生成恢复密钥",Modifier.testTag("recovery-generate"),onClick=generate)
+                JournalCard {
+                    Text("恢复密钥用于在新设备上解密备份。请抄录到安全的地方，与备份分开保管。")
+                    Text("如果设备丢失且恢复密钥遗失，将无法解密备份。离开页面或锁定后，未确认的密钥会作废。",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    JournalButton("生成恢复密钥",Modifier.testTag("recovery-generate"),onClick=generate)
+                }
             }
             "SHOW"->{
-                Text("请完整抄录下面的密钥，包括开头的 YJ1:，并保留大小写。下一步将隐藏密钥并核对其中两组。")
-                Text("YJ1:",fontFamily=FontFamily.Monospace)
-                state.key.removePrefix("YJ1:").chunked(6).forEachIndexed {index,value->
-                    Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.SpaceBetween) {
-                        Text("第${index+1}组",style=MaterialTheme.typography.labelLarge)
-                        Text(value,fontFamily=FontFamily.Monospace,style=MaterialTheme.typography.titleLarge)
+                JournalCard {
+                    Text("请完整抄录下面的密钥，包括开头的 YJ1:，并保留大小写。下一步将隐藏密钥并核对其中两组。")
+                    Text("YJ1:",fontFamily=FontFamily.Monospace)
+                    state.key.removePrefix("YJ1:").chunked(6).forEachIndexed {index,value->
+                        Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.SpaceBetween) {
+                            Text("第${index+1}组",style=MaterialTheme.typography.labelLarge)
+                            Text(value,fontFamily=FontFamily.Monospace,style=MaterialTheme.typography.titleLarge)
+                        }
                     }
+                    Text("密钥不会随备份明文保存，请先确认已完整抄录。",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    JournalButton("已保存，开始核对",Modifier.testTag("recovery-verify"),onClick=verify)
                 }
-                Text("密钥不会随备份明文保存，请先确认已完整抄录。")
-                JournalButton("已保存，开始核对",Modifier.testTag("recovery-verify"),onClick=verify)
             }
             "VERIFY"->{
-                Text("请根据已保存的密钥填写下面两组，每组六个字符，区分大小写。")
-                state.groups.forEachIndexed {index,group->OutlinedTextField(if(index==0)state.first else state.second,{answer(index,it)},
-                    label={Text("第${group}组")},singleLine=true,enabled=!state.busy,keyboardOptions=KeyboardOptions(keyboardType=KeyboardType.Password,autoCorrectEnabled=false),
-                    modifier=Modifier.fillMaxWidth().testTag("recovery-answer-$index"))}
-                JournalButton(if(state.busy)"正在保存…" else "确认并保存",Modifier.testTag("recovery-confirm"),enabled=!state.busy && state.first.length==6 && state.second.length==6,onClick=confirm)
+                JournalCard {
+                    Text("请根据已保存的密钥填写下面两组，每组六个字符，区分大小写。")
+                    state.groups.forEachIndexed {index,group->
+                        JournalField(if(index==0)state.first else state.second,{answer(index,it)}, "第${group}组",
+                            enabled=!state.busy,
+                            keyboardOptions=KeyboardOptions(keyboardType=KeyboardType.Password,autoCorrectEnabled=false),
+                            modifier=Modifier.testTag("recovery-answer-$index"))
+                    }
+                    JournalButton(if(state.busy)"正在保存…" else "确认并保存",Modifier.testTag("recovery-confirm"),enabled=!state.busy && state.first.length==6 && state.second.length==6,onClick=confirm)
+                }
             }
             "READY"->{
                 JournalCard(soft = true) {
@@ -86,8 +100,12 @@ import java.io.File
                     Text("恢复密钥已确认", color = MaterialTheme.colorScheme.primary)
                     Text("完整密钥不会再次显示，请独立保管。", style = MaterialTheme.typography.bodySmall)
                 }
-                Text("备份包含已保存记录、原件和回收站内容，不包含未提交草稿。导出前会校验数据，恢复密钥需单独保管。")
-                export?.let {JournalButton("导出加密备份",Modifier.testTag("backup-export"),onClick=it)}
+                JournalCard {
+                    Text("备份包含已保存记录、原件和回收站内容，不包含未提交草稿。导出前会校验数据，恢复密钥需单独保管。",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    export?.let {JournalButton("导出加密备份",Modifier.testTag("backup-export"),onClick=it)}
+                }
             }
             "ERROR"->JournalButton("重试",onClick=retry)
         }
