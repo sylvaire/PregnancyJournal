@@ -1,5 +1,13 @@
 package cn.yunji.journal.core.designsystem
 
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.spring
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.collectIsPressedAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.ui.composed
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.selection.toggleable
@@ -188,4 +196,22 @@ import androidx.compose.ui.unit.dp
         }
         actions()
     }
+}
+
+/**
+ * 可点卡片的统一按压反馈。
+ *
+ * 全站可点行（RecordRow、TimelineRecordRow、HomeQuickAction、杏色备注卡）此前只有 Material 默认水波纹，
+ * 没有任何缩放/提亮反馈，在深色背景或软绿卡片上水波纹几乎看不见，点下去像没反应。
+ * 这里把「按下缩到 0.97 + 抬起回弹」封装成修饰符，配合 Modifier.clickable 一起使用。
+ *
+ * 用 spring 而非 tween：弹簧在快速连点时不会排队，手感更接近系统。
+ */
+fun Modifier.journalPressable(interactionSource: MutableInteractionSource): Modifier = composed {
+    val pressed by interactionSource.collectIsPressedAsState()
+    val scale by animateFloatAsState(
+        targetValue = if (pressed) 0.97f else 1f,
+        animationSpec = spring(dampingRatio = Spring.DampingRatioMediumBouncy, stiffness = Spring.StiffnessMediumLow),
+        label = "pressScale")
+    this.graphicsLayer { scaleX = scale; scaleY = scale }
 }

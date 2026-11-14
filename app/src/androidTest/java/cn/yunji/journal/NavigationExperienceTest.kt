@@ -668,10 +668,10 @@ class NavigationExperienceTest {
         ui.onNodeWithText("清除搜索与筛选").performScrollTo().performClick(); settle()
         // The document card is a lazy item below the search block; scroll the list until it is composed
         // instead of assuming it is already inside the composition window.
-        ui.onNodeWithTag("document-list").performScrollToNode(hasText("查看PDF"))
-        ui.waitUntil(10_000) { ui.onAllNodesWithText("查看PDF").fetchSemanticsNodes().isNotEmpty() }
-        ui.onNodeWithText("查看PDF").performScrollTo()
-        ui.onNodeWithText("查看PDF").performClick(); settle()
+        ui.onNodeWithTag("document-list").performScrollToNode(hasText("查看 PDF"))
+        ui.waitUntil(10_000) { ui.onAllNodesWithText("查看 PDF").fetchSemanticsNodes().isNotEmpty() }
+        ui.onNodeWithText("查看 PDF").performScrollTo()
+        ui.onNodeWithText("查看 PDF").performClick(); settle()
         ui.waitUntil(10_000) { ui.onAllNodesWithTag("document-pdf").fetchSemanticsNodes().isNotEmpty() }
         ui.onNodeWithText("1 / 3").assertExists()
         val firstPage = File(context.getExternalFilesDir(null), "verification/b05-pdf-first-page.png").apply { parentFile!!.mkdirs() }
@@ -780,7 +780,7 @@ class NavigationExperienceTest {
         ui.onNodeWithTag("document-list").performScrollToNode(hasTestTag("document-add"))
         ui.onNodeWithTag("document-add").performClick(); settle()
         ui.onNodeWithText("选图片").assertIsDisplayed()
-        ui.onNodeWithText("选PDF").assertIsDisplayed()
+        ui.onNodeWithText("选 PDF").assertIsDisplayed()
         ui.onNodeWithText("拍照").assertIsDisplayed()
         ui.onNodeWithText("取消").performClick(); settle()
         val screenshot = File(ui.activity.getExternalFilesDir(null), "verification/b04-empty.png")

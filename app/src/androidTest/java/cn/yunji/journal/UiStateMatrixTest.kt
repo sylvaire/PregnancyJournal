@@ -77,7 +77,7 @@ class UiStateMatrixTest : PageMatrixBaseTest() {
         ui.onNodeWithTag("document-list").performScrollToNode(hasTestTag("document-add"))
         ui.onNodeWithTag("document-add").performClick()
         ui.onNodeWithText("选图片").assertIsDisplayed()
-        ui.onNodeWithText("选PDF").assertExists()
+        ui.onNodeWithText("选 PDF").assertExists()
         ui.onNodeWithText("拍照").assertExists()
     }
 

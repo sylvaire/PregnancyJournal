@@ -94,6 +94,9 @@ class CustomReminderUiTest : PageMatrixBaseTest() {
         ui.onNodeWithTag("custom-reminder-add").performScrollTo().performClick()
         ui.onNodeWithTag("custom-reminder-title").performTextInput("合成自定义提醒")
         ui.onNodeWithTag("custom-reminder-repeat-DAILY").performScrollTo().performClick()
+        // 标签选中态有 160 ms 颜色过渡；全量负载下点击可能落在过渡/滚动动画期间。
+        // 先等选中态进入语义树再保存（只同步，不放宽断言）。
+        ui.onNodeWithTag("custom-reminder-repeat-DAILY").assertIsSelected()
         ui.onNodeWithTag("custom-reminder-save").performClick()
         ui.waitUntil(10_000) { runBlocking { db.journalDao().allCustomReminders().size == 1 } }
         val id = runBlocking { db.journalDao().allCustomReminders().single().id }

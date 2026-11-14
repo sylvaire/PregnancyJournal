@@ -133,7 +133,7 @@ class CloudConnectionController(private val scope: CoroutineScope,private val re
     }
     internal fun message(error: Exception)=when(error) {
         is DavException->if(error.status==429 && error.retryAfterSeconds!=null)"请求过于频繁，请${error.retryAfterSeconds}秒后再试。" else error.message ?: "云盘请求未完成"
-        is SSLException->"无法验证服务证书，请核对HTTPS地址或联系云盘服务商。"
+        is SSLException->"无法验证服务证书，请核对 HTTPS 地址或联系云盘服务商。"
         is IOException->"网络或回读校验未完成，原连接保留。请稍后重新测试。"
         // Kotlin 的 require() 无消息时 message 为英文 "Failed requirement."，
         // 直接展示会让用户看到不可读的内部提示。

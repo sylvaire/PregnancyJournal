@@ -4,6 +4,8 @@ package cn.yunji.journal.feature
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.background
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import cn.yunji.journal.core.designsystem.journalPressable
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.rememberScrollState
@@ -133,7 +135,10 @@ internal fun WelcomeScreen(onCreate: () -> Unit) {
 
 @Composable private fun HomeQuickAction(label:String,icon:String,modifier:Modifier=Modifier,onClick:()->Unit) {
     // 原来只有 padding(12.dp) 撑高度、无最小尺寸、无 onClickLabel；补齐 88dp 触摸目标与读屏动作描述。
-    Surface(modifier=modifier.heightIn(min=88.dp).clickable(onClickLabel=label,role=Role.Button,onClick=onClick),
+    val interaction = remember { MutableInteractionSource() }
+    Surface(modifier=modifier.heightIn(min=88.dp)
+            .journalPressable(interaction)
+            .clickable(interactionSource=interaction, indication=null, onClickLabel=label, role=Role.Button, onClick=onClick),
         shape=RoundedCornerShape(20.dp),color=MaterialTheme.colorScheme.surface) {
         Column(Modifier.fillMaxWidth().padding(12.dp),verticalArrangement=Arrangement.spacedBy(8.dp)) {
             DesignIcon(icon)

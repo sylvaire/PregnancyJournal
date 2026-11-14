@@ -112,6 +112,11 @@ internal fun CloudConnectionContent(state: CloudUiState,update: (String,String)-
                 supportingText = "例如 家庭/孕期资料。坚果云等服务商禁止在根目录写入与删除文件，请填写一个已存在的子目录；留空仅适用于允许根目录读写的服务。",
                 modifier = Modifier.testTag("cloud-folder"))
             if (browse != null) JournalTextAction("浏览云盘目录", enabled = enabled, onClick = browse)
+        }
+        // 原来「4 个字段 + 说明 + 加载 + 两个按钮 + 结果」共 12 个元素挤在同一张卡里，
+        // 视觉上层级混乱、错误信息也容易被误读成字段校验。这里按「填写」与「执行」分开。
+        JournalCard {
+            JournalSectionTitle("连接测试")
             Text("测试会创建、回读并清理随机测试项目，不备份或覆盖已有资料。未能清理时会保留标记供下次重试。",
                 style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
             if (state.loading || state.testing) {

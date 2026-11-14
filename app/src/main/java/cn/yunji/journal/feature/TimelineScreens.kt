@@ -3,6 +3,8 @@ package cn.yunji.journal.feature
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import cn.yunji.journal.core.designsystem.journalPressable
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -164,7 +166,10 @@ private fun TimelineEntry(event: TimelineEvent,journalEntry: JournalEntryEntity?
 internal fun TimelineRecordRow(title: String,subtitle: String,icon: String,onClick: ()->Unit,modifier: Modifier=Modifier) {
     // 与 RecordRow 同款：Surface 不带 onClick，改由 clickable 提供动作 + onClickLabel，
     // 否则 TalkBack 只念标题、不说明会到哪里。（semantics{onClick(action=null)} 会覆盖原点击，勿用。）
-    Surface(modifier=modifier.fillMaxWidth().clickable(onClickLabel=title,role=Role.Button,onClick=onClick),
+    val interaction = remember { MutableInteractionSource() }
+    Surface(modifier=modifier.fillMaxWidth()
+            .journalPressable(interaction)
+            .clickable(interactionSource=interaction, indication=null, onClickLabel=title, role=Role.Button, onClick=onClick),
         shape=RoundedCornerShape(20.dp),color=MaterialTheme.colorScheme.surface) {
         Row(Modifier.fillMaxWidth().heightIn(min=72.dp).padding(horizontal=16.dp,vertical=12.dp),
             horizontalArrangement=Arrangement.spacedBy(12.dp),verticalAlignment=Alignment.CenterVertically) {
@@ -195,8 +200,10 @@ private fun JournalNoteCard(event: TimelineEvent,entry: JournalEntryEntity?,open
         else -> ""
     }
     val note = LocalNoteCardColors.current
+    val interaction = remember { MutableInteractionSource() }
     Surface(modifier=Modifier.fillMaxWidth().testTag("source-${event.key}")
-            .clickable(onClickLabel="打开日常备注",role=Role.Button,onClick=open),
+            .journalPressable(interaction)
+            .clickable(interactionSource=interaction, indication=null, onClickLabel="打开日常备注", role=Role.Button, onClick=open),
         shape=RoundedCornerShape(16.dp),color=note.container) {
         Column(Modifier.padding(16.dp),verticalArrangement=Arrangement.spacedBy(8.dp)) {
             Text(title,style=MaterialTheme.typography.titleMedium,color=note.content,maxLines=3,overflow=TextOverflow.Ellipsis)

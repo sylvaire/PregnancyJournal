@@ -137,7 +137,7 @@ internal fun DocumentPreviewDialog(attachment: AttachmentEntity, model: JournalV
         Surface(Modifier.fillMaxSize().testTag("document-preview"), color = MaterialTheme.colorScheme.background) {
             Column(Modifier.fillMaxSize().safeDrawingPadding()) {
                 JournalFullScreenHeader(
-                    title = if (attachment.mime == "application/pdf") "PDF预览" else "图片预览",
+                    title = if (attachment.mime == "application/pdf") "PDF 预览" else "图片预览",
                     subtitle = attachment.name,
                     onBack = close,
                 ) {

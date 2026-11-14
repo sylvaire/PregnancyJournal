@@ -102,7 +102,7 @@ internal fun PdfDocumentView(id: String, model: JournalViewModel, modifier: Modi
             session = opened
             awaitCancellation()
         } catch (e: CancellationException) { throw e }
-        catch (_: Exception) { error = "无法预览此PDF，可能已损坏或设置了密码。加密保存的原件仍然保留。" }
+        catch (_: Exception) { error = "无法预览此 PDF，可能已损坏或设置了密码。加密保存的原件仍然保留。" }
         finally {
             session = null
             withContext(NonCancellable + Dispatchers.IO) { if (opened != null) opened?.close() else source?.close() }
@@ -139,7 +139,7 @@ internal fun PdfDocumentView(id: String, model: JournalViewModel, modifier: Modi
                     val width = with(density) { (bitmap.width * fit * zoom).toDp() }
                     val height = with(density) { (bitmap.height * fit * zoom).toDp() }
                     Box(Modifier.fillMaxSize().horizontalScroll(xScroll).verticalScroll(yScroll), contentAlignment = Alignment.Center) {
-                        Image(bitmap.asImageBitmap(), "PDF第${page + 1}页", Modifier.requiredSize(width, height).testTag("document-pdf")
+                        Image(bitmap.asImageBitmap(), "PDF 第 ${page + 1} 页", Modifier.requiredSize(width, height).testTag("document-pdf")
                             .pointerInput(id, page, zoom) { detectTapGestures(onDoubleTap = { zoom = if (zoom == 1) 3 else 1 }) })
                     }
                 }

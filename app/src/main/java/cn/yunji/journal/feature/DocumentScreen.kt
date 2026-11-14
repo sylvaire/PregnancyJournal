@@ -139,7 +139,7 @@ internal fun DocumentScreen(visitId: String, model: JournalViewModel,medication:
             JournalTag(selected = showTrash, onClick = { showTrash = true }, label = { Text("回收站（${trash.size}）") })
         } } }
         if (!showTrash) {
-            item { Inset { Text(if(medication)"包装照片仅支持图片 · 单份最多100 MiB · 一次最多20项" else "图片或PDF · 单份最多100 MiB · 一次最多20项", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant) } }
+            item { Inset { Text(if(medication)"包装照片仅支持图片 · 单份最多100 MiB · 一次最多20项" else "图片或 PDF · 单份最多 100 MiB · 一次最多 20 项", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant) } }
             if (pickerError != null) item { Inset { JournalError(pickerError!!) } }
             if (shareError != null) item { Inset { JournalError(shareError!!) } }
             item { Inset { Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -161,7 +161,7 @@ internal fun DocumentScreen(visitId: String, model: JournalViewModel,medication:
             items(visibleJobs, key = { it.id }, contentType = { "document" }) { job ->
                 val attachment = attachments.firstOrNull { it.id == job.id && it.deletedAt == null }
                 val canOpen = attachment != null && (attachment.mime.startsWith("image/") || attachment.mime == "application/pdf")
-                val openLabel = if (attachment?.mime == "application/pdf") "查看PDF" else "查看大图"
+                val openLabel = if (attachment?.mime == "application/pdf") "查看 PDF" else "查看大图"
                 Inset { Column(Modifier.testTag("document-${job.id}").clickable(enabled = canOpen, onClickLabel = openLabel) { openDocument(job.id) }) { JournalCard {
                     val status = when {
                         job.state == "READY" && job.phase == "THUMBNAIL" -> "已加密保存 · 正在生成缩略图…"
@@ -298,7 +298,7 @@ internal fun DocumentScreen(visitId: String, model: JournalViewModel,medication:
         title = { Text(if (medication) "添加包装照片" else "添加检查资料") },
         text = { Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
             TextButton({ showImportOptions = false; if(fileLaunch!=null)fileLaunch(FileRequest("IMAGES",visitId,medication),null) else runCatching { images.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly)) }.onFailure { pickerError = "无法打开图片选择器" } }, Modifier.fillMaxWidth()) { Text("选图片") }
-            if (!medication) TextButton({ showImportOptions = false; if(fileLaunch!=null)fileLaunch(FileRequest("PDF",visitId),null) else runCatching { pdfs.launch(arrayOf("application/pdf")) }.onFailure { pickerError = "无法打开文件选择器" } }, Modifier.fillMaxWidth()) { Text("选PDF") }
+            if (!medication) TextButton({ showImportOptions = false; if(fileLaunch!=null)fileLaunch(FileRequest("PDF",visitId),null) else runCatching { pdfs.launch(arrayOf("application/pdf")) }.onFailure { pickerError = "无法打开文件选择器" } }, Modifier.fillMaxWidth()) { Text("选 PDF") }
             TextButton({
                 showImportOptions = false
                 if(fileLaunch!=null)fileLaunch(FileRequest("CAMERA",visitId,medication),null) else {

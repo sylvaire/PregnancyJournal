@@ -2,12 +2,16 @@ package cn.yunji.journal.core.designsystem
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.tween
 import androidx.compose.ui.Alignment
@@ -88,19 +92,32 @@ import coil.decode.SvgDecoder
  * Filter/tag pill from the Figma foundations: 48 dp high, min 64 dp wide, 12 dp radius.
  * Selected = primary fill + onPrimary label; unselected = surface + 1 dp outline border + muted label.
  * Uses selectable semantics (role Tab) so tests can assert selection and TalkBack reports the state.
+ *
+ * 选中态用 160 ms 颜色过渡而非瞬切：标签常用于筛选（时间线、回收站、分类），
+ * 瞬切会让「点了没反应 / 一下子变黑」的错觉，160 ms 与页面转场的 160 ms fade 同拍。
  */
 @Composable fun JournalTag(selected: Boolean, onClick: () -> Unit, label: @Composable () -> Unit,
     modifier: Modifier = Modifier, enabled: Boolean = true) {
     val contentAlpha = if (enabled) 1f else 0.38f
+    val fill by animateColorAsState(
+        targetValue = if (selected) MaterialTheme.colorScheme.primary.copy(alpha = if (enabled) 1f else 0.12f)
+        else MaterialTheme.colorScheme.surface,
+        animationSpec = tween(durationMillis = 160), label = "tagFill")
+    val content by animateColorAsState(
+        targetValue = if (selected) MaterialTheme.colorScheme.onPrimary.copy(alpha = contentAlpha)
+        else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = contentAlpha),
+        animationSpec = tween(durationMillis = 160), label = "tagContent")
+    // 描边宽度也做过渡：选中时描边淡出，避免边框突然消失造成的尺寸抖动感。
+    val borderWidth by animateDpAsState(
+        targetValue = if (selected) 0.dp else 1.dp,
+        animationSpec = tween(durationMillis = 160), label = "tagBorder")
     Surface(
         modifier = modifier.heightIn(min = 48.dp).defaultMinSize(minWidth = 64.dp)
             .selectable(selected = selected, enabled = enabled, role = Role.Tab, onClick = onClick),
         shape = RoundedCornerShape(12.dp),
-        color = if (selected) MaterialTheme.colorScheme.primary.copy(alpha = if (enabled) 1f else 0.12f)
-            else MaterialTheme.colorScheme.surface,
-        contentColor = if (selected) MaterialTheme.colorScheme.onPrimary.copy(alpha = contentAlpha)
-            else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = contentAlpha),
-        border = if (selected) null else BorderStroke(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = contentAlpha)),
+        color = fill,
+        contentColor = content,
+        border = if (borderWidth > 0.dp) BorderStroke(borderWidth, MaterialTheme.colorScheme.outline.copy(alpha = contentAlpha)) else null,
     ) {
         Box(Modifier.padding(horizontal = 16.dp, vertical = 12.dp), contentAlignment = Alignment.Center) {
             ProvideTextStyle(MaterialTheme.typography.labelLarge) { label() }
@@ -138,8 +155,13 @@ import coil.decode.SvgDecoder
     if (onClick != null) {
         // Surface(onClick=...) 没有 onClickLabel 参数；改用 clickable 才能给读屏一个动作描述，
         // 否则 TalkBack 只念出标题、不说明点击后会进入何处。
+        // 同时加统一按压反馈（缩到 0.97 回弹）：水波纹在白卡/软绿卡上几乎不可见，点下去像没反应。
+        val interaction = remember { MutableInteractionSource() }
         Surface(
-            modifier = modifier.clickable(onClickLabel = title, role = Role.Button, onClick = onClick),
+            modifier = modifier
+                .journalPressable(interaction)
+                .clickable(interactionSource = interaction, indication = null,
+                    onClickLabel = title, role = Role.Button, onClick = onClick),
             shape = RoundedCornerShape(20.dp), color = MaterialTheme.colorScheme.surface, content = content,
         )
     } else {

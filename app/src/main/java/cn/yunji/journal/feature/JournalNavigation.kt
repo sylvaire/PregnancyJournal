@@ -194,7 +194,7 @@ fun JournalApp(model: JournalViewModel,externalStack: NavBackStack<NavKey>?=null
                                 Inset { RecordRow("全局回收站", "恢复删除项目 · 查看保留的资料", "ic-trash.svg") { push(TrashRoute) } }
                                 Inset { RecordRow("提醒设置", "通知权限、精确提醒与未来7天重建", "ic-bell.svg") { push(ReminderSettingsRoute) } }
                                 if(onSecurity!=null)Inset {RecordRow("安全设置","应用锁、严格模式与立即锁定","ic-shield.svg",onSecurity)}
-                                  Inset {RecordRow("云盘连接","配置WebDAV与检查备份目录","ic-cloud.svg") {push(CloudConnectionRoute)}}
+                                  Inset {RecordRow("云盘连接","配置 WebDAV 与检查备份目录","ic-cloud.svg") {push(CloudConnectionRoute)}}
                                   Inset {RecordRow("本地备份","导出加密备份与保存恢复密钥","ic-backup.svg") {push(RecoveryRoute)}}
                                   Inset {RecordRow("导出资料","结构化数据包与就诊摘要 PDF","ic-file-text.svg") {push(ExportRoute)}}
                                 Inset { RecordRow("用药方案", "药品、方案与历史版本", "ic-pill.svg") { push(MedicationsRoute) } }
