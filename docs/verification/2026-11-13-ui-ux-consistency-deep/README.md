@@ -498,7 +498,63 @@ expected:<android.intent.action.CHOOSER> but was:<miui.intent.action.MIUI_CHOOSE
 MIUI 改写系统 chooser 的 action。依据：①`git diff 536556e~1..HEAD` 未触及 `FileHandoff`/分享文件；
 ②产品代码不含 `ACTION_CHOOSER` 字面量（由系统 chooser 注入）。**未修改断言**，避免掩盖跨 ROM 差异。
 
-### 10.6 其他未覆盖
+### 10.6 深色模式真机视觉验证（2026-11-14 补做）
+
+**设备**：小米 11 Ultra（M2102K1C / Android 13 / 4 KiB 页 / 1440×3200 / 560 dpi），
+`visualVerification` 构建（`BuildConfig.VISUAL_VERIFICATION = true`），`cmd uimode night yes`。
+
+#### ① `JournalTag` 选中过渡：像素级证实非瞬切
+
+连拍 4 帧（`adb shell "screencap; input tap; screencap ×3"`），采样「全部」与「日常」两个标签的填充色：
+
+| 帧 | 「全部」（由选中转未选中） | 「日常」（由未选中转选中） |
+|---|---|---|
+| `q0` | `#A5D0B3` 选中 | `#1D2921` 未选中 |
+| **`q1`** | **`#9FC9AD` 过渡中** | **`#222F26` 过渡中** |
+| `q2` | `#1D2921` 未选中 | `#A9CFB4` 接近终值 |
+| `q3` | `#1D2921` | `#A5D0B3` 选中 |
+
+两标签**同时**出现中间值帧，且单调逼近终值 —— 160 ms 颜色过渡真实生效，不是瞬切。
+证据：`screens/darkdev-06-tag-transition-q0..q3.png`
+
+#### ② 云盘连接页拆分后的两张卡片
+
+原「连接设置」单卡含 12 个元素（4 字段 + 说明 + 加载 + 2 按钮 + 结果），现拆为两卡：
+
+| 卡片 | 内容 | 证据 |
+|---|---|---|
+| 连接设置 | 4 个 `JournalField`（服务地址/账号/应用密码/备份父目录）+ 浏览目录 | `darkdev-02-cloud-settings-card.png` |
+| 连接测试 | 说明 + 测试连接 / 保存连接 + 结果信息 | `darkdev-03-cloud-test-card.png` |
+
+深色下两张卡背景（`#1D2921`）与页面背景（`#141D17`）层级分明；
+`JournalError`（「上次未能完成：synthetic slow network」）渲染为深红圆角块，未与字段校验混淆。
+
+#### ③ `JournalKeyValue` 键值行
+
+资料详情页实测三行：
+
+| 标签（`onSurfaceVariant`） | 值（`onSurface`，右对齐） |
+|---|---|
+| 分类 | 其他 |
+| 报告日期 | 未填写 |
+| 导入时间 | 11月12日 22:39 |
+
+标签左对齐、值右对齐、基线整齐；值较长（`11月12日 22:39`）未把标签挤成两行。
+证据：`darkdev-04-journal-keyvalue.png`
+
+#### ④ 附带证实：杏色备注卡深色适配
+
+时间线出现两张杏色卡（「日常备注/平常」「Nausea」），深色下渲染为**深棕**（`#3A2E1F`）而非刺眼浅杏，
+与 §9 的 `LocalNoteCardColors` 修复一致。证据：`darkdev-05-notecard-tags.png`
+
+#### ⑤ 过程中排除的两个误报
+
+| 疑似问题 | 核查结论 |
+|---|---|
+| 档案名显示「我的孕期DarkModeCheck」无空格 | **测试操作问题**：`FormField` 预填默认值「我的孕期」，`adb shell input text` 为追加而非替换。非产品缺陷 |
+| Snackbar 深色下为浅底 | **正确行为**：`inverseSurface` 在深色主题即 `#E3EADF`，Material 3 的 inverse 语义就是让 Snackbar 在深色背景上反转突出 |
+
+### 10.7 其他未覆盖
 
 - **未做**：TalkBack 读屏实测、字体缩放 200% 与横屏组合矩阵、API 26 深色表现。
 - **未审计**：`PdfDocumentView` 的 PDF 渲染区（第三方渲染，样式不在 Compose 控制内）、
