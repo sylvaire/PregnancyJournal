@@ -136,6 +136,10 @@ adb shell am instrument -w -r cn.yunji.journal.test/androidx.test.runner.Android
 - `0.25.0`（schema13）：云端恢复端到端（TLS 假 DAV → 生产适配 → 暂存校验 → 预览 → 提交）
 - `0.26.0-dev`（schema15）：自定义提醒（一次/每天/每周）、实际就诊独立字段（时间/医院/结果）、
   UI 与设计稿逐页对齐、HTTP/1.1 固定以规避 HTTP/2 流级超时
+- `0.27.0`（schema15）：UI 系统统一——补齐 `titleMedium`/`titleSmall` 字阶、杏色卡片深色适配、
+  9 个设计系统组件（`JournalField`/`JournalTextAction`/`JournalCheckbox`/`JournalLoading`/
+  `JournalError`/`JournalSectionTitle`/`JournalDivider`/`JournalSecondaryButton`/`JournalFullScreenHeader`）、
+  全站表单与行内动作收敛、Ardot 图标补全与布局整理；仪器全量矩阵 `OK (362 tests)`
 
 </details>
 
