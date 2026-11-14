@@ -162,8 +162,9 @@ internal fun ReminderSettingsScreen(model: JournalViewModel) {
         }
         Box(Modifier.bringIntoViewRequester(customTarget)) {
         Inset { JournalCard {
-            Text("自定义提醒", style = MaterialTheme.typography.titleLarge)
-            Text("可按一次、每天或每周提醒；内容保存在加密资料中。", style = MaterialTheme.typography.bodySmall)
+            JournalSectionTitle("自定义提醒")
+            Text("可按一次、每天或每周提醒；内容保存在加密资料中。", style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant)
             val active = state.active?.takeIf { it.status == "ONGOING" && it.deletedAt == null }
             if (active == null) Text("请先创建或选择进行中的孕期。", style = MaterialTheme.typography.bodySmall)
             else JournalButton("新建提醒", secondary = true, modifier = Modifier.testTag("custom-reminder-add")) {

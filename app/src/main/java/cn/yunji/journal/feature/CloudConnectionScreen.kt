@@ -23,6 +23,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import cn.yunji.journal.core.designsystem.JournalButton
 import cn.yunji.journal.core.designsystem.JournalTextAction
 import cn.yunji.journal.core.designsystem.JournalCard
+import cn.yunji.journal.core.designsystem.JournalKeyValue
 import cn.yunji.journal.core.designsystem.JournalSwitch
 import cn.yunji.journal.core.designsystem.JournalField
 import cn.yunji.journal.core.designsystem.JournalSectionTitle
@@ -135,7 +136,7 @@ internal fun CloudConnectionContent(state: CloudUiState,update: (String,String)-
             JournalCard {
             Text("连接检查",style=MaterialTheme.typography.titleLarge)
             listOf("读取目录" to caps.readable,"写入与回读校验" to (caps.writable && caps.verified),"创建子目录" to caps.canCreateDirectory,"清理测试项目" to caps.canDelete).forEach {(label,ok)->
-                Row(Modifier.fillMaxWidth()) {Text(label,Modifier.weight(1f));Text(if(ok)"可用" else "未通过",color=if(ok)MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant)}
+                JournalKeyValue(label, if(ok) "可用" else "未通过", emphasize = ok)
             }
             if(!caps.completeListing)Text("部分目录项目无法读取，不能据此进行自动清理。")
             if(caps.existingVaultCount>0)Text("专用备份目录已有${caps.existingVaultCount}项内容。保存连接不会覆盖它们，启用备份前需核对资料库。")

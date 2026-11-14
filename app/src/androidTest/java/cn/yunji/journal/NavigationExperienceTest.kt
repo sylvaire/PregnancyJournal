@@ -259,7 +259,10 @@ class NavigationExperienceTest {
         val tag="source-DOCUMENT:$documentId"
         ui.onNodeWithTag("all-documents-list").performScrollToNode(hasTestTag(tag))
         ui.onNodeWithTag(tag).performClick();settle()
-        ui.onNodeWithText("医院：测试医院").assertExists()
+        // 详情页的键值信息已统一为 JournalKeyValue（标签与值是两个节点），
+        // 这里断言值本身，比原来匹配「标签：值」拼接串更直接。
+        ui.onNodeWithText("医院").assertExists()
+        ui.onNodeWithText("测试医院").assertExists()
         ui.onNodeWithText("编辑资料信息").performScrollTo().performClick();settle()
         ui.onNodeWithTag("document-note").performScrollTo().performTextReplacement("尚未保存合成备注")
         runBlocking {model.documents.updateMetadata(documentId,"合成全部资料报告","LAB",note="外部更新合成备注")}

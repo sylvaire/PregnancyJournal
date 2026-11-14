@@ -337,9 +337,10 @@ internal fun TimelineSourceScreen(pregnancyId: String,type: String,id: String,mo
                         val row=group.measurement;val def=source.definitions.firstOrNull {it.id==row.definitionId}
                         group.values.forEach {Text("${measurementKeyLabel(it.valueKey)}：${it.decimalValue} ${if(it.valueKey=="pulse")"次/分" else def?.unit.orEmpty()}")}
                         Text(when(row.scenario){"FASTING"->"空腹";"POST_MEAL"->"餐后${row.postMealMinutes}分钟";"OTHER"->"其他场景";else->"普通测量"})
-                        Text("来源：${row.source.ifBlank {"未填写"}} · 原指标第${def?.version ?: 1}版")
+                        JournalKeyValue("来源", row.source.ifBlank { "未填写" })
+                        JournalKeyValue("指标版本", "第 ${def?.version ?: 1} 版")
                         if(row.note.isNotBlank())Text(row.note)
-                        Text("录入时间：${displayInstant(row.recordedAt,row.zoneId)}",style=MaterialTheme.typography.bodySmall)
+                        JournalKeyValue("录入时间", displayInstant(row.recordedAt,row.zoneId))
                     }
                     "INTAKE" -> source.intakes.firstOrNull {it.id==id}?.let {row ->
                         Text(if(row.status=="TAKEN") {if(row.dose==null)"实际剂量未填写" else "实际用量 ${row.dose} ${row.unit.orEmpty()}"} else "此项记录为跳过，未记录服药")
@@ -354,10 +355,10 @@ internal fun TimelineSourceScreen(pregnancyId: String,type: String,id: String,mo
                         Text("录入时间：${displayInstant(row.recordedAt,row.zoneId)}",style=MaterialTheme.typography.bodySmall)
                     }
                     "DOCUMENT" -> document?.let {doc ->
-                        Text("分类：${cn.yunji.journal.data.DOCUMENT_CATEGORIES[doc.category] ?: "其他"}")
-                        Text("报告日期：${doc.documentDate?.let(::displayDate) ?: "未填写"}")
-                        Text("导入时间：${displayInstant(doc.createdAt,ZoneId.systemDefault().id)}")
-                        if(doc.hospital.isNotBlank())Text("医院：${doc.hospital}")
+                        JournalKeyValue("分类", cn.yunji.journal.data.DOCUMENT_CATEGORIES[doc.category] ?: "其他")
+                        JournalKeyValue("报告日期", doc.documentDate?.let(::displayDate) ?: "未填写")
+                        JournalKeyValue("导入时间", displayInstant(doc.createdAt,ZoneId.systemDefault().id))
+                        if(doc.hospital.isNotBlank())JournalKeyValue("医院", doc.hospital)
                         if(doc.note.isNotBlank())Text(doc.note)
                         JournalButton("查看原件",onClick={preview=true})
                         JournalTextAction("编辑资料信息", onClick = { editingDocument = true })

@@ -23,6 +23,7 @@ import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.input.VisualTransformation
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
@@ -214,4 +215,25 @@ fun Modifier.journalPressable(interactionSource: MutableInteractionSource): Modi
         animationSpec = spring(dampingRatio = Spring.DampingRatioMediumBouncy, stiffness = Spring.StiffnessMediumLow),
         label = "pressScale")
     this.graphicsLayer { scaleX = scale; scaleY = scale }
+}
+
+/**
+ * 详情页的键值行（`标签  值` 两端对齐）。
+ *
+ * 「原始记录详情」「恢复预览」「云端清理统计」等页面此前各自手写
+ * `Row(SpaceBetween){ Text(label); Text(value) }`，标签与数值的字重、颜色都不统一，
+ * 长数值还会把标签挤成两行。这里统一：
+ * - 标签用 `bodyMedium` + onSurfaceVariant，权重 1，最多 1 行省略；
+ * - 值用 `bodyMedium` + onSurface，右对齐，不换行；
+ * - 值过长时右对齐会挤压标签，故给标签 `weight(1f)` 并允许省略。
+ */
+@Composable fun JournalKeyValue(label: String, value: String, modifier: Modifier = Modifier,
+    emphasize: Boolean = false) {
+    Row(modifier.fillMaxWidth().padding(vertical = 2.dp), verticalAlignment = Alignment.Top) {
+        Text(label, Modifier.weight(1f), style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant, maxLines = 1, overflow = TextOverflow.Ellipsis)
+        Text(value, style = MaterialTheme.typography.bodyMedium,
+            color = if (emphasize) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface,
+            textAlign = TextAlign.End)
+    }
 }

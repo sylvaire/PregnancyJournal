@@ -16,6 +16,7 @@ import androidx.compose.ui.unit.dp
 import cn.yunji.journal.core.designsystem.JournalButton
 import cn.yunji.journal.core.designsystem.JournalError
 import cn.yunji.journal.core.designsystem.JournalCard
+import cn.yunji.journal.core.designsystem.JournalKeyValue
 import cn.yunji.journal.core.designsystem.JournalField
 import cn.yunji.journal.core.designsystem.JournalLoading
 import cn.yunji.journal.core.designsystem.JournalSectionTitle
@@ -110,7 +111,7 @@ val LocalRestoreLaunch=androidx.compose.runtime.staticCompositionLocalOf<(() -> 
                     listOf("孕期档案" to preview.pregnancies,"产检记录" to preview.visits,"资料原件" to preview.documents,
                         "用药方案" to preview.medicationPlans,"服药记录" to preview.intakes,"健康记录" to preview.measurements,
                         "日常备注" to preview.journalEntries,"自定义提醒" to preview.customReminders).forEach {(label,count)->
-                        Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.SpaceBetween){Text(label);Text(count.toString())}
+                        JournalKeyValue(label, count.toString())
                     }
                 }
                 JournalCard {
