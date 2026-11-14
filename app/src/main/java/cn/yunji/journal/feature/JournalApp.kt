@@ -23,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -57,8 +58,16 @@ internal fun WelcomeScreen(onCreate: () -> Unit) {
             JournalCard(soft = true) {
                 Spacer(Modifier.height(4.dp))
                 DesignIcon("5fbe7.svg", size = 64.dp)
-                Text("轻轻记录\n安心留存", style = MaterialTheme.typography.displaySmall, color = MaterialTheme.colorScheme.primary)
-                Text("产检、报告与日常变化，\n在这里慢慢连成你的孕期故事。", style = MaterialTheme.typography.bodyLarge)
+                // 设计稿把主副标题各断成两行（412 dp 基准）。系统字体放大到 200% 时 40 sp 会变 80 sp，
+                // 硬换行会让每行只剩三四个字，故仅在标准字号下保留设计断行，放大后交给自然换行。
+                val fontScale = LocalDensity.current.fontScale
+                Text(
+                    if (fontScale > 1.3f) "轻轻记录，安心留存" else "轻轻记录\n安心留存",
+                    style = MaterialTheme.typography.displaySmall, color = MaterialTheme.colorScheme.primary)
+                Text(
+                    if (fontScale > 1.3f) "产检、报告与日常变化，在这里慢慢连成你的孕期故事。"
+                    else "产检、报告与日常变化，\n在这里慢慢连成你的孕期故事。",
+                    style = MaterialTheme.typography.bodyLarge)
                 Spacer(Modifier.height(4.dp))
             }
         } }
