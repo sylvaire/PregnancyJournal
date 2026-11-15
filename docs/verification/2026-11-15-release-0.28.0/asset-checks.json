@@ -1,0 +1,13 @@
+{
+  "apk": "PregnancyJournal-v0.28.0-app-release.apk",
+  "sizeBytes": 11539848,
+  "sha256": "0af417450660b95cbf125465e99fbc045dded5e9cb2876c3d76d981072b4022b",
+  "metadataAndChecksumMatch": true,
+  "signatureVerified": true,
+  "signerCertificateSha256": "3a8d8772dd05051092daaca09ffb80e29c61b2b51a955e2cfb3ccf1009d002cc",
+  "sameSignerAs": "v0.27.0",
+  "versionName": "0.28.0",
+  "versionCode": 30,
+  "debuggable": false,
+  "zipalign16KiB": true
+}
