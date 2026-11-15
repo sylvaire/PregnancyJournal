@@ -1,0 +1,9 @@
+
+cn.yunji.journal.PickerExperienceTest:....
+cn.yunji.journal.CustomReminderUiTest:.
+
+Time: 26.331
+
+OK (5 tests)
+
+

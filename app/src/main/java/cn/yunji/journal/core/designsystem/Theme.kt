@@ -44,7 +44,7 @@ private val light = lightColorScheme(primary = Primary, onPrimary = Color.White,
     secondary = Primary, onSecondary = Color.White, secondaryContainer = Soft, onSecondaryContainer = Primary,
     tertiary = Muted, onTertiary = Color.White, tertiaryContainer = Soft, onTertiaryContainer = Ink,
     onPrimaryContainer = Primary, background = Background, onBackground = Ink, surface = Color.White,
-    onSurface = Ink, onSurfaceVariant = Muted, outline = Outline, outlineVariant = Outline, surfaceVariant = Soft,
+    onSurface = Ink, onSurfaceVariant = Muted, outline = Color(0xFF91A294), outlineVariant = Outline, surfaceVariant = Soft,
     error = Danger, onError = Color.White, errorContainer = DangerSoft, onErrorContainer = Danger,
     // Material3 container roles added in 1.2+ were left at the default lavender-grey palette; map every one of
     // them back to the warm green/white design palette so dialogs, menus, switches and snackbars stay on-brand.

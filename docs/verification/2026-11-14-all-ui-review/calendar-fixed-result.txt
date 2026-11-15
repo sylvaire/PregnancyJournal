@@ -1,0 +1,10 @@
+
+cn.yunji.journal.NavigationExperienceTest:..
+cn.yunji.journal.UiReviewRegressionTest:........
+cn.yunji.journal.OriginalShareUiTest:..
+
+Time: 52.769
+
+OK (12 tests)
+
+

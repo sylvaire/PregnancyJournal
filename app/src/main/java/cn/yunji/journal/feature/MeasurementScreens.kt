@@ -35,6 +35,7 @@ private fun scenarioLabel(row: MeasurementEntity) = when(row.scenario) { "FASTIN
 private fun measuredLabel(row: MeasurementEntity) = displayInstant(row.measuredAt, row.zoneId)
 
 @Composable
+@OptIn(ExperimentalLayoutApi::class)
 internal fun MeasurementScreen(pregnancy: PregnancyEntity?, model: JournalViewModel, edit: (String?) -> Unit) {
     if (pregnancy == null) { Inset { Text("请先创建或恢复孕期档案。") }; return }
     val id = pregnancy.id
@@ -69,14 +70,14 @@ internal fun MeasurementScreen(pregnancy: PregnancyEntity?, model: JournalViewMo
         if (loading) item { Inset { JournalLoading() } }
         failure?.let { message -> item { Inset { JournalError(message) } } }
         if (!trends) {
-            if (records.isEmpty() && !loading) item { Inset { JournalCard(soft=true) { Text("还没有测量记录"); Text("体重、血压、血糖及自定义指标均可记录。") } } }
+            if (records.isEmpty() && !loading && failure == null) item { Inset { JournalCard { JournalSectionTitle("还没有测量记录"); Text("体重、血压、血糖及自定义指标均可记录。", style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant) } } }
             items(records,key={it.id},contentType={"measurement"}) { row ->
                 val def = definitions.firstOrNull { it.id==row.definitionId }
                 Inset { JournalCard {
-                    Text(def?.name ?: "指标",style=MaterialTheme.typography.titleLarge)
-                    Text(values.filter { it.measurementId==row.id }.joinToString(" · ") { "${measurementKeyLabel(it.valueKey)} ${it.decimalValue} ${if(it.valueKey=="pulse") "次/分" else def?.unit.orEmpty()}" })
-                    Text(listOf(measuredLabel(row),scenarioLabel(row)).filter { it.isNotBlank() }.joinToString(" · "))
-                    Row {
+                    JournalContentHeading(def?.name ?: "指标",values.filter { it.measurementId==row.id }.joinToString(" · ") { "${measurementKeyLabel(it.valueKey)} ${it.decimalValue} ${if(it.valueKey=="pulse") "次/分" else def?.unit.orEmpty()}" })
+                    Text(listOf(measuredLabel(row),scenarioLabel(row)).filter { it.isNotBlank() }.joinToString(" · "),
+                        style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                         JournalTextAction("详情", onClick = { selected = row.id })
                         JournalTextAction("修改", onClick = { edit(row.id) })
                         JournalTextAction("删除", danger = true, onClick = { deleting = row.id })
@@ -88,13 +89,13 @@ internal fun MeasurementScreen(pregnancy: PregnancyEntity?, model: JournalViewMo
         } else {
             item { Inset { Row(Modifier.horizontalScroll(rememberScrollState()),horizontalArrangement=Arrangement.spacedBy(8.dp)) { listOf(7,30,0).forEach { range -> JournalTag(days==range,{days=range},{Text(if(range==0) "全部" else "近${range}天")}) } } } }
             item { Inset { Text("按指标、单位、测量场景及餐后分钟分别呈现。点之间不补零、不推断诊断。", style=MaterialTheme.typography.bodySmall) } }
-            if(groups.isEmpty()) item { Inset {Text("此范围没有测量数据。") } }
+            if(groups.isEmpty() && !loading && failure == null) item { Inset {Text("此范围没有测量数据。") } }
             item { Inset { Column { groups.forEach { (key,points) -> JournalTag(group?.key==key,{selectedGroup=groupId(key)},{Text("${points.last().definition.name} · ${if(key.key=="pulse") "次/分" else key.unit} · ${measurementKeyLabel(key.key)} ${scenarioLabel(points.last().measurement)}")}) } } } }
             group?.let { entry ->
                 val points=entry.value
                 item { Inset { JournalCard {
-                    Text("${points.size}条原始读数",style=MaterialTheme.typography.titleLarge)
-                    MeasurementPlot(points){selected=it}
+                    JournalSectionTitle("${points.size}条原始读数")
+                    MeasurementPlot(points,if(entry.key.key=="pulse") "次/分" else entry.key.unit){selected=it}
                     JournalTag(gestational,{gestational=!gestational},{Text(if(gestational) "按当前孕期依据显示孕周" else "按日期显示")})
                     Text("最小 ${points.minOf { it.value.toBigDecimal() }.toPlainString()} · 最大 ${points.maxOf { it.value.toBigDecimal() }.toPlainString()} ${if(entry.key.key=="pulse") "次/分" else entry.key.unit}")
                     Text("图上展示最近最多120条，下面保留范围内全部读数；同一时刻多次测量均保留。",style=MaterialTheme.typography.bodySmall)
@@ -122,7 +123,7 @@ internal fun MeasurementScreen(pregnancy: PregnancyEntity?, model: JournalViewMo
 }
 
 @Composable
-private fun MeasurementPlot(all: List<MeasurementRules.Point>, select: (String)->Unit) {
+private fun MeasurementPlot(all: List<MeasurementRules.Point>, unit: String, select: (String)->Unit) {
     val points=all.takeLast(120)
     val color=MaterialTheme.colorScheme.primary
     val axis=MaterialTheme.colorScheme.outlineVariant
@@ -134,10 +135,24 @@ private fun MeasurementPlot(all: List<MeasurementRules.Point>, select: (String)-
         val y=if(max==min) .5 else (points[index].value.toDouble()-min)/(max-min)
         return Offset(16f+(width-32f)*x.toFloat(),16f+(height-32f)*(1-y.toFloat()))
     }
-    Canvas(Modifier.fillMaxWidth().height(160.dp).semantics {contentDescription="测量散点趋势，详细数值见下方列表"}.pointerInput(points){detectTapGestures {tap -> points.indices.minByOrNull { (location(it,size.width.toFloat(),size.height.toFloat())-tap).getDistance() }?.let {select(points[it].measurement.id)} }}) {
+    fun axisLabel(value: java.math.BigDecimal): String {
+        val rounded=value.round(java.math.MathContext(5)).stripTrailingZeros()
+        return (if(rounded.compareTo(value)!=0) "约" else "")+rounded.toEngineeringString()
+    }
+    Text("纵轴：数值（$unit） · 横轴：测量时间",style=MaterialTheme.typography.bodySmall)
+    Row(Modifier.fillMaxWidth().height(160.dp)) {
+    Column(Modifier.fillMaxHeight().widthIn(max=96.dp).padding(end=8.dp),verticalArrangement=Arrangement.SpaceBetween) {
+        Text(axisLabel(points.maxOf {it.value.toBigDecimal()}),style=MaterialTheme.typography.bodySmall)
+        Text(axisLabel(points.minOf {it.value.toBigDecimal()}),style=MaterialTheme.typography.bodySmall)
+    }
+    Canvas(Modifier.weight(1f).fillMaxHeight().semantics {contentDescription="测量散点趋势，详细数值见下方列表"}.pointerInput(points){detectTapGestures {tap -> points.indices.minByOrNull { (location(it,size.width.toFloat(),size.height.toFloat())-tap).getDistance() }?.let {select(points[it].measurement.id)} }}) {
         drawLine(axis,Offset(16f,size.height-16f),Offset(size.width-16f,size.height-16f))
+        drawLine(axis,Offset(16f,16f),Offset(16f,size.height-16f))
         points.indices.forEach {drawCircle(color,5.dp.toPx(),location(it,size.width,size.height))}
     }
+    }
+    Text("最近一条：${points.last().value} $unit · ${measuredLabel(points.last().measurement)}",style=MaterialTheme.typography.bodySmall)
+    Text("纵轴按本组读数范围缩放；点按圆点查看原始数值和时间。",style=MaterialTheme.typography.bodySmall)
     Text("${measuredLabel(points.first().measurement)} 至 ${measuredLabel(points.last().measurement)}",style=MaterialTheme.typography.bodySmall)
 }
 
@@ -148,7 +163,7 @@ private fun DefinitionDialog(pregnancyId: String, previous: MetricDefinitionEnti
     var saving by remember {mutableStateOf(false)}
     var error by remember {mutableStateOf<String?>(null)}
     val scope=rememberCoroutineScope()
-    AlertDialog(onDismissRequest={if(!saving)close()},title={Text(if(previous==null) "自定义指标" else "更新指标定义")},text={Column(verticalArrangement=Arrangement.spacedBy(8.dp)) {
+    AlertDialog(onDismissRequest={if(!saving)close()},title={Text(if(previous==null) "自定义指标" else "更新指标定义")},text={Column(Modifier.verticalScroll(rememberScrollState()),verticalArrangement=Arrangement.spacedBy(8.dp)) {
         JournalField(name,{name=it}, "指标名称")
         JournalField(unit,{unit=it}, "单位")
         Text("自定义指标使用一个数值字段。修改会保留旧版本及历史单位。",style=MaterialTheme.typography.bodySmall)
@@ -182,7 +197,7 @@ internal fun MeasurementEditorScreen(form: MeasurementForm, model: JournalViewMo
                 if(form.scenario=="POST_MEAL") JournalField(form.minutes,{model.updateMeasurement(form.copy(minutes=it))}, "餐后分钟数", enabled=!busy)
             }
             DateField("测量日期",form.date,{model.updateMeasurement(form.copy(date=it))},required=true,maxDate=LocalDate.now())
-            JournalField(form.time,{model.updateMeasurement(form.copy(time=it))}, "测量时间（时:分:秒）", enabled=!busy)
+            RecordTimeField(form.time,{model.updateMeasurement(form.copy(time=it))}, "测量时间（时:分:秒）", enabled=!busy, seconds=true)
             Text("测量时区：${if(form.zoneId==ZoneId.systemDefault().id)"本机当前时区" else form.zoneId}",style=MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant)
             val offsets=runCatching {ZoneId.of(form.zoneId).rules.getValidOffsets(LocalDate.parse(form.date).atTime(LocalTime.parse(form.time)))}.getOrDefault(emptyList())

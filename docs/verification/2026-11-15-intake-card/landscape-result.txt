@@ -1,0 +1,9 @@
+
+cn.yunji.journal.IntakeCardLayoutTest:.
+cn.yunji.journal.UiReviewRegressionTest:.
+
+Time: 6.857
+
+OK (2 tests)
+
+

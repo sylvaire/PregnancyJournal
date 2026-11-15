@@ -1,0 +1,10 @@
+
+cn.yunji.journal.NavigationExperienceTest:.....
+cn.yunji.journal.CustomReminderUiTest:...
+cn.yunji.journal.UiSnapshotCoverageTest:...
+
+Time: 122.687
+
+OK (11 tests)
+
+

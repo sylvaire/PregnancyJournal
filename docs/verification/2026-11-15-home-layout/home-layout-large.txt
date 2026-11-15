@@ -1,0 +1,30 @@
+
+cn.yunji.journal.UiSnapshotTest:
+Error in homeFigmaSectionsOpenTheirDestinations(cn.yunji.journal.UiSnapshotTest):
+java.lang.AssertionError: Failed: assertExists.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains '记录与资料' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.assertExists(SemanticsNodeInteraction.kt:125)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.assertExists$default(SemanticsNodeInteraction.kt:124)
+	at cn.yunji.journal.UiSnapshotTest.homeFigmaSectionsOpenTheirDestinations(UiSnapshotTest.kt:41)
+.
+cn.yunji.journal.UiReviewRemainingPagesTest:..
+
+Time: 18.119
+There was 1 failure:
+1) homeFigmaSectionsOpenTheirDestinations(cn.yunji.journal.UiSnapshotTest)
+java.lang.AssertionError: Failed: assertExists.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains '记录与资料' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.assertExists(SemanticsNodeInteraction.kt:125)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.assertExists$default(SemanticsNodeInteraction.kt:124)
+	at cn.yunji.journal.UiSnapshotTest.homeFigmaSectionsOpenTheirDestinations(UiSnapshotTest.kt:41)
+
+FAILURES!!!
+Tests run: 4,  Failures: 1
+
+

@@ -1,0 +1,34 @@
+
+cn.yunji.journal.NavigationExperienceTest:.
+cn.yunji.journal.UiReviewRemainingPagesTest:.
+Error in documentCategoryAndSortShowTheirCurrentSelection(cn.yunji.journal.UiReviewRemainingPagesTest):
+java.lang.AssertionError: Failed: assertExists.
+Reason: Expected exactly '1' node but could not find any node that satisfies: ((Text + InputText + EditableText contains '最近导入' (ignoreCase: false)) && (Selected = 'true'))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.assertExists(SemanticsNodeInteraction.kt:125)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.assertExists$default(SemanticsNodeInteraction.kt:124)
+	at cn.yunji.journal.UiReviewRemainingPagesTest.documentCategoryAndSortShowTheirCurrentSelection(UiReviewRemainingPagesTest.kt:85)
+...............
+cn.yunji.journal.MainRestorePickerTest:
+cn.yunji.journal.MainRestorePickerTest:
+cn.yunji.journal.CloudCleanupUiTest:.......
+cn.yunji.journal.RestoreUiTest:.......
+
+Time: 94.948
+There was 1 failure:
+1) documentCategoryAndSortShowTheirCurrentSelection(cn.yunji.journal.UiReviewRemainingPagesTest)
+java.lang.AssertionError: Failed: assertExists.
+Reason: Expected exactly '1' node but could not find any node that satisfies: ((Text + InputText + EditableText contains '最近导入' (ignoreCase: false)) && (Selected = 'true'))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.assertExists(SemanticsNodeInteraction.kt:125)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.assertExists$default(SemanticsNodeInteraction.kt:124)
+	at cn.yunji.journal.UiReviewRemainingPagesTest.documentCategoryAndSortShowTheirCurrentSelection(UiReviewRemainingPagesTest.kt:85)
+
+FAILURES!!!
+Tests run: 34,  Failures: 1
+
+

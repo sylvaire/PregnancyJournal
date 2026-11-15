@@ -1,0 +1,11 @@
+
+cn.yunji.journal.UiSnapshotTest:..
+cn.yunji.journal.UiReviewRemainingPagesTest:..
+cn.yunji.journal.UiReviewRegressionTest:.
+cn.yunji.journal.NavigationExperienceTest:..
+
+Time: 36.224
+
+OK (7 tests)
+
+

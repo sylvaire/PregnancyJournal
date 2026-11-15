@@ -2,6 +2,8 @@ package cn.yunji.journal.core.share
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -10,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
+import cn.yunji.journal.core.designsystem.JournalKeyValue
 
 /**
  * Plaintext disclosure before any original leaves the vault, following the D07 wording: exported
@@ -27,12 +30,13 @@ internal fun OriginalShareDialog(
         modifier = Modifier.testTag("share-dialog"),
         title = { Text("分享这份原件？") },
         text = {
-            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                Text("“$name”会以明文交给所选应用，分享后不再受本应用加密保护，请自行妥善保管。")
+            Column(Modifier.verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                Text("原件会以明文交给所选应用，分享后不再受本应用加密保护，请自行妥善保管。")
                 Text(
                     "只授予本次只读访问，不申请长期授权；返回本应用后会删除临时副本并撤销授权。",
                     style = MaterialTheme.typography.bodySmall,
                 )
+                JournalKeyValue("原件名称", name)
             }
         },
         confirmButton = {

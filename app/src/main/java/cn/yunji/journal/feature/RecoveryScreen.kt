@@ -47,6 +47,7 @@ import java.io.File
         if(launch==null)null else {{launch(cn.yunji.journal.core.security.FileRequest("BACKUP",ownerId=controller.vaultId),"孕迹加密备份-${java.time.LocalDate.now()}.yunji")}},LocalRestoreLaunch.current,extra={SafetyCopiesPanel(controller.vaultId);ReclaimPreviousPanel()})
 }
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable internal fun RecoveryContent(state: RecoveryUiState,generate: ()->Unit,verify: ()->Unit,
     answer: (Int,String)->Unit,confirm: ()->Unit,retry: ()->Unit,export: (()->Unit)?=null,restore: (()->Unit)?=null,extra: @Composable ()->Unit={}) {
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(24.dp).testTag("recovery-screen"),verticalArrangement=Arrangement.spacedBy(16.dp)) {
@@ -54,7 +55,7 @@ import java.io.File
             "LOADING"->JournalLoading()
             "INTRO"->{
                 JournalCard(soft = true) {
-                    Text("本地加密备份", style = MaterialTheme.typography.titleLarge)
+                    Text("先保存恢复密钥", style = MaterialTheme.typography.titleLarge)
                     Text("尚未确认恢复密钥", color = MaterialTheme.colorScheme.primary)
                     Text("先妥善保存恢复密钥，再导出可迁移的加密备份。", style = MaterialTheme.typography.bodySmall)
                 }
@@ -71,8 +72,8 @@ import java.io.File
                     Text("请完整抄录下面的密钥，包括开头的 YJ1:，并保留大小写。下一步将隐藏密钥并核对其中两组。")
                     Text("YJ1:",fontFamily=FontFamily.Monospace)
                     state.key.removePrefix("YJ1:").chunked(6).forEachIndexed {index,value->
-                        Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.SpaceBetween) {
-                            Text("第${index+1}组",style=MaterialTheme.typography.labelLarge)
+                        FlowRow(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.SpaceBetween,verticalArrangement=Arrangement.spacedBy(4.dp)) {
+                            Text("第${index+1}组",Modifier.padding(end = 16.dp),style=MaterialTheme.typography.labelLarge)
                             Text(value,fontFamily=FontFamily.Monospace,style=MaterialTheme.typography.titleLarge)
                         }
                     }
@@ -96,7 +97,7 @@ import java.io.File
             }
             "READY"->{
                 JournalCard(soft = true) {
-                    Text("本地加密备份", style = MaterialTheme.typography.titleLarge)
+                    Text("备份准备就绪", style = MaterialTheme.typography.titleLarge)
                     Text("恢复密钥已确认", color = MaterialTheme.colorScheme.primary)
                     Text("完整密钥不会再次显示，请独立保管。", style = MaterialTheme.typography.bodySmall)
                 }

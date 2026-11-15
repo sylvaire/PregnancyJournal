@@ -1,0 +1,9 @@
+
+cn.yunji.journal.UiSnapshotTest:.....
+cn.yunji.journal.UiSnapshotCoverageTest:....
+
+Time: 34.072
+
+OK (9 tests)
+
+

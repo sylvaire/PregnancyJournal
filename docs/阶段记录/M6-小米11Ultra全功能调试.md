@@ -211,3 +211,22 @@
 - 2026-11-13 云端测试残留清理与再次复验：发现 `pregnancy-journal/` 下累积 25 个 vault（23 个来自反复测试的隔离子库），使 `verifiedCommitWriterIds` 每次上传前需认证全部 commit（18 个时约 13s）。已逐级清理，保留 2 个有真实数据的 vault，`deleted=23 failed=0`。清理后前置耗时下降但真机上传仍在 PUT 阶段无返回；`am start` 后 `topResumedActivity` 仍为其他应用，确认锁屏阻断前台 Activity。真机复验需机主解锁，或直接在手机上走 UI 完成后再用 curl 核对。JVM 364/0、lint 0 错误/15 警告保持。
 - 2026-11-13 真机上传成功证据与结论修正：复查云端发现 `pregnancy-journal/cdb8c41a-e4ac-4276-a8bd-74b2159783f0/`（getlastmodified 11-13 04:33）含完整 vault.json(265B)/snapshots(512B)/commits(660B)，下载后本地 SHA-256 `16af83a3…b0f5` 与 commit `cipherSha256` 完全一致、snapshotId 与文件名一致、信封头 `PJE\x01` —— 即**真机已完成「保存连接 → 立即上传备份 → commit 绑定 snapshot」全链路**。此前判定"未完成"是因为该次 `am instrument` 因进程暂停未返回 OK，未核对云端产物。同时清理 2 个仅含 objects 的空 vault（2c66f1b1、5db54072）。准确表述：真机上传链路可用，部分运行会被锁屏静置暂停但不影响已完成的 PUT/COMMIT。JVM 364/0、lint 0 错误/15 警告。
 - 2026-11-13 **P0 根因：HTTP/2 流级超时（已修复）**。设备解锁后重跑真机测试，取得明确异常 `SocketTimeoutException at okhttp3.internal.http2.Http2Stream$StreamTimeout`——此前所有"设备网络策略/进程冻结"的推断均不成立，真正原因是与坚果云协商 HTTP/2 后的流级超时（也解释了 curl(1.1) 成功、`callTimeout` 不触发、偶发成功）。修复 `WebDavClient` 固定 `.protocols(listOf(HTTP_1_1))`；新增 `WebDavClientTest.clientAlwaysNegotiatesHttp11` 并用"临时移除修复→测试失败"验证其有效性。验证：真机 `JianguoRepeatedProbeTest` OK(1)/13.4s；模拟器 `JianguoUploadVerifyTest` OK(1)/20.7s，`lastPhase=COMMITTED`；curl 核对 `cipherSha256` 与实测 SHA-256 完全一致（`fb0f21b5…b8f4`）、cipherSize 512、snapshotId 匹配、信封头 `PJE\x01`。附带记录：设备密钥轮换后旧加密状态未自动清理（`AEADBadTagException`），列为后续改进项。
+
+## 2026-11-14 首页体验补充检查
+- 状态：局部检查完成，全流程待检查；未修改产品代码。
+- 实机当前首页截图：`.local/pj-audit.png`（仅本地，不加入文档，避免保存个人医疗数据）。
+- 发现：下一次产检文案未区分已过期但未完成的预约；今日服药卡位于首页较下方；服药统计长句出现词内折行；快捷入口使用名词，动作预期不够明确；最近资料直接显示文件名，识别效率取决于用户命名。
+- 代码证据：JournalApp.kt:122–130；IntakeScreens.kt:53。截图观察与代码定位完成，不代表修复或验证通过。
+- 下一步：核对预约日期筛选与设备日期，区分待处理/即将到来；再走查新建、资料、服药、备份流程以及大字体和读屏。上述建议需实际交互验证。
+
+## 2026-11-14 首页体验优化实施
+- 完成：首页预约根据日期区分待处理、今天与下一次；今日服药汇总提前至预约卡之后；主统计突出未记录数量，其他统计拆行；栏目改为「记录与资料」，直接新建的入口改为「写备注」；快捷入口移除单行限制，允许大字体自然换行。
+- 产物：app/src/main/java/cn/yunji/journal/feature/JournalApp.kt、IntakeScreens.kt；同步更新 NavigationExperienceTest、UiSnapshotTest 文案断言。
+- 验证：compileDebugKotlin、testDebugUnitTest、compileDebugAndroidTestKotlin 均成功；git diff --check 通过。设备 UI 测试与修改后的截图尚未执行，不标记视觉验收通过。
+- 保留：资料与指标入口实际进入列表，故保留名词；最近资料保留原始标题，当前聚合对象未提供分类，未猜测或自动改写文件名。
+- 下一步：设备验证首页顺序、大字体换行以及三个预约日期状态；资料分类展示需补充聚合数据后另行实施。
+
+## 2026-11-14 全界面体验复核交付
+- 本轮29路由、23个Compose源文件和其余临时界面已逐项检查；日期状态、长文本、大字体入口、日历遮挡、药品就近操作、健康错误态与提醒/备份/安全/导出文案已优化。具体实施和证据转入 [M6-全界面与组件体验复核](M6-全界面与组件体验复核.md)，不覆盖本记录此前真机结论。
+- 本轮模拟器导航26项、剩余状态26项、200%深色横屏14项通过；最后首页列数调整另有3项针对性验证及新版截图。默认安全JVM365项/0失败、lint0错误/31警告；未安装真机或发布。首页三种预约日期与日期补充回调已验证。
+- 本轮逐项检查与已列修复完成；进一步信息分组、时间输入与恢复上下文建议，以及真机/完整读屏验收仍单独保留，详见 [检查清单及交接](../verification/2026-11-14-all-ui-review/README.md)。

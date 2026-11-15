@@ -1,0 +1,230 @@
+Printing with useUnmergedTree = 'false'
+Node #1178 at (l=0.0, t=0.0, r=1080.0, b=2400.0)px
+ |-Node #1179 at (l=0.0, t=0.0, r=1080.0, b=2400.0)px
+   Shape = 'RectangleShape'
+    |-Node #1442 at (l=0.0, t=0.0, r=1080.0, b=2400.0)px
+       |-Node #1443 at (l=0.0, t=0.0, r=1080.0, b=2400.0)px, Tag: '云盘连接'
+         IsContainer = 'true'
+         Shape = 'RectangleShape'
+          |-Node #1463 at (l=0.0, t=354.0, r=1080.0, b=1517.0)px, Tag: 'cloud-connection'
+          | IsTraversalGroup = 'true'
+          | Shape = 'androidx.compose.foundation.VerticalScrollableClipShape@9edddb4'
+          | VerticalScrollAxisRange = 'ScrollAxisRange(value=394.0, maxValue=3490.0, reverseScrolling=false)'
+          | Actions = [ScrollBy, ScrollByOffset]
+          |  |-Node #1464 at (l=63.0, t=23.0, r=1017.0, b=354.0)px
+          |  | IsContainer = 'true'
+          |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 20.0.dp), topEnd = CornerSize(size = 20.0.dp), bottomEnd = CornerSize(size = 20.0.dp), bottomStart = CornerSize(size = 20.0.dp))'
+          |  |  |-Node #1465 at (l=116.0, t=65.0, r=964.0, b=312.0)px
+          |  |    Shape = 'RectangleShape'
+          |  |     |-Node #1466 at (l=116.0, t=65.0, r=428.0, b=140.0)px
+          |  |     | Text = '[连接你的云盘]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #1467 at (l=116.0, t=172.0, r=872.0, b=235.0)px
+          |  |     | Text = '[先测试并保存连接，再决定何时上传备份]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #1468 at (l=116.0, t=267.0, r=643.0, b=312.0)px
+          |  |       Text = '[先加密再上传；恢复密钥请独立保管。]'
+          |  |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |-Node #1469 at (l=63.0, t=396.0, r=1017.0, b=1898.0)px
+          |  | IsContainer = 'true'
+          |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 20.0.dp), topEnd = CornerSize(size = 20.0.dp), bottomEnd = CornerSize(size = 20.0.dp), bottomStart = CornerSize(size = 20.0.dp))'
+          |  |  |-Node #1470 at (l=116.0, t=438.0, r=964.0, b=1856.0)px
+          |  |    Shape = 'RectangleShape'
+          |  |     |-Node #1471 at (l=116.0, t=438.0, r=284.0, b=499.0)px
+          |  |     | Text = '[连接设置]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #1472 at (l=116.0, t=531.0, r=964.0, b=624.0)px
+          |  |     | Text = '[支持坚果云及其他 HTTPS WebDAV 服务。连接设置只保存在本机，保存连接不会启动备份。]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #1473 at (l=116.0, t=656.0, r=964.0, b=827.0)px, Tag: 'cloud-endpoint'
+          |  |     | ContentDataType = 'AndroidContentDataType(androidAutofillType=1)'
+          |  |     | EditableText = 'https://dav.jianguoyun.com/dav/'
+          |  |     | FillableData = 'androidx.compose.ui.autofill.AndroidFillableData@21bcb2d'
+          |  |     | Focused = 'false'
+          |  |     | ImeAction = 'Default'
+          |  |     | InputText = 'https://dav.jianguoyun.com/dav/'
+          |  |     | IsEditable = 'true'
+          |  |     | Text = '[服务地址]'
+          |  |     | TextSelectionRange = 'TextRange(0, 0)'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, InsertTextAtCursor, OnClick, OnFillData, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText, SetTextSubstitution, ShowTextSubstitution]
+          |  |     | MergeDescendants = 'true'
+          |  |     |-Node #1483 at (l=116.0, t=859.0, r=964.0, b=1030.0)px, Tag: 'cloud-username'
+          |  |     | ContentDataType = 'AndroidContentDataType(androidAutofillType=1)'
+          |  |     | ContentType = 'androidx.compose.ui.autofill.AndroidContentType@53810b6'
+          |  |     | EditableText = 'bad:name'
+          |  |     | FillableData = 'androidx.compose.ui.autofill.AndroidFillableData@f8b6862'
+          |  |     | Focused = 'true'
+          |  |     | ImeAction = 'Default'
+          |  |     | InputText = 'bad:name'
+          |  |     | IsEditable = 'true'
+          |  |     | Text = '[账号]'
+          |  |     | TextSelectionRange = 'TextRange(8, 8)'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, InsertTextAtCursor, MagnifierPositionInRoot, OnClick, OnFillData, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText, SetTextSubstitution, ShowTextSubstitution]
+          |  |     | MergeDescendants = 'true'
+          |  |     |-Node #1493 at (l=116.0, t=1062.0, r=964.0, b=1340.0)px, Tag: 'cloud-password'
+          |  |     | ContentDataType = 'AndroidContentDataType(androidAutofillType=1)'
+          |  |     | ContentType = 'androidx.compose.ui.autofill.AndroidContentType@5f57df3'
+          |  |     | EditableText = ''
+          |  |     | FillableData = 'androidx.compose.ui.autofill.AndroidFillableData@2d8dab0'
+          |  |     | Focused = 'false'
+          |  |     | ImeAction = 'Default'
+          |  |     | InputText = ''
+          |  |     | IsEditable = 'true'
+          |  |     | Text = '[应用密码, 坚果云用第三方应用密码；离开页面会清除未保存密码。]'
+          |  |     | TextSelectionRange = 'TextRange(0, 0)'
+          |  |     | [Password]
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, InsertTextAtCursor, OnClick, OnFillData, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText, SetTextSubstitution, ShowTextSubstitution]
+          |  |     | MergeDescendants = 'true'
+          |  |     |  |-Node #1499 at (l=812.0, t=1097.0, r=964.0, b=1223.0)px
+          |  |     |    Focused = 'false'
+          |  |     |    Role = 'Button'
+          |  |     |    Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+          |  |     |    Text = '[显示]'
+          |  |     |    Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |    MergeDescendants = 'true'
+          |  |     |-Node #1509 at (l=116.0, t=1372.0, r=964.0, b=1698.0)px, Tag: 'cloud-folder'
+          |  |     | ContentDataType = 'AndroidContentDataType(androidAutofillType=1)'
+          |  |     | EditableText = ''
+          |  |     | FillableData = 'androidx.compose.ui.autofill.AndroidFillableData@d16ed29'
+          |  |     | Focused = 'false'
+          |  |     | ImeAction = 'Default'
+          |  |     | InputText = ''
+          |  |     | IsEditable = 'true'
+          |  |     | Text = '[备份父目录（选填）, 例如 家庭/孕期资料。坚果云等服务商禁止在根目录写入与删除文件，请填写一个已存在的子目录；留空仅适用于允许根目录读写的服务。]'
+          |  |     | TextSelectionRange = 'TextRange(0, 0)'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, InsertTextAtCursor, OnClick, OnFillData, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText, SetTextSubstitution, ShowTextSubstitution]
+          |  |     | MergeDescendants = 'true'
+          |  |     |-Node #1521 at (l=116.0, t=1730.0, r=432.0, b=1856.0)px
+          |  |       Focused = 'false'
+          |  |       Role = 'Button'
+          |  |       Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+          |  |       Text = '[浏览云盘目录]'
+          |  |       Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+          |  |       MergeDescendants = 'true'
+          |  |-Node #1524 at (l=63.0, t=1940.0, r=1017.0, b=2379.0)px
+          |  | IsContainer = 'true'
+          |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 20.0.dp), topEnd = CornerSize(size = 20.0.dp), bottomEnd = CornerSize(size = 20.0.dp), bottomStart = CornerSize(size = 20.0.dp))'
+          |  |  |-Node #1525 at (l=116.0, t=1982.0, r=964.0, b=2337.0)px
+          |  |    Shape = 'RectangleShape'
+          |  |     |-Node #1526 at (l=116.0, t=1982.0, r=284.0, b=2043.0)px
+          |  |     | Text = '[连接测试]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #1527 at (l=116.0, t=2075.0, r=964.0, b=2168.0)px
+          |  |     | Text = '[测试会创建、回读并清理随机测试项目，不备份或覆盖已有资料。未能清理时会保留标记供下次重试。]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #1532 at (l=116.0, t=2200.0, r=524.0, b=2337.0)px
+          |  |     | Focused = 'false'
+          |  |     | Role = 'Button'
+          |  |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 26.0.dp), topEnd = CornerSize(size = 26.0.dp), bottomEnd = CornerSize(size = 26.0.dp), bottomStart = CornerSize(size = 26.0.dp))'
+          |  |     | Text = '[测试连接]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+          |  |     | MergeDescendants = 'true'
+          |  |     |-Node #1535 at (l=556.0, t=2200.0, r=964.0, b=2337.0)px
+          |  |       Role = 'Button'
+          |  |       Shape = 'RoundedCornerShape(topStart = CornerSize(size = 26.0.dp), topEnd = CornerSize(size = 26.0.dp), bottomEnd = CornerSize(size = 26.0.dp), bottomStart = CornerSize(size = 26.0.dp))'
+          |  |       Text = '[保存连接]'
+          |  |       [Disabled]
+          |  |       Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, SetTextSubstitution, ShowTextSubstitution]
+          |  |       MergeDescendants = 'true'
+          |  |-Node #1538 at (l=63.0, t=2421.0, r=1017.0, b=2675.0)px
+          |  | IsContainer = 'true'
+          |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 20.0.dp), topEnd = CornerSize(size = 20.0.dp), bottomEnd = CornerSize(size = 20.0.dp), bottomStart = CornerSize(size = 20.0.dp))'
+          |  |  |-Node #1539 at (l=116.0, t=2463.0, r=964.0, b=2633.0)px
+          |  |    Shape = 'RectangleShape'
+          |  |     |-Node #1540 at (l=116.0, t=2463.0, r=324.0, b=2538.0)px
+          |  |     | Text = '[云端备份]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #1541 at (l=116.0, t=2570.0, r=494.0, b=2633.0)px, Tag: 'cloud-backup-last'
+          |  |       Text = '[尚未成功上传过备份]'
+          |  |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |-Node #1542 at (l=63.0, t=2717.0, r=1017.0, b=3523.0)px
+          |  | IsContainer = 'true'
+          |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 20.0.dp), topEnd = CornerSize(size = 20.0.dp), bottomEnd = CornerSize(size = 20.0.dp), bottomStart = CornerSize(size = 20.0.dp))'
+          |  |  |-Node #1543 at (l=116.0, t=2759.0, r=964.0, b=3481.0)px
+          |  |    Shape = 'RectangleShape'
+          |  |     |-Node #1544 at (l=116.0, t=2759.0, r=284.0, b=2820.0)px
+          |  |     | Text = '[自动备份]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #1545 at (l=116.0, t=2852.0, r=788.0, b=2915.0)px, Tag: 'cloud-role'
+          |  |     | Text = '[本机：主设备（唯一自动上传设备）]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #1547 at (l=116.0, t=2979.0, r=452.0, b=3042.0)px
+          |  |     | Text = '[允许本机自动备份]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #1548 at (l=827.0, t=2968.0, r=964.0, b=3052.0)px, Tag: 'cloud-auto'
+          |  |     | ContentDataType = 'AndroidContentDataType(androidAutofillType=2)'
+          |  |     | FillableData = 'androidx.compose.ui.autofill.AndroidFillableData@5bba8ae'
+          |  |     | Focused = 'false'
+          |  |     | Role = 'Switch'
+          |  |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+          |  |     | ToggleableState = 'Off'
+          |  |     | Actions = [OnClick, OnFillData, RequestFocus]
+          |  |     | MergeDescendants = 'true'
+          |  |     |-Node #1551 at (l=116.0, t=3137.0, r=354.0, b=3200.0)px
+          |  |     | Text = '[仅 Wi-Fi 上传]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #1552 at (l=827.0, t=3126.0, r=964.0, b=3210.0)px, Tag: 'cloud-wifi'
+          |  |     | ContentDataType = 'AndroidContentDataType(androidAutofillType=2)'
+          |  |     | FillableData = 'androidx.compose.ui.autofill.AndroidFillableData@2e0064f'
+          |  |     | Focused = 'false'
+          |  |     | Role = 'Switch'
+          |  |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+          |  |     | ToggleableState = 'On'
+          |  |     | Actions = [OnClick, OnFillData, RequestFocus]
+          |  |     | MergeDescendants = 'true'
+          |  |     |-Node #1554 at (l=116.0, t=3263.0, r=333.0, b=3308.0)px
+          |  |     | Text = '[自动备份未开启]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #1555 at (l=116.0, t=3340.0, r=964.0, b=3481.0)px
+          |  |       Text = '[本机修改会在短暂合并后触发唯一备份任务；失败按指数退避重试。恢复到新设备时自动备份默认关闭，需明确选择主设备。]'
+          |  |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |-Node #1556 at (l=63.0, t=3565.0, r=1017.0, b=4247.0)px
+          |  | IsContainer = 'true'
+          |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 20.0.dp), topEnd = CornerSize(size = 20.0.dp), bottomEnd = CornerSize(size = 20.0.dp), bottomStart = CornerSize(size = 20.0.dp))'
+          |  |  |-Node #1557 at (l=116.0, t=3607.0, r=964.0, b=4205.0)px
+          |  |    Shape = 'RectangleShape'
+          |  |     |-Node #1558 at (l=116.0, t=3607.0, r=284.0, b=3668.0)px
+          |  |     | Text = '[云端清理]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #1559 at (l=116.0, t=3700.0, r=956.0, b=3763.0)px, Tag: 'cloud-cleanup-last'
+          |  |     | Text = '[尚未清理，备份成功后每天最多自动清理一次]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #1560 at (l=116.0, t=3795.0, r=964.0, b=3911.0)px, Tag: 'cloud-cleanup-blocked'
+          |  |     | IsContainer = 'true'
+          |  |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 16.0.dp), topEnd = CornerSize(size = 16.0.dp), bottomEnd = CornerSize(size = 16.0.dp), bottomStart = CornerSize(size = 16.0.dp))'
+          |  |     |  |-Node #1562 at (l=158.0, t=3827.0, r=446.0, b=3879.0)px
+          |  |     |    Text = '[请先保存云盘连接]'
+          |  |     |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #1563 at (l=116.0, t=3943.0, r=964.0, b=4080.0)px
+          |  |     | Role = 'Button'
+          |  |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 26.0.dp), topEnd = CornerSize(size = 26.0.dp), bottomEnd = CornerSize(size = 26.0.dp), bottomStart = CornerSize(size = 26.0.dp))'
+          |  |     | Text = '[立即清理]'
+          |  |     | [Disabled]
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, SetTextSubstitution, ShowTextSubstitution]
+          |  |     | MergeDescendants = 'true'
+          |  |     |-Node #1566 at (l=116.0, t=4112.0, r=964.0, b=4205.0)px
+          |  |       Text = '[只删除云端按保留策略淘汰的旧快照与无引用对象，不删除本机资料、历史资料库或其他设备目录。]'
+          |  |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |-Node #1567 at (l=63.0, t=4289.0, r=379.0, b=4415.0)px
+          |  | Focused = 'false'
+          |  | Role = 'Button'
+          |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+          |  | Text = '[重置连接设置]'
+          |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+          |  | MergeDescendants = 'true'
+          |  |-Node #1570 at (l=63.0, t=4457.0, r=1017.0, b=4550.0)px
+          |    Text = '[服务证书必须有效；应用不会忽略证书错误。云盘端仍能看到加密文件大小、数量和访问时间。]'
+          |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |-Node #1448 at (l=74.0, t=189.0, r=179.0, b=294.0)px, Tag: 'navigate-up'
+          | ContentDescription = '[返回上一级]'
+          | Focused = 'false'
+          | Role = 'Button'
+          | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+          | Actions = [OnClick, RequestFocus]
+          | MergeDescendants = 'true'
+          |-Node #1452 at (l=200.0, t=160.0, r=492.0, b=266.0)px
+          | Text = '[云盘连接]'
+          | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |-Node #1453 at (l=200.0, t=277.0, r=355.0, b=322.0)px
+            Text = '[返回上一级]'
+            Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]

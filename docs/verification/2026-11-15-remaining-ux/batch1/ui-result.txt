@@ -1,0 +1,11 @@
+
+cn.yunji.journal.CloudConnectionUiTest:....
+cn.yunji.journal.CloudCleanupUiTest:.......
+cn.yunji.journal.RestoreUiTest:.......
+cn.yunji.journal.UiSnapshotTest:.
+
+Time: 28.243
+
+OK (19 tests)
+
+

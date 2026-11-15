@@ -35,7 +35,7 @@ internal fun RootDeletionDialog(kind: String, id: String, model: JournalViewMode
         catch (_: Exception) { failed.value = true }
     }
     AlertDialog(onDismissRequest = close, modifier = Modifier.testTag("root-deletion-dialog"), title = { Text(when(kind){"PREGNANCY"->"删除这个孕期？";"MEDICATION"->"删除这个药品？";else->"删除这次产检？"}) },
-        text = { Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        text = { Column(Modifier.verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(12.dp)) {
             val counts = impact.collectAsState().value
             val hasFailed = failed.collectAsState().value
             if (counts == null) Text(if (hasFailed) "暂时无法核对影响范围，请稍后重试。" else "正在核对影响范围…")
@@ -52,6 +52,7 @@ internal fun RootDeletionDialog(kind: String, id: String, model: JournalViewMode
         dismissButton = { TextButton(close) { Text("取消") } })
 }
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 internal fun TrashScreen(model: JournalViewModel) {
     val focus = LocalFocusManager.current
@@ -86,7 +87,7 @@ internal fun TrashScreen(model: JournalViewModel) {
     }
     val filteredRetained = retained.filter { query.isBlank() || it.name.contains(query.trim(), ignoreCase = true) }
     LazyColumn(state = if (showRetained) retainedScroll else deletedScroll, contentPadding = PaddingValues(bottom = 32.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        item { Inset { Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+        item { Inset { FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             JournalTag(!showRetained, { showRetained = false }, label = { Text("删除的项目（$count）") })
             JournalTag(showRetained, { showRetained = true }, label = { Text("保留的资料（${retained.size}）") })
         } } }
@@ -98,6 +99,7 @@ internal fun TrashScreen(model: JournalViewModel) {
         item { Inset { OutlinedTextField(
             value = query, onValueChange = { query = it }, modifier = Modifier.fillMaxWidth().testTag("global-trash-search"),
             label = { Text("搜索回收站") }, placeholder = { Text("输入项目名称") }, singleLine = true,
+            shape=androidx.compose.foundation.shape.RoundedCornerShape(16.dp),
         ) } }
         if (showRetained) {
             if (filteredRetained.isEmpty()) item { Inset { JournalEmptyState(if (query.isBlank()) "暂无保留的资料" else "没有匹配的资料") } }
@@ -107,7 +109,7 @@ internal fun TrashScreen(model: JournalViewModel) {
                     Modifier.testTag("trash-retained-${document.id}"))
                 if (expandedRetainedId == document.id) JournalCard {
                     Text("原产检已删除，资料仍加密保存在本机。", style = MaterialTheme.typography.bodySmall)
-                    Row {
+                    FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                         JournalTextAction("查看资料", onClick = { selected = document.id })
                         JournalTextAction("重新关联产检", onClick = { relinking = document })
                         JournalTextAction("删除资料", danger = true, onClick = { confirmation = TrashConfirmation(document.id, batch = false, permanent = false) })
@@ -137,7 +139,7 @@ internal fun TrashScreen(model: JournalViewModel) {
                     if (batch.state == "PURGING") { Text("正在彻底清理，完成前会保留此状态"); LinearProgressIndicator(Modifier.fillMaxWidth()) }
                     else if (!restorable) Text(restoreReason.orEmpty(), style = MaterialTheme.typography.bodySmall)
                     purgeReason?.let {Text(it,style=MaterialTheme.typography.bodySmall)}
-                    Row {
+                    FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                         JournalTextAction("恢复", Modifier.testTag("restore-batch-${batch.id}"), enabled = restorable, onClick = { model.restoreBatch(batch.id) })
                         JournalTextAction(
                             if (batch.state == "PURGING") "重试清理" else "彻底删除",
@@ -163,7 +165,7 @@ internal fun TrashScreen(model: JournalViewModel) {
                     if (expandedDocumentId == document.id) JournalCard {
                         if (!parentAvailable) Text(if(document.medicationId!=null)"请先恢复所属药品或孕期" else "请先恢复所属孕期", style = MaterialTheme.typography.bodySmall)
                         if (purging) { Text("正在彻底清理…"); LinearProgressIndicator(Modifier.fillMaxWidth()) }
-                        Row {
+                        FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                             JournalTextAction("恢复", enabled = parentAvailable && !purging, onClick = { model.restoreDocument(document.id) })
                             JournalTextAction(if (purging) "重试清理" else "彻底删除", danger = true, onClick = { if (purging) model.purgeDocument(document.id) else confirmation = TrashConfirmation(document.id, false, true) })
                         }

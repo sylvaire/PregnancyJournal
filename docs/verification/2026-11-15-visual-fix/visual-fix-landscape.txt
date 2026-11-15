@@ -1,0 +1,12 @@
+
+cn.yunji.journal.ExtremeLayoutMatrixTest:........
+cn.yunji.journal.ExtremeLayoutMatrixPagesTest:......
+cn.yunji.journal.ContentHeadingLayoutTest:.
+cn.yunji.journal.UiSnapshotTest:.
+cn.yunji.journal.UiSnapshotCoverageTest:...
+
+Time: 116.194
+
+OK (19 tests)
+
+

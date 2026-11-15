@@ -1,0 +1,11 @@
+
+cn.yunji.journal.MainRestorePickerTest:..
+cn.yunji.journal.UiReviewRemainingPagesTest:..
+cn.yunji.journal.CloudCleanupUiTest:.
+cn.yunji.journal.PickerExperienceTest:....
+
+Time: 30.847
+
+OK (9 tests)
+
+

@@ -1,0 +1,120 @@
+
+cn.yunji.journal.CardContentLayoutTest:...
+cn.yunji.journal.UiSnapshotTest:...........
+cn.yunji.journal.UiSnapshotCoverageTest:
+Error in snap19ActualVisitEditor(cn.yunji.journal.UiSnapshotCoverageTest):
+java.lang.AssertionError: Failed: assertExists.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains '关联预约' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.assertExists(SemanticsNodeInteraction.kt:125)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.assertExists$default(SemanticsNodeInteraction.kt:124)
+	at cn.yunji.journal.UiSnapshotCoverageTest.snap19ActualVisitEditor(UiSnapshotCoverageTest.kt:365)
+
+Error in snap16Timeline(cn.yunji.journal.UiSnapshotCoverageTest):
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 10000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at cn.yunji.journal.UiSnapshotCoverageTest.snap16Timeline(UiSnapshotCoverageTest.kt:326)
+.
+Error in snap06TrashEmpty(cn.yunji.journal.UiSnapshotCoverageTest):
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 10000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at cn.yunji.journal.UiSnapshotCoverageTest.snap06TrashEmpty(UiSnapshotCoverageTest.kt:166)
+................
+cn.yunji.journal.UiReviewRemainingPagesTest:...................
+cn.yunji.journal.VisitReminderCardTest:...
+cn.yunji.journal.ContentHeadingLayoutTest:.
+cn.yunji.journal.UiStateMatrixTest:
+Error in s2TimelineEmptyState(cn.yunji.journal.UiStateMatrixTest):
+java.lang.AssertionError: Assert failed: The component with Text + InputText + EditableText contains '日常记录' (ignoreCase: false) is not displayed!
+	at androidx.compose.ui.test.AssertionsKt.assertIsDisplayed(Assertions.kt:34)
+	at cn.yunji.journal.UiStateMatrixTest.s2TimelineEmptyState(UiStateMatrixTest.kt:31)
+
+Error in s7DocumentFailedShowsRetryAndReselect(cn.yunji.journal.UiStateMatrixTest):
+java.lang.AssertionError: Failed to inject touch input.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains '图片' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performTouchInput(Actions.kt:402)
+	at androidx.compose.ui.test.AndroidActions.performClickImpl(Actions.android.kt:23)
+	at androidx.compose.ui.test.ActionsKt.performClick(Actions.kt:60)
+	at cn.yunji.journal.UiStateMatrixTest.s7DocumentFailedShowsRetryAndReselect(UiStateMatrixTest.kt:114)
+......
+Error in s5DocumentEmptyState(cn.yunji.journal.UiStateMatrixTest):
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 10000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at cn.yunji.journal.UiStateMatrixTest.s5DocumentEmptyState(UiStateMatrixTest.kt:75)
+
+cn.yunji.journal.UiReviewRegressionTest:..
+Error in calendarDatesDescribeDateAndSelection(cn.yunji.journal.UiReviewRegressionTest):
+java.lang.AssertionError: Action performScrollTo() failed.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (ContentDescription = '2026年11月15日 星期日' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:81)
+	at cn.yunji.journal.UiReviewRegressionTest.calendarDatesDescribeDateAndSelection(UiReviewRegressionTest.kt:107)
+......
+
+Time: 260.905
+There were 7 failures:
+1) snap19ActualVisitEditor(cn.yunji.journal.UiSnapshotCoverageTest)
+java.lang.AssertionError: Failed: assertExists.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains '关联预约' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.assertExists(SemanticsNodeInteraction.kt:125)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.assertExists$default(SemanticsNodeInteraction.kt:124)
+	at cn.yunji.journal.UiSnapshotCoverageTest.snap19ActualVisitEditor(UiSnapshotCoverageTest.kt:365)
+2) snap16Timeline(cn.yunji.journal.UiSnapshotCoverageTest)
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 10000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at cn.yunji.journal.UiSnapshotCoverageTest.snap16Timeline(UiSnapshotCoverageTest.kt:326)
+3) snap06TrashEmpty(cn.yunji.journal.UiSnapshotCoverageTest)
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 10000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at cn.yunji.journal.UiSnapshotCoverageTest.snap06TrashEmpty(UiSnapshotCoverageTest.kt:166)
+4) s2TimelineEmptyState(cn.yunji.journal.UiStateMatrixTest)
+java.lang.AssertionError: Assert failed: The component with Text + InputText + EditableText contains '日常记录' (ignoreCase: false) is not displayed!
+	at androidx.compose.ui.test.AssertionsKt.assertIsDisplayed(Assertions.kt:34)
+	at cn.yunji.journal.UiStateMatrixTest.s2TimelineEmptyState(UiStateMatrixTest.kt:31)
+5) s7DocumentFailedShowsRetryAndReselect(cn.yunji.journal.UiStateMatrixTest)
+java.lang.AssertionError: Failed to inject touch input.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains '图片' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performTouchInput(Actions.kt:402)
+	at androidx.compose.ui.test.AndroidActions.performClickImpl(Actions.android.kt:23)
+	at androidx.compose.ui.test.ActionsKt.performClick(Actions.kt:60)
+	at cn.yunji.journal.UiStateMatrixTest.s7DocumentFailedShowsRetryAndReselect(UiStateMatrixTest.kt:114)
+6) s5DocumentEmptyState(cn.yunji.journal.UiStateMatrixTest)
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 10000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at cn.yunji.journal.UiStateMatrixTest.s5DocumentEmptyState(UiStateMatrixTest.kt:75)
+7) calendarDatesDescribeDateAndSelection(cn.yunji.journal.UiReviewRegressionTest)
+java.lang.AssertionError: Action performScrollTo() failed.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (ContentDescription = '2026年11月15日 星期日' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:81)
+	at cn.yunji.journal.UiReviewRegressionTest.calendarDatesDescribeDateAndSelection(UiReviewRegressionTest.kt:107)
+
+FAILURES!!!
+Tests run: 75,  Failures: 7
+
+

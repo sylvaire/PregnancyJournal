@@ -1,0 +1,31 @@
+
+cn.yunji.journal.RecoveryUiTest:...
+Error in productionReclaimPanelReclaimsPreviousGenerationThroughRealVault(cn.yunji.journal.RecoveryUiTest):
+java.lang.AssertionError: Failed: assertExists.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains '回收恢复前的旧资料？' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.assertExists(SemanticsNodeInteraction.kt:125)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.assertExists$default(SemanticsNodeInteraction.kt:124)
+	at cn.yunji.journal.RecoveryUiTest.productionReclaimPanelReclaimsPreviousGenerationThroughRealVault(RecoveryUiTest.kt:152)
+..
+cn.yunji.journal.CloudConnectionUiTest:....
+cn.yunji.journal.CloudCleanupUiTest:.......
+
+Time: 22.326
+There was 1 failure:
+1) productionReclaimPanelReclaimsPreviousGenerationThroughRealVault(cn.yunji.journal.RecoveryUiTest)
+java.lang.AssertionError: Failed: assertExists.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (Text + InputText + EditableText contains '回收恢复前的旧资料？' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.assertExists(SemanticsNodeInteraction.kt:125)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.assertExists$default(SemanticsNodeInteraction.kt:124)
+	at cn.yunji.journal.RecoveryUiTest.productionReclaimPanelReclaimsPreviousGenerationThroughRealVault(RecoveryUiTest.kt:152)
+
+FAILURES!!!
+Tests run: 17,  Failures: 1
+
+

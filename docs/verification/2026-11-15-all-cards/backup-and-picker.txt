@@ -1,0 +1,20 @@
+
+cn.yunji.journal.RecoveryUiTest:......
+cn.yunji.journal.UiReviewRemainingPagesTest:
+Error in packagingPhotosAndImportOptions(cn.yunji.journal.UiReviewRemainingPagesTest):
+java.lang.AssertionError: Assert failed: The component with TestTag = 'document-add' is not displayed!
+	at androidx.compose.ui.test.AssertionsKt.assertIsDisplayed(Assertions.kt:34)
+	at cn.yunji.journal.UiReviewRemainingPagesTest.packagingPhotosAndImportOptions(UiReviewRemainingPagesTest.kt:170)
+
+
+Time: 12.43
+There was 1 failure:
+1) packagingPhotosAndImportOptions(cn.yunji.journal.UiReviewRemainingPagesTest)
+java.lang.AssertionError: Assert failed: The component with TestTag = 'document-add' is not displayed!
+	at androidx.compose.ui.test.AssertionsKt.assertIsDisplayed(Assertions.kt:34)
+	at cn.yunji.journal.UiReviewRemainingPagesTest.packagingPhotosAndImportOptions(UiReviewRemainingPagesTest.kt:170)
+
+FAILURES!!!
+Tests run: 7,  Failures: 1
+
+

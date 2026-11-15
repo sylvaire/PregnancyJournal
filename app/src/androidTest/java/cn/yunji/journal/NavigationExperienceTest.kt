@@ -327,7 +327,7 @@ class NavigationExperienceTest {
         val point = runBlocking { db.journalDao().occurrencesForDate(pregnancyId, date.toString()).single() }
         ui.onNodeWithText("我的").performClick(); settle()
         ui.onNodeWithText("服药记录").performScrollTo().performClick(); settle()
-        listOf("今天", "历史", "方案", "补记").forEach { ui.onNodeWithText(it, substring = false).assertExists() }
+        listOf("今天", "历史", "方案", "补记服药").forEach { ui.onNodeWithText(it, substring = false).assertExists() }
         ui.waitUntil(10_000) {
             runCatching { ui.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasTestTag("intake-point-${point.id}")) }.isSuccess
         }
@@ -366,7 +366,8 @@ class NavigationExperienceTest {
         val compactShot = File(ApplicationProvider.getApplicationContext<android.content.Context>().getExternalFilesDir(null), "verification/c02-history-collapsed.png").apply { parentFile!!.mkdirs() }
         compactShot.outputStream().use { ui.onNodeWithTag("服药记录").captureToImage().asAndroidBitmap().compress(android.graphics.Bitmap.CompressFormat.PNG, 100, it) }
         ui.onNodeWithTag("intake-history-${record.id}").performScrollTo().performClick(); settle()
-        ui.onNodeWithText("实际用量 0.25 片").assertExists()
+        ui.onAllNodesWithText("实际用量").assertCountEquals(2)
+        ui.onAllNodesWithText("0.25 片").assertCountEquals(2)
         ui.onNodeWithText("修改记录").performScrollTo().performClick(); settle()
         ui.onNodeWithTag("intake-dose").performScrollTo().performTextReplacement("0.5")
         ui.onNodeWithContentDescription("返回上一级").performClick(); settle()
@@ -378,7 +379,7 @@ class NavigationExperienceTest {
         ui.onNodeWithTag("confirm-intake-removal").performClick(); settle()
         ui.onNodeWithText("撤销").performClick(); settle()
         ui.waitUntil(10_000) { runBlocking { db.journalDao().intake(record.id)?.deletedAt == null } }
-        ui.onNodeWithText("补记服药").performScrollTo().performClick(); settle()
+        ui.onNodeWithText("补记服药").assertIsDisplayed().performClick(); settle()
         val manualShot = File(ApplicationProvider.getApplicationContext<android.content.Context>().getExternalFilesDir(null), "verification/c02-manual-editor.png").apply { parentFile!!.mkdirs() }
         manualShot.outputStream().use { ui.onRoot().captureToImage().asAndroidBitmap().compress(android.graphics.Bitmap.CompressFormat.PNG, 100, it) }
         clickSaveAfterKeyboardSettles("保存服药记录")
@@ -393,7 +394,7 @@ class NavigationExperienceTest {
         ui.onNodeWithContentDescription("返回上一级").performClick(); settle()
         ui.onNodeWithText("今天", substring = false).performClick(); settle()
         ui.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasText("今日服药记录"))
-        ui.waitUntil(5_000) { ui.onAllNodesWithText("固定计划1项 · 已服用1项 · 已跳过0项 · 未记录0项").fetchSemanticsNodes().isNotEmpty() }
+        ui.waitUntil(5_000) { ui.onAllNodesWithText("今天的固定计划已全部记录").fetchSemanticsNodes().isNotEmpty() }
         ui.onNodeWithText("另有补记1条").assertExists()
         val homeShot = File(context.getExternalFilesDir(null), "verification/c02-home.png")
         homeShot.outputStream().use { ui.onRoot().captureToImage().asAndroidBitmap().compress(android.graphics.Bitmap.CompressFormat.PNG, 100, it) }
@@ -410,14 +411,14 @@ class NavigationExperienceTest {
         ui.onNodeWithTag("medication-dose").performScrollTo().performTextInput("0.125")
         ui.onNodeWithTag("medication-unit").performTextInput("片")
         ui.onNodeWithText("固定时刻，例如08:00,20:00").performScrollTo().performTextInput("08:00,20:00")
-        ui.onNodeWithText("保存用药方案").performScrollTo().performClick(); settle()
+        clickSaveAfterKeyboardSettles("保存用药方案")
         // 全量矩阵负载下数据库写入可能晚于 5s；这里等待产品结果而非固定时长。
         ui.waitUntil(20_000) { runBlocking { db.journalDao().allMedicationPlans().size == 1 } }
         ui.onNodeWithText("每次 0.125 片").assertExists()
         ui.onNodeWithText("修改方案").performScrollTo().performClick(); settle()
         ui.onNodeWithTag("medication-dose").performScrollTo().performTextReplacement("0.25")
         ui.onNodeWithTag("medication-dose").assertTextContains("0.25")
-        ui.onNodeWithText("保存用药方案").performScrollTo().performClick(); settle()
+        clickSaveAfterKeyboardSettles("保存用药方案")
         ui.waitUntil(20_000) { runBlocking { db.journalDao().allMedicationPlans().size == 2 } }
         ui.onNodeWithText("历史版本").performScrollTo().performClick(); settle()
         ui.onNodeWithText("每次 0.25 片").assertExists()
@@ -824,7 +825,9 @@ class NavigationExperienceTest {
         ui.waitUntil(5_000) { ui.onAllNodesWithText("bad:name").fetchSemanticsNodes().isNotEmpty() }
         // 确保输入已进入控制器状态，再触发校验（全量负载下文本/状态同步可能晚于控件显示）。
         ui.waitUntil(10_000) { model.cloud.state.value.username == "bad:name" }
-        ui.onNodeWithText("测试连接").performScrollTo().performClick();settle()
+        captureUiReview("cloud-before-invalid-test")
+        clickSaveAfterKeyboardSettles("测试连接")
+        captureUiReview("cloud-after-invalid-test")
         // 以控制器状态断言非法字符文案（全量负载下 UI 文本节点可能延迟；空白账号用例已覆盖文案渲染）。
         ui.waitUntil(15_000) { model.cloud.state.value.message.orEmpty().contains("冒号") }
         assertTrue(model.cloud.state.value.message.orEmpty().contains("请检查账号"))
@@ -1049,7 +1052,10 @@ class NavigationExperienceTest {
         ui.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasText("下月", substring = false))
         ui.onNodeWithText("下月", substring = false).performClick(); settle()
         ui.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasText("下月测试", substring = true))
+        captureUiReview("calendar-before-open")
         ui.onNodeWithText("下月测试", substring = true).performClick(); settle()
+        captureUiReview("calendar-after-open")
+        ui.onNodeWithTag("visit-detail-list").assertIsDisplayed()
         ui.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasText("取消这次预约"))
         ui.onNodeWithText("取消这次预约").performClick()
         ui.onNodeWithText("确认取消").performClick(); settle()
@@ -1122,6 +1128,13 @@ class NavigationExperienceTest {
      * Evidence-only capture. Compose test cannot read pixels from dialog windows below API 28, so on
      * those devices the file records the skip instead of failing the behaviour assertions around it.
      */
+    private fun captureUiReview(name: String) {
+        val context = ApplicationProvider.getApplicationContext<android.content.Context>()
+        val dir = File(context.getExternalFilesDir(null), "verification/ui-review-diagnostics").apply { mkdirs() }
+        File(dir, "$name.png").outputStream().use { ui.onRoot().captureToImage().asAndroidBitmap().compress(android.graphics.Bitmap.CompressFormat.PNG, 100, it) }
+        File(dir, "$name.txt").writeText(ui.onRoot().printToString())
+    }
+
     private fun captureNode(target: File, tag: String) {
         if (Build.VERSION.SDK_INT < 28) {
             target.writeText("skipped on API ${Build.VERSION.SDK_INT}: dialog capture requires API 28+\n")

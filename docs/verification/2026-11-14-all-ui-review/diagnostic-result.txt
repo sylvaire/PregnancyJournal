@@ -1,0 +1,39 @@
+
+cn.yunji.journal.NavigationExperienceTest:
+Error in calendarMonthAndCancellationRemainConsistentAfterReturning(cn.yunji.journal.NavigationExperienceTest):
+java.lang.AssertionError: No node found that matches Text + InputText + EditableText contains '取消这次预约' (ignoreCase: false) in scrollable container
+Semantics of the node:
+Node #763 at (l=0.0, t=354.0, r=1080.0, b=2337.0)px
+IsTraversalGroup = 'true'
+Shape = 'androidx.compose.foundation.VerticalScrollableClipShape@2cae8a1'
+VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'
+Actions = [ScrollBy, ScrollByOffset]
+Has 7 children, 3 siblings
+Selector used: ((ScrollBy is defined)[0])
+
+	at androidx.compose.ui.test.ActionsKt.performScrollToNode(Actions.kt:241)
+	at cn.yunji.journal.NavigationExperienceTest.calendarMonthAndCancellationRemainConsistentAfterReturning(NavigationExperienceTest.kt:1058)
+.
+cn.yunji.journal.UiReviewRegressionTest:.
+cn.yunji.journal.UiReviewRemainingPagesTest:.
+
+Time: 25.827
+There was 1 failure:
+1) calendarMonthAndCancellationRemainConsistentAfterReturning(cn.yunji.journal.NavigationExperienceTest)
+java.lang.AssertionError: No node found that matches Text + InputText + EditableText contains '取消这次预约' (ignoreCase: false) in scrollable container
+Semantics of the node:
+Node #763 at (l=0.0, t=354.0, r=1080.0, b=2337.0)px
+IsTraversalGroup = 'true'
+Shape = 'androidx.compose.foundation.VerticalScrollableClipShape@2cae8a1'
+VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'
+Actions = [ScrollBy, ScrollByOffset]
+Has 7 children, 3 siblings
+Selector used: ((ScrollBy is defined)[0])
+
+	at androidx.compose.ui.test.ActionsKt.performScrollToNode(Actions.kt:241)
+	at cn.yunji.journal.NavigationExperienceTest.calendarMonthAndCancellationRemainConsistentAfterReturning(NavigationExperienceTest.kt:1058)
+
+FAILURES!!!
+Tests run: 4,  Failures: 1
+
+

@@ -65,7 +65,7 @@ internal fun RecordsHub(title: String?,canCreate: Boolean,timeline: ()->Unit,jou
         Triple("用药方案", "药品、方案与历史版本", "用药") to medications,
         Triple("服药记录", "按日计划、确认与补记", "用药") to intakes,
     )
-    val icons = mapOf("孕期时间线" to "5fbe7.svg", "日常记录" to "ic-notebook.svg", "全部资料" to "ic-file-text.svg",
+    val icons = mapOf("孕期时间线" to "ic-history.svg", "日常记录" to "ic-notebook.svg", "全部资料" to "ic-file-text.svg",
         "用药方案" to "ic-pill.svg", "服药记录" to "ic-notebook.svg", "健康指标" to "ic-activity.svg")
     val visible = destinations.filter { (entry, _) ->
         (category == "全部" || entry.third == category) &&
@@ -105,6 +105,14 @@ internal fun TimelineScreen(pregnancy: PregnancyEntity?,initialType: String,mode
     val list=rememberLazyListState()
     val events=remember(state.events,type){state.events.filter {type.isEmpty() || it.type==type}}
     val entries=remember(state.snapshot){state.snapshot?.entries.orEmpty().associateBy {it.id}}
+    var today by remember {mutableStateOf(LocalDate.now())}
+    var now by remember {mutableLongStateOf(System.currentTimeMillis())}
+    LaunchedEffect(Unit) {while(true){today=LocalDate.now();now=System.currentTimeMillis();kotlinx.coroutines.delay(30_000)}}
+    val scheduledIds=state.snapshot?.visits.orEmpty().filter {it.visit.status=="SCHEDULED" && it.visit.deletedAt==null}.map {it.visit.id}.toSet()
+    val upcoming=events.filter {it.type=="VISIT" && it.id in scheduledIds && (it.instant?.let {at->at>=now} ?: (it.date>=today.toString()))}
+        .sortedWith(compareBy<TimelineEvent>{it.date}.thenBy {it.time ?: "99:99"})
+    val upcomingKeys=upcoming.map {it.key}.toSet()
+    val recorded=events.filter {it.key !in upcomingKeys}
     Column(Modifier.fillMaxSize().testTag("timeline-screen")) {
         LazyColumn(state=list,modifier=Modifier.weight(1f).testTag("timeline-list"),
             contentPadding=PaddingValues(horizontal=24.dp,vertical=8.dp),verticalArrangement=Arrangement.spacedBy(12.dp)) {
@@ -115,8 +123,14 @@ internal fun TimelineScreen(pregnancy: PregnancyEntity?,initialType: String,mode
             else if(state.failed) item {Inset { JournalError("时间线暂时无法读取，请返回后重试。原记录未改变。") }}
             else if(state.snapshot==null) item {Text("所属孕期已删除或不可用。")}
             else if(events.isEmpty()) item {JournalEmptyState("还没有这类记录","可写一条日常记录，或从产检、用药和健康指标录入。")}
-            events.groupBy {it.date}.forEach {(date,rows)->
-                item(key="day-$date",contentType="day") {DateGroupHeader(date,gestationalLabel(pregnancy,date))}
+            if(upcoming.isNotEmpty()) item(key="upcoming-heading") {JournalSectionTitle("即将到来的预约")}
+            upcoming.groupBy {it.date}.forEach {(date,rows)->
+                item(key="upcoming-$date",contentType="day") {DateGroupHeader(date,gestationalLabel(pregnancy,date))}
+                items(rows,key={it.key},contentType={it.type}) {event -> TimelineEntry(event=event,journalEntry=null,open={open(event)})}
+            }
+            if(upcoming.isNotEmpty() && recorded.isNotEmpty()) item(key="recorded-heading") {JournalSectionTitle("历史与记录")}
+            recorded.groupBy {it.date}.forEach {(date,rows)->
+                item(key="recorded-$date",contentType="day") {DateGroupHeader(date,gestationalLabel(pregnancy,date))}
                 items(rows,key={it.key},contentType={it.type}) {event ->
                     TimelineEntry(event=event,journalEntry=entries[event.id],open={open(event)})
                 }
@@ -262,7 +276,7 @@ internal fun JournalEntryEditorScreen(form: JournalEntryForm,model: JournalViewM
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(horizontal=24.dp),verticalArrangement=Arrangement.spacedBy(12.dp)) {
         JournalCard {
             DateField("发生日期",form.date,{update(form.copy(date=it))},required=true,maxDate=LocalDate.now(ZoneId.of(form.zoneId)),enabled=!busy)
-            JournalField(form.time,{update(form.copy(time=it))}, "发生时间（选填，24小时制）", enabled=!busy,
+            RecordTimeField(form.time,{update(form.copy(time=it))}, "发生时间（选填，24小时制）", enabled=!busy,
                 modifier=Modifier.testTag("journal-time"))
             if(form.time.isNotBlank()) JournalTextAction("设为时间未记录", enabled=!busy, onClick={update(form.copy(time="",offsetSeconds=null))})
             Text("记录时区：${form.zoneId}",style=MaterialTheme.typography.bodySmall,
@@ -278,8 +292,9 @@ internal fun JournalEntryEditorScreen(form: JournalEntryForm,model: JournalViewM
             JournalField(form.text,{update(form.copy(text=it))}, "日常备注（选填）", singleLine=false, minLines=3,
                 modifier=Modifier.testTag("journal-text"), isError=form.text.length>10_000, enabled=!busy)
         }
-        JournalSectionTitle("保存前请确认")
-        RecordRow("症状、心情、备注至少填一项", "这些内容仅供个人整理", "cdc29.svg")
+        if (form.symptom.isBlank() && form.mood.isBlank() && form.text.isBlank()) {
+            RecordRow("症状、心情、备注至少填一项", "这些内容仅供个人整理", "cdc29.svg")
+        }
         JournalButton("保存日常记录",enabled=!busy,onClick=model::saveJournalEntry)
         Text("日期可调整，发生时间可以留空；返回会保留草稿。",style=MaterialTheme.typography.bodySmall)
         Spacer(Modifier.height(24.dp))

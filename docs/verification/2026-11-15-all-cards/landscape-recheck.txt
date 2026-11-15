@@ -1,0 +1,10 @@
+
+cn.yunji.journal.UiSnapshotCoverageTest:...
+cn.yunji.journal.UiStateMatrixTest:...
+cn.yunji.journal.UiReviewRegressionTest:.
+
+Time: 27.336
+
+OK (7 tests)
+
+

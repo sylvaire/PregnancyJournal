@@ -5,12 +5,14 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.platform.testTag
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.compose.LocalLifecycleOwner
@@ -48,35 +50,59 @@ internal fun HomeIntakeSummary(pregnancyId: String, date: LocalDate, model: Jour
     val activeIds = points.filter { it.deletedAt == null && it.state == "ACTIVE" }.map { it.id }.toSet()
     val taken = records.count { it.occurrenceId in activeIds && it.status == "TAKEN" }
     val skipped = records.count { it.occurrenceId in activeIds && it.status == "SKIPPED" }
-    JournalCard(soft = true) {
-        Text("今日服药记录", style = MaterialTheme.typography.titleLarge)
-        Text(when { loading -> "正在读取今日计划…"; failed -> "暂时无法读取计划，请打开记录重试"; activeIds.isEmpty() -> "今天没有固定服药计划"; else -> "固定计划${activeIds.size}项 · 已服用${taken}项 · 已跳过${skipped}项 · 未记录${activeIds.size - taken - skipped}项" })
-        val manual = records.count { it.sourceOccurrenceId == null && it.eventDate == date.toString() }
-        if (manual > 0) Text("另有补记${manual}条", style = MaterialTheme.typography.bodySmall)
-        JournalTextAction("查看服药记录", onClick = open)
-    }
+    val recordedIds=records.mapNotNull {it.occurrenceId}.toSet()
+    val next=points.filter {it.id in activeIds && it.id !in recordedIds}.minByOrNull {it.scheduledAt}
+    HomeIntakeSummaryCard(loading, failed, activeIds.size, taken, skipped, next?.localTime?.take(5),
+        records.count { it.sourceOccurrenceId == null && it.eventDate == date.toString() }, open)
 }
 
-/** Keep the Today schedule stable while showing the current medication state. */
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
-internal fun HomePendingIntakeRow(pregnancyId:String,date:LocalDate,model:JournalViewModel,open:()->Unit) {
-    val versions by remember(pregnancyId,model) {model.intakes.versions(pregnancyId)}.collectAsStateWithLifecycle(emptyList())
-    val points by remember(pregnancyId,date,model) {model.intakes.occurrences(pregnancyId,date.toString())}.collectAsStateWithLifecycle(emptyList())
-    val records by remember(pregnancyId,model) {model.intakes.history(pregnancyId)}.collectAsStateWithLifecycle(emptyList())
-    LaunchedEffect(pregnancyId,date,versions) {
-        runCatching {model.intakes.ensureDay(pregnancyId,date,ZoneId.systemDefault())}
-    }
-    val recorded=remember(records) {records.mapNotNull {it.occurrenceId}.toSet()}
-    val pending=points.filter {it.deletedAt==null && it.state=="ACTIVE" && it.id !in recorded}
-        .minByOrNull {it.scheduledAt}
-    val active=points.any {it.deletedAt==null && it.state=="ACTIVE"}
-    when {
-        pending!=null -> RecordRow("${pending.localTime.take(5)} · 用药待确认","按已保存的方案记录服药情况","ic-pill.svg",open)
-        active -> RecordRow("今天的用药已记录","查看今日服药记录","ic-pill.svg",open)
-        else -> RecordRow("今天没有固定服药计划","查看服药记录或按需补记","ic-pill.svg",open)
+internal fun HomeIntakeSummaryCard(loading: Boolean, failed: Boolean, total: Int, taken: Int,
+    skipped: Int, nextTime: String?, manual: Int, open: () -> Unit) {
+    val ready = !loading && !failed
+    val pending = (total - taken - skipped).coerceAtLeast(0)
+    JournalCard(soft = ready && nextTime != null) {
+        FlowRow(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween,
+            verticalArrangement = Arrangement.spacedBy(4.dp)) {
+            Text("今日服药记录", Modifier.align(Alignment.CenterVertically), style = MaterialTheme.typography.titleMedium)
+            JournalTextAction("查看服药记录", Modifier.align(Alignment.CenterVertically), onClick = open)
+        }
+        when {
+            loading -> Text("正在读取今日计划…", style = MaterialTheme.typography.bodyMedium)
+            failed -> Text("暂时无法读取计划，请打开记录重试", style = MaterialTheme.typography.bodyMedium)
+            total == 0 -> Text("今天没有固定服药计划", style = MaterialTheme.typography.bodyMedium)
+            nextTime != null -> FlowRow(Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(24.dp, Alignment.Start),
+                verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                    Text("下一项 · 用药待确认", style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    Text(nextTime, style = MaterialTheme.typography.headlineMedium,
+                        color = MaterialTheme.colorScheme.primary)
+                }
+                Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                    Text("未记录", style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    Text("$pending 项", style = MaterialTheme.typography.headlineMedium,
+                        color = MaterialTheme.colorScheme.onSurface)
+                }
+            }
+            else -> Text("今天的固定计划已全部记录", style = MaterialTheme.typography.bodyMedium)
+        }
+        if (ready && total > 0) {
+            FlowRow(horizontalArrangement = Arrangement.spacedBy(16.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                for (stat in listOf("固定计划 $total 项", "已服用 $taken 项", "已跳过 $skipped 项")) {
+                    Text(stat, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                }
+            }
+        }
+        if (ready && manual > 0) Text("另有补记${manual}条", style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant)
     }
 }
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 internal fun IntakeScreen(pregnancyId: String?, model: JournalViewModel, openPlans: () -> Unit, open: (String?, String?, String, String) -> Unit) {
     if (pregnancyId == null) { Inset { Text("请先创建或恢复孕期档案。") }; return }
@@ -131,18 +157,18 @@ internal fun IntakeScreen(pregnancyId: String?, model: JournalViewModel, openPla
         (!manualOnly || record.sourceOccurrenceId == null) &&
             (historyQuery.isBlank() || record.eventDate.contains(historyQuery.trim()) || drugName.contains(historyQuery.trim(), ignoreCase = true))
     }
-    LazyColumn(Modifier.testTag("intake-list"), contentPadding = PaddingValues(bottom = 32.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        item { Inset { Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+    Column(Modifier.fillMaxSize()) {
+    LazyColumn(Modifier.weight(1f).testTag("intake-list"), contentPadding = PaddingValues(bottom = 24.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        item { Inset { FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             JournalTag(!history, { history = false; manualOnly = false }, label = { Text("今天") })
             JournalTag(history, { history = true; manualOnly = false }, label = { Text("历史") })
             JournalTag(false, openPlans, label = { Text("方案") })
-            JournalTag(false, { open(null, null, "TAKEN", date) }, label = { Text("补记") }, enabled = versions.isNotEmpty())
         } } }
         if (!history) {
-            item { Inset { OutlinedTextField(dayQuery, { dayQuery = it }, modifier = Modifier.fillMaxWidth().testTag("intake-day-search"), label = { Text("搜索服药记录") }, placeholder = { Text("输入药品名称或计划时间") }, singleLine = true) } }
-            item { Inset { Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                Text(if (date == today.toString()) "今天的服药" else "${displayDate(date)}的服药", style = MaterialTheme.typography.titleLarge)
-                JournalTextAction("切换日期", onClick = { datePickerExpanded = !datePickerExpanded })
+            item { Inset { OutlinedTextField(dayQuery, { dayQuery = it }, modifier = Modifier.fillMaxWidth().testTag("intake-day-search"), label = { Text("搜索服药记录") }, placeholder = { Text("输入药品名称或计划时间") }, singleLine = true, shape=RoundedCornerShape(16.dp)) } }
+            item { Inset { FlowRow(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                Text(if (date == today.toString()) "今天的服药" else "${displayDate(date)}的服药", Modifier.align(Alignment.CenterVertically), style = MaterialTheme.typography.titleLarge)
+                JournalTextAction("切换日期", Modifier.align(Alignment.CenterVertically), onClick = { datePickerExpanded = !datePickerExpanded })
             } } }
             if (datePickerExpanded) {
                 item { Inset { DateField("计划日期", date, { date = it }, required = true) } }
@@ -163,17 +189,21 @@ internal fun IntakeScreen(pregnancyId: String?, model: JournalViewModel, openPla
                 val name = plan?.medicationName?.takeIf { it.isNotBlank() } ?: drug?.name ?: "药品"
                 val state = when (record?.status) { "TAKEN" -> "已服用"; "SKIPPED" -> "已跳过"; else -> "待确认" }
                 Inset {
-                    RecordRow("${point.localTime.take(5)} · $state", name, "cdc29.svg", { expanded = !expanded }, Modifier.testTag("intake-point-${point.id}"))
+                    IntakeRecordCard(name,state,"计划时刻",point.localTime.take(5),"${if(record==null) "固定计划" else "计划记录"} · 第${plan?.version ?: "?"}版方案",
+                        if(record?.status=="TAKEN") "实际用量" else "方案用量",
+                        if(record?.status=="TAKEN") intakeDose(record.dose,record.unit) else intakeDose(plan?.dose,plan?.unit),
+                        expanded,Modifier.testTag("intake-point-${point.id}")) {expanded=!expanded}
                     if (expanded) JournalCard {
-                        Text("计划 ${displayDateTime(point.plannedDate, point.localTime)} · 第${plan?.version ?: "?"}版", style = MaterialTheme.typography.bodySmall)
-                        if (plan?.dose != null) Text("方案用量 ${plan.dose} ${plan.unit}", style = MaterialTheme.typography.bodySmall)
-                        Text("计划时区：${point.zoneId}", style = MaterialTheme.typography.bodySmall)
-                        if (record == null) Row {
+                        JournalKeyValue("计划时间",displayDateTime(point.plannedDate,point.localTime))
+                        JournalKeyValue("方案版本","第${plan?.version ?: "?"}版")
+                        if (plan?.dose != null) JournalKeyValue("方案用量",intakeDose(plan.dose,plan.unit))
+                        JournalKeyValue("计划时区",point.zoneId)
+                        if (record == null) FlowRow(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.End) {
                             JournalTextAction("已服用", Modifier.testTag("take-${point.id}"), onClick = { open(point.id, null, "TAKEN", date) })
                             JournalTextAction("跳过", onClick = { open(point.id, null, "SKIPPED", date) })
                         } else {
                             IntakeSummary(record)
-                            Row {
+                            FlowRow(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.End) {
                                 JournalTextAction("修改记录", onClick = { open(point.id, record.id, record.status, date) })
                                 JournalTextAction("删除记录", danger = true, onClick = { removing = record.id })
                             }
@@ -194,27 +224,28 @@ internal fun IntakeScreen(pregnancyId: String?, model: JournalViewModel, openPla
                 var expanded by rememberSaveable(record.id) { mutableStateOf(false) }
                 val name = plan?.medicationName?.takeIf { it.isNotBlank() } ?: drugs.firstOrNull { it.id == plan?.medicationId }?.name ?: "药品"
                 Inset {
-                    RecordRow("补记 · ${if (record.status == "TAKEN") "已服用" else "已跳过"}", name, "cdc29.svg", { expanded = !expanded }, Modifier.testTag("intake-manual-${record.id}"))
+                    IntakeRecordCard(name,if(record.status=="TAKEN") "已服用" else "已跳过",
+                        if(record.actualAt!=null) "实际时间" else "记录日期",
+                        record.actualAt?.let {displayInstant(it,record.zoneId)} ?: displayDate(record.eventDate),
+                        "补记 · 第${plan?.version ?: "?"}版方案","实际用量",intakeDose(record.dose,record.unit),
+                        expanded,Modifier.testTag("intake-manual-${record.id}")) {expanded=!expanded}
                     if (expanded) JournalCard {
                         IntakeSummary(record)
-                        Row {
+                        FlowRow(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.End) {
                             JournalTextAction("修改记录", onClick = { open(null, record.id, record.status, date) })
                             JournalTextAction("删除记录", danger = true, onClick = { removing = record.id })
                         }
                     }
                 }
             }
-            item { Inset { RecordRow("补记或跳过", "补记实际用药；跳过请点开对应计划", "ic-edit.svg",
-                if (versions.isNotEmpty()) ({ open(null, null, "TAKEN", date) }) else null) } }
-            item { Inset { RecordRow("方案历史", "查看药品方案及修改前的版本", "ic-history.svg", openPlans) } }
-            item { Inset { JournalButton("补记服药", enabled = versions.isNotEmpty(), onClick = { open(null, null, "TAKEN", date) }) } }
+            item { Inset { Text("补记实际用药；跳过请点开对应计划。",style=MaterialTheme.typography.bodySmall) } }
             item { Inset { Text("未记录不等于漏服；请按实际情况记录，不提供补服或剂量建议。计划提醒按方案时刻与通知设置发送。", style = MaterialTheme.typography.bodySmall) } }
         } else {
-            item { Inset { Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                Text("服药历史", style = MaterialTheme.typography.titleLarge)
-                JournalTag(manualOnly, { manualOnly = !manualOnly }, label = { Text("仅看补记") })
+            item { Inset { FlowRow(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                Text("服药历史", Modifier.align(Alignment.CenterVertically), style = MaterialTheme.typography.titleLarge)
+                JournalTag(manualOnly, { manualOnly = !manualOnly }, modifier = Modifier.align(Alignment.CenterVertically), label = { Text("仅看补记") })
             } } }
-            item { Inset { OutlinedTextField(historyQuery, { historyQuery = it }, modifier = Modifier.fillMaxWidth().testTag("intake-history-search"), label = { Text("搜索服药记录") }, placeholder = { Text("输入日期或药品名称") }, singleLine = true) } }
+            item { Inset { OutlinedTextField(historyQuery, { historyQuery = it }, modifier = Modifier.fillMaxWidth().testTag("intake-history-search"), label = { Text("搜索服药记录") }, placeholder = { Text("输入日期或药品名称") }, singleLine = true, shape=RoundedCornerShape(16.dp)) } }
             if (visibleHistory.isEmpty()) item { Inset { JournalEmptyState(if (records.isEmpty()) "还没有服药记录" else "没有匹配的服药记录") } }
             items(visibleHistory, key = { it.id }, contentType = { "intake-history" }) { record ->
                 val plan = versions.firstOrNull { it.id == record.planVersionId }
@@ -224,24 +255,27 @@ internal fun IntakeScreen(pregnancyId: String?, model: JournalViewModel, openPla
                     ?: drugs.firstOrNull { it.id == plan?.medicationId }?.name ?: "药品"
                 val status = if (record.status == "TAKEN") "已服用" else "已跳过"
                 Inset {
-                    RecordRow(
-                        "${displayDate(record.eventDate)} · $status · $name",
-                        "第${plan?.version ?: "?"}版 · ${if (record.sourceOccurrenceId == null) "补记" else "计划记录"}",
-                        "cdc29.svg", { expanded = !expanded }, Modifier.testTag("intake-history-${record.id}")
-                    )
+                    IntakeRecordCard(name,status,if(record.actualAt!=null) "实际时间" else "记录日期",
+                        record.actualAt?.let {displayInstant(it,record.zoneId)} ?: displayDate(record.eventDate),
+                        "${if(record.sourceOccurrenceId==null) "补记" else "计划记录"} · 第${plan?.version ?: "?"}版方案",
+                        "实际用量",intakeDose(record.dose,record.unit),expanded,
+                        Modifier.testTag("intake-history-${record.id}")) {expanded=!expanded}
                     if (expanded) JournalCard {
-                        if (point != null) Text("原计划 ${displayDateTime(point.plannedDate, point.localTime)}", style = MaterialTheme.typography.bodySmall)
+                        if (point != null) JournalKeyValue("原计划",displayDateTime(point.plannedDate,point.localTime))
                         IntakeSummary(record)
-                        Row {
+                        FlowRow(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.End) {
                             JournalTextAction("修改记录", onClick = { open(record.sourceOccurrenceId, record.id, record.status, record.eventDate) })
                             JournalTextAction("删除记录", danger = true, onClick = { removing = record.id })
                         }
                     }
                 }
             }
-            item { Inset { JournalButton("补记服药", enabled = versions.isNotEmpty(), onClick = { open(null, null, "TAKEN", date) }) } }
             item { Inset { Text("未记录不等于漏服；请按实际情况记录，不提供补服或剂量建议。计划提醒按方案时刻与通知设置发送。", style = MaterialTheme.typography.bodySmall) } }
         }
+    }
+    Box(Modifier.fillMaxWidth().padding(horizontal=24.dp,vertical=8.dp)) {
+        JournalButton("补记服药", enabled=versions.isNotEmpty(),onClick={open(null,null,"TAKEN",date)})
+    }
     }
     removing?.let { id -> AlertDialog(onDismissRequest = { removing = null }, title = { Text("删除这条服药记录？") },
         text = { Text("移入全局回收站保留30天。药品、方案和原计划时刻不变；如果重新记录同一计划，恢复旧记录前需处理冲突。") },
@@ -250,11 +284,46 @@ internal fun IntakeScreen(pregnancyId: String?, model: JournalViewModel, openPla
 }
 
 @Composable private fun IntakeSummary(record: MedicationIntakeEntity) {
-    Text(if (record.status == "TAKEN") "已服用" else "已跳过", color = MaterialTheme.colorScheme.primary)
-    if (record.actualAt != null) Text("实际 ${displayInstant(record.actualAt, record.zoneId)}")
-    if (record.dose != null) Text("实际用量 ${record.dose} ${record.unit}")
-    if (record.note.isNotBlank()) Text(record.note)
-    Text("记录时区：${record.zoneId}", style = MaterialTheme.typography.bodySmall)
+    if (record.actualAt != null) JournalKeyValue("实际时间",displayInstant(record.actualAt,record.zoneId))
+    if (record.dose != null) JournalKeyValue("实际用量",intakeDose(record.dose,record.unit))
+    JournalKeyValue("记录时区",record.zoneId)
+    if (record.note.isNotBlank()) {JournalSectionTitle("备注");Text(record.note)}
+}
+
+private fun intakeDose(dose:String?,unit:String?):String = dose?.let {"$it ${unit.orEmpty()}".trim()} ?: "未记录"
+
+/** Medication cards distribute identity/status and time/quantity across the available width. */
+@Composable internal fun IntakeRecordCard(name:String,status:String,timeLabel:String,time:String,origin:String,
+    doseLabel:String,dose:String,expanded:Boolean,modifier:Modifier=Modifier,onClick:()->Unit) {
+    Surface(onClick=onClick,modifier=modifier.fillMaxWidth(),shape=RoundedCornerShape(20.dp),
+        color=MaterialTheme.colorScheme.surface) {
+        Column(Modifier.padding(horizontal=20.dp,vertical=16.dp),verticalArrangement=Arrangement.spacedBy(14.dp)) {
+            Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.spacedBy(12.dp),verticalAlignment=Alignment.Top) {
+                Text(name,Modifier.weight(1f),style=MaterialTheme.typography.titleMedium)
+                Surface(shape=RoundedCornerShape(8.dp),
+                    color=if(status=="已服用") MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.outlineVariant,
+                    contentColor=if(status=="已服用") MaterialTheme.colorScheme.onPrimaryContainer else MaterialTheme.colorScheme.onSurface) {
+                    Text(status,Modifier.padding(horizontal=10.dp,vertical=5.dp),style=MaterialTheme.typography.labelMedium)
+                }
+            }
+            Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.spacedBy(16.dp)) {
+                Column(Modifier.weight(1f),verticalArrangement=Arrangement.spacedBy(4.dp)) {
+                    Text(timeLabel,style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant)
+                    Text(time,style=MaterialTheme.typography.bodyLarge)
+                }
+                Column(Modifier.weight(1f),horizontalAlignment=Alignment.End,verticalArrangement=Arrangement.spacedBy(4.dp)) {
+                    Text(doseLabel,style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant,
+                        textAlign=androidx.compose.ui.text.style.TextAlign.End)
+                    Text(dose,style=MaterialTheme.typography.bodyLarge,textAlign=androidx.compose.ui.text.style.TextAlign.End)
+                }
+            }
+            Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.spacedBy(12.dp),verticalAlignment=Alignment.CenterVertically) {
+                Text(origin,Modifier.weight(1f),style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant)
+                Text(if(expanded) "收起" else "展开",style=MaterialTheme.typography.labelMedium,color=MaterialTheme.colorScheme.primary)
+                Box(Modifier.rotate(if(expanded)270f else 90f)) {DesignIcon("cfd63.svg",size=16.dp)}
+            }
+        }
+    }
 }
 
 @Composable
@@ -279,8 +348,8 @@ internal fun IntakeEditorScreen(form: IntakeForm, model: JournalViewModel, busy:
         }
         if (form.status == "TAKEN") {
             DateField("实际服药日期", form.actualDate, { update(form.copy(actualDate = it)) }, required = true, maxDate = LocalDate.now())
-            JournalField(form.actualTime, { update(form.copy(actualTime = it.take(8))) }, "实际时间（24小时制）",
-                modifier = Modifier.testTag("intake-actual-time"))
+            RecordTimeField(form.actualTime, { update(form.copy(actualTime = it)) }, "实际时间（24小时制）",
+                modifier = Modifier.testTag("intake-actual-time"), enabled=!busy)
             if (manual) {
                 if (form.recordId == null) Box {
                     JournalSecondaryButton("药品：$medicineName · 第${plan?.version ?: "?"}版") { expanded = true }
@@ -299,9 +368,9 @@ internal fun IntakeEditorScreen(form: IntakeForm, model: JournalViewModel, busy:
                 } }
             }
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                JournalField(form.dose, { update(form.copy(dose = it.take(20))) }, "实际剂量（选填）",
+                JournalField(form.dose, { update(form.copy(dose = it.take(20))) }, "实际剂量",
                     modifier = Modifier.weight(1f).testTag("intake-dose"))
-                JournalField(form.unit, { update(form.copy(unit = it.take(20))) }, "单位（选填）",
+                JournalField(form.unit, { update(form.copy(unit = it.take(20))) }, "单位",
                     modifier = Modifier.weight(1f).testTag("intake-unit"))
             }
             if (manual) JournalField("已服用", {}, "状态", readOnly = true)

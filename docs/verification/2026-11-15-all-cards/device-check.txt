@@ -1,0 +1,12 @@
+2026-11-15 Asia/Shanghai
+Device: Xiaomi 11 Ultra (M2102K1C)
+Review: home, profile/navigation cards, cloud status/settings, export options, reminder overview
+Actions: read-only navigation; no real reminder change, export confirmation, upload, cleanup or security-setting change
+Security settings: SecureOn dialog intentionally blocks screenshots; not claimed as pixel validation
+Final APK update: install -r succeeded after dose-label revision
+APK SHA256: F1C07FC5C4845109DA2385F291D6E56A4BC8FE0BC2918923A57C55B295923C5C
+BuildConfig.VISUAL_VERIFICATION=false
+Actual MainActivity window flags: LAYOUT_IN_SCREEN SECURE LAYOUT_INSET_DECOR SPLIT_TOUCH HARDWARE_ACCELERATED DRAWS_SYSTEM_BAR_BACKGROUNDS
+font_scale=1.0
+This task's temporary screenshots on /sdcard were removed. Phone screenshots remain local-only; no recovery keys or medical data archived.
+No TalkBack debugging.

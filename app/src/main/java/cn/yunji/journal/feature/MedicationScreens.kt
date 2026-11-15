@@ -23,6 +23,7 @@ import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 import kotlinx.coroutines.flow.flowOf
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 internal fun MedicationListScreen(pregnancyId: String?, model: JournalViewModel, add: () -> Unit, edit: (String) -> Unit, history: (String) -> Unit,catalog: ()->Unit) {
     if (pregnancyId == null) { Inset { Text("请先创建或恢复孕期档案，再记录用药方案。") }; return }
@@ -34,15 +35,14 @@ internal fun MedicationListScreen(pregnancyId: String?, model: JournalViewModel,
         item { Inset { Text("记录医生交代的方案，可在服药记录中确认、跳过或补记。用药提醒按方案时刻生成，受通知权限与系统省电策略影响。", style = MaterialTheme.typography.bodySmall) } }
         item { Inset { JournalButton("新增用药方案", enabled = !busy, onClick = add) } }
         item {Inset {JournalButton("管理药品",secondary=true,onClick=catalog)}}
-        if (plans.isEmpty()) item { Inset { JournalCard(soft = true) { Text("还没有用药方案", style = MaterialTheme.typography.titleLarge); Text("药品名称、用量和医嘱都可以在这里留存。") } } }
+        if (plans.isEmpty()) item { Inset { JournalCard { JournalSectionTitle("还没有用药方案"); Text("药品名称、用量和医嘱都可以在这里留存。") } } }
         items(plans, key = { it.logicalPlanId }, contentType = { "medication-plan" }) { plan ->
             val drug = drugs.firstOrNull { it.id == plan.medicationId }
             Inset { JournalCard {
-                Text(plan.medicationName.ifBlank {drug?.name ?: "药品"}, style = MaterialTheme.typography.titleLarge)
+                JournalContentHeading(plan.medicationName.ifBlank {drug?.name ?: "药品"},"${medicationStatusLabel(plan.status)} · 第${plan.version}版")
                 Text(listOf(plan.medicationSpecification,plan.medicationDosageForm).filter {it.isNotBlank()}.joinToString(" · "))
-                Text("${medicationStatusLabel(plan.status)} · 第${plan.version}版", color = MaterialTheme.colorScheme.primary)
                 PlanSummary(plan)
-                Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                FlowRow(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
                     if (plan.status != "ENDED") JournalTextAction("修改方案", enabled = !busy, onClick = { edit(plan.id) })
                     JournalTextAction("历史版本", onClick = { history(plan.logicalPlanId) })
                     if (plan.status != "ENDED") JournalTextAction(if (plan.status == "ACTIVE") "暂停" else "恢复方案",
@@ -91,9 +91,9 @@ internal fun MedicationEditorScreen(form: MedicationForm, model: JournalViewMode
         }
         if (form.medicationId != null) Text("本次方案保留当前药品信息，旧方案与服药依据不会被改写。基础信息可在管理药品中编辑。", style = MaterialTheme.typography.bodySmall)
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            JournalField(form.dose, { update(form.copy(dose = it.take(20))) }, "每次剂量（选填）",
+            JournalField(form.dose, { update(form.copy(dose = it.take(20))) }, "每次剂量",
                 modifier = Modifier.weight(1f).testTag("medication-dose"))
-            JournalField(form.unit, { update(form.copy(unit = it.take(20))) }, "单位（选填）",
+            JournalField(form.unit, { update(form.copy(unit = it.take(20))) }, "单位",
                 modifier = Modifier.weight(1f).testTag("medication-unit"))
         }
         Text("剂量和单位需同时填写，也可同时留空。", style = MaterialTheme.typography.bodySmall)
@@ -101,7 +101,10 @@ internal fun MedicationEditorScreen(form: MedicationForm, model: JournalViewMode
             JournalSecondaryButton(MEDICATION_FREQUENCIES.getValue(form.frequency), onClick = { chooseFrequency = true })
             DropdownMenu(chooseFrequency, { chooseFrequency = false }) { MEDICATION_FREQUENCIES.forEach { (key, label) -> DropdownMenuItem(text = { Text(label) }, onClick = { chooseFrequency = false; update(form.copy(frequency = key)) }) } }
         }
-        if (form.frequency in setOf("DAILY_TIMES", "WEEKLY_TIMES", "ONCE")) FormField("固定时刻，例如08:00,20:00", form.times, { update(form.copy(times = it)) }, 100)
+        if (form.frequency in setOf("DAILY_TIMES", "WEEKLY_TIMES", "ONCE")) {
+            RecordTimeField(form.times, { update(form.copy(times = it)) }, "固定时刻，例如08:00,20:00", enabled=!busy, appendToList=form.frequency!="ONCE")
+            Text(if(form.frequency=="ONCE") "点击时钟选择用药时刻，也可直接输入。" else "点击时钟添加时刻；多个时刻用英文逗号分隔，可直接修改或删除。",style=MaterialTheme.typography.bodySmall)
+        }
         else Text("此类方案仅记录内容，不生成固定服药时刻。", style = MaterialTheme.typography.bodySmall)
         if (form.frequency == "WEEKLY_TIMES") Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
             (1..7).forEach { day ->
@@ -138,9 +141,8 @@ internal fun MedicationHistoryScreen(id: String, model: JournalViewModel,version
         if (drug != null) item { Inset { Text("当前药品信息：${listOf(drug.name, drug.specification).filter { it.isNotBlank() }.joinToString(" · ")}", style = MaterialTheme.typography.titleLarge) } }
         item { Inset { Text("每次修改或状态变更单独留存，旧版内容不会被覆盖。下方每版保留当时的药品名称、规格与剂型。", style = MaterialTheme.typography.bodySmall) } }
         items(history, key = { it.id }, contentType = { "plan-version" }) { plan -> Inset { Column(Modifier.testTag("plan-version-${plan.id}")) { JournalCard(soft=plan.id==versionId) {
-            Text(plan.medicationName.ifBlank {drug?.name ?: "药品"},style=MaterialTheme.typography.titleMedium)
+            JournalContentHeading(plan.medicationName.ifBlank {drug?.name ?: "药品"},"第${plan.version}版 · ${medicationStatusLabel(plan.status)}")
             if(plan.medicationSpecification.isNotBlank() || plan.medicationDosageForm.isNotBlank())Text(listOf(plan.medicationSpecification,plan.medicationDosageForm).filter {it.isNotBlank()}.joinToString(" · "))
-            Text("第${plan.version}版 · ${medicationStatusLabel(plan.status)}", style = MaterialTheme.typography.titleLarge)
             Text("记录生效于 ${displayInstant(plan.effectiveAt, plan.zoneId)}", style = MaterialTheme.typography.bodySmall)
             PlanSummary(plan)
             Text("录入时区：${plan.zoneId}", style = MaterialTheme.typography.bodySmall)
@@ -149,9 +151,9 @@ internal fun MedicationHistoryScreen(id: String, model: JournalViewModel,version
 }
 
 @Composable private fun PlanSummary(plan: MedicationPlanEntity) {
-    Text(if (plan.dose == null) "剂量未填写" else "每次 ${plan.dose} ${plan.unit}")
+    JournalKeyValue("方案用量",if (plan.dose == null) "剂量未填写" else "每次 ${plan.dose} ${plan.unit}")
     Text(listOfNotNull(MEDICATION_FREQUENCIES[plan.frequencyType], plan.times.takeIf { it.isNotBlank() }?.replace(",", "、"), plan.weekdays.takeIf { it.isNotBlank() }?.split(',')?.joinToString("、") { "周${listOf("一","二","三","四","五","六","日")[it.toInt()-1]}" }).joinToString(" · "))
-    Text("${displayDate(plan.startDate)} 至 ${plan.endDate?.let(::displayDate) ?: "未设结束日期"}", style = MaterialTheme.typography.bodySmall)
+    JournalKeyValue("方案日期","${displayDate(plan.startDate)} 至 ${plan.endDate?.let(::displayDate) ?: "未设结束日期"}")
     if (plan.source.isNotBlank()) Text("来源：${plan.source}")
     if (plan.instructions.isNotBlank()) Text(plan.instructions)
 }

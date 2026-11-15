@@ -148,7 +148,7 @@ class RecoveryUiTest {
             rule.waitUntil(10_000L) {
                 rule.onAllNodesWithTag("reclaim-previous").fetchSemanticsNodes().isNotEmpty()
             }
-            rule.onNodeWithTag("reclaim-previous").assertIsEnabled().performClick()
+            rule.onNodeWithTag("reclaim-previous").performScrollTo().assertIsDisplayed().assertIsEnabled().performClick()
             rule.onNodeWithText("回收恢复前的旧资料？").assertExists()
             rule.onNodeWithTag("reclaim-confirm").performClick()
             rule.waitUntil(10_000L) {

@@ -1,0 +1,9 @@
+
+cn.yunji.journal.OriginalShareUiTest:..
+cn.yunji.journal.UiReviewRemainingPagesTest:.
+
+Time: 16.156
+
+OK (3 tests)
+
+

@@ -1,6 +1,8 @@
 package cn.yunji.journal.feature
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.border
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
@@ -10,6 +12,8 @@ import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import cn.yunji.journal.core.designsystem.*
@@ -17,6 +21,7 @@ import cn.yunji.journal.data.DrugForm
 import cn.yunji.journal.data.DrugRules
 
 @Composable
+@OptIn(ExperimentalLayoutApi::class)
 internal fun DrugCatalogScreen(pregnancyId: String?,model: JournalViewModel,edit: (String?)->Unit,photos: (String)->Unit) {
     if(pregnancyId==null){Inset {Text("请先创建或恢复孕期档案。")};return}
     val drugs by remember(pregnancyId,model){model.medications.medications(pregnancyId)}.collectAsStateWithLifecycle(emptyList())
@@ -26,26 +31,32 @@ internal fun DrugCatalogScreen(pregnancyId: String?,model: JournalViewModel,edit
     var selectedId by rememberSaveable(pregnancyId) { mutableStateOf<String?>(null) }
     val visible = drugs.filter { query.isBlank() || it.name.contains(query.trim(), ignoreCase = true) ||
         it.specification.contains(query.trim(), ignoreCase = true) || it.dosageForm.contains(query.trim(), ignoreCase = true) }
-    val selected = visible.firstOrNull { it.id == selectedId } ?: visible.firstOrNull()
+    val chosenDrug = visible.firstOrNull { it.id == selectedId } ?: visible.firstOrNull()
     LazyColumn(Modifier.testTag("drug-catalog"),contentPadding=PaddingValues(bottom=32.dp),verticalArrangement=Arrangement.spacedBy(12.dp)) {
         item {Inset {OutlinedTextField(query,{query=it},modifier=Modifier.fillMaxWidth().testTag("drug-search"),
-            placeholder={Text("搜索药品名称、规格或剂型")},singleLine=true,shape=androidx.compose.foundation.shape.RoundedCornerShape(16.dp))}}
+            placeholder={Text("搜索药品")},singleLine=true,shape=androidx.compose.foundation.shape.RoundedCornerShape(16.dp))}}
         item {Inset {Text("药品目录",style=MaterialTheme.typography.titleMedium)}}
         if(drugs.isEmpty())item {Inset {JournalEmptyState("还没有药品，可以先录入基本信息，再创建用药方案。")}}
         else if(visible.isEmpty())item {Inset {JournalEmptyState("没有找到相关药品", "试试其他关键词")}}
         items(visible,key={it.id},contentType={"drug"}) {drug ->Inset {
-            RecordRow(drug.name, listOf(drug.specification, drug.dosageForm).filter {it.isNotBlank()}.joinToString(" · ").ifBlank {"查看药品资料"},
-                "cdc29.svg", {selectedId=drug.id}, Modifier.testTag("drug-${drug.id}"))
+            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                RecordRow(drug.name, listOf(drug.specification, drug.dosageForm).filter {it.isNotBlank()}.joinToString(" · ").ifBlank {"查看药品资料"},
+                    "ic-pill.svg", {selectedId=drug.id}, Modifier.testTag("drug-${drug.id}")
+                        .then(if (chosenDrug?.id == drug.id) Modifier.border(1.dp, MaterialTheme.colorScheme.primary, RoundedCornerShape(20.dp)) else Modifier)
+                        .semantics { selected = chosenDrug?.id == drug.id })
+                if (chosenDrug?.id == drug.id) JournalCard {
+                    JournalSectionTitle("资料管理")
+                    FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                        JournalTextAction("药品信息", Modifier.testTag("edit-drug-${drug.id}"), enabled = !busy,
+                            onClick = {edit(drug.id)})
+                        JournalTextAction("包装照片", Modifier.testTag("drug-photos-${drug.id}"), enabled = !busy,
+                            onClick = {photos(drug.id)})
+                    }
+                    JournalDangerButton("删除药品", Modifier.testTag("delete-drug-${drug.id}"), enabled = !busy,
+                        onClick = { deleting=drug.id })
+                }
+            }
         }}
-        selected?.let { drug ->
-            item { Inset { Text("${drug.name} · 资料管理", style=MaterialTheme.typography.titleMedium) } }
-            item { Inset { RecordRow("药品信息", "名称、规格和剂型可编辑", "ic-pill.svg",
-                {if(!busy)edit(drug.id)}, Modifier.testTag("edit-drug-${drug.id}")) } }
-            item { Inset { RecordRow("包装照片", "加密保存，便于核对", "ic-image.svg",
-                {photos(drug.id)}, Modifier.testTag("drug-photos-${drug.id}")) } }
-            item { Inset { RecordRow("删除药品", "删除前检查关联方案", "ic-trash.svg",
-                {if(!busy)deleting=drug.id}, Modifier.testTag("delete-drug-${drug.id}")) } }
-        }
         item {Inset {JournalButton("新增药品",enabled=!busy,onClick={edit(null)})}}
         item {Inset {Text("修改基础信息不改变旧方案和服药记录中的药品依据。包装照片加密保存在本机。",style=MaterialTheme.typography.bodySmall)}}
     }

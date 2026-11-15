@@ -1,0 +1,8 @@
+
+cn.yunji.journal.VisitReminderCardTest:...
+
+Time: 10.591
+
+OK (3 tests)
+
+

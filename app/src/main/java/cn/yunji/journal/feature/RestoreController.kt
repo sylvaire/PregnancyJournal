@@ -21,7 +21,8 @@ interface RestoreAccess {
 data class RestoreUiState(val stage: String="SELECT",val document: String="",val key: String="",
     val preview: RestorePreview?=null,val acknowledged: Boolean=false,val message: String?=null,
     val cloud: Boolean=false,val cloudSnapshots: List<cn.yunji.journal.core.backup.SnapshotRef> = emptyList(),
-    val snapshotId: String?=null,val finding: Boolean=false) {
+    val snapshotId: String?=null,val finding: Boolean=false,
+    val documentName: String?=null,val documentSize: Long?=null) {
     override fun toString()="RestoreUiState(<redacted>)"
 }
 
@@ -31,11 +32,13 @@ class RestoreController(private val scope: CoroutineScope,private val access: Re
     val state=mutable.asStateFlow()
     private var task: Job?=null
     private var revision=0
-    fun select(document: String) {
+    fun select(document: String, name: String?=null, size: Long?=null) {
         if(mutable.value.stage !in setOf("SELECT","KEY","ERROR"))return
         require(document.startsWith("content://") && document.length<=8192 && document.none(Char::isISOControl))
         revision++
-        mutable.value=RestoreUiState(stage="KEY",document=document)
+        mutable.value=RestoreUiState(stage="KEY",document=document,
+            documentName=name?.filterNot(Char::isISOControl)?.take(256)?.takeIf(String::isNotBlank),
+            documentSize=size?.takeIf {it>=0})
     }
     /** Enters the cloud flow: the user supplies the recovery key, then picks a remote snapshot. */
     fun startCloud() {
@@ -79,7 +82,8 @@ class RestoreController(private val scope: CoroutineScope,private val access: Re
                     else access.prepare(old.document,old.key)
                 result=prepared
                 currentCoroutineContext().ensureActive()
-                if(generation==revision)mutable.value=RestoreUiState(stage="CONFIRM",preview=prepared)
+                if(generation==revision)mutable.value=RestoreUiState(stage="CONFIRM",preview=prepared,
+                    documentName=old.documentName,documentSize=old.documentSize)
                 else cleanup(prepared)
             }catch(cancelled: CancellationException) {
                 result?.let {cleanup(it)}
@@ -89,7 +93,8 @@ class RestoreController(private val scope: CoroutineScope,private val access: Re
                 if(generation==revision)mutable.value=if(cloud)
                     RestoreUiState(stage="CLOUD_LIST",cloud=true,cloudSnapshots=old.cloudSnapshots,snapshotId=old.snapshotId,
                         message="无法下载或校验云端备份，请检查连接与恢复密钥。")
-                else RestoreUiState(stage="KEY",document=old.document,message="无法验证备份，请核对恢复密钥和文件完整性。")
+                else RestoreUiState(stage="KEY",document=old.document,documentName=old.documentName,documentSize=old.documentSize,
+                    message="无法验证备份，请核对恢复密钥和文件完整性。")
             }
         }
     }

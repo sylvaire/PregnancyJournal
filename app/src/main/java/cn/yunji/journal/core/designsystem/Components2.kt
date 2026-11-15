@@ -20,10 +20,12 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.platform.LocalLayoutDirection
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.input.VisualTransformation
-import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
@@ -42,38 +44,65 @@ import androidx.compose.ui.unit.dp
     onClick: () -> Unit) {
     OutlinedButton(onClick, modifier.fillMaxWidth().heightIn(min = 52.dp), enabled,
         shape = RoundedCornerShape(26.dp),
-        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outline),
+        border = BorderStroke(1.dp, if (enabled) MaterialTheme.colorScheme.outline else MaterialTheme.colorScheme.onSurface.copy(alpha = 0.12f)),
         colors = ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colorScheme.primary)) {
         Text(text, style = MaterialTheme.typography.labelLarge)
     }
 }
 
 /**
- * 文本动作（行内链接 / 对话框按钮 / 次要操作）。
+ * 行内动作（普通操作为文字，危险操作为警示描边按钮）。
  *
  * 全站 167 处 `TextButton` 承担了 4 种语义却没统一规格。这里收敛出两种：
- * - `danger = true`：错误色，用于「删除」「彻底删除」「清除连接」等不可逆动作；
+ * - `danger = true`：错误色描边，用于「删除」「彻底删除」「清除连接」等警示操作；
  * - `danger = false`：主色，用于「重试」「刷新」「查看全部」等。
  *
  * 统一 `heightIn(min = 48.dp)` 保证触摸目标达标（此前 `JournalApp` 的「查看备份状态」只有 18dp 高）。
  */
 @Composable fun JournalTextAction(text: String, modifier: Modifier = Modifier, enabled: Boolean = true,
     danger: Boolean = false, onClick: () -> Unit) {
+    if (danger) {
+        OutlinedButton(onClick, modifier.heightIn(min = 48.dp), enabled = enabled,
+            shape = RoundedCornerShape(24.dp),
+            border = BorderStroke(1.dp, MaterialTheme.colorScheme.error.copy(alpha = if (enabled) 0.6f else 0.12f)),
+            colors = ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colorScheme.error),
+            contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)) {
+            Text(text, style = MaterialTheme.typography.labelLarge)
+        }
+        return
+    }
     TextButton(onClick, modifier.heightIn(min = 48.dp), enabled = enabled,
         contentPadding = PaddingValues(horizontal = 12.dp, vertical = 8.dp)) {
         Text(text, style = MaterialTheme.typography.labelLarge,
-            color = if (danger) MaterialTheme.colorScheme.error
-            else if (enabled) MaterialTheme.colorScheme.primary
-            else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.38f))
+            color = if (!enabled) MaterialTheme.colorScheme.onSurface.copy(alpha = 0.38f)
+            else MaterialTheme.colorScheme.primary)
     }
 }
 
-/**
- * 小节标题（`titleMedium` 角色）。
- *
- * 业务代码里 34 处直接写 `Text(..., style = titleMedium)`，散落在 14 个文件。
- * 统一成组件后，字号档位只在这里定义一次，避免再出现「同一页面 20sp/16sp 混排」。
- */
+/** 短标题/摘要分列，完整内容放不下时上下排列，避免等分宽度造成单字折行。 */
+@Composable fun JournalContentHeading(title:String,summary:String) {
+    val titleStyle = MaterialTheme.typography.titleMedium
+    val summaryStyle = MaterialTheme.typography.bodyLarge
+    val measurer = rememberTextMeasurer()
+    val density = LocalDensity.current
+    BoxWithConstraints(Modifier.fillMaxWidth()) {
+        val required = measurer.measure(AnnotatedString(title), titleStyle).size.width +
+            measurer.measure(AnnotatedString(summary), summaryStyle).size.width + with(density) {16.dp.roundToPx()}
+        if (required > with(density) {maxWidth.roundToPx()}) {
+            Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                Text(title, style = titleStyle)
+                Text(summary, style = summaryStyle, color = MaterialTheme.colorScheme.primary)
+            }
+        } else {
+            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(16.dp), verticalAlignment = Alignment.Top) {
+                Text(title, Modifier.weight(1f), style = titleStyle)
+                Text(summary, style = summaryStyle, color = MaterialTheme.colorScheme.primary)
+            }
+        }
+    }
+}
+
+/** 统一小节标题的字号与颜色。 */
 @Composable fun JournalSectionTitle(text: String, modifier: Modifier = Modifier) {
     Text(text, modifier, style = MaterialTheme.typography.titleMedium,
         color = MaterialTheme.colorScheme.onBackground)
@@ -157,7 +186,7 @@ import androidx.compose.ui.unit.dp
         Column(Modifier.padding(horizontal = 16.dp, vertical = 12.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
             Text(message, style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onErrorContainer)
-            if (retry != null) JournalTextAction(retryLabel, danger = true, onClick = retry)
+            if (retry != null) JournalTextAction(retryLabel, onClick = retry)
         }
     }
 }
@@ -168,7 +197,7 @@ import androidx.compose.ui.unit.dp
  * 2 处裸 `HorizontalDivider` 用 M3 默认 1dp + 默认色，与全站 outline 色不一致。
  */
 @Composable fun JournalDivider(modifier: Modifier = Modifier) {
-    HorizontalDivider(modifier, thickness = 1.dp, color = MaterialTheme.colorScheme.outline)
+    HorizontalDivider(modifier, thickness = 1.dp, color = MaterialTheme.colorScheme.outlineVariant)
 }
 
 /**
@@ -178,11 +207,13 @@ import androidx.compose.ui.unit.dp
  * （前者 `titleLarge` + 「返回」文字按钮，后者 `headlineMedium` 但无返回键）。
  * 这里抽出与 `JournalPageHeader` 完全一致的视觉：28sp 标题 + 12sp 副标题 + 左侧旋转 chevron。
  */
+@OptIn(ExperimentalLayoutApi::class)
 @Composable fun JournalFullScreenHeader(title: String, subtitle: String? = null,
-    onBack: (() -> Unit)? = null, actions: @Composable RowScope.() -> Unit = {}) {
-    Row(Modifier.fillMaxWidth().windowInsetsPadding(WindowInsets.statusBars)
-        .padding(horizontal = 12.dp, vertical = 8.dp),
-        horizontalArrangement = Arrangement.spacedBy(4.dp), verticalAlignment = Alignment.CenterVertically) {
+    onBack: (() -> Unit)? = null, compact: Boolean = false, actions: @Composable FlowRowScope.() -> Unit = {}) {
+    Column(Modifier.fillMaxWidth().windowInsetsPadding(WindowInsets.statusBars)
+        .padding(horizontal = 12.dp, vertical = 8.dp)) {
+      Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(4.dp),
+          verticalAlignment = Alignment.CenterVertically) {
         // 全屏 Dialog 会叠在 JournalPage 之上，两者顶栏若都用 navigate-up 会让语义树出现两个
         // 同名返回键；这里用 fullscreen-navigate-up 区分，页面顶栏仍是 navigate-up。
         if (onBack != null) IconButton(onBack, Modifier.testTag("fullscreen-navigate-up")) {
@@ -191,11 +222,13 @@ import androidx.compose.ui.unit.dp
             }
         }
         Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
-            Text(title, style = MaterialTheme.typography.headlineMedium, maxLines = 1, overflow = TextOverflow.Ellipsis)
+            Text(title, style = if(compact) MaterialTheme.typography.titleMedium else MaterialTheme.typography.headlineMedium)
             if (subtitle != null) Text(subtitle, style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                color = MaterialTheme.colorScheme.onSurfaceVariant, maxLines = if(compact)1 else 2, overflow = TextOverflow.Ellipsis)
         }
-        actions()
+        if(compact) FlowRow(Modifier.widthIn(max=320.dp),horizontalArrangement=Arrangement.End,content=actions)
+      }
+      if(!compact) FlowRow(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End, content = actions)
     }
 }
 
@@ -223,17 +256,39 @@ fun Modifier.journalPressable(interactionSource: MutableInteractionSource): Modi
  * 「原始记录详情」「恢复预览」「云端清理统计」等页面此前各自手写
  * `Row(SpaceBetween){ Text(label); Text(value) }`，标签与数值的字重、颜色都不统一，
  * 长数值还会把标签挤成两行。这里统一：
- * - 标签用 `bodyMedium` + onSurfaceVariant，权重 1，最多 1 行省略；
- * - 值用 `bodyMedium` + onSurface，右对齐，不换行；
- * - 值过长时右对齐会挤压标签，故给标签 `weight(1f)` 并允许省略。
+ * 短内容在一行内两端对齐；放大字体或长内容放不下时改为上下排列，完整保留标签和值。
  */
 @Composable fun JournalKeyValue(label: String, value: String, modifier: Modifier = Modifier,
     emphasize: Boolean = false) {
-    Row(modifier.fillMaxWidth().padding(vertical = 2.dp), verticalAlignment = Alignment.Top) {
-        Text(label, Modifier.weight(1f), style = MaterialTheme.typography.bodyMedium,
-            color = MaterialTheme.colorScheme.onSurfaceVariant, maxLines = 1, overflow = TextOverflow.Ellipsis)
-        Text(value, style = MaterialTheme.typography.bodyMedium,
-            color = if (emphasize) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface,
-            textAlign = TextAlign.End)
+    val style = MaterialTheme.typography.bodyMedium
+    val measurer = rememberTextMeasurer()
+    val density = LocalDensity.current
+    BoxWithConstraints(modifier.fillMaxWidth().padding(vertical = 2.dp)) {
+        val requiredWidth = measurer.measure(AnnotatedString(label), style).size.width +
+            measurer.measure(AnnotatedString(value), style).size.width + with(density) { 16.dp.roundToPx() }
+        if (requiredWidth > with(density) { maxWidth.roundToPx() }) {
+            Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                Text(label, style = style, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                Text(value, style = style,
+                    color = if (emphasize) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface)
+            }
+        } else {
+            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(16.dp), verticalAlignment = Alignment.Top) {
+                Text(label, Modifier.weight(1f), style = style, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                Text(value, style = style,
+                    color = if (emphasize) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface)
+            }
+        }
+    }
+}
+
+/** 为设置文字预留可换行空间，开关保持完整尺寸与固定间距。 */
+@Composable fun JournalSettingRow(label: String, checked: Boolean, onCheckedChange: (Boolean) -> Unit,
+    modifier: Modifier = Modifier, enabled: Boolean = true, switchModifier: Modifier = Modifier) {
+    Row(modifier.fillMaxWidth().heightIn(min = 48.dp),
+        horizontalArrangement = Arrangement.spacedBy(16.dp), verticalAlignment = Alignment.CenterVertically) {
+        Text(label, Modifier.weight(1f), style = MaterialTheme.typography.bodyLarge,
+            color = if (enabled) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.onSurfaceVariant)
+        JournalSwitch(checked, onCheckedChange, modifier = switchModifier, enabled = enabled)
     }
 }

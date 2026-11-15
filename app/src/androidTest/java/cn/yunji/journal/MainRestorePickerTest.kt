@@ -53,7 +53,7 @@ class MainRestorePickerTest {
     @Test fun actualSystemSelectionValidatesThenCancellationKeepsCurrentVault()=runBlocking {journey(false)}
     @Test fun recreationKeepsSelectedFileButNeverRestoresEnteredKey()=runBlocking {journey(true)}
     private suspend fun journey(recreate: Boolean) {
-        assumeTrue(Build.MODEL=="sdk_gphone64_x86_64" && Build.VERSION.SDK_INT==34)
+        assumeTrue(Build.MODEL in setOf("sdk_gphone64_x86_64","sdk_gphone16k_x86_64") && Build.VERSION.SDK_INT in 34..36)
         val context=ApplicationProvider.getApplicationContext<Context>()
         val keys=DeviceKeyStore(context)
         assumeTrue(!keys.strict() && !cn.yunji.journal.data.SecurityStore(context).lockEnabled())
@@ -87,11 +87,23 @@ class MainRestorePickerTest {
             }
             clickText(name)
             waitFor("recovery key page"){it.text?.toString()=="输入恢复密钥"}
+            waitFor("selected backup name"){it.text?.toString()==name}
+            fun assertMetadata() {
+                requireNotNull(scenario).onActivity {activity ->
+                    val property=MainActivity::class.java.getDeclaredField("restoreController").apply {isAccessible=true}
+                    val state=(property.get(activity) as cn.yunji.journal.feature.RestoreController).state.value
+                    assertEquals(name,state.documentName)
+                    assertEquals(archive.length(),state.documentSize)
+                }
+            }
+            assertMetadata()
             val field=waitFor("password field"){it.className?.toString()=="android.widget.EditText" && it.isPassword}
             assertTrue(field.performAction(AccessibilityNodeInfo.ACTION_SET_TEXT,Bundle().apply {putCharSequence(AccessibilityNodeInfo.ACTION_ARGUMENT_SET_TEXT_CHARSEQUENCE,recovery)}))
             if(recreate) {
                 requireNotNull(scenario).recreate()
                 waitFor("recreated key page"){it.text?.toString()=="输入恢复密钥"}
+                waitFor("recreated backup name"){it.text?.toString()==name}
+                assertMetadata()
                 requireNotNull(scenario).onActivity {activity->
                     val property=MainActivity::class.java.getDeclaredField("restoreController").apply {isAccessible=true}
                     val controller=property.get(activity) as cn.yunji.journal.feature.RestoreController
@@ -102,6 +114,7 @@ class MainRestorePickerTest {
             }
             clickText("校验备份")
             waitFor("preview"){it.text?.toString()=="核对要恢复的资料"}
+            waitFor("preview backup name"){it.text?.toString()==name}
             clickText("取消")
             val deadline=SystemClock.elapsedRealtime()+20000
             while(SystemClock.elapsedRealtime()<deadline && (handoff.read()!=null || RestoreJournal(vault).read()!=null))SystemClock.sleep(100)

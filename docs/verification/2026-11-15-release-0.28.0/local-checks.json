@@ -1,0 +1,22 @@
+{
+  "versionName": "0.28.0",
+  "versionCode": 30,
+  "schema": 15,
+  "localBuild": "BUILD SUCCESSFUL in 2m 27s",
+  "unitClasses": 60,
+  "unit": {
+    "tests": 371,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "lint": {
+    "errors": 0,
+    "warnings": 31
+  },
+  "releaseBuildConfig": {
+    "DEBUG": false,
+    "VISUAL_VERIFICATION": false
+  },
+  "localApkSigned": false
+}

@@ -1,0 +1,33 @@
+
+cn.yunji.journal.UiSnapshotTest:..
+cn.yunji.journal.UiReviewRemainingPagesTest:
+Error in homeMedicationSummaryHasOneIntegratedPendingEntry(cn.yunji.journal.UiReviewRemainingPagesTest):
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 10000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at cn.yunji.journal.UiReviewRemainingPagesTest.homeMedicationSummaryHasOneIntegratedPendingEntry(UiReviewRemainingPagesTest.kt:59)
+
+Error in homeMissingDateAndNoPlanStayQuietWhileValidAgeRemainsProminent(cn.yunji.journal.UiReviewRemainingPagesTest):
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 10000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at cn.yunji.journal.UiReviewRemainingPagesTest.homeMissingDateAndNoPlanStayQuietWhileValidAgeRemainsProminent(UiReviewRemainingPagesTest.kt:36)
+
+
+Time: 39.646
+There were 2 failures:
+1) homeMedicationSummaryHasOneIntegratedPendingEntry(cn.yunji.journal.UiReviewRemainingPagesTest)
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 10000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at cn.yunji.journal.UiReviewRemainingPagesTest.homeMedicationSummaryHasOneIntegratedPendingEntry(UiReviewRemainingPagesTest.kt:59)
+2) homeMissingDateAndNoPlanStayQuietWhileValidAgeRemainsProminent(cn.yunji.journal.UiReviewRemainingPagesTest)
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 10000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at cn.yunji.journal.UiReviewRemainingPagesTest.homeMissingDateAndNoPlanStayQuietWhileValidAgeRemainsProminent(UiReviewRemainingPagesTest.kt:36)
+
+FAILURES!!!
+Tests run: 4,  Failures: 2
+
+

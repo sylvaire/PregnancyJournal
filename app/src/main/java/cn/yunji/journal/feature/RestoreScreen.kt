@@ -49,6 +49,9 @@ val LocalRestoreLaunch=androidx.compose.runtime.staticCompositionLocalOf<(() -> 
             "KEY"->{
                 JournalCard {
                     JournalSectionTitle("输入恢复密钥")
+                    JournalKeyValue("已选备份", state.documentName ?: "已选择的加密备份")
+                    Text(state.documentSize?.let {android.text.format.Formatter.formatFileSize(androidx.compose.ui.platform.LocalContext.current,it)} ?: "文件大小暂不可用",
+                        style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant)
                     Text("请输入完整的 YJ1: 恢复密钥，区分大小写。离开页面后需要重新输入。",
                         style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     JournalField(state.key, keyChanged, "恢复密钥",
@@ -105,6 +108,7 @@ val LocalRestoreLaunch=androidx.compose.runtime.staticCompositionLocalOf<(() -> 
                 val date=displayInstant(preview.createdAt, ZoneId.systemDefault().id)
                 JournalCard(soft = true) {
                     Text("核对要恢复的资料",style=MaterialTheme.typography.titleLarge)
+                    state.documentName?.let {JournalKeyValue("备份文件",it)}
                     Text("备份时间：$date", color = MaterialTheme.colorScheme.primary)
                 }
                 JournalCard {
@@ -142,7 +146,7 @@ val LocalRestoreLaunch=androidx.compose.runtime.staticCompositionLocalOf<(() -> 
                 JournalButton("打开恢复后的资料",Modifier.testTag("restore-reopen"),enabled=!hostBusy,onClick=reopen)
             }
             "ERROR"->{
-                JournalCard(soft = true) {
+                JournalCard {
                     Text("恢复需要重新核对",style=MaterialTheme.typography.titleLarge)
                 }
                 JournalButton("重新选择备份",Modifier.testTag("restore-choose"),enabled=!hostBusy,onClick=chooseFile)

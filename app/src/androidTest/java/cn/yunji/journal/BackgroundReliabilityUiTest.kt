@@ -35,7 +35,7 @@ class BackgroundReliabilityUiTest : PageMatrixBaseTest() {
 
         val batteryOk = BackgroundAssist.ignoringBatteryOptimizations(ApplicationProvider.getApplicationContext())
         if (batteryOk) {
-            ui.onNodeWithText("已加入电池优化白名单，系统不会因省电冻结提醒").assertExists()
+            ui.onNodeWithText("已允许忽略电池优化；厂商后台限制仍可能影响提醒").assertExists()
         } else {
             ui.onNodeWithText("未加入电池优化白名单；系统省电可能推迟或跳过提醒").assertExists()
             ui.onNodeWithTag("request-battery-ignore").assertExists()

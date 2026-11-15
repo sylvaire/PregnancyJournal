@@ -19,7 +19,7 @@ import cn.yunji.journal.core.designsystem.JournalField
 import cn.yunji.journal.core.designsystem.JournalSectionTitle
 import cn.yunji.journal.core.designsystem.JournalTextAction
 import cn.yunji.journal.core.designsystem.JournalCard
-import cn.yunji.journal.core.designsystem.JournalSwitch
+import cn.yunji.journal.core.designsystem.JournalSettingRow
 import cn.yunji.journal.core.designsystem.RecordRow
 
 @Composable
@@ -52,24 +52,20 @@ internal fun ExportContent(state: ExportUiState, updateRange: (String, String) -
             JournalSectionTitle("选择记录类型")
             cn.yunji.journal.core.export.ExportScope.ALL_SECTIONS.forEach { section ->
                 Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
-                    Text(sectionLabel(section))
+                    Text(sectionLabel(section), Modifier.weight(1f))
                     JournalCheckbox(section in state.sections, { toggleSection(section) }, enabled = !state.busy,
                         modifier = Modifier.testTag("export-section-$section"))
                 }
             }
         }
         JournalCard {
-        Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
-            Text("包含原件")
-            JournalSwitch(state.includeOriginals, setOriginals, enabled = !state.busy, modifier = Modifier.testTag("export-originals"))
-        }
-        Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
-            Text("包含回收站记录")
-            JournalSwitch(state.includeTrash, setTrash, enabled = !state.busy, modifier = Modifier.testTag("export-trash"))
-        }
+        JournalSettingRow("包含原件", state.includeOriginals, setOriginals, enabled = !state.busy,
+            switchModifier = Modifier.testTag("export-originals"))
+        JournalSettingRow("包含回收站记录", state.includeTrash, setTrash, enabled = !state.busy,
+            switchModifier = Modifier.testTag("export-trash"))
         }
 
-        JournalCard(soft = true) {
+        JournalCard(soft = state.plaintextAcknowledged) {
         JournalCheckboxRow(state.plaintextAcknowledged, acknowledge, "我了解导出内容为明文，将自行妥善保管",
             enabled = !state.busy, modifier = Modifier.testTag("export-ack"))
         }
@@ -82,6 +78,7 @@ internal fun ExportContent(state: ExportUiState, updateRange: (String, String) -
             JournalButton("取消导出", secondary = true, onClick = cancel)
         }
         JournalSectionTitle("导出方式")
+        Text("数据包为 ZIP 文件，内含 JSON 记录和字段说明，便于自行整理；就诊摘要 PDF 便于阅读和打印。", style = MaterialTheme.typography.bodySmall)
         JournalButton("导出结构化数据包", Modifier.testTag("export-data"), enabled = state.canStart, onClick = exportData)
         JournalButton("生成就诊摘要 PDF", Modifier.testTag("export-summary"), enabled = state.canStart, secondary = true, onClick = exportSummary)
         JournalTextAction(if (state.loading) "正在统计…" else "统计当前范围",

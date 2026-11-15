@@ -15,8 +15,8 @@ android {
         applicationId = "cn.yunji.journal"
         minSdk = 26
         targetSdk = 36
-        versionCode = 29
-        versionName = "0.27.0"
+        versionCode = 30
+        versionName = "0.28.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         // Only the explicit verification build disables FLAG_SECURE to capture real-device screenshots;
         // release/performance and normal debug builds keep the secure flag.
@@ -30,6 +30,8 @@ android {
     testOptions { unitTests.isReturnDefaultValues = true }
     testBuildType = providers.gradleProperty("testBuildType").orElse("debug").get()
     packaging { resources.excludes += "/META-INF/{AL2.0,LGPL2.1}" }
+    // Chinese picker resources must also be available on English devices after bundle installation.
+    bundle { language { enableSplit = false } }
 
     // 发布签名由 CI 通过环境变量注入（密钥本身从不入库）。
     // 四个变量齐备时才配置；缺任一则 release 仍产出未签名包，便于本地构建与审计。

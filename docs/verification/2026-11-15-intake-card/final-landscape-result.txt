@@ -1,0 +1,8 @@
+
+cn.yunji.journal.IntakeCardLayoutTest:.
+
+Time: 3.267
+
+OK (1 test)
+
+

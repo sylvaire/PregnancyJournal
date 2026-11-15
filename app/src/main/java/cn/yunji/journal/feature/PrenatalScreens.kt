@@ -16,6 +16,10 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.selected
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.unit.dp
 import cn.yunji.journal.core.database.VisitEntity
 import cn.yunji.journal.core.designsystem.*
@@ -29,6 +33,7 @@ internal fun visitStatus(visit: VisitEntity): String = when (visit.status) {
     else -> if (visit.scheduledDate < LocalDate.now().toString()) "待补录就诊情况" else "待进行"
 }
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 internal fun VisitsScreen(state: JournalState, onAdd: () -> Unit, onSelect: (String) -> Unit) {
     var calendar by rememberSaveable { mutableStateOf(false) }
@@ -40,9 +45,9 @@ internal fun VisitsScreen(state: JournalState, onAdd: () -> Unit, onSelect: (Str
     val visits = state.visits.filter { it.pregnancyId == state.active?.id }
     val shown = visits.filter { (status == "ALL" || it.status == status) &&
         (!calendar || it.scheduledDate.startsWith(monthText) && (day.isBlank() || it.scheduledDate == day)) }
-    Box(Modifier.fillMaxSize()) {
-    LazyColumn(modifier = Modifier.testTag("visits-list"), contentPadding = PaddingValues(bottom = if (calendar) 96.dp else 24.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        item { PageHeader(if (calendar) "产检日历" else "产检", if (calendar) "按日期查看预约与实际就诊" else "预约、实际就诊和取消记录，清楚留存") }
+    Column(Modifier.fillMaxSize()) {
+    LazyColumn(modifier = Modifier.weight(1f).testTag("visits-list"), contentPadding = PaddingValues(bottom = 24.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        item { PageHeader(if (calendar) "产检日历" else "产检", if (calendar) "按预约日期查看产检安排" else "预约、实际就诊和取消记录，清楚留存") }
         if (!calendar) item { Inset { JournalButton("新建产检预约", enabled = state.active != null, onClick = onAdd) } }
         item { Inset { Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             JournalTag(selected = !calendar, onClick = { calendar = false }, label = { Text("列表") })
@@ -53,7 +58,7 @@ internal fun VisitsScreen(state: JournalState, onAdd: () -> Unit, onSelect: (Str
                 JournalTag(selected = status == key, onClick = { status = key }, label = { Text(label) })
             }
         } } }
-        if (calendar) item { Inset { Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceBetween) {
+        if (calendar) item { Inset { FlowRow(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
             Text("${month.year}年${month.monthValue}月", style = MaterialTheme.typography.titleLarge)
             JournalTextAction("切换月份", onClick = { monthPickerExpanded = !monthPickerExpanded })
         } } }
@@ -72,11 +77,16 @@ internal fun VisitsScreen(state: JournalState, onAdd: () -> Unit, onSelect: (Str
                 Row(Modifier.fillMaxWidth()) {
                     repeat(7) { weekday ->
                         val number = week * 7 + weekday - offset + 1
-                        Box(Modifier.weight(1f).height(36.dp), contentAlignment = Alignment.Center) {
+                        Box(Modifier.weight(1f).heightIn(min = 48.dp), contentAlignment = Alignment.Center) {
                             if (number in 1..month.lengthOfMonth()) {
                                 val date = month.atDay(number).toString()
                                 val hasVisit = visits.any { it.scheduledDate == date && it.status != "CANCELLED" }
-                                TextButton({ day = if (day == date) "" else date }, Modifier.fillMaxSize(), contentPadding = PaddingValues(0.dp),
+                                TextButton({ day = if (day == date) "" else date },
+                                    Modifier.fillMaxWidth().heightIn(min = 48.dp).semantics {
+                                        contentDescription = month.atDay(number).format(DateTimeFormatter.ofPattern("yyyy年M月d日 EEEE", Locale.CHINA))
+                                        selected = day == date
+                                        stateDescription = if (hasVisit) "有产检安排" else "暂无产检安排"
+                                    }, contentPadding = PaddingValues(vertical = 4.dp),
                                     colors = ButtonDefaults.textButtonColors(containerColor = if (day == date) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.surface)) {
                                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
                                         Text(number.toString(), color = if (day == date) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface)
@@ -98,10 +108,14 @@ internal fun VisitsScreen(state: JournalState, onAdd: () -> Unit, onSelect: (Str
             )
         } }
         items(shown, key = { it.id }, contentType = { "visit" }) { v -> Inset {
-            RecordRow("${displayDate(v.scheduledDate)} · ${v.items.ifBlank { "产检预约" }}", "${v.scheduledTime ?: "时间待定"} · ${visitStatus(v)}", "ic-calendar-check.svg") { onSelect(v.id) }
+            Surface(onClick={onSelect(v.id)},shape=RoundedCornerShape(20.dp),color=MaterialTheme.colorScheme.surface) {
+                Column(Modifier.fillMaxWidth().padding(20.dp),verticalArrangement=Arrangement.spacedBy(12.dp)) {
+                    JournalContentHeading("${displayDate(v.scheduledDate)} · ${v.items.ifBlank { "产检预约" }}","${v.scheduledTime ?: "时间待定"} · ${visitStatus(v)}")
+                }
+            }
         } }
     }
-    if (calendar) Box(Modifier.align(Alignment.BottomCenter).fillMaxWidth().background(MaterialTheme.colorScheme.background)
+    if (calendar) Box(Modifier.fillMaxWidth().background(MaterialTheme.colorScheme.background)
         .padding(horizontal = 24.dp, vertical = 8.dp)) {
         JournalButton("新建产检预约", enabled = state.active != null, onClick = onAdd)
     }
@@ -110,22 +124,9 @@ internal fun VisitsScreen(state: JournalState, onAdd: () -> Unit, onSelect: (Str
 
 @Composable
 internal fun VisitTimeField(value: String, update: (String) -> Unit) {
-    var show by remember { mutableStateOf(false) }
     Column {
-        OutlinedButton({ show = true }, Modifier.fillMaxWidth().heightIn(min = 56.dp), shape = RoundedCornerShape(16.dp)) {
-            Column(Modifier.fillMaxWidth()) {
-                Text("预约时间（选填）", style = MaterialTheme.typography.bodySmall)
-                Text(value.ifBlank { "时间待定" }, style = MaterialTheme.typography.bodyLarge)
-            }
-        }
+        RecordTimeField(value,update,"预约时间（选填）")
         if (value.isNotBlank()) JournalTextAction("设为时间待定", onClick = { update("") })
-    }
-    if (show) {
-        val initial = runCatching { LocalTime.parse(value) }.getOrNull()
-        val clock = rememberTimePickerState(initialHour = initial?.hour ?: 9, initialMinute = initial?.minute ?: 0, is24Hour = true)
-        AlertDialog(onDismissRequest = { show = false }, title = { Text("预约时间") }, text = { TimeInput(clock) },
-            confirmButton = { TextButton({ update(String.format(Locale.ROOT, "%02d:%02d", clock.hour, clock.minute)); show = false }) { Text("确定") } },
-            dismissButton = { TextButton({ show = false }) { Text("取消") } })
     }
 }
 
@@ -133,8 +134,8 @@ internal fun VisitTimeField(value: String, update: (String) -> Unit) {
 internal fun ActualVisitEditor(form: VisitForm, busy: Boolean, update: (VisitForm) -> Unit, save: () -> Unit) {
     LazyColumn(contentPadding = PaddingValues(bottom = 24.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         item { Inset { DateField("实际就诊日期", form.actualDate, { update(form.copy(actualDate = it)) }, required = true, maxDate = LocalDate.now()) } }
-        item { Inset { JournalField(form.actualTime, { update(form.copy(actualTime = it.take(5))) }, "就诊时间（选填）",
-            placeholder = "例如 09:30", modifier = Modifier.testTag("actual-visit-time")) } }
+        item { Inset { RecordTimeField(form.actualTime, { update(form.copy(actualTime = it.take(5))) }, "就诊时间（选填）",
+            modifier = Modifier.testTag("actual-visit-time"), enabled=!busy) } }
         item { Inset { FormField("就诊医院（选填）", form.actualHospital, { update(form.copy(actualHospital = it)) }, 120,
             modifier = Modifier.fillMaxWidth().testTag("actual-visit-hospital")) } }
         item { Inset { FormField("检查结果（选填）", form.actualResult, { update(form.copy(actualResult = it)) }, 10_000, false,
@@ -164,7 +165,7 @@ internal fun PregnancyHistoryScreen(state: JournalState, id: String) {
             listOf("全部", "预产期", "末次月经", "修订").forEach { name -> JournalTag(filter == name, { filter = name }, { Text(name) }) }
         } } }
         item { Inset { OutlinedTextField(query, { query = it }, modifier = Modifier.fillMaxWidth().testTag("dating-history-search"),
-            placeholder = { Text("搜索日期或依据说明") }, singleLine = true) } }
+            placeholder = { Text("搜索日期或依据说明") }, singleLine = true, shape=RoundedCornerShape(16.dp)) } }
         item { Inset { Text("当前与历史依据", style = MaterialTheme.typography.titleMedium) } }
         if (history.isEmpty()) item { Inset { JournalEmptyState("暂无日期修订记录", "日期变更后会保留原始依据") } }
         else if (visible.isEmpty()) item { Inset { JournalEmptyState("没有找到相关依据", "试试其他关键词或分类") } }
@@ -175,10 +176,11 @@ internal fun PregnancyHistoryScreen(state: JournalState, id: String) {
                     listOfNotNull(revision.lmpDate?.let { "末次月经 ${displayDate(it)}" },
                         revision.confirmedEdd?.let { "预产期 ${displayDate(it)}" }).joinToString(" · ").ifBlank { "日期未填写" },
                     "cdc29.svg", { expandedId = if (expandedId == revision.id) null else revision.id })
+                Text("生效于 ${displayInstant(revision.effectiveAt, ZoneId.systemDefault().id)}",style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant)
                 if (expandedId == revision.id) JournalCard(soft = current) {
-                    Text("医生确认预产期：${revision.confirmedEdd?.let(::displayDate) ?: "未填写"}")
-                    Text("末次月经：${revision.lmpDate?.let(::displayDate) ?: "未填写"}")
-                    Text("依据说明：${revision.source.ifBlank { "未填写" }}")
+                    JournalKeyValue("医生确认预产期", revision.confirmedEdd?.let(::displayDate) ?: "未填写")
+                    JournalKeyValue("末次月经", revision.lmpDate?.let(::displayDate) ?: "未填写")
+                    JournalKeyValue("依据说明", revision.source.ifBlank { "未填写" })
                     Text("生效时间：${displayInstant(revision.effectiveAt, ZoneId.systemDefault().id)}", style = MaterialTheme.typography.bodySmall)
                 }
             }

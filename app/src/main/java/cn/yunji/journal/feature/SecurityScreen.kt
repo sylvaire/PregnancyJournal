@@ -17,33 +17,35 @@ import cn.yunji.journal.core.designsystem.JournalSectionTitle
 import cn.yunji.journal.core.designsystem.RecordRow
 import cn.yunji.journal.core.designsystem.DesignIcon
 
-data class SecurityUi(val enabled: Boolean,val strict: Boolean,val timeout: Int)
+data class SecurityUi(val enabled: Boolean,val strict: Boolean,val timeout: Int,val message: String?=null)
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun SecuritySettingsScreen(state: SecurityUi,action: (String)->Unit) {
     // 布局约定：RecordRow 本身已是 20dp 圆角白卡，不能再嵌进 JournalCard（会变双层卡片）。
     // 因此这里按「卡内放文本/按钮/标签，卡外放 RecordRow」分组，与全站其它页面一致。
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(24.dp).testTag("security-settings"),verticalArrangement=Arrangement.spacedBy(16.dp)) {
-        JournalCard(soft = true) {
-            Text("应用锁", style = MaterialTheme.typography.titleLarge)
-            Text(if(state.enabled || state.strict) "已开启 · 离开 ${if (state.strict) 0 else state.timeout} 分钟后锁定" else "未开启",
+        state.message?.let {JournalError(it)}
+        JournalCard(soft = state.enabled || state.strict) {
+            JournalSectionTitle("应用锁")
+            Text(if(state.strict || state.enabled && state.timeout == 0) "已开启 · 离开应用后立即锁定" else if(state.enabled) "已开启 · 离开 ${state.timeout} 分钟后锁定" else "未开启",
                 color = MaterialTheme.colorScheme.primary)
             Text("保护本机私密资料", style = MaterialTheme.typography.bodySmall)
         }
         JournalCard {
-            JournalButton(if(state.enabled)"关闭应用锁" else "开启应用锁",enabled=!state.strict){action("TOGGLE_LOCK")}
+            JournalButton(if(state.enabled)"关闭应用锁" else "开启应用锁",enabled=!state.strict,secondary=state.enabled){action("TOGGLE_LOCK")}
             JournalSectionTitle("离开应用后锁定")
-            Row(horizontalArrangement=Arrangement.spacedBy(8.dp)) {
+            FlowRow(horizontalArrangement=Arrangement.spacedBy(8.dp), verticalArrangement=Arrangement.spacedBy(8.dp)) {
                 listOf(0 to "立即",1 to "1分钟",5 to "5分钟").forEach {(minutes,label)->JournalTag(state.timeout==minutes,{action("TIMEOUT_$minutes")},{Text(label)},enabled=!state.strict)}
             }
             JournalButton(if(state.strict)"关闭严格模式" else "开启严格模式",secondary=true){action("TOGGLE_STRICT")}
             JournalButton("立即锁定",enabled=state.enabled || state.strict){action("LOCK_NOW")}
         }
-        RecordRow("验证方式", "使用系统生物识别或设备凭据解锁", "ic-lock.svg")
+        RecordRow("验证方式", "使用指纹、面容或手机锁屏密码解锁", "ic-lock.svg")
         RecordRow("严格模式", if(state.strict) "已开启 · 每次锁定后重新认证" else "当前关闭 · 可提高后台保护强度", "ic-shield.svg")
         RecordRow("通知默认隐藏敏感内容", "锁定会关闭原件预览并清理私有预览缓存", "ic-bell.svg")
         JournalCard {
-            Text(if(state.strict)"严格模式每次锁定后清除密钥会话，后台导入、提醒重建和备份可能延期。" else "普通模式允许设备首次解锁后的后台工作；严格模式改用每次需要系统认证的密钥封装。",style=MaterialTheme.typography.bodySmall,
+            Text(if(state.strict)"严格模式下，离开应用即锁定；后台导入、提醒更新和备份可能需要下次解锁后继续。" else "普通模式允许首次解锁后的后台工作。开启严格模式后，离开应用即锁定，并要求重新验证身份。",style=MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant)
             Text("严格模式始终在离开应用后锁定。设备密钥失效时保留加密原件；恢复信息尚未交付前，请勿清除应用数据。",style=MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant)

@@ -37,8 +37,10 @@ class UiSnapshotTest : PageMatrixBaseTest() {
     @Test
     fun homeFigmaSectionsOpenTheirDestinations() {
         launchApp()
+        ui.onNodeWithTag("home-list").performScrollToNode(hasText("今天的安排"))
         ui.onNodeWithText("今天的安排").assertExists()
-        ui.onNodeWithText("随手记一笔").assertExists()
+        ui.onNodeWithTag("home-list").performScrollToNode(hasText("记录与资料"))
+        ui.onNodeWithText("记录与资料").assertExists()
         ui.onNodeWithTag("home-list").performScrollToNode(hasText("检查资料"))
         ui.onNodeWithText("检查资料").performClick()
         ui.waitUntil(10_000) {ui.onAllNodesWithTag("all-documents-list").fetchSemanticsNodes().isNotEmpty()}
@@ -47,6 +49,17 @@ class UiSnapshotTest : PageMatrixBaseTest() {
         ui.onNodeWithTag("home-list").performScrollToNode(hasText("健康指标"))
         ui.onNodeWithText("健康指标").performClick()
         ui.waitUntil(10_000) {ui.onAllNodesWithTag("measurement-list").fetchSemanticsNodes().isNotEmpty()}
+        ui.onNodeWithTag("navigate-up").performClick()
+        settle()
+        ui.onNodeWithTag("home-list").performScrollToNode(hasText("写备注"))
+        capture("home-quick-actions")
+        ui.onNodeWithText("写备注").performClick()
+        ui.waitUntil(10_000) {ui.onAllNodesWithText("写日常记录").fetchSemanticsNodes().isNotEmpty()}
+        ui.onNodeWithTag("navigate-up").performClick()
+        settle()
+        ui.onNodeWithTag("home-list").performScrollToNode(hasTestTag("home-profile-switch"))
+        ui.onNodeWithTag("home-profile-switch").performClick()
+        ui.waitUntil(10_000) {ui.onAllNodesWithTag("profiles-list").fetchSemanticsNodes().isNotEmpty()}
     }
 
     @Test
@@ -54,6 +67,8 @@ class UiSnapshotTest : PageMatrixBaseTest() {
         launchApp()
         openTab("产检", "visits-list")
         capture("02-visits")
+        ui.onNodeWithTag("visits-list").performScrollToNode(hasText("常规产检", substring = true))
+        capture("02-visits-card")
     }
 
     @Test
@@ -82,6 +97,10 @@ class UiSnapshotTest : PageMatrixBaseTest() {
         launchApp()
         openProfileRow("用药方案")
         capture("05-medications")
+        ui.onNodeWithTag("medication-list").performScrollToNode(hasText("复合维生素片（孕妇型）"))
+        capture("05-medications-card")
+        ui.onNodeWithTag("medication-list").performScrollToNode(hasText("每次 1 片"))
+        capture("05-medications-values")
     }
 
     @Test

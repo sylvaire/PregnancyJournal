@@ -190,16 +190,19 @@ fun JournalApp(model: JournalViewModel,externalStack: NavBackStack<NavKey>?=null
                         JournalPage(root = ProfilesRoute, hasProfile = state.active != null, switchTab = ::switchTab) {
                             Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).testTag("profiles-root-list"), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                                 PageHeader("我的", "孕期档案与本机资料")
+                                Inset { JournalSectionTitle("档案与记录") }
                                 Inset { RecordRow("管理孕期", "切换、编辑与归档", "d9f3c.svg") { push(PregnancyManagerRoute) } }
+                                Inset { RecordRow("用药方案", "药品、方案与历史版本", "ic-pill.svg") { push(MedicationsRoute) } }
+                                Inset { RecordRow("服药记录", "按日计划、确认与补记", "ic-notebook.svg") { push(IntakesRoute) } }
+                                Inset { RecordRow("健康指标", "测量记录与分组趋势", "ic-activity.svg") { push(MeasurementsRoute) } }
+                                Inset { JournalSectionTitle("数据保护") }
                                 Inset { RecordRow("全局回收站", "恢复删除项目 · 查看保留的资料", "ic-trash.svg") { push(TrashRoute) } }
-                                Inset { RecordRow("提醒设置", "通知权限、精确提醒与未来7天重建", "ic-bell.svg") { push(ReminderSettingsRoute) } }
                                 if(onSecurity!=null)Inset {RecordRow("安全设置","应用锁、严格模式与立即锁定","ic-shield.svg",onSecurity)}
                                   Inset {RecordRow("云盘连接","配置 WebDAV 与检查备份目录","ic-cloud.svg") {push(CloudConnectionRoute)}}
                                   Inset {RecordRow("本地备份","导出加密备份与保存恢复密钥","ic-backup.svg") {push(RecoveryRoute)}}
                                   Inset {RecordRow("导出资料","结构化数据包与就诊摘要 PDF","ic-file-text.svg") {push(ExportRoute)}}
-                                Inset { RecordRow("用药方案", "药品、方案与历史版本", "ic-pill.svg") { push(MedicationsRoute) } }
-                                Inset { RecordRow("服药记录", "按日计划、确认与补记", "ic-notebook.svg") { push(IntakesRoute) } }
-                                Inset { RecordRow("健康指标", "测量记录与分组趋势", "ic-activity.svg") { push(MeasurementsRoute) } }
+                                Inset { JournalSectionTitle("偏好与提醒") }
+                                Inset { RecordRow("提醒设置", "通知权限、提醒时间与未来7天安排", "ic-bell.svg") { push(ReminderSettingsRoute) } }
                                 Inset { Text("孕迹 ${BuildConfig.VERSION_NAME}", style = MaterialTheme.typography.bodySmall) }
                             }
                         }

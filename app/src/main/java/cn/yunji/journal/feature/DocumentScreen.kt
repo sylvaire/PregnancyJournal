@@ -6,6 +6,7 @@ import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.verticalScroll
@@ -19,6 +20,8 @@ import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
@@ -144,11 +147,12 @@ internal fun DocumentScreen(visitId: String, model: JournalViewModel,medication:
             if (shareError != null) item { Inset { JournalError(shareError!!) } }
             item { Inset { Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 OutlinedTextField(query, { query = it }, label = { Text(if(medication)"搜索名称或备注" else "搜索名称、备注或医院") }, singleLine = true,
+                    shape = RoundedCornerShape(16.dp),
                     modifier = Modifier.fillMaxWidth().testTag("document-search"),
                     trailingIcon = { if (query.isNotEmpty()) TextButton({ query = "" }) { Text("清除") } })
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    if(!medication) DocumentChoice(if (category.isEmpty()) "全部分类" else DOCUMENT_CATEGORIES.getValue(category), listOf("" to "全部分类") + DOCUMENT_CATEGORIES.toList()) { category = it }
-                    DocumentChoice(DOCUMENT_SORTS[sort], DOCUMENT_SORTS.mapIndexed { index, label -> index.toString() to label }) { sort = it.toInt() }
+                    if(!medication) DocumentChoice(if (category.isEmpty()) "全部分类" else DOCUMENT_CATEGORIES.getValue(category), listOf("" to "全部分类") + DOCUMENT_CATEGORIES.toList(), modifier=Modifier.weight(1f)) { category = it }
+                    DocumentChoice(DOCUMENT_SORTS[sort], DOCUMENT_SORTS.mapIndexed { index, label -> index.toString() to label }, modifier=Modifier.weight(1f)) { sort = it.toInt() }
                 }
             } } }
             if (visibleJobs.isEmpty()) item { Inset {
@@ -212,7 +216,7 @@ internal fun DocumentScreen(visitId: String, model: JournalViewModel,medication:
                             Text("${formatFileSize(transfer.bytes)} / ${formatFileSize(transfer.total)}", style = MaterialTheme.typography.bodySmall)
                         } else LinearProgressIndicator(Modifier.fillMaxWidth())
                     }
-                    if (!compactReadyRows || job.state != "READY" || expandedJobId == job.id) Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    if (!compactReadyRows || job.state != "READY" || expandedJobId == job.id) FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                         if (canOpen) JournalTextAction(openLabel, onClick = { openDocument(job.id) })
                         if (attachment != null) JournalTextAction("编辑", onClick = { editing = attachment.id })
                         if (job.state == "FAILED") {
@@ -285,7 +289,7 @@ internal fun DocumentScreen(visitId: String, model: JournalViewModel,medication:
                             onClick = { expandedTrashId = if (expandedTrashId == attachment.id) null else attachment.id })
                     }
                     if (purging) { Text("正在彻底删除…"); LinearProgressIndicator(Modifier.fillMaxWidth()) }
-                    if (!compact || expandedTrashId == attachment.id) Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    if (!compact || expandedTrashId == attachment.id) FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                         JournalTextAction("恢复", enabled = !purging, onClick = { model.restoreDocument(attachment.id) })
                         JournalTextAction("彻底删除", enabled = !purging, danger = true, onClick = { confirmation = RemovalConfirmation(attachment.id, true, false) })
                     }
@@ -393,12 +397,15 @@ internal fun exportName(attachment: AttachmentEntity): String {
 }
 
 @Composable
-private fun DocumentChoice(label: String, options: List<Pair<String, String>>,enabled: Boolean=true, select: (String) -> Unit) {
+private fun DocumentChoice(label: String, options: List<Pair<String, String>>,modifier: Modifier=Modifier, enabled: Boolean=true, select: (String) -> Unit) {
     var expanded by remember { mutableStateOf(false) }
-    Box {
+    Box(modifier) {
         JournalSecondaryButton(label, enabled = enabled, onClick = { expanded = true })
         DropdownMenu(expanded, { expanded = false }) {
-            options.forEach { (key, title) -> DropdownMenuItem(text = { Text(title) }, onClick = { expanded = false; select(key) }) }
+            options.forEach { (key, title) -> DropdownMenuItem(text = { Text(title) },
+                trailingIcon = if(title==label) ({Text("✓")}) else null,
+                modifier = Modifier.semantics {selected=title==label},
+                onClick = { expanded = false; select(key) }) }
         }
     }
 }

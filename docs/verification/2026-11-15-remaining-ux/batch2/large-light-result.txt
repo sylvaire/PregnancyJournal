@@ -1,0 +1,13 @@
+
+cn.yunji.journal.UiReviewRemainingPagesTest:..................
+cn.yunji.journal.PickerExperienceTest:....
+cn.yunji.journal.CloudCleanupUiTest:.......
+cn.yunji.journal.RestoreUiTest:.......
+cn.yunji.journal.UiSnapshotCoverageTest:.
+cn.yunji.journal.UiSnapshotTest:.
+
+Time: 92.629
+
+OK (38 tests)
+
+

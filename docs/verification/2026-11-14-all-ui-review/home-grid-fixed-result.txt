@@ -1,0 +1,9 @@
+
+cn.yunji.journal.UiReviewRegressionTest:.
+cn.yunji.journal.UiSnapshotTest:..
+
+Time: 14.821
+
+OK (3 tests)
+
+

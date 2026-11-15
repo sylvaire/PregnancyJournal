@@ -1,6 +1,7 @@
 package cn.yunji.journal
 
 import androidx.activity.ComponentActivity
+import androidx.compose.ui.graphics.asAndroidBitmap
 import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import cn.yunji.journal.core.designsystem.PregnancyTheme
@@ -36,7 +37,7 @@ class CloudCleanupUiTest {
         show(run={runs++})
         ui.onNodeWithText("立即清理").performScrollTo().performClick()
         ui.onNodeWithText("立即清理云端备份？").assertIsDisplayed()
-        ui.onNodeWithText("只删除云端按保留策略淘汰的旧快照与无引用对象，不删除本机资料、历史资料库或其他设备目录。清理失败不会影响已有备份。").assertIsDisplayed()
+        ui.onNodeWithText("仅清理按保留规则过期的云端备份和不再使用的备份文件。本机资料、历史资料库和其他设备目录会保留；清理失败不会影响已有备份。").assertIsDisplayed()
         assertEquals(0,runs)
         ui.onNodeWithTag("cloud-cleanup-confirm").performClick()
         assertEquals(1,runs)
@@ -48,7 +49,15 @@ class CloudCleanupUiTest {
             kept=3,commitsDeleted=2,objectsDeleted=5,orphansTracked=1)
         show(cleanup=CloudCleanupUiState(record=record,message="云端备份清理完成"))
         ui.onNodeWithText("上次尝试：",substring=true).performScrollTo().assertIsDisplayed()
-        ui.onNodeWithText("保留快照 3 · 删除提交 2 · 删除对象 5 · 新登记孤立 1").assertExists()
+        ui.onNodeWithText("已保留 3 份备份，清理完成。").assertExists()
+        ui.onNodeWithTag("cloud-cleanup-counts").assertDoesNotExist()
+        ui.onNodeWithTag("cloud-cleanup-summary").performScrollTo().assertIsDisplayed()
+        capture("cloud-summary")
+        ui.onNodeWithTag("cloud-cleanup-details").performScrollTo().performClick()
+        ui.onNodeWithText("保留快照 3 · 删除提交 2 · 删除对象 5 · 新登记孤立 1").performScrollTo().assertIsDisplayed()
+        capture("cloud-details")
+        ui.onNodeWithTag("cloud-cleanup-details").performScrollTo().performClick()
+        ui.onNodeWithTag("cloud-cleanup-counts").assertDoesNotExist()
         ui.onNodeWithText("云端备份清理完成",substring=true).assertExists()
     }
 
@@ -57,6 +66,16 @@ class CloudCleanupUiTest {
         show(cleanup=CloudCleanupUiState(record=record))
         ui.onNodeWithText("未清理原因：尚未保存恢复密钥，不能清理云端备份").performScrollTo().assertIsDisplayed()
         ui.onNodeWithText("立即清理").performScrollTo().assertIsEnabled()
+    }
+
+    private fun capture(name:String) {
+        ui.waitForIdle()
+        ui.mainClock.advanceTimeBy(350)
+        val context=androidx.test.core.app.ApplicationProvider.getApplicationContext<android.content.Context>()
+        val directory=java.io.File(context.getExternalFilesDir(null),"verification/ux-next-cloud").apply {mkdirs()}
+        val bitmap=ui.onRoot().captureToImage().asAndroidBitmap()
+        java.io.File(directory,"$name.png").outputStream().use {bitmap.compress(android.graphics.Bitmap.CompressFormat.PNG,100,it)}
+        bitmap.recycle()
     }
 
     @Test fun unverifiedConnectionDisablesManualEntryAndShowsReason() {

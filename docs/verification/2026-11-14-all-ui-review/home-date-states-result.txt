@@ -1,0 +1,8 @@
+
+cn.yunji.journal.UiReviewRegressionTest:.
+
+Time: 7.684
+
+OK (1 test)
+
+

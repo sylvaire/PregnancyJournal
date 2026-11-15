@@ -1,0 +1,1 @@
+UiSnapshotCoverageTest + UiSurfaceSnapshotTest: OK (24 tests), Time 94.831s. emulator-5554, font_scale=1.0, night=yes. Session 37923 completed exit 0.

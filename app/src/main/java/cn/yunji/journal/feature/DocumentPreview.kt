@@ -12,6 +12,7 @@ import android.view.WindowManager
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.gestures.detectTransformGestures
 import androidx.compose.foundation.layout.*
@@ -36,6 +37,8 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import androidx.compose.ui.window.DialogWindowProvider
 import androidx.compose.ui.platform.LocalView
+import androidx.compose.ui.platform.LocalConfiguration
+import androidx.core.view.WindowCompat
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import cn.yunji.journal.core.designsystem.DesignIcon
@@ -115,6 +118,7 @@ internal class ImageRegion(private val preview: DocumentPreview) : AutoCloseable
 
 @Composable
 internal fun DocumentPreviewDialog(attachment: AttachmentEntity, model: JournalViewModel, close: () -> Unit, remove: () -> Unit) {
+    val compact = LocalConfiguration.current.orientation == android.content.res.Configuration.ORIENTATION_LANDSCAPE
     val fileLaunch=LocalFileLaunch.current
     val latest by remember(attachment.id) { model.documents.observeAttachment(attachment.id) }.collectAsStateWithLifecycle(attachment)
     LaunchedEffect(latest) { if (latest == null || latest?.deletedAt != null) close() }
@@ -129,9 +133,16 @@ internal fun DocumentPreviewDialog(attachment: AttachmentEntity, model: JournalV
     }
     Dialog(onDismissRequest = close, properties = DialogProperties(usePlatformDefaultWidth = false, decorFitsSystemWindows = false)) {
         val view = LocalView.current
-        DisposableEffect(view) {
+        val dark = isSystemInDarkTheme()
+        DisposableEffect(view, dark) {
             val window = (view.parent as? DialogWindowProvider)?.window
             if (!BuildConfig.DEBUG) window?.addFlags(WindowManager.LayoutParams.FLAG_SECURE)
+            window?.let {
+                WindowCompat.getInsetsController(it, it.decorView).apply {
+                    isAppearanceLightStatusBars = !dark
+                    isAppearanceLightNavigationBars = !dark
+                }
+            }
             onDispose { }
         }
         Surface(Modifier.fillMaxSize().testTag("document-preview"), color = MaterialTheme.colorScheme.background) {
@@ -140,6 +151,7 @@ internal fun DocumentPreviewDialog(attachment: AttachmentEntity, model: JournalV
                     title = if (attachment.mime == "application/pdf") "PDF 预览" else "图片预览",
                     subtitle = attachment.name,
                     onBack = close,
+                    compact = compact,
                 ) {
                     JournalTextAction("导出", onClick = {
                         val row = latest ?: attachment
@@ -153,7 +165,7 @@ internal fun DocumentPreviewDialog(attachment: AttachmentEntity, model: JournalV
                     })
                     JournalTextAction("删除", Modifier.testTag("preview-delete"), danger = true, onClick = remove)
                 }
-                if (attachment.mime == "application/pdf") PdfDocumentView(attachment.id, model, Modifier.weight(1f).fillMaxWidth())
+                if (attachment.mime == "application/pdf") PdfDocumentView(attachment.id, model, Modifier.weight(1f).fillMaxWidth(),compact=compact)
                 else ZoomableDocument(attachment.id, model, Modifier.weight(1f).fillMaxWidth())
             }
         }

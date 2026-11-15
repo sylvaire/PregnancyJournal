@@ -1,0 +1,10 @@
+
+cn.yunji.journal.UiReviewRemainingPagesTest:............
+cn.yunji.journal.UiReviewRegressionTest:.......
+cn.yunji.journal.UiSnapshotCoverageTest:...
+
+Time: 90.756
+
+OK (22 tests)
+
+

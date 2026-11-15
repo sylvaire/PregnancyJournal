@@ -1,0 +1,258 @@
+Printing with useUnmergedTree = 'false'
+Node #419 at (l=0.0, t=0.0, r=2400.0, b=1080.0)px
+ |-Node #420 at (l=0.0, t=0.0, r=2400.0, b=1080.0)px
+   Shape = 'RectangleShape'
+    |-Node #648 at (l=0.0, t=0.0, r=2400.0, b=1080.0)px
+       |-Node #649 at (l=0.0, t=0.0, r=2400.0, b=1080.0)px, Tag: '提醒设置'
+         IsContainer = 'true'
+         Shape = 'RectangleShape'
+          |-Node #669 at (l=128.0, t=371.0, r=2400.0, b=1017.0)px
+          | IsTraversalGroup = 'true'
+          | Shape = 'androidx.compose.foundation.VerticalScrollableClipShape@2c790bd'
+          | VerticalScrollAxisRange = 'ScrollAxisRange(value=5584.0, maxValue=6705.0, reverseScrolling=false)'
+          | Actions = [ScrollBy, ScrollByOffset]
+          |  |-Node #671 at (l=191.0, t=-5213.0, r=2337.0, b=-4746.0)px
+          |  | IsContainer = 'true'
+          |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 20.0.dp), topEnd = CornerSize(size = 20.0.dp), bottomEnd = CornerSize(size = 20.0.dp), bottomStart = CornerSize(size = 20.0.dp))'
+          |  |  |-Node #672 at (l=244.0, t=-5171.0, r=2284.0, b=-4788.0)px
+          |  |    Shape = 'RectangleShape'
+          |  |     |-Node #673 at (l=244.0, t=-5171.0, r=600.0, b=-5042.0)px
+          |  |     | Text = '[提醒状态]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #674 at (l=244.0, t=-5010.0, r=720.0, b=-4911.0)px
+          |  |     | Text = '[通知权限已允许]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #675 at (l=244.0, t=-4879.0, r=811.0, b=-4788.0)px
+          |  |       Text = '[仍可查看应用内待办]'
+          |  |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |-Node #677 at (l=191.0, t=-4714.0, r=2337.0, b=-4442.0)px
+          |  | Focused = 'false'
+          |  | IsContainer = 'true'
+          |  | Role = 'Button'
+          |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 20.0.dp), topEnd = CornerSize(size = 20.0.dp), bottomEnd = CornerSize(size = 20.0.dp), bottomStart = CornerSize(size = 20.0.dp))'
+          |  | Text = '[通知权限, 已允许 · 查看通知和系统设置]'
+          |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+          |  | MergeDescendants = 'true'
+          |  |-Node #687 at (l=191.0, t=-4410.0, r=2337.0, b=-4138.0)px
+          |  | Focused = 'false'
+          |  | IsContainer = 'true'
+          |  | Role = 'Button'
+          |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 20.0.dp), topEnd = CornerSize(size = 20.0.dp), bottomEnd = CornerSize(size = 20.0.dp), bottomStart = CornerSize(size = 20.0.dp))'
+          |  | Text = '[产检提醒, 按预约日期安排 · 已开启]'
+          |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+          |  | MergeDescendants = 'true'
+          |  |-Node #697 at (l=191.0, t=-4106.0, r=2337.0, b=-3834.0)px
+          |  | Focused = 'false'
+          |  | IsContainer = 'true'
+          |  | Role = 'Button'
+          |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 20.0.dp), topEnd = CornerSize(size = 20.0.dp), bottomEnd = CornerSize(size = 20.0.dp), bottomStart = CornerSize(size = 20.0.dp))'
+          |  | Text = '[用药提醒, 按方案和服药时间安排 · 已开启]'
+          |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+          |  | MergeDescendants = 'true'
+          |  |-Node #707 at (l=191.0, t=-3802.0, r=2337.0, b=-3530.0)px
+          |  | Focused = 'false'
+          |  | IsContainer = 'true'
+          |  | Role = 'Button'
+          |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 20.0.dp), topEnd = CornerSize(size = 20.0.dp), bottomEnd = CornerSize(size = 20.0.dp), bottomStart = CornerSize(size = 20.0.dp))'
+          |  | Text = '[自定义提醒, 一次、每天或每周]'
+          |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+          |  | MergeDescendants = 'true'
+          |  |-Node #717 at (l=191.0, t=-3498.0, r=2337.0, b=-3226.0)px
+          |  | Focused = 'false'
+          |  | IsContainer = 'true'
+          |  | Role = 'Button'
+          |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 20.0.dp), topEnd = CornerSize(size = 20.0.dp), bottomEnd = CornerSize(size = 20.0.dp), bottomStart = CornerSize(size = 20.0.dp))'
+          |  | Text = '[未来7天提醒, 查看安排或刷新提醒]'
+          |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+          |  | MergeDescendants = 'true'
+          |  |-Node #727 at (l=191.0, t=-3194.0, r=1073.0, b=-3103.0)px
+          |  | Text = '[提醒状态以手机系统授权为准。]'
+          |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |-Node #729 at (l=191.0, t=-3071.0, r=547.0, b=-2942.0)px
+          |  | Text = '[详细设置]'
+          |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |-Node #732 at (l=191.0, t=-2910.0, r=2337.0, b=-2374.0)px
+          |  | IsContainer = 'true'
+          |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 20.0.dp), topEnd = CornerSize(size = 20.0.dp), bottomEnd = CornerSize(size = 20.0.dp), bottomStart = CornerSize(size = 20.0.dp))'
+          |  |  |-Node #733 at (l=244.0, t=-2868.0, r=2284.0, b=-2416.0)px
+          |  |    Shape = 'RectangleShape'
+          |  |     |-Node #734 at (l=244.0, t=-2868.0, r=600.0, b=-2739.0)px
+          |  |     | Text = '[通知权限]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #735 at (l=244.0, t=-2707.0, r=755.0, b=-2596.0)px, Tag: 'reminder-permission'
+          |  |     | Text = '[已允许显示通知]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #737 at (l=244.0, t=-2564.0, r=746.0, b=-2416.0)px, Tag: 'reminder-test'
+          |  |     | Focused = 'false'
+          |  |     | Role = 'Button'
+          |  |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+          |  |     | Text = '[发送测试通知]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+          |  |     | MergeDescendants = 'true'
+          |  |     |-Node #740 at (l=767.0, t=-2564.0, r=1269.0, b=-2416.0)px
+          |  |       Focused = 'false'
+          |  |       Role = 'Button'
+          |  |       Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+          |  |       Text = '[系统通知设置]'
+          |  |       Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+          |  |       MergeDescendants = 'true'
+          |  |-Node #744 at (l=191.0, t=-2342.0, r=2337.0, b=-1588.0)px
+          |  | IsContainer = 'true'
+          |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 20.0.dp), topEnd = CornerSize(size = 20.0.dp), bottomEnd = CornerSize(size = 20.0.dp), bottomStart = CornerSize(size = 20.0.dp))'
+          |  |  |-Node #745 at (l=244.0, t=-2300.0, r=2284.0, b=-1630.0)px
+          |  |    Shape = 'RectangleShape'
+          |  |     |-Node #746 at (l=244.0, t=-2300.0, r=600.0, b=-2171.0)px
+          |  |     | Text = '[提醒时间]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #747 at (l=244.0, t=-2139.0, r=1339.0, b=-2028.0)px, Tag: 'reminder-exact'
+          |  |     | Text = '[将使用非精确提醒，系统可能推迟]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #748 at (l=244.0, t=-1996.0, r=1038.0, b=-1848.0)px
+          |  |     | Focused = 'false'
+          |  |     | Role = 'Button'
+          |  |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+          |  |     | Text = '[打开精确提醒系统设置]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+          |  |     | MergeDescendants = 'true'
+          |  |     |-Node #751 at (l=244.0, t=-1816.0, r=2284.0, b=-1630.0)px
+          |  |       Text = '[精确提醒资格由系统和发布渠道决定；未获授权时自动降级，不需要关闭提醒。]'
+          |  |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |-Node #753 at (l=191.0, t=-1556.0, r=2337.0, b=-622.0)px
+          |  | IsContainer = 'true'
+          |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 20.0.dp), topEnd = CornerSize(size = 20.0.dp), bottomEnd = CornerSize(size = 20.0.dp), bottomStart = CornerSize(size = 20.0.dp))'
+          |  |  |-Node #754 at (l=244.0, t=-1514.0, r=2284.0, b=-664.0)px
+          |  |    Shape = 'RectangleShape'
+          |  |     |-Node #755 at (l=244.0, t=-1514.0, r=689.0, b=-1385.0)px
+          |  |     | Text = '[后台可靠性]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #756 at (l=244.0, t=-1353.0, r=1996.0, b=-1242.0)px, Tag: 'reminder-battery'
+          |  |     | Text = '[未加入电池优化白名单；系统省电可能推迟或跳过提醒]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #757 at (l=244.0, t=-1210.0, r=746.0, b=-1062.0)px, Tag: 'request-battery-ignore'
+          |  |     | Focused = 'false'
+          |  |     | Role = 'Button'
+          |  |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+          |  |     | Text = '[允许后台运行]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+          |  |     | MergeDescendants = 'true'
+          |  |     |-Node #760 at (l=244.0, t=-1030.0, r=2284.0, b=-844.0)px
+          |  |     | Text = '[未识别到已知厂商限制；如提醒被延迟，请在系统设置中允许孕迹后台运行。]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #761 at (l=244.0, t=-812.0, r=600.0, b=-664.0)px, Tag: 'open-app-details'
+          |  |       Focused = 'false'
+          |  |       Role = 'Button'
+          |  |       Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+          |  |       Text = '[应用信息]'
+          |  |       Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+          |  |       MergeDescendants = 'true'
+          |  |-Node #766 at (l=191.0, t=-590.0, r=2337.0, b=157.0)px
+          |  | IsContainer = 'true'
+          |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 20.0.dp), topEnd = CornerSize(size = 20.0.dp), bottomEnd = CornerSize(size = 20.0.dp), bottomStart = CornerSize(size = 20.0.dp))'
+          |  |  |-Node #767 at (l=244.0, t=-548.0, r=2284.0, b=115.0)px
+          |  |    Shape = 'RectangleShape'
+          |  |     |-Node #768 at (l=244.0, t=-548.0, r=600.0, b=-419.0)px
+          |  |     | Text = '[提醒类型]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #770 at (l=244.0, t=-387.0, r=536.0, b=-276.0)px
+          |  |     | Text = '[产检提醒]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #771 at (l=2147.0, t=-366.0, r=2284.0, b=-282.0)px, Tag: 'reminder-visits'
+          |  |     | ContentDataType = 'AndroidContentDataType(androidAutofillType=2)'
+          |  |     | FillableData = 'androidx.compose.ui.autofill.AndroidFillableData@3884083'
+          |  |     | Focused = 'false'
+          |  |     | Role = 'Switch'
+          |  |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+          |  |     | ToggleableState = 'On'
+          |  |     | Actions = [OnClick, OnFillData, RequestFocus]
+          |  |     | MergeDescendants = 'true'
+          |  |     |-Node #774 at (l=244.0, t=-229.0, r=536.0, b=-118.0)px
+          |  |     | Text = '[用药提醒]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #775 at (l=2147.0, t=-208.0, r=2284.0, b=-124.0)px, Tag: 'reminder-medications'
+          |  |     | ContentDataType = 'AndroidContentDataType(androidAutofillType=2)'
+          |  |     | FillableData = 'androidx.compose.ui.autofill.AndroidFillableData@cfd9200'
+          |  |     | Focused = 'false'
+          |  |     | Role = 'Switch'
+          |  |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+          |  |     | ToggleableState = 'On'
+          |  |     | Actions = [OnClick, OnFillData, RequestFocus]
+          |  |     | MergeDescendants = 'true'
+          |  |     |-Node #777 at (l=244.0, t=-71.0, r=2284.0, b=115.0)px
+          |  |       Text = '[自动云端备份连续失败3次，或检测到其他设备写入时，会提示检查备份状态；同一轮失败只提醒一次，不在通知中显示医疗内容或云端信息。]'
+          |  |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |-Node #780 at (l=191.0, t=189.0, r=2337.0, b=1059.0)px
+          |  | IsContainer = 'true'
+          |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 20.0.dp), topEnd = CornerSize(size = 20.0.dp), bottomEnd = CornerSize(size = 20.0.dp), bottomStart = CornerSize(size = 20.0.dp))'
+          |  |  |-Node #781 at (l=244.0, t=231.0, r=2284.0, b=1017.0)px
+          |  |    Shape = 'RectangleShape'
+          |  |     |-Node #782 at (l=244.0, t=231.0, r=609.0, b=337.0)px
+          |  |     | Text = '[自定义提醒]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #783 at (l=244.0, t=369.0, r=1756.0, b=460.0)px
+          |  |     | Text = '[可按一次、每天或每周提醒；内容保存在加密资料中。]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #784 at (l=244.0, t=492.0, r=2284.0, b=640.0)px, Tag: 'custom-reminder-add'
+          |  |     | Focused = 'false'
+          |  |     | Role = 'Button'
+          |  |     | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 26.0.dp), topEnd = CornerSize(size = 26.0.dp), bottomEnd = CornerSize(size = 26.0.dp), bottomStart = CornerSize(size = 26.0.dp))'
+          |  |     | Text = '[新建提醒]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+          |  |     | MergeDescendants = 'true'
+          |  |     |-Node #882 at (l=244.0, t=672.0, r=855.0, b=1017.0)px, Tag: 'custom-reminder-row-ec4f1986-5147-4490-962f-afe673375ed2'
+          |  |        |-Node #883 at (l=244.0, t=672.0, r=682.0, b=778.0)px
+          |  |        | Text = '[修改后的提醒]'
+          |  |        | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |        |-Node #884 at (l=244.0, t=778.0, r=855.0, b=869.0)px
+          |  |        | Text = '[11月14日 18:13 · 每天]'
+          |  |        | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |        |-Node #886 at (l=244.0, t=869.0, r=454.0, b=1017.0)px, Tag: 'custom-reminder-edit-ec4f1986-5147-4490-962f-afe673375ed2'
+          |  |        | Focused = 'false'
+          |  |        | Role = 'Button'
+          |  |        | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+          |  |        | Text = '[编辑]'
+          |  |        | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+          |  |        | MergeDescendants = 'true'
+          |  |        |-Node #889 at (l=475.0, t=869.0, r=685.0, b=1017.0)px, Tag: 'custom-reminder-delete-ec4f1986-5147-4490-962f-afe673375ed2'
+          |  |          Focused = 'false'
+          |  |          Role = 'Button'
+          |  |          Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+          |  |          Text = '[删除]'
+          |  |          Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+          |  |          MergeDescendants = 'true'
+          |  |-Node #789 at (l=191.0, t=1091.0, r=2337.0, b=1607.0)px
+          |  | IsContainer = 'true'
+          |  | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 20.0.dp), topEnd = CornerSize(size = 20.0.dp), bottomEnd = CornerSize(size = 20.0.dp), bottomStart = CornerSize(size = 20.0.dp))'
+          |  |  |-Node #790 at (l=244.0, t=1133.0, r=2284.0, b=1565.0)px
+          |  |    Shape = 'RectangleShape'
+          |  |     |-Node #791 at (l=244.0, t=1133.0, r=740.0, b=1262.0)px
+          |  |     | Text = '[未来7天提醒]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #792 at (l=244.0, t=1294.0, r=2197.0, b=1385.0)px
+          |  |     | Text = '[提醒会随记录、规则和手机时间更新。如安排未更新，可以手动刷新。]'
+          |  |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |     |-Node #793 at (l=244.0, t=1417.0, r=2284.0, b=1565.0)px, Tag: 'reminder-rebuild'
+          |  |       Focused = 'false'
+          |  |       Role = 'Button'
+          |  |       Shape = 'RoundedCornerShape(topStart = CornerSize(size = 26.0.dp), topEnd = CornerSize(size = 26.0.dp), bottomEnd = CornerSize(size = 26.0.dp), bottomStart = CornerSize(size = 26.0.dp))'
+          |  |       Text = '[刷新未来7天提醒]'
+          |  |       Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+          |  |       MergeDescendants = 'true'
+          |  |-Node #797 at (l=191.0, t=1639.0, r=2337.0, b=1825.0)px
+          |  | Text = '[提醒只在本机生成，不上传药名、医院或检查内容。系统省电、强行停止或拒绝权限时可能延迟或不显示；应用内待办始终保留。]'
+          |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |  |-Node #799 at (l=191.0, t=1857.0, r=2337.0, b=2138.0)px
+          |    Text = '[未获通知权限或系统限制后台时，请在本应用内查看今天、产检、用药和此页的自定义提醒；可按上方入口在系统设置中允许自启动与后台运行（孕迹不会代您修改这些系统设置）。]'
+          |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |-Node #654 at (l=202.0, t=165.0, r=307.0, b=270.0)px, Tag: 'navigate-up'
+          | ContentDescription = '[返回上一级]'
+          | Focused = 'false'
+          | Role = 'Button'
+          | Shape = 'RoundedCornerShape(topStart = CornerSize(size = 50.0%), topEnd = CornerSize(size = 50.0%), bottomEnd = CornerSize(size = 50.0%), bottomStart = CornerSize(size = 50.0%))'
+          | Actions = [OnClick, RequestFocus]
+          | MergeDescendants = 'true'
+          |-Node #658 at (l=328.0, t=95.0, r=720.0, b=237.0)px
+          | Text = '[提醒设置]'
+          | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |-Node #659 at (l=328.0, t=248.0, r=643.0, b=339.0)px
+            Text = '[返回上一级]'
+            Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]

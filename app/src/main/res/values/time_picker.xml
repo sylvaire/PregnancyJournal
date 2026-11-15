@@ -1,0 +1,8 @@
+<resources>
+    <style name="JournalTimePickerDialog" parent="android:style/Theme.Material.Light.Dialog.Alert">
+        <item name="android:timePickerStyle">@style/JournalTimePickerSpinner</item>
+    </style>
+    <style name="JournalTimePickerSpinner" parent="android:style/Widget.Material.TimePicker">
+        <item name="android:timePickerMode">spinner</item>
+    </style>
+</resources>

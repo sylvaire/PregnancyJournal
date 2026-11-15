@@ -43,17 +43,15 @@ import coil.decode.SvgDecoder
 
 @Composable fun JournalButton(text: String, modifier: Modifier = Modifier, enabled: Boolean = true, secondary: Boolean = false, onClick: () -> Unit) {
     val buttonModifier = modifier.fillMaxWidth().heightIn(min = 52.dp)
-    if (secondary) FilledTonalButton(onClick, buttonModifier, enabled, shape = RoundedCornerShape(26.dp),
-        colors = ButtonDefaults.filledTonalButtonColors(containerColor = MaterialTheme.colorScheme.primaryContainer,
-            contentColor = MaterialTheme.colorScheme.onPrimaryContainer)) { Text(text, style = MaterialTheme.typography.labelLarge) }
+    if (secondary) JournalSecondaryButton(text, modifier, enabled, onClick)
     else Button(onClick, buttonModifier, enabled, shape = RoundedCornerShape(26.dp)) { Text(text, style = MaterialTheme.typography.labelLarge) }
 }
 
 @Composable fun JournalDangerButton(text: String, modifier: Modifier = Modifier, enabled: Boolean = true, onClick: () -> Unit) {
-    FilledTonalButton(onClick, modifier.fillMaxWidth().heightIn(min = 52.dp), enabled,
+    OutlinedButton(onClick, modifier.fillMaxWidth().heightIn(min = 52.dp), enabled,
         shape = RoundedCornerShape(26.dp),
-        colors = ButtonDefaults.filledTonalButtonColors(containerColor = MaterialTheme.colorScheme.errorContainer,
-            contentColor = MaterialTheme.colorScheme.onErrorContainer)) {
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.error.copy(alpha = if (enabled) 0.6f else 0.12f)),
+        colors = ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colorScheme.error)) {
         Text(text, style = MaterialTheme.typography.labelLarge)
     }
 }
@@ -100,11 +98,13 @@ import coil.decode.SvgDecoder
     modifier: Modifier = Modifier, enabled: Boolean = true) {
     val contentAlpha = if (enabled) 1f else 0.38f
     val fill by animateColorAsState(
-        targetValue = if (selected) MaterialTheme.colorScheme.primary.copy(alpha = if (enabled) 1f else 0.12f)
+        targetValue = if (!enabled && selected) MaterialTheme.colorScheme.onSurface.copy(alpha = 0.12f)
+        else if (selected) MaterialTheme.colorScheme.primary
         else MaterialTheme.colorScheme.surface,
         animationSpec = tween(durationMillis = 160), label = "tagFill")
     val content by animateColorAsState(
-        targetValue = if (selected) MaterialTheme.colorScheme.onPrimary.copy(alpha = contentAlpha)
+        targetValue = if (!enabled) MaterialTheme.colorScheme.onSurface.copy(alpha = 0.38f)
+        else if (selected) MaterialTheme.colorScheme.onPrimary
         else MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = contentAlpha),
         animationSpec = tween(durationMillis = 160), label = "tagContent")
     // 描边宽度也做过渡：选中时描边淡出，避免边框突然消失造成的尺寸抖动感。
@@ -146,8 +146,10 @@ import coil.decode.SvgDecoder
                 Box(Modifier.size(44.dp), contentAlignment = Alignment.Center) { DesignIcon(icon) }
             }
             Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                Text(title, style = MaterialTheme.typography.bodyLarge, maxLines = 2, overflow = TextOverflow.Ellipsis)
-                Text(subtitle, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant, maxLines = 2, overflow = TextOverflow.Ellipsis)
+                Text(title, style = MaterialTheme.typography.bodyLarge,
+                    maxLines = if (onClick == null) Int.MAX_VALUE else 2, overflow = TextOverflow.Ellipsis)
+                Text(subtitle, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = if (onClick == null) Int.MAX_VALUE else 2, overflow = TextOverflow.Ellipsis)
             }
             if (onClick != null) DesignIcon("cfd63.svg", size = 20.dp)
         }
@@ -173,7 +175,9 @@ import coil.decode.SvgDecoder
 @Composable fun PageHeader(title: String, subtitle: String, onSubtitleClick: (() -> Unit)? = null) {
     Column(Modifier.fillMaxWidth().padding(horizontal = 24.dp, vertical = 16.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
         Text(title, style = MaterialTheme.typography.headlineMedium)
-        Text(subtitle, modifier = if(onSubtitleClick!=null)Modifier.clickable(onClick=onSubtitleClick) else Modifier,
+        Text(subtitle, modifier = if(onSubtitleClick!=null)Modifier.heightIn(min = 48.dp)
+            .clickable(role = Role.Button, onClickLabel = "切换孕期", onClick=onSubtitleClick)
+            .wrapContentHeight(Alignment.CenterVertically) else Modifier,
             style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
     }
 }
@@ -199,9 +203,9 @@ import coil.decode.SvgDecoder
             }
         }
         Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-            Text(title, style = MaterialTheme.typography.headlineMedium, maxLines = 1, overflow = TextOverflow.Ellipsis)
+            Text(title, style = MaterialTheme.typography.headlineMedium)
             if (subtitle != null) Text(subtitle, style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                color = MaterialTheme.colorScheme.onSurfaceVariant, maxLines = 2, overflow = TextOverflow.Ellipsis)
         }
     }
 }
@@ -212,9 +216,9 @@ import coil.decode.SvgDecoder
  */
 @Composable fun JournalEmptyState(title: String, subtitle: String? = null, icon: String = "86969.svg",
     action: (@Composable () -> Unit)? = null) {
-    JournalCard(soft = true) {
+    JournalCard {
         DesignIcon(icon)
-        Text(title, style = MaterialTheme.typography.titleLarge, color = MaterialTheme.colorScheme.onBackground)
+        JournalSectionTitle(title)
         if (subtitle != null) Text(subtitle, style = MaterialTheme.typography.bodySmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant)
         action?.invoke()

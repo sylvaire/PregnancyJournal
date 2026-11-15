@@ -2,6 +2,7 @@ package cn.yunji.journal
 
 import android.graphics.Bitmap
 import android.util.Log
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.graphics.asAndroidBitmap
 import androidx.compose.ui.test.*
@@ -48,11 +49,14 @@ class UiSnapshotCoverageTest : PageMatrixBaseTest() {
         ui.waitUntil(10_000) { ui.onAllNodesWithTag("custom-reminder-add").fetchSemanticsNodes().isNotEmpty() }
         ui.waitUntil(10_000) { ui.onAllNodesWithText("每日叶酸提醒").fetchSemanticsNodes().isNotEmpty() }
         captureRoot("reminder-settings")
-        // 滚到“调度检查”露出提醒类型 / 自定义提醒（含提醒行与新建入口）/ 调度检查三块。
-        ui.onAllNodesWithText("调度检查")[0].performClick()
+        // 先滚到可见入口，再验证点击后能够到达未来提醒的刷新操作。
+        ui.onAllNodesWithText("未来7天提醒")[0].performScrollTo().assertIsDisplayed().performClick()
         ui.waitForIdle()
+        captureRoot("reminder-schedule-after-jump")
         ui.onNodeWithTag("reminder-rebuild").assertIsDisplayed()
         captureRoot("reminder-settings-custom")
+        ui.onNodeWithText("每日叶酸提醒").performScrollTo().assertIsDisplayed()
+        captureRoot("reminder-card")
     }
 
     // ---------- 2. 自定义提醒编辑器（新建表单，默认“一次”） ----------
@@ -79,7 +83,7 @@ class UiSnapshotCoverageTest : PageMatrixBaseTest() {
 
     @Test
     fun snap03VaultLocked() {
-        ui.setContent { PregnancyTheme { UnlockScreen(busy = false, error = null, unlock = {}) } }
+        ui.setContent { PregnancyTheme { androidx.compose.material3.Surface(androidx.compose.ui.Modifier.fillMaxSize()) { UnlockScreen(busy = false, error = null, unlock = {}) } } }
         ui.waitUntil(5_000) { ui.onAllNodesWithTag("vault-locked").fetchSemanticsNodes().isNotEmpty() }
         captureRoot("vault-locked")
     }
@@ -131,8 +135,8 @@ class UiSnapshotCoverageTest : PageMatrixBaseTest() {
         // 自动备份开关是云端备份小节的末段：滚到这里能同时露出备份状态与上传按钮。
         scrollToTag("cloud-auto")
         captureRoot("cloud-connection-backup")
-        // 清理说明是本小节最后一段：滚到这里能露出上次尝试、计数与“立即清理”按钮。
-        scrollToText("只删除云端按保留策略淘汰", substring = true)
+        // 用稳定的操作标题定位，避免说明文案简化后截图步骤失效。
+        scrollToText("立即清理")
         captureRoot("cloud-connection-cleanup")
     }
 
@@ -159,6 +163,7 @@ class UiSnapshotCoverageTest : PageMatrixBaseTest() {
     @Test
     fun snap06TrashEmpty() {
         showPage("全局回收站") { TrashScreen(model) }
+        ui.onNode(hasScrollToNodeAction()).performScrollToNode(hasText("全局回收站为空"))
         ui.waitUntil(10_000) { ui.onAllNodesWithText("全局回收站为空").fetchSemanticsNodes().isNotEmpty() }
         captureRoot("trash-empty")
     }
@@ -276,6 +281,14 @@ class UiSnapshotCoverageTest : PageMatrixBaseTest() {
         }
         ui.waitUntil(5_000) { ui.onAllNodesWithTag("visit-detail-list").fetchSemanticsNodes().isNotEmpty() }
         captureRoot("visit-detail")
+        ui.onNodeWithTag("visit-detail-list").performScrollToNode(hasTestTag("visit-delete"))
+        ui.onNodeWithTag("visit-delete").assertIsDisplayed()
+        captureRoot("visit-detail-actions")
+        ui.onNodeWithTag("visit-detail-list").performScrollToNode(hasTestTag("visit-cancel"))
+        ui.onNodeWithTag("visit-cancel").assertIsDisplayed().performClick()
+        ui.onNodeWithText("预约资料会保留，之后仍可恢复。").assertIsDisplayed()
+        ui.onNodeWithText("暂不取消").performClick()
+        ui.onNodeWithTag("visit-delete").assertExists()
     }
 
     @Test
@@ -311,6 +324,7 @@ class UiSnapshotCoverageTest : PageMatrixBaseTest() {
         val pregnancy = runBlocking { db.journalDao().pregnancy(pregnancyId) }
         showPage("孕期时间线", subtitle = "把一次次记录，连成自己的故事") { TimelineScreen(pregnancy, "", model, {}, {}) }
         ui.waitUntil(10_000) { ui.onAllNodesWithTag("timeline-list").fetchSemanticsNodes().isNotEmpty() }
+        ui.onNodeWithTag("timeline-list").performScrollToNode(hasText("今天状态平稳，晚饭后散步二十分钟。", substring = true))
         ui.waitUntil(10_000) {
             ui.onAllNodesWithText("今天状态平稳，晚饭后散步二十分钟。", substring = true)
                 .fetchSemanticsNodes().isNotEmpty()
@@ -350,7 +364,8 @@ class UiSnapshotCoverageTest : PageMatrixBaseTest() {
                 actualDate = LocalDate.now().toString(), hospital = "市妇幼保健院", items = "常规产检",
                 advice = "下次复诊时间待确认", actualTime = "09:30", actualHospital = "实际就诊医院", actualResult = "合成检查结果"), false, {}, {},
         ) }
-        ui.onNodeWithText("关联预约").assertExists()
+        ui.onNode(hasScrollToNodeAction()).performScrollToNode(hasText("关联预约"))
+        ui.onNodeWithText("关联预约").assertIsDisplayed()
         captureRoot("actual-visit-editor")
     }
 

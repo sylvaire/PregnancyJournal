@@ -140,6 +140,7 @@ class ExtremeLayoutMatrixTest {
         }
         // 任意子页面返回根页后仍应回到同一 tab。
         ui.onNode(hasText("记录") and hasClickAction()).performClick(); settle()
+        ui.onNodeWithTag("records-hub-list").performScrollToNode(hasText("日常记录"))
         ui.onNodeWithText("日常记录", substring = false).performClick(); settle()
         ui.onNodeWithContentDescription("返回上一级").assertIsDisplayed()
         ui.onNodeWithContentDescription("返回上一级").performClick(); settle()
@@ -227,7 +228,7 @@ class ExtremeLayoutMatrixTest {
         listOf("预约日期", "预约时间（选填）", "医院（选填）", "检查项目（选填）", "准备事项（选填）").forEach { label ->
             ui.onNodeWithText(label).performScrollTo().assertIsDisplayed()
         }
-        ui.onAllNodes(hasSetTextAction()).onFirst().performScrollTo().performTextInput("极端布局医院")
+        ui.onNode(hasText("医院（选填）") and hasSetTextAction()).performScrollTo().performTextInput("极端布局医院")
         // 同上：极端配置下输入法会挤掉底部按钮的可视区域，先收起输入法再滚动到底部。
         hideKeyboard()
         ui.onNodeWithText("保存预约").performScrollTo().assertIsDisplayed().performClick(); settle()
@@ -277,7 +278,7 @@ class ExtremeLayoutMatrixTest {
         ui.waitUntil(10_000) { ui.onAllNodesWithTag("document-image").fetchSemanticsNodes().isNotEmpty() }
         ui.onNodeWithTag("document-image").assertIsDisplayed()
         screenshot("t6-document-preview.png", "document-preview")
-        ui.onNodeWithText("返回", substring = false).performClick(); settle()
+        ui.onNodeWithTag("fullscreen-navigate-up").assertIsDisplayed().performClick(); settle()
         ui.onNodeWithTag("document-list").performScrollToNode(hasText("编辑"))
         ui.onNodeWithText("编辑").performClick(); settle()
         ui.waitUntil(10_000) { ui.onAllNodesWithTag("document-name").fetchSemanticsNodes().isNotEmpty() }
@@ -295,6 +296,7 @@ class ExtremeLayoutMatrixTest {
     @Test fun t7JournalEditorLongFormSaves() {
         assertExtreme()
         openTab("记录", "records-hub-list")
+        ui.onNodeWithTag("records-hub-list").performScrollToNode(hasText("日常记录"))
         ui.onNodeWithText("日常记录", substring = false).performClick(); settle()
         ui.waitUntil(10_000) { ui.onAllNodesWithTag("timeline-list").fetchSemanticsNodes().isNotEmpty() }
         ui.onNodeWithText("写一条日常备注").performClick(); settle()
@@ -321,6 +323,7 @@ class ExtremeLayoutMatrixTest {
     @Test fun t8SemanticsForTalkBack() {
         assertExtreme()
         openTab("记录", "records-hub-list")
+        ui.onNodeWithTag("records-hub-list").performScrollToNode(hasText("日常记录"))
         ui.onNodeWithText("日常记录", substring = false).performClick(); settle()
         ui.waitUntil(10_000) { ui.onAllNodesWithTag("timeline-list").fetchSemanticsNodes().isNotEmpty() }
         ui.onNodeWithContentDescription("返回上一级").assertIsDisplayed()

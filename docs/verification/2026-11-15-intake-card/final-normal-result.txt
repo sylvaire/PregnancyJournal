@@ -1,0 +1,9 @@
+
+cn.yunji.journal.IntakeCardLayoutTest:.
+cn.yunji.journal.UiSnapshotTest:.
+
+Time: 7.966
+
+OK (2 tests)
+
+

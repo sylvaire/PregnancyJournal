@@ -1,0 +1,11 @@
+
+cn.yunji.journal.ContentHeadingLayoutTest:.
+cn.yunji.journal.UiSnapshotTest:.
+cn.yunji.journal.UiSnapshotCoverageTest:...
+cn.yunji.journal.UiReviewRemainingPagesTest:.
+
+Time: 29.076
+
+OK (6 tests)
+
+

@@ -3,6 +3,7 @@ package cn.yunji.journal
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.provider.OpenableColumns
 import android.view.WindowManager
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -21,6 +22,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.core.content.ContextCompat
+import androidx.core.net.toUri
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModelProvider
@@ -64,6 +66,7 @@ class MainActivity: FragmentActivity() {
     private var notice by mutableStateOf<String?>(null)
     private val backupProgress=kotlinx.coroutines.flow.MutableStateFlow<String?>(null)
     private var showSecurity by mutableStateOf(false)
+    private var securityMessage by mutableStateOf<String?>(null)
     private var securityTick by mutableIntStateOf(0)
     private var generation=0
     private var prompt: BiometricPrompt?=null
@@ -102,11 +105,11 @@ class MainActivity: FragmentActivity() {
                 Box(Modifier.fillMaxSize()) {
                 // Preserve registered system-picker callbacks until an actual session revocation.
                 if(current!=null) Box(if(covered)Modifier.alpha(0f).clearAndSetSemantics {} else Modifier) {
-                    CompositionLocalProvider(LocalFileLaunch provides ::launchFile,LocalRestoreLaunch provides ::openRestore,LocalSafetyActionsAllowed provides !covered) {JournalApp(current,stack){showSecurity=true}}
+                    CompositionLocalProvider(LocalFileLaunch provides ::launchFile,LocalRestoreLaunch provides ::openRestore,LocalSafetyActionsAllowed provides !covered) {JournalApp(current,stack){securityMessage=null;showSecurity=true}}
                     if(showSecurity && !covered) Dialog(onDismissRequest={showSecurity=false},properties=DialogProperties(usePlatformDefaultWidth=false,decorFitsSystemWindows=false,securePolicy=SecureFlagPolicy.SecureOn)) {
                         JournalPage(title="安全设置",back={showSecurity=false}) {
                             securityTick
-                            SecuritySettingsScreen(SecurityUi(settings.lockEnabled(),keys.strict(),settings.timeoutMinutes()),::securityAction)
+                            SecuritySettingsScreen(SecurityUi(settings.lockEnabled(),keys.strict(),settings.timeoutMinutes(),securityMessage),::securityAction)
                         }
                     }
                     pendingEvent?.takeIf {!covered}?.let {event -> AlertDialog(onDismissRequest={clearPending()},title={Text(if(pending?.action==ReminderContract.ACTION_TAKEN)"确认记录为已服用？" else "稍后10分钟提醒？")},
@@ -274,6 +277,16 @@ class MainActivity: FragmentActivity() {
             finally {busy=false}
         }
     }
+    private fun restoreDocumentInfo(document: String): Pair<String?,Long?> = runCatching {
+        contentResolver.query(document.toUri(),arrayOf(OpenableColumns.DISPLAY_NAME,OpenableColumns.SIZE),null,null,null)?.use {cursor ->
+            if(!cursor.moveToFirst())return@use null to null
+            val name=cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME)
+            val size=cursor.getColumnIndex(OpenableColumns.SIZE)
+            (if(name>=0 && !cursor.isNull(name))cursor.getString(name) else null) to
+                (if(size>=0 && !cursor.isNull(size))cursor.getLong(size) else null)
+        } ?: (null to null)
+    }.getOrDefault(null to null)
+
     private fun restoreFile() {
         scope.launch {
             try {
@@ -288,7 +301,12 @@ class MainActivity: FragmentActivity() {
                     }
                     val same=restoreRequestId==result.id && restoreOpen && restoreController.state.value.document==result.uris.single()
                     restoreRequestId=result.id;fileResult=null;restoreOpen=true
-                    if(!same && restoreController.state.value.stage in setOf("SELECT","KEY","ERROR"))restoreController.select(result.uris.single())
+                    if(!same && restoreController.state.value.stage in setOf("SELECT","KEY","ERROR")) {
+                        val document=result.uris.single()
+                        val info=withContext(Dispatchers.IO) {restoreDocumentInfo(document)}
+                        if(covered || access.needsAuthentication() || !restoreOpen || restoreRequestId!=result.id)return@launch
+                        restoreController.select(document,info.first,info.second)
+                    }
                 } else if(result.returned && !result.confirm && result.request.kind !in setOf("REPLACE","BACKUP"))applyFile(result) else fileResult=result
             }catch(_:Exception){fileResult=FileResult("unreadable",FileRequest("PDF"));notice="无法恢复文件选择状态，可取消这次选择后重试。原资料已保留。"}
         }
@@ -367,32 +385,53 @@ class MainActivity: FragmentActivity() {
     }
     private fun authenticate(purpose: String) {
         if(busy || authenticationRunning || restoreController.state.value.stage=="RESTORING")return
-        busy=true;authenticationRunning=true;covered=true;error=null;opening?.cancel()
+        val fromSettings=showSecurity && !covered && purpose in setOf("ENABLE_LOCK","DISABLE_LOCK","ENABLE_STRICT","DISABLE_STRICT")
+        busy=true;authenticationRunning=true;error=null;securityMessage=null
         scope.launch {
             try {
+                val needsCrypto=purpose=="ENABLE_STRICT" || keys.strict()
+                val authenticators=if(needsCrypto && Build.VERSION.SDK_INT<30)BiometricManager.Authenticators.BIOMETRIC_STRONG else
+                    (if(needsCrypto)BiometricManager.Authenticators.BIOMETRIC_STRONG else BiometricManager.Authenticators.BIOMETRIC_WEAK) or BiometricManager.Authenticators.DEVICE_CREDENTIAL
+                val requirement=authenticationRequirementMessage(
+                    getSystemService(android.app.KeyguardManager::class.java).isDeviceSecure,
+                    BiometricManager.from(this@MainActivity).canAuthenticate(authenticators)==BiometricManager.BIOMETRIC_SUCCESS,
+                    needsCrypto && Build.VERSION.SDK_INT<30)
+                if(requirement!=null) {
+                    authenticationRunning=false;busy=false
+                    if(fromSettings)securityMessage=requirement else error=requirement
+                    if(purpose=="NOTIFICATION")clearPending()
+                    return@launch
+                }
+                covered=true;opening?.cancel()
                 background?.join();model?.flushDraft()?.join();model=null;viewModelStore.clear()
                 if(keys.strict())runtime.revoke() else runtime.clearPreviews()
                 val crypto=withContext(Dispatchers.IO){when {purpose=="ENABLE_STRICT"->keys.prepareEnableStrict();keys.strict()->keys.prepareStrictUnlock(purpose=="DISABLE_STRICT");else->null}}
                 request=crypto
                 if(!lifecycle.currentState.isAtLeast(Lifecycle.State.STARTED))throw IllegalStateException("请返回应用后重新解锁")
-                val authenticators=if(crypto!=null && Build.VERSION.SDK_INT<30)BiometricManager.Authenticators.BIOMETRIC_STRONG else
-                    (if(crypto!=null)BiometricManager.Authenticators.BIOMETRIC_STRONG else BiometricManager.Authenticators.BIOMETRIC_WEAK) or BiometricManager.Authenticators.DEVICE_CREDENTIAL
-                require(BiometricManager.from(this@MainActivity).canAuthenticate(authenticators)==BiometricManager.BIOMETRIC_SUCCESS){"请先设置系统锁屏凭据或录入可用的生物识别；旧设备严格模式需要强生物识别。"}
                 val info=BiometricPrompt.PromptInfo.Builder().setTitle("解锁孕迹").setSubtitle("使用系统认证保护本机资料").setAllowedAuthenticators(authenticators).apply {
                     if(authenticators and BiometricManager.Authenticators.DEVICE_CREDENTIAL==0)setNegativeButtonText("取消")
                 }.build()
                 val callback=object:BiometricPrompt.AuthenticationCallback() {
                     override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {super.onAuthenticationSucceeded(result);completeAuthentication(purpose,crypto,result)}
                     override fun onAuthenticationError(code: Int,message: CharSequence) {
-                        super.onAuthenticationError(code,message);crypto?.let {keys.cancel(it)};request=null;authenticationRunning=false;busy=false;error="认证未完成，原资料与草稿已保留。"
+                        super.onAuthenticationError(code,message);crypto?.let {keys.cancel(it)};request=null
+                        authenticationFailed("认证未完成，原资料与草稿已保留。",fromSettings)
                         if(purpose=="NOTIFICATION")clearPending()
                     }
                 }
                 prompt=BiometricPrompt(this@MainActivity,ContextCompat.getMainExecutor(this@MainActivity),callback).also {if(crypto==null)it.authenticate(info) else it.authenticate(info,BiometricPrompt.CryptoObject(crypto.cipher))}
                 busy=false
             }catch(e:CancellationException){request?.let {keys.cancel(it)};request=null;authenticationRunning=false;busy=false;throw e}
-            catch(e:Exception){request?.let {keys.cancel(it)};request=null;authenticationRunning=false;busy=false;error=e.message ?: "无法认证，原资料已保留"}
+            catch(e:Exception){request?.let {keys.cancel(it)};request=null
+                authenticationFailed("暂时无法完成系统认证。原资料与安全设置已保留，请稍后重试。",fromSettings)}
         }
+    }
+    private fun authenticationFailed(message: String,fromSettings: Boolean) {
+        authenticationRunning=false;busy=false
+        // A failed setting change must not manufacture a lock. Existing lock policies still apply.
+        if(fromSettings && !runCatching {access.needsAuthentication()}.getOrDefault(true)) {
+            openModel {securityMessage=message}
+        } else {covered=true;error=message}
     }
     private fun completeAuthentication(purpose: String,crypto: DeviceKeyStore.Authentication?,result: BiometricPrompt.AuthenticationResult) {
         busy=true

@@ -24,7 +24,7 @@ import cn.yunji.journal.core.designsystem.JournalButton
 import cn.yunji.journal.core.designsystem.JournalTextAction
 import cn.yunji.journal.core.designsystem.JournalCard
 import cn.yunji.journal.core.designsystem.JournalKeyValue
-import cn.yunji.journal.core.designsystem.JournalSwitch
+import cn.yunji.journal.core.designsystem.JournalSettingRow
 import cn.yunji.journal.core.designsystem.JournalField
 import cn.yunji.journal.core.designsystem.JournalSectionTitle
 import cn.yunji.journal.core.designsystem.JournalLoading
@@ -73,23 +73,30 @@ internal fun CloudConnectionContent(state: CloudUiState,update: (String,String)-
     var removing by remember {mutableStateOf(false)}
     var forgetting by remember {mutableStateOf(false)}
     var cleaning by remember {mutableStateOf(false)}
+    var cleanupDetails by remember {mutableStateOf(false)}
     val enabled=!state.loading && !state.testing
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(24.dp).testTag("cloud-connection"),verticalArrangement=Arrangement.spacedBy(16.dp)) {
-        JournalCard(soft = true) {
-            Text(if (state.saved) "加密备份已准备好" else "连接你的云盘", style = MaterialTheme.typography.titleLarge)
+        JournalCard(soft = state.saved) {
+            Text(if (state.saved) "云盘连接已保存" else "连接你的云盘", style = MaterialTheme.typography.titleLarge)
             Text(if (state.saved) "连接设置已加密保存在本机" else "先测试并保存连接，再决定何时上传备份", color = MaterialTheme.colorScheme.primary)
             Text("先加密再上传；恢复密钥请独立保管。", style = MaterialTheme.typography.bodySmall)
         }
-        if (state.saved && backup != null) JournalCard {
-            JournalSectionTitle("备份状态")
-            Text(if (backup.status.hasSuccess) "最近上传：${formatStatusTime(backup.status.lastSuccessAt)}" else "最近上传：暂无")
+        if (backup != null && (state.saved || upload != null)) JournalCard {
+            JournalSectionTitle("云端备份")
+            val status=backup.status
+            Text(if(status.hasSuccess)"最近成功：${formatStatusTime(status.lastSuccessAt)}" else "尚未成功上传过备份",
+                Modifier.testTag("cloud-backup-last"))
+            if(status.lastAttemptAt>0)Text("最近尝试：${formatStatusTime(status.lastAttemptAt)} · ${phaseLabel(status.lastPhase)}",style=MaterialTheme.typography.bodySmall)
+            status.lastError?.takeIf {!backup.running}?.let {JournalError("上次未能完成：$it")}
+            if(backup.running){LinearProgressIndicator(Modifier.fillMaxWidth());Text(backup.progress ?: "正在备份…")}
+            if (backup.running && abortBackup != null) JournalButton("取消备份", secondary = true, onClick = abortBackup)
             Text(if (backup.scheduler.autoEnabled) "自动备份：已开启" else "自动备份：已关闭", style = MaterialTheme.typography.bodySmall)
             if (cleanup != null) Text(if (cleanup.record.hasRecord && cleanup.record.ran) "云端清理：最近一次已完成" else "云端清理：等待有效备份", style = MaterialTheme.typography.bodySmall)
             // 上传结果/前置提示紧贴按钮，避免落在页面下方另一个卡片里而被视口裁掉。
             backup.message?.let { Text(it, Modifier.testTag("cloud-backup-message"),
                 color = if (backup.status.lastError != null && it == backup.status.lastError) MaterialTheme.colorScheme.error else MaterialTheme.colorScheme.primary,
                 style = MaterialTheme.typography.bodySmall) }
-            if (upload != null) JournalButton("立即上传备份", enabled = (state.capabilities?.verified == true || backup.status.hasSuccess) && !backup.running && !state.testing,
+            if (state.saved && upload != null) JournalButton("立即上传备份", enabled = (state.capabilities?.verified == true || backup.status.hasSuccess) && !backup.running && !state.testing,
                 onClick = upload)
         }
         JournalCard {
@@ -123,9 +130,9 @@ internal fun CloudConnectionContent(state: CloudUiState,update: (String,String)-
             if (state.loading || state.testing) {
                 JournalLoading(text = if (state.loading) "读取本机连接设置…" else "正在处理连接设置…")
             }
-            Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                JournalButton("测试连接", Modifier.weight(1f), enabled = enabled, onClick = test)
-                JournalButton("保存连接", Modifier.weight(1f), enabled = enabled && state.canSave, secondary = true, onClick = save)
+            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                JournalButton("测试连接", enabled = enabled, onClick = test)
+                JournalButton("保存连接", enabled = enabled && state.canSave, secondary = true, onClick = save)
             }
             if (state.testing) JournalTextAction("取消", onClick = cancel)
             state.message?.let {
@@ -134,7 +141,7 @@ internal fun CloudConnectionContent(state: CloudUiState,update: (String,String)-
         }
         state.capabilities?.let {caps ->
             JournalCard {
-            Text("连接检查",style=MaterialTheme.typography.titleLarge)
+            JournalSectionTitle("连接检查")
             listOf("读取目录" to caps.readable,"写入与回读校验" to (caps.writable && caps.verified),"创建子目录" to caps.canCreateDirectory,"清理测试项目" to caps.canDelete).forEach {(label,ok)->
                 JournalKeyValue(label, if(ok) "可用" else "未通过", emphasize = ok)
             }
@@ -149,16 +156,6 @@ internal fun CloudConnectionContent(state: CloudUiState,update: (String,String)-
         }
         if(backup!=null && upload!=null) {
             JournalCard {
-            Text("云端备份",style=MaterialTheme.typography.titleLarge)
-            val status=backup.status
-            Text(if(status.hasSuccess)"最近成功：${formatStatusTime(status.lastSuccessAt)}" else "尚未成功上传过备份",
-                Modifier.testTag("cloud-backup-last"))
-            if(status.lastAttemptAt>0)Text("最近尝试：${formatStatusTime(status.lastAttemptAt)} · ${phaseLabel(status.lastPhase)}",style=MaterialTheme.typography.bodySmall)
-            status.lastError?.takeIf {!backup.running}?.let {JournalError("上次未能完成：$it")}
-            if(backup.running){LinearProgressIndicator(Modifier.fillMaxWidth());Text(backup.progress ?: "正在备份…")}
-            if (backup.running && abortBackup != null) JournalButton("取消备份", secondary = true, onClick = abortBackup)
-            }
-            JournalCard {
             JournalSectionTitle("自动备份")
             val schedulerState=backup.scheduler
             Text(if(schedulerState.role==cn.yunji.journal.data.DeviceRole.PRIMARY)"本机：主设备（唯一自动上传设备）" else "本机：非主设备，不会自动上传",
@@ -166,19 +163,14 @@ internal fun CloudConnectionContent(state: CloudUiState,update: (String,String)-
             if(schedulerState.blockedByOtherWriter) Box(Modifier.testTag("cloud-blocked")) {
                 JournalError("检测到其他设备的新备份，自动备份已暂停。请确认主设备后继续。")
             }
-            Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.SpaceBetween,verticalAlignment=Alignment.CenterVertically) {
-                Text("允许本机自动备份")
-                JournalSwitch(schedulerState.autoEnabled && schedulerState.role==cn.yunji.journal.data.DeviceRole.PRIMARY,
-                    onCheckedChange=setAuto, enabled=!backup.running, modifier=Modifier.testTag("cloud-auto"))
-            }
-            Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.SpaceBetween,verticalAlignment=Alignment.CenterVertically) {
-                Text("仅 Wi-Fi 上传")
-                JournalSwitch(schedulerState.wifiOnly,onCheckedChange=setWifi,enabled=!backup.running,modifier=Modifier.testTag("cloud-wifi"))
-            }
+            JournalSettingRow("允许本机自动备份", schedulerState.autoEnabled && schedulerState.role==cn.yunji.journal.data.DeviceRole.PRIMARY,
+                setAuto, enabled=!backup.running, switchModifier=Modifier.testTag("cloud-auto"))
+            JournalSettingRow("仅 Wi-Fi 上传", schedulerState.wifiOnly, setWifi,
+                enabled=!backup.running, switchModifier=Modifier.testTag("cloud-wifi"))
             if(schedulerState.role!=cn.yunji.journal.data.DeviceRole.PRIMARY || schedulerState.blockedByOtherWriter)
                 JournalTextAction("将此设备设为主设备", Modifier.testTag("cloud-make-primary"), enabled=!backup.running, onClick=makePrimary)
             backup.autoBlockedReason?.let {Text(it,style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant)}
-            Text("本机修改会在短暂合并后触发唯一备份任务；失败按指数退避重试。恢复到新设备时自动备份默认关闭，需明确选择主设备。",style=MaterialTheme.typography.bodySmall)
+            Text("修改资料后会自动备份；失败时会稍后重试。换机恢复后，请先核对资料，再开启自动备份。",style=MaterialTheme.typography.bodySmall)
             }
             if(cleanup!=null && runCleanup!=null) {
                 JournalCard {
@@ -186,8 +178,12 @@ internal fun CloudConnectionContent(state: CloudUiState,update: (String,String)-
                 val record=cleanup.record
                 Text(if(record.hasRecord) "上次尝试：${formatCleanupTime(record.attemptedAt)} · ${if(record.ran) "清理完成" else "未清理"}"
                     else "尚未清理，备份成功后每天最多自动清理一次",Modifier.testTag("cloud-cleanup-last"))
-                if(record.hasRecord && record.ran) Text("保留快照 ${record.kept} · 删除提交 ${record.commitsDeleted} · 删除对象 ${record.objectsDeleted} · 新登记孤立 ${record.orphansTracked}",
-                    style=MaterialTheme.typography.bodySmall,modifier=Modifier.testTag("cloud-cleanup-counts"))
+                if(record.hasRecord && record.ran) {
+                    Text("已保留 ${record.kept} 份备份，清理完成。", modifier=Modifier.testTag("cloud-cleanup-summary"))
+                    JournalTextAction(if(cleanupDetails) "收起清理详情" else "查看清理详情", Modifier.testTag("cloud-cleanup-details"), onClick={cleanupDetails=!cleanupDetails})
+                    if(cleanupDetails) Text("保留快照 ${record.kept} · 删除提交 ${record.commitsDeleted} · 删除对象 ${record.objectsDeleted} · 新登记孤立 ${record.orphansTracked}",
+                        style=MaterialTheme.typography.bodySmall,modifier=Modifier.testTag("cloud-cleanup-counts"))
+                }
                 if(record.hasRecord && !record.ran && record.message.isNotBlank()) Text("未清理原因：${record.message}",
                     style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant,modifier=Modifier.testTag("cloud-cleanup-skip"))
                 if(cleanup.running){LinearProgressIndicator(Modifier.fillMaxWidth());Text("正在清理云端备份…",modifier=Modifier.testTag("cloud-cleanup-progress"))}
@@ -202,7 +198,7 @@ internal fun CloudConnectionContent(state: CloudUiState,update: (String,String)-
                 }
                 cleanupBlocked?.let {JournalError(it, Modifier.testTag("cloud-cleanup-blocked"))}
                 JournalButton("立即清理",enabled=cleanupBlocked==null && !cleanup.running,onClick={cleaning=true})
-                Text("只删除云端按保留策略淘汰的旧快照与无引用对象，不删除本机资料、历史资料库或其他设备目录。",style=MaterialTheme.typography.bodySmall)
+                Text("清理过期的云端备份和不再使用的备份文件。本机资料、历史资料库及其他设备目录会保留。",style=MaterialTheme.typography.bodySmall)
                 }
             }
         }
@@ -213,7 +209,7 @@ internal fun CloudConnectionContent(state: CloudUiState,update: (String,String)-
     if(forgetting)AlertDialog(onDismissRequest={forgetting=false},title={Text("清除测试标记？")},text={Text("这不会删除云端临时项目；请在云盘核对并自行清理。此操作只影响本机测试标记。")},confirmButton={TextButton({forgetting=false;forget()}){Text("清除标记")}},dismissButton={TextButton({forgetting=false}){Text("取消")}})
     if(cleaning && runCleanup!=null)AlertDialog(onDismissRequest={cleaning=false},
         title={Text("立即清理云端备份？")},
-        text={Text("只删除云端按保留策略淘汰的旧快照与无引用对象，不删除本机资料、历史资料库或其他设备目录。清理失败不会影响已有备份。")},
+        text={Text("仅清理按保留规则过期的云端备份和不再使用的备份文件。本机资料、历史资料库和其他设备目录会保留；清理失败不会影响已有备份。")},
         confirmButton={TextButton({cleaning=false;runCleanup()},modifier=Modifier.testTag("cloud-cleanup-confirm")){Text("开始清理")}},
         dismissButton={TextButton({cleaning=false}){Text("取消")}})
 }

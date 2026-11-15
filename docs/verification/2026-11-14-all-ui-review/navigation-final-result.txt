@@ -1,0 +1,8 @@
+
+cn.yunji.journal.NavigationExperienceTest:..........................
+
+Time: 280.005
+
+OK (26 tests)
+
+

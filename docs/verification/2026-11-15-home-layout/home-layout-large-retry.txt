@@ -1,0 +1,8 @@
+
+cn.yunji.journal.UiSnapshotTest:.
+
+Time: 10.213
+
+OK (1 test)
+
+

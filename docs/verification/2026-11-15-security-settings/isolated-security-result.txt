@@ -1,0 +1,11 @@
+
+cn.yunji.journal.MainSecuritySettingsTest:.
+cn.yunji.journal.AccessStateTest:....
+cn.yunji.journal.VaultSecurityTest:
+cn.yunji.journal.VaultSecurityTest:..........
+
+Time: 16.291
+
+OK (17 tests)
+
+

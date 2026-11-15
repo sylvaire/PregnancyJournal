@@ -1,0 +1,3 @@
+
+cn.yunji.journal.HomeIntakeSummaryCardTest:INSTRUMENTATION_RESULT: shortMsg=Process crashed.
+INSTRUMENTATION_CODE: 0

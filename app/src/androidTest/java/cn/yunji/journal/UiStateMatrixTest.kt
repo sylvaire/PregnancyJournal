@@ -28,6 +28,7 @@ class UiStateMatrixTest : PageMatrixBaseTest() {
     @Test fun s2TimelineEmptyState() {
         launchApp()
         openTab("记录", "records-hub-list")
+        scrollListTo("records-hub-list", "日常记录")
         ui.onNodeWithText("日常记录").assertIsDisplayed().performClick(); settle()
         ui.waitUntil(10_000) { ui.onAllNodes(hasTestTag("timeline-list")).fetchSemanticsNodes().isNotEmpty() }
         scrollListTo("timeline-list", "还没有这类记录")
@@ -72,6 +73,7 @@ class UiStateMatrixTest : PageMatrixBaseTest() {
         seedShortVisit(items = "常规产检")
         launchApp()
         openVisitDocuments("常规产检")
+        scrollListTo("document-list", "还没有产检资料")
         ui.waitUntil(10_000) { ui.onAllNodesWithText("还没有产检资料").fetchSemanticsNodes().isNotEmpty() }
         ui.onNodeWithText("还没有产检资料").assertIsDisplayed()
         ui.onNodeWithTag("document-list").performScrollToNode(hasTestTag("document-add"))
@@ -111,7 +113,8 @@ class UiStateMatrixTest : PageMatrixBaseTest() {
         ui.onNodeWithTag("document-list").performScrollToNode(hasText("重新选择"))
         ui.onNodeWithText("重试").assertExists()
         ui.onNodeWithText("重新选择").assertIsDisplayed()
-        ui.onNodeWithText("图片").performClick()
+        ui.onNodeWithTag("document-list").performScrollToNode(hasText("图片"))
+        ui.onNodeWithText("图片").performScrollTo().performClick()
         ui.onNodeWithTag("document-list").performScrollToNode(hasText("导入失败"))
         ui.onNodeWithText("导入失败").assertIsDisplayed()
         ui.onNodeWithText("重新选择").assertExists()

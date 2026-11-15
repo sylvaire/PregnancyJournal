@@ -7,6 +7,42 @@ import org.junit.Assert.*
 import org.junit.Test
 
 class RestoreControllerTest {
+    @Test fun selectedFileMetadataSurvivesValidationAndIsClearedOnLeave()=fixture {controller,_->
+        controller.select("content://synthetic/backup", "合成备份.yunji", 4096)
+        assertEquals("合成备份.yunji",controller.state.value.documentName)
+        assertEquals(4096L,controller.state.value.documentSize)
+        controller.key("synthetic-key");controller.prepare()
+        assertEquals("CONFIRM",controller.state.value.stage)
+        assertEquals("合成备份.yunji",controller.state.value.documentName)
+        assertEquals("",controller.state.value.document)
+        controller.leave()
+        assertNull(controller.state.value.documentName);assertNull(controller.state.value.documentSize)
+    }
+    @Test fun replacingFileDoesNotKeepPreviousMetadataOrKey()=fixture {controller,_->
+        controller.select("content://synthetic/first", "第一份.yunji", 100)
+        controller.key("synthetic-key")
+        controller.select("content://synthetic/second", "\n第二份.yunji\r", -1)
+        assertEquals("第二份.yunji",controller.state.value.documentName)
+        assertNull(controller.state.value.documentSize);assertEquals("",controller.state.value.key)
+    }
+    @Test fun failedValidationKeepsSelectedFileContext() {
+        val scope=CoroutineScope(Dispatchers.Unconfined+Job())
+        val access=object:RestoreAccess {
+            override suspend fun prepare(document:String,recoveryKey:String):RestorePreview=error("synthetic failure")
+            override suspend fun commit(preview:RestorePreview)=Unit
+            override suspend fun discard(preview:RestorePreview)=Unit
+            override fun isCommitted(preview:RestorePreview)=false
+        }
+        try {
+            val controller=RestoreController(scope,access)
+            controller.select("content://synthetic/backup", "合成备份.yunji", 4096)
+            controller.key("synthetic-key");controller.prepare()
+            assertEquals("KEY",controller.state.value.stage)
+            assertEquals("合成备份.yunji",controller.state.value.documentName)
+            assertEquals(4096L,controller.state.value.documentSize)
+            assertEquals("",controller.state.value.key)
+        }finally {scope.cancel()}
+    }
     private val preview=RestorePreview("generation","snapshot",1,1,2,3,4,5,6,7,"writer",8)
     private inner class Access: RestoreAccess {
         var commits=0;var discarded=0;var committed=false;var failCommit=false;var cancelCommit=false

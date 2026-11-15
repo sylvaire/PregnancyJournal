@@ -16,6 +16,17 @@ import org.junit.Test
 class RestoreUiTest {
     @get:Rule val rule=createAndroidComposeRule<ComponentActivity>()
     private val preview=RestorePreview("synthetic-generation","synthetic-snapshot",1,1,2,3,4,5,6,7,"synthetic-writer",8)
+    @Test fun selectedFileContextRemainsBesideTheKeyAndUpdatesWhenReplaced() {
+        val state=mutableStateOf(RestoreUiState(stage="KEY",documentName="第一份合成备份.yunji"))
+        rule.setContent {MaterialTheme {RestoreContent(state.value,{},{},{},{},{},{},{})}}
+        rule.onNodeWithText("第一份合成备份.yunji").assertIsDisplayed()
+        rule.onNodeWithText("文件大小暂不可用").assertExists()
+        rule.onNodeWithTag("restore-key").assert(SemanticsMatcher.keyIsDefined(SemanticsProperties.Password))
+        rule.runOnIdle {state.value=state.value.copy(documentName="第二份合成备份.yunji",documentSize=4096)}
+        rule.onNodeWithText("第一份合成备份.yunji").assertDoesNotExist()
+        rule.onNodeWithText("第二份合成备份.yunji").assertIsDisplayed()
+        rule.onNodeWithText("文件大小暂不可用").assertDoesNotExist()
+    }
     @Test fun previewRequiresExplicitAcknowledgementAndHidesControlsWhenBusy() {
         val state=mutableStateOf(RestoreUiState(stage="CONFIRM",preview=preview));var confirms=0
         rule.setContent {MaterialTheme {RestoreContent(state.value,{},{},{},{state.value=state.value.copy(acknowledged=it)},

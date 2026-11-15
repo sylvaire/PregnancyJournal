@@ -1,0 +1,66 @@
+
+cn.yunji.journal.ExtremeLayoutMatrixPagesTest:.
+Error in p4ReminderSettingsExtreme(cn.yunji.journal.ExtremeLayoutMatrixPagesTest):
+java.lang.AssertionError: Action performScrollTo() failed.
+Reason: Expected exactly '1' node but found '2' nodes that satisfy: (Text + InputText + EditableText contains '通知权限' (ignoreCase: false))
+Nodes found:
+1) Node #988 at (l=191.0, t=870.0, r=2337.0, b=1142.0)px
+Focused = 'false'
+IsContainer = 'true'
+Role = 'Button'
+Shape = 'RoundedCornerShape(topStart = CornerSize(size = 20.0.dp), topEnd = CornerSize(size = 20.0.dp), bottomEnd = CornerSize(size = 20.0.dp), bottomStart = CornerSize(size = 20.0.dp))'
+Text = '[通知权限, 已允许 · 查看通知和系统设置]'
+Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+MergeDescendants = 'true'
+Has 15 siblings
+2) Node #1045 at (l=244.0, t=2716.0, r=600.0, b=2845.0)px
+Text = '[通知权限]'
+Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+Has 3 siblings
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:81)
+	at cn.yunji.journal.ExtremeLayoutMatrixPagesTest.p4ReminderSettingsExtreme(ExtremeLayoutMatrixPagesTest.kt:118)
+...
+Error in p2TimelineLongContentExtreme(cn.yunji.journal.ExtremeLayoutMatrixPagesTest):
+java.lang.AssertionError: Assert failed: The component with Text + InputText + EditableText contains '孕期时间线' (ignoreCase: false) is not displayed!
+	at androidx.compose.ui.test.AssertionsKt.assertIsDisplayed(Assertions.kt:34)
+	at cn.yunji.journal.ExtremeLayoutMatrixPagesTest.p2TimelineLongContentExtreme(ExtremeLayoutMatrixPagesTest.kt:62)
+
+
+Time: 36.671
+There were 2 failures:
+1) p4ReminderSettingsExtreme(cn.yunji.journal.ExtremeLayoutMatrixPagesTest)
+java.lang.AssertionError: Action performScrollTo() failed.
+Reason: Expected exactly '1' node but found '2' nodes that satisfy: (Text + InputText + EditableText contains '通知权限' (ignoreCase: false))
+Nodes found:
+1) Node #988 at (l=191.0, t=870.0, r=2337.0, b=1142.0)px
+Focused = 'false'
+IsContainer = 'true'
+Role = 'Button'
+Shape = 'RoundedCornerShape(topStart = CornerSize(size = 20.0.dp), topEnd = CornerSize(size = 20.0.dp), bottomEnd = CornerSize(size = 20.0.dp), bottomStart = CornerSize(size = 20.0.dp))'
+Text = '[通知权限, 已允许 · 查看通知和系统设置]'
+Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+MergeDescendants = 'true'
+Has 15 siblings
+2) Node #1045 at (l=244.0, t=2716.0, r=600.0, b=2845.0)px
+Text = '[通知权限]'
+Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+Has 3 siblings
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:81)
+	at cn.yunji.journal.ExtremeLayoutMatrixPagesTest.p4ReminderSettingsExtreme(ExtremeLayoutMatrixPagesTest.kt:118)
+2) p2TimelineLongContentExtreme(cn.yunji.journal.ExtremeLayoutMatrixPagesTest)
+java.lang.AssertionError: Assert failed: The component with Text + InputText + EditableText contains '孕期时间线' (ignoreCase: false) is not displayed!
+	at androidx.compose.ui.test.AssertionsKt.assertIsDisplayed(Assertions.kt:34)
+	at cn.yunji.journal.ExtremeLayoutMatrixPagesTest.p2TimelineLongContentExtreme(ExtremeLayoutMatrixPagesTest.kt:62)
+
+FAILURES!!!
+Tests run: 6,  Failures: 2
+
+

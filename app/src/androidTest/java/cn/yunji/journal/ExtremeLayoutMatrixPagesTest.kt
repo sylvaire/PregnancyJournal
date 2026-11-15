@@ -59,7 +59,8 @@ class ExtremeLayoutMatrixPagesTest : PageMatrixBaseTest() {
         seedJournalEntry(time = "", text = "第二条：没有记录发生时间，用来检查杏色备注卡与记录行的排版。")
         launchApp()
         openTab("记录", "records-hub-list")
-        ui.onNodeWithText("孕期时间线").assertIsDisplayed().performClick(); settle()
+        ui.onNodeWithTag("records-hub-list").performScrollToNode(hasText("孕期时间线"))
+        ui.onNodeWithText("孕期时间线").performScrollTo().assertIsDisplayed().performClick(); settle()
         ui.waitUntil(10_000) { ui.onAllNodes(hasTestTag("timeline-list")).fetchSemanticsNodes().isNotEmpty() }
         // 方案 A：底部主 CTA「写一条日常备注」（不再有顶部 CTA/搜索框/说明段）
         ui.waitUntil(10_000) { ui.onAllNodesWithText("写一条日常备注").fetchSemanticsNodes().isNotEmpty() }
@@ -102,7 +103,6 @@ class ExtremeLayoutMatrixPagesTest : PageMatrixBaseTest() {
         ui.waitUntil(10_000) { ui.onAllNodes(hasTestTag("profiles-root-list")).fetchSemanticsNodes().isNotEmpty() }
         openProfileRow("服药记录")
         ui.waitUntil(10_000) { ui.onAllNodes(hasTestTag("intake-list")).fetchSemanticsNodes().isNotEmpty() }
-        scrollListTo("intake-list", "补记服药")
         ui.onNodeWithText("补记服药").assertIsDisplayed()
         assertNoTruncationOnAllTexts("服药记录首屏")
         screenshot("p3-intakes.png", "服药记录")
@@ -114,14 +114,14 @@ class ExtremeLayoutMatrixPagesTest : PageMatrixBaseTest() {
         launchApp()
         openProfileRow("提醒设置")
         ui.waitUntil(10_000) { ui.onAllNodesWithText("通知权限").fetchSemanticsNodes().isNotEmpty() }
-        listOf("通知权限", "提醒时间", "提醒类型", "调度检查").forEach { label ->
-            ui.onNodeWithText(label).performScrollTo().assertIsDisplayed()
+        listOf("通知权限", "提醒时间", "提醒类型", "未来7天提醒").forEach { label ->
+            ui.onNode(hasText(label) and !hasClickAction()).performScrollTo().assertIsDisplayed()
             assertNoTruncation(hasText(label), "提醒设置“$label”标题")
         }
         listOf("reminder-permission", "reminder-exact", "reminder-visits", "reminder-medications", "reminder-rebuild", "reminder-battery", "open-app-details").forEach { tag ->
             ui.onNodeWithTag(tag).assertExists()
         }
-        ui.onNodeWithText("立即重建未来7天提醒").performScrollTo().assertIsDisplayed()
+        ui.onNodeWithText("刷新未来7天提醒").performScrollTo().assertIsDisplayed()
         assertNoTruncationOnAllTexts("提醒设置页")
         screenshot("p4-reminders.png", "提醒设置")
     }

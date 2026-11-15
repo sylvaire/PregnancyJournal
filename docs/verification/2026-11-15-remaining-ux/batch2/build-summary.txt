@@ -1,0 +1,11 @@
+2026-11-15 final verification
+Variant: debug, VISUAL_VERIFICATION=false (secure flag retained)
+Build: assembleDebug, assembleDebugAndroidTest, bundleDebug, testDebugUnitTest, lintDebug
+Result: BUILD SUCCESSFUL in 37s
+JVM: 59 classes, 368 tests, 0 failures, 0 errors
+Lint: 0 errors, 31 warnings
+git diff --check: exit 0
+Evidence README local links: 0 missing
+APK SHA256: 3E08C542E15D59BBB623253DE8146317E409EBB2E741D8833B235C060CAC09B8
+Emulator restored: font_scale=1.0, user_rotation=0, accelerometer_rotation=1, night=yes
+No physical phone, TalkBack, live cloud account, commit, or push used in this verification.

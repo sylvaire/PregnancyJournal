@@ -1,0 +1,136 @@
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preReleaseBuild UP-TO-DATE
+> Task :app:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :app:mergeReleaseNativeLibs UP-TO-DATE
+> Task :app:stripReleaseDebugSymbols UP-TO-DATE
+> Task :app:extractReleaseNativeSymbolTables UP-TO-DATE
+> Task :app:mergeReleaseNativeDebugMetadata UP-TO-DATE
+> Task :app:checkReleaseDuplicateClasses UP-TO-DATE
+> Task :app:mergeReleaseArtProfile UP-TO-DATE
+> Task :app:buildKotlinToolingMetadata UP-TO-DATE
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:generateReleaseBuildConfig
+> Task :app:checkReleaseAarMetadata UP-TO-DATE
+> Task :app:processReleaseNavigationResources
+> Task :app:compileReleaseNavigationResources UP-TO-DATE
+> Task :app:generateReleaseResValues UP-TO-DATE
+> Task :app:mapReleaseSourceSetPaths
+> Task :app:generateReleaseResources
+> Task :app:packageReleaseResources
+> Task :app:createReleaseCompatibleScreenManifests
+> Task :app:extractDeepLinksRelease UP-TO-DATE
+> Task :app:parseReleaseLocalResources
+> Task :app:mergeReleaseResources
+> Task :app:processReleaseMainManifest
+> Task :app:processReleaseManifest
+> Task :app:javaPreCompileRelease UP-TO-DATE
+> Task :app:extractProguardFiles UP-TO-DATE
+> Task :app:mergeReleaseStartupProfile UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:generateDebugBuildConfig
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+> Task :app:processDebugNavigationResources UP-TO-DATE
+> Task :app:compileDebugNavigationResources UP-TO-DATE
+> Task :app:generateDebugResValues UP-TO-DATE
+> Task :app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:mergeDebugResources UP-TO-DATE
+> Task :app:packageDebugResources UP-TO-DATE
+> Task :app:parseDebugLocalResources UP-TO-DATE
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug UP-TO-DATE
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:javaPreCompileDebug UP-TO-DATE
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :app:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :app:mergeReleaseShaders UP-TO-DATE
+> Task :app:compileReleaseShaders NO-SOURCE
+> Task :app:generateReleaseAssets UP-TO-DATE
+> Task :app:mergeReleaseAssets UP-TO-DATE
+> Task :app:compressReleaseAssets UP-TO-DATE
+> Task :app:extractReleaseVersionControlInfo
+> Task :app:collectReleaseDependencies UP-TO-DATE
+> Task :app:sdkReleaseDependencyData UP-TO-DATE
+> Task :app:writeReleaseAppMetadata UP-TO-DATE
+> Task :app:writeReleaseSigningConfigVersions UP-TO-DATE
+> Task :app:preDebugAndroidTestBuild SKIPPED
+> Task :app:generateDebugAndroidTestResValues UP-TO-DATE
+> Task :app:processReleaseManifestForPackage
+> Task :app:processDebugManifestForPackage
+> Task :app:processDebugResources
+> Task :app:processReleaseResources
+> Task :app:optimizeReleaseResources
+> Task :app:kspDebugKotlin
+> Task :app:kspReleaseKotlin
+
+> Task :app:compileDebugKotlin
+w: file:///D:/Devtools/Code/CodexWorkspace/PregnancyJournal/app/src/main/java/cn/yunji/journal/feature/DocumentPreview.kt:204:70 Unnecessary non-null assertion (!!) on a non-null receiver of type 'DocumentPreview'.
+w: file:///D:/Devtools/Code/CodexWorkspace/PregnancyJournal/app/src/main/java/cn/yunji/journal/feature/DocumentPreview.kt:211:86 Unnecessary safe call on a non-null receiver of type 'ImageRegion'.
+w: file:///D:/Devtools/Code/CodexWorkspace/PregnancyJournal/app/src/main/java/cn/yunji/journal/feature/JournalApp.kt:335:88 Unnecessary non-null assertion (!!) on a non-null receiver of type 'String'.
+
+> Task :app:compileDebugJavaWithJavac
+> Task :app:hiltAggregateDepsDebug UP-TO-DATE
+> Task :app:hiltJavaCompileDebug
+> Task :app:processDebugJavaRes UP-TO-DATE
+> Task :app:generateDebugLintReportModel
+> Task :app:transformDebugClassesWithAsm
+> Task :app:bundleDebugClassesToCompileJar
+> Task :app:kspDebugUnitTestKotlin
+> Task :app:bundleDebugClassesToRuntimeJar
+> Task :app:generateDebugAndroidTestLintModel
+> Task :app:generateDebugUnitTestLintModel
+> Task :app:compileDebugUnitTestKotlin
+> Task :app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :app:hiltAggregateDepsDebugUnitTest UP-TO-DATE
+> Task :app:hiltJavaCompileDebugUnitTest NO-SOURCE
+> Task :app:processDebugUnitTestJavaRes UP-TO-DATE
+> Task :app:transformDebugUnitTestClassesWithAsm
+
+> Task :app:compileReleaseKotlin
+w: file:///D:/Devtools/Code/CodexWorkspace/PregnancyJournal/app/src/main/java/cn/yunji/journal/feature/DocumentPreview.kt:204:70 Unnecessary non-null assertion (!!) on a non-null receiver of type 'DocumentPreview'.
+w: file:///D:/Devtools/Code/CodexWorkspace/PregnancyJournal/app/src/main/java/cn/yunji/journal/feature/DocumentPreview.kt:211:86 Unnecessary safe call on a non-null receiver of type 'ImageRegion'.
+w: file:///D:/Devtools/Code/CodexWorkspace/PregnancyJournal/app/src/main/java/cn/yunji/journal/feature/DocumentScreen.kt:205:157 Unnecessary non-null assertion (!!) on a non-null receiver of type 'String'.
+w: file:///D:/Devtools/Code/CodexWorkspace/PregnancyJournal/app/src/main/java/cn/yunji/journal/feature/IntakeScreens.kt:344:83 Unnecessary non-null assertion (!!) on a non-null receiver of type 'String'.
+w: file:///D:/Devtools/Code/CodexWorkspace/PregnancyJournal/app/src/main/java/cn/yunji/journal/feature/JournalApp.kt:335:88 Unnecessary non-null assertion (!!) on a non-null receiver of type 'String'.
+w: file:///D:/Devtools/Code/CodexWorkspace/PregnancyJournal/app/src/main/java/cn/yunji/journal/feature/PdfDocumentView.kt:100:69 Unnecessary non-null assertion (!!) on a non-null receiver of type 'DocumentPreview'.
+w: file:///D:/Devtools/Code/CodexWorkspace/PregnancyJournal/app/src/main/java/cn/yunji/journal/feature/PdfDocumentView.kt:102:43 Unnecessary non-null assertion (!!) on a non-null receiver of type 'PdfSession'.
+w: file:///D:/Devtools/Code/CodexWorkspace/PregnancyJournal/app/src/main/java/cn/yunji/journal/feature/PdfDocumentView.kt:109:86 Unnecessary safe call on a non-null receiver of type 'PdfSession'.
+w: file:///D:/Devtools/Code/CodexWorkspace/PregnancyJournal/app/src/main/java/cn/yunji/journal/feature/ReminderSettingsScreen.kt:47:21 'val LocalLifecycleOwner: ProvidableCompositionLocal<LifecycleOwner>' is deprecated. Moved to lifecycle-runtime-compose library in androidx.lifecycle.compose package.
+w: file:///D:/Devtools/Code/CodexWorkspace/PregnancyJournal/app/src/main/java/cn/yunji/journal/feature/TimelineScreens.kt:212:49 Unnecessary safe call on a non-null receiver of type 'JournalEntryEntity'.
+w: file:///D:/Devtools/Code/CodexWorkspace/PregnancyJournal/app/src/main/java/cn/yunji/journal/feature/TimelineScreens.kt:212:74 Unnecessary non-null assertion (!!) on a non-null receiver of type 'JournalEntryEntity'.
+w: file:///D:/Devtools/Code/CodexWorkspace/PregnancyJournal/app/src/main/java/cn/yunji/journal/feature/TimelineScreens.kt:213:46 Unnecessary non-null assertion (!!) on a non-null receiver of type 'JournalEntryEntity'.
+
+> Task :app:testDebugUnitTest
+> Task :app:compileReleaseJavaWithJavac
+> Task :app:hiltAggregateDepsRelease UP-TO-DATE
+> Task :app:hiltJavaCompileRelease
+> Task :app:processReleaseJavaRes
+> Task :app:mergeReleaseJavaResource
+> Task :app:copyRoomSchemas NO-SOURCE
+> Task :app:lintAnalyzeDebug
+> Task :app:generateReleaseLintVitalReportModel
+> Task :app:transformReleaseClassesWithAsm
+> Task :app:lintAnalyzeDebugAndroidTest
+> Task :app:expandReleaseArtProfileWildcards
+> Task :app:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :app:lintVitalAnalyzeRelease
+> Task :app:lintVitalReportRelease
+> Task :app:lintVitalRelease
+> Task :app:produceReleaseComposeMapping
+> Task :app:reportReleaseComposeMappingErrors
+> Task :app:minifyReleaseWithR8
+> Task :app:lintAnalyzeDebugUnitTest
+
+> Task :app:lintReportDebug
+Wrote HTML report to file:///D:/Devtools/Code/CodexWorkspace/PregnancyJournal/app/build/reports/lint-results-debug.html
+
+> Task :app:lintDebug
+> Task :app:mergeReleaseComposeMapping
+> Task :app:compileReleaseArtProfile
+> Task :app:packageRelease
+> Task :app:createReleaseApkListingFileRedirect
+> Task :app:assembleRelease
+
+BUILD SUCCESSFUL in 2m 27s
+99 actionable tasks: 58 executed, 41 up-to-date

@@ -1,0 +1,68 @@
+
+cn.yunji.journal.UiReviewRegressionTest:
+Error in fullScreenTitleAndActionsRemainReadable(cn.yunji.journal.UiReviewRegressionTest):
+java.lang.AssertionError: Assert failed: The component with Text + InputText + EditableText contains '检查资料原件预览' (ignoreCase: false) is not displayed!
+	at androidx.compose.ui.test.AssertionsKt.assertIsDisplayed(Assertions.kt:34)
+	at cn.yunji.journal.UiReviewRegressionTest.fullScreenTitleAndActionsRemainReadable(UiReviewRegressionTest.kt:49)
+.
+Error in calendarDatesDescribeDateAndSelection(cn.yunji.journal.UiReviewRegressionTest):
+java.lang.AssertionError: Action performScrollTo() failed.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (ContentDescription = '2026年11月14日 星期六' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:81)
+	at cn.yunji.journal.UiReviewRegressionTest.calendarDatesDescribeDateAndSelection(UiReviewRegressionTest.kt:69)
+
+Error in profileSwitchHasAFullTouchTarget(cn.yunji.journal.UiReviewRegressionTest):
+java.lang.AssertionError: Actual height is 34.666664.dp, expected at least 48.0.dp (tolerance: 0.5.dp)
+	at androidx.compose.ui.test.BoundsAssertionsKt.assertIsAtLeast-cWfXhoU(BoundsAssertions.kt:342)
+	at androidx.compose.ui.test.BoundsAssertionsKt.assertIsAtLeast-cWfXhoU$default(BoundsAssertions.kt:339)
+	at androidx.compose.ui.test.BoundsAssertionsKt.assertHeightIsAtLeast_3ABfNKs$lambda$0(BoundsAssertions.kt:98)
+	at androidx.compose.ui.test.BoundsAssertionsKt.$r8$lambda$sDU3vqZpUV1x-ZA7RTCZXwXkwfY(Unknown Source:0)
+	at androidx.compose.ui.test.BoundsAssertionsKt$$ExternalSyntheticLambda5.invoke(D8$$SyntheticClass:0)
+	at androidx.compose.ui.test.BoundsAssertionsKt.withUnclippedBoundsInRoot(BoundsAssertions.kt:266)
+	at androidx.compose.ui.test.BoundsAssertionsKt.assertHeightIsAtLeast-3ABfNKs(BoundsAssertions.kt:98)
+	at cn.yunji.journal.UiReviewRegressionTest.profileSwitchHasAFullTouchTarget(UiReviewRegressionTest.kt:56)
+.
+Error in longDetailKeepsLabelAndFullValueReadable(cn.yunji.journal.UiReviewRegressionTest):
+java.lang.AssertionError: Assert failed: The component with Text + InputText + EditableText contains '医院' (ignoreCase: false) is not displayed!
+	at androidx.compose.ui.test.AssertionsKt.assertIsDisplayed(Assertions.kt:34)
+	at cn.yunji.journal.UiReviewRegressionTest.longDetailKeepsLabelAndFullValueReadable(UiReviewRegressionTest.kt:32)
+
+
+Time: 20.78
+There were 4 failures:
+1) fullScreenTitleAndActionsRemainReadable(cn.yunji.journal.UiReviewRegressionTest)
+java.lang.AssertionError: Assert failed: The component with Text + InputText + EditableText contains '检查资料原件预览' (ignoreCase: false) is not displayed!
+	at androidx.compose.ui.test.AssertionsKt.assertIsDisplayed(Assertions.kt:34)
+	at cn.yunji.journal.UiReviewRegressionTest.fullScreenTitleAndActionsRemainReadable(UiReviewRegressionTest.kt:49)
+2) calendarDatesDescribeDateAndSelection(cn.yunji.journal.UiReviewRegressionTest)
+java.lang.AssertionError: Action performScrollTo() failed.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (ContentDescription = '2026年11月14日 星期六' (ignoreCase: false))
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performScrollTo(Actions.kt:81)
+	at cn.yunji.journal.UiReviewRegressionTest.calendarDatesDescribeDateAndSelection(UiReviewRegressionTest.kt:69)
+3) profileSwitchHasAFullTouchTarget(cn.yunji.journal.UiReviewRegressionTest)
+java.lang.AssertionError: Actual height is 34.666664.dp, expected at least 48.0.dp (tolerance: 0.5.dp)
+	at androidx.compose.ui.test.BoundsAssertionsKt.assertIsAtLeast-cWfXhoU(BoundsAssertions.kt:342)
+	at androidx.compose.ui.test.BoundsAssertionsKt.assertIsAtLeast-cWfXhoU$default(BoundsAssertions.kt:339)
+	at androidx.compose.ui.test.BoundsAssertionsKt.assertHeightIsAtLeast_3ABfNKs$lambda$0(BoundsAssertions.kt:98)
+	at androidx.compose.ui.test.BoundsAssertionsKt.$r8$lambda$sDU3vqZpUV1x-ZA7RTCZXwXkwfY(Unknown Source:0)
+	at androidx.compose.ui.test.BoundsAssertionsKt$$ExternalSyntheticLambda5.invoke(D8$$SyntheticClass:0)
+	at androidx.compose.ui.test.BoundsAssertionsKt.withUnclippedBoundsInRoot(BoundsAssertions.kt:266)
+	at androidx.compose.ui.test.BoundsAssertionsKt.assertHeightIsAtLeast-3ABfNKs(BoundsAssertions.kt:98)
+	at cn.yunji.journal.UiReviewRegressionTest.profileSwitchHasAFullTouchTarget(UiReviewRegressionTest.kt:56)
+4) longDetailKeepsLabelAndFullValueReadable(cn.yunji.journal.UiReviewRegressionTest)
+java.lang.AssertionError: Assert failed: The component with Text + InputText + EditableText contains '医院' (ignoreCase: false) is not displayed!
+	at androidx.compose.ui.test.AssertionsKt.assertIsDisplayed(Assertions.kt:34)
+	at cn.yunji.journal.UiReviewRegressionTest.longDetailKeepsLabelAndFullValueReadable(UiReviewRegressionTest.kt:32)
+
+FAILURES!!!
+Tests run: 6,  Failures: 4
+
+

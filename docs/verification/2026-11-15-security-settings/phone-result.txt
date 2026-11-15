@@ -1,0 +1,18 @@
+2026-11-15 Xiaomi 11 Ultra, Android 13, USB
+Update: adb install -r, Success; no uninstall or data clearing
+Scenario 1: My > Security > Enable strict mode
+  Chinese requirement explaining missing secure screen lock: present
+  Remains in security settings: yes
+  Enable strict mode/enable app lock labels: retained
+  Unintended vault-locked page: absent
+Scenario 2: Enable app lock
+  Chinese requirement: present
+  Remains in security settings: yes
+  Raw IllegalStateException / Secure lock screen text: absent
+  App lock still disabled: yes
+Scenario 3: Back
+  Returned to My/profile groups: yes
+Before/after app lock: disabled
+Before/after lock timeout: immediate
+No system credentials or device lock settings were changed.
+No existing medical content, credentials, or device addresses are included in this summary.

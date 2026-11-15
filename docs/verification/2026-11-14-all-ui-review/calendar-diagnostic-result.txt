@@ -1,0 +1,19 @@
+
+cn.yunji.journal.NavigationExperienceTest:
+Error in calendarMonthAndCancellationRemainConsistentAfterReturning(cn.yunji.journal.NavigationExperienceTest):
+java.lang.AssertionError: Assert failed: The component with TestTag = 'visit-detail-list' is not displayed!
+	at androidx.compose.ui.test.AssertionsKt.assertIsDisplayed(Assertions.kt:34)
+	at cn.yunji.journal.NavigationExperienceTest.calendarMonthAndCancellationRemainConsistentAfterReturning(NavigationExperienceTest.kt:1057)
+
+
+Time: 11.052
+There was 1 failure:
+1) calendarMonthAndCancellationRemainConsistentAfterReturning(cn.yunji.journal.NavigationExperienceTest)
+java.lang.AssertionError: Assert failed: The component with TestTag = 'visit-detail-list' is not displayed!
+	at androidx.compose.ui.test.AssertionsKt.assertIsDisplayed(Assertions.kt:34)
+	at cn.yunji.journal.NavigationExperienceTest.calendarMonthAndCancellationRemainConsistentAfterReturning(NavigationExperienceTest.kt:1057)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+

@@ -1,0 +1,23 @@
+
+cn.yunji.journal.UiReviewRemainingPagesTest:..
+cn.yunji.journal.CustomReminderUiTest:
+Error in createEditAndDeleteFromReminderSettings(cn.yunji.journal.CustomReminderUiTest):
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 10000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at cn.yunji.journal.CustomReminderUiTest.createEditAndDeleteFromReminderSettings(CustomReminderUiTest.kt:120)
+..
+cn.yunji.journal.ExtremeLayoutMatrixTest:.
+
+Time: 46.469
+There was 1 failure:
+1) createEditAndDeleteFromReminderSettings(cn.yunji.journal.CustomReminderUiTest)
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 10000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at cn.yunji.journal.CustomReminderUiTest.createEditAndDeleteFromReminderSettings(CustomReminderUiTest.kt:120)
+
+FAILURES!!!
+Tests run: 6,  Failures: 1
+
+

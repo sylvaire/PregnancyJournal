@@ -82,6 +82,7 @@ internal val LocalSafetyActionsAllowed=staticCompositionLocalOf {true}
         properties=DialogProperties(securePolicy=SecureFlagPolicy.SecureOn))}
 }
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable internal fun SafetyCopiesContent(copies: List<SafetyCopy>,loading: Boolean,busy: Boolean,message: String?,refresh: ()->Unit,
     export: (SafetyCopy)->Unit,delete: (SafetyCopy)->Unit,canExport: Boolean=true) {
     JournalDivider(Modifier.padding(vertical = 8.dp))
@@ -96,7 +97,7 @@ internal val LocalSafetyActionsAllowed=staticCompositionLocalOf {true}
             Text(date,style=MaterialTheme.typography.titleSmall,modifier=Modifier.testTag("safety-${copy.id}"))
             Text("${android.text.format.Formatter.formatFileSize(LocalContext.current,copy.size)} · ${copy.id.take(8)}",style=MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant)
-            Row(horizontalArrangement=Arrangement.spacedBy(8.dp),verticalAlignment=Alignment.CenterVertically) {
+            FlowRow(horizontalArrangement=Arrangement.spacedBy(8.dp),verticalArrangement=Arrangement.spacedBy(4.dp)) {
                 JournalTextAction("导出副本", Modifier.testTag("safety-export-${copy.id}"), enabled = !busy && canExport, onClick = { export(copy) })
                 JournalTextAction("删除", Modifier.testTag("safety-delete-${copy.id}"), enabled = !busy, danger = true, onClick = { delete(copy) })
             }

@@ -75,7 +75,7 @@ internal class PdfSession(private val source: DocumentPreview) : AutoCloseable {
 }
 
 @Composable
-internal fun PdfDocumentView(id: String, model: JournalViewModel, modifier: Modifier) {
+internal fun PdfDocumentView(id: String, model: JournalViewModel, modifier: Modifier, compact: Boolean = false) {
     val lifecycle = LocalLifecycleOwner.current.lifecycle
     var foreground by remember { mutableStateOf(lifecycle.currentState.isAtLeast(Lifecycle.State.RESUMED)) }
     DisposableEffect(lifecycle) {
@@ -89,6 +89,7 @@ internal fun PdfDocumentView(id: String, model: JournalViewModel, modifier: Modi
     var page by rememberSaveable(id) { mutableIntStateOf(0) }
     var zoom by rememberSaveable(id) { mutableIntStateOf(1) }
     var jumping by rememberSaveable(id) { mutableStateOf(false) }
+    var zoomMenu by remember(id) { mutableStateOf(false) }
     LaunchedEffect(id, foreground, attempt) {
         if (!foreground) return@LaunchedEffect
         var source: DocumentPreview? = null
@@ -131,7 +132,7 @@ internal fun PdfDocumentView(id: String, model: JournalViewModel, modifier: Modi
     val yScroll = rememberScrollState()
     LaunchedEffect(page, zoom) { xScroll.scrollTo(0); yScroll.scrollTo(0) }
     Column(modifier) {
-        Box(Modifier.weight(1f).fillMaxWidth().onSizeChanged { viewport = it }, contentAlignment = Alignment.Center) {
+        Box(Modifier.weight(1f).fillMaxWidth().testTag("pdf-viewport").onSizeChanged { viewport = it }, contentAlignment = Alignment.Center) {
             if (current != null && foreground) {
                 val bitmap = image
                 if (bitmap != null) {
@@ -158,8 +159,16 @@ internal fun PdfDocumentView(id: String, model: JournalViewModel, modifier: Modi
                 TextButton({ page--; zoom = 1 }, enabled = page > 0) { Text("上一页") }
                 TextButton({ jumping = true }, Modifier.testTag("pdf-page-count")) { Text("${page + 1} / ${current.pageCount}") }
                 TextButton({ page++; zoom = 1 }, enabled = page < current.pageCount - 1) { Text("下一页") }
+                if(compact) Box {
+                    TextButton({zoomMenu=true},Modifier.testTag("pdf-zoom-menu")) {Text(if(zoom==1) "缩放" else "${zoom*100}%")}
+                    DropdownMenu(zoomMenu,{zoomMenu=false}) {
+                        DropdownMenuItem(text={Text("缩小")},enabled=zoom>1,onClick={zoom--;zoomMenu=false})
+                        DropdownMenuItem(text={Text("适合页面")},onClick={zoom=1;zoomMenu=false})
+                        DropdownMenuItem(text={Text("放大")},enabled=zoom<4,onClick={zoom++;zoomMenu=false})
+                    }
+                }
             }
-            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly, verticalAlignment = Alignment.CenterVertically) {
+            if(!compact) Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly, verticalAlignment = Alignment.CenterVertically) {
                 TextButton({ zoom-- }, enabled = zoom > 1) { Text("缩小") }
                 TextButton({ zoom = 1 }) { Text(if (zoom == 1) "适合页面" else "${zoom * 100}% · 复位") }
                 TextButton({ zoom++ }, enabled = zoom < 4) { Text("放大") }

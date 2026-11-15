@@ -4,6 +4,7 @@ import android.view.View
 import android.widget.DatePicker
 import android.widget.TimePicker
 import androidx.compose.ui.test.*
+import androidx.compose.ui.graphics.asAndroidBitmap
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.Espresso.closeSoftKeyboard
 import androidx.test.espresso.UiController
@@ -27,7 +28,8 @@ class CustomReminderUiTest : PageMatrixBaseTest() {
         ui.onNodeWithText("请输入提醒标题").assertExists()
         assertTrue(runBlocking { db.journalDao().allCustomReminders().isEmpty() })
         ui.onNodeWithTag("custom-reminder-title").performTextInput("过期测试")
-        ui.onNodeWithText("提醒日期",substring=true).performClick()
+        closeSoftKeyboard();settle()
+        ui.onNodeWithText("提醒日期",substring=true).performScrollTo().assertIsDisplayed().performClick()
         onView(isAssignableFrom(DatePicker::class.java)).perform(changeDate(LocalDate.now().minusDays(1)))
         onView(withId(android.R.id.button1)).perform(click())
         ui.onNodeWithTag("custom-reminder-save").performClick()
@@ -93,25 +95,40 @@ class CustomReminderUiTest : PageMatrixBaseTest() {
         openProfileRow("提醒设置")
         ui.onNodeWithTag("custom-reminder-add").performScrollTo().performClick()
         ui.onNodeWithTag("custom-reminder-title").performTextInput("合成自定义提醒")
-        ui.onNodeWithTag("custom-reminder-repeat-DAILY").performScrollTo().performClick()
+        closeSoftKeyboard();settle()
+        ui.onNodeWithTag("custom-reminder-repeat-DAILY").performScrollTo().assertIsDisplayed().performClick()
         // 标签选中态有 160 ms 颜色过渡；全量负载下点击可能落在过渡/滚动动画期间。
         // 先等选中态进入语义树再保存（只同步，不放宽断言）。
         ui.onNodeWithTag("custom-reminder-repeat-DAILY").assertIsSelected()
         ui.onNodeWithTag("custom-reminder-save").performClick()
         ui.waitUntil(10_000) { runBlocking { db.journalDao().allCustomReminders().size == 1 } }
+        ui.waitUntil(10_000) { ui.onAllNodesWithTag("custom-reminder-save").fetchSemanticsNodes().isEmpty() }
         val id = runBlocking { db.journalDao().allCustomReminders().single().id }
         assertEquals("DAILY",runBlocking { db.journalDao().customReminder(id)?.repeat })
 
         ui.onNodeWithTag("custom-reminder-edit-$id").performScrollTo().performClick()
         ui.onNodeWithTag("custom-reminder-title").performTextReplacement("修改后的提醒")
+        closeSoftKeyboard();settle()
         ui.onNodeWithTag("custom-reminder-save").performClick()
         try { ui.waitUntil(10_000) { runBlocking { db.journalDao().customReminder(id)?.title == "修改后的提醒" } } }
         catch (timeout: androidx.compose.ui.test.ComposeTimeoutException) {
             throw AssertionError("修改提醒未保存：当前=${runBlocking { db.journalDao().customReminder(id) }}；界面=${ui.onRoot().printToString()}", timeout)
         }
         assertEquals(2L,runBlocking { db.journalDao().customReminder(id)?.revision })
+        ui.waitUntil(10_000) { ui.onAllNodesWithTag("custom-reminder-save").fetchSemanticsNodes().isEmpty() }
+        // The save snackbar is transient feedback and can cover this row in a short viewport.
+        // Snackbar delay uses the Compose clock; wall-clock polling alone may leave it visible.
+        ui.mainClock.advanceTimeBy(10_000)
+        ui.waitUntil(10_000) { ui.onAllNodesWithText("提醒已保存").fetchSemanticsNodes().isEmpty() }
+        settle()
 
-        ui.onNodeWithTag("custom-reminder-delete-$id").performScrollTo().performClick()
+        ui.onNodeWithTag("custom-reminder-delete-$id").performScrollTo().assertIsDisplayed()
+        settle()
+        val evidence=java.io.File(context.getExternalFilesDir(null),"verification/ux-next-reminder").apply {mkdirs()}
+        java.io.File(evidence,"before-delete.txt").writeText(ui.onRoot().printToString())
+        val bitmap=ui.onRoot().captureToImage()
+        java.io.File(evidence,"before-delete.png").outputStream().use {bitmap.asAndroidBitmap().compress(android.graphics.Bitmap.CompressFormat.PNG,100,it)}
+        ui.onNodeWithTag("custom-reminder-delete-$id").assertIsDisplayed().performClick()
         // The confirmation dialog is a separate composition; under cold/loaded emulators it may take a
         // frame or two to appear, so wait for it instead of clicking immediately.
         ui.waitUntil(10_000) { ui.onAllNodesWithTag("custom-reminder-confirm-delete").fetchSemanticsNodes().isNotEmpty() }

@@ -1,0 +1,9 @@
+
+cn.yunji.journal.PickerExperienceTest:....
+cn.yunji.journal.CloudCleanupUiTest:.
+
+Time: 10.624
+
+OK (5 tests)
+
+

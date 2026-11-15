@@ -1,0 +1,53 @@
+
+cn.yunji.journal.NavigationExperienceTest:.......
+Error in calendarMonthAndCancellationRemainConsistentAfterReturning(cn.yunji.journal.NavigationExperienceTest):
+java.lang.AssertionError: No node found that matches Text + InputText + EditableText contains '取消这次预约' (ignoreCase: false) in scrollable container
+Semantics of the node:
+Node #7290 at (l=0.0, t=354.0, r=1080.0, b=2337.0)px
+IsTraversalGroup = 'true'
+Shape = 'androidx.compose.foundation.VerticalScrollableClipShape@789333d'
+VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'
+Actions = [ScrollBy, ScrollByOffset]
+Has 7 children, 3 siblings
+Selector used: ((ScrollBy is defined)[0])
+
+	at androidx.compose.ui.test.ActionsKt.performScrollToNode(Actions.kt:241)
+	at cn.yunji.journal.NavigationExperienceTest.calendarMonthAndCancellationRemainConsistentAfterReturning(NavigationExperienceTest.kt:1053)
+.
+Error in cloudConnectionValidatesBeforeNetworkAndClearsUnsavedPasswordOnReturn(cn.yunji.journal.NavigationExperienceTest):
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 15000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at cn.yunji.journal.NavigationExperienceTest.cloudConnectionValidatesBeforeNetworkAndClearsUnsavedPasswordOnReturn(NavigationExperienceTest.kt:829)
+................
+cn.yunji.journal.UiStateMatrixTest:.........
+cn.yunji.journal.BackgroundReliabilityUiTest:.
+cn.yunji.journal.UiSurfaceSnapshotTest:....
+cn.yunji.journal.RestoreUiTest:......
+cn.yunji.journal.UiSnapshotCoverageTest:......
+
+Time: 360.127
+There were 2 failures:
+1) calendarMonthAndCancellationRemainConsistentAfterReturning(cn.yunji.journal.NavigationExperienceTest)
+java.lang.AssertionError: No node found that matches Text + InputText + EditableText contains '取消这次预约' (ignoreCase: false) in scrollable container
+Semantics of the node:
+Node #7290 at (l=0.0, t=354.0, r=1080.0, b=2337.0)px
+IsTraversalGroup = 'true'
+Shape = 'androidx.compose.foundation.VerticalScrollableClipShape@789333d'
+VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'
+Actions = [ScrollBy, ScrollByOffset]
+Has 7 children, 3 siblings
+Selector used: ((ScrollBy is defined)[0])
+
+	at androidx.compose.ui.test.ActionsKt.performScrollToNode(Actions.kt:241)
+	at cn.yunji.journal.NavigationExperienceTest.calendarMonthAndCancellationRemainConsistentAfterReturning(NavigationExperienceTest.kt:1053)
+2) cloudConnectionValidatesBeforeNetworkAndClearsUnsavedPasswordOnReturn(cn.yunji.journal.NavigationExperienceTest)
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 15000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at cn.yunji.journal.NavigationExperienceTest.cloudConnectionValidatesBeforeNetworkAndClearsUnsavedPasswordOnReturn(NavigationExperienceTest.kt:829)
+
+FAILURES!!!
+Tests run: 52,  Failures: 2
+
+

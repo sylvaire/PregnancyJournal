@@ -1,0 +1,9 @@
+
+cn.yunji.journal.VisitReminderCardTest:...
+cn.yunji.journal.NavigationExperienceTest:.
+
+Time: 22.225
+
+OK (4 tests)
+
+
